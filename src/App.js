@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import ShowRoom from "./components/ShowRoom";
 import Shop from "./components/Shop";
 
-function App(props) {
+function App() {
   const collection = wpPluginParam.collection;
-  const [wapuu, setWapuu] = useState( wpPluginParam.wapuu );
+  const [wapuu, setWapuu] = useState(wpPluginParam.wapuu);
 
-  const wapuuHandler = ( newWapuu ) => {
+  const wapuuHandler = (newWapuu) => {
     setWapuu(newWapuu)
   }
 
   if (collection.length !== 0) {
     return (
       <div>
-        <Shop wapuu={wapuu} collection={collection} onSubmitWapuuConfig={wapuuHandler}/>
+        <Shop wapuu={wapuu} collection={collection} onChangeWapuuConfig={wapuuHandler}/>
         <ShowRoom wapuu={wapuu} collection={collection}/>
       </div>
     );

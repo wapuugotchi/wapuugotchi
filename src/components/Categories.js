@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Categories.css'
 
 const Categories = (props) => {
@@ -9,15 +9,15 @@ const Categories = (props) => {
       category.classList.remove('selected')
     });
     event.target.classList.add('selected')
-    props.selectedCategory( event.target.getAttribute('ware')
-  )
+    props.selectedCategory(event.target.getAttribute('category')
+    )
   }
 
   return (
-    props.ware === undefined ? '' :
-    <div onClick={handleNewWare} ware={props.ware} className={ props.ware === 'fur' ? 'wapuu_card__category selected' : 'wapuu_card__category' }>
-      <img src={"/wp-content/plugins/wapuugotchi/img/icons/" + props.ware + ".svg"} />
-    </div>
+    props.category === undefined ? '' :
+      <div onClick={handleNewWare} category={props.category} className={props.category === 'fur' ? 'wapuu_card__category selected' : 'wapuu_card__category'}>
+        <img className='wapuu_category__image' src={"/wp-content/plugins/wapuugotchi/img/icons/" + props.category + ".svg"}/>
+      </div>
   );
 }
 

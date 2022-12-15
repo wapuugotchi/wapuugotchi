@@ -1,0 +1,5 @@
+dist
+.idea
+img
+vendor
+node_modules

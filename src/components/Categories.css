@@ -1,0 +1,17 @@
+.wapuu_card .wapuu_card__category {
+    margin-top: 5px;
+    padding: 5px 15px;
+}.wapuu_card .wapuu_card__category.selected {
+     background-color: gray;
+     position: relative;
+}.wapuu_card .wapuu_card__category.selected > img {
+      margin-left: 2px;
+}
+.wapuu_card .wapuu_card__category > * {
+    pointer-events: none;
+}
+.wapuu_card .wapuu_card__category > img {
+    width: 40px;
+    height: 40px;
+    filter: invert(99%) sepia(73%) saturate(84%) hue-rotate(191deg) brightness(109%) contrast(87%);
+}

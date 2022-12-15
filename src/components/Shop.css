@@ -1,0 +1,9 @@
+.wapuu_shop {
+    width: 50%;
+    float: left;
+}
+
+.wapuu_shop form button.button.button-primary {
+    width: 115px;
+    margin: 0 10px;
+}

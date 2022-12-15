@@ -1,0 +1,35 @@
+.wapuu_card {
+    margin-top: 30px;
+    min-height: 150px;
+    display: flex;
+}
+.wapuu_card .wapuu_card__categories {
+    background-color: darkgray;
+    width: 80px;
+    padding: 10px 0;
+}
+.wapuu_card .wapuu_card__items {
+    width: 100%;
+    padding: 10px 0;
+}
+.wapuu_card .wapuu_card__item {
+    height: 100px;
+    width: 100px;
+    margin: 10px 5px;
+    background-color: #fafafa;
+    padding: 5px 10px;
+    float: left;
+    display: flex;
+    position: relative;
+}
+.wapuu_card .wapuu_card__item.selected {
+    background-color: #F0F6FC;
+}
+.wapuu_card .wapuu_card__item_img {
+    user-select: none;
+    pointer-events: none;
+    margin: auto;
+}
+.wapuu_card .wapuu_card__item_text {
+    margin-left: 10px;
+}

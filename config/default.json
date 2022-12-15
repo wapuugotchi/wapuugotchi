@@ -1,0 +1,42 @@
+{
+    "name": "Wapuu",
+    "char": {
+        "fur": {
+            "key": [
+                "aec8b514-74af-4a1f-9133-86d74a616a7f"
+            ],
+            "count": 1,
+            "required": 1
+        },
+        "coat": {
+            "key": [],
+            "count": 1,
+            "required": 0
+        },
+        "pant": {
+            "key": [],
+            "count": 1,
+            "required": 0
+        },
+        "shoe": {
+            "key": [],
+            "count": 1,
+            "required": 0
+        },
+        "ball": {
+            "key": [],
+            "count": 1,
+            "required": 0
+        },
+        "cap": {
+            "key": [],
+            "count": 2,
+            "required": 0
+        },
+        "item": {
+            "key": [],
+            "count": 5,
+            "required": 0
+        }
+    }
+}

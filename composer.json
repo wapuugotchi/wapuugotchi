@@ -1,0 +1,61 @@
+{
+  "name": "ionos/mops",
+  "description": "IONOS WordPress Mops",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require-dev": {
+    "phpunit/phpunit": "^6",
+    "yoast/phpunit-polyfills": "^1.0.3",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "wp-coding-standards/wpcs": "^2.3",
+    "humbug/php-scoper": "^0.17.2"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://gitlab.git-wp.server.lan/wp-dev/package/ionos-library.git"
+    }
+  ],
+  "config": {
+    "cache-vcs-dir": "/tmp/cache/files",
+    "allow-plugins": {
+      "higidi/composer-phpcodesniffer-standards-plugin": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "require": {
+    "ionos/ionos-library": "^1.4.0",
+    "michelf/php-markdown":  "1.9.*",
+    "ext-json": "*"
+  },
+  "authors": [
+    {
+      "name": "Marko Feldmann",
+      "email": "marko.feldmann@ionos.com"
+    },
+    {
+      "name": "Angelo Cali",
+      "email": "angelo.cali@ionos.com"
+    },
+    {
+      "name": "Daniel Seydel",
+      "email": "dseydel@united-internet.de"
+    }
+  ],
+  "autoload": {
+    "classmap":  ["inc/"]
+  },
+  "scripts": {
+    "prepare": [
+      "if [[ \"$OSTYPE\" == \"darwin\"* ]]; then find . -type f -name '*.php' -exec sed -i '' s/_Plugin0/_Pre0\\\\\\\\sso/g {} +; fi",
+      "if [[ \"$OSTYPE\" != \"darwin\"* ]]; then find . -type f -name '*.php' -exec sed -i s/_Plugin0/_Pre0\\\\\\\\sso/g {} +; fi"
+    ],
+    "php-lint": [
+      "phpcs --standard=phpcs.xml -s"
+    ],
+    "php-fix": [
+      "phpcbf --standard=phpcs.xml"
+    ]
+  }
+}

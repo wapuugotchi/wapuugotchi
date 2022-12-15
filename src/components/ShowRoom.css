@@ -1,0 +1,15 @@
+.wapuu_show_room {
+    display: flex;
+    padding: 20px;
+    margin-left: 30px;
+    height: 100%;
+}
+
+.wapuu_show_room .wapuu_show_room__image {
+    max-width: 25%;
+    width: 80vh;
+    position: absolute;
+
+    margin-top: -30px;
+}
+

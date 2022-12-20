@@ -49,7 +49,7 @@ const Shop = (props) => {
         <input className='wapuu_shop__name' type='text' value={name} onChange={nameHandler}/>
         <button className='button button-primary wapuu_shop__submit' type='submit'>{loader}</button>
         <button onClick={resetHandler} className='button button-secondary wapuu_shop__reset' type='button'>Clear</button>
-        <Card collection={props.collection} wapuu={props.wapuu} onChangeWapuuConfig={wapuuHandler}/>
+        <Card collection={props.collection} lockedCollection={props.lockedCollection} wapuu={props.wapuu} onChangeWapuuConfig={wapuuHandler}/>
       </form>
     </div>
   );

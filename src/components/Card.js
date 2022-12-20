@@ -45,6 +45,26 @@ const Card = (props) => {
     })
   }
 
+  const getItemList = () => {
+    let itemList = [];
+    if(props.collection[selectedCategory] !== undefined) {
+      props.collection[selectedCategory].map(configItem => {
+        let classes = 'wapuu_card__item';
+        if (props.wapuu.char[selectedCategory].key.includes(configItem.key)) {
+          classes += ' selected';
+        }
+        itemList.push({"key": configItem.key, "classes": classes, "src": configItem.prev, "tooltip": undefined})
+      });
+    }
+    if ( props.lockedCollection[selectedCategory] !== undefined ) {
+      props.lockedCollection[selectedCategory].map(configItem => {
+        itemList.push({"key": configItem.key, "classes": 'wapuu_card__item wapuu_card__locked', "src": configItem.prev, "tooltip": configItem.tooltip})
+
+      })
+    }
+    return itemList;
+  }
+
   return (
     <div className='wapuu_card postbox'>
       <div className='wapuu_card__categories'>
@@ -53,18 +73,20 @@ const Card = (props) => {
         }
       </div>
       <div className='wapuu_card__items'>
+
         {
-          props.collection[selectedCategory] !== undefined ?
-            props.collection[selectedCategory].map(configItem => {
-              let classes = 'wapuu_card__item';
-              if (props.wapuu.char[selectedCategory].key.includes(configItem.key)) {
-                classes += ' selected';
-              }
-              return (
-                <div onClick={handleItem} category={selectedCategory} key={configItem.key} data-key={configItem.key} className={classes}>
-                  <img onClick={handleItem} className='wapuu_card__item_img' src={configItem.prev}/>
-                </div>)
-            }) : ''
+          getItemList().map(configItem => {
+            return (
+              <div onClick={handleItem} category={selectedCategory} key={configItem.key} data-key={configItem.key} className={configItem.classes}>
+                <img onClick={handleItem} className='wapuu_card__item_img' src={configItem.src}/>
+                {
+                  configItem.tooltip !== undefined ?
+                    <div className="wapuu_card__item_tooltiptext"><span>{configItem.tooltip}</span></div>
+                    : ''
+                }
+              </div>
+            )
+          })
         }
       </div>
     </div>

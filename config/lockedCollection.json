@@ -1,0 +1,25 @@
+{
+    "fur": [
+        {
+            "key": "aec8b514-74af-4a1f-9133-86d756716a7f",
+            "prev": "/wp-content/plugins/wapuugotchi/img/fur/3_prev.png",
+            "text": "Mono Wapuu",
+            "path": "/wp-content/plugins/wapuugotchi/img/fur/3.svg",
+            "tooltip": "To unlock this item you need to create 3 articles."
+        }
+    ],
+    "cap": [],
+    "coat": [],
+    "pant": [],
+    "shoe": [],
+    "item": [],
+    "ball": [
+        {
+            "key": "e5d3bd65-1437-47d3-9666-d9ddd0bbd414",
+            "prev": "/wp-content/plugins/wapuugotchi/img/ball/2_prev.png",
+            "text": "Original Wapuu Ball",
+            "path": "/wp-content/plugins/wapuugotchi/img/ball/2.svg",
+            "tooltip": "To unlock this item you need to drop your database."
+        }
+    ]
+}

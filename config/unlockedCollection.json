@@ -11,12 +11,6 @@
             "prev": "/wp-content/plugins/wapuugotchi/img/fur/2_prev.png",
             "text": "Caramel Wapuu",
             "path": "/wp-content/plugins/wapuugotchi/img/fur/2.svg"
-        },
-        {
-            "key": "aec8b514-74af-4a1f-9133-86d756716a7f",
-            "prev": "/wp-content/plugins/wapuugotchi/img/fur/3_prev.png",
-            "text": "Mono Wapuu",
-            "path": "/wp-content/plugins/wapuugotchi/img/fur/3.svg"
         }
     ],
     "cap": [
@@ -75,6 +69,12 @@
             "prev": "/wp-content/plugins/wapuugotchi/img/coat/5_prev.png",
             "text": "Der originale Wapuu",
             "path": "/wp-content/plugins/wapuugotchi/img/coat/5.png"
+        },
+        {
+            "key": "0960c9a5-6553-4511-883c-71127771183c",
+            "prev": "/wp-content/plugins/wapuugotchi/img/coat/6_prev.png",
+            "text": "Der originale Wapuu",
+            "path": "/wp-content/plugins/wapuugotchi/img/coat/6.png"
         }
     ],
     "pant": [
@@ -84,7 +84,8 @@
             "key": "0960c9a5-6553-4518-883c-411224cb883c",
             "prev": "/wp-content/plugins/wapuugotchi/img/shoe/1_prev.png",
             "text": "Der originale Wapuu",
-            "path": "/wp-content/plugins/wapuugotchi/img/shoe/1.svg"
+            "path": "/wp-content/plugins/wapuugotchi/img/shoe/1.svg",
+            "free": 1
         }
     ],
     "item": [
@@ -122,12 +123,6 @@
             "path": "/wp-content/plugins/wapuugotchi/img/ball/1.svg"
         },
         {
-            "key": "e5d3bd65-1437-47d3-9666-d9ddd0bbd414",
-            "prev": "/wp-content/plugins/wapuugotchi/img/ball/2_prev.png",
-            "text": "Original Wapuu Ball",
-            "path": "/wp-content/plugins/wapuugotchi/img/ball/2.svg"
-        },
-        {
             "key": "e5dfbd65-1437-4dd3-9666-d9ddd0sbd414",
             "prev": "/wp-content/plugins/wapuugotchi/img/ball/3_prev.png",
             "text": "Pokeball",
@@ -140,16 +135,16 @@
             "path": "/wp-content/plugins/wapuugotchi/img/ball/4.svg"
         },
         {
-            "key": "e5dfbd65-1437-4dd3-9666-d9ddd0sjd404",
-            "prev": "/wp-content/plugins/wapuugotchi/img/ball/5_prev.png",
-            "text": "Pokeball",
-            "path": "/wp-content/plugins/wapuugotchi/img/ball/5.svg"
-        },
-        {
             "key": "e5dfbd65-1437-4dd3-9666-d9ddd0sjll04",
             "prev": "/wp-content/plugins/wapuugotchi/img/ball/6_prev.png",
             "text": "Pokeball",
             "path": "/wp-content/plugins/wapuugotchi/img/ball/6.svg"
+        },
+        {
+            "key": "e5dfbd65-1437-4dd3-9666-d9ddd0sjd404",
+            "prev": "/wp-content/plugins/wapuugotchi/img/ball/5_prev.png",
+            "text": "Pokeball",
+            "path": "/wp-content/plugins/wapuugotchi/img/ball/5.svg"
         }
     ]
 }

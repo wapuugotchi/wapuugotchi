@@ -2,5 +2,7 @@
 dist
 .idea
 img
+/img/
 vendor
 node_modules
+

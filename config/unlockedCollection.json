@@ -41,18 +41,6 @@
     ],
     "coat": [
         {
-            "key": "528b30c0-dffe-4559-b9f3-336dccb527fa",
-            "prev": "/wp-content/plugins/wapuugotchi/img/coat/1_prev.png",
-            "text": "Der originale Wapuu",
-            "path": "/wp-content/plugins/wapuugotchi/img/coat/1.png"
-        },
-        {
-            "key": "39197633-dc2e-4cd5-bb4e-3c6d88c62dd8",
-            "prev": "/wp-content/plugins/wapuugotchi/img/coat/2_prev.png",
-            "text": "Der originale Wapuu",
-            "path": "/wp-content/plugins/wapuugotchi/img/coat/2.png"
-        },
-        {
             "key": "0960c9a5-6553-4518-883c-711224ca883c",
             "prev": "/wp-content/plugins/wapuugotchi/img/coat/3_prev.png",
             "text": "Der originale Wapuu",

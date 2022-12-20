@@ -57,6 +57,7 @@ const Card = (props) => {
       });
     }
     if ( props.lockedCollection[selectedCategory] !== undefined ) {
+      itemList.push({"key": undefined})
       props.lockedCollection[selectedCategory].map(configItem => {
         itemList.push({"key": configItem.key, "classes": 'wapuu_card__item wapuu_card__locked', "src": configItem.prev, "tooltip": configItem.tooltip})
 
@@ -77,6 +78,7 @@ const Card = (props) => {
         {
           getItemList().map(configItem => {
             return (
+              configItem.key !== undefined ?
               <div onClick={handleItem} category={selectedCategory} key={configItem.key} data-key={configItem.key} className={configItem.classes}>
                 <img onClick={handleItem} className='wapuu_card__item_img' src={configItem.src}/>
                 {
@@ -84,7 +86,7 @@ const Card = (props) => {
                     <div className="wapuu_card__item_tooltiptext"><span>{configItem.tooltip}</span></div>
                     : ''
                 }
-              </div>
+              </div> : <hr/>
             )
           })
         }

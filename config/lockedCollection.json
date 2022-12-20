@@ -8,11 +8,22 @@
             "tooltip": "To unlock this item you need to create 3 articles."
         }
     ],
-    "cap": [],
-    "coat": [],
-    "pant": [],
-    "shoe": [],
-    "item": [],
+    "coat": [
+        {
+            "key": "528b30c0-dffe-4559-b9f3-336dccb527fa",
+            "prev": "/wp-content/plugins/wapuugotchi/img/coat/1_prev.png",
+            "text": "Der originale Wapuu",
+            "path": "/wp-content/plugins/wapuugotchi/img/coat/1.png",
+            "tooltip": "This item is unlocked by a mini-game."
+        },
+        {
+            "key": "39197633-dc2e-4cd5-bb4e-3c6d88c62dd8",
+            "prev": "/wp-content/plugins/wapuugotchi/img/coat/2_prev.png",
+            "text": "Der originale Wapuu",
+            "path": "/wp-content/plugins/wapuugotchi/img/coat/2.png",
+            "tooltip": "This item is unlocked by a mini-game."
+        }
+    ],
     "ball": [
         {
             "key": "e5d3bd65-1437-47d3-9666-d9ddd0bbd414",

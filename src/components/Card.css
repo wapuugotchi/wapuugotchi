@@ -22,11 +22,12 @@
     display: flex;
     position: relative;
 }
-.wapuu_card .wapuu_card__locked {
-    background-color: darkgray;
-}
-.wapuu_card .wapuu_card__locked img {
-    opacity: 0.4;
+.wapuu_card .wapuu_card__locked::before {
+    content: "\f160";
+    position: absolute;
+    font: normal 25px/1 dashicons;
+    color: black;
+    opacity: 0.2;
 }
 .wapuu_card .wapuu_card__item.selected {
     background-color: #F0F6FC;
@@ -51,7 +52,7 @@
     z-index: 1;
     top: 0px;
     left: 0px;
-    opacity: 0.6;
+    opacity: 0.8;
     display: -webkit-box;
     margin: auto;
     text-align: center;
@@ -64,4 +65,10 @@
 
 .wapuu_card .wapuu_card__locked:hover .wapuu_card__item_tooltiptext {
     visibility: visible;
+}
+
+.wapuu_card__items hr {
+    width: 100%;
+    border: none;
+    margin: 0;
 }

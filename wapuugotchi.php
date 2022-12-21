@@ -12,34 +12,21 @@
  */
 namespace Ionos\Wapuugotchi;
 
-require_once 'vendor/autoload.php';
-
-use _Plugin0\Options;
-use _Plugin0\Updater;
-use _Plugin0\Warning;
-
-define( 'WAPUUGOTCHI_FILE', __FILE__ );
-define( 'WAPUUGOTCHI_DIR', __DIR__ );
-define( 'WAPUUGOTCHI_BASE', plugin_basename( __FILE__ ) );
-$autoloader = __DIR__ . '/vendor/autoload.php';
-if ( is_readable( $autoloader ) ) {
-    require_once $autoloader;
-}
-
 /**
  * Init plugin.
  *
  * @return void
  */
 function init() {
-    Options::set_tenant_and_plugin_name('ionos', 'mops');
 
-    new Updater();
-    new Warning( 'wapuugotchi' );
+	require_once 'inc/class-api.php';
 	new Api();
 
+	require_once 'inc/class-manager.php';
 	new Manager();
-    new Menu();
+
+	require_once 'inc/class-menu.php';
+	new Menu();
 }
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

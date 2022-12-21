@@ -21,10 +21,10 @@
             "path": "/wp-content/plugins/wapuugotchi/img/cap/2.svg"
         },
         {
-            "key": "5ec8551d-54af-4a5f-3131-8ghzta616b7f",
-            "prev": "/wp-content/plugins/wapuugotchi/img/cap/6_prev.png",
+            "key": "323c851d-54af-4a5f-3131-8ghzta616b7f",
+            "prev": "/wp-content/plugins/wapuugotchi/img/cap/3_prev.png",
             "text": "Screwdriver",
-            "path": "/wp-content/plugins/wapuugotchi/img/cap/6.svg"
+            "path": "/wp-content/plugins/wapuugotchi/img/cap/3.svg"
         },
         {
             "key": "123c851d-54af-4a5f-3131-8ghzta616b7f",
@@ -33,10 +33,10 @@
             "path": "/wp-content/plugins/wapuugotchi/img/cap/1.svg"
         },
         {
-            "key": "323c851d-54af-4a5f-3131-8ghzta616b7f",
-            "prev": "/wp-content/plugins/wapuugotchi/img/cap/3_prev.png",
+            "key": "5ec8551d-54af-4a5f-3131-8ghzta616b7f",
+            "prev": "/wp-content/plugins/wapuugotchi/img/cap/6_prev.png",
             "text": "Screwdriver",
-            "path": "/wp-content/plugins/wapuugotchi/img/cap/3.svg"
+            "path": "/wp-content/plugins/wapuugotchi/img/cap/6.svg"
         }
     ],
     "coat": [

@@ -5,8 +5,7 @@
   "main": "wapuugotchi.php",
   "scripts": {
     "start": "webpack --watch",
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "dependencies": {
     "@babel/core": "^7.19.6",
@@ -21,6 +20,7 @@
     "webpack-cli": "^4.10.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.29.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^6.7.1",

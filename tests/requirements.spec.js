@@ -13,8 +13,8 @@ test.beforeEach(async ({ page }) => {
   await expect(page).toHaveTitle(/Dashboard/);
 });
 
-test('Is plugin active', async ({ page }) => {
-  console.log(`Is plugin active`);
+test('plugin active', async ({ page }) => {
+  console.log(`plugin active`);
   // Is plugin active
   await page.goto('http://localhost:8076/wp-admin/plugins.php', { waitUntil: 'networkidle' });
   await expect(page).toHaveTitle(/Plugins/);
@@ -22,8 +22,8 @@ test('Is plugin active', async ({ page }) => {
   await expect(plugin).toHaveClass('active')
 });
 
-test('does wapuu exist', async ({ page }) => {
-  console.log(`does wapuu exist`);
+test('wapuu exist', async ({ page }) => {
+  console.log(`wapuu exist`);
   // the default wapuu is set on dashboard. (default wapuu)
   await page.goto('http://localhost:8076/wp-admin', { waitUntil: 'networkidle' });
   await expect(page).toHaveTitle(/Dashboard/);
@@ -32,8 +32,8 @@ test('does wapuu exist', async ({ page }) => {
   await expect(wapuu.locator('img')).toHaveCount(2);
 });
 
-test('does menu exist', async ({ page }) => {
-  console.log(`does menu exist`);
+test('menu exist', async ({ page }) => {
+  console.log(`menu exist`);
   const menu = await page.locator('.wp-menu-name').getByText('Wapuugotchi');
   await expect(menu).toHaveCount(1);
   await menu.click();

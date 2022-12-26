@@ -1,6 +1,6 @@
 // @ts-check
 const { devices } = require('@playwright/test');
-
+require('dotenv').config();
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -41,7 +41,7 @@ const config = {
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on',
   },
 
   /* Configure projects for major browsers */
@@ -53,21 +53,21 @@ const config = {
       },
     },
 
-    {
-      name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-      },
-    },
-
-    {
-      name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
-      },
-    },
-
     /* Test against mobile viewports. */
+    // {
+    //   name: 'firefox',
+    //   use: {
+    //     ...devices['Desktop Firefox'],
+    //   },
+    // },
+    //
+    // {
+    //   name: 'webkit',
+    //   use: {
+    //     ...devices['Desktop Safari'],
+    //   },
+    // },
+    //
     // {
     //   name: 'Mobile Chrome',
     //   use: {

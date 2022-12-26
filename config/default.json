@@ -24,7 +24,9 @@
             "required": 0
         },
         "ball": {
-            "key": [],
+            "key": [
+                "e5d3bc65-1437-47a3-9666-d9d2d0bbd414"
+            ],
             "count": 1,
             "required": 0
         },

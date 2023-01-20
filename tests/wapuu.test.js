@@ -4,7 +4,6 @@ const { TEST_USER, TEST_PASS, TEST_URL } = process.env
 
 test.describe('avatar', () => {
   test.beforeEach(async ({page}) => {
-    /** enter page */
     await page.goto( '/wp-login.php', {waitUntil: 'networkidle'})
     await expect(page).toHaveTitle(/Log In/)
 
@@ -19,7 +18,6 @@ test.describe('avatar', () => {
   })
 
   test('avatar exist', async ({page}) => {
-    /** enter page */
     await page.goto('/wp-admin/', {waitUntil: 'networkidle'})
     await expect(page).toHaveTitle(/Dashboard/)
     const wapuu = await page.locator('#wapuugotchi')

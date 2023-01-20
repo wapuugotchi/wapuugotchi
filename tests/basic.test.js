@@ -4,7 +4,6 @@ const { TEST_USER, TEST_PASS, TEST_URL } = process.env
 
 test.describe('basic', () => {
   test.beforeEach(async ({page}) => {
-    /** enter page */
     await page.goto( '/wp-login.php', {waitUntil: 'networkidle'})
     await expect(page).toHaveTitle(/Log In/)
 
@@ -19,7 +18,6 @@ test.describe('basic', () => {
   })
 
   test('plugin active', async ({page}) => {
-    /** enter page */
     await page.goto('/wp-admin/plugins.php', {waitUntil: 'networkidle'})
     await expect(page).toHaveTitle(/Plugins/)
 
@@ -29,7 +27,6 @@ test.describe('basic', () => {
   })
 
   test('menu exist', async ({page}) => {
-    /** enter page */
     await page.goto('/wp-admin/', {waitUntil: 'networkidle'})
     await expect(page).toHaveTitle(/Dashboard/)
 

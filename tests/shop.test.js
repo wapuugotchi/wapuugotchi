@@ -2,8 +2,8 @@
 const { test, expect } = require('@playwright/test')
 const { TEST_USER, TEST_PASS, TEST_URL } = process.env
 test.describe('Shop', () => {
+
   test.beforeEach(async ({page}) => {
-    /** enter page */
     await page.goto( '/wp-login.php', {waitUntil: 'networkidle'})
     await expect(page).toHaveTitle(/Log In/)
 
@@ -32,7 +32,6 @@ test.describe('Shop', () => {
   })
 
   test('categories selectable', async ({page}) => {
-    /** enter page */
     await page.goto(' /wp-admin/admin.php?page=wapuugotchi', {waitUntil: 'networkidle'})
     await expect(page).toHaveTitle(/Wapuugotchi/)
 
@@ -47,7 +46,6 @@ test.describe('Shop', () => {
   })
 
   test('items selectable', async ({page}) => {
-    /** enter page */
     await page.goto(' /wp-admin/admin.php?page=wapuugotchi', {waitUntil: 'networkidle'})
     await expect(page).toHaveTitle(/Wapuugotchi/)
 
@@ -65,7 +63,6 @@ test.describe('Shop', () => {
   })
 
   test('cleanup executable', async ({page}) => {
-    /** enter page */
     await page.goto(' /wp-admin/admin.php?page=wapuugotchi', {waitUntil: 'networkidle'})
     await expect(page).toHaveTitle(/Wapuugotchi/)
 

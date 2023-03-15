@@ -13,8 +13,8 @@
   },
   "repositories": [
     {
-      "type": "git",
-      "url": "git@github.com:DerHerrFeldmann/wapuu-collection.git"
+      "type": "vcs",
+      "url": "https://github.com:DerHerrFeldmann/wapuu-collection.git"
     }
   ],
   "config": {
@@ -27,7 +27,7 @@
   },
   "require": {
     "ext-json": "*",
-    "wapuu-gotchi/collection": "^1.0.0"
+    "wapuu-gotchi/collection": "dev-main"
   },
   "extra": {
     "installer-paths": {

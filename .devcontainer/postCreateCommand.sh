@@ -20,7 +20,7 @@ wp core install --url=https://$(CODESPACE_NAME) --title=WordPress --admin_user=a
 # Selected plugins
 wp plugin delete akismet
 wp plugin install show-current-template --activate
-wp plugin activate wp-codespace
+wp plugin activate wapuugotchi
 
 # Demo content for WordPress
 wp plugin install wordpress-importer --activate
@@ -37,8 +37,8 @@ npm install
 composer install
 
 # Setup local plugin
-cd $REPO_FOLDER/wordpress/wp-content/plugins/wp-codespace && npm install && npx playwright install && npm run compile:css
-code -r wp-codespace.php
+cd $REPO_FOLDER/wordpress/wp-content/plugins/wapuugotchi && npm install && npx playwright install && npm run compile:css
+code -r wapuugotchi.php
 
 # Setup bash
 echo export PATH=\"\$PATH:$REPO_FOLDER/vendor/bin:$REPO_FOLDER/node_modules/.bin/\" >> ~/.bashrc

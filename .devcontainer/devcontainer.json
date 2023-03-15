@@ -31,7 +31,7 @@
 		3306
 	],
 
-	"postCreateCommand": "./.devcontainer/postCreateCommand.sh > .devcontainer/postCreateCommand.log  && code - r wordpress/wp-content/plugins/wp-codespace/wp-codespace.php",
+	"postCreateCommand": "./.devcontainer/postCreateCommand.sh > .devcontainer/postCreateCommand.log  && code - r wordpress/wp-content/plugins/wapuugotchi/wapuugotchi.php",
 	
 	"portsAttributes": {
 		"3306": {

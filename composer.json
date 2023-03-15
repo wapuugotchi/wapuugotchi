@@ -13,19 +13,26 @@
   },
   "repositories": [
     {
-      "type": "vcs",
-      "url": "https://gitlab.git-wp.server.lan/wp-dev/package/ionos-library.git"
+      "type": "git",
+      "url": "git@github.com:DerHerrFeldmann/wapuu-collection.git"
     }
   ],
   "config": {
     "cache-vcs-dir": "/tmp/cache/files",
     "allow-plugins": {
       "higidi/composer-phpcodesniffer-standards-plugin": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "composer/installers": true
     }
   },
   "require": {
-    "ext-json": "*"
+    "ext-json": "*",
+    "wapuu-gotchi/collection": "^1.0.0"
+  },
+  "extra": {
+    "installer-paths": {
+      "img":  ["wapuu-gotchi/collection"]
+    }
   },
   "authors": [
     {

@@ -8,7 +8,7 @@ services:
 #      dockerfile: Dockerfile
     restart: unless-stopped
     volumes:
-      - ../..:/workspaces:cached
+      - ../..:/workspaces/mops:cached
     command: sleep infinity
 
   db:

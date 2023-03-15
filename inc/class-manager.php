@@ -15,7 +15,7 @@ class Manager {
 				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/default.json' )
 			);
 		}
-		if ( get_admin_page_title() === 'Wapuugotchi' ) {
+			if ( get_admin_page_title() === 'Wapuugotchi' ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_shop_scripts' ) );
 		} elseif (  parse_url( get_admin_url(), PHP_URL_PATH ) === '/wp-admin/' ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_home_scripts' ) );

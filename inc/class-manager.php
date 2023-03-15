@@ -17,7 +17,7 @@ class Manager {
 		}
 		if ( get_admin_page_title() === 'Wapuugotchi' ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_shop_scripts' ) );
-		} elseif ( get_admin_page_title() === 'Home' ) {
+		} elseif (  parse_url( get_admin_url(), PHP_URL_PATH ) === '/wp-admin/' ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_home_scripts' ) );
 		}
 	}

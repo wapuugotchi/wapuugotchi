@@ -11,6 +11,24 @@
             "prev": "/wp-content/plugins/wapuugotchi/img/fur/2_prev.png",
             "text": "Caramel Wapuu",
             "path": "/wp-content/plugins/wapuugotchi/img/fur/2.svg"
+        },
+        {
+            "key": "aec8b514-74af-4a12-2133-8ghzta616a7f",
+            "prev": "/wp-content/plugins/wapuugotchi/img/fur/4_prev.png",
+            "text": "Caramel Wapuu",
+            "path": "/wp-content/plugins/wapuugotchi/img/fur/4.svg"
+        },
+        {
+            "key": "aec8b314-74af-3a1f-9133-8ghzta616a7f",
+            "prev": "/wp-content/plugins/wapuugotchi/img/fur/5_prev.png",
+            "text": "Caramel Wapuu",
+            "path": "/wp-content/plugins/wapuugotchi/img/fur/5.svg"
+        },
+        {
+            "key": "hzt8b314-74af-3a1f-9133-8ghzta616a7f",
+            "prev": "/wp-content/plugins/wapuugotchi/img/fur/6_prev.png",
+            "text": "Caramel Wapuu",
+            "path": "/wp-content/plugins/wapuugotchi/img/fur/6.svg"
         }
     ],
     "cap": [
@@ -77,7 +95,6 @@
         }
     ],
     "item": [
-
         {
             "key": "aec8b514-74af-4a1f-9333-86d74a616a7f",
             "prev": "/wp-content/plugins/wapuugotchi/img/item/1_prev.png",
@@ -133,6 +150,12 @@
             "prev": "/wp-content/plugins/wapuugotchi/img/ball/5_prev.png",
             "text": "Pokeball",
             "path": "/wp-content/plugins/wapuugotchi/img/ball/5.svg"
+        },
+        {
+            "key": "e5dfbd65-1437-4dd3-9966-d9ddd0sjd404",
+            "prev": "/wp-content/plugins/wapuugotchi/img/ball/7_prev.png",
+            "text": "IndiWeb",
+            "path": "/wp-content/plugins/wapuugotchi/img/ball/7.svg"
         }
     ]
 }

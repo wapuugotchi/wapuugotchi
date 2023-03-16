@@ -7,6 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 class Manager {
 	public function __construct() {
 		add_action( 'admin_init', array( $this, 'init' ) );
+		add_action( 'current_screen', array( $this, 'load_scripts' ) );
 	}
 
 	public function init() {
@@ -15,9 +16,13 @@ class Manager {
 				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/default.json' )
 			);
 		}
-		if ( get_admin_page_title() === 'Wapuugotchi' ) {
+	}
+
+	public function load_scripts() {
+		$currentScreen = get_current_screen();
+		if ( $currentScreen->id === 'toplevel_page_wapuugotchi' ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_shop_scripts' ) );
-		} elseif ( get_admin_page_title() === 'Home' ) {
+		} elseif ( $currentScreen->id === 'dashboard' ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_home_scripts' ) );
 		}
 	}

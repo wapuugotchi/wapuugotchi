@@ -1,4 +1,3 @@
-import React from "react";
 import "./ShowRoom.css";
 
 const ShowRoom = (props) => {

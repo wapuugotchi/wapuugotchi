@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import { useState } from "@wordpress/element";
 import ShowRoom from "./components/ShowRoom";
 import Shop from "./components/Shop";
 

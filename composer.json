@@ -1,6 +1,6 @@
 {
-  "name": "ionos/mops",
-  "description": "IONOS WordPress Mops",
+  "name": "wapuugotchi/wapuugotchi",
+  "description": "Wapuugotchi",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
   "require-dev": {
@@ -8,8 +8,7 @@
     "yoast/phpunit-polyfills": "^1.0.3",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
     "phpcompatibility/phpcompatibility-wp": "^2.1",
-    "wp-coding-standards/wpcs": "^2.3",
-    "humbug/php-scoper": "^0.17.2"
+    "wp-coding-standards/wpcs": "^2.3"
   },
   "repositories": [
     {

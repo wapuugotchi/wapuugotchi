@@ -41,3 +41,4 @@ node_modules
 /playwright/.cache/
 wp-env-home
 .DS_Store/
+build

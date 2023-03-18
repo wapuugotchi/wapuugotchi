@@ -28,6 +28,8 @@ class Manager {
 		wp_enqueue_script( 'wapuugotchi-shop', plugins_url( 'build/index.js', __DIR__ ), $assets['dependencies'], $assets['version'], true );
 
 		wp_localize_script( 'wapuugotchi-shop', 'wpPluginParam', [
+			// toDo: combine both collections into one, so that the frontend works with one collection
+			// toDo: get collection from $this->get_collection()
 			'unlockedCollection' => json_decode( file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/unlockedCollection.json' ) ),
 			'lockedCollection'   => json_decode( file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/lockedCollection.json' ) ),
 			'wapuu'              => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ),
@@ -47,16 +49,14 @@ class Manager {
 	private function get_dom_tags() {
 		$config = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi', true ), true );
 		if ( empty( $config ) ) {
-			$config = json_decode( file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/default.json' ), true );
+			$config = $this->get_collection();
 		}
 
 		if ( ! empty( $config['char'] ) ) {
 			$dom_elements = '';
-			$collection   = array_merge_recursive(
-				json_decode( file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/unlockedCollection.json' ), true ),
-				json_decode( file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/lockedCollection.json' ), true )
-			);
+			$collection   = $this->get_collection();
 
+			// todo: Adapt following code to new collection format
 			foreach ( $config['char'] as $key => $category ) {
 				if ( ! empty( $category['key'] ) && ! empty( $collection[ $key ] ) ) {
 					foreach ( $collection[ $key ] as $items ) {
@@ -69,5 +69,56 @@ class Manager {
 
 			return $dom_elements;
 		}
+	}
+
+	/**
+	 * Gets the config. Retrieves it from server if necessary.
+	 */
+	private function get_collection(){
+		if (empty( get_transient( 'wapuugotchi_collection' ) ) ) {
+			$this->set_collection();
+		}
+		
+		return get_transient( 'wapuugotchi_collection' );
+	}
+
+	/**
+	 * Retrieves the collection from the remote server and sets it as transient.
+	 */
+	private function set_collection() {
+		// $config = file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/unlockedCollection.json' ) ;
+		// set_transient( 'wapuugotchi_collection', $config, 60 * 60 * 24 );
+		// return;
+
+		$response = wp_remote_get( 'https://api.wapuugotchi.com/collection.json' );
+		if ( is_wp_error( $response ) ) {
+			return;
+		}
+
+		$body = wp_remote_retrieve_body( $response );
+
+		if ( empty( $body ) ) {
+			return;
+		}
+
+		$config = json_decode( $body );
+		if ( empty( $config ) ) {
+			return;
+		}
+
+		if ( ! $this->is_collection_valid( $config ) ) {
+			return;
+		}
+
+		set_transient( 'wapuugotchi_collection', $config, 60 * 60 * 24 );
+	}
+
+	/**
+	 * Checks if collection is valid.
+	 *
+	 * @param object $config Collection config.
+	 */
+	private function is_collection_valid( $config ) {
+		return true;
 	}
 }

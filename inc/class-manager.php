@@ -1,6 +1,6 @@
 <?php
 
-namespace Ionos\Wapuugotchi;
+namespace Wapuugotchi\Wapuugotchi;
 
 if ( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 
@@ -23,7 +23,10 @@ class Manager {
 	}
 
 	public function load_shop_scripts() {
-		wp_enqueue_script( 'wapuugotchi-shop', '/wp-content/plugins/wapuugotchi/dist/bundle.js', [ 'jquery', 'wp-element' ], wp_rand(), true );
+		$assets = require_once __DIR__ . '/../build/index.asset.php';
+		wp_enqueue_style( 'wapuugotchi-shop', plugins_url( 'build/index.css', __DIR__ ), $assets['dependencies'], $assets['version'] );
+		wp_enqueue_script( 'wapuugotchi-shop', plugins_url( 'build/index.js', __DIR__ ), $assets['dependencies'], $assets['version'], true );
+
 		wp_localize_script( 'wapuugotchi-shop', 'wpPluginParam', [
 			'unlockedCollection' => json_decode( file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/unlockedCollection.json' ) ),
 			'lockedCollection'   => json_decode( file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/lockedCollection.json' ) ),
@@ -34,9 +37,10 @@ class Manager {
 	}
 
 	public function load_home_scripts() {
-		\wp_enqueue_style( 'wapuugotchi-page', plugins_url( 'css/wapuugotchi.css', __DIR__ ), array(), filemtime( plugin_dir_path( __DIR__ ) . 'css/wapuugotchi.css' ) );
-		\wp_enqueue_script( 'wapuugotchi-page', '/wp-content/plugins/wapuugotchi/js/wapuugotchi.js', array(), '', true );
-		\wp_localize_script( 'wapuugotchi-page', 'wpPluginParam', [
+		$assets = require_once __DIR__ . '/../build/index.asset.php';
+		wp_enqueue_style( 'wapuugotchi-page', plugins_url( 'build/index.css', __DIR__ ), $assets['dependencies'], $assets['version'] );
+		wp_enqueue_script( 'wapuugotchi-page', plugins_url( 'build/index.js', __DIR__ ), $assets['dependencies'], $assets['version'], true );
+		wp_localize_script( 'wapuugotchi-page', 'wpPluginParam', [
 			'wapuu' => $this->get_dom_tags(),
 		] );
 	}

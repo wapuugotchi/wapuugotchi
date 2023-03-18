@@ -1,16 +1,19 @@
 <?php
 /**
- * Plugin Name:  Wapuugotchi
- * Plugin URI:   <PLUGIN_URI>
- * Description:  <AUTHOR>
- * Version:      <VERSION>
- * License:      GPLv2 or later
- * Author:       <AUTHOR>
- * Author URI:   <AUTHOR_URI>
- * Text Domain:  wapuugotchi
- * Domain Path:  /languages
+ * Plugin Name:       Wapuugotchi
+ * Description:       Example block scaffolded with Create Block tool.
+ * Requires at least: 6.1
+ * Requires PHP:      7.0
+ * Version:           0.1.0
+ * Author:            The WordPress Contributors
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       wapuugotchi2
+ *
+ * @package           create-block
  */
-namespace Ionos\Wapuugotchi;
+
+namespace Wapuugotchi\Wapuugotchi;
 
 /**
  * Init plugin.
@@ -18,7 +21,6 @@ namespace Ionos\Wapuugotchi;
  * @return void
  */
 function init() {
-
 	require_once 'inc/class-api.php';
 	new Api();
 
@@ -29,25 +31,4 @@ function init() {
 	new Menu();
 }
 
-\add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );
-
-/**
- * Plugin translation.
- *
- * @return void
- */
-function load_textdomain() {
-	if ( false !== \strpos( \plugin_dir_path( __FILE__ ), 'mu-plugins' ) ) {
-		\load_muplugin_textdomain(
-			'wapuugotchi',
-			\basename( \dirname( __FILE__ ) ) . '/languages'
-		);
-	} else {
-		\load_plugin_textdomain(
-			'wapuugotchi',
-			false,
-			\dirname( \plugin_basename( __FILE__ ) ) . '/languages/'
-		);
-	}
-}
-\add_action( 'init', __NAMESPACE__ . '\load_textdomain' );
+add_action( 'plugins_loaded', 'Wapuugotchi\Wapuugotchi\init' );

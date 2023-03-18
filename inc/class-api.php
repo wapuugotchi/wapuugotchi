@@ -1,5 +1,5 @@
 <?php
-namespace Ionos\Wapuugotchi;
+namespace Wapuugotchi\Wapuugotchi;
 
 if( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 

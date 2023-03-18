@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import { useState } from '@wordpress/element';
 import './Shop.css'
 import Card from "./Card";
 import axios from "axios";

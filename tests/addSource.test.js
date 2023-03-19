@@ -1,10 +1,14 @@
 // @ts-check
+const fs = require('fs');
 const { spawnSync } = require('node:child_process');
-const { test, expect } = require('@playwright/test')
+const { test, expect } = require('@playwright/test');
 
 const TEST_USER = process.env.TEST_USER || 'admin'
 const TEST_PASS = process.env.TEST_PASS || 'password'
 
+test.only('set config', async ({page}) => {
+  setTransientFromJSONFile( 'Foo', 'tests/config.json' );
+});
 
 test('collection is displayed', async ({page}) => {
   await login( page )
@@ -60,4 +64,23 @@ async function login( page ) {
   await page.fill( 'input[name="log"]', TEST_USER );
   await page.fill( 'input[name="pwd"]', TEST_PASS );
   await page.click( 'input[type="submit"]' );
+}
+
+/**
+ * Sets transient from a file on local filesystem.
+ * JSON will be converted to transient object.
+ *
+ * @param {string} name Name of the transient.
+ * @param {string} filePath Path to JSON file.
+ * 
+ */
+function setTransientFromJSONFile( name, filePath ) {
+  console.log( `Setting config ${filePath}` );
+  const config = fs.readFileSync( filePath ).toString();
+  const transient = {
+    last_checked: Date.now(),
+    data: JSON.parse( config )
+  };
+  const jsonString = JSON.stringify( transient ).replace( /"/g, '\\"' );
+  wpcommand( `option update _transient_${name} "${jsonString}" -- --format=json` );
 }

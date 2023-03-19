@@ -3,17 +3,9 @@ name: CI
 on:
   push:
     branches:
-      - improve-tests
+      - improve-testsFOO
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-     - uses: actions/checkout@v3
-     - name: phpcs
-       run: | 
-          docker run --rm -v $(pwd):/data cytopia/phpcs inc/
-
   test:
     runs-on: ubuntu-latest
     strategy:

@@ -14,7 +14,7 @@ class Menu {
 
 		add_menu_page(
 			__( 'Wapuugotchi', 'wapuugotchi' ),
-			__( 'Wapuugotchi', 'wapuugotchi' ),
+			__( 'WapuuGotchi', 'wapuugotchi' ),
 			$capability,
 			$slug,
 			[ $this, 'menu_page_template' ],

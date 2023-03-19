@@ -19,13 +19,13 @@ jobs:
         with:
           node-version: '19.x'
 
-      - name: Install, build and start
+      - name: Setup WordPress and our plugin
         run: | 
           npm ci
           npm run build 
           npm run env start
 
-      - name: install playwright
+      - name: Install playwright
         run: |
           npm install -D @playwright/test
           npx playwright install chromium
@@ -37,6 +37,6 @@ jobs:
           path: |
             playwright-report
             
-      - name: run test for develop
+      - name: Run test
         run: |
           npx playwright test tests/addSource.test.js

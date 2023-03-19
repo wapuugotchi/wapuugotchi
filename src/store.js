@@ -8,6 +8,16 @@ const DEFAULT_STATE = { foo : null };
   await wp.data.dispatch('wapuugotchi/wapuugotchi').setFoo('huhu')
 
   wp.data.select('wapuugotchi/wapuugotchi').getFoo()
+
+  import { useSelect } from "@wordpress/data";
+  import { STORE_NAME } from './store.js'; 
+
+  function Wapuutchi(props) {
+    const foo = useSelect( select => select( STORE_NAME ).getFoo(), [] );
+
+
+    return <div>{foo}</div>;
+  }
 */
 
 function create(initial_state = DEFAULT_STATE) {
@@ -55,6 +65,23 @@ function create(initial_state = DEFAULT_STATE) {
       getState(state) {
         return state;
       },
+      getCategories(state) {
+        debugger
+        let categories = Object.values(state).map(_=>_.collections)
+        .reduce((acc, curr) => {
+          acc.push(...curr);
+          return acc;
+        }, []);
+
+        categories = categories.reduce((acc, curr) => { 
+          if( !acc[curr.caption]) { 
+              acc[curr.caption]=curr.image; 
+          }
+          return acc;
+        }, {});
+
+        return categories;
+      }
     },
     resolvers: {
       // getState() {

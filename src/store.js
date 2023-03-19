@@ -54,8 +54,15 @@ function create(initial_state = DEFAULT_STATE) {
       switch (type) {
         case "SET_COLLECTIONS": {
           return {
-            payload,
+            ...state,
+            collections: payload,
             categories : evalCategories(payload)
+          };
+        }
+        case "SET_WAPUU": {
+          return {
+            ...state,
+            wapuu : payload
           };
         }
       }
@@ -68,6 +75,12 @@ function create(initial_state = DEFAULT_STATE) {
           type: "SET_COLLECTIONS",
           payload,
         };
+      },
+      setWapuu(payload) {
+        return {
+          type: "SET_WAPUU",
+          payload,
+        };
       },  
     },
     selectors: {
@@ -76,6 +89,9 @@ function create(initial_state = DEFAULT_STATE) {
       },
       getCategories(state) {
         return state.categories;
+      },
+      getWapuu(state) {
+        return state.wapuu;
       }
     },
     resolvers: {

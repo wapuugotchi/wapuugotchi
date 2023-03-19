@@ -37,10 +37,16 @@ class Manager {
 			'nonce'              => wp_create_nonce( 'wp_rest' ),
 		] );
 
-    wp_add_inline_script( 'wapuugotchi-shop', 
-    sprintf("wp.data.dispatch('wapuugotchi/wapuugotchi').setCollections(%s)", json_encode( 
-      $this->get_collection()
-     )), 'after' );  
+    wp_add_inline_script( 
+      'wapuugotchi-shop', 
+    sprintf("wp.data.dispatch('wapuugotchi/wapuugotchi').setCollections(%s);\n", json_encode( 
+        $this->get_collection()
+      ))
+      .
+      sprintf("wp.data.dispatch('wapuugotchi/wapuugotchi').setWapuu(%s);\n",  
+        get_user_meta( get_current_user_id(), 'wapuugotchi', true )
+      )
+    , 'after' );  
 	}
 
 	public function load_home_scripts() {

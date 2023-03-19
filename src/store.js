@@ -66,7 +66,6 @@ function create(initial_state = DEFAULT_STATE) {
         return state;
       },
       getCategories(state) {
-        debugger
         let categories = Object.values(state).map(_=>_.collections)
         .reduce((acc, curr) => {
           acc.push(...curr);

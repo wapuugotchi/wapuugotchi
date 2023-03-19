@@ -37,10 +37,12 @@ class Manager {
 	}
 
 	public function load_home_scripts() {
-		\wp_enqueue_style( 'wapuugotchi-page', plugins_url( 'css/wapuugotchi.css', __DIR__ ), array(), filemtime( plugin_dir_path( __DIR__ ) . 'css/wapuugotchi.css' ) );
-		\wp_enqueue_script( 'wapuugotchi-page', '/wp-content/plugins/wapuugotchi/js/wapuugotchi.js', array(), '', true );
+		$assets = require_once __DIR__ . '/../build/wapuugotchi.asset.php';
+		\wp_enqueue_style( 'wapuugotchi-page', plugins_url( 'build/wapuugotchi.css', __DIR__ ), array(), $assets['version'] );
+		\wp_enqueue_script( 'wapuugotchi-page', plugins_url( 'build/wapuugotchi.js', __DIR__ ), $assets['dependencies'], $assets['version'], true );
 		\wp_localize_script( 'wapuugotchi-page', 'wpPluginParam', [
 			'wapuu' => $this->get_dom_tags(),
+			'nonce' => wp_create_nonce( 'wp_rest' ),
 		] );
 	}
 

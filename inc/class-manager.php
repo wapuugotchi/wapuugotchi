@@ -97,7 +97,7 @@ class Manager {
 		// toDo: refactor the following code to use the new collection format
 		if( $file ) {
 			return  json_decode(
-				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/' . $file ) 
+				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/' . $file ), true
 			);
 		}
 		

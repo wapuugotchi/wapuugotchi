@@ -2,14 +2,19 @@
 
 ## setup
 
-1. nvm use
-1. npm ci
-1. npm run env start
+1. `nvm use` (or `nvm install` if the node version is not yet locally available)
+1. `npm ci`
+1. `npm run build`
+1. `npm run env start`
+  
+  To start WordPress it with xdebug support : `npm run env start -- --xdebug`
 
 ## tipps
 ### Use CLI
 ``npm run env run cli user list``
 
+### Use tests
+Run ```npm test```.
 
 ### Third party plugins
 To provide custom items, you can add an url to retrieve new items. You can call the wapuugotchi_add_source action at first on admin_init, with a higher priority than ten.

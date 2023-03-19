@@ -1,7 +1,7 @@
 // @ts-check
 const { devices } = require('@playwright/test');
 require('dotenv').config();
-const TEST_URL = process.env.TEST_URL ?? 'http://localhost:8076';
+const TEST_URL = process.env.TEST_URL || 'http://localhost:8889'
 
 /**
  * Read environment variables from file.
@@ -41,9 +41,13 @@ const config = {
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: TEST_URL,
-    headless: false,
+    headless: true,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    video: {
+      mode: 'retain-on-failure', 
+      size: { width: 640, height: 480 }
+    }
   },
 
   /* Configure projects for major browsers */
@@ -53,59 +57,9 @@ const config = {
       use: {
         ...devices['Desktop Chrome'],
       },
-    },
-
-    /* Test against mobile viewports. */
-     {
-       name: 'firefox',
-       use: {
-         ...devices['Desktop Firefox'],
-       },
-     },
-
-     {
-       name: 'webkit',
-       use: {
-         ...devices['Desktop Safari'],
-       },
-     },
-    //
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: {
-    //     ...devices['Pixel 5'],
-    //   },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: {
-    //     ...devices['iPhone 12'],
-    //   },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: {
-    //     channel: 'msedge',
-    //   },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: {
-    //     channel: 'chrome',
-    //   },
-    // },
+    },    
   ],
 
-  /* Folder for test artifacts such as screenshots, videos, traces, etc. */
-  // outputDir: 'test-results/',
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   port: 3000,
-  // },
 };
 
 module.exports = config;

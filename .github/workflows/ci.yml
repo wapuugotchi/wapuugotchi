@@ -3,14 +3,14 @@ name: CI
 on:
   push:
     branches:
-      - improve-tests
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        wpVersion: ['5.9', '6.0', '6.1', ''] # '' stands for master branch of WordPress/WordPress
+        wpVersion: ['5.9', '6.0', '6.1'] 
         phpVersion: ['7.4', '8.0', '8.1', '8.2']
       fail-fast: false
 

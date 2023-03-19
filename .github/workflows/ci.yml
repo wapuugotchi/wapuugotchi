@@ -12,6 +12,7 @@ jobs:
       matrix:
         wpVersion: ['5.9', '6.0']
         phpVersion: ['7.4', '8.0']
+      fail-fast: false
     steps:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3

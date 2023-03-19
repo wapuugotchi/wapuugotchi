@@ -52,7 +52,10 @@ class Manager {
 
 		if ( ! empty( $config['char'] ) ) {
 			$dom_elements = '';
-			$collection   = $this->get_collection();
+			$collection   = array_merge_recursive(
+				$this->get_collection( 'lockedCollection.json' ),
+				$this->get_collection( 'unlockedCollection.json' ),
+			);
 
 			// todo: Adapt following code to new collection format
 			foreach ( $config['char'] as $key => $category ) {
@@ -72,11 +75,13 @@ class Manager {
 	/**
 	 * Gets the config. Retrieves it from server if necessary.
 	 */
-	private function get_collection( $file ){
+	private function get_collection( $file = null){
 		// toDo: refactor the following code to use the new collection format
-		return  json_decode(
-			file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/' . $file ) 
-		);
+		if( $file ) {
+			return  json_decode(
+				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/' . $file ) 
+			);
+		}
 		
 		if (empty( get_transient( 'wapuugotchi_collection' ) ) ) {
 			$this->set_collection();

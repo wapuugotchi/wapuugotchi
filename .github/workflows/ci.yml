@@ -10,9 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        wpVersion: ['5.9', '6.0']
-        phpVersion: ['7.4', '8.0']
+        wpVersion: ['5.9', '6.0', '6.1']
+        phpVersion: ['7.4', '8.0', '8.1', '8.2']
       fail-fast: false
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3

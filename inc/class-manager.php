@@ -112,7 +112,7 @@ class Manager {
 			);
 		}
 		
-		if (1 || empty( get_transient( 'wapuugotchi_collection' ) ) ) {
+		if (empty( get_transient( 'wapuugotchi_collection' ) ) ) {
 			$this->set_collection();
 		}
 		

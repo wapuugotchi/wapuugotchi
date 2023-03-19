@@ -13,6 +13,8 @@
 ### Use CLI
 ``npm run env run cli user list``
 
+### Use tests
+Run ```npm test```.
 
 ### Third party plugins
 To provide custom items, you can add an url to retrieve new items. You can call the wapuugotchi_add_source action at first on admin_init, with a higher priority than ten.

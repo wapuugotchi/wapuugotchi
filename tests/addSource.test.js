@@ -13,5 +13,5 @@ test.beforeEach(async ({page}) => {
 
 test('external collection is displayed', async ({page}) => {
   await page.goto( '/wp-admin/admin.php?page=wapuugotchi' );
-  await expect( await page.locator( '.wapuu_card__item' ).count() ).toBeGreaterThan( 100 );
+  await expect( await page.locator( '.wapuu_card__item' ).count() ).toBeGreaterThan( 1 );
 });

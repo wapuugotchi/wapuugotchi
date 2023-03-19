@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress">
+	<description>WordPress</description>
+	<rule ref="WordPress">
+		
+	</rule>
+	
+</ruleset>

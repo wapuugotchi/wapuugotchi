@@ -9,8 +9,9 @@ test.beforeEach(async ({page}) => {
   await page.fill( 'input[name="log"]', TEST_USER );
   await page.fill( 'input[name="pwd"]', TEST_PASS );
   await page.click( 'input[type="submit"]' );
-})
+});
 
-test('page exists', async ({page}) => {
-  await expect( true ).toBeTruthy();
-})
+test('external collection is displayed', async ({page}) => {
+  await page.goto( '/wp-admin/admin.php?page=wapuugotchi' );
+  await expect( await page.locator( '.wapuu_card__item' ).count() ).toBeGreaterThan( 1 );
+});

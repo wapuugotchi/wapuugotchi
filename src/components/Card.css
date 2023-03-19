@@ -9,16 +9,16 @@
     padding: 10px 0;
 }
 .wapuu_card .wapuu_card__items {
-    width:800px;
-    padding: 10px 0;
-    margin-left: 90px;
-
+    width:400px;
+    padding: 5px 0;
+    margin-left: 50px;
+    overflow: scroll;
     column-count: 2;
 }
 .wapuu_card .wapuu_card__item {
-    height: 280px;
+    height: 150px;
     margin-top: 5px;
-    width: 250px;
+    width: 150px;
     margin-left: 10px;
     background-color: #fafafa;
     padding: 2px 10px;

@@ -66,11 +66,7 @@ const Shop = (props) => {
 							onChange={nameHandler}
 						/>
 					</div>
-					<div className="wapuu_shop__image">
-						<div className="wapuu_shop__img">
-							<ShowRoom wapuu={props.wapuu} collection={props.collection} />
-						</div>
-					</div>
+						<ShowRoom wapuu={props.wapuu} collection={props.collection} />			
 					<div className="wapuu_shop__button">
 						<button
 							onClick={resetHandler}

@@ -20,6 +20,12 @@ class Api {
 			'callback' => [ $this, 'set_settings' ],
 			'permission_callback' => [ $this, 'has_set_settings_permission' ]
 		] );
+
+		register_rest_route( 'wapuugotchi/v1', '/message', [
+			'methods' => 'GET',
+			'callback' => [ $this, 'get_messages' ],
+			'permission_callback' => [ $this, 'has_get_message_permission' ]
+		] );
 	}
 
 	public function has_get_settings_permission() {
@@ -28,6 +34,10 @@ class Api {
 
 	public function has_set_settings_permission() {
 		return current_user_can( 'publish_posts' );
+	}
+
+	public function has_get_message_permission() {
+		return is_user_logged_in();
 	}
 
 	public function set_settings( $req ) {
@@ -42,4 +52,9 @@ class Api {
 	public function get_settings() {
 		return rest_ensure_response( json_decode( file_get_contents(\plugin_dir_path( __DIR__ ) . 'config/default.json') ) );
 	}
+
+	public function get_messages() {
+		return rest_ensure_response( [['message'=> 'dummy message #1'],['message'=> 'dummy message #2']]);
+	}
+
 }

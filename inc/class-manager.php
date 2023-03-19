@@ -20,6 +20,8 @@ class Manager {
 		} elseif (  parse_url( get_admin_url(), PHP_URL_PATH ) === '/wp-admin/' ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_home_scripts' ) );
 		}
+
+		add_action( 'wapuugotchi_add_source', [ $this, 'add_source' ], 10, 1 );
 	}
 
 	public function load_shop_scripts() {
@@ -75,9 +77,23 @@ class Manager {
 	}
 
 	/**
+	 * Adds a new source to the collection.
+	 */
+	public function add_source( $url ) {
+		$sources = array_keys(get_transient( 'wapuugotchi_collection' ) );
+
+		if ( in_array( md5($url), $sources ) ) {
+			return;
+		}
+
+		$this->set_collection( $url );
+		
+	}
+
+	/**
 	 * Gets the config. Retrieves it from server if necessary.
 	 */
-	private function get_collection( $file = null){
+	private function get_collection( $file = null ){
 		// toDo: refactor the following code to use the new collection format
 		if( $file ) {
 			return  json_decode(
@@ -95,8 +111,9 @@ class Manager {
 	/**
 	 * Retrieves the collection from the remote server and sets it as transient.
 	 */
-	private function set_collection(  ) {
-		$response = wp_remote_get( 'https://api.wapuugotchi.com/collection.json' );
+	private function set_collection( $url =  'https://api.wapuugotchi.com/collection' ) {
+	
+		$response = wp_remote_get( $url );
 		if ( is_wp_error( $response ) ) {
 			return;
 		}
@@ -108,6 +125,7 @@ class Manager {
 		}
 
 		$config = json_decode( $body );
+
 		if ( empty( $config ) ) {
 			return;
 		}
@@ -116,7 +134,10 @@ class Manager {
 			return;
 		}
 
-		set_transient( 'wapuugotchi_collection', $config, 60 * 60 * 24 );
+		$totalConfig = get_transient( 'wapuugotchi_collection' );
+		$totalConfig[ md5( $url ) ] = $config;
+
+		set_transient( 'wapuugotchi_collection', $totalConfig, 60 * 60 * 24 );
 	}
 
 	/**

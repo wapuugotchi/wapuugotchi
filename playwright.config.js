@@ -1,7 +1,7 @@
 // @ts-check
 const { devices } = require('@playwright/test');
 require('dotenv').config();
-const TEST_URL = process.env.TEST_URL ?? 'http://localhost:8076';
+const TEST_URL = process.env.TEST_URL || 'http://localhost:8889'
 
 /**
  * Read environment variables from file.
@@ -41,7 +41,7 @@ const config = {
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: TEST_URL,
-    headless: false,
+    headless: true,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },

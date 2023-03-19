@@ -35,7 +35,7 @@ jobs:
           npx playwright test tests/addSource.test.js
 
       - name: Archive test artifacts
-        if: ${{ failure() }}
+        if: failure()
         uses: actions/upload-artifact@v3
         with:
           name: playwright-report

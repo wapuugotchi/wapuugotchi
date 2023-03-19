@@ -12,7 +12,7 @@ jobs:
      - uses: actions/checkout@v3
      - name: phpcs
        run: | 
-          echo "HI"
+          docker run --rm -v $(pwd):/data cytopia/phpcs inc/
 
   test:
     runs-on: ubuntu-latest

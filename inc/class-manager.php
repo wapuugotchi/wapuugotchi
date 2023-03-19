@@ -38,7 +38,7 @@ class Manager {
 		] );
 
     wp_add_inline_script( 'wapuugotchi-shop', 
-    sprintf("wp.data.dispatch('wapuugotchi/wapuugotchi').setState(%s)", json_encode( 
+    sprintf("wp.data.dispatch('wapuugotchi/wapuugotchi').setCollections(%s)", json_encode( 
       $this->get_collection()
      )), 'after' );  
 	}

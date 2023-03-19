@@ -15,7 +15,7 @@ class Manager {
 				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/default.json' )
 			);
 		}
-			if ( get_admin_page_title() === 'Wapuugotchi' ) {
+		if ( 'Wapuugotchi' === get_admin_page_title() ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_shop_scripts' ) );
 		} elseif (  parse_url( get_admin_url(), PHP_URL_PATH ) === '/wp-admin/' ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_home_scripts' ) );
@@ -36,6 +36,14 @@ class Manager {
 			'apiUrl'             => get_rest_url( null, 'wapuugotchi' ),
 			'nonce'              => wp_create_nonce( 'wp_rest' ),
 		] );
+
+		wp_add_inline_script(
+			'wapuugotchi-shop',
+			sprintf(
+				"wp.data.dispatch('wapuugotchi/wapuugotchi').setState(%s)", json_encode( $this->get_collection() ),
+			),
+			'after'
+		);
 	}
 
 	public function load_home_scripts() {
@@ -87,7 +95,7 @@ class Manager {
 		}
 
 		$this->set_collection( $url );
-		
+
 	}
 
 	/**
@@ -100,11 +108,11 @@ class Manager {
 				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/' . $file ), true
 			);
 		}
-		
+
 		if (empty( get_transient( 'wapuugotchi_collection' ) ) ) {
 			$this->set_collection();
 		}
-		
+
 		return get_transient( 'wapuugotchi_collection' );
 	}
 
@@ -112,7 +120,7 @@ class Manager {
 	 * Retrieves the collection from the remote server and sets it as transient.
 	 */
 	private function set_collection( $url =  'https://api.wapuugotchi.com/collection' ) {
-	
+
 		$response = wp_remote_get( $url );
 		if ( is_wp_error( $response ) ) {
 			return;

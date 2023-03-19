@@ -22,8 +22,9 @@ class Menu {
 		);
 	}
 
-	public function menu_page_template() {
+	public function menu_page_template () {
 		echo '<div class="wrap"><div id="wapuugotchi-app"></div></div>';
 	}
-	// hello world
+	
+
 }

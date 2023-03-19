@@ -7,7 +7,7 @@
 1. `npm run build`
 1. `npm run env start`
   
-  To start WordPress it with xdebug support : `npm run env start --xdebug`
+  To start WordPress it with xdebug support : `npm run env start -- --xdebug`
 
 ## tipps
 ### Use CLI

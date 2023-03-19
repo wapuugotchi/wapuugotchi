@@ -29,6 +29,10 @@ jobs:
         run: |
           npm install -D @playwright/test
           npx playwright install chromium
+            
+      - name: Run test
+        run: |
+          npx playwright test tests/addSource.test.js
 
       - name: Archive test artifacts
         uses: actions/upload-artifact@v3
@@ -36,7 +40,3 @@ jobs:
           name: playwright-report
           path: |
             playwright-report
-            
-      - name: Run test
-        run: |
-          npx playwright test tests/addSource.test.js

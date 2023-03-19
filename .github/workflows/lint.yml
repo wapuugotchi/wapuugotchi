@@ -1,0 +1,22 @@
+name: "Codestyle check"
+on:
+  push:
+    branches:
+      - improve-tests
+      
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install PHP_CodeSniffer
+        run: |
+          curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+          php phpcs.phar --version
+      - uses: tiger-cq/action-phpcs-ci@v8
+        with:
+          files: "**.php"
+          phpcs_path: php phpcs.phar
+          standard: phpcs.xml

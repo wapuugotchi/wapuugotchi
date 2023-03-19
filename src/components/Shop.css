@@ -1,9 +1,70 @@
 .wapuu_shop {
-    width: 50%;
-    float: left;
+    display: flex;
+  align-items: stretch;
 }
 
 .wapuu_shop form button.button.button-primary {
-    width: 115px;
+    width: 200px;
     margin: 0 10px;
+}
+
+.wapuu_shop form {
+    background: white;
+    width: 2000px;
+    display: flex;
+    align-items: center;
+}
+.wapuu_shop__input {
+    padding-top: 35px;
+
+}
+
+.wapuu_shop__button {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wapuu_shop__image {
+    display: flex;
+    align-items: center;
+    padding-top: 10%
+    /* height: 100%; */
+}
+
+.wapuu_shop__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    width: 800px;
+    align-items: center;
+    /* for demonstration purposes */
+    height: 100%;
+}
+ 
+input {
+    width: 450px;
+    margin: 60px;
+    padding-top: 60px;
+}
+.wapuu_shop__items > div:not(:only-child):last-of-type {
+    margin-top: auto;
+  }
+
+.wapuu_shop__name {
+    margin-top: 5px;
+    width: 750px;
+    height: 50px;
+    padding-top: 60px;
+}
+ .wapuu_shop__submit {
+    height: 60px !important;
+    width: 380px !important;
+
+}
+.wapuu_shop__reset {
+    height: 60px !important;
+    width: 380px  !important;
 }

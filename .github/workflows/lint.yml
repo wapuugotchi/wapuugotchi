@@ -24,5 +24,5 @@ jobs:
       - uses: thenabeel/action-phpcs@v8
         with:
           files: "**.php"
-          phpcs_path: phpcs
+          phpcs_path: ./phpcs/bin/phpcs
           standard: phpcs.xml

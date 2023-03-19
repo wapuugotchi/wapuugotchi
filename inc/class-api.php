@@ -1,6 +1,8 @@
 <?php
 namespace Wapuugotchi\Wapuugotchi;
 
+use WP_Error;
+
 if( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 
 class Api {
@@ -12,7 +14,7 @@ class Api {
 		register_rest_route( 'wapuugotchi/v1', '/wapuu', [
 			'methods' => 'GET',
 			'callback' => [ $this, 'get_settings' ],
-			'permission_callback' => [ $this, 'has_get_settings_permission' ]
+			'permission_callback' => [ $this, '__return_true' ]
 		] );
 
 		register_rest_route( 'wapuugotchi/v1', '/wapuu', [
@@ -26,11 +28,20 @@ class Api {
 			'callback' => [ $this, 'get_messages' ],
 			'permission_callback' => [ $this, 'has_get_message_permission' ]
 		] );
+
+		register_rest_route( 'wapuugotchi/v1', '/credits', [
+			'methods' => 'GET',
+			'callback' => [ $this, 'get_balance' ],
+			'permission_callback' => 'is_user_logged_in'
+		] );
+
+		register_rest_route( 'wapuugotchi/v1', '/credits', [
+			'methods' => 'POST',
+			'callback' => [ $this, 'update_balance' ],
+			'permission_callback' => 'is_user_logged_in'
+		] );
 	}
 
-	public function has_get_settings_permission() {
-		return true;
-	}
 
 	public function has_set_settings_permission() {
 		return current_user_can( 'publish_posts' );
@@ -57,4 +68,23 @@ class Api {
 		return rest_ensure_response( [['message'=> 'dummy message #1'],['message'=> 'dummy message #2']]);
 	}
 
+	public function get_balance() {
+		$balance = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ) );
+		return rest_ensure_response( ['balance' => $balance]);
+	}
+
+	public function update_balance( $req ) {
+		$balance = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ) );
+		$body = json_decode($req->get_body());
+		$amount =  $body->amount;
+		if (gettype($amount) !== 'integer') {
+			return rest_ensure_response( new WP_Error('provide amount as integer'));
+		}
+		$balance = $balance + $amount;
+		if ( $balance < 0) {
+			return rest_ensure_response( new WP_Error(__('Insufficent balance')));
+		}
+		update_user_meta( get_current_user_id(), 'wapuugotchi_balance', $balance);
+		return rest_ensure_response( ['balance' => $balance] );
+	}
 }

@@ -29,8 +29,11 @@ function evalCategories(collections) {
   );
 
   categories = categories.reduce((acc, curr) => { 
-      if( !acc[curr.caption]) { 
-          acc[curr.caption]=curr.image; 
+      if( !acc[curr.caption]) {
+          // collect only categories with at least a single item
+          if(!curr.items.length) { 
+            acc[curr.caption]=curr.image;
+          } 
       }
       return acc;
     }, 

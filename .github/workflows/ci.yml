@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        wpVersion: ['5.9', '6.0', '6.1']
+        wpVersion: ['5.9', '6.0', '6.1', ''] # '' stands for master branch of WordPress/WordPress
         phpVersion: ['7.4', '8.0', '8.1', '8.2']
       fail-fast: false
 

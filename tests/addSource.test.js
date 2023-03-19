@@ -6,14 +6,14 @@ const { test, expect } = require('@playwright/test');
 const TEST_USER = process.env.TEST_USER || 'admin'
 const TEST_PASS = process.env.TEST_PASS || 'password'
 
-test.only('set config', async ({page}) => {
-  setTransientFromJSONFile( 'Foo', 'tests/config.json' );
-});
-
 test('collection is displayed', async ({page}) => {
   await login( page )
   await page.goto( '/wp-admin/admin.php?page=wapuugotchi' );
   await expect( await page.locator( '.wapuu_card__item' ).count() ).toBeGreaterThan( 1 );
+});
+
+test.skip('set config', async ({page}) => {
+  setTransientFromJSONFile( 'Foo', 'tests/config.json' );
 });
 
 test.skip('user has one post posted', async ({page}) => {

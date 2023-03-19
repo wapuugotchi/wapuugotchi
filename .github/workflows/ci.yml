@@ -19,13 +19,11 @@ jobs:
         with:
           node-version: '19.x'
 
-      - name: Install dependecies
+      - name: Install, build and start
         run: |
           npm ci
-
-      - name: Build js
-        run: |
           npm run build
+          npm run env start
 
   test:
     runs-on: ubuntu-latest
@@ -42,11 +40,8 @@ jobs:
       - name: install playwright
         run: |
           npm install -D @playwright/test
-          npx playwright install
+          npx playwright install chromium
 
       - name: run test for develop
-        env:
-          PASSWORD: ${{ secrets.PASSWORD }}
-        if: github.ref == 'refs/heads/develop'
         run: |
-          URL=https://develop.sharepicgenerator.de/ PASS=$PASSWORD npx playwright test tests/create-sharepic.spec.js
+          npx playwright test tests/addSource.test.js

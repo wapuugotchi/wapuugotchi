@@ -4,8 +4,8 @@ namespace Wapuugotchi\Wapuugotchi;
 if( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 
 class Api {
-    public function __construct() {
-	    add_action( 'rest_api_init', [ $this, 'create_rest_routes' ] );
+	public function __construct() {
+		add_action( 'rest_api_init', [ $this, 'create_rest_routes' ] );
 	}
 
 	public function create_rest_routes() {

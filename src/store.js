@@ -4,23 +4,47 @@ const STORE_NAME = 'wapuugotchi/wapuugotchi';
 
 const DEFAULT_STATE = {  };
 
+/**
+ * - wp.data.select('wapuugotchi/wapuugotchi').getState() 
+ *    
+ *    returns the whole state data containing ALMOST ANYTHING 
+ *    should be removed after finishing porting to react
+ *    exists just for debugging purposes
+ * 
+ * - wp.data.select('wapuugotchi/wapuugotchi').getCollections()
+ * 
+ *    contains ALL items (both available(paid or price===0) and unavailable (=> not yet paid))
+ * 
+ * - wp.data.select('wapuugotchi/wapuugotchi').getCategories()
+ * 
+ *    returns an object representation (key=>category name, value=>category image url) of all categories
+ */
+
 /*
-  await wp.data.dispatch('wapuugotchi/wapuugotchi').setFoo('huhu')
-
-  wp.data.select('wapuugotchi/wapuugotchi').getFoo()
-
   import { useSelect } from "@wordpress/data";
   import { STORE_NAME } from './store.js'; 
 
-  function Wapuutchi(props) {
-    const foo = useSelect( select => select( STORE_NAME ).getFoo(), [] );
-
+  function YourComponent(props) {
+    const { wapuu, collections, categories } = useSelect( select => {
+      return {
+        collections: select(STORE_NAME).getState().collections,
+        wapuu: select(STORE_NAME).getWapuu(),
+        categories: select(STORE_NAME).getCategories(),
+      };
+    });
 
     return <div>{foo}</div>;
   }
 */
 
-function evalCategories(collections) {
+/**
+ * computes the available categories
+ *
+ * @param   {object} collections  @TODO: add description
+ *
+ * @return  {object} all (non empty) categories. key is category-name, value id category-image-url
+ */
+function _evalCategories(collections) {
   let categories = Object.values(collections).map(_=>_.collections)
     .reduce((acc, curr) => {
       acc.push(...curr);
@@ -43,6 +67,62 @@ function evalCategories(collections) {
   return categories;
 }
 
+/**
+ * computes filtered collections containing unlocked and locked items
+ *
+ * @param   {object} collections  @TODO: add description
+ *
+ * @return  {array} filtered items in same object shape as the raw collections structure   
+ */
+function _computeItems(collections) {
+  const computedItems = {
+    unlocked : {}, 
+    locked : {},
+  };
+
+  for (const [hash, val] of Object.values(collections)) {
+    computedItems.unlocked[hash] = {
+      collections : [],
+    };
+    computedItems.locked[hash] = {
+      collections : [],
+    };
+
+    for (const collection of val.collections) {
+      computedItems.locked[hash].collections.push({
+        caption : collection.caption,
+        image : collection.image,
+        items : collection.items.filter(items => {
+          // @TODO: filter locked items 
+        }),  
+      });
+    }
+
+    // @TODO: same same for unlocked items
+  }
+
+  let categories = Object.values(collections).map(_=>_.collections)
+    .reduce((acc, curr) => {
+      acc.push(...curr);
+      return acc;
+    }, []
+  );
+
+  categories = categories.reduce((acc, curr) => { 
+      if( !acc[curr.caption]) {
+          // collect only categories with at least a single item
+          if(!curr.items.length) { 
+            acc[curr.caption]=curr.image;
+          } 
+      }
+      return acc;
+    }, 
+    {}
+  );
+
+  return computedItems;
+}
+
 function create(initial_state = DEFAULT_STATE) {
   const store = createReduxStore(STORE_NAME, {
     /* 
@@ -56,7 +136,8 @@ function create(initial_state = DEFAULT_STATE) {
           return {
             ...state,
             collections: payload,
-            categories : evalCategories(payload)
+            categories : _evalCategories(payload),
+            ..._computeItems(payload),
           };
         }
         case "SET_WAPUU": {
@@ -111,6 +192,30 @@ function create(initial_state = DEFAULT_STATE) {
   register(store);
 }
 
+// register the store now (lazy registration is not needed)
 create();
 
-export { STORE_NAME };
+/**
+ * computes all items from given collections by category
+ *
+ * @param   {object}  collections  @TODO: 
+ * @param   {string}  category     name of category 
+ *
+ * @return  {array}   array of items of this category
+ */
+function getItemsByCategory(collections, category) {
+  let categories = Object.values(collections).map(_=>_.collections)
+    .reduce((acc, curr) => {
+      acc.push(...curr);
+      return acc;
+    }, []
+  );
+
+  categories = categories.filter(_ => _.caption === category);
+
+  categories = categories.map(_=> Object.values(_.items));
+
+  return [].concat(...categories);
+}
+
+export { STORE_NAME, getItemsByCategory };

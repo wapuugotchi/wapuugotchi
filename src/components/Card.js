@@ -2,22 +2,6 @@ import { useState } from '@wordpress/element';
 import Categories from './Categories';
 import './Card.css'
 
-// window.getItemsByCategory = function(collections, category) {
-//   debugger
-//   let categories = Object.values(collections).map(_=>_.collections)
-//     .reduce((acc, curr) => {
-//       acc.push(...curr);
-//       return acc;
-//     }, []
-//   );
-
-//   categories = categories.filter(_ => _.caption === category);
-
-//   categories = categories.map(_=> Object.values(_.items));
-
-//   return [].concat(...categories);
-// }
-
 const Card = (props) => {
   const [selectedCategory, setSelectedCategory] = useState('fur')
   const categories = ['fur', 'cap', 'item', 'coat', 'pant', 'shoe', 'ball'];

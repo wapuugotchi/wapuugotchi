@@ -92,8 +92,8 @@ function _computeItems(collections) {
       computedItems.locked[hash].collections.push({
         caption : collection.caption,
         image : collection.image,
-        items : collection.items.filter(items => {
-          // @TODO: filter locked items 
+        items : Object.values(collection.items).filter(items => {
+          // @TODO: filter locked items
         }),  
       });
     }

@@ -13,7 +13,7 @@
     padding: 5px 0;
     margin-left: 50px;
     overflow: scroll;
-    column-count: 2;
+    column-count: 1;
     height: 600px;
 }
 .wapuu_card .wapuu_card__item {

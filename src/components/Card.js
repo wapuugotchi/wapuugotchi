@@ -4,7 +4,9 @@ import './Card.css'
 
 const Card = (props) => {
   const [selectedCategory, setSelectedCategory] = useState('fur')
-  const categories = ['fur', 'cap', 'item', 'coat', 'pant', 'shoe', 'ball'];
+  const categories = ['fur', 'cap', 'item', 'coat', 'shoe', 'ball', 'pant'];
+
+
 
   const handleSelectedCategory = (category) => {
     setSelectedCategory(category)

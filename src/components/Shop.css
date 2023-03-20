@@ -1,6 +1,7 @@
 .wapuu_shop {
     display: flex;
-  align-items: stretch;
+    align-items: stretch;
+    background-color: white;
 }
 
 .wapuu_shop form button.button.button-primary {
@@ -10,13 +11,14 @@
 
 .wapuu_shop form {
     background: white;
-    width: 2000px;
+    width: 100%;
+    height: 650px;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 .wapuu_shop__input {
     padding-top: 35px;
-
+    height: 80px;
 }
 
 .wapuu_shop__button {
@@ -28,7 +30,6 @@
 }
 .wapuu_shop__image {
     display: flex;
-    align-items: center;
     padding-top: 10%
     /* height: 100%; */
 }
@@ -37,16 +38,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 100px;
-    width: 800px;
-    align-items: center;
+    margin-left: 5px;
+    width: 400px;
+
     /* for demonstration purposes */
-    height: 100%;
+    height: 90%;
+
 }
  
 input {
     width: 450px;
-    margin: 60px;
     padding-top: 60px;
 }
 .wapuu_shop__items > div:not(:only-child):last-of-type {
@@ -55,9 +56,8 @@ input {
 
 .wapuu_shop__name {
     margin-top: 5px;
-    width: 750px;
+    width: 400px;
     height: 50px;
-    padding-top: 60px;
 }
  .wapuu_shop__submit {
     height: 60px !important;

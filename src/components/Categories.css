@@ -3,8 +3,8 @@
     margin-left: 30px;  
     padding: 5px 15px;
     background-color: #3858E9;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 3px;
 }.wapuu_card .wapuu_card__category.selected {
      background-color: #3858E9;
@@ -16,17 +16,10 @@
     pointer-events: none;
 }
 .wapuu_card .wapuu_card__category > img {
-    width: 80px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
     padding-top: 5px;
-    padding-left: 10px;
+    padding-left: 5px;
     filter: invert(99%) sepia(73%) saturate(84%) hue-rotate(191deg) brightness(109%) contrast(87%);
 }
-.wapuu_category__image {
-    width: 100px;
-    height: 100px;
-}
-.wapuu_shop__img {
-    width: 450px;
-    height: 400px;
-}
+

@@ -3,12 +3,18 @@ name: CI
 on:
   push:
     branches:
-      - improve-tests
+      - main
+      - develop
 
 jobs:
   test:
     runs-on: ubuntu-latest
-   
+    strategy:
+      matrix:
+        wpVersion: ['5.9', '6.0', '6.1'] 
+        phpVersion: ['7.4', '8.0', '8.1', '8.2']
+      fail-fast: false
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
@@ -24,7 +30,7 @@ jobs:
         run: | 
           npm ci
           npm run build 
-          npm run env start
+          WP_ENV_CORE=wordpress/wordpress#${{ matrix.wpVersion }} WP_ENV_PHP_VERSION=${{ matrix.phpVersion }} npm run env start
 
       - name: Install playwright
         run: |

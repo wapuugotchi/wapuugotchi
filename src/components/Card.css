@@ -12,11 +12,13 @@
     width:400px;
     padding: 5px 0;
     margin-left: 50px;
-    overflow: scroll;
-    column-count: 1;
-    height: 500px;
+    overflow-y: scroll;
+    column-count: 2;
+    height: 600px;
+    break-inside: avoid;
 }
 .wapuu_card .wapuu_card__item {
+    break-inside: avoid;
     height: 150px;
     margin-top: 5px;
     width: 150px;

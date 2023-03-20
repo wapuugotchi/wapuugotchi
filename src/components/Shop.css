@@ -1,6 +1,7 @@
 .wapuu_shop {
     display: flex;
-  align-items: stretch;
+    align-items: stretch;
+    background-color: white;
 }
 
 .wapuu_shop form button.button.button-primary {

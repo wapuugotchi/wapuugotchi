@@ -15,7 +15,10 @@ class Manager {
 				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/default.json' )
 			);
 		}
-		if ( 'Wapuugotchi' === get_admin_page_title() ) {
+		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ) ) ) {
+			update_user_meta( get_current_user_id(), 'wapuugotchi_balance', 0);
+		}
+		if ( get_admin_page_title() === 'Wapuugotchi' ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_shop_scripts' ) );
 		} elseif (  parse_url( get_admin_url(), PHP_URL_PATH ) === '/wp-admin/' ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_home_scripts' ) );

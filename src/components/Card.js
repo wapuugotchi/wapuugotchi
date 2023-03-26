@@ -1,10 +1,18 @@
 import { useState } from '@wordpress/element';
 import Categories from './Categories';
 import './Card.css'
+import { STORE_NAME } from "../store";
+import { useSelect } from '@wordpress/data'; 
 
 const Card = (props) => {
   const [selectedCategory, setSelectedCategory] = useState('fur')
-  const categories = ['fur', 'cap', 'item', 'coat', 'pant', 'shoe', 'ball'];
+  const { items, categories, wapuu } = useSelect( select => {
+      return {
+        wapuu: select(STORE_NAME).getWapuu(),
+        items: select(STORE_NAME).getItems(),
+        categories: select(STORE_NAME).getCategories(),  
+      }
+  });
 
   const handleSelectedCategory = (category) => {
     setSelectedCategory(category)
@@ -47,22 +55,19 @@ const Card = (props) => {
 
   const getItemList = () => {
     let itemList = [];
-    if(props.collection[selectedCategory] !== undefined) {
-      props.collection[selectedCategory].map(configItem => {
-        let classes = 'wapuu_card__item';
-        if (props.wapuu.char[selectedCategory].key.includes(configItem.key)) {
-          classes += ' selected';
-        }
-        itemList.push({"key": configItem.key, "classes": classes, "src": configItem.prev, "tooltip": undefined})
-      });
-    }
-    if ( props.lockedCollection[selectedCategory] !== undefined ) {
-      itemList.push({"key": undefined})
-      props.lockedCollection[selectedCategory].map(configItem => {
-        itemList.push({"key": configItem.key, "classes": 'wapuu_card__item wapuu_card__locked', "src": configItem.prev, "tooltip": configItem.tooltip})
 
+    if(items[selectedCategory] !== undefined) {
+      Object.values(items[selectedCategory]).map(item => {
+        let classes = 'wapuu_card__item';
+        if (wapuu.char[selectedCategory].key.includes(item.meta.key)) {
+          classes += ' selected';
+        } else if(item.meta.price > 0) {
+          classes = 'wapuu_card__item wapuu_card__locked';
+        }
+        itemList.push({...item, classes: classes, tooltip: undefined})
       })
     }
+
     return itemList;
   }
 
@@ -70,17 +75,16 @@ const Card = (props) => {
     <div className='wapuu_card postbox'>
       <div className='wapuu_card__categories'>
         {
-          categories.map(category => <Categories category={category} selectedCategory={handleSelectedCategory}/>)
+          Object.keys(categories).map(index => <Categories slug={index} category={categories[index]} handleSelection={handleSelectedCategory} selectedCategory={selectedCategory} /> )
         }
       </div>
       <div className='wapuu_card__items'>
-
         {
           getItemList().map(configItem => {
             return (
               configItem.key !== undefined ?
-              <div onClick={handleItem} category={selectedCategory} key={configItem.key} data-key={configItem.key} className={configItem.classes}>
-                <img onClick={handleItem} className='wapuu_card__item_img' src={configItem.src}/>
+              <div onClick={handleItem} category={selectedCategory} key={configItem.meta.key} data-key={configItem.meta.key} className={configItem.classes}>
+                <img onClick={handleItem} className='wapuu_card__item_img' src={configItem.preview}/>
                 {
                   configItem.tooltip !== undefined ?
                     <div className="wapuu_card__item_tooltiptext"><span>{configItem.tooltip}</span></div>

@@ -3,10 +3,20 @@ import "./Shop.css";
 import Card from "./Card";
 import axios from "axios";
 import ShowRoom from "./ShowRoom";
+import { STORE_NAME } from "../store";
+import { useSelect } from '@wordpress/data'; 
 
 const Shop = (props) => {
-	const [name, setName] = useState(props.wapuu.name);
-	const [wapuu, setWapuu] = useState(props.wapuu);
+	const { wapuu, items, categories } = useSelect( select => {
+		return {
+			wapuu: select(STORE_NAME).getWapuu(),
+			items: select(STORE_NAME).getItems(),
+			categories: select(STORE_NAME).getCategories()
+		};
+	});
+
+	const [name, setName] = useState(wapuu.name);
+	// const [wapuu, setWapuu] = useState(props.wapuu);
 	const [loader, setLoader] = useState("Save Wapuu");
 	const url = wpPluginParam.apiUrl + "/v1/wapuu";
 
@@ -68,7 +78,7 @@ const Shop = (props) => {
 					</div>
 					<div className="wapuu_shop__image">
 						<div className="wapuu_shop__img">
-							<ShowRoom wapuu={props.wapuu} collection={props.collection} />
+							// ShowRoom wapuu={props.wapuu} collection={props.collection}
 						</div>
 					</div>
 					<div className="wapuu_shop__button">

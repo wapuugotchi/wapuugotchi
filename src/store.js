@@ -38,90 +38,19 @@ const DEFAULT_STATE = {  };
 */
 
 /**
- * computes the available categories
+ * computes the state
  *
- * @param   {object} collections  @TODO: add description
+ * @param   {object} state  @TODO: add description
  *
  * @return  {object} all (non empty) categories. key is category-name, value id category-image-url
  */
-function _evalCategories(collections) {
-  let categories = Object.values(collections).map(_=>_.collections)
-    .reduce((acc, curr) => {
-      acc.push(...curr);
-      return acc;
-    }, []
-  );
-
-  categories = categories.reduce((acc, curr) => { 
-      if( !acc[curr.caption]) {
-          // collect only categories with at least a single item
-          if(!curr.items.length) { 
-            acc[curr.caption]=curr.image;
-          } 
-      }
-      return acc;
-    }, 
-    {}
-  );
-
-  return categories;
-}
-
-/**
- * computes filtered collections containing unlocked and locked items
- *
- * @param   {object} collections  @TODO: add description
- *
- * @return  {array} filtered items in same object shape as the raw collections structure   
- */
-function _computeItems(collections) {
-  const computedItems = {
-    unlocked : {}, 
-    locked : {},
+function _evalState(state) {
+  return {
+    categories: state.categories,
+    items: state.items,
+    wapuu: state.wapuu
   };
-
-  for (const [hash, val] of Object.values(collections)) {
-    computedItems.unlocked[hash] = {
-      collections : [],
-    };
-    computedItems.locked[hash] = {
-      collections : [],
-    };
-
-    for (const collection of val.collections) {
-      computedItems.locked[hash].collections.push({
-        caption : collection.caption,
-        image : collection.image,
-        items : Object.values(collection.items).filter(items => {
-          // @TODO: filter locked items
-        }),  
-      });
-    }
-
-    // @TODO: same same for unlocked items
-  }
-
-  let categories = Object.values(collections).map(_=>_.collections)
-    .reduce((acc, curr) => {
-      acc.push(...curr);
-      return acc;
-    }, []
-  );
-
-  categories = categories.reduce((acc, curr) => { 
-      if( !acc[curr.caption]) {
-          // collect only categories with at least a single item
-          if(!curr.items.length) { 
-            acc[curr.caption]=curr.image;
-          } 
-      }
-      return acc;
-    }, 
-    {}
-  );
-
-  return computedItems;
-}
+} 
 
 function create(initial_state = DEFAULT_STATE) {
   const store = createReduxStore(STORE_NAME, {
@@ -132,12 +61,15 @@ function create(initial_state = DEFAULT_STATE) {
     // __experimentalUseThunks: true,
     reducer(state = {}, { type, payload }) {
       switch (type) {
-        case "SET_COLLECTIONS": {
+        case "SET_STATE": {
+          return {
+            ..._evalState(payload),
+          }
+        }
+        case "SET_ITEMS": {
           return {
             ...state,
-            collections: payload,
-            categories : _evalCategories(payload),
-            ..._computeItems(payload),
+            items: payload,
           };
         }
         case "SET_WAPUU": {
@@ -146,14 +78,26 @@ function create(initial_state = DEFAULT_STATE) {
             wapuu : payload
           };
         }
+        case "SET_CATEGORIES" : {
+          return {
+            ...state,
+            categories: categories,
+          }
+        }
       }
 
       return state;
     },
     actions : {
-      setCollections(payload) {
+      setState(payload) {
         return {
-          type: "SET_COLLECTIONS",
+          type: "SET_STATE",
+          payload,
+        };
+      },
+      setItems(payload) {
+        return {
+          type: "SET_ITEMS",
           payload,
         };
       },
@@ -162,11 +106,20 @@ function create(initial_state = DEFAULT_STATE) {
           type: "SET_WAPUU",
           payload,
         };
-      },  
+      },
+      setCategories(payload) {
+        return {
+          type: "SET_CATEGORIES",
+          payload
+        }
+      }  
     },
     selectors: {
       getState(state) {
         return state;
+      },
+      getItems(state) {
+        return state.items;
       },
       getCategories(state) {
         return state.categories;
@@ -198,24 +151,13 @@ create();
 /**
  * computes all items from given collections by category
  *
- * @param   {object}  collections  @TODO: 
+ * @param   {object}  items  @TODO: 
  * @param   {string}  category     name of category 
  *
  * @return  {array}   array of items of this category
  */
-function getItemsByCategory(collections, category) {
-  let categories = Object.values(collections).map(_=>_.collections)
-    .reduce((acc, curr) => {
-      acc.push(...curr);
-      return acc;
-    }, []
-  );
-
-  categories = categories.filter(_ => _.caption === category);
-
-  categories = categories.map(_=> Object.values(_.items));
-
-  return [].concat(...categories);
+function getItemsByCategory(items, category) {
+  return items[category]
 }
 
 export { STORE_NAME, getItemsByCategory };

@@ -9,14 +9,14 @@ const Categories = (props) => {
       category.classList.remove('selected')
     });
     event.target.classList.add('selected')
-    props.selectedCategory(event.target.getAttribute('category')
+      props.handleSelection(event.target.getAttribute('category')
     )
   }
 
   return (
     props.category === undefined ? '' :
-      <div onClick={handleNewWare} category={props.category} className={props.category === 'fur' ? 'wapuu_card__category selected' : 'wapuu_card__category'}>
-        <img className='wapuu_category__image' src={"/wp-content/plugins/wapuugotchi/img/icons/" + props.category + ".svg"}/>
+      <div onClick={handleNewWare} category={props.slug} className={props.slug === props.selectedCategory ? 'wapuu_card__category selected' : 'wapuu_card__category'}>
+        <img className='wapuu_category__image' src={props.category.image}/>
       </div>
   );
 }

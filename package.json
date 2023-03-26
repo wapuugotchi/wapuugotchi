@@ -17,10 +17,11 @@
 		"test": "npx playwright test --config playwright.config.js tests/addSource.test.js"
 	},
 	"devDependencies": {
+		"@playwright/test": "^1.29.0",
 		"@wordpress/env": "^5.14.0",
 		"@wordpress/scripts": "^26.0.0",
-		"@playwright/test": "^1.29.0",
-		"dotenv": "^16.0.3"
+		"dotenv": "^16.0.3",
+		"prettier": "2.8.7"
 	},
 	"dependencies": {
 		"@wordpress/api-fetch": "^6.26.0",

@@ -6,4 +6,4 @@ import data from "@wordpress/data";
 
 const id = 'wapuugotchi-app';
 
-domReady( ()=> render( <App />, document.getElementById( id )));
+domReady( () => render( <App />, document.getElementById( id ) ) );

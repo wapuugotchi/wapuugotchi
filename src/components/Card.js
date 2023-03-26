@@ -82,7 +82,7 @@ const Card = (props) => {
         {
           getItemList().map(configItem => {
             return (
-              configItem.key !== undefined ?
+              configItem.meta.key !== undefined ?
               <div onClick={handleItem} category={selectedCategory} key={configItem.meta.key} data-key={configItem.meta.key} className={configItem.classes}>
                 <img onClick={handleItem} className='wapuu_card__item_img' src={configItem.preview}/>
                 {

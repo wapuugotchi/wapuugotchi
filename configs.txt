@@ -1,0 +1,28 @@
+Categories
+{
+    "$categorySlug": {
+        "caption": "Balls",
+        "iconUrl": "https://bla.icon.url"
+    }
+}
+
+Save as transient:
+    $frontend = [
+        "balls" => [
+            "$uuid" => $item,
+        ],
+        "$categorySlug" => [
+            "$uuid" => $item,
+        ]
+    ]
+
+User metas:
+    Unlocked:
+    [
+        "uuid"
+    ]
+
+
+    870cbca1-4448-43ae-b815-11e9c2617159
+    18442df1-58ee-4440-95e7-524f6d051e0a
+    2d8d2920-e2a4-4460-9945-0403a4c1f869

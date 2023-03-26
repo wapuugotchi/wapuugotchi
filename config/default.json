@@ -3,7 +3,7 @@
     "char": {
         "fur": {
             "key": [
-                "aec8b514-74af-4a1f-9133-86d74a616a7f"
+                "ee777691-d3fa-4506-ae20-d6f7a7266d75"
             ],
             "count": 1,
             "required": 1
@@ -25,7 +25,7 @@
         },
         "balls": {
             "key": [
-                "e5d3bc65-1437-47a3-9666-d9d2d0bbd414"
+                "ad19fc13-0728-4ad0-98b4-a362ccae5736"
             ],
             "count": 1,
             "required": 0

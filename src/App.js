@@ -4,14 +4,14 @@ import { STORE_NAME } from "./store";
 import { useSelect } from '@wordpress/data'; 
 import apiFetch from '@wordpress/api-fetch';
 
-// POST
-apiFetch( {
-	path: '/wapuugotchi/v1/wearable',
-	method: 'POST',
-	data: { uuid: '2d8d2920-e2a4-4460-9945-0403a4c1f869' },
-} ).then( ( res ) => {
-	console.log( res );
-} );
+// Example POST request for unlocking a wearable
+// apiFetch( {
+// 	path: '/wapuugotchi/v1/wearable',
+// 	method: 'POST',
+// 	data: { uuid: '2d8d2920-e2a4-4460-9945-0403a4c1f869' },
+// } ).then( ( res ) => {
+// 	console.log( res );
+// } );
 
 
 // POST

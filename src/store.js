@@ -126,6 +126,9 @@ function create(initial_state = DEFAULT_STATE) {
       },
       getWapuu(state) {
         return state.wapuu;
+      },
+      getItemsByCategory(state, category) {
+        return _sanitizeItems(state.items, sate.wapuu, category)
       }
     },
     resolvers: {

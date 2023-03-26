@@ -2,12 +2,12 @@
     margin-top: 5px;
     margin-left: 30px;  
     padding: 5px 15px;
-    background-color: #3858E9;
+    background-color: #007CBA;
     width: 100px;
     height: 100px;
     border-radius: 3px;
 }.wapuu_card .wapuu_card__category.selected {
-     background-color: #3858E9;
+     background-color: #0063A1;
      position: relative;
 }.wapuu_card .wapuu_card__category.selected > img {
       margin-left: 2px;

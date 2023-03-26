@@ -183,6 +183,10 @@ class Manager {
 		$category_collection = self::COLLECTION_STRUCTURE;
 		$items_collection = [];
 		foreach ( $collections as $collection ) {
+			if ( ! isset( $category_collection[ $collection->slug ] ) ) {
+				continue;
+			}
+
 			$category_collection[ $collection->slug ] = [
 				'caption' => $collection->caption,
 				'image' => $collection->image

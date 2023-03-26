@@ -62,9 +62,7 @@ const Shop = (props) => {
 		<div className="wapuu_shop">
 			<form onSubmit={submitHandler}>
 				<Card
-					collection={props.collection}
-					lockedCollection={props.lockedCollection}
-					wapuu={props.wapuu}
+					key="settings-card"
 					onChangeWapuuConfig={wapuuHandler}
 				/>
 				<div className="wapuu_shop__items">
@@ -78,7 +76,7 @@ const Shop = (props) => {
 					</div>
 					<div className="wapuu_shop__image">
 						<div className="wapuu_shop__img">
-							// ShowRoom wapuu={props.wapuu} collection={props.collection}
+							<ShowRoom />
 						</div>
 					</div>
 					<div className="wapuu_shop__button">

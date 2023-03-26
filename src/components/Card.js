@@ -122,9 +122,7 @@ const Card = (props) => {
       <div className='wapuu_card__items'>
         {
           Object.values(items[selectedCategory]).map(item => {
-            return(
-              <hr></hr>
-            )
+
           })
         }
       </div>

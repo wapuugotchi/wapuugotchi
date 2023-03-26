@@ -12,6 +12,11 @@ class Manager {
 	}
 
 	public function init() {
+		delete_user_meta(get_current_user_id(), 'wapuugotchi');
+		delete_transient( 'wapuugotchi_categories' );
+		delete_transient( 'wapuugotchi_items' );
+		delete_transient( 'wapuugotchi_collection' );
+
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ) ) {
 			update_user_meta( get_current_user_id(), 'wapuugotchi',
 				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/default.json' )
@@ -54,7 +59,7 @@ class Manager {
 						'items'				 => get_transient( 'wapuugotchi_items' ),
 						'wapuu'              => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ),
 					]
-				),
+				)
 			),
 			'after'
 		);
@@ -207,6 +212,8 @@ class Manager {
 	 * @return array
 	 */
 	private function get_items_for_current_user() {
+		//delete_user_meta(get_current_user_id(), 'wapuugotchi');
+		update_user_meta(get_current_user_id(), 'wapuugotchi_unlocked_items', ['ee777691-d3fa-4506-ae20-d6f7a7266d75', 'ad19fc13-0728-4ad0-98b4-a362ccae5736']);
 		$wapuugotchi_items = get_transient( 'wapuugotchi_items' );
 		$unlocked_user_items = get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items', true );
 

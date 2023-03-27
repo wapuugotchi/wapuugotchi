@@ -4,7 +4,7 @@ import Card from "./Card";
 import axios from "axios";
 import ShowRoom from "./ShowRoom";
 import { STORE_NAME } from "../store";
-import { useSelect } from '@wordpress/data'; 
+import { useSelect } from '@wordpress/data';
 
 const Shop = (props) => {
 	const { wapuu, items, categories } = useSelect( select => {
@@ -16,7 +16,6 @@ const Shop = (props) => {
 	});
 
 	const [name, setName] = useState(wapuu.name);
-	// const [wapuu, setWapuu] = useState(props.wapuu);
 	const [loader, setLoader] = useState("Save Wapuu");
 	const url = wpPluginParam.apiUrl + "/v1/wapuu";
 
@@ -38,13 +37,13 @@ const Shop = (props) => {
 	const submitHandler = (event) => {
 		event.preventDefault();
 		setLoader("Saving...");
-		props.wapuu.name = name;
+		wapuu.name = name;
 
 		axios
 			.post(
 				url,
 				{
-					wapuu: props.wapuu,
+					wapuu: wapuu,
 				},
 				{
 					headers: {

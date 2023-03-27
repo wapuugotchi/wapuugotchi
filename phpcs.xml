@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <ruleset name="WordPress ActivityPub">
 	<description>WordPress ActivityPub Standards</description>
-	<file>./activitypub.php</file>
-	<file>./includes/</file>
+	<file>./wapuugotchi.php</file>
+	<file>./inc/</file>
 	<exclude-pattern>*\.(inc|css|js|svg)</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/node_modules/*</exclude-pattern>

@@ -1,7 +1,7 @@
 import { useState } from "@wordpress/element";
 import Shop from "./components/Shop";
 import { STORE_NAME } from "./store";
-import { useSelect } from '@wordpress/data'; 
+import { useSelect } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
 
 // Example POST request for unlocking a wearable

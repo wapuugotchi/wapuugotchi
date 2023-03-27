@@ -28,6 +28,6 @@
     height: 100px;
 }
 .wapuu_shop__img {
-    width: 450px;
-    height: 400px;
+    height: 600px;
+    display: flex;
 }

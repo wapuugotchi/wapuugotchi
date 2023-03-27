@@ -19,6 +19,10 @@
 	padding-top: 35px;
 }
 
+.wapuu_shop__input .wapuu_shop__name {
+	margin-bottom: 5px;
+}
+
 .wapuu_shop__button {
 	width: 100%;
 	height: 100px;
@@ -30,8 +34,6 @@
 .wapuu_shop__image {
 	display: flex;
 	align-items: center;
-	padding-top: 10%
-	/* height: 100%; */
 }
 
 .wapuu_shop__items {

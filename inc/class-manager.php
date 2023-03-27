@@ -85,7 +85,7 @@ class Manager {
 			$dom_elements = '';
 			$collection   = array_merge_recursive(
 				$this->get_collection( 'lockedCollection.json' ),
-				$this->get_collection( 'unlockedCollection.json' ),
+				$this->get_collection( 'unlockedCollection.json' )
 			);
 
 			// todo: Adapt following code to new collection format
@@ -127,6 +127,7 @@ class Manager {
 			);
 		}
 
+
 		if ( empty( get_transient( 'wapuugotchi_collection' ) ) ) {
 			$this->set_collection();
 		}
@@ -138,7 +139,6 @@ class Manager {
 	 * Retrieves the collection from the remote server and sets it as transient.
 	 */
 	private function set_collection( $url =  'https://api.wapuugotchi.com/collection' ) {
-
 		$response = wp_remote_get( $url );
 		if ( is_wp_error( $response ) ) {
 			return;
@@ -181,6 +181,7 @@ class Manager {
 	 */
 	private function set_frontend_data() {
 		$collections = [];
+
 		foreach	( $this->get_collection() as $hash => $object ) {
 			$collections = $object->collections;
 		}

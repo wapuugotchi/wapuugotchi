@@ -122,6 +122,17 @@ const Card = (props) => {
 			})
 		}
 
+		// Sort ItemList to show locked items at the end
+		itemList.sort((a, b) => {
+			if (a.meta.price > b.meta.price) {
+				return 1;
+			}
+			if (a.meta.price < b.meta.price) {
+				return -1;
+			}
+			return 0;
+		});
+
 		return itemList;
 	}
 

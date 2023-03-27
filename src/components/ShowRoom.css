@@ -1,14 +1,13 @@
 .wapuu_show_room {
     display: flex;
-    padding: 20px;
-    margin-left: 30px;
     height: 100%;
+    padding-left: 100px;
 }
 
 .wapuu_show_room .wapuu_show_room__image {
-    max-width: 25%;
-    width:800px;
+    width: 250px;
     position: absolute;
-    margin-top: -30px;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 

@@ -1,6 +1,7 @@
 {
 	"core": null,
 	"plugins": [
-		"."
+		".",
+		"https://downloads.wordpress.org/plugin/transients-manager.2.0.3.zip"
 	]
 }

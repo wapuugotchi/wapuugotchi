@@ -184,7 +184,7 @@ class Manager {
 		foreach	( $this->get_collection() as $hash => $object ) {
 			$collections = $object->collections;
 		}
-		
+
 		$category_collection = self::COLLECTION_STRUCTURE;
 		$items_collection = [];
 		foreach ( $collections as $collection ) {
@@ -197,7 +197,7 @@ class Manager {
 				'image' => $collection->image
 			];
 
-			foreach ( $collection->items as $item ) {					
+			foreach ( $collection->items as $item ) {
 				$items_collection[ $collection->slug ][ $item->meta->key ] = $item;
 			}
 		}
@@ -208,7 +208,7 @@ class Manager {
 
 	/**
 	 * Gets all items avaiable and the ones for the current user. Sets the price to zero if the user did unlock them already.
-	 * 
+	 *
 	 * @return array
 	 */
 	private function get_items_for_current_user() {
@@ -216,6 +216,10 @@ class Manager {
 		update_user_meta(get_current_user_id(), 'wapuugotchi_unlocked_items', ['ee777691-d3fa-4506-ae20-d6f7a7266d75', 'ad19fc13-0728-4ad0-98b4-a362ccae5736']);
 		$wapuugotchi_items = get_transient( 'wapuugotchi_items' );
 		$unlocked_user_items = get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items', true );
+
+		if ( empty( $unlocked_user_items ) ) {
+			return $wapuugotchi_items;
+		}
 
 		foreach ($unlocked_user_items as $key) {
 			foreach ($wapuugotchi_items as $category => $items) {

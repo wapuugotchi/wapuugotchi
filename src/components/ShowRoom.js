@@ -40,8 +40,7 @@ const ShowRoom = (props) => {
 			let item_urls = getItemUrls(category);
 			if( item_urls.length > 0 ) {
 				item_urls.forEach( ( item_url ) => {
-					promise_array.push(fetch(item_url
-					));
+					promise_array.push(fetch(item_url));
 					item_count++
 				} )
 
@@ -87,10 +86,10 @@ const ShowRoom = (props) => {
 		).catch(err => console.error(err))
 	}
 
+	buildSvg();
 	subscribe(() => {
 		buildSvg();
-	});
-	buildSvg();
+	}, STORE_NAME);
 
 	return (
 		<div className="wapuu_show_room">

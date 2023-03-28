@@ -20,22 +20,6 @@ const DEFAULT_STATE = {};
  *    returns an object representation (key=>category name, value=>category image url) of all categories
  */
 
-/*
-  import { useSelect } from "@wordpress/data";
-  import { STORE_NAME } from './store.js';
-
-  function YourComponent(props) {
-    const { wapuu, collections, categories } = useSelect( select => {
-      return {
-        collections: select(STORE_NAME).getState().collections,
-        wapuu: select(STORE_NAME).getWapuu(),
-        categories: select(STORE_NAME).getCategories(),
-      };
-    });
-
-    return <div>{foo}</div>;
-  }
-*/
 
 /**
  * computes the state
@@ -148,16 +132,4 @@ function create(initial_state = DEFAULT_STATE) {
 // register the store now (lazy registration is not needed)
 create();
 
-/**
- * computes all items from given collections by category
- *
- * @param   {object}  items  @TODO:
- * @param   {string}  category     name of category
- *
- * @return  {array}   array of items of this category
- */
-function getItemsByCategory(items, category) {
-	return items[category]
-}
-
-export {STORE_NAME, getItemsByCategory};
+export {STORE_NAME};

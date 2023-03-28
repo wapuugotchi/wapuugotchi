@@ -1,6 +1,6 @@
 import {createElement, useEffect, useState} from "@wordpress/element";
 import { STORE_NAME, store } from "../store";
-import { useSelect, dispatch } from '@wordpress/data';
+import { useSelect, subscribe } from '@wordpress/data';
 import "./ShowRoom.css";
 
 const ShowRoom = (props) => {
@@ -26,8 +26,11 @@ const ShowRoom = (props) => {
 		return url
 	}
 
+	const getSvgString = (data) => {
+		return data;
+	}
 
-	useEffect(() => {
+	const buildSvg = () => {
 		let data = []
 		let category_list = Object.keys(wapuu.char)
 		let promise_array = [];
@@ -38,16 +41,12 @@ const ShowRoom = (props) => {
 			if( item_urls.length > 0 ) {
 				item_urls.forEach( ( item_url ) => {
 					promise_array.push(fetch(item_url
-				));
+					));
 					item_count++
 				} )
 
 			}
 		})
-
-		const getSvgString = (data) => {
-			return data;
-		}
 
 		const allPromise = Promise.all(promise_array);
 		allPromise.then(responses =>
@@ -80,13 +79,18 @@ const ShowRoom = (props) => {
 							})
 						}
 					})
-					setSvg(result.innerHTML)
+					if(result.innerHTML !== svg){
+						setSvg(result.innerHTML)
+					}
 				}
 			}))
 		).catch(err => console.error(err))
-	}, []);
+	}
 
-
+	subscribe(() => {
+		buildSvg();
+	});
+	buildSvg();
 
 	return (
 		<div className="wapuu_show_room">

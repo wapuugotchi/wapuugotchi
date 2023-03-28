@@ -77,6 +77,10 @@
 	color: white;
 }
 
+.wapuu_card__item_pricetag svg {
+	padding-right: 5px;
+}
+
 .wapuu_card__item_tooltiptext {
     visibility: hidden;
     width: 100%;

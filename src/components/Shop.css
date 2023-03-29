@@ -1,18 +1,102 @@
 .wapuu_shop {
+	box-sizing: border-box;
+
 	display: flex;
-	align-items: stretch;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 24px;
+	gap: 18px;
+
+	min-width: 1226px;
+	min-height: 730px;
+
+	background: #FFFFFF;
+	border: 1px solid #CCCCCC;
+}
+
+.wapuu_shop__header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 12px;
+
+	min-width: 1178px;
+	height: 28px;
+}
+
+.wapuu_shop__title {
+	min-width: 396px;
+	height: 28px;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+
+	display: flex;
+	align-items: center;
+
+	color: #1E1E1E;
+}
+
+.wapuu_shop__divider {
+	width: 22px;
+	height: 0px;
+
+	border: 1px solid #CCCCCC;
+	transform: rotate(90deg);
+}
+
+.wapuu_shop__description {
+	width: 557.78px;
+	height: 20px;
+
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 20px;
+
+	display: flex;
+	align-items: center;
+
+	color: #757575;
+}
+
+.wapuu_shop__pearls {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 3px 6px;
+	gap: 6px;
+
+	width: 188.22px;
+	height: 22px;
+
+	font-style: normal;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 16px;
+	color: #FFFFFF;
+
+	background: #4AB866;
+	border-radius: 2px;
 }
 
 .wapuu_shop form button.button.button-primary {
 	width: 200px;
-	margin: 0 10px;
 }
 
 .wapuu_shop form {
-	background: white;
-	width: 100%;
 	display: flex;
-	align-items: center;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 32px;
+
+	min-width: 1178px;
+	min-height: 636px;
 }
 
 .wapuu_shop__input {

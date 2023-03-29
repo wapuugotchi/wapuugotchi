@@ -1,12 +1,16 @@
 .wapuu_card {
-    margin-top: 30px;
     min-height: 150px;
     display: flex;
 }
 .wapuu_card .wapuu_card__categories {
-    background-color: white;
-    width: 75px;
-    padding: 10px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 12px;
+
+	width: 96px;
+	height: 636px;
 }
 .wapuu_card .wapuu_card__items {
 	display: flex;

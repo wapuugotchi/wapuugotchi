@@ -1,26 +1,38 @@
 .wapuu_card .wapuu_card__category {
-    margin-top: 5px;
-    margin-left: 30px;
-    padding: 5px 15px;
-    background-color: #007CBA;
-    width: 96px;
-    height: 96px;
-    border-radius: 3px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 12px;
+	gap: 12px;
+
+	width: 96px;
+	height: 96px;
+
+	background: #007CBA;
+	border-radius: 2px;
 }
 .wapuu_card .wapuu_card__category.selected {
-     background-color: #0063A1;
-     position: relative;
-}.wapuu_card .wapuu_card__category.selected > img {
-      margin-left: 2px;
+	background: #0063A1;
+ 	position: relative;
 }
+.wapuu_card__category.selected::after {
+	position: absolute;
+	width: 25px;
+	height: 13px;
+	left: 105px;
+	top: 38px;
+
+	background: #0063A1;
+	transform: rotate(90deg);
+}
+
 .wapuu_card .wapuu_card__category > * {
     pointer-events: none;
 }
 .wapuu_card .wapuu_card__category > img {
-    width: 80px;
-    height: 90px;
-    padding-top: 5px;
-    padding-left: 10px;
+	width: 57.54px;
+	height: 63.75px;
     filter: invert(99%) sepia(73%) saturate(84%) hue-rotate(191deg) brightness(109%) contrast(87%);
 }
 .wapuu_category__image {

@@ -2,6 +2,8 @@
 namespace Wapuugotchi\Wapuugotchi;
 
 use WP_Error;
+use WP_REST_Request;
+use WP_REST_Response;
 
 if( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 
@@ -38,6 +40,12 @@ class Api {
 		register_rest_route( 'wapuugotchi/v1', '/credits', [
 			'methods' => 'POST',
 			'callback' => [ $this, 'update_balance' ],
+			'permission_callback' => 'is_user_logged_in'
+		] );
+
+		register_rest_route( 'wapuugotchi/v1', '/wearable', [
+			'methods' => 'POST',
+			'callback' => [ $this, 'unlock_wearable' ],
 			'permission_callback' => 'is_user_logged_in'
 		] );
 	}
@@ -86,5 +94,44 @@ class Api {
 		}
 		update_user_meta( get_current_user_id(), 'wapuugotchi_balance', $balance);
 		return rest_ensure_response( ['balance' => $balance] );
+	}
+
+	public function unlock_wearable( WP_REST_Request $request ) {
+		$balance = get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true );
+		$params = $request->get_json_params();
+
+		if ( ! isset( $params['uuid'] ) ) {
+			return rest_ensure_response( new WP_Error( 'missing_uuid', __( 'Missing UUID.' ), [ 'status' => 400 ] ) );
+		}
+
+		$unlocked_items = get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items', true );
+
+		if ( in_array( $params['uuid'], $unlocked_items ) ) {
+			return rest_ensure_response( new WP_Error( 'already_unlocked', __( 'Item already unlocked.' ), [ 'status' => 400 ] ) );
+		}
+
+		$balance = get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true );
+		$wapuugotchi_items = get_transient( 'wapuugotchi_items' );
+
+		$item = null;
+		foreach( $wapuugotchi_items as $key => $items ) {
+			if ( isset( $items[ $params['uuid'] ] ) ) {
+				$item = $items[ $params['uuid'] ];
+			}
+		}
+		if ( $item === null ) {
+			return rest_ensure_response( new WP_Error( 'invalid_uuid', __( 'Item does not exist.' ), [ 'status' => 400 ] ) );			
+		}
+
+		if ( $balance < $item->meta->price ) {
+			return rest_ensure_response( new WP_Error( 'insufficient_balance', __( 'Insufficient balance.' ), [ 'status' => 400 ] ) );
+		}
+
+		$balance = $balance - $item->meta->price;
+		update_user_meta( get_current_user_id(), 'wapuugotchi_balance', $balance );
+		$unlocked_items[] = $params['uuid'];
+		update_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items', $unlocked_items );
+
+		return rest_ensure_response( new WP_REST_Response( [ 'status' => 'Item was unlocked successfully' ], 200 ) );
 	}
 }

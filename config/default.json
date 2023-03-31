@@ -3,39 +3,36 @@
     "char": {
         "fur": {
             "key": [
-                "aec8b514-74af-4a1f-9133-86d74a616a7f"
+                "ee777691-d3fa-4506-ae20-d6f7a7266d75"
             ],
             "count": 1,
             "required": 1
         },
-        "coat": {
+        "coats": {
             "key": [],
             "count": 1,
             "required": 0
         },
-        "pant": {
+        "shoes": {
             "key": [],
             "count": 1,
             "required": 0
         },
-        "shoe": {
-            "key": [],
-            "count": 1,
-            "required": 0
-        },
-        "ball": {
+        "balls": {
             "key": [
-                "e5d3bc65-1437-47a3-9666-d9d2d0bbd414"
+                "ad19fc13-0728-4ad0-98b4-a362ccae5736"
             ],
             "count": 1,
             "required": 0
         },
-        "cap": {
-            "key": [],
+        "caps": {
+            "key": [
+                "c3fa70a8-fb4f-40c6-a47b-c77b477adad9"
+            ],
             "count": 2,
             "required": 0
         },
-        "item": {
+        "items": {
             "key": [],
             "count": 5,
             "required": 0

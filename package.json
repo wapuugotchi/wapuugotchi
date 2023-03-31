@@ -7,6 +7,7 @@
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build src/index.js src/wapuugotchi.js",
+		"watch": "wp-scripts build src/index.js src/wapuugotchi.js --watch",
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
@@ -17,14 +18,16 @@
 		"test": "npx playwright test --config playwright.config.js tests/addSource.test.js"
 	},
 	"devDependencies": {
+		"@playwright/test": "^1.29.0",
 		"@wordpress/env": "^5.14.0",
 		"@wordpress/scripts": "^26.0.0",
-		"@playwright/test": "^1.29.0",
-		"dotenv": "^16.0.3"
+		"dotenv": "^16.0.3",
+		"prettier": "2.8.7"
 	},
 	"dependencies": {
 		"@wordpress/api-fetch": "^6.26.0",
 		"@wordpress/dom-ready": "^3.29.0",
-		"@wordpress/element": "^5.6.0"
+		"@wordpress/element": "^5.6.0",
+		"react-svg": "^16.1.6"
 	}
 }

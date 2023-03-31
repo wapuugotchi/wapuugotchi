@@ -1,28 +1,47 @@
 .wapuu_card {
-    margin-top: 30px;
     min-height: 150px;
     display: flex;
 }
 .wapuu_card .wapuu_card__categories {
-    background-color: white;
-    width: 80px;
-    padding: 10px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 12px;
+
+	width: 96px;
+	height: 636px;
 }
 .wapuu_card .wapuu_card__items {
-    width:400px;
-    padding: 5px 0;
-    margin-left: 50px;
-    overflow-y: scroll;
-    column-count: 2;
-    height: 600px;
-    break-inside: avoid;
+	display: flex;
+
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	gap: 10px;
+
+	width: 800px;
+
+	height: 100%;
+	max-height: 650px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+	margin-top: 10px;
+    margin-left: 90px;
+
+	overflow: auto;
 }
 .wapuu_card .wapuu_card__item {
-    break-inside: avoid;
-    height: 150px;
+	width: 150px;
+	height: 200px;
+
     margin-top: 5px;
-    width: 150px;
     margin-left: 10px;
+
+	border-radius: 2px;
     background-color: #fafafa;
     padding: 2px 10px;
     margin-bottom: 20px;
@@ -38,16 +57,32 @@
     opacity: 0.2;
 }
 .wapuu_card .wapuu_card__item.selected {
-    background-color: #F0F6FC;
+    background-color: #CCE3EB;
 }
 .wapuu_card .wapuu_card__item_img {
     user-select: none;
     pointer-events: none;
     margin: auto;
-    height: 120px;
+    height: 150px;
 }
 .wapuu_card .wapuu_card__item_text {
     margin-left: 10px;
+}
+
+.wapuu_card__item_pricetag {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	background-color: #4AB866;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+
+.wapuu_card__item_pricetag svg {
+	padding-right: 5px;
 }
 
 .wapuu_card__item_tooltiptext {

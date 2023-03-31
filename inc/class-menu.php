@@ -1,7 +1,8 @@
 <?php
+
 namespace Wapuugotchi\Wapuugotchi;
 
-if( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
+if ( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 
 class Menu {
 	public function __construct() {
@@ -10,7 +11,7 @@ class Menu {
 
 	public function create_menu_page() {
 		$capability = 'manage_options';
-		$slug = 'wapuugotchi';
+		$slug       = 'wapuugotchi';
 
 		add_menu_page(
 			__( 'Wapuugotchi', 'wapuugotchi' ),

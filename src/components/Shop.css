@@ -1,70 +1,160 @@
 .wapuu_shop {
-    display: flex;
-    align-items: stretch;
-    background-color: white;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 24px;
+	gap: 18px;
+
+	min-width: 1226px;
+	min-height: 730px;
+
+	background: #FFFFFF;
+	border: 1px solid #CCCCCC;
+}
+
+.wapuu_shop__header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 12px;
+
+	min-width: 1178px;
+	height: 28px;
+}
+
+.wapuu_shop__title {
+	min-width: 396px;
+	height: 28px;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+
+	display: flex;
+	align-items: center;
+
+	color: #1E1E1E;
+}
+
+.wapuu_shop__divider {
+	width: 22px;
+	height: 0px;
+
+	border: 1px solid #CCCCCC;
+	transform: rotate(90deg);
+}
+
+.wapuu_shop__description {
+	width: 557.78px;
+	height: 20px;
+
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 20px;
+
+	display: flex;
+	align-items: center;
+
+	color: #757575;
+}
+
+.wapuu_shop__pearls {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 3px 6px;
+	gap: 6px;
+
+	width: 188.22px;
+	height: 22px;
+
+	font-style: normal;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 16px;
+	color: #FFFFFF;
+
+	background: #4AB866;
+	border-radius: 2px;
 }
 
 .wapuu_shop form button.button.button-primary {
-    width: 200px;
-    margin: 0 10px;
+	width: 200px;
 }
 
 .wapuu_shop form {
-    background: white;
-    width: 100%;
-    height: 650px;
-    display: flex;
-    align-items: center
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 32px;
+
+	min-width: 1178px;
+	min-height: 636px;
 }
+
 .wapuu_shop__input {
-    padding-top: 35px;
-    height: 80px;
+	padding-top: 35px;
+}
+
+.wapuu_shop__input .wapuu_shop__name {
+	margin-bottom: 5px;
 }
 
 .wapuu_shop__button {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
 .wapuu_shop__image {
-    display: flex;
-    padding-top: 10%
-    /* height: 100%; */
+	display: flex;
+	align-items: center;
 }
 
 .wapuu_shop__items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 5px;
-    width: 400px;
-
-    /* for demonstration purposes */
-    height: 90%;
-
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 100px;
+	width: 800px;
+	align-items: center;
+	/* for demonstration purposes */
+	height: 100%;
 }
- 
+
 input {
-    width: 450px;
-    padding-top: 60px;
+	width: 450px;
+	margin: 60px;
+	padding-top: 60px;
 }
+
 .wapuu_shop__items > div:not(:only-child):last-of-type {
-    margin-top: auto;
-  }
+	margin-top: auto;
+}
 
 .wapuu_shop__name {
-    margin-top: 5px;
-    width: 400px;
-    height: 50px;
+	margin-top: 5px;
+	width: 750px;
+	height: 50px;
+	padding-top: 60px;
 }
- .wapuu_shop__submit {
-    height: 60px !important;
-    width: 380px !important;
+
+.wapuu_shop__submit {
+	height: 60px !important;
+	width: 380px !important;
 
 }
+
 .wapuu_shop__reset {
-    height: 60px !important;
-    width: 380px  !important;
+	height: 60px !important;
+	width: 380px !important;
 }

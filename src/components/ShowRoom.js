@@ -25,66 +25,65 @@ const ShowRoom = (props) => {
 		}
 		return url
 	}
-
-	const getSvgString = (data) => {
-		return data;
-	}
-
 	const buildSvg = () => {
-		let data = []
 		let category_list = Object.keys(wapuu.char)
-		let promise_array = [];
-		let item_count = 0;
+		let promise_array = []
 
 		category_list.forEach((category) => {
-			let item_urls = getItemUrls(category);
+			let item_urls = getItemUrls(category)
 			if( item_urls.length > 0 ) {
 				item_urls.forEach( ( item_url ) => {
-					promise_array.push(fetch(item_url));
-					item_count++
+					promise_array.push(fetch(item_url))
 				} )
-
 			}
 		})
 
-		const allPromise = Promise.all(promise_array);
-		allPromise.then(responses =>
-			responses.forEach((res) => res.text().then((text) => {
-				data.push({text})
-				item_count--
-				if (item_count <= 0) {
-					let result = '';
+		Promise.all(promise_array).then(responses => {
+			let getTextPromises = []
+			let texts = []
 
-					data.forEach((svg_string, index) => {
-						let svg = new DOMParser().parseFromString(svg_string.text, "image/svg+xml");
-						if(svg.querySelector('#wapuu_svg') !== null) {
-							result = svg.querySelector('#wapuu_svg')
-							data.splice(index, 1)
-						}
-					})
-					data.forEach((svg_string, index) => {
-						let svg = new DOMParser().parseFromString(svg_string.text, "image/svg+xml");
-						let groups = svg.querySelectorAll('g');
-						if (groups.length > 0) {
-							groups.forEach((group) => {
-								if( group.classList.value ) {
-									result.querySelector('g#' + group.classList.value)
-									let wapuu_svg_group = result.querySelector('g#' + group.classList.value);
-									if (wapuu_svg_group) {
-										group.removeAttribute('class')
-										wapuu_svg_group.append(group)
-									}
-								}
-							})
-						}
-					})
-					if(result.innerHTML !== svg){
-						setSvg(result.innerHTML)
-					}
-				}
-			}))
-		).catch(err => console.error(err))
+			responses.forEach((res) => getTextPromises.push(res.text().then((text) => {
+				texts.push(text)
+			})))
+
+			Promise.all(getTextPromises).then(() => {
+				mergeSvg(texts)
+			})}).catch(err => console.error(err))
 	}
+
+	const mergeSvg = (svgArray) => {
+		let result;
+		svgArray.forEach((svg_string, index) => {
+			let svg = new DOMParser().parseFromString(svg_string, "image/svg+xml");
+			if(svg.querySelector('#wapuugotchi_svg__wapuu') !== null) {
+				result = svg.querySelector('#wapuugotchi_svg__wapuu')
+				svgArray.splice(index, 1)
+			}
+		})
+
+
+		svgArray.forEach((svg_string, index) => {
+			let svg = new DOMParser().parseFromString(svg_string, "image/svg+xml");
+			let groups = svg.querySelectorAll('g');
+			if (groups.length > 0) {
+				groups.forEach((group) => {
+					if( group.classList.value ) {
+						result.querySelector('g#' + group.classList.value)
+						let wapuu_svg_group = result.querySelector('g#' + group.classList.value);
+						if (wapuu_svg_group) {
+							group.removeAttribute('class')
+							wapuu_svg_group.append(group)
+						}
+					}
+				})
+			}
+		})
+		if(result.innerHTML !== svg) {
+			setSvg(result.innerHTML)
+		}
+		console.log('finish')
+	}
+
 
 	buildSvg();
 	subscribe(() => {
@@ -93,8 +92,8 @@ const ShowRoom = (props) => {
 
 	return (
 		<div className="wapuu_show_room">
-				<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" version="1.1" viewBox="10 120 1000 800"
-						 dangerouslySetInnerHTML={{__html: svg}}></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" width="550px" id="Layer_1" x="0" y="0" version="1.1" viewBox="10 120 1000 800"
+					 dangerouslySetInnerHTML={{__html: svg}}></svg>
 		</div>
 	);
 };

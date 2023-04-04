@@ -32,7 +32,8 @@ function _evalState(state) {
 	return {
 		categories: state.categories,
 		items: state.items,
-		wapuu: state.wapuu
+		wapuu: state.wapuu,
+		svgs: state.svgs
 	};
 }
 
@@ -68,6 +69,12 @@ function create(initial_state = DEFAULT_STATE) {
 						categories: categories,
 					}
 				}
+				case "SET_SVGS" : {
+					return {
+						...state,
+						svgs: svgs,
+					}
+				}
 			}
 
 			return state;
@@ -96,6 +103,12 @@ function create(initial_state = DEFAULT_STATE) {
 					type: "SET_CATEGORIES",
 					payload
 				}
+			},
+			setSvgs(payload) {
+				return {
+					type: "SET_SVGS",
+					payload
+				}
 			}
 		},
 		selectors: {
@@ -110,6 +123,9 @@ function create(initial_state = DEFAULT_STATE) {
 			},
 			getWapuu(state) {
 				return state.wapuu;
+			},
+			getSvgs(state) {
+				return state.svgs;
 			}
 		},
 		resolvers: {
@@ -123,6 +139,13 @@ function create(initial_state = DEFAULT_STATE) {
 			//     payload: window['wapuugotchi/wapuugotchi-store-state-initial'],
 			//   };
 			// }
+			getSvgs() {
+				const payload = "example svg resolver"
+				return {
+					type: "SET_SVGS",
+					payload,
+				};
+			}
 		}
 	});
 

@@ -16,7 +16,7 @@ class Api {
 		register_rest_route( 'wapuugotchi/v1', '/wapuu', [
 			'methods' => 'GET',
 			'callback' => [ $this, 'get_settings' ],
-			'permission_callback' => [ $this, '__return_true' ]
+			'permission_callback' => '__return_true'
 		] );
 
 		register_rest_route( 'wapuugotchi/v1', '/wapuu', [

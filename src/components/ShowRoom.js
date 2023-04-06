@@ -92,7 +92,7 @@ const ShowRoom = (props) => {
 
 	return (
 		<div className="wapuu_show_room">
-			<svg xmlns="http://www.w3.org/2000/svg" width="550px" id="Layer_1" x="0" y="0" version="1.1" viewBox="10 120 1000 800"
+			<svg xmlns="http://www.w3.org/2000/svg" width="750px" id="Layer_1" x="0" y="0" version="1.1" viewBox="10 120 1000 800"
 					 dangerouslySetInnerHTML={{__html: svg}}></svg>
 		</div>
 	);

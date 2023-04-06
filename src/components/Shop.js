@@ -35,7 +35,6 @@ const Shop = (props) => {
 	};
 
 	const submitHandler = async (event) => {
-		debugger
 		event.preventDefault();
 		setLoader("Saving...");
 		wapuu.name = name;

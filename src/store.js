@@ -20,11 +20,7 @@ const STORE_NAME = 'wapuugotchi/wapuugotchi';
 
 function create(initial_state = {}) {
 	const store = createReduxStore(STORE_NAME, {
-		/*
-		  don't know if we need it right know
-		  but will be very useful if we need async actions
-		*/
-		// __experimentalUseThunks: true,
+		__experimentalUseThunks: true,
 		reducer(state = {}, {type, payload}) {
 			switch (type) {
 				case "INITIALIZE": {
@@ -41,7 +37,7 @@ function create(initial_state = {}) {
 				case "SET_WAPUU": {
 					return {
 						...state,
-						wapuu: payload
+						wapuu: payload,
 					};
 				}
 				case "SET_CATEGORIES" : {
@@ -118,7 +114,6 @@ function create(initial_state = {}) {
 		},
 		resolvers: {
 			// __getState() {
-			//   debugger
 			//   if(window['wapuugotchi/wapuugotchi-store-state-initial']===undefined) {
 			//     throw new Error("Failed to access initial store data : window['wapuugotchi/wapuugotchi-store-state-initial'] is undefined !");
 			//   }

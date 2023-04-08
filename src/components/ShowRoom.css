@@ -1,14 +1,20 @@
-.wapuu_show_room {
-    display: flex;
-    height: 100%;
-    padding-left: 100px;
+.wapuu_shop__items .wapuu_show_room {
+    width: 100%;
+    max-width: 530px;
 }
 
-.wapuu_show_room .wapuu_show_room__image {
-    width: 250px;
-    position: absolute;
-    margin: 0 !important;
-    padding: 0 !important;
+
+.wapuu_shop__items input.wapuu_shop__name {
+    width: 500px;
+    height: 45px;
+    margin: 0 6px;
+}
+
+.wapuu_shop__items .wapuu_shop__button button.wapuu_shop__reset,
+.wapuu_shop__items .wapuu_shop__button button.wapuu_shop__submit {
+    width: 244px;
+    height: 45px;
+    margin: 0 6px;
 }
 
 /* Animation */

@@ -16,7 +16,7 @@ const Shop = (props) => {
 	});
 
 	const [name, setName] = useState(wapuu.name);
-	const [loader, setLoader] = useState("Save Wapuu");
+	const [loader, setLoader] = useState("Save");
 	const url = wpPluginParam.apiUrl + "/v1/wapuu";
 
 	const nameHandler = (event) => {
@@ -53,7 +53,7 @@ const Shop = (props) => {
 				}
 			)
 			.then((res) => {
-				setLoader("Save Settings");
+				setLoader("Save");
 			});
 	};
 
@@ -109,7 +109,7 @@ const Shop = (props) => {
 							className="button button-secondary wapuu_shop__reset"
 							type="button"
 						>
-							Clear
+							Reset Changes
 						</button>
 						<button
 							className="button button-primary wapuu_shop__submit"

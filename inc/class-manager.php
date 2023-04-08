@@ -5,7 +5,7 @@ namespace Wapuugotchi\Wapuugotchi;
 if ( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 
 class Manager {
-	const COLLECTION_STRUCTURE = [ 'fur' => '', 'caps' => '', 'coats' => '', 'items' => '', 'shoes' => '', 'balls' => '' ];
+	const COLLECTION_STRUCTURE = [ 'fur' => '', 'balls' => '', 'caps' => '', 'items' => '', 'coats' => '', 'shoes' => '' ];
 
 	public function __construct() {
 		add_action( 'admin_init', array( $this, 'init' ) );

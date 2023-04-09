@@ -2,6 +2,7 @@ import {createElement, useEffect, useState} from "@wordpress/element";
 import { STORE_NAME, store } from "../store";
 import { useSelect, subscribe } from '@wordpress/data';
 import "./ShowRoom.css";
+import "./Animation.css";
 
 const ShowRoom = (props) => {
 	const [svg, setSvg] = useState([]);

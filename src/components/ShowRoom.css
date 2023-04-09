@@ -30,7 +30,7 @@
 .wapuu_shop__items .wapuu_shop__button button.wapuu_shop__submit {
     flex: 1;
     width: 244px;
-    min-width: 244px;
+    min-width: 190px;
     height: 45px;
     margin: 0 6px 10px 6px;
 }

@@ -2,7 +2,7 @@
     position: relative;
     min-width: 350px;
     display: flex;
-    flex: 1;
+    flex: 3;
 }
 
 .wapuu_card .wapuu_card__categories {}

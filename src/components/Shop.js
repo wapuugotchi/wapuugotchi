@@ -61,7 +61,7 @@ const Shop = (props) => {
 		<div className="wapuu_shop">
 			<div className="wapuu_shop__header">
 				<h1 className="wapuu_shop__title">Customize Your Wapuu with WapuuGotchi</h1>
-				<span className="wapuu_shop__divider" />
+				{/*<span className="wapuu_shop__divider" />*/}
 				<p className="wapuu_shop__description">
 					Browse categories on the left to explore various items and style your Wapuu.
 				</p>

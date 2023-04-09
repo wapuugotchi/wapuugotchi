@@ -12,7 +12,6 @@ class Manager {
 	}
 
 	public function init() {
-		delete_user_meta(get_current_user_id(), 'wapuugotchi');
 		delete_transient( 'wapuugotchi_categories' );
 		delete_transient( 'wapuugotchi_items' );
 		delete_transient( 'wapuugotchi_collection' );

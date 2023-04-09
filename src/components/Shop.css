@@ -30,14 +30,15 @@
 .wapuu_shop .wapuu_shop__header p.wapuu_shop__description {
 	display: flex;
 	flex: 1;
-	min-width: 396px;
-	height: 28px;
-	color: #1E1E1E;
+	width: 558px;
+	min-width: 350px;
+	height: 20px;
 	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 28px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 20px;
 	align-items: center;
+	color: #757575;
 }
 .wapuu_shop .wapuu_shop__header span.wapuu_shop__pearls {
 	display: flex;
@@ -46,6 +47,7 @@
 	justify-content: center;
 	gap: 6px;
 	width: 188px;
+	min-width: 150px;
 	height: 22px;
 	max-width: 240px;
 	padding: 3px 6px;

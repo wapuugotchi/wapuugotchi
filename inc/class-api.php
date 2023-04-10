@@ -8,42 +8,44 @@ use WP_REST_Response;
 if( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 
 class Api {
+	const REST_BASE = 'wapuugotchi/v1';
+
 	public function __construct() {
 		add_action( 'rest_api_init', [ $this, 'create_rest_routes' ] );
 	}
 
 	public function create_rest_routes() {
-		register_rest_route( 'wapuugotchi/v1', '/wapuu', [
+		register_rest_route( self::REST_BASE, '/wapuu', [
 			'methods' => 'GET',
 			'callback' => [ $this, 'get_settings' ],
-			'permission_callback' => [ $this, '__return_true' ]
+			'permission_callback' => '__return_true'
 		] );
 
-		register_rest_route( 'wapuugotchi/v1', '/wapuu', [
+		register_rest_route( self::REST_BASE, '/wapuu', [
 			'methods' => 'POST',
 			'callback' => [ $this, 'set_settings' ],
 			'permission_callback' => [ $this, 'has_set_settings_permission' ]
 		] );
 
-		register_rest_route( 'wapuugotchi/v1', '/message', [
+		register_rest_route( self::REST_BASE, '/message', [
 			'methods' => 'GET',
 			'callback' => [ $this, 'get_messages' ],
 			'permission_callback' => [ $this, 'has_get_message_permission' ]
 		] );
 
-		register_rest_route( 'wapuugotchi/v1', '/credits', [
+		register_rest_route( self::REST_BASE, '/credits', [
 			'methods' => 'GET',
 			'callback' => [ $this, 'get_balance' ],
 			'permission_callback' => 'is_user_logged_in'
 		] );
 
-		register_rest_route( 'wapuugotchi/v1', '/credits', [
+		register_rest_route( self::REST_BASE, '/credits', [
 			'methods' => 'POST',
 			'callback' => [ $this, 'update_balance' ],
 			'permission_callback' => 'is_user_logged_in'
 		] );
 
-		register_rest_route( 'wapuugotchi/v1', '/wearable', [
+		register_rest_route( self::REST_BASE, '/wearable', [
 			'methods' => 'POST',
 			'callback' => [ $this, 'unlock_wearable' ],
 			'permission_callback' => 'is_user_logged_in'
@@ -120,7 +122,7 @@ class Api {
 			}
 		}
 		if ( $item === null ) {
-			return rest_ensure_response( new WP_Error( 'invalid_uuid', __( 'Item does not exist.' ), [ 'status' => 400 ] ) );			
+			return rest_ensure_response( new WP_Error( 'invalid_uuid', __( 'Item does not exist.' ), [ 'status' => 400 ] ) );
 		}
 
 		if ( $balance < $item->meta->price ) {

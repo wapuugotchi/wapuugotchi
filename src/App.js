@@ -26,13 +26,13 @@ apiFetch( {
 */
 
 function App() {
-	const { wapuu, collections, categories } = useSelect( select => {
-		return {
-			collections: select(STORE_NAME).getState().collections,
-			wapuu: select(STORE_NAME).getWapuu(),
-			categories: select(STORE_NAME).getCategories(),
-		};
-	});
+	// const { wapuu, collections, categories } = useSelect( select => {
+	// 	return {
+	// 		collections: select(STORE_NAME).getCollections(),
+	// 		wapuu: select(STORE_NAME).getWapuu(),
+	// 		categories: select(STORE_NAME).getCategories(),
+	// 	};
+	// });
 
 	return (
 		<Shop />

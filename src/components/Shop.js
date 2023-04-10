@@ -1,23 +1,23 @@
 import { useState } from "@wordpress/element";
 import "./Shop.css";
 import Card from "./Card";
-import axios from "axios";
+import apiFetch from "@wordpress/api-fetch";
 import ShowRoom from "./ShowRoom";
 import { STORE_NAME } from "../store";
 import { useSelect } from '@wordpress/data';
 
 const Shop = (props) => {
-	const { wapuu, items, categories } = useSelect( select => {
+	const { wapuu, items, categories, restBase } = useSelect( select => {
 		return {
 			wapuu: select(STORE_NAME).getWapuu(),
 			items: select(STORE_NAME).getItems(),
-			categories: select(STORE_NAME).getCategories()
+			categories: select(STORE_NAME).getCategories(),
+			restBase: select(STORE_NAME).getRestBase(),
 		};
 	});
 
 	const [name, setName] = useState(wapuu.name);
 	const [loader, setLoader] = useState("Save");
-	const url = wpPluginParam.apiUrl + "/v1/wapuu";
 
 	const nameHandler = (event) => {
 		setName(event.target.value);
@@ -27,34 +27,25 @@ const Shop = (props) => {
 		props.onChangeWapuuConfig(wapuuConfig);
 	};
 
-	const resetHandler = () => {
-		axios.get(url).then((res) => {
-			res.data.name = name;
-			wapuuHandler(res.data);
+	const resetHandler = async () => {
+		wapuuHandler({
+			...await apiFetch({ path: `${restBase}/wapuu` }),
+			name
 		});
 	};
 
-	const submitHandler = (event) => {
+	const submitHandler = async (event) => {
 		event.preventDefault();
 		setLoader("Saving...");
 		wapuu.name = name;
 
-		axios
-			.post(
-				url,
-				{
-					wapuu: wapuu,
-				},
-				{
-					headers: {
-						"content-type": "application/json",
-						"X-WP-NONCE": wpPluginParam.nonce,
-					},
-				}
-			)
-			.then((res) => {
-				setLoader("Save");
-			});
+		const success = await apiFetch({
+			path: `${restBase}/wapuu`,
+			method: 'POST',
+			data: { wapuu },
+		});
+
+		setLoader("Save Settings");
 	};
 
 	return (

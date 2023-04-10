@@ -41,22 +41,15 @@ class Manager {
 		wp_enqueue_style( 'wapuugotchi-shop', plugins_url( 'build/index.css', __DIR__ ), [], $assets['version'] );
 		wp_enqueue_script( 'wapuugotchi-shop', plugins_url( 'build/index.js', __DIR__ ), $assets['dependencies'], $assets['version'], true );
 
-		wp_localize_script( 'wapuugotchi-shop', 'wpPluginParam', [
-			'categories' 		 => get_transient( 'wapuugotchi_categories' ),
-			'items'				 => get_transient( 'wapuugotchi_items' ),
-			'wapuu'              => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ),
-			'apiUrl'             => get_rest_url( null, 'wapuugotchi' ),
-			'nonce'              => wp_create_nonce( 'wp_rest' ),
-		] );
-
 		wp_add_inline_script(
 			'wapuugotchi-shop',
 			sprintf(
-				"wp.data.dispatch('wapuugotchi/wapuugotchi').setState(%s)", json_encode(
+				"wp.data.dispatch('wapuugotchi/wapuugotchi').initialize(%s)", json_encode(
 					[
-						'categories' 		 => get_transient( 'wapuugotchi_categories' ),
-						'items'				 => get_transient( 'wapuugotchi_items' ),
-						'wapuu'              => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ),
+						'categories' 	 => \get_transient( 'wapuugotchi_categories' ),
+						'items'				 => \get_transient( 'wapuugotchi_items' ),
+						'wapuu'        => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ),
+						'restBase'     => \get_rest_url( null, Api::REST_BASE),
 					]
 				)
 			),

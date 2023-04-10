@@ -1,9 +1,10 @@
-import {createElement, useEffect, useState} from "@wordpress/element";
+import {cloneElement, createElement, useEffect, useState, useRef } from "@wordpress/element";
 import { STORE_NAME, store } from "../store";
 import { useSelect, subscribe } from '@wordpress/data';
 import "./ShowRoom.css";
 
 const ShowRoom = (props) => {
+
 	const [svg, setSvg] = useState([]);
 	const { items, categories, wapuu } = useSelect( select => {
 		return {
@@ -79,16 +80,20 @@ const ShowRoom = (props) => {
 			}
 		})
 		if(result.innerHTML !== svg) {
-			setSvg(result.innerHTML)
+			setSvg(result.innerHTML);
 		}
 		console.log('finish')
 	}
 
-
-	buildSvg();
-	subscribe(() => {
+	// @TODO: buildSvg() needs to be moved into the store
+	// this solution is just a workaround ...
+	const subscribed = useRef(null);
+	if(subscribed.current===null) {
 		buildSvg();
-	}, STORE_NAME);
+		subscribed.current = subscribe(() => {
+			buildSvg();
+		}, STORE_NAME);
+	}
 
 	return (
 		<div className="wapuu_show_room">

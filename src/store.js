@@ -57,6 +57,7 @@ function create(initial_state = {}) {
 			return state;
 		},
 		actions: {
+			// this is just once used to initialize the store with the initial data
 			initialize(payload) {
 				return {
 					type: "INITIALIZE",

@@ -15,6 +15,8 @@ const ShowRoom = (props) => {
 		}
 	});
 
+	//console.log("ShowRoom rendered");
+
 	const getItemUrls = (category) => {
 		let url = []
 		if(wapuu.char && wapuu.char[category] && wapuu.char[category].key && wapuu.char[category].key[0]) {

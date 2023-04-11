@@ -12,7 +12,7 @@
             "stopOnEntry": false,
             "pathMappings": {
                 "/var/www/html/wp-content/plugins/wapuugotchi": "${workspaceFolder}/",
-                "/var/www/html": "${workspaceFolder}/wp-env-home/5845a1d26b79d509df3fb9598ddf7661/WordPress",
+                "/var/www/html": "${workspaceFolder}/wp-env-home/484f7e0e612d99b7a5bf69b804a3cb76/WordPress",
             }
         }
     ]

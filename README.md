@@ -3,10 +3,10 @@
 ## setup
 
 1. `nvm use` (or `nvm install` if the node version is not yet locally available)
-1. `npm ci`
+1. `npm ci --no-fund`
 1. `npm run build`
 1. `npm run env start`
-  
+
   To start WordPress it with xdebug support : `npm run env start -- --xdebug`
 
 ## tipps

@@ -137,7 +137,7 @@ const Card = (props) => {
 	}
 
 	return (
-		<div className='wapuu_card postbox'>
+		<div className='wapuu_card'>
 			<div className='wapuu_card__categories'>
 				{
 					Object.keys(categories).map(index => <Categories key={index} slug={index}

@@ -2,6 +2,7 @@ import {cloneElement, createElement, useEffect, useState, useRef } from "@wordpr
 import { STORE_NAME, store } from "../store";
 import { useSelect, subscribe } from '@wordpress/data';
 import "./ShowRoom.css";
+import "./Animation.css";
 
 const ShowRoom = (props) => {
 
@@ -97,7 +98,8 @@ const ShowRoom = (props) => {
 
 	return (
 		<div className="wapuu_show_room">
-			<svg xmlns="http://www.w3.org/2000/svg" width="750px" id="Layer_1" x="0" y="0" version="1.1" viewBox="10 120 1000 800"
+			{/*		changes to the ViewBox can destroy the animations.		*/}
+			<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="140 100 700 765"
 					 dangerouslySetInnerHTML={{__html: svg}}></svg>
 		</div>
 	);

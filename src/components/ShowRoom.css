@@ -1,119 +1,36 @@
-.wapuu_show_room {
-    display: flex;
-    height: 100%;
-    padding-left: 100px;
+.wapuu_shop__items {
+    position: relative;
+}
+.wapuu_shop__items .wapuu_show_room {
+    width: 100%;
+    max-width: 530px;
 }
 
-.wapuu_show_room .wapuu_show_room__image {
-    width: 250px;
+.wapuu_shop__items input.wapuu_shop__name {
+    width: 100%;
+    min-width: 244px;
+    max-width: 500px;
+    height: 45px;
+    margin: 0 6px;
+}
+
+.wapuu_shop form .wapuu_shop__items .wapuu_shop__input {}
+.wapuu_shop form .wapuu_shop__items .wapuu_shop__image {
+    margin-bottom: 45px;
+}
+.wapuu_shop form .wapuu_shop__items .wapuu_shop__button {
     position: absolute;
-    margin: 0 !important;
-    padding: 0 !important;
+    bottom: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-/* Animation */
-/* Tail */
-#Tail--group {
-    -webkit-animation: wapuugotchi-svg__tail-animation1 90s ease-in-out infinite both;
-    animation: wapuugotchi-svg__tail-animation1 90s ease-in-out infinite both;
+.wapuu_shop__items .wapuu_shop__button button.wapuu_shop__reset,
+.wapuu_shop__items .wapuu_shop__button button.wapuu_shop__submit {
+    flex: 1;
+    width: 244px;
+    min-width: 190px;
+    height: 45px;
+    margin: 0 6px 10px 6px;
 }
-
-@keyframes wapuugotchi-svg__tail-animation1 {
-    0%, 100% {
-        -webkit-transform: translateX(0%);
-        transform: translateX(0%);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-    }
-    1% {
-
-        -webkit-transform: translateX(-6px) rotate(1.2deg);
-        transform: translateX(-6px) rotate(1.2deg);
-    }
-    2% {
-
-        -webkit-transform: translateX(6px) rotate(-1.2deg);
-        transform: translateX(6px) rotate(-1.2deg);
-    }
-    3% {
-
-        -webkit-transform: translateX(-6px) rotate(1.2deg);
-        transform: translateX(-6px) rotate(1.2deg);
-    }
-    4.5% {
-        -webkit-transform: translateX(0%);
-        transform: translateX(0%);
-    }
-    20% {
-        -webkit-transform: translateX(3px) rotate(-0.6deg);
-        transform: translateX(3px) rotate(-1.2deg);
-    }
-    22% {
-        -webkit-transform: translateX(-3px) rotate(0.6deg);
-        transform: translateX(-3px) rotate(1.2deg);
-    }
-    24% {
-        -webkit-transform: translateX(0%);
-        transform: translateX(0%);
-    }
-}
-
-/* Left Ear */
-#LeftEar--group {
-    -webkit-animation: wapuugotchi-svg__left-ear-animation1 45s infinite 10s both;
-    animation: wapuugotchi-svg__left-ear-animation1 45s infinite 10s both;
-}
-
-@keyframes wapuugotchi-svg__left-ear-animation1 {
-    0%, 0.2%, 0.4%, 100% {
-        -webkit-transform: translateY(0%);
-        transform: translateY(0%);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-    }
-    0.1%, 0.3% {
-        -webkit-transform: translateY(-25px) translateX(-10px) rotate(15deg);
-        transform: translateY(-25px) translateX(-10px) rotate(15deg);
-    }
-}
-
-/* food */
-
-
-#RightFoot--group {
-    -webkit-animation: wapuugotchi-svg__right-food-animation1 50s infinite 17s both;
-    animation: wapuugotchi-svg__right-food-animation1 50s infinite 17s both;
-}
-
-#LeftFoot--group {
-    -webkit-animation: wapuugotchi-svg__left-food-animation1 50s infinite 17s both;
-    animation: wapuugotchi-svg__left-food-animation1 50s infinite 17s both;
-}
-
-@keyframes wapuugotchi-svg__right-food-animation1 {
-    0%, 4%, 8%, 12%, 16%, 20%, 100% {
-        -webkit-transform: translateY(0%);
-        transform: translateY(0%);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-    }
-    2%, 6%, 10%, 10% {
-        -webkit-transform: translateY(12px) translateX(20px) rotate(5deg);
-        transform: translateY(12px) translateX(20px) rotate(5deg);
-    }
-}
-
-@keyframes wapuugotchi-svg__left-food-animation1 {
-    0%, 4%, 8%, 12%, 16%, 20%, 100% {
-        -webkit-transform: translateY(0%);
-        transform: translateY(0%);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-    }
-    2%, 6%, 10%, 10% {
-        -webkit-transform: translateY(-1px) translateX(-23px) rotate(-5deg);
-        transform: translateY(-1px) translateX(-23px) rotate(-5deg);
-    }
-}
-
-/* End of Animation */

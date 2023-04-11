@@ -9,7 +9,7 @@
 
   To start WordPress it with xdebug support : `npm run env start -- --xdebug`
 
-## tipps
+## tips
 ### Use CLI
 ``npm run env run cli user list``
 

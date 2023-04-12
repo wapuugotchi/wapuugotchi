@@ -19,10 +19,6 @@ const Shop = (props) => {
 	const [name, setName] = useState(wapuu.name);
 	const [loader, setLoader] = useState("Save");
 
-	const nameHandler = (event) => {
-		setName(event.target.value);
-	};
-
 	const resetHandler = async () => {
 		const wapuu_data = await apiFetch({ path: `${restBase}/wapuu` });
 		// console.log(wapuu_data);
@@ -68,7 +64,7 @@ const Shop = (props) => {
 							className="wapuu_shop__name"
 							type="text"
 							value={name}
-							onChange={nameHandler}
+							onChange={e => setName(e.target.value)}
 						/>
 					</div>
 					<div className="wapuu_shop__image">

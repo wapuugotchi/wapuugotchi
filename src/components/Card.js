@@ -7,7 +7,7 @@ import {useSelect, dispatch} from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
 
 const Card = (props) => {
-	const [selectedCategory, setSelectedCategory] = useState('fur')
+	const [selectedCategory, setSelectedCategory] = useState('fur');
 	const {items, categories, wapuu} = useSelect(select => {
 		return {
 			wapuu: select(STORE_NAME).getWapuu(),
@@ -16,13 +16,7 @@ const Card = (props) => {
 		}
 	});
 
-	const handleSelectedCategory = (category) => {
-		setSelectedCategory(category)
-	}
-
 	const handleItem = (event) => {
-		event.preventDefault();
-
 		const wapuu_data = wapuu;
 
 		const data_key = event.target.getAttribute('data-key');
@@ -142,7 +136,7 @@ const Card = (props) => {
 				{
 					Object.keys(categories).map(index => <Categories key={index} slug={index}
 																	 category={categories[index]}
-																	 handleSelection={handleSelectedCategory}
+																	 handleSelection={setSelectedCategory}
 																	 selectedCategory={selectedCategory}/>)
 				}
 			</div>
@@ -152,7 +146,7 @@ const Card = (props) => {
 						return (
 							<div onClick={handleItem} category={selectedCategory} key={item.meta.key}
 								 data-key={item.meta.key} className={item.classes}>
-								<img onClick={handleItem} className='wapuu_card__item_img' src={item.preview}/>
+								<img className='wapuu_card__item_img' src={item.preview}/>
 								{
 									item.tooltip !== undefined ?
 										<div className="wapuu_card__item_pricetag">

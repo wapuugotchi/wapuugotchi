@@ -25,7 +25,7 @@ add_action( 'admin_init', function() {
 }, 20 );
 ```
 
-Under this URL, a valid json-file is expetected, that follows the schema for wapuugotchi collections. Find more information on that schema at https://wapuugotchi.com
+Under this URL, a valid json-file is expected, that follows the schema for wapuugotchi collections. Find more information on that schema at https://wapuugotchi.com
 
 Please find an example for a valid JSON at https://api.wapuugotchi.com/collection
 

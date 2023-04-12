@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Wapuugotchi
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       Meet Your Personalized Wapuu Assistant.
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Version:           0.1.0

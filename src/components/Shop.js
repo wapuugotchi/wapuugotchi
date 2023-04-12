@@ -21,7 +21,6 @@ const Shop = (props) => {
 
 	const resetHandler = async () => {
 		const wapuu_data = await apiFetch({ path: `${restBase}/wapuu` });
-		// console.log(wapuu_data);
 		dispatch(STORE_NAME).setWapuu(wapuu_data);
 		setName(wapuu_data.name);
 	};

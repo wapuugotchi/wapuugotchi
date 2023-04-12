@@ -37,7 +37,7 @@ function create(initial_state = {}) {
 				case "SET_WAPUU": {
 					return {
 						...state,
-						wapuu: payload,
+						wapuu: { ... payload },
 					};
 				}
 				case "SET_CATEGORIES" : {

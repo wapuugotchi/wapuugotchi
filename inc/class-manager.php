@@ -11,10 +11,12 @@ class Manager {
 		add_action( 'admin_init', array( $this, 'init' ) );
 	}
 
-	public function init() {
-		delete_transient( 'wapuugotchi_categories' );
-		delete_transient( 'wapuugotchi_items' );
-		delete_transient( 'wapuugotchi_collection' );
+	public function init($hook_suffix) {
+		// ATTENTION: dont commit these lines enabled - it slows down massively !!
+		// enable only for debugging purposes
+		// delete_transient( 'wapuugotchi_categories' );
+		// delete_transient( 'wapuugotchi_items' );
+		// delete_transient( 'wapuugotchi_collection' );
 
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ) ) {
 			update_user_meta( get_current_user_id(), 'wapuugotchi',

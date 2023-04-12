@@ -37,7 +37,7 @@ function create(initial_state = {}) {
 				case "SET_WAPUU": {
 					return {
 						...state,
-						wapuu: payload,
+						wapuu: { ... payload },
 					};
 				}
 				case "SET_CATEGORIES" : {
@@ -57,6 +57,7 @@ function create(initial_state = {}) {
 			return state;
 		},
 		actions: {
+			// this is just once used to initialize the store with the initial data
 			initialize(payload) {
 				return {
 					type: "INITIALIZE",

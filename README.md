@@ -3,13 +3,13 @@
 ## setup
 
 1. `nvm use` (or `nvm install` if the node version is not yet locally available)
-1. `npm ci`
+1. `npm ci --no-fund`
 1. `npm run build`
 1. `npm run env start`
-  
+
   To start WordPress it with xdebug support : `npm run env start -- --xdebug`
 
-## tipps
+## tips
 ### Use CLI
 ``npm run env run cli user list``
 
@@ -25,7 +25,7 @@ add_action( 'admin_init', function() {
 }, 20 );
 ```
 
-Under this URL, a valid json-file is expetected, that follows the schema for wapuugotchi collections. Find more information on that schema at https://wapuugotchi.com
+Under this URL, a valid json-file is expected, that follows the schema for wapuugotchi collections. Find more information on that schema at https://wapuugotchi.com
 
 Please find an example for a valid JSON at https://api.wapuugotchi.com/collection
 

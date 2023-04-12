@@ -4,10 +4,10 @@ import Card from "./Card";
 import apiFetch from "@wordpress/api-fetch";
 import ShowRoom from "./ShowRoom";
 import { STORE_NAME } from "../store";
-import { useSelect } from '@wordpress/data';
+import { useSelect, dispatch } from '@wordpress/data';
 
 const Shop = (props) => {
-	const { wapuu, items, categories, restBase } = useSelect( select => {
+	let { wapuu, items, categories, restBase } = useSelect( select => {
 		return {
 			wapuu: select(STORE_NAME).getWapuu(),
 			items: select(STORE_NAME).getItems(),
@@ -19,19 +19,10 @@ const Shop = (props) => {
 	const [name, setName] = useState(wapuu.name);
 	const [loader, setLoader] = useState("Save");
 
-	const nameHandler = (event) => {
-		setName(event.target.value);
-	};
-
-	const wapuuHandler = (wapuuConfig) => {
-		props.onChangeWapuuConfig(wapuuConfig);
-	};
-
 	const resetHandler = async () => {
-		wapuuHandler({
-			...await apiFetch({ path: `${restBase}/wapuu` }),
-			name
-		});
+		const wapuu_data = await apiFetch({ path: `${restBase}/wapuu` });
+		dispatch(STORE_NAME).setWapuu(wapuu_data);
+		setName(wapuu_data.name);
 	};
 
 	const submitHandler = async (event) => {
@@ -65,7 +56,6 @@ const Shop = (props) => {
 			<form onSubmit={submitHandler}>
 				<Card
 					key="settings-card"
-					onChangeWapuuConfig={wapuuHandler}
 				/>
 				<div className="wapuu_shop__items">
 					<div className="wapuu_shop__input">
@@ -73,7 +63,7 @@ const Shop = (props) => {
 							className="wapuu_shop__name"
 							type="text"
 							value={name}
-							onChange={nameHandler}
+							onChange={e => setName(e.target.value)}
 						/>
 					</div>
 					<div className="wapuu_shop__image">

@@ -8,13 +8,15 @@ class Manager {
 	const COLLECTION_STRUCTURE = [ 'fur' => '', 'balls' => '', 'caps' => '', 'items' => '', 'coats' => '', 'shoes' => '' ];
 
 	public function __construct() {
-		add_action( 'admin_init', array( $this, 'init' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
 
-	public function init() {
-		delete_transient( 'wapuugotchi_categories' );
-		delete_transient( 'wapuugotchi_items' );
-		delete_transient( 'wapuugotchi_collection' );
+	public function init($hook_suffix) {
+		// ATTENTION: dont commit these lines enabled - it slows down massively !!
+		// enable only for debugging purposes
+		// delete_transient( 'wapuugotchi_categories' );
+		// delete_transient( 'wapuugotchi_items' );
+		// delete_transient( 'wapuugotchi_collection' );
 
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ) ) {
 			update_user_meta( get_current_user_id(), 'wapuugotchi',
@@ -24,10 +26,10 @@ class Manager {
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ) ) ) {
 			update_user_meta( get_current_user_id(), 'wapuugotchi_balance', 0);
 		}
-		if ( get_admin_page_title() === 'Wapuugotchi' ) {
-			add_action( 'admin_enqueue_scripts', array( $this, 'load_shop_scripts' ) );
-		} elseif (  parse_url( get_admin_url(), PHP_URL_PATH ) === '/wp-admin/' ) {
-			add_action( 'admin_enqueue_scripts', array( $this, 'load_home_scripts' ) );
+		if ( $hook_suffix === 'toplevel_page_wapuugotchi' ) {
+			$this->load_shop_scripts();
+		} else {
+			$this->load_home_scripts();
 		}
 
 		add_action( 'wapuugotchi_add_source', [ $this, 'add_source' ], 10, 1 );
@@ -119,8 +121,7 @@ class Manager {
 			);
 		}
 
-
-		if ( empty( get_transient( 'wapuugotchi_collection' ) ) ) {
+		if ( get_transient( 'wapuugotchi_collection' ) === false ) {
 			$this->set_collection();
 		}
 

@@ -62,10 +62,13 @@ class Api {
 	}
 
 	public function set_settings( $req ) {
-		$check = false;
-		if ( !empty( $req['wapuu']) ) {
-			update_user_meta( get_current_user_id(), 'wapuugotchi', json_encode( $req['wapuu']));
-			$check = true;
+		$check = true;
+		if ( empty( $req['wapuu']) || empty( $req['svg']) ) {
+			$check = false;
+		} else {
+			update_user_meta( get_current_user_id(), 'wapuugotchi_config', json_encode( $req['wapuu']));
+			update_user_meta( get_current_user_id(), 'wapuugotchi_svg', json_encode( $req['svg']));
+
 		}
 		return rest_ensure_response( $check );
 	}
@@ -99,6 +102,7 @@ class Api {
 	}
 
 	public function unlock_wearable( WP_REST_Request $request ) {
+		return rest_ensure_response( new WP_REST_Response( [ 'status' => 'mops' ], 200 ) );
 		$balance = get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true );
 		$params = $request->get_json_params();
 

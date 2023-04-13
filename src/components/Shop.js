@@ -7,11 +7,10 @@ import { STORE_NAME } from "../store";
 import { useSelect, dispatch } from '@wordpress/data';
 
 const Shop = (props) => {
-	let { wapuu, items, categories, restBase } = useSelect( select => {
+	let { wapuu, svg, restBase } = useSelect( select => {
 		return {
 			wapuu: select(STORE_NAME).getWapuu(),
-			items: select(STORE_NAME).getItems(),
-			categories: select(STORE_NAME).getCategories(),
+			svg: 	 	select(STORE_NAME).getSvg(),
 			restBase: select(STORE_NAME).getRestBase(),
 		};
 	});
@@ -33,7 +32,7 @@ const Shop = (props) => {
 		const success = await apiFetch({
 			path: `${restBase}/wapuu`,
 			method: 'POST',
-			data: { wapuu },
+			data: { wapuu, svg },
 		});
 
 		setLoader("Save Settings");

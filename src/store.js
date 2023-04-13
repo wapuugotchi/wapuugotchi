@@ -43,12 +43,12 @@ async function __buildSvg(wapuu, items) {
 
 			for (const svg of svgs) {
 				Array.from(svg.querySelectorAll('g'))
-					.filter(group => group.classList.value)
-					.forEach(group => {
-						const wapuu_svg_group = result.querySelector('g#' + group.classList.value);
+					.filter(itemGroup => itemGroup.classList.value)
+					.forEach(itemGroup => {
+						const wapuu_svg_group = result.querySelector('g#' + itemGroup.classList.value);
 						if(wapuu_svg_group) {
-							group.removeAttribute('class');
-							wapuu_svg_group.append(group);
+							itemGroup.removeAttribute('class');
+							wapuu_svg_group.append(itemGroup);
 						}
 					})
 				;

@@ -46,7 +46,7 @@ class Manager {
 		wp_add_inline_script(
 			'wapuugotchi-shop',
 			sprintf(
-				"wp.data.dispatch('wapuugotchi/wapuugotchi').initialize(%s)", json_encode(
+				"wp.data.dispatch('wapuugotchi/wapuugotchi').__initialize(%s)", json_encode(
 					[
 						'categories' 	 => \get_transient( 'wapuugotchi_categories' ),
 						'items'				 => \get_transient( 'wapuugotchi_items' ),

@@ -62,13 +62,11 @@ class Api {
 	}
 
 	public function set_settings( $req ) {
-		$check = true;
-		if ( empty( $req['wapuu']) || empty( $req['svg']) ) {
-			$check = false;
-		} else {
+		$check = false;
+		if ( !empty( $req['wapuu']) && !empty( $req['svg']) ) {
 			update_user_meta( get_current_user_id(), 'wapuugotchi_config', json_encode( $req['wapuu']));
 			update_user_meta( get_current_user_id(), 'wapuugotchi_svg', json_encode( $req['svg']));
-
+			$check = true;
 		}
 		return rest_ensure_response( $check );
 	}

@@ -4,58 +4,14 @@ import { useSelect, subscribe } from '@wordpress/data';
 import "./ShowRoom.css";
 import "./Animation.css";
 
-const getItemUrls = (wapuu, items, category) => {
-	if(wapuu.char?.[category]?.key?.[0]) {
-		return wapuu.char[category].key
-			.filter(uuid => items[category][uuid])
-			.map(uuid=>items[category][uuid].image)
-		;
-	}
-	return [];
-}
-
-async function buildSvg(wapuu, items) {
-		const responses = await Promise.all(
-			Object.keys(wapuu.char)
-				.map(category => getItemUrls(wapuu, items, category)
-					.map(url => fetch(url)))
-			.flat()
-		);
-
-		const svgs = (await Promise.all( responses.map(response=>response.text())))
-			.map(_ => new DOMParser().parseFromString(_, "image/svg+xml"))
-		;
-
-		if(svgs.length) {
-			const result = svgs.splice(svg => svg.querySelector('#wapuugotchi_svg__wapuu'), 1)[0]
-				.querySelector('#wapuugotchi_svg__wapuu')
-			;
-
-			for (const svg of svgs) {
-				Array.from(svg.querySelectorAll('g'))
-					.filter(group => group.classList.value)
-					.forEach(group => {
-						const wapuu_svg_group = result.querySelector('g#' + group.classList.value);
-						if(wapuu_svg_group) {
-							group.removeAttribute('class');
-							wapuu_svg_group.append(group);
-						}
-					})
-				;
-			}
-			return result.innerHTML;
-		}
-}
-
 function ShowRoom() {
-	const { items, wapuu } = useSelect( select => {
+	const { items, wapuu, svg } = useSelect( select => {
 		return {
-			wapuu: select(STORE_NAME).getWapuu(),
-			items: select(STORE_NAME).getItems(),
+			wapuu: 	select(STORE_NAME).getWapuu(),
+			items: 	select(STORE_NAME).getItems(),
+			svg: 	 	select(STORE_NAME).getSvg(),
 		}
 	});
-	const [svg, setSvg] = useState([]);
-	buildSvg(wapuu, items).then(setSvg);
 
 	return (
 		<div className="wapuu_show_room">

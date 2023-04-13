@@ -44,4 +44,4 @@ wp-env-home
 build
 
 # do not commit user specific .wp-env.json overrides
-/.wp-env.json.override
+/.wp-env.override.json

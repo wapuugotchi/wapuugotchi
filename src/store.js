@@ -53,7 +53,7 @@ async function __buildSvg(wapuu, items) {
 					})
 				;
 			}
-			return result.innerHTML;
+			return result.innerHTML.replace(new RegExp("(^|>)[\\s]+|[\\s]+(?=<|$)|( xmlns=\"http://www.w3.org/2000/svg\")", "gm"), "$1");
 		}
 }
 

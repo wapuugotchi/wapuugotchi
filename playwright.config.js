@@ -1,13 +1,6 @@
 // @ts-check
 const { devices } = require('@playwright/test');
-require('dotenv').config();
 const TEST_URL = process.env.TEST_URL || 'http://localhost:8889'
-
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
 
 
 /**
@@ -45,7 +38,7 @@ const config = {
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     video: {
-      mode: 'retain-on-failure', 
+      mode: 'retain-on-failure',
       size: { width: 640, height: 480 }
     }
   },
@@ -57,7 +50,7 @@ const config = {
       use: {
         ...devices['Desktop Chrome'],
       },
-    },    
+    },
   ],
 
 };

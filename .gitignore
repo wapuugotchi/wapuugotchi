@@ -42,3 +42,6 @@ node_modules
 wp-env-home
 .DS_Store/
 build
+
+# do not commit user specific .wp-env.json overrides
+/.wp-env.override.json

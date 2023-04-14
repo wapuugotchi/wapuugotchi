@@ -2,7 +2,7 @@ import {cloneElement, createElement, useCallback, useState, useRef } from "@word
 import { STORE_NAME, store } from "../store";
 import { useSelect, subscribe } from '@wordpress/data';
 import "./ShowRoom.css";
-import "./Animation.css";
+import "./animation.scss";
 
 function ShowRoom() {
 	const { items, wapuu, svg } = useSelect( select => {

@@ -1,5 +1,5 @@
 import apiFetch from "@wordpress/api-fetch";
-import "./wapuugotchi.css";
+import "./wapuugotchi.scss";
 class Wapuu {
 	constructor() {
 		this.set_image();

@@ -1,0 +1,48 @@
+.wapuu_card {
+	.wapuu_card__items {
+		.wapuu_card__item {
+			position: relative;
+			width: 170px;
+			margin: 0px 8px 16px 8px;
+
+			&.selected {
+				img.wapuu_card__item_img {
+					background-color: #cce3eb;
+				}
+			}
+
+			&.wapuu_card__locked {
+				&::before {
+					content: "\f160";
+					position: absolute;
+					font: normal 25px/1 dashicons;
+					color: black;
+					opacity: 0.2;
+				}
+			}
+
+			img.wapuu_card__item_img {
+				width: 100%;
+				background-color: #fafafa;
+				user-select: none;
+				pointer-events: none;
+			}
+
+			.wapuu_card__item_pricetag {
+				position: absolute;
+				bottom: 5px;
+				right: 5px;
+				background-color: #4ab866;
+				padding: 5px;
+				border-radius: 5px;
+				font-size: 12px;
+				font-weight: bold;
+				color: white;
+
+				svg {
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+}

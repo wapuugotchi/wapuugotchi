@@ -1,0 +1,50 @@
+.wapuu_shop__items {
+	position: relative;
+	.wapuu_show_room {
+		width: 100%;
+		max-width: 530px;
+	}
+
+	input.wapuu_shop__name {
+		width: 100%;
+		min-width: 244px;
+		max-width: 500px;
+		height: 45px;
+		margin: 0 6px;
+	}
+
+	.wapuu_shop__button {
+		button.wapuu_shop__reset {
+			flex: 1;
+			width: 244px;
+			min-width: 190px;
+			height: 45px;
+			margin: 0 6px 10px 6px;
+		}
+
+		button.wapuu_shop__submit {
+			flex: 1;
+			width: 244px;
+			min-width: 190px;
+			height: 45px;
+			margin: 0 6px 10px 6px;
+		}
+	}
+}
+.wapuu_shop {
+	form {
+		.wapuu_shop__items {
+			.wapuu_shop__image {
+				margin-bottom: 45px;
+			}
+
+			.wapuu_shop__button {
+				position: absolute;
+				bottom: -10px;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+			}
+		}
+	}
+}

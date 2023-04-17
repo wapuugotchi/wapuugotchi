@@ -73,6 +73,18 @@ function create(initial_state = {}) {
 						svg: payload.svg,
 					};
 				}
+				case "__SET_BALANCE": {
+					return {
+						...state,
+						balance: payload.balance,
+					};
+				}
+				case "__SET_ITEMS": {
+					return {
+						...state,
+						items: payload.items,
+					};
+				}
 			}
 
 			return state;
@@ -84,6 +96,8 @@ function create(initial_state = {}) {
 					dispatch.__setState(initialState);
 
 					dispatch.setWapuu(select.getWapuu());
+					dispatch.setBalance(select.getBalance());
+					dispatch.setItems(select.getItems());
 				},
 			__setState(payload) {
 				return {
@@ -104,6 +118,30 @@ function create(initial_state = {}) {
 						wapuu: { ...wapuu },
 						svg,
 					},
+				};
+			},
+			setBalance : (payload) =>
+				async function({ dispatch, registry, resolveSelect, select }) {
+					return dispatch.__setBalance(payload);
+				},
+			__setBalance(payload) {
+				return {
+					type: "__SET_BALANCE",
+					payload : {
+						balance: payload
+					}
+				};
+			},
+			setItems : (payload) =>
+				async function({ dispatch, registry, resolveSelect, select }) {
+					return dispatch.__setItems(payload);
+				},
+			__setItems(payload) {
+				return {
+					type: "__SET_ITEMS",
+					payload : {
+						items: { ...payload }
+					}
 				};
 			},
 		},
@@ -130,6 +168,9 @@ function create(initial_state = {}) {
 			getSvg(state) {
 				return state.svg;
 			},
+			getBalance(state) {
+				return state.balance;
+			}
 		},
 		resolvers: {
 			// __getState() {

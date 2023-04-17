@@ -9,11 +9,12 @@ import { useSelect, dispatch } from "@wordpress/data";
 import priceTag from "./category-item-pricetag.svg";
 
 export default function Shop(props) {
-	let { wapuu, restBase } = useSelect((select) => {
+	let { wapuu, balance, restBase } = useSelect((select) => {
 		return {
 			wapuu: select(STORE_NAME).getWapuu(),
 			items: select(STORE_NAME).getItems(),
 			categories: select(STORE_NAME).getCategories(),
+			balance: select(STORE_NAME).getBalance(),
 			restBase: select(STORE_NAME).getRestBase(),
 		};
 	});
@@ -55,7 +56,7 @@ export default function Shop(props) {
 				<span className="wapuu_shop__pearls">
 					Your Pearl Balance:
 					<img alt="" src={priceTag} />
-					150
+					{ balance }
 				</span>
 			</div>
 			<form onSubmit={submitHandler}>

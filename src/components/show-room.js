@@ -1,20 +1,11 @@
-import {
-	cloneElement,
-	createElement,
-	useCallback,
-	useState,
-	useRef,
-} from "@wordpress/element";
-import { STORE_NAME, store } from "../store";
-import { useSelect, subscribe } from "@wordpress/data";
+import { STORE_NAME } from "../store";
+import { useSelect } from "@wordpress/data";
 import "./show-room.scss";
 import "./animation.scss";
 
 export default function ShowRoom() {
-	const { items, wapuu, svg } = useSelect((select) => {
+	const { svg } = useSelect((select) => {
 		return {
-			wapuu: select(STORE_NAME).getWapuu(),
-			items: select(STORE_NAME).getItems(),
 			svg: select(STORE_NAME).getSvg(),
 		};
 	});

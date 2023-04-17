@@ -1,15 +1,56 @@
 import Category from "./category";
 import CategoryItems from "./category-items";
 
+import { useCallback, useState } from "@wordpress/element";
+import { STORE_NAME } from "../store";
+import { useSelect } from "@wordpress/data";
+
 import "./categories.scss";
 
-export default function Categories({
-	categories,
-	setSelectedCategory,
-	selectedCategory,
-	itemList,
-	handleItem,
-}) {
+export default function Categories() {
+	const [selectedCategory, setSelectedCategory] = useState("fur");
+	const { items, categories, wapuu } = useSelect((select) => {
+		return {
+			wapuu: select(STORE_NAME).getWapuu(),
+			items: select(STORE_NAME).getItems(),
+			categories: select(STORE_NAME).getCategories(),
+		};
+	});
+
+	const __getItemList = () => {
+		const itemList = [];
+
+		if (items[selectedCategory] !== undefined) {
+			Object.values(items[selectedCategory]).map((item) => {
+				const classes = ["wapuu_card__item"];
+				if (wapuu.char[selectedCategory]?.key?.includes(item.meta.key)) {
+					classes.push(" selected");
+				} else if (item.meta.price > 0) {
+					classes.push("wapuu_card__locked");
+				}
+
+				let tooltip = undefined;
+				if (item.meta.price > 0) {
+					tooltip = item.meta.price;
+				}
+
+				itemList.push({
+					...item,
+					classes: classes.join(" "),
+					tooltip,
+				});
+			});
+		}
+
+		// show locked items at the end
+		itemList.sort((a, b) => a.meta.price - b.meta.price);
+
+		return itemList;
+	};
+
+	// getItemList is a cached version of __getItemLisst only changing when items or selectedCategory changed
+	const getItemList = useCallback(__getItemList, [items, selectedCategory]);
+
 	return (
 		<>
 			<div className="wapuu_card__categories">
@@ -18,15 +59,14 @@ export default function Categories({
 						key={index}
 						slug={index}
 						category={categories[index]}
-						handleSelection={setSelectedCategory}
+						setSelectedCategory={setSelectedCategory}
 						selectedCategory={selectedCategory}
 					/>
 				))}
 			</div>
 			<CategoryItems
-				itemList={itemList}
+				getItemList={getItemList}
 				selectedCategory={selectedCategory}
-				handleItem={handleItem}
 			/>
 		</>
 	);

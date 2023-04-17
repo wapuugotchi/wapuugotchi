@@ -4,12 +4,12 @@ export default function Category({
 	slug,
 	category,
 	selectedCategory,
-	handleSelection,
+	setSelectedCategory,
 }) {
 	return (
 		category && (
 			<div
-				onClick={() => handleSelection(slug)}
+				onClick={() => setSelectedCategory(slug)}
 				category={slug}
 				className={
 					slug === selectedCategory

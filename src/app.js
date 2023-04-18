@@ -1,8 +1,8 @@
 import { useState } from "@wordpress/element";
-import Shop from "./components/Shop";
+import Shop from "./components/shop";
 import { STORE_NAME } from "./store";
-import { useSelect } from '@wordpress/data';
-import apiFetch from '@wordpress/api-fetch';
+import { useSelect } from "@wordpress/data";
+import apiFetch from "@wordpress/api-fetch";
 
 // Example POST request for unlocking a wearable
 // apiFetch( {
@@ -12,7 +12,6 @@ import apiFetch from '@wordpress/api-fetch';
 // } ).then( ( res ) => {
 // 	console.log( res );
 // } );
-
 
 // POST
 /*
@@ -25,7 +24,7 @@ apiFetch( {
 } );
 */
 
-function App() {
+export default function App() {
 	// const { wapuu, collections, categories } = useSelect( select => {
 	// 	return {
 	// 		collections: select(STORE_NAME).getCollections(),
@@ -34,9 +33,5 @@ function App() {
 	// 	};
 	// });
 
-	return (
-		<Shop />
-	);
+	return <Shop />;
 }
-
-export default App;

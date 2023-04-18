@@ -1,0 +1,75 @@
+@keyframes "shake-wapuu" {
+	0% {
+		transform: rotate(0deg);
+	}
+	1% {
+		transform: rotate(2deg);
+	}
+	4% {
+		transform: rotate(-2deg);
+	}
+	5% {
+		transform: rotate(0deg);
+	}
+	6% {
+		transform: rotate(2deg);
+	}
+	9% {
+		transform: rotate(-2deg);
+	}
+	10% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes "jump-wapuu" {
+	0% {
+		transform: translateY(0);
+	}
+	2% {
+		transform: translateY(-7px);
+	}
+	4% {
+		transform: translateY(0);
+	}
+	6% {
+		transform: translateY(-7px);
+	}
+	8% {
+		transform: translateY(0);
+	}
+	15% {
+		transform: translateY(0);
+	}
+	17% {
+		transform: translateY(-7px);
+	}
+	19% {
+		transform: translateY(0);
+	}
+	21% {
+		transform: translateY(-7px);
+	}
+	23% {
+		transform: translateY(0);
+	}
+}
+#wapuugotchi {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 1;
+	width: 140px;
+	height: 210px;
+	.wapuugotchi__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+}
+#wapuugotchi.wapuu_shake {
+	animation: shake-wapuu 3s 2;
+}
+#wapuugotchi.wapuu_jump {
+	animation: jump-wapuu 3s 1;
+}

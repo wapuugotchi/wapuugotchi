@@ -50,6 +50,12 @@ class Api {
 			'callback' => [ $this, 'unlock_wearable' ],
 			'permission_callback' => 'is_user_logged_in'
 		] );
+
+		register_rest_route( self::REST_BASE, '/purchases', [
+			'methods' => 'POST',
+			'callback' => [ $this, 'update_purchases' ],
+			'permission_callback' => 'is_user_logged_in'
+		] );
 	}
 
 
@@ -135,5 +141,20 @@ class Api {
 		update_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items', $unlocked_items );
 
 		return rest_ensure_response( new WP_REST_Response( [ 'status' => 'Item was unlocked successfully' ], 200 ) );
+	}
+
+	public function update_purchases( $req ) {
+		$bought = false;
+		$purchases = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases', true );
+		$balance = bcsub(get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ), $req['item']['price']);
+		if(!in_array($req['item']['key'], $purchases) && $balance >= 0 ) {
+			$purchases[] = $req['item']['key'];
+			update_user_meta( get_current_user_id(), 'wapuugotchi_purchases', $purchases);
+			update_user_meta( get_current_user_id(), 'wapuugotchi_balance', $balance);
+
+			$bought = true;
+		}
+		return rest_ensure_response( $bought );
+
 	}
 }

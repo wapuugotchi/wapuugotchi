@@ -17,6 +17,8 @@ class Manager {
 		// delete_transient( 'wapuugotchi_categories' );
 		// delete_transient( 'wapuugotchi_items' );
 		// delete_transient( 'wapuugotchi_collection' );
+		//update_user_meta( get_current_user_id(), 'wapuugotchi_balance', 105);
+		//update_user_meta( get_current_user_id(), 'wapuugotchi_purchases', array('3392a397-22d1-44d0-b575-f31850012769', '870cbca1-4448-43ae-b815-11e9c2617159'));
 
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ) ) {
 			update_user_meta( get_current_user_id(), 'wapuugotchi',
@@ -24,18 +26,24 @@ class Manager {
 			);
 		}
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ) ) ) {
+			update_user_meta( get_current_user_id(), 'wapuugotchi_balance', 105);
+		}
+		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases', true ) ) ) {
+			update_user_meta(get_current_user_id(), 'wapuugotchi_purchases', array('3392a397-22d1-44d0-b575-f31850012769', '870cbca1-4448-43ae-b815-11e9c2617159'));
+		}
+		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ) ) ) {
 			update_user_meta( get_current_user_id(), 'wapuugotchi_balance', 0);
 		}
+
+		$this->set_frontend_data();
+		$this->get_items_for_current_user();
+
+		add_action( 'wapuugotchi_add_source', [ $this, 'add_source' ], 10, 1 );
 		if ( $hook_suffix === 'toplevel_page_wapuugotchi' ) {
 			$this->load_shop_scripts();
 		} else {
 			$this->load_home_scripts();
 		}
-
-		add_action( 'wapuugotchi_add_source', [ $this, 'add_source' ], 10, 1 );
-
-		$this->set_frontend_data();
-		$this->get_items_for_current_user();
 	}
 
 	public function load_shop_scripts() {
@@ -48,10 +56,11 @@ class Manager {
 			sprintf(
 				"wp.data.dispatch('wapuugotchi/wapuugotchi').__initialize(%s)", json_encode(
 					[
-						'categories' 	 => \get_transient( 'wapuugotchi_categories' ),
-						'items'				 => \get_transient( 'wapuugotchi_items' ),
-						'wapuu'        => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ),
-						'restBase'     => \get_rest_url( null, Api::REST_BASE),
+						'categories' 	=> \get_transient( 'wapuugotchi_categories' ),
+						'items'			=> \get_transient( 'wapuugotchi_items' ),
+						'balance'		=> get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ),
+						'wapuu'			=> json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ),
+						'restBase'		=> \get_rest_url( null, Api::REST_BASE),
 					]
 				)
 			),
@@ -174,6 +183,7 @@ class Manager {
 	 */
 	private function set_frontend_data() {
 		$collections = [];
+		$purchases = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases', true );
 
 		foreach	( $this->get_collection() as $hash => $object ) {
 			$collections = $object->collections;
@@ -192,6 +202,9 @@ class Manager {
 			];
 
 			foreach ( $collection->items as $item ) {
+				if(in_array($item->meta->key, $purchases))  {
+					$item->meta->price = 0;
+				}
 				$items_collection[ $collection->slug ][ $item->meta->key ] = $item;
 			}
 		}

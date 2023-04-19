@@ -1,4 +1,5 @@
 import { createReduxStore, register, select } from "@wordpress/data";
+import apiFetch from "@wordpress/api-fetch";
 
 const STORE_NAME = "wapuugotchi/wapuugotchi";
 
@@ -76,13 +77,13 @@ function create(initial_state = {}) {
 				case "__SET_BALANCE": {
 					return {
 						...state,
-						balance: payload.balance,
+						balance: payload,
 					};
 				}
 				case "__SET_ITEMS": {
 					return {
 						...state,
-						items: payload.items,
+						items: payload,
 					};
 				}
 			}
@@ -120,28 +121,37 @@ function create(initial_state = {}) {
 					},
 				};
 			},
-			setBalance : (payload) =>
-				async function({ dispatch, registry, resolveSelect, select }) {
-					return dispatch.__setBalance(payload);
+			purchaseItem: (item_data) =>
+				async function ({ dispatch, registry, resolveSelect, select }) {
+					const success = await apiFetch({
+						path: `${select.getRestBase()}/purchases`,
+						method: 'POST',
+						data: {
+							item: {
+								key: item_data.meta.key,
+								price: item_data.meta.price,
+							}},
+					});
+
+					// we don't need to check if the api call was successful
+					// => await will throw an exception in case of http status >= 400
+					dispatch.setBalance(select.getBalance() - item_data.meta.price);
+					// (1) since we modify the item price
+					item_data.meta.price = 0;
+					// (2) we need to tell react about it
+					// (=> setItems will create a new instance of the given items which in turn triggers react to re render)
+					dispatch.setItems(select.getItems());
 				},
-			__setBalance(payload) {
+			setBalance(payload) {
 				return {
 					type: "__SET_BALANCE",
-					payload : {
-						balance: payload
-					}
+					payload,
 				};
 			},
-			setItems : (payload) =>
-				async function({ dispatch, registry, resolveSelect, select }) {
-					return dispatch.__setItems(payload);
-				},
-			__setItems(payload) {
+			setItems(payload) {
 				return {
 					type: "__SET_ITEMS",
-					payload : {
-						items: { ...payload }
-					}
+					payload: { ...payload },
 				};
 			},
 		},
@@ -170,7 +180,7 @@ function create(initial_state = {}) {
 			},
 			getBalance(state) {
 				return state.balance;
-			}
+			},
 		},
 		resolvers: {
 			// __getState() {

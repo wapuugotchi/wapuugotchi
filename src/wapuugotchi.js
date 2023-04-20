@@ -1,23 +1,26 @@
-import apiFetch from "@wordpress/api-fetch";
+import { render, StrictMode } from "@wordpress/element";
+import domReady from "@wordpress/dom-ready";
+import Avatar from "./components/avatar";
 import "./wapuugotchi.scss";
-class Wapuu {
-	constructor() {
-		this.set_image();
+
+
+
+const getDomElement = () => {
+	let domElement = document.getElementById('wapuugotchi__avatar');
+	if (!domElement) {
+		domElement = document.createElement('DIV');
+		domElement.id = 'wapuugotchi__avatar';
+		document.getElementById("wpwrap").append(domElement);
 	}
-
-	async set_image() {
-		let div = document.createElement("DIV");
-		div.id = "wapuugotchi";
-		div.innerHTML = wpPluginParam.wapuu;
-
-		document.getElementById("wpwrap").append(div);
-		apiFetch.use(apiFetch.createNonceMiddleware(window.wpPluginParam.nonce));
-
-		const res = await apiFetch({ path: "/wapuugotchi/v1/message" });
-
-		// TODO: code React from here on
-		console.log(res);
-	}
+	return domElement
 }
 
-new Wapuu();
+
+domReady(() =>
+	render(
+		<StrictMode>
+			<Avatar />
+		</StrictMode>,
+		getDomElement()
+	)
+);

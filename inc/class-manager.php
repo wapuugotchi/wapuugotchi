@@ -202,6 +202,9 @@ class Manager {
 			];
 
 			foreach ( $collection->items as $item ) {
+				if( $item->meta->deactivated ) {
+					continue;
+				}
 				if(in_array($item->meta->key, $purchases))  {
 					$item->meta->price = 0;
 				}

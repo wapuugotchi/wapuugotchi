@@ -70,12 +70,24 @@ class Manager {
 
 	public function load_home_scripts() {
 		$assets = require_once __DIR__ . '/../build/wapuugotchi.asset.php';
-		\wp_enqueue_style( 'wapuugotchi-page', plugins_url( 'build/wapuugotchi.css', __DIR__ ), array(), $assets['version'] );
-		\wp_enqueue_script( 'wapuugotchi-page', plugins_url( 'build/wapuugotchi.js', __DIR__ ), $assets['dependencies'], $assets['version'], true );
-		\wp_localize_script( 'wapuugotchi-page', 'wpPluginParam', [
-			'wapuu' => $this->get_dom_tags(),
-			'nonce' => wp_create_nonce( 'wp_rest' ),
-		] );
+		wp_enqueue_style( 'wapuugotchi-page', plugins_url( 'build/wapuugotchi.css', __DIR__ ), array(), $assets['version'] );
+		wp_enqueue_script( 'wapuugotchi-page', plugins_url( 'build/wapuugotchi.js', __DIR__ ), $assets['dependencies'], $assets['version'], true );
+
+		wp_add_inline_script(
+			'wapuugotchi-page',
+			sprintf(
+				"wp.data.dispatch('wapuugotchi/wapuugotchi').__initialize(%s)", json_encode(
+					[
+						'categories' 	=> \get_transient( 'wapuugotchi_categories' ),
+						'items'			=> \get_transient( 'wapuugotchi_items' ),
+						'balance'		=> get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ),
+						'wapuu'			=> json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ),
+						'restBase'		=> \get_rest_url( null, Api::REST_BASE),
+					]
+				)
+			),
+			'after'
+		);
 	}
 
 	private function get_dom_tags() {

@@ -24,7 +24,7 @@ export default function CategoryItem({ selectedCategory, item }) {
 			let item_data = items[selectedCategory][data_key];
 			if ( item_data.meta?.price > 0 ) {
 				if( item_data.meta.price <= balance ) {
-					dispatch(STORE_NAME).purchaseItem(item_data);
+					dispatch(STORE_NAME).setIntention({item: item});
 				}
 			} else {
 				const category_data = wapuu.char[selectedCategory];
@@ -51,14 +51,18 @@ export default function CategoryItem({ selectedCategory, item }) {
 	const handleItem = useCallback(__handleItem, [selectedCategory, item]);
 
 	return (
-		<div onClick={handleItem} className={item.classes}>
-			<img className="wapuu_card__item_img" src={item.preview} />
-			{item.tooltip && (
-				<div className="wapuu_card__item_pricetag">
-					<img src={priceTag} />
-					<span>{item.tooltip}</span>
-				</div>
-			)}
-		</div>
+		<>
+			{
+			}
+			<div onClick={handleItem} className={item.classes}>
+				<img className="wapuu_card__item_img" src={item.preview} />
+				{item.tooltip && (
+					<div className="wapuu_card__item_pricetag">
+						<img src={priceTag} />
+						<span>{item.tooltip}</span>
+					</div>
+				)}
+			</div>
+		</>
 	);
 }

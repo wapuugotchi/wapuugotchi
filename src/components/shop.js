@@ -1,20 +1,22 @@
 import { useState } from "@wordpress/element";
-import "./shop.scss";
-import Card from "./card";
-import apiFetch from "@wordpress/api-fetch";
-import ShowRoom from "./show-room";
-import { STORE_NAME } from "../store";
 import { useSelect, dispatch } from "@wordpress/data";
-
+import apiFetch from "@wordpress/api-fetch";
+import { STORE_NAME } from "../store";
+import Card from "./card";
+import ShowRoom from "./show-room";
+import PaymentDialog from "./payment-dialog";
+import "./shop.scss";
 import priceTag from "./category-item-pricetag.svg";
 
+
 export default function Shop(props) {
-	let { wapuu, balance, restBase } = useSelect((select) => {
+	let { wapuu, balance, intention, restBase } = useSelect((select) => {
 		return {
 			wapuu: select(STORE_NAME).getWapuu(),
 			items: select(STORE_NAME).getItems(),
 			categories: select(STORE_NAME).getCategories(),
 			balance: select(STORE_NAME).getBalance(),
+			intention: select(STORE_NAME).getIntention(),
 			restBase: select(STORE_NAME).getRestBase(),
 		};
 	});
@@ -61,6 +63,7 @@ export default function Shop(props) {
 			</div>
 			<form onSubmit={submitHandler}>
 				<Card key="settings-card" />
+				<PaymentDialog key="payment-dialog"/>
 				<div className="wapuu_shop__items">
 					<div className="wapuu_shop__input">
 						<input

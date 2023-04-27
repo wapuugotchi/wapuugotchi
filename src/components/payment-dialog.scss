@@ -61,13 +61,147 @@
 			}
 		}
 
-		p {
+		.wapuu_payment__confirm_text {
+			text-align: center;
+			margin-bottom: 0;
+		}
+
+		.wapuu_payment__item_preview {
+			position: relative;
+			margin: 0 20px;
+			background-color: #fafafa;
+
+			.wapuu_payment__item_tooltip_shadow {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+			}
+
+			.wapuu_payment__item_tooltip {
+				opacity: 0;
+
+				.wapuu_payment__item_tooltip_shadow {
+					background-color: black;
+					opacity: 0.7;
+				}
+
+				.wapuu_payment__item_tooltip_author {
+					bottom: 30px;
+					color: #fff;
+					left: 15px;
+					right: 15px;
+					margin: 0;
+					position: absolute;
+				}
+
+				.wapuu_payment__item_tooltip_text {
+					bottom: 30px;
+					color: #fff;
+					left: 15px;
+					right: 15px;
+					margin: 0;
+					position: absolute;
+					top: 30px;
+				}
+
+				.wapuu_payment__item_tooltip_author {
+					bottom: 10px;
+					text-align: right;
+				}
+			}
+		}
+
+		.wapuu_payment__item_name {
 			text-align: center;
 		}
 
-		img {
-			margin: 0 20px;
-			background-color: #fafafa;
+		.wapuu_payment__info_icon {
+			color: #2271b1;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			z-index: 10000;
+
+			&:hover {
+				color: white;
+
+				+ .wapuu_payment__item_tooltip {
+					opacity: 1;
+					-webkit-animation: WapuugotchiFadeIn 0.5s ease-out;
+					-moz-animation: WapuugotchiFadeIn 0.5s ease-out;
+					-o-animation: WapuugotchiFadeIn 0.5s ease-out;
+					animation: WapuugotchiFadeIn 0.5s ease-out;
+				}
+			}
 		}
+	}
+}
+
+@-webkit-keyframes WapuugotchiFadeIn {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes WapuugotchiFadeIn {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}
+
+@-o-keyframes WapuugotchiFadeIn {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}
+
+@keyframes WapuugotchiFadeIn {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
 	}
 }

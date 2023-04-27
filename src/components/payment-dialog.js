@@ -33,7 +33,7 @@ export default function PaymentDialog(props) {
 								<div className="wapuu_payment__item_tooltip">
 									<div className="wapuu_payment__item_tooltip_shadow" />
 									<p className="wapuu_payment__item_tooltip_text">{intention[index].meta.description}</p>
-									<p className="wapuu_payment__item_tooltip_author">Author: {intention[index].meta.author}</p>
+									<p className="wapuu_payment__item_tooltip_author">Discoverer: {intention[index].meta.author}</p>
 								</div>
 							</div>
 							<p className="wapuu_payment__confirm_text">Do you want to buy this item?</p>

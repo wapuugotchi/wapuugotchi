@@ -1,3 +1,14 @@
+#wapuugotchi-app .wapuu_payment__shadow_block {
+	position: absolute;
+	left: -20px;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	background: black;
+	z-index: 1;
+	opacity: 0.2;
+}
+
 .components-modal__screen-overlay {
 	position: absolute;
 	top: 32px;
@@ -7,74 +18,56 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
 
-.wapuu_payment__shadow_block {
-	position: absolute;
-	bottom: -40px;
-	left: -20px;
-	right: 0;
-	top: 0;
-	z-index: 1;
-}
+	.wapuu_payment__confirm_dialog {
+		position: relative;
+		width: 300px;
+		background-color: #fff;
+		border: 1px solid #c3c4c7;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
 
-.wapuu_payment__shadow_block {
-	background: black;
-	opacity: 0.2;
-}
+		.components-button {
+			-webkit-appearance: none;
+			background: #f6f7f7;
+			border: 1px solid #2271b1;
+			border-radius: 3px;
+			box-sizing: border-box;
+			color: #2271b1;
+			cursor: pointer;
+			display: inline-block;
+			font-size: 13px;
+			line-height: 2.15384615;
+			min-height: 30px;
+			padding: 0 10px;
+			text-decoration: none;
+			white-space: nowrap;
+			width: 100%;
 
-.wapuu_payment__confirm_dialog {
-	position: relative;
-	width: 300px;
-	background-color: #fff;
+			&:last-of-type {
+				margin-left: 0px;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				background: #2271b1;
+				border-color: #2271b1;
+				color: #fff;
+				text-decoration: none;
+				text-shadow: none;
+			}
 
-	border: 1px solid #c3c4c7;
-	box-shadow: 0 1px 1px rgba(0,0,0,.04);
-}
+			&:first-of-type {
+				margin-left: 10px;
+				margin-right: 0px;
+				margin-bottom: 10px;
+			}
+		}
 
+		p {
+			text-align: center;
+		}
 
-.wapuu_payment__confirm_dialog .components-button {
-	-webkit-appearance: none;
-	background: #f6f7f7;
-	border: 1px solid #2271b1;
-	border-radius: 3px;
-	box-sizing: border-box;
-	color: #2271b1;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 13px;
-	line-height: 2.15384615;
-	min-height: 30px;
-	padding: 0 10px;
-	text-decoration: none;
-	white-space: nowrap;
-	width: 100%;
-}
-
-
-.wapuu_payment__confirm_dialog .components-button:last-of-type {
-	margin-left: 0px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	background: #2271b1;
-	border-color: #2271b1;
-	color: #fff;
-	text-decoration: none;
-	text-shadow: none;
-}
-
-
-.wapuu_payment__confirm_dialog .components-button:first-of-type {
-	margin-left: 10px;
-	margin-right: 0px;
-	margin-bottom: 10px;
-}
-
-.wapuu_payment__confirm_dialog p {
-	text-align: center;
-}
-
-.wapuu_payment__confirm_dialog img {
-	margin: 0 20px;
-	background-color: #fafafa;
+		img {
+			margin: 0 20px;
+			background-color: #fafafa;
+		}
+	}
 }

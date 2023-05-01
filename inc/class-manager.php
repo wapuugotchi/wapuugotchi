@@ -60,6 +60,7 @@ class Manager {
 						'items'			=> \get_transient( 'wapuugotchi_items' ),
 						'balance'		=> get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ),
 						'wapuu'			=> json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ),
+						'intention'		=> false,
 						'restBase'		=> \get_rest_url( null, Api::REST_BASE),
 					]
 				)
@@ -82,6 +83,7 @@ class Manager {
 						'items'			=> \get_transient( 'wapuugotchi_items' ),
 						'balance'		=> get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ),
 						'wapuu'			=> json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ),
+						'intention'		=> false,
 						'restBase'		=> \get_rest_url( null, Api::REST_BASE),
 					]
 				)

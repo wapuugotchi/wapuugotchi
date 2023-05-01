@@ -86,6 +86,12 @@ function create(initial_state = {}) {
 						items: payload,
 					};
 				}
+				case "__SET_INTENTION": {
+					return {
+						...state,
+						intention: payload,
+					};
+				}
 			}
 
 			return state;
@@ -99,6 +105,7 @@ function create(initial_state = {}) {
 					dispatch.setWapuu(select.getWapuu());
 					dispatch.setBalance(select.getBalance());
 					dispatch.setItems(select.getItems());
+					dispatch.setIntention(select.getIntention());
 				},
 			__setState(payload) {
 				return {
@@ -154,6 +161,12 @@ function create(initial_state = {}) {
 					payload: { ...payload },
 				};
 			},
+			setIntention(payload) {
+				return {
+					type: "__SET_INTENTION",
+					payload: { ...payload },
+				};
+			},
 		},
 		selectors: {
 			// should not be used except for js console debug purposes
@@ -180,6 +193,9 @@ function create(initial_state = {}) {
 			},
 			getBalance(state) {
 				return state.balance;
+			},
+			getIntention(state) {
+				return state.intention;
 			},
 		},
 		resolvers: {

@@ -29,6 +29,14 @@ function init() {
 
 	require_once 'inc/class-menu.php';
 	new Menu();
+
+	require_once 'inc/object.php';
+	require_once 'inc/functions.php';
+	require_once 'inc/class-quests.php';
+	new Quests();
+
+	require_once 'inc/quests/collection-alpha.php';
+	new Posts();
 }
 
 add_action( 'plugins_loaded', 'Wapuugotchi\Wapuugotchi\init' );

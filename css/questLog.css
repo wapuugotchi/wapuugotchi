@@ -1,0 +1,49 @@
+.wrap .wapuugotchi_log {
+	background-color: #fff;
+	border: 1px solid #c3c4c7;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	min-width: 695px;
+	padding: 24px;
+
+	display: flex;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+.wrap .wapuugotchi_log h1 {
+	margin-bottom: 20px;
+}
+
+.wrap .wapuugotchi_log .wapuugotchi_log__items {
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.wrap .wapuugotchi_log .wapuugotchi_log__item {
+	padding: 10px 25px;
+	border-radius: 15px;
+	margin: 10px;
+	position: relative;
+}
+
+.wrap .wapuugotchi_log .wapuugotchi_log__active {
+	border: solid 2px #b0ff9d;
+}
+
+.wrap .wapuugotchi_log .wapuugotchi_log__completed {
+	border: solid 2px gray;
+}
+
+.wrap .wapuugotchi_log .wapuugotchi_log__completed h2 {
+	margin-bottom: 0;
+}
+
+.wrap .wapuugotchi_log .wapuugotchi_log__completed p {
+	margin-top: 5px;
+}
+
+.wrap .wapuugotchi_log span {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+
+}

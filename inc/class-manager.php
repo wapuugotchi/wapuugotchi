@@ -17,7 +17,7 @@ class Manager {
 		// delete_transient( 'wapuugotchi_categories' );
 		// delete_transient( 'wapuugotchi_items' );
 		// delete_transient( 'wapuugotchi_collection' );
-		//update_user_meta( get_current_user_id(), 'wapuugotchi_balance', 105);
+		//update_user_meta( get_current_user_id(), 'wapuugotchi_balance', 100);
 		//update_user_meta( get_current_user_id(), 'wapuugotchi_purchases', array('3392a397-22d1-44d0-b575-f31850012769', '870cbca1-4448-43ae-b815-11e9c2617159'));
 
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi', true ) ) ) {

@@ -1,9 +1,8 @@
 .wrap .wapuugotchi_log {
-	background-color: #fff;
 	border: 1px solid #c3c4c7;
 	box-shadow: 0 1px 1px rgba(0,0,0,.04);
-	min-width: 695px;
 	padding: 24px;
+	background: white;
 
 	display: flex;
 	align-content: flex-start;
@@ -16,6 +15,9 @@
 .wrap .wapuugotchi_log .wapuugotchi_log__items {
 	width: 100%;
 	margin-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .wrap .wapuugotchi_log .wapuugotchi_log__item {
@@ -23,18 +25,38 @@
 	border-radius: 15px;
 	margin: 10px;
 	position: relative;
+	min-width: 250px;
+	max-width: 380px;
 }
 
 .wrap .wapuugotchi_log .wapuugotchi_log__active {
-	border: solid 2px #b0ff9d;
+	background-color: white;
+	border: solid 4px #2271b1;
+	color: #2271b1;
+}
+
+
+.wrap .wapuugotchi_log .wapuugotchi_log__active h2 {
+	color: #2271b1;
+}
+
+.wrap .wapuugotchi_log .wapuugotchi_log__active img {
+	filter: invert(40%) sepia(21%) saturate(1801%) hue-rotate(164deg) brightness(93%) contrast(91%);
 }
 
 .wrap .wapuugotchi_log .wapuugotchi_log__completed {
-	border: solid 2px gray;
+	background-color: white;
+	border: solid 4px #888;
+	color: #888;
 }
 
 .wrap .wapuugotchi_log .wapuugotchi_log__completed h2 {
 	margin-bottom: 0;
+	color: #888;
+}
+
+.wrap .wapuugotchi_log .wapuugotchi_log__completed img {
+	filter: invert(58%) sepia(6%) saturate(8%) hue-rotate(331deg) brightness(91%) contrast(92%);
 }
 
 .wrap .wapuugotchi_log .wapuugotchi_log__completed p {
@@ -43,7 +65,7 @@
 
 .wrap .wapuugotchi_log span {
 	position: absolute;
-	right: 15px;
-	top: 15px;
+	right: 10px;
+	top: 10px;
 
 }

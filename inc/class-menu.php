@@ -60,8 +60,8 @@ class Menu
 		echo '<div class="wrap">';
 		echo '<div class="wapuugotchi_log">';;
 		if(!empty($active_quests)) {
-			echo '<div class="wapuugotchi_log__items">';
 			echo '<h1>Active Quests</h1>';
+			echo '<div class="wapuugotchi_log__items">';
 			foreach ($active_quests as $quests) {
 				echo 	'<div class="wapuugotchi_log__item wapuugotchi_log__active">';
 				echo	'<h2>' . $quests->getTitle() . '</h2>';
@@ -72,8 +72,8 @@ class Menu
 			echo 	'</div>';
 		}
 		if(!empty($completed_quests)) {
-			echo '<div class="wapuugotchi_log__items">';
 			echo '<h1>Completed Quests</h1>';
+			echo '<div class="wapuugotchi_log__items">';
 			foreach ($completed_quests as $quests) {
 				echo 	'<div class="wapuugotchi_log__item wapuugotchi_log__completed">';
 				echo	'<h2>' . $quests['title'] . '</h2>';

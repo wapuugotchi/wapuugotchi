@@ -8,7 +8,6 @@ endif; // No direct access allowed.
 
 class Quests
 {
-	private $collection = array();
 
 	public function __construct()
 	{
@@ -56,7 +55,7 @@ class Quests
 		if (empty(wp_cache_get('wapuugotchi_quests')) || !is_array($completed_quests)) {
 			return array();
 		}
-		foreach ($all_quests as $key => $value) {
+		foreach ($all_quests as $value) {
 			if (in_array($value->getId(), array_keys($completed_quests))) {
 				continue;
 			}

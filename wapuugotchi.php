@@ -36,7 +36,7 @@ function init() {
 	new Quests();
 
 	require_once 'inc/quests/collection-alpha.php';
-	new Posts();
+	new Alpha();
 }
 
 add_action( 'plugins_loaded', 'Wapuugotchi\Wapuugotchi\init' );

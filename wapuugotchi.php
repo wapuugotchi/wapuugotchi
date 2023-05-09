@@ -35,8 +35,14 @@ function init() {
 	require_once 'inc/class-quests.php';
 	new Quests();
 
-	require_once 'inc/quests/collection-alpha.php';
-	new Alpha();
+	require_once 'inc/quests/content-collection.php';
+	new Content_Collection();
+	require_once 'inc/quests/plugin-collection.php';
+	new Plugin_Collection();
+	require_once 'inc/quests/theme-collection.php';
+	new Theme_Collection();
+	require_once 'inc/quests/date-collection.php';
+	new Date_Collection();
 }
 
 add_action( 'plugins_loaded', 'Wapuugotchi\Wapuugotchi\init' );

@@ -1,11 +1,12 @@
 <?php
+
 namespace Wapuugotchi\Wapuugotchi;
 
 use WP_Error;
 use WP_REST_Request;
 use WP_REST_Response;
 
-if( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
+if ( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 
 class Api {
 	const REST_BASE = 'wapuugotchi/v1';
@@ -16,44 +17,44 @@ class Api {
 
 	public function create_rest_routes() {
 		register_rest_route( self::REST_BASE, '/wapuu', [
-			'methods' => 'GET',
-			'callback' => [ $this, 'get_settings' ],
+			'methods'             => 'GET',
+			'callback'            => [ $this, 'get_settings' ],
 			'permission_callback' => '__return_true'
 		] );
 
 		register_rest_route( self::REST_BASE, '/wapuu', [
-			'methods' => 'POST',
-			'callback' => [ $this, 'set_settings' ],
+			'methods'             => 'POST',
+			'callback'            => [ $this, 'set_settings' ],
 			'permission_callback' => [ $this, 'has_set_settings_permission' ]
 		] );
 
 		register_rest_route( self::REST_BASE, '/message', [
-			'methods' => 'GET',
-			'callback' => [ $this, 'get_messages' ],
+			'methods'             => 'GET',
+			'callback'            => [ $this, 'get_messages' ],
 			'permission_callback' => [ $this, 'has_get_message_permission' ]
 		] );
 
 		register_rest_route( self::REST_BASE, '/credits', [
-			'methods' => 'GET',
-			'callback' => [ $this, 'get_balance' ],
+			'methods'             => 'GET',
+			'callback'            => [ $this, 'get_balance' ],
 			'permission_callback' => 'is_user_logged_in'
 		] );
 
 		register_rest_route( self::REST_BASE, '/credits', [
-			'methods' => 'POST',
-			'callback' => [ $this, 'update_balance' ],
+			'methods'             => 'POST',
+			'callback'            => [ $this, 'update_balance' ],
 			'permission_callback' => 'is_user_logged_in'
 		] );
 
 		register_rest_route( self::REST_BASE, '/wearable', [
-			'methods' => 'POST',
-			'callback' => [ $this, 'unlock_wearable' ],
+			'methods'             => 'POST',
+			'callback'            => [ $this, 'unlock_wearable' ],
 			'permission_callback' => 'is_user_logged_in'
 		] );
 
 		register_rest_route( self::REST_BASE, '/purchases', [
-			'methods' => 'POST',
-			'callback' => [ $this, 'update_purchases' ],
+			'methods'             => 'POST',
+			'callback'            => [ $this, 'update_purchases' ],
 			'permission_callback' => 'is_user_logged_in'
 		] );
 	}
@@ -69,44 +70,47 @@ class Api {
 
 	public function set_settings( $req ) {
 		$check = false;
-		if ( !empty( $req['wapuu']) ) {
-			update_user_meta( get_current_user_id(), 'wapuugotchi', json_encode( $req['wapuu']));
+		if ( ! empty( $req['wapuu'] ) ) {
+			update_user_meta( get_current_user_id(), 'wapuugotchi', json_encode( $req['wapuu'] ) );
 			$check = true;
 		}
+
 		return rest_ensure_response( $check );
 	}
 
 	public function get_settings() {
-		return rest_ensure_response( json_decode( file_get_contents(\plugin_dir_path( __DIR__ ) . 'config/default.json') ) );
+		return rest_ensure_response( json_decode( file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/default.json' ) ) );
 	}
 
 	public function get_messages() {
-		return rest_ensure_response( [['message'=> 'dummy message #1'],['message'=> 'dummy message #2']]);
+		return rest_ensure_response( [ [ 'message' => 'dummy message #1' ], [ 'message' => 'dummy message #2' ] ] );
 	}
 
 	public function get_balance() {
 		$balance = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ) );
-		return rest_ensure_response( ['balance' => $balance]);
+
+		return rest_ensure_response( [ 'balance' => $balance ] );
 	}
 
 	public function update_balance( $req ) {
 		$balance = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ) );
-		$body = json_decode($req->get_body());
-		$amount =  $body->amount;
-		if (gettype($amount) !== 'integer') {
-			return rest_ensure_response( new WP_Error('provide amount as integer'));
+		$body    = json_decode( $req->get_body() );
+		$amount  = $body->amount;
+		if ( gettype( $amount ) !== 'integer' ) {
+			return rest_ensure_response( new WP_Error( 'provide amount as integer' ) );
 		}
 		$balance = $balance + $amount;
-		if ( $balance < 0) {
-			return rest_ensure_response( new WP_Error(__('Insufficent balance')));
+		if ( $balance < 0 ) {
+			return rest_ensure_response( new WP_Error( __( 'Insufficent balance' ) ) );
 		}
-		update_user_meta( get_current_user_id(), 'wapuugotchi_balance', $balance);
-		return rest_ensure_response( ['balance' => $balance] );
+		update_user_meta( get_current_user_id(), 'wapuugotchi_balance', $balance );
+
+		return rest_ensure_response( [ 'balance' => $balance ] );
 	}
 
 	public function unlock_wearable( WP_REST_Request $request ) {
 		$balance = get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true );
-		$params = $request->get_json_params();
+		$params  = $request->get_json_params();
 
 		if ( ! isset( $params['uuid'] ) ) {
 			return rest_ensure_response( new WP_Error( 'missing_uuid', __( 'Missing UUID.' ), [ 'status' => 400 ] ) );
@@ -118,11 +122,11 @@ class Api {
 			return rest_ensure_response( new WP_Error( 'already_unlocked', __( 'Item already unlocked.' ), [ 'status' => 400 ] ) );
 		}
 
-		$balance = get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true );
+		$balance           = get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true );
 		$wapuugotchi_items = get_transient( 'wapuugotchi_items' );
 
 		$item = null;
-		foreach( $wapuugotchi_items as $key => $items ) {
+		foreach ( $wapuugotchi_items as $key => $items ) {
 			if ( isset( $items[ $params['uuid'] ] ) ) {
 				$item = $items[ $params['uuid'] ];
 			}
@@ -144,16 +148,17 @@ class Api {
 	}
 
 	public function update_purchases( $req ) {
-		$bought = false;
+		$bought    = false;
 		$purchases = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases', true );
-		$balance = bcsub(get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ), $req['item']['price']);
-		if(!in_array($req['item']['key'], $purchases) && $balance >= 0 ) {
+		$balance   = bcsub( get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ), $req['item']['price'] );
+		if ( ! in_array( $req['item']['key'], $purchases ) && $balance >= 0 ) {
 			$purchases[] = $req['item']['key'];
-			update_user_meta( get_current_user_id(), 'wapuugotchi_purchases', $purchases);
-			update_user_meta( get_current_user_id(), 'wapuugotchi_balance', $balance);
+			update_user_meta( get_current_user_id(), 'wapuugotchi_purchases', $purchases );
+			update_user_meta( get_current_user_id(), 'wapuugotchi_balance', $balance );
 
 			$bought = true;
 		}
+
 		return rest_ensure_response( $bought );
 
 	}

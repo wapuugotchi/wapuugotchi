@@ -1,7 +1,8 @@
 <?php
+
 namespace Wapuugotchi\Wapuugotchi;
 
-if( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
+if ( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 
 class Quest {
 	private $id = '';
@@ -23,96 +24,88 @@ class Quest {
 	 * @param string $active_callback
 	 * @param string $completed_callback
 	 */
-	public function __construct($id, $parent_id, $title, $message, $priority, $pearls, $active_callback, $completed_callback)
-	{
-		$this->id = $id;
-		$this->parent_id = $parent_id;
-		$this->title = $title;
-		$this->message = $message;
-		$this->priority = $priority;
-		$this->pearls = $pearls;
-		$this->active_callback = $active_callback;
+	public function __construct( $id, $parent_id, $title, $message, $priority, $pearls, $active_callback, $completed_callback ) {
+		$this->id                 = $id;
+		$this->parent_id          = $parent_id;
+		$this->title              = $title;
+		$this->message            = $message;
+		$this->priority           = $priority;
+		$this->pearls             = $pearls;
+		$this->active_callback    = $active_callback;
 		$this->completed_callback = $completed_callback;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getId()
-	{
+	public function getId() {
 		return $this->id;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getParentId()
-	{
+	public function getParentId() {
 		return $this->parent_id;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getTitle()
-	{
+	public function getTitle() {
 		return $this->title;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getMessage()
-	{
+	public function getMessage() {
 		return $this->message;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getPriority()
-	{
+	public function getPriority() {
 		return $this->priority;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getPearls()
-	{
+	public function getPearls() {
 		return $this->pearls;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function isActive()
-	{
-		if( is_callable($this->active_callback)) {
-			$result = call_user_func($this->active_callback);
+	public function isActive() {
+		if ( is_callable( $this->active_callback ) ) {
+			$result = call_user_func( $this->active_callback );
 
-			if( is_bool($result) ) {
+			if ( is_bool( $result ) ) {
 				return $result;
 			}
 		}
+
 		return false;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function isCompleted()
-	{
-		if( is_callable($this->completed_callback)) {
-			$result = call_user_func($this->completed_callback);
+	public function isCompleted() {
+		if ( is_callable( $this->completed_callback ) ) {
+			$result = call_user_func( $this->completed_callback );
 
-			if( is_bool($result) ) {
+			if ( is_bool( $result ) ) {
 				return $result;
 			}
 		}
+
 		return false;
 	}
-
 
 
 }

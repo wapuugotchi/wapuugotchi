@@ -31,22 +31,17 @@
 
 .wrap .wapuugotchi_log .wapuugotchi_log__active {
 	background-color: white;
-	border: solid 4px #2271b1;
-	color: #2271b1;
+	border: solid 2px #00a32a;
 }
-
-
 .wrap .wapuugotchi_log .wapuugotchi_log__active h2 {
-	color: #2271b1;
 }
 
 .wrap .wapuugotchi_log .wapuugotchi_log__active img {
-	filter: invert(40%) sepia(21%) saturate(1801%) hue-rotate(164deg) brightness(93%) contrast(91%);
 }
 
 .wrap .wapuugotchi_log .wapuugotchi_log__completed {
 	background-color: white;
-	border: solid 4px #888;
+	border: solid 2px #888;
 	color: #888;
 }
 

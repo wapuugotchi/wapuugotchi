@@ -2,7 +2,9 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
-if ( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
+if ( ! defined( 'ABSPATH' ) ) :
+	exit();
+endif; // No direct access allowed.
 
 class Date_Collection {
 
@@ -24,14 +26,14 @@ class Date_Collection {
 		return array_merge( $default_quest, $quests );
 	}
 
-//Posts
+	//Posts
 	public static function always_true() {
 		return true;
 	}
 
 	public static function login_completed_1() {
 		$quest_meta = self::count_days();
-		if ( $quest_meta['login_1']['days'] >= 10 ) {
+		if ( $quest_meta['day_count']['days'] >= 10 ) {
 			return true;
 		}
 
@@ -40,7 +42,7 @@ class Date_Collection {
 
 	public static function login_completed_2() {
 		$quest_meta = self::count_days();
-		if ( $quest_meta['login_1']['days'] >= 20 ) {
+		if ( $quest_meta['day_count']['days'] >= 20 ) {
 			return true;
 		}
 
@@ -49,7 +51,7 @@ class Date_Collection {
 
 	public static function login_completed_3() {
 		$quest_meta = self::count_days();
-		if ( $quest_meta['login_1']['days'] >= 30 ) {
+		if ( $quest_meta['day_count']['days'] >= 30 ) {
 			return true;
 		}
 
@@ -58,7 +60,7 @@ class Date_Collection {
 
 	public static function login_completed_4() {
 		$quest_meta = self::count_days();
-		if ( $quest_meta['login_1']['days'] >= 40 ) {
+		if ( $quest_meta['day_count']['days'] >= 40 ) {
 			return true;
 		}
 
@@ -67,7 +69,7 @@ class Date_Collection {
 
 	public static function login_completed_5() {
 		$quest_meta = self::count_days();
-		if ( $quest_meta['login_1']['days'] >= 50 ) {
+		if ( $quest_meta['day_count']['days'] >= 50 ) {
 			return true;
 		}
 
@@ -76,14 +78,18 @@ class Date_Collection {
 
 
 	private static function count_days() {
-		$quest_meta = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_meta', true );
+		$quest_meta = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_meta__alpha', true );
 		if ( ! is_array( $quest_meta ) ||
-		     ! isset( $quest_meta['day_count'] ) ||
-		     ! isset( $quest_meta['day_count']['days'] ) ||
-		     ! isset( $quest_meta['day_count']['tstamp'] )
+			 ! isset( $quest_meta['day_count'] ) ||
+			 ! isset( $quest_meta['day_count']['days'] ) ||
+			 ! isset( $quest_meta['day_count']['tstamp'] )
 		) {
-			$quest_meta['day_count']['tstamp'] = 0;
-			$quest_meta['day_count']['days']   = 0;
+			$quest_meta = array(
+				'day_count' => array(
+					'tstamp' => 0,
+					'days'  => 0,
+				),
+			);
 		}
 
 		if ( $quest_meta['day_count']['tstamp'] < strtotime( 'now' ) ) {
@@ -91,7 +97,7 @@ class Date_Collection {
 			$quest_meta['day_count']['days']   += 1;
 			update_user_meta(
 				get_current_user_id(),
-				'wapuugotchi_quest_meta',
+				'wapuugotchi_quest_meta__alpha',
 				$quest_meta
 			);
 		}

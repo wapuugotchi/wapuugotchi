@@ -5,6 +5,7 @@ import { STORE_NAME } from "../store";
 import Card from "./card";
 import ShowRoom from "./show-room";
 import PaymentDialog from "./payment-dialog";
+import MenuHeader from "./menu-header";
 import "./shop.scss";
 import priceTag from "./category-item-pricetag.svg";
 
@@ -46,21 +47,10 @@ export default function Shop(props) {
 
 	return (
 		<div className="wapuu_shop">
-			<div className="wapuu_shop__header">
-				<h1 className="wapuu_shop__title">
-					Customize Your Wapuu with WapuuGotchi
-				</h1>
-				{/*<span className="wapuu_shop__divider" />*/}
-				<p className="wapuu_shop__description">
-					Browse categories on the left to explore various items and style your
-					Wapuu.
-				</p>
-				<span className="wapuu_shop__pearls">
-					Your Pearl Balance:
-					<img alt="" src={priceTag} />
-					{ balance }
-				</span>
-			</div>
+			<MenuHeader
+				title="Customize Your Wapuu with WapuuGotchi"
+				description="Browse categories on the left to explore various items and style your Wapuu."
+			/>
 			<form onSubmit={submitHandler}>
 				<Card key="settings-card" />
 				<PaymentDialog key="payment-dialog"/>

@@ -1,12 +1,22 @@
 import { render, StrictMode } from "@wordpress/element";
 import domReady from "@wordpress/dom-ready";
-import App from "./app";
+import Avatar from "./components/avatar";
+
+const getDomElement = () => {
+	let domElement = document.getElementById('wapuugotchi__avatar');
+	if (!domElement) {
+		domElement = document.createElement('DIV');
+		domElement.id = 'wapuugotchi__avatar';
+		document.getElementById("wpwrap").append(domElement);
+	}
+	return domElement
+}
 
 domReady(() =>
 	render(
 		<StrictMode>
-			<App />
+			<Avatar />
 		</StrictMode>,
-		document.getElementById("wapuugotchi-app")
+		getDomElement()
 	)
 );

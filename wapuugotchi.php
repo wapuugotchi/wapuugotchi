@@ -43,6 +43,8 @@ function init() {
 	new Theme_Collection();
 	require_once 'inc/quests/date-collection.php';
 	new Date_Collection();
+	require_once 'inc/quests/start-collection.php';
+	new Start_Collection();
 }
 
 add_action( 'plugins_loaded', 'Wapuugotchi\Wapuugotchi\init' );

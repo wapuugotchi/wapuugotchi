@@ -14,14 +14,9 @@ class Plugin_Collection {
 
 	public function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_seo_plugin_1', null, 'Activate a SEO plugin', 'You are using a SEO plugin. This helps a lot with the search engine optimization.', 100, 15, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::seo_installed_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_caching_plugin_1', null, 'Activate a caching plugin', 'You are using a caching plugin. So you can increase your performance.', 100, 15, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::caching_installed_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_security_plugin_1', null, 'Activate a security plugin', 'You are using a security plugin. So you can increase your performance.', 100, 15, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::security_installed_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_1', null, 'Log in on 10 different days', 'Nice, you logged in for 10 consecutive days!', 100, 25, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::login_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_2', 'login_1', 'Log in on 20 different days', 'Nice, you logged in for 20 consecutive days!', 100, 25, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::login_completed_2' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_3', 'login_2', 'Log in on 30 different days', 'Nice, you logged in for 30 consecutive days!', 100, 25, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::login_completed_3' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_4', 'login_3', 'Log in on 40 different days', 'Nice, you logged in for 40 consecutive days!', 100, 25, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::login_completed_4' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_5', 'login_4', 'Log in on 50 different days', 'Nice, you logged in for 50 consecutive days!', 100, 25, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::login_completed_5' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_seo_plugin_1', null, 'Activate a SEO plugin', 'Awesome! &#128261;' . PHP_EOL .'You are using a SEO plugin. This will help you to be found by the search engines.', 100, 15, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::seo_installed_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_caching_plugin_1', null, 'Activate a caching plugin', 'Fantastic! &#128171;' . PHP_EOL . 'You are using a caching plugin. This way you can increase the speed of your website.', 100, 15, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::caching_installed_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_security_plugin_1', null, 'Activate a security plugin', 'Great!' . PHP_EOL . 'You are using a security plugin. This will help you protect me from villains. &#128170;', 100, 15, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::security_installed_completed_1' ),
 		);
 
 		return array_merge( $default_quest, $quests );
@@ -71,76 +66,6 @@ class Plugin_Collection {
 		);
 
 		return self::is_active_plugin_in_list( $list );
-	}
-
-	public static function login_completed_1() {
-		$quest_meta = self::count_days();
-		if ( $quest_meta['login_1']['days'] >= 10 ) {
-			return true;
-		}
-
-		return false;
-	}
-
-	public static function login_completed_2() {
-		$quest_meta = self::count_days();
-		if ( $quest_meta['login_1']['days'] >= 20 ) {
-			return true;
-		}
-
-		return false;
-	}
-
-	public static function login_completed_3() {
-		$quest_meta = self::count_days();
-		if ( $quest_meta['login_1']['days'] >= 30 ) {
-			return true;
-		}
-
-		return false;
-	}
-
-	public static function login_completed_4() {
-		$quest_meta = self::count_days();
-		if ( $quest_meta['login_1']['days'] >= 40 ) {
-			return true;
-		}
-
-		return false;
-	}
-
-	public static function login_completed_5() {
-		$quest_meta = self::count_days();
-		if ( $quest_meta['login_1']['days'] >= 50 ) {
-			return true;
-		}
-
-		return false;
-	}
-
-
-	private static function count_days() {
-		$quest_meta = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_meta', true );
-		if ( ! is_array( $quest_meta ) ||
-		     ! isset( $quest_meta['day_count'] ) ||
-		     ! isset( $quest_meta['day_count']['days'] ) ||
-		     ! isset( $quest_meta['day_count']['tstamp'] )
-		) {
-			$quest_meta['day_count']['tstamp'] = 0;
-			$quest_meta['day_count']['days']   = 0;
-		}
-
-		if ( $quest_meta['day_count']['tstamp'] < strtotime( 'now' ) ) {
-			$quest_meta['day_count']['tstamp'] = strtotime( 'tomorrow noon' );
-			$quest_meta['day_count']['days']   += 1;
-			update_user_meta(
-				get_current_user_id(),
-				'wapuugotchi_quest_meta',
-				$quest_meta
-			);
-		}
-
-		return $quest_meta;
 	}
 
 

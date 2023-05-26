@@ -176,7 +176,7 @@ function create(initial_state = {}) {
 			},
 			setMessage(payload) {
 				return {
-					type: "__SET_Message",
+					type: "__SET_MESSAGE",
 					payload: { ...payload },
 				};
 			},

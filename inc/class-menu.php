@@ -43,9 +43,20 @@ class Menu {
 			$slug . '-quests',
 			[ $this, 'quests_page_template' ]
 		);
+//		add_submenu_page(
+//			$slug,
+//			__( 'Wapuugotchi', 'wapuugotchi' ),
+//			__( 'Scavenger Hunt', 'wapuugotchi' ),
+//			$capability,
+//			$slug . '-hunt',
+//			[ $this, 'hunt_page_template' ]
+//		);
 	}
 
 	public function customizer_page_template() {
+		echo '<div class="wrap"><div id="wapuugotchi-app"></div></div>';
+	}
+	public function hunt_page_template() {
 		echo '<div class="wrap"><div id="wapuugotchi-app"></div></div>';
 	}
 

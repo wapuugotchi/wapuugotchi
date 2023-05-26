@@ -14,10 +14,10 @@ class Quests {
 	}
 
 	public function init() {
-		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests', true ) ) ) {
+		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', true ) ) ) {
 			update_user_meta(
 				get_current_user_id(),
-				'wapuugotchi_completed_quests',
+				'wapuugotchi_completed_quests__alpha',
 				array()
 			);
 		}
@@ -42,7 +42,7 @@ class Quests {
 	}
 
 	public static function get_active_quests() {
-		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests', true );
+		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', true );
 		$all_quests       = self::get_all_quests();
 		$result_array     = array();
 
@@ -66,11 +66,11 @@ class Quests {
 	}
 
 	public static function get_completed_quests() {
-		return get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests', true );
+		return get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', true );
 	}
 
 	public static function get_completed_quest_objects() {
-		$completed_quests = array_keys(get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests', true ));
+		$completed_quests = array_keys(get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', true ));
 		$all_quests       = self::get_all_quests();
 		$result_array     = array();
 
@@ -97,7 +97,7 @@ class Quests {
 	}
 
 	private function update_completed_quests( $quests ) {
-		$completed_quests     = get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests', true );
+		$completed_quests     = get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', true );
 		$new_completed_quests = array();
 
 		if ( ! empty( $quests ) ) {
@@ -105,15 +105,17 @@ class Quests {
 				$new_completed_quests[ $quest->getId() ] = array(
 					'id'       => $quest->getId(),
 					'title'    => $quest->getTitle(),
+					'message'    => $quest->getMessage(),
 					'date'     => date( 'j F, Y \@ g:ia' ),
 					'pearls'   => $quest->getPearls(),
 					'notified' => false,
 				);
 
 			}
+
 			update_user_meta(
 				get_current_user_id(),
-				'wapuugotchi_completed_quests',
+				'wapuugotchi_completed_quests__alpha',
 				array_unique( array_merge( $completed_quests, $new_completed_quests ), SORT_REGULAR )
 			);
 		}
@@ -127,9 +129,9 @@ class Quests {
 		}
 
 		if ( $pearls > 0 ) {
-			$balance = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_balance', true ) );
+			$balance = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ) );
 			$balance += $pearls;
-			update_user_meta( get_current_user_id(), 'wapuugotchi_balance', $balance );
+			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', $balance );
 		}
 	}
 }

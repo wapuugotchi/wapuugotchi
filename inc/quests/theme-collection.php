@@ -14,7 +14,7 @@ class Theme_Collection {
 
 	public function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Wapuugotchi\Quest( 'cleanup_themes_1', null, 'Remove all unused themes', 'nice, you now only have the active theme in your wordpress!', 100, 15, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::cleanup_themes_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'cleanup_themes_1', null, 'Remove all unused themes', 'You cleaned up! &#129529;' . PHP_EOL . 'We have only one theme now.', 100, 15, 'Wapuugotchi\Wapuugotchi\Theme_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Theme_Collection::cleanup_themes_completed_1' ),
 		);
 
 		return array_merge( $default_quest, $quests );

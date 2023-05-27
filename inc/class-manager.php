@@ -17,12 +17,12 @@ class Manager {
 	);
 
 	public function __construct() {
-		//delete_transient( 'wapuugotchi_categories' );
-		//delete_transient( 'wapuugotchi_items' );
-		//delete_transient( 'wapuugotchi_collection' );
-		//update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 1000);
-		//update_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', array('3392a397-22d1-44d0-b575-f31850012769', '870cbca1-4448-43ae-b815-11e9c2617159'));
-		//update_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', array());
+//		delete_transient( 'wapuugotchi_categories' );
+//		delete_transient( 'wapuugotchi_items' );
+//		delete_transient( 'wapuugotchi_collection' );
+//		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 1000);
+//		update_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', array('3392a397-22d1-44d0-b575-f31850012769', '870cbca1-4448-43ae-b815-11e9c2617159'));
+//		update_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', array());
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
@@ -84,7 +84,7 @@ class Manager {
 						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
 						'message'    => false,
 						'intention'  => false,
-						'restBase'   => \get_rest_url( null, Api::REST_BASE ),
+						'restBase'   => $this->get_rest_api(),
 					)
 				)
 			),
@@ -109,7 +109,7 @@ class Manager {
 						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
 						'message'    => false,
 						'intention'  => false,
-						'restBase'   => \get_rest_url( null, Api::REST_BASE ),
+						'restBase'   => $this->get_rest_api(),
 					)
 				)
 			),
@@ -134,7 +134,7 @@ class Manager {
 						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
 						'message'    => false,
 						'intention'  => false,
-						'restBase'   => \get_rest_url( null, Api::REST_BASE ),
+						'restBase'   => $this->get_rest_api(),
 					)
 				)
 			),
@@ -159,7 +159,7 @@ class Manager {
 						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
 						'message'    => $this->get_quest_completed_message(),
 						'intention'  => false,
-						'restBase'   => \get_rest_url( null, Api::REST_BASE ),
+						'restBase'   => $this->get_rest_api(),
 					)
 				)
 			),
@@ -356,5 +356,21 @@ class Manager {
 		}
 
 		return $result_array;
+	}
+
+	/**
+	 * Formats the REST API url
+	 *
+	 * @return string
+	 */
+	private static function get_rest_api() {
+		$api      = get_rest_url( null, Api::REST_BASE );
+		$find     = 'wp-json';
+		$position = strpos( $api, $find );
+		if ( $position === false ) {
+			return $api;
+		}
+
+		return substr( $api, $position + strlen( $find ) );
 	}
 }

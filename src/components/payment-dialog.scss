@@ -3,14 +3,14 @@
 	left: -20px;
 	right: 0;
 	top: 0;
-	height: 100vh;
+	height: 100%;
 	background: black;
 	z-index: 1;
 	opacity: 0.2;
 }
 
 .components-modal__screen-overlay {
-	position: absolute;
+	position: fixed;
 	top: 32px;
 	bottom: 0;
 	right: 0;

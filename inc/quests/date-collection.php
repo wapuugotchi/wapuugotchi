@@ -16,11 +16,11 @@ class Date_Collection {
 
 	public function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_1', null, 'Log in on 10 different days', 'Nice, you logged in for 10 consecutive days!', 100, 25, 'Wapuugotchi\Wapuugotchi\Date_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Date_Collection::login_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_2', 'login_1', 'Log in on 20 different days', 'Nice, you logged in for 20 consecutive days!', 100, 25, 'Wapuugotchi\Wapuugotchi\Date_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Date_Collection::login_completed_2' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_3', 'login_2', 'Log in on 30 different days', 'Nice, you logged in for 30 consecutive days!', 100, 25, 'Wapuugotchi\Wapuugotchi\Date_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Date_Collection::login_completed_3' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_4', 'login_3', 'Log in on 40 different days', 'Nice, you logged in for 40 consecutive days!', 100, 25, 'Wapuugotchi\Wapuugotchi\Date_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Date_Collection::login_completed_4' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_5', 'login_4', 'Log in on 50 different days', 'Nice, you logged in for 50 consecutive days!', 100, 25, 'Wapuugotchi\Wapuugotchi\Date_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Date_Collection::login_completed_5' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'login_1', null, 'Log in on 10 different days', 'Nice, you logged in for 10 consecutive days!', 100, 1, 'Wapuugotchi\Wapuugotchi\Date_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Date_Collection::login_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'login_2', 'login_1', 'Log in on 20 different days', 'Nice, you logged in for 20 consecutive days!', 100, 2, 'Wapuugotchi\Wapuugotchi\Date_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Date_Collection::login_completed_2' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'login_3', 'login_2', 'Log in on 30 different days', 'Nice, you logged in for 30 consecutive days!', 100, 3, 'Wapuugotchi\Wapuugotchi\Date_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Date_Collection::login_completed_3' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'login_4', 'login_3', 'Log in on 40 different days', 'Nice, you logged in for 40 consecutive days!', 100, 4, 'Wapuugotchi\Wapuugotchi\Date_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Date_Collection::login_completed_4' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'login_5', 'login_4', 'Log in on 50 different days', 'Nice, you logged in for 50 consecutive days!', 100, 5, 'Wapuugotchi\Wapuugotchi\Date_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Date_Collection::login_completed_5' ),
 		);
 
 		return array_merge( $default_quest, $quests );

@@ -14,9 +14,9 @@ class Plugin_Collection {
 
 	public function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_seo_plugin_1', null, 'Activate a SEO plugin', 'Awesome! &#128261;' . PHP_EOL .'You are using a SEO plugin. This will help you to be found by the search engines.', 100, 15, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::seo_installed_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_caching_plugin_1', null, 'Activate a caching plugin', 'Fantastic! &#128171;' . PHP_EOL . 'You are using a caching plugin. This way you can increase the speed of your website.', 100, 15, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::caching_installed_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_security_plugin_1', null, 'Activate a security plugin', 'Great!' . PHP_EOL . 'You are using a security plugin. This will help you protect me from villains. &#128170;', 100, 15, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::security_installed_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_seo_plugin_1', null, 'Activate a SEO plugin', 'Awesome! &#128261;' . PHP_EOL .'You are using a SEO plugin. This will help you to be found by the search engines.', 100, 2, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::seo_installed_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_caching_plugin_1', null, 'Activate a caching plugin', 'Fantastic! &#128171;' . PHP_EOL . 'You are using a caching plugin. This way you can increase the speed of your website.', 100, 2, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::caching_installed_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_security_plugin_1', null, 'Activate a security plugin', 'Great!' . PHP_EOL . 'You are using a security plugin. This will help you protect me from villains. &#128170;', 100, 2, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::security_installed_completed_1' ),
 		);
 
 		return array_merge( $default_quest, $quests );

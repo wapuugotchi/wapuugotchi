@@ -20,9 +20,8 @@ export default function PaymentDialog(props) {
 	return (
 		<div >
 			{Object.keys(intention).map((index) => (
-					<div key={props.key} className="wapuu_payment__shadow_block">
+					<div key={index} className="wapuu_payment__shadow_block">
 						<ConfirmDialog
-							key={props.key}
 							className="wapuu_payment__confirm_dialog"
 							onConfirm={ () => handlePayment(intention[index]) }
 							onCancel={ () => dispatch(STORE_NAME).setIntention({}) }>

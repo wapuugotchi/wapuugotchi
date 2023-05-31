@@ -48,6 +48,10 @@ async function __buildSvg(wapuu, items) {
 						"g#" + itemGroup.classList.value
 					);
 					if (wapuu_svg_group) {
+						const remove_part = wapuu_svg_group.querySelector('.remove--part');
+						if( remove_part !== null ) {
+							remove_part.remove()
+						}
 						itemGroup.removeAttribute("class");
 						wapuu_svg_group.append(itemGroup);
 					}
@@ -92,6 +96,12 @@ function create(initial_state = {}) {
 						intention: payload,
 					};
 				}
+				case "__SET_MESSAGE": {
+					return {
+						...state,
+						message: payload,
+					};
+				}
 			}
 
 			return state;
@@ -106,6 +116,7 @@ function create(initial_state = {}) {
 					dispatch.setBalance(select.getBalance());
 					dispatch.setItems(select.getItems());
 					dispatch.setIntention(select.getIntention());
+					dispatch.setMessage(select.getMessage());
 				},
 			__setState(payload) {
 				return {
@@ -167,6 +178,12 @@ function create(initial_state = {}) {
 					payload: { ...payload },
 				};
 			},
+			setMessage(payload) {
+				return {
+					type: "__SET_MESSAGE",
+					payload: { ...payload },
+				};
+			},
 		},
 		selectors: {
 			// should not be used except for js console debug purposes
@@ -196,6 +213,9 @@ function create(initial_state = {}) {
 			},
 			getIntention(state) {
 				return state.intention;
+			},
+			getMessage(state) {
+				return state.message;
 			},
 		},
 		resolvers: {

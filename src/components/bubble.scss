@@ -1,0 +1,52 @@
+.wapuugotchi__bubble {
+	position: relative;
+	background: white;
+	border-radius: .4em;
+	border: solid 2px #00a32a;
+	padding: 4px 8px;
+	font-size: 12px;
+	white-space: break-spaces;
+}
+
+.wapuugotchi__bubble:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 17px solid transparent;
+	border-top-color: #00a32a;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -8.5px;
+	margin-bottom: -17px;
+}
+
+.wapuugotchi__bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 17px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	border-right: 0;
+	margin-bottom: -13px;
+	margin-left: -10px;
+}
+
+
+
+
+@keyframes "wapuugotchi-svg__fade_in_lazy" {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.wapuugotchi__bubble.fade_in_lazy {
+	-webkit-animation: wapuugotchi-svg__fade_in_lazy 0.5s ease-in-out 2s both;
+	animation: wapuugotchi-svg__fade_in_lazy 0.5s ease-in-out 2s both;
+}

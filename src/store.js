@@ -48,6 +48,10 @@ async function __buildSvg(wapuu, items) {
 						"g#" + itemGroup.classList.value
 					);
 					if (wapuu_svg_group) {
+						const remove_part = wapuu_svg_group.querySelector('.remove--part');
+						if( remove_part !== null ) {
+							remove_part.remove()
+						}
 						itemGroup.removeAttribute("class");
 						wapuu_svg_group.append(itemGroup);
 					}

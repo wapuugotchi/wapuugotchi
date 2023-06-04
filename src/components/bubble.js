@@ -12,11 +12,6 @@ export default function Bubble() {
 			message: Object.values( select(STORE_NAME).getMessage()),
 		};
 	})
-
-	const mops = () => {
-		console.log('mops');
-	}
-	mops()
 	const handleClickMessage = async () => {
 		const removed_item = message.shift();
 
@@ -31,9 +26,9 @@ export default function Bubble() {
 		};
 
 	return (
-		message.length > 0?
+		message.length > 0 ?
 			<>
-				<div className="wapuugotchi__bubble fade_in_lazy" onClick={handleClickMessage}>
+				<div className={"wapuugotchi__bubble fade_in_lazy " + message[0]['type'] + "_bubble"} onClick={handleClickMessage}>
 					{parse(message[0]['message'])}
 				</div>
 			</> : ''

@@ -2,7 +2,9 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
-if ( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
+if ( ! defined( 'ABSPATH' ) ) :
+	exit();
+endif; // No direct access allowed.
 
 class Plugin_Collection {
 
@@ -14,15 +16,15 @@ class Plugin_Collection {
 
 	public function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_seo_plugin_1', null, 'Activate a SEO plugin', 'Awesome! &#128261;' . PHP_EOL .'We are using an SEO plugin. This will help us to be found by search engines.', 100, 2, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::seo_installed_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_caching_plugin_1', null, 'Activate a caching plugin', 'Fantastic! &#128171;' . PHP_EOL . 'We are using a caching plugin. This way we can increase the speed of our website.', 100, 2, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::caching_installed_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_security_plugin_1', null, 'Activate a security plugin', 'Great!' . PHP_EOL . 'We are using a security plugin. This will help us protect me from villains. &#128170;', 100, 2, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::security_installed_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_seo_plugin_1', null, 'Activate a SEO plugin', 'Awesome! &#128261;' . PHP_EOL . 'We are using an SEO plugin. This will help us to be found by search engines.', 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::seo_installed_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_caching_plugin_1', null, 'Activate a caching plugin', 'Fantastic! &#128171;' . PHP_EOL . 'We are using a caching plugin. This way we can increase the speed of our website.', 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::caching_installed_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_security_plugin_1', null, 'Activate a security plugin', 'Great!' . PHP_EOL . 'We are using a security plugin. This will help us protect me from villains. &#128170;', 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\Plugin_Collection::always_true', 'Wapuugotchi\Wapuugotchi\Plugin_Collection::security_installed_completed_1' ),
 		);
 
 		return array_merge( $default_quest, $quests );
 	}
 
-//Posts
+	//Posts
 	public static function always_true() {
 		return true;
 	}
@@ -34,7 +36,7 @@ class Plugin_Collection {
 			'semrush-seo-writing-assistant',
 			'ahrefs-seo',
 			'seo-by-rank-math',
-			'wp-seopress'
+			'wp-seopress',
 		);
 
 		return self::is_active_plugin_in_list( $list );
@@ -47,7 +49,7 @@ class Plugin_Collection {
 			'w3-total-cache',
 			'wp-optimize',
 			'wp-fastest-cache',
-			'wp-super-cache'
+			'wp-super-cache',
 		);
 
 		return self::is_active_plugin_in_list( $list );
@@ -62,7 +64,7 @@ class Plugin_Collection {
 			'really-simple-ssl',
 			'wp-simple-firewall',
 			'sucuri-scanner',
-			'wordfence'
+			'wordfence',
 		);
 
 		return self::is_active_plugin_in_list( $list );

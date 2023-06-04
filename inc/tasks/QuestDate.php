@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
 
-class Date_Collection {
+class QuestDate {
 
 	public function __construct() {
 		add_filter( 'wapuugotchi_quest_filter', array( $this, 'add_wapuugotchi_filter' ) );

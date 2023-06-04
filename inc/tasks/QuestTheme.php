@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
 
-class Theme_Collection {
+class QuestTheme {
 
 	public function __construct() {
 		add_filter( 'wapuugotchi_quest_filter', array( $this, 'add_wapuugotchi_filter' ) );

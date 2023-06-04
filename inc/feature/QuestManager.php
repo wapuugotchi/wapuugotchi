@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
 
-class Quests {
+class QuestManager {
 
 	public function __construct() {
 		add_action( 'admin_init', array( $this, 'init' ), 20, 0 );

@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
 
-class Update {
+class NotificationManager {
 
 	public function __construct() {
 		add_action( 'admin_init', array( $this, 'send_plugin_update_info' ) );

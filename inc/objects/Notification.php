@@ -8,16 +8,19 @@ class Notification {
 	private $id = '';
 	private $message = '';
 	private $type = '';
+	private $remember = '';
 
 	/**
 	 * @param string $id
 	 * @param string $message
 	 * @param string $type
+	 * @param string $remember
 	 */
-	public function __construct( $id, $message, $type ) {
+	public function __construct( $id, $message, $type, $remember) {
 		$this->id       = $id;
 		$this->message  = $message;
-		$this->type   = $type;
+		$this->type     = $type;
+		$this->remember = $remember;
 	}
 
 	/**
@@ -39,5 +42,13 @@ class Notification {
 	 */
 	public function getType() {
 		return $this->type;
+	}
+
+	/**
+	 * If the issue is still relevant, the message should be resent after x days.
+	 * @return string
+	 */
+	public function getRemember() {
+		return $this->remember;
 	}
 }

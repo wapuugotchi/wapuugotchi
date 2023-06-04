@@ -44,7 +44,9 @@ function init() {
 
 	require_once 'inc/feature/NotificationManager.php';
 	require_once 'inc/objects/Notification.php';
+	require_once 'inc/tasks/NotificationUpdate.php';
 	new NotificationManager();
+	new NotificationUpdate();
 
 
 }

@@ -19,12 +19,13 @@ class Manager {
 	);
 
 	public function __construct() {
-		delete_transient( 'wapuugotchi_categories' );
-		delete_transient( 'wapuugotchi_items' );
-		delete_transient( 'wapuugotchi_collection' );
-		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 1000);
-		update_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', array('3392a397-22d1-44d0-b575-f31850012769', '870cbca1-4448-43ae-b815-11e9c2617159'));
-		update_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', array());
+//		delete_transient( 'wapuugotchi_categories' );
+//		delete_transient( 'wapuugotchi_items' );
+//		delete_transient( 'wapuugotchi_collection' );
+//		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 1000);
+//		update_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', array('3392a397-22d1-44d0-b575-f31850012769', '870cbca1-4448-43ae-b815-11e9c2617159'));
+//		update_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', array());
+//		update_user_meta( get_current_user_id(), 'wapuugotchi_confirmed_notifications__alpha', array());
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
@@ -343,20 +344,11 @@ class Manager {
 
 	private function get_notifications() {
 		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', true );
+		$notifications = NotificationManager::get_active_quests();
 		$result_array = array();
-		$notifications = apply_filters( 'wapuugotchi_notifications', array() );
 
 		if( !is_array($completed_quests) ) {
 			return array();
-		}
-
-		foreach ( $notifications as $notification ) {
-			if ( $notification instanceof Notification === false ) {
-				continue;
-			}
-
-			$element = array( 'category' => 'note', 'id' => $notification->getId(), 'message' => $notification->getMessage(), 'type' => $notification->getType());
-			$result_array[$notification->getId()] = $element;
 		}
 
 		foreach ($completed_quests as $completed_quest) {
@@ -364,11 +356,17 @@ class Manager {
 				continue;
 			}
 
-			$element = array( 'category' => 'quest', 'id' => $completed_quest['id'], 'message' => $completed_quest['message'], 'type' => $completed_quest['type']);
+			$element = array(
+				'id' => $completed_quest['id'],
+				'category' => 'quest',
+				'message' => $completed_quest['message'],
+				'type' => $completed_quest['type']
+			);
 
-			$result_array[$completed_quest['id']] = $element;
+			$result_array[ $completed_quest['id'] ] = $element;
 		}
-		return $result_array;
+
+		return array_merge( $notifications, $result_array);
 	}
 
 	/**

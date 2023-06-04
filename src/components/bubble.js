@@ -18,7 +18,10 @@ export default function Bubble() {
 		const success = await apiFetch({
 			path: `${restBase}/message`,
 			method: "POST",
-			data: { remove_message: removed_item?.id },
+			data: { remove_message: {
+				id: removed_item?.id,
+				category: removed_item?.category,
+			} },
 		});
 
 		console.log(success)

@@ -6,10 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
 
-class Quests {
+class QuestManager {
 
 	public function __construct() {
-		//add_filter('wapuugotchi_quest_filter', array($this, 'wapuugotchi_quest_filter'), 10, 1);
 		add_action( 'admin_init', array( $this, 'init' ), 20, 0 );
 	}
 
@@ -105,7 +104,8 @@ class Quests {
 				$new_completed_quests[ $quest->getId() ] = array(
 					'id'       => $quest->getId(),
 					'title'    => $quest->getTitle(),
-					'message'    => $quest->getMessage(),
+					'message'  => $quest->getMessage(),
+					'type'     => $quest->getType(),
 					'date'     => date( 'j F, Y \@ g:ia' ),
 					'pearls'   => $quest->getPearls(),
 					'notified' => false,

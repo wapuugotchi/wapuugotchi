@@ -10,6 +10,7 @@ class Quest {
 	private $title = '';
 	private $message = '';
 	private $priority = '';
+	private $type = '';
 	private $pearls = '';
 	private $active_callback = '';
 	private $completed_callback = '';
@@ -19,16 +20,18 @@ class Quest {
 	 * @param string $parent_id
 	 * @param string $title
 	 * @param string $message
+	 * @param string $type
 	 * @param string $priority
 	 * @param string $pearls
 	 * @param string $active_callback
 	 * @param string $completed_callback
 	 */
-	public function __construct( $id, $parent_id, $title, $message, $priority, $pearls, $active_callback, $completed_callback ) {
+	public function __construct( $id, $parent_id, $title, $message, $type, $priority, $pearls, $active_callback, $completed_callback ) {
 		$this->id                 = $id;
 		$this->parent_id          = $parent_id;
 		$this->title              = $title;
 		$this->message            = $message;
+		$this->type               = $type;
 		$this->priority           = $priority;
 		$this->pearls             = $pearls;
 		$this->active_callback    = $active_callback;
@@ -61,6 +64,13 @@ class Quest {
 	 */
 	public function getMessage() {
 		return $this->message;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getType() {
+		return $this->type;
 	}
 
 	/**

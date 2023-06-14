@@ -61,8 +61,8 @@ class Menu {
 	}
 
 	public function quests_page_template() {
-		$active_quests    = Quests::get_active_quests();
-		$completed_quests = Quests::get_completed_quests();
+		$active_quests    = QuestManager::get_active_quests();
+		$completed_quests = QuestManager::get_completed_quests();
 
 		echo '<div class="wrap">';
 		echo '<div class="wapuugotchi_log">';;

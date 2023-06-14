@@ -29,7 +29,7 @@ function init() {
 	new Manager();
 
 	require_once 'inc/feature/QuestManager.php';
-	require_once 'inc/objects/Quest.php';
+	require_once 'inc/models/Quest.php';
 	require_once 'inc/tasks/QuestContent.php';
 	require_once 'inc/tasks/QuestPlugin.php';
 	require_once 'inc/tasks/QuestTheme.php';
@@ -41,14 +41,6 @@ function init() {
 	new QuestTheme();
 	new QuestDate();
 	new QuestStart();
-
-	require_once 'inc/feature/NotificationManager.php';
-	require_once 'inc/objects/Notification.php';
-	require_once 'inc/tasks/NotificationUpdate.php';
-	new NotificationManager();
-	new NotificationUpdate();
-
-
 }
 
 add_action( 'plugins_loaded', 'Wapuugotchi\Wapuugotchi\init' );

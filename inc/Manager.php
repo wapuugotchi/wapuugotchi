@@ -2,8 +2,6 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
-use Composer\Installers\Plugin;
-
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -25,7 +23,6 @@ class Manager {
 //		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 1000);
 //		update_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', array('3392a397-22d1-44d0-b575-f31850012769', '870cbca1-4448-43ae-b815-11e9c2617159'));
 //		update_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', array());
-//		update_user_meta( get_current_user_id(), 'wapuugotchi_confirmed_notifications__alpha', array());
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
@@ -39,7 +36,7 @@ class Manager {
 			);
 		}
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ) ) ) {
-			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 1000 );
+			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 10 );
 		}
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) ) {
 			update_user_meta(
@@ -160,7 +157,7 @@ class Manager {
 						'items'      => \get_transient( 'wapuugotchi_items' ),
 						'balance'    => get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ),
 						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
-						'message'    => $this->get_notifications(),
+						'message'    => $this->get_quest_completed_message(),
 						'intention'  => false,
 						'restBase'   => $this->get_rest_api(),
 					)
@@ -342,31 +339,23 @@ class Manager {
 		return $wapuugotchi_items;
 	}
 
-	private function get_notifications() {
+	private function get_quest_completed_message() {
 		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', true );
-		$notifications = NotificationManager::get_active_quests();
 		$result_array = array();
 
 		if( !is_array($completed_quests) ) {
 			return array();
 		}
 
-		foreach ($completed_quests as $completed_quest) {
+		foreach ($completed_quests as $index => $completed_quest) {
 			if ( !isset( $completed_quest['notified'] ) || $completed_quest['notified'] === true) {
 				continue;
 			}
 
-			$element = array(
-				'id' => $completed_quest['id'],
-				'category' => 'quest',
-				'message' => $completed_quest['message'],
-				'type' => $completed_quest['type']
-			);
-
-			$result_array[ $completed_quest['id'] ] = $element;
+			$result_array[] = $completed_quest;
 		}
 
-		return array_merge( $notifications, $result_array);
+		return $result_array;
 	}
 
 	/**

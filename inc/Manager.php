@@ -28,6 +28,16 @@ class Manager {
 				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/default.json' )
 			);
 		}
+		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ) ) ) {
+			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 200 );
+		}
+		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) ) {
+			update_user_meta(
+				get_current_user_id(),
+				'wapuugotchi_purchases__alpha',
+				array()
+			);
+		}
 
 		$this->set_frontend_data();
 		$this->get_items_for_current_user();
@@ -226,7 +236,6 @@ class Manager {
 	private function set_frontend_data() {
 		$collections = array();
 		$purchases   = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true );
-
 		foreach ( $this->get_collection() as $hash => $object ) {
 			$collections = $object->collections;
 		}
@@ -326,11 +335,11 @@ class Manager {
 		return substr( $api, $position + strlen( $find ) );
 	}
 
-	public function resetAll() {
+	private function resetAll() {
 		delete_transient( 'wapuugotchi_categories' );
 		delete_transient( 'wapuugotchi_items' );
 		delete_transient( 'wapuugotchi_collection' );
-		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 1000);
+		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 200);
 		update_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', array('3392a397-22d1-44d0-b575-f31850012769', '870cbca1-4448-43ae-b815-11e9c2617159'));
 		update_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', array());
 	}

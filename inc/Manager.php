@@ -147,7 +147,7 @@ class Manager {
 						'items'      => \get_transient( 'wapuugotchi_items' ),
 						'balance'    => get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ),
 						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
-						'message'    => $this->get_quest_completed_message(),
+						'message'    => $this->get_notifications(),
 						'intention'  => false,
 						'restBase'   => $this->get_rest_api(),
 					)
@@ -300,22 +300,33 @@ class Manager {
 		return $wapuugotchi_items;
 	}
 
-	private function get_quest_completed_message() {
+	private function get_notifications() {
 		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', true );
 		$result_array = array();
+		$notifications = apply_filters( 'wapuugotchi_notifications', array() );
 
 		if( !is_array($completed_quests) ) {
 			return array();
 		}
 
-		foreach ($completed_quests as $index => $completed_quest) {
+		foreach ( $notifications as $notification ) {
+			if ( $notification instanceof Notification === false ) {
+				continue;
+			}
+
+			$element = array( 'category' => 'note', 'id' => $notification->getId(), 'message' => $notification->getMessage(), 'type' => $notification->getType());
+			$result_array[$notification->getId()] = $element;
+		}
+
+		foreach ($completed_quests as $completed_quest) {
 			if ( !isset( $completed_quest['notified'] ) || $completed_quest['notified'] === true) {
 				continue;
 			}
 
-			$result_array[] = $completed_quest;
-		}
+			$element = array( 'category' => 'quest', 'id' => $completed_quest['id'], 'message' => $completed_quest['message'], 'type' => $completed_quest['type']);
 
+			$result_array[$completed_quest['id']] = $element;
+		}
 		return $result_array;
 	}
 

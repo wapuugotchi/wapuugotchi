@@ -15,6 +15,20 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
+if ( ! defined( 'WAPUUGOTCHI_PATH' ) ) {
+	define( 'WAPUUGOTCHI_PATH', \plugin_dir_path( __FILE__ ) );
+}
+
+if ( ! defined( 'WAPUUGOTCHI_URL' ) ) {
+	define( 'WAPUUGOTCHI_URL', \plugin_dir_url( __FILE__ ) );
+}
+
+if ( ! defined( 'WAPUUGOTCHI_SLUG' ) ) {
+	define( 'WAPUUGOTCHI_SLUG', \plugin_basename( __DIR__ . '/wapuugotchi.php' ) );
+}
+if ( is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
+	require WAPUUGOTCHI_PATH . 'vendor/autoload.php';
+}
 /**
  * Init plugin.
  *
@@ -27,6 +41,15 @@ function init() {
 	new Api();
 	new Menu();
 	new Manager();
+
+	require_once 'inc/apps/Customizer.php';
+	new Customizer();
+	require_once 'inc/apps/Log.php';
+	new Log();
+	require_once 'inc/apps/Hunt.php';
+	new Hunt();
+	require_once 'inc/apps/Avatar.php';
+	new Avatar();
 
 	require_once 'inc/feature/QuestManager.php';
 	require_once 'inc/models/Quest.php';

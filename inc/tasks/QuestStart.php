@@ -12,7 +12,7 @@ class QuestStart {
 
 	public function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Wapuugotchi\Quest( 'first_start_1', null, 'Welcome to Wapuugotchi', 'Thank you for giving me a home! &#10084;&#65039;', 'success', 100, 5, 'Wapuugotchi\Wapuugotchi\QuestStart::always_true', 'Wapuugotchi\Wapuugotchi\QuestStart::always_true' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'first_start_1', null, 'Welcome to Wapuugotchi', 'Thank you for giving me a home! &#10084;&#65039;', 'success', 100, 150, 'Wapuugotchi\Wapuugotchi\QuestStart::always_true', 'Wapuugotchi\Wapuugotchi\QuestStart::always_true' ),
 		);
 
 		return array_merge( $default_quest, $quests );

@@ -24,7 +24,6 @@ export default function Bubble() {
 			} },
 		});
 
-		console.log(success)
 		dispatch(STORE_NAME).setMessage(message);
 		};
 

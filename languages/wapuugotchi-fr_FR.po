@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Test\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/test\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-10-28T10:43:41+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: test\n"
+
+#: build/customizer.js
+msgid "Customize Your Wapuu with WapuuGotchi"
+msgstr "Crée ton wapuu avec WapuuGotchi"
+
+#: build/customizer.js
+msgid "Browse categories on the left to explore various items and style your Wapuu."
+msgstr "Dans les catégories à gauche, tu peux découvrir différents articles et créer ton wapuu."
+
+#: build/customizer.js
+msgid "Your Pearl Balance:"
+msgstr "Tes perles:"
+
+#: build/customizer.js
+msgid "Reset Changes"
+msgstr "Réinitialiser les changements"
+
+#: build/customizer.js
+msgid "Save"
+msgstr "Enregistrer"
+
+#: build/customizer.js
+msgid "Saving..."
+msgstr "Enregistrer..."
+
+#: build/customizer.js
+msgid "Do you want to buy this item?"
+msgstr "Tu veux acheter cet article ?"

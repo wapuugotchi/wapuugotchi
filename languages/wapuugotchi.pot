@@ -1,0 +1,41 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-06-22T09:48:16+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: inc\n"
+
+#: build/customizer.js
+msgid "Customize Your Wapuu with WapuuGotchi"
+msgstr ""
+
+#: build/customizer.js
+msgid "Browse categories on the left to explore various items and style your Wapuu."
+msgstr ""
+
+#: build/customizer.js
+msgid "Your Pearl Balance:"
+msgstr ""
+
+#: build/customizer.js
+msgid "Reset Changes"
+msgstr ""
+
+#: build/customizer.js
+msgid "Save"
+msgstr ""
+
+#: build/customizer.js
+msgid "Saving..."
+msgstr ""
+
+#: build/customizer.js
+msgid "Do you want to buy this item?"
+msgstr ""

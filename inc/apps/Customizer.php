@@ -2,6 +2,8 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
+use Extendify\Config;
+
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -40,6 +42,8 @@ class Customizer {
 			),
 			'after'
 		);
+
+		\wp_set_script_translations( 'wapuugotchi-shop', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
 }

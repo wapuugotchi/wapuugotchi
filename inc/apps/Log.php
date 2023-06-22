@@ -27,6 +27,8 @@ class Log {
 			'window.extWapuugotchiLogData = ' . wp_json_encode( array() ),
 			'before'
 		);
+
+		\wp_set_script_translations( 'wapuugotchi-log', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
 }

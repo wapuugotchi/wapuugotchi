@@ -27,6 +27,8 @@ class Hunt {
 			'window.extWapuugotchiHuntData = ' . wp_json_encode( array() ),
 			'before'
 		);
+
+		\wp_set_script_translations( 'wapuugotchi-hunt', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
 }

@@ -40,6 +40,8 @@ class Avatar {
 			),
 			'after'
 		);
+
+		\wp_set_script_translations( 'wapuugotchi-avatar', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
 	private function get_notifications() {
@@ -56,7 +58,7 @@ class Avatar {
 				continue;
 			}
 
-			$element = array(
+			$element                                = array(
 				'category' => 'note',
 				'id'       => $notification->getId(),
 				'message'  => $notification->getMessage(),

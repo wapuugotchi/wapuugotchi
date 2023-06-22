@@ -66,4 +66,11 @@ function init() {
 	new QuestStart();
 }
 
-add_action( 'plugins_loaded', 'Wapuugotchi\Wapuugotchi\init' );
+add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );
+
+
+function load_textdomain() {
+	\load_plugin_textdomain( 'wapuugotchi', false, \dirname( \plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+
+add_action( 'init', __NAMESPACE__ . '\load_textdomain' );

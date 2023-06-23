@@ -189,7 +189,7 @@ msgstr "Schön, du hast dich 50 Tage hintereinander eingeloggt!"
 #: inc/tasks/QuestPlugin.php:19
 #, fuzzy
 msgid "Activate a SEO plugin"
-msgstr "Aktivieren Sie ein SEO-Plugin"
+msgstr "Aktiviere ein SEO-Plugin"
 
 #: inc/tasks/QuestPlugin.php:19
 #, fuzzy

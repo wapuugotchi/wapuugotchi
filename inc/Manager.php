@@ -123,15 +123,16 @@ class Manager {
 	 * Takes the collection, prepares the categories and item collection for the frontend, and sets them as transients.
 	 */
 	private function set_frontend_data() {
-		$collections = array();
+		$result = array();
 		$purchases   = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true );
-		foreach ( $this->get_collection() as $hash => $object ) {
-			$collections = $object->collections;
+		$collection = $this->get_collection();
+		foreach ( $collection as $object ) {
+			$result = $object->collections;
 		}
 
 		$category_collection = self::COLLECTION_STRUCTURE;
 		$items_collection    = array();
-		foreach ( $collections as $collection ) {
+		foreach ( $result as $collection ) {
 			if ( ! isset( $category_collection[ $collection->slug ] ) ) {
 				continue;
 			}

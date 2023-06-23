@@ -5,10 +5,10 @@ msgstr ""
 "Project-Id-Version: Wapuugotchi 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wapuugotchi\n"
 "POT-Creation-Date: 2023-06-23T19:30:59+00:00\n"
-"PO-Revision-Date: 2023-06-23 21:46+0200\n"
+"PO-Revision-Date: 2023-06-23 21:51+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: fr\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,12 +24,12 @@ msgstr "Wapuugotchi"
 #. Description of the plugin
 #, fuzzy
 msgid "Meet Your Personalized Wapuu Assistant."
-msgstr "Rencontrez votre assistant Wapuu personnalisé."
+msgstr "Poznaj swojego spersonalizowanego asystenta Wapuu."
 
 #. Author of the plugin
 #, fuzzy
 msgid "The WordPress Contributors"
-msgstr "Les contributeurs de WordPress"
+msgstr "Współtwórcy WordPress"
 
 #: inc/Menu.php:24
 #, fuzzy
@@ -38,235 +38,236 @@ msgstr "WapuuGotchi"
 
 #: inc/Menu.php:33
 msgid "Customizer"
-msgstr "Personnalisation"
+msgstr "Dostosowanie"
 
 #: inc/Menu.php:41
-#, fuzzy
 msgid "Quest Log"
-msgstr "Journal de bord"
+msgstr "Zamówienia"
 
 #: inc/Menu.php:87
 msgid "Completed"
-msgstr "Terminé"
+msgstr "Zakończone"
 
 #: inc/tasks/QuestContent.php:15
 #, fuzzy
 msgid "Create 3 posts"
-msgstr "Créer 3 postes"
+msgstr "Utwórz 3 posty"
 
 #: inc/tasks/QuestContent.php:15
 #, fuzzy
 msgid "You created 3 posts!!"
-msgstr "Vous avez créé 3 postes !"
+msgstr "Stworzyłeś 3 posty!!!"
 
 #: inc/tasks/QuestContent.php:16
 #, fuzzy
 msgid "Create 5 posts"
-msgstr "Créer 5 postes"
+msgstr "Utwórz 5 postów"
 
 #: inc/tasks/QuestContent.php:16
 #, fuzzy
 msgid "You created 5 posts!!"
-msgstr "Vous avez créé 5 postes !"
+msgstr "Stworzyłeś 5 postów!!!"
 
 #: inc/tasks/QuestContent.php:17
 #, fuzzy
 msgid "Create 7 posts"
-msgstr "Créer 7 postes"
+msgstr "Utwórz 7 postów"
 
 #: inc/tasks/QuestContent.php:17
 #, fuzzy
 msgid "You created 7 posts!!"
-msgstr "Vous avez créé 7 postes !"
+msgstr "Utworzyłeś 7 postów!!!"
 
 #: inc/tasks/QuestContent.php:18
 #, fuzzy
 msgid "Create 3 pages"
-msgstr "Créer 3 pages"
+msgstr "Utwórz 3 strony"
 
 #: inc/tasks/QuestContent.php:18
 #, fuzzy
 msgid "You created 3 pages!!"
-msgstr "Vous avez créé 3 pages !"
+msgstr "Stworzyłeś 3 strony!!!"
 
 #: inc/tasks/QuestContent.php:19
 #, fuzzy
 msgid "Create 5 pages"
-msgstr "Créer 5 pages"
+msgstr "Utwórz 5 stron"
 
 #: inc/tasks/QuestContent.php:19
 #, fuzzy
 msgid "You created 5 pages!!"
-msgstr "Vous avez créé 5 pages !"
+msgstr "Stworzyłeś 5 stron!"
 
 #: inc/tasks/QuestContent.php:20
 #, fuzzy
 msgid "Create 7 pages"
-msgstr "Créer 7 pages"
+msgstr "Utwórz 7 stron"
 
 #: inc/tasks/QuestContent.php:20
 #, fuzzy
 msgid "You created 7 pages!!"
-msgstr "Vous avez créé 7 pages !"
+msgstr "Stworzyłeś 7 stron!"
 
 #: inc/tasks/QuestContent.php:21
 #, fuzzy
 msgid "Get 1 comment"
-msgstr "Obtenir 1 commentaire"
+msgstr "Uzyskaj 1 komentarz"
 
 #: inc/tasks/QuestContent.php:21
 #, fuzzy
 msgid "Cool, we get some attention. &#10024;"
-msgstr "Cool, on a de l'attention. ✨"
+msgstr "Fajnie, że zwrócono na nas uwagę. ✨"
 
 #: inc/tasks/QuestContent.php:22
 #, fuzzy
 msgid "Get 5 comments"
-msgstr "Obtenir 5 commentaires"
+msgstr "Zdobądź 5 komentarzy"
 
 #: inc/tasks/QuestContent.php:22
 #, fuzzy
 msgid "We get more and more attention. &#10024;"
-msgstr "Nous recevons de plus en plus d'attention. ✨"
+msgstr "Przyciągamy coraz więcej uwagi. ✨"
 
 #: inc/tasks/QuestContent.php:23
 #, fuzzy
 msgid "Get 10 comments"
-msgstr "Obtenir 10 commentaires"
+msgstr "Zdobądź 10 komentarzy"
 
 #: inc/tasks/QuestContent.php:23
 #, fuzzy
 msgid "Oh my god!"
-msgstr "Oh, mon Dieu !"
+msgstr "O mój Boże!"
 
 #: inc/tasks/QuestDate.php:19
 #, fuzzy
 msgid "Log in on 10 different days"
-msgstr "Se connecter 10 jours différents"
+msgstr "Zaloguj się w 10 różnych dniach"
 
 #: inc/tasks/QuestDate.php:19
 #, fuzzy
 msgid "Nice, you logged in for 10 consecutive days!"
-msgstr "Bravo, vous vous êtes connecté pendant 10 jours consécutifs !"
+msgstr "Ładnie, logowałeś się przez 10 kolejnych dni!"
 
 #: inc/tasks/QuestDate.php:20
 #, fuzzy
 msgid "Log in on 20 different days"
-msgstr "Se connecter 20 jours différents"
+msgstr "Zaloguj się w 20 różnych dniach"
 
 #: inc/tasks/QuestDate.php:20
 #, fuzzy
 msgid "Nice, you logged in for 20 consecutive days!"
-msgstr "Bravo, vous vous êtes connecté pendant 20 jours consécutifs !"
+msgstr "Ładnie, logowałeś się przez 20 kolejnych dni!"
 
 #: inc/tasks/QuestDate.php:21
 #, fuzzy
 msgid "Log in on 30 different days"
-msgstr "Se connecter 30 jours différents"
+msgstr "Zaloguj się w 30 różnych dniach"
 
 #: inc/tasks/QuestDate.php:21
 #, fuzzy
 msgid "Nice, you logged in for 30 consecutive days!"
-msgstr "Bravo, vous vous êtes connecté pendant 30 jours consécutifs !"
+msgstr "Fajnie, logowałeś się przez 30 kolejnych dni!"
 
 #: inc/tasks/QuestDate.php:22
 #, fuzzy
 msgid "Log in on 40 different days"
-msgstr "Se connecter 40 jours différents"
+msgstr "Zaloguj się w 40 różnych dniach"
 
 #: inc/tasks/QuestDate.php:22
 #, fuzzy
 msgid "Nice, you logged in for 40 consecutive days!"
-msgstr "Bravo, vous vous êtes connecté pendant 40 jours consécutifs !"
+msgstr "Ładnie, logowałeś się przez 40 kolejnych dni!"
 
 #: inc/tasks/QuestDate.php:23
 #, fuzzy
 msgid "Log in on 50 different days"
-msgstr "Se connecter 50 jours différents"
+msgstr "Zaloguj się w 50 różnych dniach"
 
 #: inc/tasks/QuestDate.php:23
 #, fuzzy
 msgid "Nice, you logged in for 50 consecutive days!"
-msgstr "Bravo, vous vous êtes connecté pendant 50 jours consécutifs !"
+msgstr "Ładnie, logowałeś się przez 50 kolejnych dni!"
 
 #: inc/tasks/QuestPlugin.php:19
 #, fuzzy
 msgid "Activate a SEO plugin"
-msgstr "Activer un plugin SEO"
+msgstr "Aktywuj wtyczkę SEO"
 
 #: inc/tasks/QuestPlugin.php:19
 #, fuzzy
 msgid "Awesome! &#128261;"
-msgstr "Génial ! 🔅"
+msgstr "Super! 🔅"
 
 #: inc/tasks/QuestPlugin.php:20
 #, fuzzy
 msgid "Activate a caching plugin"
-msgstr "Activer un plugin de mise en cache"
+msgstr "Aktywacja wtyczki buforującej"
 
 #: inc/tasks/QuestPlugin.php:20
 #, fuzzy
 msgid "Fantastic! &#128171;"
-msgstr "Fantastique ! 💫"
+msgstr "Fantastycznie! 💫"
 
 #: inc/tasks/QuestPlugin.php:21
 #, fuzzy
 msgid "Activate a security plugin"
-msgstr "Activer un plugin de sécurité"
+msgstr "Aktywacja wtyczki bezpieczeństwa"
 
 #: inc/tasks/QuestPlugin.php:21
+#, fuzzy
 msgid "Great!"
-msgstr "Super!"
+msgstr "Świetnie!"
 
 #: inc/tasks/QuestStart.php:15
 #, fuzzy
 msgid "Welcome to Wapuugotchi"
-msgstr "Bienvenue à Wapuugotchi"
+msgstr "Witamy w Wapuugotchi"
 
 #: inc/tasks/QuestStart.php:15
 #, fuzzy
 msgid "Thank you for giving me a home! &#10084;&#65039;"
-msgstr "Merci de m'avoir donné un foyer ! ❤️"
+msgstr "Dziękuję za danie mi domu! ❤️"
 
 #: inc/tasks/QuestTheme.php:17
 #, fuzzy
 msgid "Remove all unused themes"
-msgstr "Supprimer tous les thèmes inutilisés"
+msgstr "Usuń wszystkie nieużywane motywy"
 
 #: inc/tasks/QuestTheme.php:17
 #, fuzzy
 msgid "You cleaned up! &#129529;"
-msgstr "Vous avez fait le ménage ! 🧹"
+msgstr "Posprzątane! 🧹"
 
 #: build/customizer.js:1 src/components/payment-dialog.js:39
 #, fuzzy
 msgid "Do you want to buy this item?"
-msgstr "Voulez-vous acheter ce produit ?"
+msgstr "Czy chcesz kupić ten przedmiot?"
 
 #: build/customizer.js:1 build/scavenger-hunt.js:1
 #: src/components/menu-header.js:25
 #, fuzzy
 msgid "Your Pearl Balance:"
-msgstr "L'équilibre de votre perle :"
+msgstr "Your Pearl Balance:"
 
 #: build/customizer.js:1 src/components/shop.js:27
 msgid "Save"
-msgstr "Sauvegarder"
+msgstr "Zapisz"
 
 #: build/customizer.js:1 src/components/shop.js:52
 #, fuzzy
 msgid "Customize Your Wapuu with WapuuGotchi"
-msgstr "Personnalisez votre Wapuu avec WapuuGotchi"
+msgstr "Spersonalizuj swoje Wapuu za pomocą WapuuGotchi"
 
 #: build/customizer.js:1 src/components/shop.js:53
 #, fuzzy
 msgid "Browse categories on the left to explore various items and style your Wapuu."
-msgstr "Parcourez les catégories sur la gauche pour découvrir les différents articles et styliser votre Wapuu."
+msgstr "Przeglądaj kategorie po lewej stronie, aby odkrywać różne przedmioty i stylizować swoje Wapuu."
 
 #: build/customizer.js:1 src/components/shop.js:37
 msgid "Saving..."
-msgstr "Enregistrement en cours..."
+msgstr "Zapisuję..."
 
 #: build/customizer.js:1 src/components/shop.js:78
+#, fuzzy
 msgid "Reset Changes"
-msgstr "Réinitialiser les Modifications"
+msgstr "Resetowanie zmian"

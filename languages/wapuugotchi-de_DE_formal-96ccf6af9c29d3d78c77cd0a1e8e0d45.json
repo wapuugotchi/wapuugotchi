@@ -1,0 +1,18 @@
+{
+    "translation-revision-date": "2023-06-23 21:44+0200",
+    "generator": "WP-CLI\/2.6.0",
+    "source": "src\/components\/payment-dialog.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "de_DE@formal",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Do you want to buy this item?": [
+                "M\u00f6chten Sie diesen Artikel kaufen?"
+            ]
+        }
+    }
+}

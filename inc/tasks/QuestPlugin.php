@@ -16,9 +16,9 @@ class QuestPlugin {
 
 	public function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_seo_plugin_1', null, 'Activate a SEO plugin', 'Awesome! &#128261;' . PHP_EOL . 'You\'ve installed a SEO plugin. Let\'s add some keywords so that search engines can find us better.', 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestPlugin::always_true', 'Wapuugotchi\Wapuugotchi\QuestPlugin::seo_installed_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_caching_plugin_1', null, 'Activate a caching plugin', 'Fantastic! &#128171;' . PHP_EOL . 'You\'ve installed a caching plugin. This way we can increase the speed of our website.', 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestPlugin::always_true', 'Wapuugotchi\Wapuugotchi\QuestPlugin::caching_installed_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'use_security_plugin_1', null, 'Activate a security plugin', 'Great!' . PHP_EOL . 'You\'ve installed a security plugin! This will help protecting me from villains. &#128170;', 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestPlugin::always_true', 'Wapuugotchi\Wapuugotchi\QuestPlugin::security_installed_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_seo_plugin_1', null, __( 'Activate a SEO plugin', 'wapuugotchi' ), __( 'Awesome! &#128261;' . PHP_EOL . 'You\'ve installed a SEO plugin. Let\'s add some keywords so that search engines can find us better.', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestPlugin::always_true', 'Wapuugotchi\Wapuugotchi\QuestPlugin::seo_installed_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_caching_plugin_1', null, __( 'Activate a caching plugin', 'wapuugotchi' ), __( 'Fantastic! &#128171;' . PHP_EOL . 'You\'ve installed a caching plugin. This way we can increase the speed of our website.', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestPlugin::always_true', 'Wapuugotchi\Wapuugotchi\QuestPlugin::caching_installed_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'use_security_plugin_1', null, __( 'Activate a security plugin', 'wapuugotchi' ), __( 'Great!' . PHP_EOL . 'You\'ve installed a security plugin! This will help protecting me from villains. &#128170;', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestPlugin::always_true', 'Wapuugotchi\Wapuugotchi\QuestPlugin::security_installed_completed_1' ),
 		);
 
 		return array_merge( $default_quest, $quests );

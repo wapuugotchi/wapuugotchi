@@ -4,7 +4,6 @@ import "./log-active-quests.scss";
 export default function LogActiveQuests() {
 	return (
 		<>
-			<h1>Active Quests</h1>
 			<div className="wapuugotchi_log__items">
 			{
 				Object.values(window.extWapuugotchiLogData?.active_quests).map((value, index) => (

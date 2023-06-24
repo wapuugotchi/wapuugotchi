@@ -4,7 +4,6 @@ import {__} from "@wordpress/i18n";
 export default function LogCompletedQuests() {
 	return (
 		<>
-			<h1>Completed Quests</h1>
 			<div className="wapuugotchi_log__items">
 				{
 					Object.values(window.extWapuugotchiLogData?.completed_quests).map((value, index) => (

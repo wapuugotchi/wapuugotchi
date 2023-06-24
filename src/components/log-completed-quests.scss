@@ -18,10 +18,15 @@
 		background-color: white;
 		border: solid 2px #888;
 
-		h2, p {
+		h2 {
 			padding-top: 7px;
 			max-width: 235px;
 			color: #888;
+			margin-bottom: 1px;
+		}
+		p {
+			color: #888;
+			margin-top: 1px;
 		}
 
 		span {

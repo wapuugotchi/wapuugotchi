@@ -45,41 +45,30 @@ class Avatar {
 	}
 
 	private function get_notifications() {
+		$all_quests       = QuestManager::get_all_quests();
 		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', true );
 		$result_array     = array();
-		$notifications    = apply_filters( 'wapuugotchi_notifications', array() );
 
 		if ( ! is_array( $completed_quests ) ) {
 			return array();
 		}
 
-		foreach ( $notifications as $notification ) {
-			if ( $notification instanceof Notification === false ) {
-				continue;
-			}
-
-			$element                                = array(
-				'category' => 'note',
-				'id'       => $notification->getId(),
-				'message'  => $notification->getMessage(),
-				'type'     => $notification->getType()
-			);
-			$result_array[ $notification->getId() ] = $element;
-		}
-
-		foreach ( $completed_quests as $completed_quest ) {
+		foreach ( $completed_quests as $completed_quest_key => $completed_quest ) {
 			if ( ! isset( $completed_quest['notified'] ) || $completed_quest['notified'] === true ) {
 				continue;
 			}
+			foreach ( $all_quests as $quest ) {
+				if ( $completed_quest_key === $quest->getId() ) {
+					$result_array[ $quest->getId() ] = array(
+						'category' => 'quest',
+						'id'       => $quest->getId(),
+						'message'  => $quest->getMessage(),
+						'type'     => $quest->getType()
+					);
 
-			$element = array(
-				'category' => 'quest',
-				'id'       => $completed_quest['id'],
-				'message'  => $completed_quest['message'],
-				'type'     => $completed_quest['type']
-			);
-
-			$result_array[ $completed_quest['id'] ] = $element;
+					break;
+				}
+			}
 		}
 
 		return $result_array;

@@ -126,6 +126,10 @@ class Manager {
 		$result = array();
 		$purchases   = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true );
 		$collection = $this->get_collection();
+		if( !is_array($collection)) {
+			return;
+		}
+
 		foreach ( $collection as $object ) {
 			$result = $object->collections;
 		}
@@ -178,7 +182,7 @@ class Manager {
 		delete_transient( 'wapuugotchi_categories' );
 		delete_transient( 'wapuugotchi_items' );
 		delete_transient( 'wapuugotchi_collection' );
-		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 200 );
+		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 0 );
 		update_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', array(
 			'3392a397-22d1-44d0-b575-f31850012769',
 			'870cbca1-4448-43ae-b815-11e9c2617159'

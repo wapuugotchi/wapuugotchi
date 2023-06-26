@@ -43,7 +43,7 @@ export default function Shop(props) {
 			data: { wapuu },
 		});
 
-		setLoader("Save Settings");
+		setLoader(__("Save Settings",'wapuugotchi'));
 	};
 
 	return (

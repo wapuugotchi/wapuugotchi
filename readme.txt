@@ -1,11 +1,11 @@
 === Wapuugotchi ===
-Contributors:		wapuugotchi community
-Tags: 				assistant, wapuu, gamification
-Stable tag: 		0.1.0
-Requires at least: 	6.1.0
-Tested up to: 		6.2
-Requires PHP: 		7.0
-License: 			GPLv2 or later
+Contributors:      herrfeldmann
+Tags:              assistant, wapuu, gamification
+Stable tag:        0.1.0
+Requires at least: 6.1
+Tested up to:      6.2
+Requires PHP:      7.0
+License:           GPLv2 or later
 
 Gamify Your WordPress Experience with Customizable Wapuu Notifications & Rewards
 

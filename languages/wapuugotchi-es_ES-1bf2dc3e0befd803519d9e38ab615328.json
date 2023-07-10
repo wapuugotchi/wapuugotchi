@@ -1,0 +1,30 @@
+{
+    "translation-revision-date": "2023-06-23 21:47+0200",
+    "generator": "WP-CLI\/2.6.0",
+    "source": "src\/components\/shop.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "es",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Save": [
+                "Guardar"
+            ],
+            "Customize Your Wapuu with WapuuGotchi": [
+                "Personaliza tu Wapuu con WapuuGotchi"
+            ],
+            "Browse categories on the left to explore various items and style your Wapuu.": [
+                "Navega por las categor\u00edas de la izquierda para explorar varios art\u00edculos y dar estilo a tu Wapuu."
+            ],
+            "Saving...": [
+                "Guardando\u2026"
+            ],
+            "Reset Changes": [
+                "Restablecer cambios"
+            ]
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "translation-revision-date": "2023-06-23 21:57+0200",
+    "generator": "WP-CLI\/2.6.0",
+    "source": "src\/components\/payment-dialog.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "zh",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Do you want to buy this item?": [
+                "\u4f60\u60f3\u8d2d\u4e70\u8fd9\u4e2a\u7269\u54c1\u5417\uff1f"
+            ]
+        }
+    }
+}

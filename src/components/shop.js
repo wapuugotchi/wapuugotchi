@@ -1,6 +1,7 @@
 import { useState } from "@wordpress/element";
 import { useSelect, dispatch } from "@wordpress/data";
 import apiFetch from "@wordpress/api-fetch";
+import { __ } from '@wordpress/i18n';
 import { STORE_NAME } from "../store";
 import Card from "./card";
 import ShowRoom from "./show-room";
@@ -23,7 +24,7 @@ export default function Shop(props) {
 	});
 
 	const [name, setName] = useState(wapuu.name);
-	const [loader, setLoader] = useState("Save");
+	const [loader, setLoader] = useState(__('Save', 'wapuugotchi'));
 
 	const resetHandler = async () => {
 		const wapuu_data = await apiFetch({ path: `${restBase}/wapuu` });
@@ -33,7 +34,7 @@ export default function Shop(props) {
 
 	const submitHandler = async (event) => {
 		event.preventDefault();
-		setLoader("Saving...");
+		setLoader(__('Saving...', 'wapuugotchi'));
 		wapuu.name = name;
 
 		const success = await apiFetch({
@@ -42,14 +43,14 @@ export default function Shop(props) {
 			data: { wapuu },
 		});
 
-		setLoader("Save Settings");
+		setLoader(__("Save Settings",'wapuugotchi'));
 	};
 
 	return (
 		<div className="wapuu_shop">
 			<MenuHeader
-				title="Customize Your Wapuu with WapuuGotchi"
-				description="Browse categories on the left to explore various items and style your Wapuu."
+				title={__('Customize Your Wapuu with WapuuGotchi', 'wapuugotchi')}
+				description={__('Browse categories on the left to explore various items and style your Wapuu.', 'wapuugotchi')}
 			/>
 			<form onSubmit={submitHandler}>
 				<Card key="settings-card" />
@@ -74,7 +75,7 @@ export default function Shop(props) {
 							className="button button-secondary wapuu_shop__reset"
 							type="button"
 						>
-							Reset Changes
+							{__('Reset Changes', 'wapuugotchi')}
 						</button>
 						<button
 							className="button button-primary wapuu_shop__submit"

@@ -29,3 +29,8 @@ Under this URL, a valid json-file is expected, that follows the schema for wapuu
 
 Please find an example for a valid JSON at https://api.wapuugotchi.com/collection
 
+### Generate translation files
+```
+$wp i18n make-mo languages/ languages/
+$wp i18n make-json languages --no-purge --pretty-print
+```

@@ -103,11 +103,7 @@ class QuestManager {
 			foreach ( $quests as $index => $quest ) {
 				$new_completed_quests[ $quest->getId() ] = array(
 					'id'       => $quest->getId(),
-					'title'    => $quest->getTitle(),
-					'message'  => $quest->getMessage(),
-					'type'     => $quest->getType(),
 					'date'     => date( 'j F, Y \@ g:ia' ),
-					'pearls'   => $quest->getPearls(),
 					'notified' => false,
 				);
 

@@ -1,0 +1,272 @@
+# Copyright (C) 2023 The WordPress Contributors
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wapuugotchi 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wapuugotchi\n"
+"POT-Creation-Date: 2023-06-23T19:30:59+00:00\n"
+"PO-Revision-Date: 2023-06-23 21:49+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.1\n"
+"X-Domain: wapuugotchi\n"
+
+#. Plugin Name of the plugin
+#: inc/Menu.php:23 inc/Menu.php:32 inc/Menu.php:40
+#, fuzzy
+msgid "Wapuugotchi"
+msgstr "ワプウゴッチ"
+
+#. Description of the plugin
+#, fuzzy
+msgid "Meet Your Personalized Wapuu Assistant."
+msgstr "あなただけのワプウ・アシスタントをご紹介します。"
+
+#. Author of the plugin
+#, fuzzy
+msgid "The WordPress Contributors"
+msgstr "ワードプレスの貢献者たち"
+
+#: inc/Menu.php:24
+#, fuzzy
+msgid "WapuuGotchi"
+msgstr "ワプウゴッチ"
+
+#: inc/Menu.php:33
+msgid "Customizer"
+msgstr "カスタマイザー"
+
+#: inc/Menu.php:41
+#, fuzzy
+msgid "Quest Log"
+msgstr "クエストログ"
+
+#: inc/Menu.php:87
+msgid "Completed"
+msgstr "完了"
+
+#: inc/tasks/QuestContent.php:15
+#, fuzzy
+msgid "Create 3 posts"
+msgstr "3つのポストを作成する"
+
+#: inc/tasks/QuestContent.php:15
+#, fuzzy
+msgid "You created 3 posts!!"
+msgstr "あなたは3つのポストを作成しました"
+
+#: inc/tasks/QuestContent.php:16
+#, fuzzy
+msgid "Create 5 posts"
+msgstr "5つの記事を作成する"
+
+#: inc/tasks/QuestContent.php:16
+#, fuzzy
+msgid "You created 5 posts!!"
+msgstr "あなたは5つのポストを作成しました"
+
+#: inc/tasks/QuestContent.php:17
+#, fuzzy
+msgid "Create 7 posts"
+msgstr "7つの記事を作成"
+
+#: inc/tasks/QuestContent.php:17
+#, fuzzy
+msgid "You created 7 posts!!"
+msgstr "あなたは7つのポストを作成しました"
+
+#: inc/tasks/QuestContent.php:18
+#, fuzzy
+msgid "Create 3 pages"
+msgstr "3ページ作成"
+
+#: inc/tasks/QuestContent.php:18
+#, fuzzy
+msgid "You created 3 pages!!"
+msgstr "あなたは3つのページを作った"
+
+#: inc/tasks/QuestContent.php:19
+#, fuzzy
+msgid "Create 5 pages"
+msgstr "5ページ作成"
+
+#: inc/tasks/QuestContent.php:19
+#, fuzzy
+msgid "You created 5 pages!!"
+msgstr "5ページも作ったのか！？"
+
+#: inc/tasks/QuestContent.php:20
+#, fuzzy
+msgid "Create 7 pages"
+msgstr "7ページ作成"
+
+#: inc/tasks/QuestContent.php:20
+#, fuzzy
+msgid "You created 7 pages!!"
+msgstr "7ページも作ったのか！？"
+
+#: inc/tasks/QuestContent.php:21
+#, fuzzy
+msgid "Get 1 comment"
+msgstr "1件のコメントを得る"
+
+#: inc/tasks/QuestContent.php:21
+#, fuzzy
+msgid "Cool, we get some attention. &#10024;"
+msgstr "クール、注目される✨"
+
+#: inc/tasks/QuestContent.php:22
+#, fuzzy
+msgid "Get 5 comments"
+msgstr "5件のコメントを得る"
+
+#: inc/tasks/QuestContent.php:22
+#, fuzzy
+msgid "We get more and more attention. &#10024;"
+msgstr "ますます注目される。✨"
+
+#: inc/tasks/QuestContent.php:23
+#, fuzzy
+msgid "Get 10 comments"
+msgstr "10件のコメントを得る"
+
+#: inc/tasks/QuestContent.php:23
+#, fuzzy
+msgid "Oh my god!"
+msgstr "なんてことだ！"
+
+#: inc/tasks/QuestDate.php:19
+#, fuzzy
+msgid "Log in on 10 different days"
+msgstr "10日間ログイン"
+
+#: inc/tasks/QuestDate.php:19
+#, fuzzy
+msgid "Nice, you logged in for 10 consecutive days!"
+msgstr "ナイス、10日間連続ログイン！"
+
+#: inc/tasks/QuestDate.php:20
+#, fuzzy
+msgid "Log in on 20 different days"
+msgstr "20日間ログイン"
+
+#: inc/tasks/QuestDate.php:20
+#, fuzzy
+msgid "Nice, you logged in for 20 consecutive days!"
+msgstr "ナイス、20日間連続ログイン！"
+
+#: inc/tasks/QuestDate.php:21
+#, fuzzy
+msgid "Log in on 30 different days"
+msgstr "30日間ログイン"
+
+#: inc/tasks/QuestDate.php:21
+#, fuzzy
+msgid "Nice, you logged in for 30 consecutive days!"
+msgstr "ナイス、30日間連続ログイン！"
+
+#: inc/tasks/QuestDate.php:22
+#, fuzzy
+msgid "Log in on 40 different days"
+msgstr "40日間ログイン"
+
+#: inc/tasks/QuestDate.php:22
+#, fuzzy
+msgid "Nice, you logged in for 40 consecutive days!"
+msgstr "ナイス、40日間連続ログイン！"
+
+#: inc/tasks/QuestDate.php:23
+#, fuzzy
+msgid "Log in on 50 different days"
+msgstr "50日間ログイン"
+
+#: inc/tasks/QuestDate.php:23
+#, fuzzy
+msgid "Nice, you logged in for 50 consecutive days!"
+msgstr "ナイス、50日間連続ログイン！"
+
+#: inc/tasks/QuestPlugin.php:19
+#, fuzzy
+msgid "Activate a SEO plugin"
+msgstr "SEOプラグインを有効にする"
+
+#: inc/tasks/QuestPlugin.php:19
+#, fuzzy
+msgid "Awesome! &#128261;"
+msgstr "素晴らしい！🔅"
+
+#: inc/tasks/QuestPlugin.php:20
+#, fuzzy
+msgid "Activate a caching plugin"
+msgstr "キャッシュプラグインを有効にする"
+
+#: inc/tasks/QuestPlugin.php:20
+#, fuzzy
+msgid "Fantastic! &#128171;"
+msgstr "ファンタスティック💫"
+
+#: inc/tasks/QuestPlugin.php:21
+#, fuzzy
+msgid "Activate a security plugin"
+msgstr "セキュリティ・プラグインを有効にする"
+
+#: inc/tasks/QuestPlugin.php:21
+msgid "Great!"
+msgstr "すばらしい！"
+
+#: inc/tasks/QuestStart.php:15
+#, fuzzy
+msgid "Welcome to Wapuugotchi"
+msgstr "ワプゴッチへようこそ"
+
+#: inc/tasks/QuestStart.php:15
+#, fuzzy
+msgid "Thank you for giving me a home! &#10084;&#65039;"
+msgstr "家を与えてくれてありがとう❤️"
+
+#: inc/tasks/QuestTheme.php:17
+#, fuzzy
+msgid "Remove all unused themes"
+msgstr "未使用のテーマをすべて削除する"
+
+#: inc/tasks/QuestTheme.php:17
+#, fuzzy
+msgid "You cleaned up! &#129529;"
+msgstr "掃除したね！🧹"
+
+#: build/customizer.js:1 src/components/payment-dialog.js:39
+#, fuzzy
+msgid "Do you want to buy this item?"
+msgstr "この商品を購入しますか？"
+
+#: build/customizer.js:1 build/scavenger-hunt.js:1
+#: src/components/menu-header.js:25
+#, fuzzy
+msgid "Your Pearl Balance:"
+msgstr "あなたのパールバランス"
+
+#: build/customizer.js:1 src/components/shop.js:27
+msgid "Save"
+msgstr "保存"
+
+#: build/customizer.js:1 src/components/shop.js:52
+#, fuzzy
+msgid "Customize Your Wapuu with WapuuGotchi"
+msgstr "WapuuGotchiでWapuuをカスタマイズしよう"
+
+#: build/customizer.js:1 src/components/shop.js:53
+#, fuzzy
+msgid "Browse categories on the left to explore various items and style your Wapuu."
+msgstr "左のカテゴリーから様々なアイテムを探して、あなたのWapuuをスタイリングしてください。"
+
+#: build/customizer.js:1 src/components/shop.js:37
+msgid "Saving..."
+msgstr "保存中…"
+
+#: build/customizer.js:1 src/components/shop.js:78
+msgid "Reset Changes"
+msgstr "変更をリセット"

@@ -1,5 +1,6 @@
 import { useSelect, dispatch } from "@wordpress/data";
 import { STORE_NAME } from "../store";
+import { __ } from '@wordpress/i18n';
 import "./menu-header.scss";
 import priceTag from "./category-item-pricetag.svg";
 
@@ -21,7 +22,7 @@ export default function MenuHeader(props) {
 				{ props.description }
 			</p>
 			<span className="wapuu_shop__pearls">
-				Your Pearl Balance:
+				{__('Your Pearl Balance:', 'wapuugotchi')}
 				<img alt="" src={priceTag} />
 				{ balance }
 			</span>

@@ -1,5 +1,6 @@
 import { STORE_NAME } from "../store";
 import { useSelect, dispatch } from "@wordpress/data";
+import { __ } from '@wordpress/i18n';
 import { __experimentalConfirmDialog as ConfirmDialog } from '@wordpress/components';
 
 import "./payment-dialog.scss"
@@ -35,7 +36,7 @@ export default function PaymentDialog(props) {
 									<p className="wapuu_payment__item_tooltip_author">Discoverer: {intention[index].meta.author}</p>
 								</div>
 							</div>
-							<p className="wapuu_payment__confirm_text">Do you want to buy this item?</p>
+							<p className="wapuu_payment__confirm_text">{__('Do you want to buy this item?', 'wapuugotchi')}</p>
 						</ConfirmDialog>
 					</div>
 			))}

@@ -17,7 +17,7 @@ class Manager {
 	);
 
 	public function __construct() {
-		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
+		add_action( 'admin_init', array( $this, 'init' ) );
 	}
 
 	public function init( $hook_suffix ) {
@@ -29,7 +29,7 @@ class Manager {
 			);
 		}
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ) ) ) {
-			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 200 );
+			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 0 );
 		}
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) ) {
 			update_user_meta(
@@ -40,121 +40,10 @@ class Manager {
 		}
 
 		$this->set_frontend_data();
-		$this->get_items_for_current_user();
 
 		add_action( 'wapuugotchi_add_source', array( $this, 'add_source' ), 10, 1 );
 
-		if ( $hook_suffix === 'toplevel_page_wapuugotchi' ) {
-			$this->load_shop_scripts();
-		} else if ( $hook_suffix === 'wapuugotchi_page_wapuugotchi-hunt' ) {
-			$this->load_hunt_scripts();
-		} else if ( $hook_suffix === 'wapuugotchi_page_wapuugotchi-quests' ) {
-			//$this->load_quest_scripts();
-		} else if ( $hook_suffix === 'post-new.php' ) {
-			//$this->load_quest_scripts();
-		} else {
-			$this->load_avatar_scripts();
-		}
-	}
 
-	public function load_shop_scripts() {
-		$assets = require_once __DIR__ . '/../build/customizer.asset.php';
-		wp_enqueue_style( 'wapuugotchi-shop', plugins_url( 'build/customizer.css', __DIR__ ), array(), $assets['version'] );
-		wp_enqueue_script( 'wapuugotchi-shop', plugins_url( 'build/customizer.js', __DIR__ ), $assets['dependencies'], $assets['version'], true );
-
-		wp_add_inline_script(
-			'wapuugotchi-shop',
-			sprintf(
-				"wp.data.dispatch('wapuugotchi/wapuugotchi').__initialize(%s)",
-				json_encode(
-					array(
-						'categories' => \get_transient( 'wapuugotchi_categories' ),
-						'items'      => \get_transient( 'wapuugotchi_items' ),
-						'balance'    => get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ),
-						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
-						'message'    => false,
-						'intention'  => false,
-						'restBase'   => $this->get_rest_api(),
-					)
-				)
-			),
-			'after'
-		);
-	}
-
-	public function load_hunt_scripts() {
-		$assets = require_once __DIR__ . '/../build/scavenger-hunt.asset.php';
-		wp_enqueue_style( 'wapuugotchi-hunt', plugins_url( 'build/scavenger-hunt.css', __DIR__ ), array(), $assets['version'] );
-		wp_enqueue_script( 'wapuugotchi-hunt', plugins_url( 'build/scavenger-hunt.js', __DIR__ ), $assets['dependencies'], $assets['version'], true );
-
-		wp_add_inline_script(
-			'wapuugotchi-hunt',
-			sprintf(
-				"wp.data.dispatch('wapuugotchi/wapuugotchi').__initialize(%s)",
-				json_encode(
-					array(
-						'categories' => \get_transient( 'wapuugotchi_categories' ),
-						'items'      => \get_transient( 'wapuugotchi_items' ),
-						'balance'    => get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ),
-						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
-						'message'    => false,
-						'intention'  => false,
-						'restBase'   => $this->get_rest_api(),
-					)
-				)
-			),
-			'after'
-		);
-	}
-
-	public function load_quest_scripts() {
-		$assets = require_once __DIR__ . '/../build/quest-log.asset.php';
-		wp_enqueue_style( 'wapuugotchi-quest', plugins_url( 'build/quest-log.css', __DIR__ ), array(), $assets['version'] );
-		wp_enqueue_script( 'wapuugotchi-quest', plugins_url( 'build/quest-log.js', __DIR__ ), $assets['dependencies'], $assets['version'], true );
-
-		wp_add_inline_script(
-			'wapuugotchi-quest',
-			sprintf(
-				"wp.data.dispatch('wapuugotchi/wapuugotchi').__initialize(%s)",
-				json_encode(
-					array(
-						'categories' => \get_transient( 'wapuugotchi_categories' ),
-						'items'      => \get_transient( 'wapuugotchi_items' ),
-						'balance'    => get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ),
-						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
-						'message'    => false,
-						'intention'  => false,
-						'restBase'   => $this->get_rest_api(),
-					)
-				)
-			),
-			'after'
-		);
-	}
-
-	public function load_avatar_scripts() {
-		$assets = require_once __DIR__ . '/../build/index.asset.php';
-		wp_enqueue_style( 'wapuugotchi-page', plugins_url( 'build/index.css', __DIR__ ), array(), $assets['version'] );
-		wp_enqueue_script( 'wapuugotchi-page', plugins_url( 'build/index.js', __DIR__ ), $assets['dependencies'], $assets['version'], true );
-
-		wp_add_inline_script(
-			'wapuugotchi-page',
-			sprintf(
-				"wp.data.dispatch('wapuugotchi/wapuugotchi').__initialize(%s)",
-				json_encode(
-					array(
-						'categories' => \get_transient( 'wapuugotchi_categories' ),
-						'items'      => \get_transient( 'wapuugotchi_items' ),
-						'balance'    => get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ),
-						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
-						'message'    => $this->get_quest_completed_message(),
-						'intention'  => false,
-						'restBase'   => $this->get_rest_api(),
-					)
-				)
-			),
-			'after'
-		);
 	}
 
 	/**
@@ -234,15 +123,20 @@ class Manager {
 	 * Takes the collection, prepares the categories and item collection for the frontend, and sets them as transients.
 	 */
 	private function set_frontend_data() {
-		$collections = array();
+		$result = array();
 		$purchases   = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true );
-		foreach ( $this->get_collection() as $hash => $object ) {
-			$collections = $object->collections;
+		$collection = $this->get_collection();
+		if( !is_array($collection)) {
+			return;
+		}
+
+		foreach ( $collection as $object ) {
+			$result = $object->collections;
 		}
 
 		$category_collection = self::COLLECTION_STRUCTURE;
 		$items_collection    = array();
-		foreach ( $collections as $collection ) {
+		foreach ( $result as $collection ) {
 			if ( ! isset( $category_collection[ $collection->slug ] ) ) {
 				continue;
 			}
@@ -257,66 +151,15 @@ class Manager {
 					continue;
 				}
 				if ( in_array( $item->meta->key, $purchases ) ) {
-					$item->meta->price = 0;
+					$item->meta->price    = 0;
+					$item->meta->priority = - 1 * ( array_search( $item->meta->key, $purchases ) + 10000 );
 				}
 				$items_collection[ $collection->slug ][ $item->meta->key ] = $item;
 			}
 		}
 
-		set_transient( 'wapuugotchi_categories', $category_collection, 60 * 60 * 24 );
-		set_transient( 'wapuugotchi_items', $items_collection, 60 * 60 * 24 );
-	}
-
-	/**
-	 * Gets all items avaiable and the ones for the current user. Sets the price to zero if the user did unlock them already.
-	 *
-	 * @return array
-	 */
-	private function get_items_for_current_user() {
-		//delete_user_meta(get_current_user_id(), 'wapuugotchi__alpha');
-		update_user_meta(
-			get_current_user_id(),
-			'wapuugotchi_unlocked_items__alpha',
-			array(
-				'ee777691-d3fa-4506-ae20-d6f7a7266d75',
-				'ad19fc13-0728-4ad0-98b4-a362ccae5736',
-			)
-		);
-		$wapuugotchi_items   = get_transient( 'wapuugotchi_items' );
-		$unlocked_user_items = get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true );
-
-		if ( empty( $unlocked_user_items ) ) {
-			return $wapuugotchi_items;
-		}
-
-		foreach ( $unlocked_user_items as $key ) {
-			foreach ( $wapuugotchi_items as $category => $items ) {
-				if ( isset( $items[ $key ] ) ) {
-					$items[ $key ]->meta->price = 0;
-				}
-			}
-		}
-
-		return $wapuugotchi_items;
-	}
-
-	private function get_quest_completed_message() {
-		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', true );
-		$result_array = array();
-
-		if( !is_array($completed_quests) ) {
-			return array();
-		}
-
-		foreach ($completed_quests as $index => $completed_quest) {
-			if ( !isset( $completed_quest['notified'] ) || $completed_quest['notified'] === true) {
-				continue;
-			}
-
-			$result_array[] = $completed_quest;
-		}
-
-		return $result_array;
+		set_transient( 'wapuugotchi_categories', $category_collection, DAY_IN_SECONDS );
+		set_transient( 'wapuugotchi_items', $items_collection, DAY_IN_SECONDS );
 	}
 
 	/**
@@ -324,7 +167,7 @@ class Manager {
 	 *
 	 * @return string
 	 */
-	private static function get_rest_api() {
+	public static function get_rest_api() {
 		$api      = get_rest_url( null, Api::REST_BASE );
 		$find     = 'wp-json';
 		$position = strpos( $api, $find );
@@ -339,8 +182,11 @@ class Manager {
 		delete_transient( 'wapuugotchi_categories' );
 		delete_transient( 'wapuugotchi_items' );
 		delete_transient( 'wapuugotchi_collection' );
-		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 200);
-		update_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', array('3392a397-22d1-44d0-b575-f31850012769', '870cbca1-4448-43ae-b815-11e9c2617159'));
-		update_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', array());
+		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 0 );
+		update_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', array(
+			'3392a397-22d1-44d0-b575-f31850012769',
+			'870cbca1-4448-43ae-b815-11e9c2617159'
+		) );
+		update_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', array() );
 	}
 }

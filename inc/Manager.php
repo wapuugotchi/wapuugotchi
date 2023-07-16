@@ -7,15 +7,6 @@ if ( ! defined( 'ABSPATH' ) ) :
 endif; // No direct access allowed.
 
 class Manager {
-	const COLLECTION_STRUCTURE = array(
-		'fur'   => '',
-		'balls' => '',
-		'caps'  => '',
-		'items' => '',
-		'coats' => '',
-		'shoes' => '',
-	);
-
 	public function __construct() {
 		add_action( 'admin_init', array( $this, 'init' ) );
 	}
@@ -39,93 +30,80 @@ class Manager {
 			);
 		}
 
-		$this->set_frontend_data();
+		$this->init_collection();
 
-		add_action( 'wapuugotchi_add_source', array( $this, 'add_source' ), 10, 1 );
-
-
-	}
-
-	/**
-	 * Adds a new source to the collection.
-	 */
-	public function add_source( $url ) {
-		$sources = array_keys( get_transient( 'wapuugotchi_collection' ) );
-
-		if ( in_array( md5( $url ), $sources ) ) {
-			return;
-		}
-
-		$this->set_collection( $url );
 	}
 
 	/**
 	 * Gets the config. Retrieves it from server if necessary.
 	 */
-	private function get_collection( $file = null ) {
-		// toDo: refactor the following code to use the new collection format
-		if ( $file ) {
-			return json_decode(
-				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/' . $file ),
-				true
-			);
+	private function init_collection() {
+		$collection = get_transient( 'wapuugotchi_collection' );
+
+		// leave if collection is still valid
+		if ( is_array( $collection ) && !empty( $collection ) && get_transient( 'wapuugotchi_collection_checked_today' ) !== false ) {
+			$keys = array_keys( $collection );
+			if( $keys[0] === md5( Helper::COLLECTION_API_URL && $this->validate_frontend_data() ) ) {
+				return true;
+			}
+		} else {
+			delete_transient( 'wapuugotchi_collection' );
+			delete_transient( 'wapuugotchi_categories' );
+			delete_transient( 'wapuugotchi_items' );
+
+			if ( $this->set_collection() === false ) {
+				return false;
+			}
+
+			if ( $this->set_frontend_data() === false ) {
+				return false;
+			}
+
+			return set_transient('wapuugotchi_collection_checked_today', true, Helper::getSecondsLeftUntilTomorrow() );
 		}
 
-		if ( get_transient( 'wapuugotchi_collection' ) === false ) {
-			$this->set_collection();
-		}
-
-		return get_transient( 'wapuugotchi_collection' );
 	}
 
+	private function validate_frontend_data() {
+		if ( get_transient( 'wapuugotchi_categories' ) === false || get_transient( 'wapuugotchi_items' ) === false )  {
+			return false;
+		}
+
+		return true;
+	}
 	/**
 	 * Retrieves the collection from the remote server and sets it as transient.
 	 */
-	private function set_collection( $url = 'https://api.wapuugotchi.com/collection' ) {
-		$response = wp_remote_get( $url );
+	private function set_collection() {
+		$response = wp_remote_get( Helper::COLLECTION_API_URL );
 		if ( is_wp_error( $response ) ) {
-			return;
+			return false;
 		}
 
 		$body = wp_remote_retrieve_body( $response );
 
 		if ( empty( $body ) ) {
-			return;
+			return false;
 		}
 
 		$config = json_decode( $body );
 
 		if ( empty( $config ) ) {
-			return;
+			return false;
 		}
 
-		if ( ! $this->is_collection_valid( $config ) ) {
-			return;
-		}
+		$totalConfig[ md5( Helper::COLLECTION_API_URL ) ] = $config;
+		return set_transient( 'wapuugotchi_collection', $totalConfig );
 
-		$totalConfig                = get_transient( 'wapuugotchi_collection' );
-		$totalConfig[ md5( $url ) ] = $config;
-
-		set_transient( 'wapuugotchi_collection', $totalConfig, 60 * 60 * 24 );
-		$this->set_frontend_data();
-	}
-
-	/**
-	 * Checks if collection is valid.
-	 *
-	 * @param object $config Collection config.
-	 */
-	private function is_collection_valid( $config ) {
-		return true;
 	}
 
 	/**
 	 * Takes the collection, prepares the categories and item collection for the frontend, and sets them as transients.
 	 */
 	private function set_frontend_data() {
-		$result = array();
-		$purchases   = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true );
-		$collection = $this->get_collection();
+		$result 	= array();
+		$purchases  = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true );
+		$collection = get_transient( 'wapuugotchi_collection' );
 		if( !is_array($collection)) {
 			return;
 		}
@@ -134,7 +112,7 @@ class Manager {
 			$result = $object->collections;
 		}
 
-		$category_collection = self::COLLECTION_STRUCTURE;
+		$category_collection = Helper::COLLECTION_STRUCTURE;
 		$items_collection    = array();
 		foreach ( $result as $collection ) {
 			if ( ! isset( $category_collection[ $collection->slug ] ) ) {
@@ -158,8 +136,8 @@ class Manager {
 			}
 		}
 
-		set_transient( 'wapuugotchi_categories', $category_collection, DAY_IN_SECONDS );
-		set_transient( 'wapuugotchi_items', $items_collection, DAY_IN_SECONDS );
+		set_transient( 'wapuugotchi_categories', $category_collection );
+		set_transient( 'wapuugotchi_items', $items_collection );
 	}
 
 	/**
@@ -179,14 +157,16 @@ class Manager {
 	}
 
 	private function resetAll() {
+		delete_transient( 'wapuugotchi_collection' );
 		delete_transient( 'wapuugotchi_categories' );
 		delete_transient( 'wapuugotchi_items' );
-		delete_transient( 'wapuugotchi_collection' );
-		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 0 );
-		update_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', array(
-			'3392a397-22d1-44d0-b575-f31850012769',
-			'870cbca1-4448-43ae-b815-11e9c2617159'
-		) );
-		update_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', array() );
+		delete_transient('wapuugotchi_collection_checked_today' );
+
+		delete_user_meta( get_current_user_id(), 'wapuugotchi__alpha' );
+		delete_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha' );
+		delete_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha' );
+		delete_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha' );
+
 	}
+
 }

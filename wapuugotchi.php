@@ -38,9 +38,11 @@ function init() {
 	require_once 'inc/Api.php';
 	require_once 'inc/Menu.php';
 	require_once 'inc/Manager.php';
+	require_once 'inc/Helper.php';
 	new Api();
 	new Menu();
 	new Manager();
+	new Helper();
 
 	require_once 'inc/apps/Customizer.php';
 	new Customizer();

@@ -64,7 +64,7 @@ class Manager {
 			return false;
 		}
 
-		if ( \get_transient( 'wapuugotchi_collection_checked_todayf' ) === false ) {
+		if ( \get_transient( 'wapuugotchi_collection_checked_today' ) === false ) {
 			\set_transient( 'wapuugotchi_collection_checked_today', true, Helper::getSecondsLeftUntilTomorrow() );
 			return false;
 		}

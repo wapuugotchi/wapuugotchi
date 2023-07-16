@@ -41,9 +41,9 @@ class Manager {
 		$collection = get_transient( 'wapuugotchi_collection' );
 
 		// leave if collection is still valid
-		if ( is_array( $collection ) && !empty( $collection ) && get_transient( 'wapuugotchi_collection_checked_today' ) !== false ) {
+		if ( is_array( $collection ) && ! empty( $collection ) && get_transient( 'wapuugotchi_collection_checked_today' ) !== false ) {
 			$keys = array_keys( $collection );
-			if( $keys[0] === md5( Helper::COLLECTION_API_URL && $this->validate_frontend_data() ) ) {
+			if ( $keys[0] === md5( Helper::COLLECTION_API_URL && $this->validate_frontend_data() ) ) {
 				return true;
 			}
 		} else {
@@ -59,18 +59,19 @@ class Manager {
 				return false;
 			}
 
-			return set_transient('wapuugotchi_collection_checked_today', true, Helper::getSecondsLeftUntilTomorrow() );
+			return set_transient( 'wapuugotchi_collection_checked_today', true, Helper::getSecondsLeftUntilTomorrow() );
 		}
 
 	}
 
 	private function validate_frontend_data() {
-		if ( get_transient( 'wapuugotchi_categories' ) === false || get_transient( 'wapuugotchi_items' ) === false )  {
+		if ( get_transient( 'wapuugotchi_categories' ) === false || get_transient( 'wapuugotchi_items' ) === false ) {
 			return false;
 		}
 
 		return true;
 	}
+
 	/**
 	 * Retrieves the collection from the remote server and sets it as transient.
 	 */
@@ -93,6 +94,7 @@ class Manager {
 		}
 
 		$totalConfig[ md5( Helper::COLLECTION_API_URL ) ] = $config;
+
 		return set_transient( 'wapuugotchi_collection', $totalConfig );
 
 	}
@@ -101,10 +103,10 @@ class Manager {
 	 * Takes the collection, prepares the categories and item collection for the frontend, and sets them as transients.
 	 */
 	private function set_frontend_data() {
-		$result 	= array();
+		$result     = array();
 		$purchases  = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true );
 		$collection = get_transient( 'wapuugotchi_collection' );
-		if( !is_array($collection)) {
+		if ( ! is_array( $collection ) ) {
 			return;
 		}
 
@@ -160,7 +162,7 @@ class Manager {
 		delete_transient( 'wapuugotchi_collection' );
 		delete_transient( 'wapuugotchi_categories' );
 		delete_transient( 'wapuugotchi_items' );
-		delete_transient('wapuugotchi_collection_checked_today' );
+		delete_transient( 'wapuugotchi_collection_checked_today' );
 
 		delete_user_meta( get_current_user_id(), 'wapuugotchi__alpha' );
 		delete_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha' );

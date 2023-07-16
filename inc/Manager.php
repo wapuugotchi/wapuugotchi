@@ -142,22 +142,6 @@ class Manager {
 		set_transient( 'wapuugotchi_items', $items_collection );
 	}
 
-	/**
-	 * Formats the REST API url
-	 *
-	 * @return string
-	 */
-	public static function get_rest_api() {
-		$api      = get_rest_url( null, Api::REST_BASE );
-		$find     = 'wp-json';
-		$position = strpos( $api, $find );
-		if ( $position === false ) {
-			return $api;
-		}
-
-		return substr( $api, $position + strlen( $find ) );
-	}
-
 	private function resetAll() {
 		delete_transient( 'wapuugotchi_collection' );
 		delete_transient( 'wapuugotchi_categories' );

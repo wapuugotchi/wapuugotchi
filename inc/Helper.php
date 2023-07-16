@@ -20,6 +20,23 @@ class Helper
 		'coats' => '',
 		'shoes' => '',
 	);
+
+	/**
+	 * Formats the REST API url
+	 *
+	 * @return string
+	 */
+	static function get_rest_api() {
+		$api      = get_rest_url( null, Api::REST_BASE );
+		$find     = 'wp-json';
+		$position = strpos( $api, $find );
+		if ( $position === false ) {
+			return $api;
+		}
+
+		return substr( $api, $position + strlen( $find ) );
+	}
+
 	static function getSecondsLeftUntilTomorrow() {
 		$timezone = new DateTimeZone( wp_timezone_string() );
 

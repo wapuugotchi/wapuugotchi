@@ -34,7 +34,7 @@ class Avatar {
 						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
 						'message'    => $this->get_notifications(),
 						'intention'  => false,
-						'restBase'   => Manager::get_rest_api(),
+						'restBase'   => Helper::get_rest_api(),
 					)
 				)
 			),

@@ -8,7 +8,6 @@ import ShowRoom from "./show-room";
 import PaymentDialog from "./payment-dialog";
 import MenuHeader from "./menu-header";
 import "./shop.scss";
-import priceTag from "./category-item-pricetag.svg";
 
 
 export default function Shop(props) {
@@ -42,6 +41,8 @@ export default function Shop(props) {
 			method: "POST",
 			data: { wapuu },
 		});
+
+		console.log('saved ' + success);
 
 		setLoader(__("Save Settings",'wapuugotchi'));
 	};

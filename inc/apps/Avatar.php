@@ -29,7 +29,7 @@ class Avatar {
 				json_encode(
 					array(
 						'categories' => \get_transient( 'wapuugotchi_categories' ),
-						'items'      => \get_transient( 'wapuugotchi_items' ),
+						'items'      => Helper::get_items(),
 						'balance'    => get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ),
 						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
 						'message'    => $this->get_notifications(),

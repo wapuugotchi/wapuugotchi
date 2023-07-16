@@ -27,12 +27,12 @@
         },
         "caps": {
             "key": [],
-            "count": 2,
+            "count": 5,
             "required": 0
         },
         "items": {
             "key": [],
-            "count": 5,
+            "count": 10,
             "required": 0
         }
     }

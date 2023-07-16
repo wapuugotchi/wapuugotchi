@@ -45,6 +45,11 @@ class Helper
 
 		return $tomorrow->getTimestamp() - $today->getTimestamp();
 	}
+
+	static function get_items () {
+		$items = \get_transient( 'wapuugotchi_items' );
+		return reset($items);
+	}
 }
 
 

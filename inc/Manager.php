@@ -31,41 +31,61 @@ class Manager {
 		}
 
 		$this->init_collection();
-
+		$this->init_frontend_data();
 	}
 
 	/**
 	 * Gets the config. Retrieves it from server if necessary.
 	 */
 	private function init_collection() {
-		$collection = get_transient( 'wapuugotchi_collection' );
-
-		// leave if collection is still valid
-		if ( is_array( $collection ) && ! empty( $collection ) && get_transient( 'wapuugotchi_collection_checked_today' ) !== false ) {
-			$keys = array_keys( $collection );
-			if ( $keys[0] === md5( Helper::COLLECTION_API_URL && $this->validate_frontend_data() ) ) {
-				return true;
-			}
-		} else {
+		if ( $this->is_valid_collection() === false ) {
 			delete_transient( 'wapuugotchi_collection' );
-			delete_transient( 'wapuugotchi_categories' );
-			delete_transient( 'wapuugotchi_items' );
-
-			if ( $this->set_collection() === false ) {
-				return false;
-			}
-
-			if ( $this->set_frontend_data() === false ) {
-				return false;
-			}
-
-			return set_transient( 'wapuugotchi_collection_checked_today', true, Helper::getSecondsLeftUntilTomorrow() );
+			return $this->set_collection();
 		}
 
+		return true;
 	}
 
-	private function validate_frontend_data() {
-		if ( get_transient( 'wapuugotchi_categories' ) === false || get_transient( 'wapuugotchi_items' ) === false ) {
+	private function is_valid_collection() {
+		$collection = get_transient( 'wapuugotchi_collection' );
+		if ( ! is_array( $collection ) || empty( $collection ) ) {
+			return false;
+		}
+
+		$keys = array_keys( $collection );
+		$md5 = md5( Helper::COLLECTION_API_URL );
+		if ( $keys[0] !== $md5 ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	private function init_frontend_data() {
+		if ( $this->is_valid_frontend_data() === false ) {
+			delete_transient( 'wapuugotchi_categories' );
+			delete_transient( 'wapuugotchi_items' );
+			return $this->set_frontend_data();
+		}
+
+		return true;
+	}
+
+	private function is_valid_frontend_data() {
+		$categories = get_transient( 'wapuugotchi_categories' );
+		$item       = get_transient( 'wapuugotchi_items' );
+
+		if ( ! is_array( $categories ) || empty( $categories ) ) {
+			return false;
+		}
+
+		if ( ! is_array( $item ) || empty( $item ) ) {
+			return false;
+		}
+
+		$keys = array_keys( $item );
+		$md5 = md5( json_encode( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) );
+		if ( $keys[0] !== $md5 ) {
 			return false;
 		}
 
@@ -137,9 +157,9 @@ class Manager {
 				$items_collection[ $collection->slug ][ $item->meta->key ] = $item;
 			}
 		}
-
+		$md5 = md5( json_encode( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) );
+		set_transient( 'wapuugotchi_items', array( $md5 => $items_collection ) );
 		set_transient( 'wapuugotchi_categories', $category_collection );
-		set_transient( 'wapuugotchi_items', $items_collection );
 	}
 
 	private function resetAll() {

@@ -1,6 +1,6 @@
 {
     "translation-revision-date": "2023-06-23 21:41+0200",
-    "generator": "WP-CLI\/2.6.0",
+    "generator": "WP-CLI\/2.8.1",
     "source": "build\/customizer.js",
     "domain": "messages",
     "locale_data": {
@@ -11,10 +11,10 @@
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
             "Do you want to buy this item?": [
-                "M\u00f6chtest du diesen Artikel kaufen?"
+                "M\u00f6chtest du das Item kaufen?"
             ],
             "Your Pearl Balance:": [
-                "Ihre Perlenbilanz:"
+                "Deine Perlen"
             ],
             "Save": [
                 "Speichern"
@@ -23,13 +23,13 @@
                 "Gestalte dein Wapuu mit WapuuGotchi"
             ],
             "Browse categories on the left to explore various items and style your Wapuu.": [
-                "Durchst\u00f6bere die Kategorien auf der linken Seite, um verschiedene Artikel zu entdecken und so deinen Wapuu zu gestalten."
+                "Durchst\u00f6bere die Kategorien auf der linken Seite, um verschiedene Artikel zu entdecken und deinen Wapuu zu gestalten."
             ],
             "Saving...": [
-                "Speichern..."
+                "Speichere ..."
             ],
             "Reset Changes": [
-                "\u00c4nderungen zur\u00fccksetzen"
+                "Zur\u00fccksetzen"
             ]
         }
     }

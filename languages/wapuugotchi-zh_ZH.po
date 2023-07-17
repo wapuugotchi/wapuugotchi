@@ -1,38 +1,34 @@
-# Copyright (C) 2023 The WordPress Contributors
-# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Wapuugotchi 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wapuugotchi\n"
-"POT-Creation-Date: 2023-06-23T19:30:59+00:00\n"
-"PO-Revision-Date: 2023-06-23 21:57+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-06-23T19:30:59+00:00\n"
+"PO-Revision-Date: 2023-06-23 21:57+0200\n"
+"Language: zh\n"
 "X-Generator: Poedit 3.3.1\n"
 "X-Domain: wapuugotchi\n"
 
 #. Plugin Name of the plugin
-#: inc/Menu.php:23 inc/Menu.php:32 inc/Menu.php:40
-#, fuzzy
+#: inc/Menu.php:23
+#: inc/Menu.php:32
+#: inc/Menu.php:40
 msgid "Wapuugotchi"
 msgstr "Wapuugotchi"
 
 #. Description of the plugin
-#, fuzzy
 msgid "Meet Your Personalized Wapuu Assistant."
 msgstr "认识您的个性化瓦普吾助理。"
 
 #. Author of the plugin
-#, fuzzy
 msgid "The WordPress Contributors"
 msgstr "WordPress的贡献者们"
 
 #: inc/Menu.php:24
-#, fuzzy
 msgid "WapuuGotchi"
 msgstr "巫术"
 
@@ -41,7 +37,6 @@ msgid "Customizer"
 msgstr "自定义"
 
 #: inc/Menu.php:41
-#, fuzzy
 msgid "Quest Log"
 msgstr "任务日志"
 
@@ -50,167 +45,134 @@ msgid "Completed"
 msgstr "已完成"
 
 #: inc/tasks/QuestContent.php:15
-#, fuzzy
 msgid "Create 3 posts"
 msgstr "创建3个职位"
 
 #: inc/tasks/QuestContent.php:15
-#, fuzzy
 msgid "You created 3 posts!!"
 msgstr "你创造了3个职位！!"
 
 #: inc/tasks/QuestContent.php:16
-#, fuzzy
 msgid "Create 5 posts"
 msgstr "创建5个职位"
 
 #: inc/tasks/QuestContent.php:16
-#, fuzzy
 msgid "You created 5 posts!!"
 msgstr "你创造了5个职位！!"
 
 #: inc/tasks/QuestContent.php:17
-#, fuzzy
 msgid "Create 7 posts"
 msgstr "创建7个职位"
 
 #: inc/tasks/QuestContent.php:17
-#, fuzzy
 msgid "You created 7 posts!!"
 msgstr "你创造了7个职位！!"
 
 #: inc/tasks/QuestContent.php:18
-#, fuzzy
 msgid "Create 3 pages"
 msgstr "创建3个页面"
 
 #: inc/tasks/QuestContent.php:18
-#, fuzzy
 msgid "You created 3 pages!!"
 msgstr "你创造了3页！!"
 
 #: inc/tasks/QuestContent.php:19
-#, fuzzy
 msgid "Create 5 pages"
 msgstr "创建5页"
 
 #: inc/tasks/QuestContent.php:19
-#, fuzzy
 msgid "You created 5 pages!!"
 msgstr "你创造了5页！!"
 
 #: inc/tasks/QuestContent.php:20
-#, fuzzy
 msgid "Create 7 pages"
 msgstr "创建7页"
 
 #: inc/tasks/QuestContent.php:20
-#, fuzzy
 msgid "You created 7 pages!!"
 msgstr "你创造了7页！!"
 
 #: inc/tasks/QuestContent.php:21
-#, fuzzy
 msgid "Get 1 comment"
 msgstr "获得1个评论"
 
 #: inc/tasks/QuestContent.php:21
-#, fuzzy
 msgid "Cool, we get some attention. &#10024;"
 msgstr "酷，我们得到了一些关注。✨"
 
 #: inc/tasks/QuestContent.php:22
-#, fuzzy
 msgid "Get 5 comments"
 msgstr "获得5个评论"
 
 #: inc/tasks/QuestContent.php:22
-#, fuzzy
 msgid "We get more and more attention. &#10024;"
 msgstr "我们得到越来越多的关注。✨"
 
 #: inc/tasks/QuestContent.php:23
-#, fuzzy
 msgid "Get 10 comments"
 msgstr "获得10条评论"
 
 #: inc/tasks/QuestContent.php:23
-#, fuzzy
 msgid "Oh my god!"
 msgstr "哦，我的天啊!"
 
 #: inc/tasks/QuestDate.php:19
-#, fuzzy
 msgid "Log in on 10 different days"
 msgstr "在10个不同的日子里登录"
 
 #: inc/tasks/QuestDate.php:19
-#, fuzzy
 msgid "Nice, you logged in for 10 consecutive days!"
 msgstr "不错，你连续登录了10天!"
 
 #: inc/tasks/QuestDate.php:20
-#, fuzzy
 msgid "Log in on 20 different days"
 msgstr "在20个不同的日子里登录"
 
 #: inc/tasks/QuestDate.php:20
-#, fuzzy
 msgid "Nice, you logged in for 20 consecutive days!"
 msgstr "不错，你连续登录了20天!"
 
 #: inc/tasks/QuestDate.php:21
-#, fuzzy
 msgid "Log in on 30 different days"
 msgstr "在30个不同的日子里登录"
 
 #: inc/tasks/QuestDate.php:21
-#, fuzzy
 msgid "Nice, you logged in for 30 consecutive days!"
 msgstr "不错，你连续登录了30天!"
 
 #: inc/tasks/QuestDate.php:22
-#, fuzzy
 msgid "Log in on 40 different days"
 msgstr "在40个不同的日子里登录"
 
 #: inc/tasks/QuestDate.php:22
-#, fuzzy
 msgid "Nice, you logged in for 40 consecutive days!"
 msgstr "不错，你连续登录了40天!"
 
 #: inc/tasks/QuestDate.php:23
-#, fuzzy
 msgid "Log in on 50 different days"
 msgstr "在50个不同的日子里登录"
 
 #: inc/tasks/QuestDate.php:23
-#, fuzzy
 msgid "Nice, you logged in for 50 consecutive days!"
 msgstr "不错，你连续登录了50天!"
 
 #: inc/tasks/QuestPlugin.php:19
-#, fuzzy
 msgid "Activate a SEO plugin"
 msgstr "激活一个SEO插件"
 
 #: inc/tasks/QuestPlugin.php:19
-#, fuzzy
 msgid "Awesome! &#128261;"
 msgstr "厉害了!🔅"
 
 #: inc/tasks/QuestPlugin.php:20
-#, fuzzy
 msgid "Activate a caching plugin"
 msgstr "激活一个缓存插件"
 
 #: inc/tasks/QuestPlugin.php:20
-#, fuzzy
 msgid "Fantastic! &#128171;"
 msgstr "妙不可言!💫"
 
 #: inc/tasks/QuestPlugin.php:21
-#, fuzzy
 msgid "Activate a security plugin"
 msgstr "激活一个安全插件"
 
@@ -219,54 +181,46 @@ msgid "Great!"
 msgstr "好极了！"
 
 #: inc/tasks/QuestStart.php:15
-#, fuzzy
 msgid "Welcome to Wapuugotchi"
 msgstr "欢迎来到 Wapuugotchi"
 
 #: inc/tasks/QuestStart.php:15
-#, fuzzy
 msgid "Thank you for giving me a home! &#10084;&#65039;"
 msgstr "感谢你们给我一个家!❤️"
 
 #: inc/tasks/QuestTheme.php:17
-#, fuzzy
 msgid "Remove all unused themes"
 msgstr "删除所有未使用的主题"
 
 #: inc/tasks/QuestTheme.php:17
-#, fuzzy
 msgid "You cleaned up! &#129529;"
 msgstr "你打扫干净了!🧹"
 
-#: build/customizer.js:1 src/components/payment-dialog.js:39
-#, fuzzy
+#: build/customizer.js:1
 msgid "Do you want to buy this item?"
-msgstr "你想购买这个物品吗？"
+msgstr ""
 
-#: build/customizer.js:1 build/scavenger-hunt.js:1
-#: src/components/menu-header.js:25
-#, fuzzy
+#: build/customizer.js:1
+#: build/scavenger-hunt.js:1
 msgid "Your Pearl Balance:"
-msgstr "你的珍珠平衡："
+msgstr ""
 
-#: build/customizer.js:1 src/components/shop.js:27
+#: build/customizer.js:1
 msgid "Save"
-msgstr "保存"
+msgstr ""
 
-#: build/customizer.js:1 src/components/shop.js:52
-#, fuzzy
+#: build/customizer.js:1
 msgid "Customize Your Wapuu with WapuuGotchi"
-msgstr "用WapuuGotchi定制您的Wapuu。"
+msgstr ""
 
-#: build/customizer.js:1 src/components/shop.js:53
-#, fuzzy
+#: build/customizer.js:1
 msgid "Browse categories on the left to explore various items and style your Wapuu."
-msgstr "浏览左边的类别，探索各种项目，为您的Wapuu造型。"
+msgstr ""
 
-#: build/customizer.js:1 src/components/shop.js:37
+#: build/customizer.js:1
 msgid "Saving..."
-msgstr "保存中..."
+msgstr ""
 
-#: build/customizer.js:1 src/components/shop.js:78
+#: build/customizer.js:1
 msgid "Reset Changes"
-msgstr "重置更改"
+msgstr ""

@@ -1,6 +1,6 @@
 {
     "translation-revision-date": "2023-06-23 21:49+0200",
-    "generator": "WP-CLI\/2.6.0",
+    "generator": "WP-CLI\/2.8.1",
     "source": "build\/scavenger-hunt.js",
     "domain": "messages",
     "locale_data": {
@@ -11,7 +11,7 @@
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
             "Your Pearl Balance:": [
-                "\u3042\u306a\u305f\u306e\u30d1\u30fc\u30eb\u30d0\u30e9\u30f3\u30b9"
+                ""
             ]
         }
     }

@@ -19,15 +19,15 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.29.0",
-		"@wordpress/env": "^5.15.0",
-		"@wordpress/scripts": "^26.1.0"
+		"@wordpress/env": "^8.3.0",
+		"@wordpress/scripts": "^26.8.0"
 	},
 	"dependencies": {
-		"@wordpress/api-fetch": "^6.27.0",
-		"@wordpress/components": "^23.8.0",
-		"@wordpress/dom-ready": "^3.30.0",
-		"@wordpress/element": "^5.7.0",
-		"@wordpress/i18n": "^4.35.0",
+		"@wordpress/api-fetch": "^6.34.0",
+		"@wordpress/components": "^25.3.0",
+		"@wordpress/dom-ready": "^3.37.0",
+		"@wordpress/element": "^5.14.0",
+		"@wordpress/i18n": "^4.37.0",
 		"html-react-parser": "^3.0.16",
 		"react-svg": "^16.1.6"
 	}

@@ -198,37 +198,30 @@ msgid "You cleaned up! &#129529;"
 msgstr ""
 
 #: build/customizer.js:1
-#: src/components/payment-dialog.js:39
 msgid "Do you want to buy this item?"
 msgstr ""
 
 #: build/customizer.js:1
 #: build/scavenger-hunt.js:1
-#: src/components/menu-header.js:25
 msgid "Your Pearl Balance:"
 msgstr ""
 
 #: build/customizer.js:1
-#: src/components/shop.js:27
 msgid "Save"
 msgstr ""
 
 #: build/customizer.js:1
-#: src/components/shop.js:52
 msgid "Customize Your Wapuu with WapuuGotchi"
 msgstr ""
 
 #: build/customizer.js:1
-#: src/components/shop.js:53
 msgid "Browse categories on the left to explore various items and style your Wapuu."
 msgstr ""
 
 #: build/customizer.js:1
-#: src/components/shop.js:37
 msgid "Saving..."
 msgstr ""
 
 #: build/customizer.js:1
-#: src/components/shop.js:78
 msgid "Reset Changes"
 msgstr ""

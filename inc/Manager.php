@@ -39,8 +39,20 @@ class Manager {
 	 */
 	private function init_collection() {
 		if ( $this->is_valid_collection() === false ) {
+			delete_transient( 'wapuugotchi_categories' );
+			delete_transient( 'wapuugotchi_items' );
 			delete_transient( 'wapuugotchi_collection' );
 			return $this->set_collection();
+		}
+
+		return true;
+	}
+
+	private function init_frontend_data() {
+		if ( $this->is_valid_frontend_data() === false ) {
+			delete_transient( 'wapuugotchi_categories' );
+			delete_transient( 'wapuugotchi_items' );
+			return $this->set_frontend_data();
 		}
 
 		return true;
@@ -52,20 +64,9 @@ class Manager {
 			return false;
 		}
 
-		$keys = array_keys( $collection );
-		$md5 = md5( Helper::COLLECTION_API_URL );
-		if ( $keys[0] !== $md5 ) {
+		if ( \get_transient( 'wapuugotchi_collection_checked_today' ) === false ) {
+			\set_transient( 'wapuugotchi_collection_checked_today', true, Helper::get_seconds_left_until_tomorrow() );
 			return false;
-		}
-
-		return true;
-	}
-
-	private function init_frontend_data() {
-		if ( $this->is_valid_frontend_data() === false ) {
-			delete_transient( 'wapuugotchi_categories' );
-			delete_transient( 'wapuugotchi_items' );
-			return $this->set_frontend_data();
 		}
 
 		return true;
@@ -158,11 +159,12 @@ class Manager {
 			}
 		}
 		$md5 = md5( json_encode( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) );
+
 		set_transient( 'wapuugotchi_items', array( $md5 => $items_collection ) );
 		set_transient( 'wapuugotchi_categories', $category_collection );
 	}
 
-	private function resetAll() {
+	private function reset_all() {
 		delete_transient( 'wapuugotchi_collection' );
 		delete_transient( 'wapuugotchi_categories' );
 		delete_transient( 'wapuugotchi_items' );

@@ -41,56 +41,56 @@ class Quest {
 	/**
 	 * @return string
 	 */
-	public function getId() {
+	public function get_id() {
 		return $this->id;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getParentId() {
+	public function get_parent_id() {
 		return $this->parent_id;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getTitle() {
+	public function get_title() {
 		return $this->title;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getMessage() {
+	public function get_message() {
 		return $this->message;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getType() {
+	public function get_type() {
 		return $this->type;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getPriority() {
+	public function get_priority() {
 		return $this->priority;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getPearls() {
+	public function get_pearls() {
 		return $this->pearls;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function isActive() {
+	public function is_active() {
 		if ( is_callable( $this->active_callback ) ) {
 			$result = call_user_func( $this->active_callback );
 
@@ -105,7 +105,7 @@ class Quest {
 	/**
 	 * @return string
 	 */
-	public function isCompleted() {
+	public function is_completed() {
 		if ( is_callable( $this->completed_callback ) ) {
 			$result = call_user_func( $this->completed_callback );
 

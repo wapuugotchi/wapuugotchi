@@ -49,14 +49,14 @@ class QuestManager {
 			return array();
 		}
 		foreach ( $all_quests as $value ) {
-			if ( in_array( $value->getId(), array_keys( $completed_quests ) ) ) {
+			if ( in_array( $value->get_id(), array_keys( $completed_quests ) ) ) {
 				continue;
 			}
-			if ( ! $value->isActive() ) {
+			if ( ! $value->is_active() ) {
 				continue;
 			}
 
-			if ( $value->getParentId() === null || in_array( $value->getParentId(), array_keys( $completed_quests ) ) ) {
+			if ( $value->get_parent_id() === null || in_array( $value->get_parent_id(), array_keys( $completed_quests ) ) ) {
 				$result_array [] = $value;
 			}
 		}
@@ -74,7 +74,7 @@ class QuestManager {
 		$result_array     = array();
 
 		foreach ($all_quests as $quest) {
-			if ( in_array($quest->getId(), $completed_quests)) {
+			if ( in_array($quest->get_id(), $completed_quests)) {
 				$result_array[] = $quest;
 			}
 		}
@@ -87,8 +87,8 @@ class QuestManager {
 		$result        = array();
 
 		foreach ( $active_quests as $quest ) {
-			if ( $quest->isCompleted() ) {
-				$result[ $quest->getId() ] = $quest;
+			if ( $quest->is_completed() ) {
+				$result[ $quest->get_id() ] = $quest;
 			}
 		}
 
@@ -101,8 +101,8 @@ class QuestManager {
 
 		if ( ! empty( $quests ) ) {
 			foreach ( $quests as $index => $quest ) {
-				$new_completed_quests[ $quest->getId() ] = array(
-					'id'       => $quest->getId(),
+				$new_completed_quests[ $quest->get_id() ] = array(
+					'id'       => $quest->get_id(),
 					'date'     => date( 'j F, Y \@ g:ia' ),
 					'notified' => false,
 				);
@@ -121,7 +121,7 @@ class QuestManager {
 		$pearls = 0;
 
 		foreach ( $quests as $quest ) {
-			$pearls += $quest->getPearls();
+			$pearls += $quest->get_pearls();
 		}
 
 		if ( $pearls > 0 ) {

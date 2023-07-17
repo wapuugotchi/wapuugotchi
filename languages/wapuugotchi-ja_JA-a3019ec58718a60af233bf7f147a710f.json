@@ -1,6 +1,6 @@
 {
     "translation-revision-date": "2023-06-23 21:49+0200",
-    "generator": "WP-CLI\/2.6.0",
+    "generator": "WP-CLI\/2.8.1",
     "source": "build\/customizer.js",
     "domain": "messages",
     "locale_data": {
@@ -11,25 +11,25 @@
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
             "Do you want to buy this item?": [
-                "\u3053\u306e\u5546\u54c1\u3092\u8cfc\u5165\u3057\u307e\u3059\u304b\uff1f"
+                ""
             ],
             "Your Pearl Balance:": [
-                "\u3042\u306a\u305f\u306e\u30d1\u30fc\u30eb\u30d0\u30e9\u30f3\u30b9"
+                ""
             ],
             "Save": [
-                "\u4fdd\u5b58"
+                ""
             ],
             "Customize Your Wapuu with WapuuGotchi": [
-                "WapuuGotchi\u3067Wapuu\u3092\u30ab\u30b9\u30bf\u30de\u30a4\u30ba\u3057\u3088\u3046"
+                ""
             ],
             "Browse categories on the left to explore various items and style your Wapuu.": [
-                "\u5de6\u306e\u30ab\u30c6\u30b4\u30ea\u30fc\u304b\u3089\u69d8\u3005\u306a\u30a2\u30a4\u30c6\u30e0\u3092\u63a2\u3057\u3066\u3001\u3042\u306a\u305f\u306eWapuu\u3092\u30b9\u30bf\u30a4\u30ea\u30f3\u30b0\u3057\u3066\u304f\u3060\u3055\u3044\u3002"
+                ""
             ],
             "Saving...": [
-                "\u4fdd\u5b58\u4e2d\u2026"
+                ""
             ],
             "Reset Changes": [
-                "\u5909\u66f4\u3092\u30ea\u30bb\u30c3\u30c8"
+                ""
             ]
         }
     }

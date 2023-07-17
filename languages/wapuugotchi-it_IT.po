@@ -1,38 +1,34 @@
-# Copyright (C) 2023 The WordPress Contributors
-# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Wapuugotchi 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wapuugotchi\n"
-"POT-Creation-Date: 2023-06-23T19:30:59+00:00\n"
-"PO-Revision-Date: 2023-06-23 21:48+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-06-23T19:30:59+00:00\n"
+"PO-Revision-Date: 2023-06-23 21:48+0200\n"
+"Language: it\n"
 "X-Generator: Poedit 3.3.1\n"
 "X-Domain: wapuugotchi\n"
 
 #. Plugin Name of the plugin
-#: inc/Menu.php:23 inc/Menu.php:32 inc/Menu.php:40
-#, fuzzy
+#: inc/Menu.php:23
+#: inc/Menu.php:32
+#: inc/Menu.php:40
 msgid "Wapuugotchi"
 msgstr "Wapuugotchi"
 
 #. Description of the plugin
-#, fuzzy
 msgid "Meet Your Personalized Wapuu Assistant."
 msgstr "Vi presentiamo il vostro assistente Wapuu personalizzato."
 
 #. Author of the plugin
-#, fuzzy
 msgid "The WordPress Contributors"
 msgstr "I collaboratori di WordPress"
 
 #: inc/Menu.php:24
-#, fuzzy
 msgid "WapuuGotchi"
 msgstr "WapuuGotchi"
 
@@ -41,7 +37,6 @@ msgid "Customizer"
 msgstr "Personalizza"
 
 #: inc/Menu.php:41
-#, fuzzy
 msgid "Quest Log"
 msgstr "Diario della missione"
 
@@ -50,167 +45,134 @@ msgid "Completed"
 msgstr "Completato"
 
 #: inc/tasks/QuestContent.php:15
-#, fuzzy
 msgid "Create 3 posts"
 msgstr "Creare 3 messaggi"
 
 #: inc/tasks/QuestContent.php:15
-#, fuzzy
 msgid "You created 3 posts!!"
 msgstr "Hai creato 3 post!!!"
 
 #: inc/tasks/QuestContent.php:16
-#, fuzzy
 msgid "Create 5 posts"
 msgstr "Creare 5 messaggi"
 
 #: inc/tasks/QuestContent.php:16
-#, fuzzy
 msgid "You created 5 posts!!"
 msgstr "Hai creato 5 post!!!"
 
 #: inc/tasks/QuestContent.php:17
-#, fuzzy
 msgid "Create 7 posts"
 msgstr "Creare 7 messaggi"
 
 #: inc/tasks/QuestContent.php:17
-#, fuzzy
 msgid "You created 7 posts!!"
 msgstr "Hai creato 7 post!!!"
 
 #: inc/tasks/QuestContent.php:18
-#, fuzzy
 msgid "Create 3 pages"
 msgstr "Creare 3 pagine"
 
 #: inc/tasks/QuestContent.php:18
-#, fuzzy
 msgid "You created 3 pages!!"
 msgstr "Hai creato 3 pagine!"
 
 #: inc/tasks/QuestContent.php:19
-#, fuzzy
 msgid "Create 5 pages"
 msgstr "Creare 5 pagine"
 
 #: inc/tasks/QuestContent.php:19
-#, fuzzy
 msgid "You created 5 pages!!"
 msgstr "Hai creato 5 pagine!"
 
 #: inc/tasks/QuestContent.php:20
-#, fuzzy
 msgid "Create 7 pages"
 msgstr "Creare 7 pagine"
 
 #: inc/tasks/QuestContent.php:20
-#, fuzzy
 msgid "You created 7 pages!!"
 msgstr "Hai creato 7 pagine!"
 
 #: inc/tasks/QuestContent.php:21
-#, fuzzy
 msgid "Get 1 comment"
 msgstr "Ottenere 1 commento"
 
 #: inc/tasks/QuestContent.php:21
-#, fuzzy
 msgid "Cool, we get some attention. &#10024;"
 msgstr "Forte, riceviamo un po' di attenzione. ✨"
 
 #: inc/tasks/QuestContent.php:22
-#, fuzzy
 msgid "Get 5 comments"
 msgstr "Ottenere 5 commenti"
 
 #: inc/tasks/QuestContent.php:22
-#, fuzzy
 msgid "We get more and more attention. &#10024;"
 msgstr "Riceviamo sempre più attenzione. ✨"
 
 #: inc/tasks/QuestContent.php:23
-#, fuzzy
 msgid "Get 10 comments"
 msgstr "Ottenere 10 commenti"
 
 #: inc/tasks/QuestContent.php:23
-#, fuzzy
 msgid "Oh my god!"
 msgstr "Oh mio Dio!"
 
 #: inc/tasks/QuestDate.php:19
-#, fuzzy
 msgid "Log in on 10 different days"
 msgstr "Accedere in 10 giorni diversi"
 
 #: inc/tasks/QuestDate.php:19
-#, fuzzy
 msgid "Nice, you logged in for 10 consecutive days!"
 msgstr "Bravo, ti sei collegato per 10 giorni consecutivi!"
 
 #: inc/tasks/QuestDate.php:20
-#, fuzzy
 msgid "Log in on 20 different days"
 msgstr "Accesso in 20 giorni diversi"
 
 #: inc/tasks/QuestDate.php:20
-#, fuzzy
 msgid "Nice, you logged in for 20 consecutive days!"
 msgstr "Bravo, ti sei collegato per 20 giorni consecutivi!"
 
 #: inc/tasks/QuestDate.php:21
-#, fuzzy
 msgid "Log in on 30 different days"
 msgstr "Accesso in 30 giorni diversi"
 
 #: inc/tasks/QuestDate.php:21
-#, fuzzy
 msgid "Nice, you logged in for 30 consecutive days!"
 msgstr "Bravo, ti sei collegato per 30 giorni consecutivi!"
 
 #: inc/tasks/QuestDate.php:22
-#, fuzzy
 msgid "Log in on 40 different days"
 msgstr "Accesso in 40 giorni diversi"
 
 #: inc/tasks/QuestDate.php:22
-#, fuzzy
 msgid "Nice, you logged in for 40 consecutive days!"
 msgstr "Bravo, ti sei collegato per 40 giorni consecutivi!"
 
 #: inc/tasks/QuestDate.php:23
-#, fuzzy
 msgid "Log in on 50 different days"
 msgstr "Accesso in 50 giorni diversi"
 
 #: inc/tasks/QuestDate.php:23
-#, fuzzy
 msgid "Nice, you logged in for 50 consecutive days!"
 msgstr "Bravo, ti sei collegato per 50 giorni consecutivi!"
 
 #: inc/tasks/QuestPlugin.php:19
-#, fuzzy
 msgid "Activate a SEO plugin"
 msgstr "Attivare un plugin SEO"
 
 #: inc/tasks/QuestPlugin.php:19
-#, fuzzy
 msgid "Awesome! &#128261;"
 msgstr "Fantastico! 🔅"
 
 #: inc/tasks/QuestPlugin.php:20
-#, fuzzy
 msgid "Activate a caching plugin"
 msgstr "Attivare un plugin per la cache"
 
 #: inc/tasks/QuestPlugin.php:20
-#, fuzzy
 msgid "Fantastic! &#128171;"
 msgstr "Fantastico! 💫"
 
 #: inc/tasks/QuestPlugin.php:21
-#, fuzzy
 msgid "Activate a security plugin"
 msgstr "Attivare un plugin di sicurezza"
 
@@ -219,56 +181,46 @@ msgid "Great!"
 msgstr "Fantastico!"
 
 #: inc/tasks/QuestStart.php:15
-#, fuzzy
 msgid "Welcome to Wapuugotchi"
 msgstr "Benvenuti a Wapuugotchi"
 
 #: inc/tasks/QuestStart.php:15
-#, fuzzy
 msgid "Thank you for giving me a home! &#10084;&#65039;"
 msgstr "Grazie per avermi dato una casa! ❤️"
 
 #: inc/tasks/QuestTheme.php:17
-#, fuzzy
 msgid "Remove all unused themes"
 msgstr "Rimuovere tutti i temi inutilizzati"
 
 #: inc/tasks/QuestTheme.php:17
-#, fuzzy
 msgid "You cleaned up! &#129529;"
 msgstr "Hai pulito! 🧹"
 
-#: build/customizer.js:1 src/components/payment-dialog.js:39
-#, fuzzy
+#: build/customizer.js:1
 msgid "Do you want to buy this item?"
-msgstr "Vuoi acquistare questo articolo?"
+msgstr ""
 
-#: build/customizer.js:1 build/scavenger-hunt.js:1
-#: src/components/menu-header.js:25
-#, fuzzy
+#: build/customizer.js:1
+#: build/scavenger-hunt.js:1
 msgid "Your Pearl Balance:"
-msgstr "Il vostro equilibrio di perle:"
+msgstr ""
 
-#: build/customizer.js:1 src/components/shop.js:27
-#, fuzzy
+#: build/customizer.js:1
 msgid "Save"
-msgstr "Salva"
+msgstr ""
 
-#: build/customizer.js:1 src/components/shop.js:52
-#, fuzzy
+#: build/customizer.js:1
 msgid "Customize Your Wapuu with WapuuGotchi"
-msgstr "Personalizza il tuo Wapuu con WapuuGotchi"
+msgstr ""
 
-#: build/customizer.js:1 src/components/shop.js:53
-#, fuzzy
+#: build/customizer.js:1
 msgid "Browse categories on the left to explore various items and style your Wapuu."
-msgstr "Sfogliate le categorie a sinistra per esplorare i vari articoli e creare il vostro stile Wapuu."
+msgstr ""
 
-#: build/customizer.js:1 src/components/shop.js:37
+#: build/customizer.js:1
 msgid "Saving..."
-msgstr "Sto salvando..."
+msgstr ""
 
-#: build/customizer.js:1 src/components/shop.js:78
-#, fuzzy
+#: build/customizer.js:1
 msgid "Reset Changes"
-msgstr "Modifiche di reset"
+msgstr ""

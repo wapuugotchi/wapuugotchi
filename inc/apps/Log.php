@@ -41,8 +41,8 @@ class Log {
 		$active_quests = QuestManager::get_active_quests();
 		foreach ( $active_quests as $active_quest ) {
 			$result[] = array(
-				'title'  => $active_quest->getTitle(),
-				'pearls' => $active_quest->getPearls()
+				'title'  => $active_quest->get_title(),
+				'pearls' => $active_quest->get_pearls()
 			);
 		}
 
@@ -55,10 +55,10 @@ class Log {
 		$completed_quests = QuestManager::get_completed_quests();
 		foreach ( $completed_quests as $completed_quest_key => $completed_quest ) {
 			foreach ( $all_quests as $quest ) {
-				if ( $completed_quest_key === $quest->getId() ) {
+				if ( $completed_quest_key === $quest->get_id() ) {
 					$result[] = array(
-						'title'  => $quest->getTitle(),
-						'pearls' => $quest->getPearls(),
+						'title'  => $quest->get_title(),
+						'pearls' => $quest->get_pearls(),
 						'date'   => $completed_quest['date']
 					);
 

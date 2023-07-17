@@ -9,8 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
 
-class Helper
-{
+class Helper {
 	const COLLECTION_API_URL = 'https://api.wapuugotchi.com/collection';
 	const COLLECTION_STRUCTURE = array(
 		'fur'   => '',
@@ -37,18 +36,22 @@ class Helper
 		return substr( $api, $position + strlen( $find ) );
 	}
 
-	static function getSecondsLeftUntilTomorrow() {
+	static function get_seconds_left_until_tomorrow() {
 		$timezone = new DateTimeZone( wp_timezone_string() );
 
-		$today = new DateTime('now', $timezone);
-		$tomorrow = new DateTime('tomorrow', $timezone);
+		$today    = new DateTime( 'now', $timezone );
+		$tomorrow = new DateTime( 'tomorrow', $timezone );
 
 		return $tomorrow->getTimestamp() - $today->getTimestamp();
 	}
 
-	static function get_items () {
+	static function get_items() {
 		$items = \get_transient( 'wapuugotchi_items' );
-		return reset($items);
+		if ( is_array( $items ) && ! empty( $items ) ) {
+			return reset( $items );
+		}
+
+		return array();
 	}
 }
 

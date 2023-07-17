@@ -65,7 +65,7 @@ class Manager {
 		}
 
 		if ( \get_transient( 'wapuugotchi_collection_checked_today' ) === false ) {
-			\set_transient( 'wapuugotchi_collection_checked_today', true, Helper::getSecondsLeftUntilTomorrow() );
+			\set_transient( 'wapuugotchi_collection_checked_today', true, Helper::get_seconds_left_until_tomorrow() );
 			return false;
 		}
 
@@ -159,11 +159,12 @@ class Manager {
 			}
 		}
 		$md5 = md5( json_encode( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) );
+
 		set_transient( 'wapuugotchi_items', array( $md5 => $items_collection ) );
 		set_transient( 'wapuugotchi_categories', $category_collection );
 	}
 
-	private function resetAll() {
+	private function reset_all() {
 		delete_transient( 'wapuugotchi_collection' );
 		delete_transient( 'wapuugotchi_categories' );
 		delete_transient( 'wapuugotchi_items' );

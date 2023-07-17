@@ -58,12 +58,12 @@ class Avatar {
 				continue;
 			}
 			foreach ( $all_quests as $quest ) {
-				if ( $completed_quest_key === $quest->getId() ) {
-					$result_array[ $quest->getId() ] = array(
+				if ( $completed_quest_key === $quest->get_id() ) {
+					$result_array[ $quest->get_id() ] = array(
 						'category' => 'quest',
-						'id'       => $quest->getId(),
-						'message'  => $quest->getMessage(),
-						'type'     => $quest->getType()
+						'id'       => $quest->get_id(),
+						'message'  => $quest->get_message(),
+						'type'     => $quest->get_type()
 					);
 
 					break;

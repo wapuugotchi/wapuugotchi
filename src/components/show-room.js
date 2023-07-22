@@ -1,7 +1,6 @@
 import { STORE_NAME } from "../store";
 import { useSelect } from "@wordpress/data";
 import "./show-room.scss";
-import "./animation.scss";
 
 export default function ShowRoom() {
 	const { svg } = useSelect((select) => {

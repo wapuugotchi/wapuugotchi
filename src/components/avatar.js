@@ -2,7 +2,6 @@ import { STORE_NAME } from "../store";
 import { useSelect } from "@wordpress/data";
 import Bubble from "./bubble";
 import "./avatar.scss";
-import "./animation.scss";
 
 export default function Avatar() {
 	const { svg } = useSelect(select => {

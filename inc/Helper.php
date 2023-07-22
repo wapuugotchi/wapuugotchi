@@ -45,6 +45,20 @@ class Helper {
 		return $tomorrow->getTimestamp() - $today->getTimestamp();
 	}
 
+	static function get_timestamp_for_tomorrow() {
+		$timezone = new DateTimeZone( wp_timezone_string() );
+		$tomorrow = new DateTime( 'tomorrow', $timezone );
+
+		return $tomorrow->getTimestamp();
+	}
+
+	static function get_timestamp_for_today() {
+		$timezone = new DateTimeZone( wp_timezone_string() );
+		$today    = new DateTime( 'now', $timezone );
+
+		return $today->getTimestamp();
+	}
+
 	static function get_items() {
 		$items = \get_transient( 'wapuugotchi_items' );
 		if ( is_array( $items ) && ! empty( $items ) ) {

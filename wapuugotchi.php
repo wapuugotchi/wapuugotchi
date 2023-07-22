@@ -60,12 +60,14 @@ function init() {
 	require_once 'inc/tasks/QuestTheme.php';
 	require_once 'inc/tasks/QuestDate.php';
 	require_once 'inc/tasks/QuestStart.php';
+	require_once 'inc/tasks/QuestDaily.php';
 	new QuestManager();
 	new QuestContent();
 	new QuestPlugin();
 	new QuestTheme();
 	new QuestDate();
 	new QuestStart();
+	new QuestDaily();
 }
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

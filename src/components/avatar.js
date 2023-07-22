@@ -20,7 +20,7 @@ export default function Avatar() {
 					x="0"
 					y="0"
 					version="1.1"
-					viewBox="140 100 700 765"
+					viewBox="0 0 1000 1000"
 					dangerouslySetInnerHTML={{ __html: svg }}
 				></svg>
 			</div>

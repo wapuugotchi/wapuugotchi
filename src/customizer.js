@@ -1,12 +1,12 @@
-import { render, StrictMode } from "@wordpress/element";
-import domReady from "@wordpress/dom-ready";
-import Shop from "./components/shop";
+import { render, StrictMode } from '@wordpress/element';
+import domReady from '@wordpress/dom-ready';
+import Shop from './components/shop';
 
-domReady(() =>
+domReady( () =>
 	render(
 		<StrictMode>
 			<Shop />
 		</StrictMode>,
-		document.getElementById("wapuugotchi-app")
+		document.getElementById( 'wapuugotchi-app' )
 	)
 );

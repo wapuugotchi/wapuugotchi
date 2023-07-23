@@ -35,5 +35,12 @@
 		"@wordpress/i18n": "^4.37.0",
 		"html-react-parser": "^3.0.16",
 		"react-svg": "^16.1.6"
-	}
+	},
+	"files": [
+		"build",
+		"inc",
+		"wapuugotchi.php",
+		"config",
+		"LICENSE"
+	]
 }

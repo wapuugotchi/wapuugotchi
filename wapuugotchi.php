@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Wapuugotchi
  * Description:       Meet Your Personalized Wapuu Assistant.
- * Requires at least: 6.1
+ * Requires at least: 6.0
  * Requires PHP:      7.0
  * Version:           0.1.0
  * Author:            herrfeldmann

@@ -1,12 +1,12 @@
-import { render, StrictMode } from "@wordpress/element";
-import domReady from "@wordpress/dom-ready";
-import MenuHeader from "./components/menu-header";
+import { render, StrictMode } from '@wordpress/element';
+import domReady from '@wordpress/dom-ready';
+import MenuHeader from './components/menu-header';
 
-domReady(() =>
+domReady( () =>
 	render(
 		<StrictMode>
-			<MenuHeader title="mops" description="klops"/>
+			<MenuHeader title="mops" description="klops" />
 		</StrictMode>,
-		document.getElementById("wapuugotchi-app")
+		document.getElementById( 'wapuugotchi-app' )
 	)
 );

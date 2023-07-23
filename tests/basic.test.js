@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test')
-const { TEST_USER, TEST_PASS, TEST_URL } = process.env
+const TEST_USER = process.env.TEST_USER || 'admin'
+const TEST_PASS = process.env.TEST_PASS || 'password'
 
 test.describe('basic', () => {
   test.beforeEach(async ({page}) => {

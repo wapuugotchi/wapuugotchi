@@ -6,8 +6,20 @@ const { test, expect } = require('@playwright/test');
 const TEST_USER = process.env.TEST_USER || 'admin'
 const TEST_PASS = process.env.TEST_PASS || 'password'
 
+test.beforeEach(async ({page}) => {
+	await page.goto( '/wp-login.php', {waitUntil: 'networkidle'})
+	await expect(page).toHaveTitle(/Log In/)
+
+	/** initiate login process */
+	await page.fill('#user_login', TEST_USER)
+	await page.fill('#user_pass', TEST_PASS)
+	await page.click('#wp-submit')
+
+	/** correct redirect to dashboard */
+	await page.waitForLoadState('networkidle')
+	await expect(page).toHaveTitle(/Dashboard/)
+})
 test('collection is displayed', async ({page}) => {
-  await login( page )
   await page.goto( '/wp-admin/admin.php?page=wapuugotchi' );
   await expect( await page.locator( '.wapuu_card__item' ).count() ).toBeGreaterThan( 1 );
 });
@@ -51,7 +63,7 @@ function wpcommand( command ) {
   if (result.status !== 0) {
     throw "WP-CLI command failed.";
   }
-  
+
   return result.stdout.toString();
 }
 
@@ -72,7 +84,7 @@ async function login( page ) {
  *
  * @param {string} name Name of the transient.
  * @param {string} filePath Path to JSON file.
- * 
+ *
  */
 function setTransientFromJSONFile( name, filePath ) {
   console.log( `Setting config ${filePath}` );

@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test')
-const { TEST_USER, TEST_PASS, TEST_URL } = process.env
+const TEST_USER = process.env.TEST_USER || 'admin'
+const TEST_PASS = process.env.TEST_PASS || 'password'
 
 test.describe('avatar', () => {
   test.beforeEach(async ({page}) => {
@@ -20,8 +21,8 @@ test.describe('avatar', () => {
   test('avatar exist', async ({page}) => {
     await page.goto('/wp-admin/', {waitUntil: 'networkidle'})
     await expect(page).toHaveTitle(/Dashboard/)
-    const wapuu = await page.locator('#wapuugotchi')
+    const wapuu = await page.locator('#wapuugotchi__avatar')
     await expect(wapuu).toHaveCount(1)
-    await expect(wapuu.locator('img')).toHaveCount(2)
+    await expect(wapuu.locator('svg')).toHaveCount(1)
   })
 })

@@ -42,9 +42,9 @@ test.describe('Shop', () => {
     const selector = await page.locator('.wapuu_card__categories')
     const categories = ['caps','items','coats','balls', 'fur']
     for (const category of categories) {
-      await expect(selector.locator('[category="' + category + '"]')).not.toHaveClass(/selected/)
-      await selector.locator('[category="' + category + '"]').click()
-      await expect(selector.locator('[category="' + category + '"]')).toHaveClass(/selected/)
+      await expect(selector.locator('[data-category="' + category + '"]')).not.toHaveClass(/selected/)
+      await selector.locator('[data-category="' + category + '"]').click()
+      await expect(selector.locator('[data-category="' + category + '"]')).toHaveClass(/selected/)
     }
   })
 
@@ -54,8 +54,8 @@ test.describe('Shop', () => {
 
     /** select specific category */
     const categories = await page.locator('.wapuu_card__categories')
-    await categories.locator('[category="caps"]').click()
-    await expect(categories.locator('[category="caps"]')).toHaveClass(/selected/)
+    await categories.locator('[data-category="caps"]').click()
+    await expect(categories.locator('[data-category="caps"]')).toHaveClass(/selected/)
 
     /** select the first item and expect change in the mirror */
     const items = await page.locator('.wapuu_card__items')
@@ -71,8 +71,8 @@ test.describe('Shop', () => {
 
     /** select specific category */
     const categories = await page.locator('.wapuu_card__categories')
-    await categories.locator('[category="caps"]').click()
-    await expect(categories.locator('[category="caps"]')).toHaveClass(/selected/)
+    await categories.locator('[data-category="caps"]').click()
+    await expect(categories.locator('[data-category="caps"]')).toHaveClass(/selected/)
 
     /** Select the first item and run cleanup */
     const items = await page.locator('.wapuu_card__items')

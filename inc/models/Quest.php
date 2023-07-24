@@ -2,17 +2,20 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
-if ( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
+if ( ! defined( 'ABSPATH' ) ) :
+	exit();
+endif; // No direct access allowed.
 
 class Quest {
-	private $id = '';
-	private $parent_id = '';
-	private $title = '';
-	private $message = '';
-	private $priority = '';
-	private $type = '';
-	private $pearls = '';
-	private $active_callback = '';
+
+	private $id                 = '';
+	private $parent_id          = '';
+	private $title              = '';
+	private $message            = '';
+	private $priority           = '';
+	private $type               = '';
+	private $pearls             = '';
+	private $active_callback    = '';
 	private $completed_callback = '';
 
 	/**

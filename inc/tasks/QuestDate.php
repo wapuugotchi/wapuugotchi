@@ -8,25 +8,25 @@ endif; // No direct access allowed.
 
 class QuestDate {
 
+
 	public function __construct() {
 		add_filter( 'wapuugotchi_quest_filter', array( $this, 'add_wapuugotchi_filter' ) );
-		//add_filter('admin_init', array($this, 'add_wapuugotchi_filter'));
-
+		// add_filter('admin_init', array($this, 'add_wapuugotchi_filter'));
 	}
 
 	public function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_1', null, __('Log in on 10 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 10 consecutive days!', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Wapuugotchi\QuestDate::always_true', 'Wapuugotchi\Wapuugotchi\QuestDate::login_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_2', 'login_1', __('Log in on 20 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 20 consecutive days!', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestDate::always_true', 'Wapuugotchi\Wapuugotchi\QuestDate::login_completed_2' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_3', 'login_2', __('Log in on 30 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 30 consecutive days!', 'wapuugotchi' ), 'success', 100, 3, 'Wapuugotchi\Wapuugotchi\QuestDate::always_true', 'Wapuugotchi\Wapuugotchi\QuestDate::login_completed_3' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_4', 'login_3', __('Log in on 40 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 40 consecutive days!', 'wapuugotchi' ), 'success', 100, 4, 'Wapuugotchi\Wapuugotchi\QuestDate::always_true', 'Wapuugotchi\Wapuugotchi\QuestDate::login_completed_4' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'login_5', 'login_4', __('Log in on 50 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 50 consecutive days!', 'wapuugotchi' ), 'success', 100, 5, 'Wapuugotchi\Wapuugotchi\QuestDate::always_true', 'Wapuugotchi\Wapuugotchi\QuestDate::login_completed_5' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'login_1', null, __( 'Log in on 10 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 10 consecutive days!', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Wapuugotchi\QuestDate::always_true', 'Wapuugotchi\Wapuugotchi\QuestDate::login_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'login_2', 'login_1', __( 'Log in on 20 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 20 consecutive days!', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestDate::always_true', 'Wapuugotchi\Wapuugotchi\QuestDate::login_completed_2' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'login_3', 'login_2', __( 'Log in on 30 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 30 consecutive days!', 'wapuugotchi' ), 'success', 100, 3, 'Wapuugotchi\Wapuugotchi\QuestDate::always_true', 'Wapuugotchi\Wapuugotchi\QuestDate::login_completed_3' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'login_4', 'login_3', __( 'Log in on 40 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 40 consecutive days!', 'wapuugotchi' ), 'success', 100, 4, 'Wapuugotchi\Wapuugotchi\QuestDate::always_true', 'Wapuugotchi\Wapuugotchi\QuestDate::login_completed_4' ),
+			new \Wapuugotchi\Wapuugotchi\Quest( 'login_5', 'login_4', __( 'Log in on 50 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 50 consecutive days!', 'wapuugotchi' ), 'success', 100, 5, 'Wapuugotchi\Wapuugotchi\QuestDate::always_true', 'Wapuugotchi\Wapuugotchi\QuestDate::login_completed_5' ),
 		);
 
 		return array_merge( $default_quest, $quests );
 	}
 
-	//Posts
+	// Posts
 	public static function always_true() {
 		return true;
 	}
@@ -79,22 +79,22 @@ class QuestDate {
 
 	private static function count_days() {
 		$quest_meta = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_meta__alpha', true );
-		if ( ! is_array( $quest_meta ) ||
-			 ! isset( $quest_meta['day_count'] ) ||
-			 ! isset( $quest_meta['day_count']['days'] ) ||
-			 ! isset( $quest_meta['day_count']['tstamp'] )
+		if ( ! is_array( $quest_meta )
+			|| ! isset( $quest_meta['day_count'] )
+			|| ! isset( $quest_meta['day_count']['days'] )
+			|| ! isset( $quest_meta['day_count']['tstamp'] )
 		) {
 			$quest_meta = array(
 				'day_count' => array(
 					'tstamp' => 0,
-					'days'  => 0,
+					'days'   => 0,
 				),
 			);
 		}
 
 		if ( $quest_meta['day_count']['tstamp'] < strtotime( 'now' ) ) {
 			$quest_meta['day_count']['tstamp'] = strtotime( 'tomorrow noon' );
-			$quest_meta['day_count']['days']   += 1;
+			$quest_meta['day_count']['days']  += 1;
 			update_user_meta(
 				get_current_user_id(),
 				'wapuugotchi_quest_meta__alpha',
@@ -106,7 +106,7 @@ class QuestDate {
 	}
 
 
-	//helper
+	// helper
 	private static function is_active_plugin_in_list( $list ) {
 		if ( ! is_array( $list ) ) {
 			return false;

@@ -2,9 +2,12 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
-if ( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
+if ( ! defined( 'ABSPATH' ) ) :
+	exit();
+endif; // No direct access allowed.
 
 class QuestStart {
+
 
 	public function __construct() {
 		add_filter( 'wapuugotchi_quest_filter', array( $this, 'add_wapuugotchi_filter' ) );

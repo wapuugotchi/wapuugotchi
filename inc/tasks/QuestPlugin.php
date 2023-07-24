@@ -8,10 +8,10 @@ endif; // No direct access allowed.
 
 class QuestPlugin {
 
+
 	public function __construct() {
 		add_filter( 'wapuugotchi_quest_filter', array( $this, 'add_wapuugotchi_filter' ) );
-		//add_filter('admin_init', array($this, 'add_wapuugotchi_filter'));
-
+		// add_filter('admin_init', array($this, 'add_wapuugotchi_filter'));
 	}
 
 	public function add_wapuugotchi_filter( $quests ) {
@@ -24,7 +24,7 @@ class QuestPlugin {
 		return array_merge( $default_quest, $quests );
 	}
 
-	//Posts
+	// Posts
 	public static function always_true() {
 		return true;
 	}
@@ -71,7 +71,7 @@ class QuestPlugin {
 	}
 
 
-	//helper
+	// helper
 	private static function is_active_plugin_in_list( $list ) {
 		if ( ! is_array( $list ) ) {
 			return false;

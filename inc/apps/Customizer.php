@@ -10,6 +10,7 @@ endif; // No direct access allowed.
 
 class Customizer {
 
+
 	public function __construct() {
 		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
@@ -21,7 +22,7 @@ class Customizer {
 	}
 
 	public function load_scripts() {
-		$assets = require_once WAPUUGOTCHI_PATH . 'build/customizer.asset.php';
+		$assets = include_once WAPUUGOTCHI_PATH . 'build/customizer.asset.php';
 		wp_enqueue_style( 'wapuugotchi-shop', WAPUUGOTCHI_URL . 'build/customizer.css', array(), $assets['version'] );
 		wp_enqueue_script( 'wapuugotchi-shop', WAPUUGOTCHI_URL . 'build/customizer.js', $assets['dependencies'], $assets['version'], true );
 		wp_add_inline_script(

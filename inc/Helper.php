@@ -10,7 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) :
 endif; // No direct access allowed.
 
 class Helper {
-	const COLLECTION_API_URL = 'https://api.wapuugotchi.com/collection';
+
+	const COLLECTION_API_URL   = 'https://api.wapuugotchi.com/collection';
 	const COLLECTION_STRUCTURE = array(
 		'fur'   => '',
 		'balls' => '',

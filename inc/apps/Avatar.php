@@ -8,6 +8,7 @@ endif; // No direct access allowed.
 
 class Avatar {
 
+
 	public function __construct() {
 		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
@@ -19,7 +20,7 @@ class Avatar {
 	}
 
 	public function load_scripts() {
-		$assets = require_once WAPUUGOTCHI_PATH . 'build/index.asset.php';
+		$assets = include_once WAPUUGOTCHI_PATH . 'build/index.asset.php';
 		wp_enqueue_style( 'wapuugotchi-avatar', WAPUUGOTCHI_URL . 'build/index.css', array(), $assets['version'] );
 		wp_enqueue_script( 'wapuugotchi-avatar', WAPUUGOTCHI_URL . 'build/index.js', $assets['dependencies'], $assets['version'], true );
 		wp_add_inline_script(
@@ -63,7 +64,7 @@ class Avatar {
 						'category' => 'quest',
 						'id'       => $quest->get_id(),
 						'message'  => $quest->get_message(),
-						'type'     => $quest->get_type()
+						'type'     => $quest->get_type(),
 					);
 
 					break;

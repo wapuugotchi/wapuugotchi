@@ -8,6 +8,7 @@ endif; // No direct access allowed.
 
 class Log {
 
+
 	public function __construct() {
 		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
@@ -19,7 +20,7 @@ class Log {
 	}
 
 	public function load_scripts() {
-		$assets = require_once WAPUUGOTCHI_PATH . 'build/quest-log.asset.php';
+		$assets = include_once WAPUUGOTCHI_PATH . 'build/quest-log.asset.php';
 		wp_enqueue_style( 'wapuugotchi-log', WAPUUGOTCHI_URL . 'build/quest-log.css', array(), $assets['version'] );
 		wp_enqueue_script( 'wapuugotchi-log', WAPUUGOTCHI_URL . 'build/quest-log.js', $assets['dependencies'], $assets['version'], true );
 		wp_add_inline_script(
@@ -27,7 +28,7 @@ class Log {
 			'window.extWapuugotchiLogData = ' . wp_json_encode(
 				array(
 					'active_quests'    => $this->get_active_quests(),
-					'completed_quests' => $this->get_completed_quests()
+					'completed_quests' => $this->get_completed_quests(),
 				)
 			),
 			'before'
@@ -42,7 +43,7 @@ class Log {
 		foreach ( $active_quests as $active_quest ) {
 			$result[] = array(
 				'title'  => $active_quest->get_title(),
-				'pearls' => $active_quest->get_pearls()
+				'pearls' => $active_quest->get_pearls(),
 			);
 		}
 
@@ -59,7 +60,7 @@ class Log {
 					$result[] = array(
 						'title'  => $quest->get_title(),
 						'pearls' => $quest->get_pearls(),
-						'date'   => $completed_quest['date']
+						'date'   => $completed_quest['date'],
 					);
 
 					break;

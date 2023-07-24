@@ -7,6 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) :
 endif; // No direct access allowed.
 
 class Manager {
+
 	public function __construct() {
 		add_action( 'admin_init', array( $this, 'init' ) );
 	}
@@ -85,7 +86,7 @@ class Manager {
 		}
 
 		$keys = array_keys( $item );
-		$md5 = md5( json_encode( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) );
+		$md5  = md5( json_encode( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) );
 		if ( $keys[0] !== $md5 ) {
 			return false;
 		}

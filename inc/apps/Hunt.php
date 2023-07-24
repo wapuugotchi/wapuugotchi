@@ -8,6 +8,7 @@ endif; // No direct access allowed.
 
 class Hunt {
 
+
 	public function __construct() {
 		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
@@ -19,7 +20,7 @@ class Hunt {
 	}
 
 	public function load_scripts() {
-		$assets = require_once WAPUUGOTCHI_PATH . 'build/scavenger-hunt.asset.php';
+		$assets = include_once WAPUUGOTCHI_PATH . 'build/scavenger-hunt.asset.php';
 		wp_enqueue_style( 'wapuugotchi-hunt', WAPUUGOTCHI_URL . 'build/scavenger-hunt.css', array(), $assets['version'] );
 		wp_enqueue_script( 'wapuugotchi-hunt', WAPUUGOTCHI_URL . 'build/scavenger-hunt.js', $assets['dependencies'], $assets['version'], true );
 		wp_add_inline_script(

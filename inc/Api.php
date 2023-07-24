@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) :
 endif; // No direct access allowed.
 
 class Api {
+
 	const REST_BASE = 'wapuugotchi/v1';
 
 	public function __construct() {
@@ -116,14 +117,15 @@ class Api {
 		$body  = json_decode( $req->get_body() );
 		$state = false;
 
-		if ( $body->remove_message !== null) {
-			if( $body->remove_message->category === "notification" ) {
-				$active_notifications = NotificationManager::get_active_quests();
+		if ( $body->remove_message !== null ) {
+			if ( $body->remove_message->category === 'notification' ) {
+				$active_notifications    = NotificationManager::get_active_quests();
 				$confirmed_notifications = get_user_meta( get_current_user_id(), 'wapuugotchi_confirmed_notifications__alpha', true );
 				foreach ( $active_notifications as $active_notification ) {
-					if( $active_notification['id'] === $body->remove_message->id ) {
+					if ( $active_notification['id'] === $body->remove_message->id ) {
 						$confirmed_notifications[ $active_notification['id'] ] = array(
-							'id' => $active_notification['id'], 'remember' => $active_notification['remember']
+							'id'       => $active_notification['id'],
+							'remember' => $active_notification['remember'],
 						);
 					}
 				}
@@ -133,9 +135,9 @@ class Api {
 					'wapuugotchi_confirmed_notifications__alpha',
 					$confirmed_notifications
 				);
-			} else if ( $body->remove_message->category === "quest" ) {
+			} elseif ( $body->remove_message->category === 'quest' ) {
 				$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', true );
-				if(isset( $completed_quests[ $body->remove_message->id ] )) {
+				if ( isset( $completed_quests[ $body->remove_message->id ] ) ) {
 					$completed_quests[ $body->remove_message->id ]['notified'] = true;
 					update_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha', $completed_quests );
 					$state = true;

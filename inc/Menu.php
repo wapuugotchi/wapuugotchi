@@ -14,7 +14,7 @@ class Menu {
 		$slug       = 'wapuugotchi';
 
 		add_menu_page(
-			__( 'WapuuGotchi', 'wapuugotchi' ),
+			__( 'Wapuugotchi', 'wapuugotchi' ),
 			__( 'WapuuGotchi', 'wapuugotchi' ),
 			$capability,
 			$slug,
@@ -23,7 +23,7 @@ class Menu {
 		);
 		add_submenu_page(
 			$slug,
-			__( 'WapuuGotchi', 'wapuugotchi' ),
+			__( 'Wapuugotchi', 'wapuugotchi' ),
 			__( 'Customizer', 'wapuugotchi' ),
 			$capability,
 			$slug,
@@ -31,7 +31,7 @@ class Menu {
 		);
 		add_submenu_page(
 			$slug,
-			__( 'WapuuGotchi', 'wapuugotchi' ),
+			__( 'Wapuugotchi', 'wapuugotchi' ),
 			__( 'Quest Log', 'wapuugotchi' ),
 			$capability,
 			$slug . '-quests',

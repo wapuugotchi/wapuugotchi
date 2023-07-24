@@ -1,4 +1,4 @@
-=== Wapuugotchi ===
+=== WapuuGotchi ===
 Contributors:      herrfeldmann
 Tags:              assistant, wapuu, gamification
 Stable tag:        0.1.0

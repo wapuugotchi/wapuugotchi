@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Wapuugotchi
+ * Plugin Name:       WapuuGotchi
  * Description:       Meet Your Personalized Wapuu Assistant.
  * Requires at least: 6.0
  * Requires PHP:      7.0

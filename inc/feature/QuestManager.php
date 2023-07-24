@@ -9,9 +9,7 @@ namespace Wapuugotchi\Wapuugotchi;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
-endif; // No direct access allowed.
-
-// phpcs:disable  WordPress.Files.FileName.NotHyphenatedLowercase
+endif; // No direct access allowed
 
 /**
  * Class QuestManager

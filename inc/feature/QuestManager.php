@@ -9,7 +9,7 @@ namespace Wapuugotchi\Wapuugotchi;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
-endif; // No direct access allowed
+endif; // No direct access allowed.
 
 /**
  * Class QuestManager

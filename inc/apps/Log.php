@@ -16,7 +16,6 @@ endif; // No direct access allowed.
  */
 class Log {
 
-
 	/**
 	 * "Constructor" of this Class
 	 */

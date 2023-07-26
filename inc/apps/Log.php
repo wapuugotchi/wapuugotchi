@@ -1,4 +1,9 @@
 <?php
+/**
+ * The Log Class.
+ *
+ * @package WapuuGotchi
+ */
 
 namespace Wapuugotchi\Wapuugotchi;
 
@@ -6,19 +11,37 @@ if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
 
+/**
+ * Class Log
+ */
 class Log {
 
 
+	/**
+	 * "Constructor" of this Class
+	 */
 	public function __construct() {
 		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
 
+	/**
+	 * Initialization Manager
+	 *
+	 * @param string $hook_suffix The internal page name.
+	 *
+	 * @return void
+	 */
 	public function init( $hook_suffix ) {
-		if ( $hook_suffix === 'wapuugotchi_page_wapuugotchi-quests' ) {
+		if ( 'wapuugotchi_page_wapuugotchi-quests' === $hook_suffix ) {
 			$this->load_scripts();
 		}
 	}
 
+	/**
+	 * Load the Log scripts ( css and react ).
+	 *
+	 * @return void
+	 */
 	public function load_scripts() {
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/quest-log.asset.php';
 		wp_enqueue_style( 'wapuugotchi-log', WAPUUGOTCHI_URL . 'build/quest-log.css', array(), $assets['version'] );
@@ -37,6 +60,11 @@ class Log {
 		\wp_set_script_translations( 'wapuugotchi-log', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
+	/**
+	 * Get all active quests.
+	 *
+	 * @return array
+	 */
 	private function get_active_quests() {
 		$result        = array();
 		$active_quests = QuestManager::get_active_quests();
@@ -50,6 +78,11 @@ class Log {
 		return $result;
 	}
 
+	/**
+	 * Get all completed quests.
+	 *
+	 * @return array
+	 */
 	private function get_completed_quests() {
 		$result           = array();
 		$all_quests       = QuestManager::get_all_quests();

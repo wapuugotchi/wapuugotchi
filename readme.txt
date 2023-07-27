@@ -19,6 +19,13 @@ Complete tasks within your WordPress instance to earn points, unlock new items, 
 
 == Changelog ==
 
+= 0.1.1 =
+- Animations are now part of the svg files.
+- complete esLint:js issues
+- complete esLint:css issues
+- complete PHPcs issues
+- update lanuages
+
 = 0.1.0 =
 first stable version
 - implement wapuu-avatar

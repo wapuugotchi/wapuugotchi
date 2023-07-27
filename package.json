@@ -39,6 +39,7 @@
 	"files": [
 		"build",
 		"inc",
+		"languages",
 		"wapuugotchi.php",
 		"config",
 		"LICENSE"

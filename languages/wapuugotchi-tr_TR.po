@@ -8,8 +8,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2023-07-27 22:56+0200\n"
-"PO-Revision-Date: 2023-07-27 23:00+0200\n"
-"Language: es\n"
+"PO-Revision-Date: 2023-07-27 23:09+0200\n"
+"Language: tr\n"
 "X-Generator: Poedit 3.3.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -22,26 +22,26 @@ msgstr ""
 #: inc/Api.php:227
 #, fuzzy
 msgid "Insufficent balance"
-msgstr "Equilibrio insuficiente"
+msgstr "Yetersiz denge"
 
 #: inc/Api.php:246
 #, fuzzy
 msgid "Missing UUID."
-msgstr "Falta UUID."
+msgstr "Eksik UUID."
 
 #: inc/Api.php:252
 #, fuzzy
 msgid "Item already unlocked."
-msgstr "Artículo ya desbloqueado."
+msgstr "Ürünün kilidi zaten açıldı."
 
 #: inc/Api.php:265
 #, fuzzy
 msgid "Item does not exist."
-msgstr "El artículo no existe."
+msgstr "Öğe mevcut değil."
 
 #: inc/Api.php:269
 msgid "Insufficient balance."
-msgstr "Saldo insuficiente."
+msgstr "Yetersiz bakiye."
 
 #: inc/Menu.php:36
 #: inc/Menu.php:45
@@ -58,298 +58,299 @@ msgstr "WapuuGotchi"
 
 #: inc/Menu.php:46
 msgid "Customizer"
-msgstr "Personalizador"
+msgstr "Özelleştirici"
 
 #: inc/Menu.php:54
 #, fuzzy
 msgid "Quest Log"
-msgstr "Diario de búsqueda"
+msgstr "Görev Günlüğü"
 
 #: inc/tasks/QuestContent.php:35
 #, fuzzy
 msgid "Create 3 posts"
-msgstr "Crear 3 puestos"
+msgstr "3 gönderi oluşturun"
 
 #: inc/tasks/QuestContent.php:35
 #, fuzzy
 msgid "You created 3 posts!!"
-msgstr "¡¡Has creado 3 puestos!!"
+msgstr "3 gönderi oluşturdunuz!!!"
 
 #: inc/tasks/QuestContent.php:36
 #, fuzzy
 msgid "Create 5 posts"
-msgstr "Crear 5 puestos"
+msgstr "5 gönderi oluşturun"
 
 #: inc/tasks/QuestContent.php:36
 #, fuzzy
 msgid "You created 5 posts!!"
-msgstr "¡¡Has creado 5 puestos!!"
+msgstr "5 gönderi oluşturdunuz!!!"
 
 #: inc/tasks/QuestContent.php:37
 #, fuzzy
 msgid "Create 7 posts"
-msgstr "Crear 7 puestos"
+msgstr "7 gönderi oluşturun"
 
 #: inc/tasks/QuestContent.php:37
 #, fuzzy
 msgid "You created 7 posts!!"
-msgstr "¡¡Has creado 7 puestos!!"
+msgstr "7 gönderi oluşturdunuz!!!"
 
 #: inc/tasks/QuestContent.php:38
 #, fuzzy
 msgid "Create 3 pages"
-msgstr "Crear 3 páginas"
+msgstr "3 sayfa oluşturun"
 
 #: inc/tasks/QuestContent.php:38
 #, fuzzy
 msgid "You created 3 pages!!"
-msgstr "¡¡Has creado 3 páginas!!"
+msgstr "3 sayfa oluşturmuşsun!!!"
 
 #: inc/tasks/QuestContent.php:39
 #, fuzzy
 msgid "Create 5 pages"
-msgstr "Crear 5 páginas"
+msgstr "5 sayfa oluşturun"
 
 #: inc/tasks/QuestContent.php:39
 #, fuzzy
 msgid "You created 5 pages!!"
-msgstr "¡¡Has creado 5 páginas!!"
+msgstr "5 sayfa yarattınız!!!"
 
 #: inc/tasks/QuestContent.php:40
 #, fuzzy
 msgid "Create 7 pages"
-msgstr "Crear 7 páginas"
+msgstr "7 sayfa oluşturun"
 
 #: inc/tasks/QuestContent.php:40
 #, fuzzy
 msgid "You created 7 pages!!"
-msgstr "¡¡Has creado 7 páginas!!"
+msgstr "7 sayfa yarattınız!!!"
 
 #: inc/tasks/QuestContent.php:41
 #, fuzzy
 msgid "Get 1 comment"
-msgstr "Obtener 1 comentario"
+msgstr "1 yorum alın"
 
 #: inc/tasks/QuestContent.php:41
 #, fuzzy
 msgid "Cool, we get some attention. &#10024;"
-msgstr "Que guay, nos llaman la atención. ✨"
+msgstr "Harika, biraz dikkat çektik. ✨"
 
 #: inc/tasks/QuestContent.php:42
 #, fuzzy
 msgid "Get 5 comments"
-msgstr "Obtener 5 comentarios"
+msgstr "5 yorum alın"
 
 #: inc/tasks/QuestContent.php:42
 #, fuzzy
 msgid "We get more and more attention. &#10024;"
-msgstr "Cada vez nos prestan más atención. ✨"
+msgstr "Giderek daha fazla ilgi görüyoruz. ✨"
 
 #: inc/tasks/QuestContent.php:43
 #, fuzzy
 msgid "Get 10 comments"
-msgstr "Obtener 10 comentarios"
+msgstr "10 yorum alın"
 
 #: inc/tasks/QuestContent.php:43
 #, fuzzy
 msgid "Oh my god!"
-msgstr "¡Dios mío!"
+msgstr "Aman Tanrım!"
 
 #: inc/tasks/QuestContent.php:43
 #, fuzzy
 msgid "We are starting to become famous. &#127775;"
-msgstr "Estamos empezando a hacernos famosos. 🌟"
+msgstr "Ünlü olmaya başlıyoruz. 🌟"
 
 #: inc/tasks/QuestDate.php:35
 #, fuzzy
 msgid "Log in on 10 different days"
-msgstr "Iniciar sesión en 10 días diferentes"
+msgstr "10 farklı günde oturum açın"
 
 #: inc/tasks/QuestDate.php:35
 #, fuzzy
 msgid "Nice, you logged in for 10 consecutive days!"
-msgstr "Bien, ¡te has conectado durante 10 días consecutivos!"
+msgstr "Güzel, 10 gün üst üste giriş yapmışsın!"
 
 #: inc/tasks/QuestDate.php:36
 #, fuzzy
 msgid "Log in on 20 different days"
-msgstr "Iniciar sesión en 20 días diferentes"
+msgstr "20 farklı günde oturum açın"
 
 #: inc/tasks/QuestDate.php:36
 #, fuzzy
 msgid "Nice, you logged in for 20 consecutive days!"
-msgstr "Bien, ¡te has conectado durante 20 días consecutivos!"
+msgstr "Güzel, 20 gün üst üste giriş yapmışsın!"
 
 #: inc/tasks/QuestDate.php:37
 #, fuzzy
 msgid "Log in on 30 different days"
-msgstr "Conéctese 30 días diferentes"
+msgstr "30 farklı günde oturum açın"
 
 #: inc/tasks/QuestDate.php:37
 #, fuzzy
 msgid "Nice, you logged in for 30 consecutive days!"
-msgstr "Bien, ¡te has conectado durante 30 días consecutivos!"
+msgstr "Güzel, 30 gün üst üste giriş yaptınız!"
 
 #: inc/tasks/QuestDate.php:38
 #, fuzzy
 msgid "Log in on 40 different days"
-msgstr "Conéctese 40 días diferentes"
+msgstr "40 farklı günde oturum açın"
 
 #: inc/tasks/QuestDate.php:38
 #, fuzzy
 msgid "Nice, you logged in for 40 consecutive days!"
-msgstr "Bien, ¡te has conectado durante 40 días consecutivos!"
+msgstr "Güzel, 40 gün üst üste giriş yapmışsın!"
 
 #: inc/tasks/QuestDate.php:39
 #, fuzzy
 msgid "Log in on 50 different days"
-msgstr "Conéctese 50 días diferentes"
+msgstr "50 farklı günde oturum açın"
 
 #: inc/tasks/QuestDate.php:39
 #, fuzzy
 msgid "Nice, you logged in for 50 consecutive days!"
-msgstr "Bien, ¡te has conectado durante 50 días consecutivos!"
+msgstr "Güzel, 50 gün üst üste giriş yapmışsın!"
 
 #: inc/tasks/QuestPlugin.php:35
 #, fuzzy
 msgid "Activate a SEO plugin"
-msgstr "Activar un plugin SEO"
+msgstr "Bir SEO eklentisini etkinleştirin"
 
 #: inc/tasks/QuestPlugin.php:35
 #, fuzzy
 msgid "Awesome! &#128261;"
-msgstr "¡Impresionante! 🔅"
+msgstr "Harika! 🔅"
 
 #: inc/tasks/QuestPlugin.php:35
 #, fuzzy
 msgid "You've installed a SEO plugin. Let's add some keywords so that search engines can find us better."
-msgstr "Has instalado un plugin SEO. Vamos a añadir algunas palabras clave para que los motores de búsqueda nos encuentren mejor."
+msgstr "Bir SEO eklentisi yüklediniz. Arama motorlarının bizi daha iyi bulabilmesi için bazı anahtar kelimeler ekleyelim."
 
 #: inc/tasks/QuestPlugin.php:36
 #, fuzzy
 msgid "Activate a caching plugin"
-msgstr "Activar un plugin de caché"
+msgstr "Bir önbellek eklentisini etkinleştirin"
 
 #: inc/tasks/QuestPlugin.php:36
 #, fuzzy
 msgid "Fantastic! &#128171;"
-msgstr "¡Fantástico! 💫"
+msgstr "Muhteşem! 💫"
 
 #: inc/tasks/QuestPlugin.php:36
 #, fuzzy
 msgid "You've installed a caching plugin. This way we can increase the speed of our website."
-msgstr "Has instalado un plugin de caché. Así podemos aumentar la velocidad de nuestro sitio web."
+msgstr "Bir önbellekleme eklentisi yüklediniz. Bu şekilde web sitemizin hızını artırabiliriz."
 
 #: inc/tasks/QuestPlugin.php:37
 #, fuzzy
 msgid "Activate a security plugin"
-msgstr "Activar un plugin de seguridad"
+msgstr "Bir güvenlik eklentisini etkinleştirin"
 
 #: inc/tasks/QuestPlugin.php:37
 msgid "Great!"
-msgstr "¡Genial!"
+msgstr "Harika!"
 
 #: inc/tasks/QuestPlugin.php:37
 #, fuzzy
 msgid "You've installed a security plugin! This will help protecting me from villains. &#128170;"
-msgstr "¡Has instalado un plugin de seguridad! Esto ayudará a protegerme de los villanos. 💪"
+msgstr "Bir güvenlik eklentisi yüklemişsiniz! Bu beni kötü adamlardan korumaya yardımcı olacak. 💪"
 
 #: inc/tasks/QuestStart.php:35
 #, fuzzy
 msgid "Welcome to Wapuugotchi"
-msgstr "Bienvenido a Wapuugotchi"
+msgstr "Wapuugotchi'ye Hoş Geldiniz"
 
 #: inc/tasks/QuestStart.php:35
 #, fuzzy
 msgid "Thank you for giving me a home! &#10084;&#65039;"
-msgstr "¡Gracias por darme un hogar! ❤️"
+msgstr "Bana bir yuva verdiğiniz için teşekkür ederim! ❤️"
 
 #: inc/tasks/QuestTheme.php:35
 #, fuzzy
 msgid "Remove all unused themes"
-msgstr "Eliminar todos los temas no utilizados"
+msgstr "Kullanılmayan tüm temaları kaldırın"
 
 #: inc/tasks/QuestTheme.php:35
 #, fuzzy
 msgid "You cleaned up! &#129529;"
-msgstr "¡Has limpiado! 🧹"
+msgstr "Temizlenmişsin! 🧹"
 
 #: build/index.js:1
 #: build/customizer.js:1
 #: build/quest-log.js:1
 msgid "Completed"
-msgstr "Completado"
+msgstr "Tamamlandı"
 
 #: build/index.js:1
 #: build/customizer.js:1
 #: build/quest-log.js:1
 #, fuzzy
 msgid "Active Quests"
-msgstr "Misiones activas"
+msgstr "Aktif Görevler"
 
 #: build/index.js:1
 #: build/customizer.js:1
 #: build/quest-log.js:1
+#, fuzzy
 msgid "Completed Quests"
-msgstr "Misiones Completadas"
+msgstr "Tamamlanan Görevler"
 
 #: build/index.js:1
 #: build/customizer.js:1
 #: build/quest-log.js:1
 #, fuzzy
 msgid "Your Pearl Balance:"
-msgstr "Tu equilibrio de perlas:"
+msgstr "İnci Dengeniz:"
 
 #: build/index.js:1
 #: build/customizer.js:1
 #: build/quest-log.js:1
 #, fuzzy
 msgid "Do you want to buy this item?"
-msgstr "¿Desea comprar este artículo?"
+msgstr "Bu ürünü satın almak istiyor musunuz?"
 
 #: build/index.js:1
 #: build/customizer.js:1
 #: build/quest-log.js:1
 msgid "Save"
-msgstr "Guardar"
+msgstr "Kaydet"
 
 #: build/index.js:1
 #: build/customizer.js:1
 #: build/quest-log.js:1
 msgid "Saving…"
-msgstr "Guardando…"
+msgstr "Kaydediliyor…"
 
 #: build/index.js:1
 #: build/customizer.js:1
 #: build/quest-log.js:1
 msgid "Save Settings"
-msgstr "Guardar ajustes"
+msgstr "Ayarları Kaydet"
 
 #: build/index.js:1
 #: build/customizer.js:1
 #: build/quest-log.js:1
 #, fuzzy
 msgid "Customize Your Wapuu with WapuuGotchi"
-msgstr "Personaliza tu Wapuu con WapuuGotchi"
+msgstr "WapuuGotchi ile Wapuu'nuzu Kişiselleştirin"
 
 #: build/index.js:1
 #: build/customizer.js:1
 #: build/quest-log.js:1
 #, fuzzy
 msgid "Browse categories on the left to explore various items and style your Wapuu."
-msgstr "Navega por las categorías de la izquierda para explorar varios artículos y dar estilo a tu Wapuu."
+msgstr "Çeşitli ürünleri keşfetmek ve Wapuu'nuzu şekillendirmek için soldaki kategorilere göz atın."
 
 #: build/index.js:1
 #: build/customizer.js:1
 #: build/quest-log.js:1
 #, fuzzy
 msgid "Reset Changes"
-msgstr "Restablecer cambios"
+msgstr "Değişiklikleri Sıfırla"
 
 #. Description of the plugin/theme
 #, fuzzy
 msgid "Meet Your Personalized Wapuu Assistant."
-msgstr "Conoce a tu asistente Wapuu personalizado."
+msgstr "Kişiselleştirilmiş Wapuu Asistanınızla Tanışın."
 
 #. Author of the plugin/theme
 #, fuzzy

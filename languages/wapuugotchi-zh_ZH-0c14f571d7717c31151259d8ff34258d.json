@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-07-27 23:08+0200",
     "generator": "WP-CLI\/2.8.1",
-    "source": "build\/customizer.js",
+    "source": "build\/quest-log.js",
     "domain": "messages",
     "locale_data": {
         "messages": {

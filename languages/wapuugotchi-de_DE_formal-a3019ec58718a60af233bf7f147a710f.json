@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2023-06-23 21:44+0200",
+    "translation-revision-date": "2023-07-27 22:58+0200",
     "generator": "WP-CLI\/2.8.1",
     "source": "build\/customizer.js",
     "domain": "messages",
@@ -7,29 +7,41 @@
         "messages": {
             "": {
                 "domain": "messages",
-                "lang": "de_DE@formal",
+                "lang": "de",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
-            "Do you want to buy this item?": [
-                "M\u00f6chtest du das Item kaufen?"
+            "Completed": [
+                "Abgeschlossen"
+            ],
+            "Active Quests": [
+                "Aktive Quests"
+            ],
+            "Completed Quests": [
+                "Abgeschlossene Missionen"
             ],
             "Your Pearl Balance:": [
-                "Deine Perlen"
+                "Ihre Perlenbilanz:"
+            ],
+            "Do you want to buy this item?": [
+                "M\u00f6chten Sie diesen Artikel kaufen?"
             ],
             "Save": [
                 "Speichern"
+            ],
+            "Saving\u2026": [
+                "Speichern... "
+            ],
+            "Save Settings": [
+                "Einstellungen speichern"
             ],
             "Customize Your Wapuu with WapuuGotchi": [
                 "Gestalte dein Wapuu mit WapuuGotchi"
             ],
             "Browse categories on the left to explore various items and style your Wapuu.": [
-                "Durchst\u00f6bere die Kategorien auf der linken Seite, um verschiedene Artikel zu entdecken und deinen Wapuu zu gestalten."
-            ],
-            "Saving...": [
-                "Speichere ..."
+                "Durchst\u00f6bern Sie die Kategorien auf der linken Seite, um verschiedene Artikel zu entdecken und Ihr Wapuu zu gestalten."
             ],
             "Reset Changes": [
-                "Zur\u00fccksetzen"
+                "\u00c4nderungen zur\u00fccksetzen"
             ]
         }
     }

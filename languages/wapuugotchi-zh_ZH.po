@@ -1,226 +1,357 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Wapuugotchi 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wapuugotchi\n"
+"Project-Id-Version: WapuuGotchi\n"
+"Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-06-23T19:30:59+00:00\n"
-"PO-Revision-Date: 2023-06-23 21:57+0200\n"
+"POT-Creation-Date: 2023-07-27 22:56+0200\n"
+"PO-Revision-Date: 2023-07-27 23:08+0200\n"
 "Language: zh\n"
-"X-Generator: Poedit 3.3.1\n"
-"X-Domain: wapuugotchi\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wapuugotchi.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#. Plugin Name of the plugin
-#: inc/Menu.php:23
-#: inc/Menu.php:32
-#: inc/Menu.php:40
+#: inc/Api.php:227
+#, fuzzy
+msgid "Insufficent balance"
+msgstr "余额不足"
+
+#: inc/Api.php:246
+#, fuzzy
+msgid "Missing UUID."
+msgstr "缺少 UUID。"
+
+#: inc/Api.php:252
+#, fuzzy
+msgid "Item already unlocked."
+msgstr "项目已解锁。"
+
+#: inc/Api.php:265
+#, fuzzy
+msgid "Item does not exist."
+msgstr "项目不存在。"
+
+#: inc/Api.php:269
+msgid "Insufficient balance."
+msgstr "余额不足。"
+
+#: inc/Menu.php:36
+#: inc/Menu.php:45
+#: inc/Menu.php:53
+#, fuzzy
 msgid "Wapuugotchi"
-msgstr "Wapuugotchi"
+msgstr "瓦普戈特奇"
 
-#. Description of the plugin
-msgid "Meet Your Personalized Wapuu Assistant."
-msgstr "认识您的个性化瓦普吾助理。"
-
-#. Author of the plugin
-msgid "The WordPress Contributors"
-msgstr "WordPress的贡献者们"
-
-#: inc/Menu.php:24
+#. Plugin Name of the plugin/theme
+#: inc/Menu.php:37
+#, fuzzy
 msgid "WapuuGotchi"
 msgstr "巫术"
 
-#: inc/Menu.php:33
+#: inc/Menu.php:46
 msgid "Customizer"
 msgstr "自定义"
 
-#: inc/Menu.php:41
+#: inc/Menu.php:54
+#, fuzzy
 msgid "Quest Log"
 msgstr "任务日志"
 
-#: inc/Menu.php:87
-msgid "Completed"
-msgstr "已完成"
-
-#: inc/tasks/QuestContent.php:15
+#: inc/tasks/QuestContent.php:35
+#, fuzzy
 msgid "Create 3 posts"
 msgstr "创建3个职位"
 
-#: inc/tasks/QuestContent.php:15
+#: inc/tasks/QuestContent.php:35
+#, fuzzy
 msgid "You created 3 posts!!"
 msgstr "你创造了3个职位！!"
 
-#: inc/tasks/QuestContent.php:16
+#: inc/tasks/QuestContent.php:36
+#, fuzzy
 msgid "Create 5 posts"
 msgstr "创建5个职位"
 
-#: inc/tasks/QuestContent.php:16
+#: inc/tasks/QuestContent.php:36
+#, fuzzy
 msgid "You created 5 posts!!"
 msgstr "你创造了5个职位！!"
 
-#: inc/tasks/QuestContent.php:17
+#: inc/tasks/QuestContent.php:37
+#, fuzzy
 msgid "Create 7 posts"
 msgstr "创建7个职位"
 
-#: inc/tasks/QuestContent.php:17
+#: inc/tasks/QuestContent.php:37
+#, fuzzy
 msgid "You created 7 posts!!"
 msgstr "你创造了7个职位！!"
 
-#: inc/tasks/QuestContent.php:18
+#: inc/tasks/QuestContent.php:38
+#, fuzzy
 msgid "Create 3 pages"
 msgstr "创建3个页面"
 
-#: inc/tasks/QuestContent.php:18
+#: inc/tasks/QuestContent.php:38
+#, fuzzy
 msgid "You created 3 pages!!"
 msgstr "你创造了3页！!"
 
-#: inc/tasks/QuestContent.php:19
+#: inc/tasks/QuestContent.php:39
+#, fuzzy
 msgid "Create 5 pages"
 msgstr "创建5页"
 
-#: inc/tasks/QuestContent.php:19
+#: inc/tasks/QuestContent.php:39
+#, fuzzy
 msgid "You created 5 pages!!"
 msgstr "你创造了5页！!"
 
-#: inc/tasks/QuestContent.php:20
+#: inc/tasks/QuestContent.php:40
+#, fuzzy
 msgid "Create 7 pages"
 msgstr "创建7页"
 
-#: inc/tasks/QuestContent.php:20
+#: inc/tasks/QuestContent.php:40
+#, fuzzy
 msgid "You created 7 pages!!"
 msgstr "你创造了7页！!"
 
-#: inc/tasks/QuestContent.php:21
+#: inc/tasks/QuestContent.php:41
+#, fuzzy
 msgid "Get 1 comment"
 msgstr "获得1个评论"
 
-#: inc/tasks/QuestContent.php:21
+#: inc/tasks/QuestContent.php:41
+#, fuzzy
 msgid "Cool, we get some attention. &#10024;"
 msgstr "酷，我们得到了一些关注。✨"
 
-#: inc/tasks/QuestContent.php:22
+#: inc/tasks/QuestContent.php:42
+#, fuzzy
 msgid "Get 5 comments"
 msgstr "获得5个评论"
 
-#: inc/tasks/QuestContent.php:22
+#: inc/tasks/QuestContent.php:42
+#, fuzzy
 msgid "We get more and more attention. &#10024;"
 msgstr "我们得到越来越多的关注。✨"
 
-#: inc/tasks/QuestContent.php:23
+#: inc/tasks/QuestContent.php:43
+#, fuzzy
 msgid "Get 10 comments"
 msgstr "获得10条评论"
 
-#: inc/tasks/QuestContent.php:23
+#: inc/tasks/QuestContent.php:43
+#, fuzzy
 msgid "Oh my god!"
 msgstr "哦，我的天啊!"
 
-#: inc/tasks/QuestDate.php:19
+#: inc/tasks/QuestContent.php:43
+#, fuzzy
+msgid "We are starting to become famous. &#127775;"
+msgstr "我们开始出名了。🌟"
+
+#: inc/tasks/QuestDate.php:35
+#, fuzzy
 msgid "Log in on 10 different days"
 msgstr "在10个不同的日子里登录"
 
-#: inc/tasks/QuestDate.php:19
+#: inc/tasks/QuestDate.php:35
+#, fuzzy
 msgid "Nice, you logged in for 10 consecutive days!"
 msgstr "不错，你连续登录了10天!"
 
-#: inc/tasks/QuestDate.php:20
+#: inc/tasks/QuestDate.php:36
+#, fuzzy
 msgid "Log in on 20 different days"
 msgstr "在20个不同的日子里登录"
 
-#: inc/tasks/QuestDate.php:20
+#: inc/tasks/QuestDate.php:36
+#, fuzzy
 msgid "Nice, you logged in for 20 consecutive days!"
 msgstr "不错，你连续登录了20天!"
 
-#: inc/tasks/QuestDate.php:21
+#: inc/tasks/QuestDate.php:37
+#, fuzzy
 msgid "Log in on 30 different days"
 msgstr "在30个不同的日子里登录"
 
-#: inc/tasks/QuestDate.php:21
+#: inc/tasks/QuestDate.php:37
+#, fuzzy
 msgid "Nice, you logged in for 30 consecutive days!"
 msgstr "不错，你连续登录了30天!"
 
-#: inc/tasks/QuestDate.php:22
+#: inc/tasks/QuestDate.php:38
+#, fuzzy
 msgid "Log in on 40 different days"
 msgstr "在40个不同的日子里登录"
 
-#: inc/tasks/QuestDate.php:22
+#: inc/tasks/QuestDate.php:38
+#, fuzzy
 msgid "Nice, you logged in for 40 consecutive days!"
 msgstr "不错，你连续登录了40天!"
 
-#: inc/tasks/QuestDate.php:23
+#: inc/tasks/QuestDate.php:39
+#, fuzzy
 msgid "Log in on 50 different days"
 msgstr "在50个不同的日子里登录"
 
-#: inc/tasks/QuestDate.php:23
+#: inc/tasks/QuestDate.php:39
+#, fuzzy
 msgid "Nice, you logged in for 50 consecutive days!"
 msgstr "不错，你连续登录了50天!"
 
-#: inc/tasks/QuestPlugin.php:19
+#: inc/tasks/QuestPlugin.php:35
+#, fuzzy
 msgid "Activate a SEO plugin"
 msgstr "激活一个SEO插件"
 
-#: inc/tasks/QuestPlugin.php:19
+#: inc/tasks/QuestPlugin.php:35
+#, fuzzy
 msgid "Awesome! &#128261;"
 msgstr "厉害了!🔅"
 
-#: inc/tasks/QuestPlugin.php:20
+#: inc/tasks/QuestPlugin.php:35
+#, fuzzy
+msgid "You've installed a SEO plugin. Let's add some keywords so that search engines can find us better."
+msgstr "您已经安装了搜索引擎优化插件。让我们添加一些关键词，以便搜索引擎更好地找到我们。"
+
+#: inc/tasks/QuestPlugin.php:36
+#, fuzzy
 msgid "Activate a caching plugin"
 msgstr "激活一个缓存插件"
 
-#: inc/tasks/QuestPlugin.php:20
+#: inc/tasks/QuestPlugin.php:36
+#, fuzzy
 msgid "Fantastic! &#128171;"
 msgstr "妙不可言!💫"
 
-#: inc/tasks/QuestPlugin.php:21
+#: inc/tasks/QuestPlugin.php:36
+#, fuzzy
+msgid "You've installed a caching plugin. This way we can increase the speed of our website."
+msgstr "您安装了缓存插件。这样我们就能提高网站速度。"
+
+#: inc/tasks/QuestPlugin.php:37
+#, fuzzy
 msgid "Activate a security plugin"
 msgstr "激活一个安全插件"
 
-#: inc/tasks/QuestPlugin.php:21
+#: inc/tasks/QuestPlugin.php:37
 msgid "Great!"
 msgstr "好极了！"
 
-#: inc/tasks/QuestStart.php:15
-msgid "Welcome to Wapuugotchi"
-msgstr "欢迎来到 Wapuugotchi"
+#: inc/tasks/QuestPlugin.php:37
+#, fuzzy
+msgid "You've installed a security plugin! This will help protecting me from villains. &#128170;"
+msgstr "您安装了一个安全插件！这将有助于保护我免受坏人的侵害。💪"
 
-#: inc/tasks/QuestStart.php:15
+#: inc/tasks/QuestStart.php:35
+#, fuzzy
+msgid "Welcome to Wapuugotchi"
+msgstr "欢迎来到瓦普戈特奇"
+
+#: inc/tasks/QuestStart.php:35
+#, fuzzy
 msgid "Thank you for giving me a home! &#10084;&#65039;"
 msgstr "感谢你们给我一个家!❤️"
 
-#: inc/tasks/QuestTheme.php:17
+#: inc/tasks/QuestTheme.php:35
+#, fuzzy
 msgid "Remove all unused themes"
 msgstr "删除所有未使用的主题"
 
-#: inc/tasks/QuestTheme.php:17
+#: inc/tasks/QuestTheme.php:35
+#, fuzzy
 msgid "You cleaned up! &#129529;"
 msgstr "你打扫干净了!🧹"
 
+#: build/index.js:1
 #: build/customizer.js:1
-msgid "Do you want to buy this item?"
-msgstr ""
+#: build/quest-log.js:1
+msgid "Completed"
+msgstr "已完成"
 
+#: build/index.js:1
 #: build/customizer.js:1
-#: build/scavenger-hunt.js:1
+#: build/quest-log.js:1
+#, fuzzy
+msgid "Active Quests"
+msgstr "活动任务"
+
+#: build/index.js:1
+#: build/customizer.js:1
+#: build/quest-log.js:1
+#, fuzzy
+msgid "Completed Quests"
+msgstr "已完成任务"
+
+#: build/index.js:1
+#: build/customizer.js:1
+#: build/quest-log.js:1
+#, fuzzy
 msgid "Your Pearl Balance:"
-msgstr ""
+msgstr "你的珍珠平衡："
 
+#: build/index.js:1
 #: build/customizer.js:1
+#: build/quest-log.js:1
+#, fuzzy
+msgid "Do you want to buy this item?"
+msgstr "你想购买这个物品吗？"
+
+#: build/index.js:1
+#: build/customizer.js:1
+#: build/quest-log.js:1
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
+#: build/index.js:1
 #: build/customizer.js:1
+#: build/quest-log.js:1
+msgid "Saving…"
+msgstr "正在保存..."
+
+#: build/index.js:1
+#: build/customizer.js:1
+#: build/quest-log.js:1
+msgid "Save Settings"
+msgstr "保存设置"
+
+#: build/index.js:1
+#: build/customizer.js:1
+#: build/quest-log.js:1
+#, fuzzy
 msgid "Customize Your Wapuu with WapuuGotchi"
-msgstr ""
+msgstr "用WapuuGotchi定制您的Wapuu。"
 
+#: build/index.js:1
 #: build/customizer.js:1
+#: build/quest-log.js:1
+#, fuzzy
 msgid "Browse categories on the left to explore various items and style your Wapuu."
-msgstr ""
+msgstr "浏览左边的类别，探索各种项目，为您的Wapuu造型。"
 
+#: build/index.js:1
 #: build/customizer.js:1
-msgid "Saving..."
-msgstr ""
-
-#: build/customizer.js:1
+#: build/quest-log.js:1
 msgid "Reset Changes"
-msgstr ""
+msgstr "重置更改"
+
+#. Description of the plugin/theme
+#, fuzzy
+msgid "Meet Your Personalized Wapuu Assistant."
+msgstr "认识您的个性化瓦普吾助理。"
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "herrfeldmann"
+msgstr "赫尔费尔德曼"

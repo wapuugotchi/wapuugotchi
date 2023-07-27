@@ -1,47 +1,47 @@
 {
-    "translation-revision-date": "2023-07-27 23:08+0200",
+    "translation-revision-date": "2023-07-27 23:09+0200",
     "generator": "WP-CLI\/2.8.1",
-    "source": "build\/customizer.js",
+    "source": "build\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
             "": {
                 "domain": "messages",
-                "lang": "zh",
+                "lang": "tr",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
             "Completed": [
-                "\u5df2\u5b8c\u6210"
+                "Tamamland\u0131"
             ],
             "Active Quests": [
-                "\u6d3b\u52a8\u4efb\u52a1"
+                "Aktif G\u00f6revler"
             ],
             "Completed Quests": [
-                "\u5df2\u5b8c\u6210\u4efb\u52a1"
+                "Tamamlanan G\u00f6revler"
             ],
             "Your Pearl Balance:": [
-                "\u4f60\u7684\u73cd\u73e0\u5e73\u8861\uff1a"
+                "\u0130nci Dengeniz:"
             ],
             "Do you want to buy this item?": [
-                "\u4f60\u60f3\u8d2d\u4e70\u8fd9\u4e2a\u7269\u54c1\u5417\uff1f"
+                "Bu \u00fcr\u00fcn\u00fc sat\u0131n almak istiyor musunuz?"
             ],
             "Save": [
-                "\u4fdd\u5b58"
+                "Kaydet"
             ],
             "Saving\u2026": [
-                "\u6b63\u5728\u4fdd\u5b58..."
+                "Kaydediliyor\u2026"
             ],
             "Save Settings": [
-                "\u4fdd\u5b58\u8bbe\u7f6e"
+                "Ayarlar\u0131 Kaydet"
             ],
             "Customize Your Wapuu with WapuuGotchi": [
-                "\u7528WapuuGotchi\u5b9a\u5236\u60a8\u7684Wapuu\u3002"
+                "WapuuGotchi ile Wapuu'nuzu Ki\u015fiselle\u015ftirin"
             ],
             "Browse categories on the left to explore various items and style your Wapuu.": [
-                "\u6d4f\u89c8\u5de6\u8fb9\u7684\u7c7b\u522b\uff0c\u63a2\u7d22\u5404\u79cd\u9879\u76ee\uff0c\u4e3a\u60a8\u7684Wapuu\u9020\u578b\u3002"
+                "\u00c7e\u015fitli \u00fcr\u00fcnleri ke\u015ffetmek ve Wapuu'nuzu \u015fekillendirmek i\u00e7in soldaki kategorilere g\u00f6z at\u0131n."
             ],
             "Reset Changes": [
-                "\u91cd\u7f6e\u66f4\u6539"
+                "De\u011fi\u015fiklikleri S\u0131f\u0131rla"
             ]
         }
     }

@@ -1,7 +1,7 @@
 .wapuugotchi__bubble {
 	position: relative;
-	background: white;
-	border-radius: .4em;
+	background: #fff;
+	border-radius: 0.4em;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #c3c4c7;
@@ -11,8 +11,8 @@
 	margin: 0 10px;
 }
 
-.wapuugotchi__bubble:before {
-	content: '';
+.wapuugotchi__bubble::before {
+	content: "";
 	position: absolute;
 	bottom: 0;
 	left: 50%;
@@ -26,15 +26,15 @@
 	margin-bottom: -17px;
 }
 
-.wapuugotchi__bubble:after {
-	content: '';
+.wapuugotchi__bubble::after {
+	content: "";
 	position: absolute;
 	bottom: 0;
 	left: 50%;
 	width: 0;
 	height: 0;
 	border: 17px solid transparent;
-	border-top-color: white;
+	border-top-color: #fff;
 	border-bottom: 0;
 	border-right: 0;
 	margin-bottom: -13px;
@@ -44,35 +44,45 @@
 .info_bubble.wapuugotchi__bubble {
 	border-color: #72aee6;
 }
-.info_bubble.wapuugotchi__bubble:before {
+
+.info_bubble.wapuugotchi__bubble::before {
 	border-top-color: #72aee6;
 }
 
-.success_bubble.wapuugotchi__bubble {
+.info_bubble.wapuugotchi__bubble {
 	border-color: #00a32a;
 }
-.success_bubble.wapuugotchi__bubble:before {
+
+.success_bubble.wapuugotchi__bubble::before {
 	border-top-color: #00a32a;
 }
 
 .error_bubble.wapuugotchi__bubble {
 	border-color: #d63638;
 }
-.error_bubble.wapuugotchi__bubble:before {
+
+.error_bubble.wapuugotchi__bubble::before {
 	border-top-color: #d63638;
 }
 
 .warning_bubble.wapuugotchi__bubble {
 	border-color: #dba617;
 }
-.warning_bubble.wapuugotchi__bubble:before {
+
+.warning_bubble.wapuugotchi__bubble::before {
 	border-top-color: #dba617;
 }
 
 
 @keyframes "wapuugotchi-svg__fade_in_lazy" {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
+
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 .wapuugotchi__bubble.fade_in_lazy {

@@ -1,29 +1,21 @@
+$color_1: #000;
+$color_2: #fff;
+$background-color_1: #cce3eb;
+$background-color_2: #fafafa;
+$background-color_3: #4ab866;
+
 .wapuu_card {
+
 	.wapuu_card__items {
+
 		.wapuu_card__item {
 			position: relative;
 			width: 170px;
-			margin: 0px 8px 16px 8px;
-
-			&.selected {
-				img.wapuu_card__item_img {
-					background-color: #cce3eb;
-				}
-			}
-
-			&.wapuu_card__locked {
-				&::before {
-					content: "\f160";
-					position: absolute;
-					font: normal 25px/1 dashicons;
-					color: black;
-					opacity: 0.2;
-				}
-			}
+			margin: 0 8px 16px 8px;
 
 			img.wapuu_card__item_img {
 				width: 100%;
-				background-color: #fafafa;
+				background-color: $background-color_2;
 				user-select: none;
 				pointer-events: none;
 			}
@@ -32,16 +24,35 @@
 				position: absolute;
 				bottom: 5px;
 				right: 5px;
-				background-color: #4ab866;
+				background-color: $background-color_3;
 				padding: 5px;
 				border-radius: 5px;
 				font-size: 12px;
-				font-weight: bold;
-				color: white;
+				font-weight: 700;
+				color: $color_2;
 
 				svg {
 					padding-right: 5px;
 				}
+			}
+		}
+
+		.wapuu_card__item.selected {
+
+			img.wapuu_card__item_img {
+				background-color: $background-color_1;
+			}
+		}
+
+		.wapuu_card__item.wapuu_card__locked {
+
+			&::before {
+				content: "\f160";
+				position: absolute;
+				font-size: 25px;
+				font-family: dashicons, sans-serif;
+				color: $color_1;
+				opacity: 0.2;
 			}
 		}
 	}

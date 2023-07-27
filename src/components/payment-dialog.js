@@ -1,6 +1,7 @@
 import { STORE_NAME } from '../store';
 import { useSelect, dispatch } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
+// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
 import { __experimentalConfirmDialog as ConfirmDialog } from '@wordpress/components';
 
 import './payment-dialog.scss';

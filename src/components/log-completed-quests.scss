@@ -15,7 +15,7 @@
 	}
 
 	.wapuugotchi_log__completed {
-		background-color: white;
+		background-color: #fff;
 		border: solid 2px #888;
 
 		h2 {
@@ -24,6 +24,7 @@
 			color: #888;
 			margin-bottom: 1px;
 		}
+
 		p {
 			color: #888;
 			margin-top: 1px;
@@ -33,6 +34,7 @@
 			position: absolute;
 			right: 10px;
 			top: 10px;
+
 			img {
 				filter: invert(58%) sepia(6%) saturate(8%) hue-rotate(331deg) brightness(91%) contrast(92%);
 			}

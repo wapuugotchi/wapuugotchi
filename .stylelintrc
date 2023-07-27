@@ -1,0 +1,16 @@
+{
+	"extends": "@wordpress/stylelint-config/scss",
+	"rules": {
+		"color-no-invalid-hex": true,
+		"rule-empty-line-before": [
+			"always",
+			{
+				"ignore": [ "after-comment" ]
+			}
+		],
+		"no-duplicate-selectors": null,
+		"selector-id-pattern": null,
+		"selector-class-pattern": null,
+		"no-empty-source": null
+	}
+}

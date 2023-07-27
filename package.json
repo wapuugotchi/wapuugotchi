@@ -10,7 +10,7 @@
 		"watch": "wp-scripts build src/customizer.js src/scavenger-hunt.js src/quest-log.js src/index.js --watch",
 		"format": "wp-scripts format",
 		"lint": "concurrently \"npm run lint:lockfile\" \"npm run lint:tsconfig\" \"npm run lint:js\" \"npm run lint:pkg-json\" \"npm run lint:css\"",
-		"lint:css": "wp-scripts lint-style \"**/*.scss\"",
+		"lint:css": "wp-scripts lint-style \"src/**/*.scss\"",
 		"lint:css:fix": "npm run lint:css -- --fix",
 		"lint:js": "wp-scripts lint-js",
 		"lint:js:fix": "npm run lint:js -- --fix",

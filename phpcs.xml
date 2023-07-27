@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/src/*</exclude-pattern>
+
+	<rule ref="WordPress">
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+	</rule>
+
+	<!-- Check for todo comments. -->
+	<rule ref="Generic.Commenting.Todo"/>
+
+	<!-- Constants must be all uppercase -->
+	<rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+
+	<!-- Class names MUST be declared in CamelCase. -->
+	<rule ref="Squiz.Classes.ValidClassName"/>
+
+	<!-- Only one class/interface/trait/object structure per file -->
+	<rule ref="Generic.Files.OneClassPerFile"/>
+	<rule ref="Generic.Files.OneInterfacePerFile"/>
+	<rule ref="Generic.Files.OneObjectStructurePerFile"/>
+	<rule ref="Generic.Files.OneTraitPerFile"/>
+
+	<!-- Check namespace and use declarations -->
+	<rule ref="PSR2.Namespaces.NamespaceDeclaration"/>
+    	<rule ref="PSR2.Namespaces.UseDeclaration"/>
+
+	<config name="testVersion" value="7.0-"/>
+	<rule ref="PHPCompatibilityWP"/>
+
+	<config name="minimum_supported_wp_version" value="6.0"/>
+</ruleset>

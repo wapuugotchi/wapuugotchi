@@ -1,30 +1,88 @@
 <?php
+/**
+ * The Quest Class.
+ *
+ * @package WapuuGotchi
+ */
 
 namespace Wapuugotchi\Wapuugotchi;
 
-if ( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
+if ( ! defined( 'ABSPATH' ) ) :
+	exit();
+endif; // No direct access allowed.
 
+/**
+ * Class Quest
+ */
 class Quest {
+
+	/**
+	 * ID of the quest.
+	 *
+	 * @var string
+	 */
 	private $id = '';
+	/**
+	 * The parent ID of this quest.
+	 *
+	 * @var string
+	 */
 	private $parent_id = '';
+	/**
+	 * Title of the Quest.
+	 *
+	 * @var string
+	 */
 	private $title = '';
+	/**
+	 * Message that is displayed when the quest is completed.
+	 *
+	 * @var string
+	 */
 	private $message = '';
+	/**
+	 * The priority of the quest.
+	 *
+	 * @var string
+	 */
 	private $priority = '';
+	/**
+	 * Type of the quest ( info, success, error, warning ).
+	 *
+	 * @var string
+	 */
 	private $type = '';
+	/**
+	 * Number of pearls credited to the user after completing the quest.
+	 *
+	 * @var string
+	 */
 	private $pearls = '';
+	/**
+	 * Callback function to be called to check if the quest is active.
+	 *
+	 * @var string
+	 */
 	private $active_callback = '';
+	/**
+	 * Callback function to be called to check if the quest is completed.
+	 *
+	 * @var string
+	 */
 	private $completed_callback = '';
 
 	/**
-	 * @param string $id
-	 * @param string $parent_id
-	 * @param string $title
-	 * @param string $message
-	 * @param string $type
-	 * @param string $priority
-	 * @param string $pearls
-	 * @param string $active_callback
-	 * @param string $completed_callback
+	 * "Constructor" of this class
+	 *
+	 * @param string $id The ID.
+	 * @param string $parent_id The parent ID.
+	 * @param string $title The title.
+	 * @param string $message The message.
+	 * @param string $type The type.
+	 * @param string $priority The priority.
+	 * @param string $pearls The pearls.
+	 * @param string $active_callback The active state.
+	 * @param string $completed_callback The completed state.
 	 */
 	public function __construct( $id, $parent_id, $title, $message, $type, $priority, $pearls, $active_callback, $completed_callback ) {
 		$this->id                 = $id;
@@ -39,6 +97,8 @@ class Quest {
 	}
 
 	/**
+	 * Get ID.
+	 *
 	 * @return string
 	 */
 	public function get_id() {
@@ -46,6 +106,8 @@ class Quest {
 	}
 
 	/**
+	 * Get parent ID.
+	 *
 	 * @return string
 	 */
 	public function get_parent_id() {
@@ -53,6 +115,8 @@ class Quest {
 	}
 
 	/**
+	 * Get title.
+	 *
 	 * @return string
 	 */
 	public function get_title() {
@@ -60,6 +124,8 @@ class Quest {
 	}
 
 	/**
+	 * Get message.
+	 *
 	 * @return string
 	 */
 	public function get_message() {
@@ -67,6 +133,8 @@ class Quest {
 	}
 
 	/**
+	 * Get type.
+	 *
 	 * @return string
 	 */
 	public function get_type() {
@@ -74,6 +142,8 @@ class Quest {
 	}
 
 	/**
+	 * Get priority.
+	 *
 	 * @return string
 	 */
 	public function get_priority() {
@@ -81,6 +151,8 @@ class Quest {
 	}
 
 	/**
+	 * Get pearls.
+	 *
 	 * @return string
 	 */
 	public function get_pearls() {
@@ -88,6 +160,8 @@ class Quest {
 	}
 
 	/**
+	 * Get is active.
+	 *
 	 * @return string
 	 */
 	public function is_active() {
@@ -103,6 +177,8 @@ class Quest {
 	}
 
 	/**
+	 * Get is completed.
+	 *
 	 * @return string
 	 */
 	public function is_completed() {

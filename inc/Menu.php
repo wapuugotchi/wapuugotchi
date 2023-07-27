@@ -1,4 +1,9 @@
 <?php
+/**
+ * The Menu Class.
+ *
+ * @package WapuuGotchi
+ */
 
 namespace Wapuugotchi\Wapuugotchi;
 
@@ -6,12 +11,23 @@ if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
 
+/**
+ * Class Menu
+ */
 class Menu {
 
+	/**
+	 * "Constructor" of this Class
+	 */
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'create_menu_page' ) );
 	}
 
+	/**
+	 * Add manu to backend sidebar.
+	 *
+	 * @return void
+	 */
 	public function create_menu_page() {
 		$capability = 'manage_options';
 		$slug       = 'wapuugotchi';
@@ -40,24 +56,31 @@ class Menu {
 			$slug . '-quests',
 			array( $this, 'quests_page_template' )
 		);
-		// add_submenu_page(
-		// $slug,
-		// __( 'Wapuugotchi', 'wapuugotchi' ),
-		// __( 'Scavenger Hunt', 'wapuugotchi' ),
-		// $capability,
-		// $slug . '-hunt',
-		// [ $this, 'hunt_page_template' ]
-		// );
 	}
 
+	/**
+	 * Add html starting point to customizer manu page.
+	 *
+	 * @return void
+	 */
 	public function customizer_page_template() {
 		echo '<div class="wrap"><div id="wapuugotchi-app"></div></div>';
 	}
 
+	/**
+	 * Add html starting point to hunt manu page.
+	 *
+	 * @return void
+	 */
 	public function hunt_page_template() {
 		echo '<div class="wrap"><div id="wapuugotchi-app"></div></div>';
 	}
 
+	/**
+	 * Add html starting point to quest manu page.
+	 *
+	 * @return void
+	 */
 	public function quests_page_template() {
 		echo '<div class="wrap"><div id="wapuugotchi-app"></div></div>';
 	}

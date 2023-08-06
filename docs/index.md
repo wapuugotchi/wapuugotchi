@@ -17,9 +17,6 @@ After the installation, you will see your Wapuu in the Dashboard area on the bot
 
 ![Wapuu in the dashboard](assets/images/wapuugotchi_on_dashboard.png)
 
-## Pearls
-In the whimsical universe of Wapuugotchi, pearls have emerged as the cherished currency, opening a gateway to a treasure trove of delightful wearables for your beloved Wapuu companions. Through daring quests and exciting challenges, users have the opportunity to earn these precious pearls, embarking on thrilling adventures that test their wit, courage, and creativity. With each successfully completed quest, gleaming pearls are added to their collection, bringing them one step closer to adorning their digital companions with a dazzling array of costumes, accessories, and enchanting customizations. The pursuit of pearls adds an element of excitement and accomplishment to Wapuugotchi, empowering users to infuse their Wapuus with a unique charm that reflects their own personality and style. So, dive into the world of quests, earn your pearls, and let your imagination soar as you create a kaleidoscope of wonders for your cherished Wapuugotchi companions.
-
 ## Configure your Wapuu
 To configure your little pal, the plugin provides you with a boutique full of items which you already own or which can be exchanged for precious pearls. To enter the boutique click on *WapuuGotchi* in the sidebar navigation. You should see the customizer now.
 
@@ -39,7 +36,10 @@ A green bar in the customizer shows you how much pearls currently are in your po
 
 You can also name your little fellow. Above your Wapuu you can see a text field. Just change the standard Wapuu's name *Wapuu" into something you like more.
 
-## Earn pearls
+## Pearls
+In the whimsical universe of Wapuugotchi, pearls have emerged as the cherished currency, opening a gateway to a treasure trove of delightful wearables for your beloved Wapuu companions. Through daring quests and exciting challenges, users have the opportunity to earn these precious pearls, embarking on thrilling adventures that test their wit, courage, and creativity. With each successfully completed quest, gleaming pearls are added to their collection, bringing them one step closer to adorning their digital companions with a dazzling array of costumes, accessories, and enchanting customizations. The pursuit of pearls adds an element of excitement and accomplishment to Wapuugotchi, empowering users to infuse their Wapuus with a unique charm that reflects their own personality and style. So, dive into the world of quests, earn your pearls, and let your imagination soar as you create a kaleidoscope of wonders for your cherished Wapuugotchi companions.
+
+### Earning pearls
 You can do quests to earn pearls. To see which quests are available, click on *WapuuGotchi* in the sidebar menu and then on *Quest Log*. You see two areas. The first tells you which quests are available, how to solve them, and how many pearls you will receive for finishing that quest. The second area shows you the list of resolved quests.
 
 ![Pearls balance bar in Wapuu customizer](assets/images/active_quests.png)

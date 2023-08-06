@@ -41,6 +41,11 @@ A green bar in the customizer shows you how much pearls currently are in your po
 
 You can also name your little fellow. Above your Wapuu you can see a text field. Just change the standard Wapuu's name *Wapuu" into something you like more.
 
+### Multiple wearables from one category
+Sometimes you have the possibility to use multiple items from a category. This is possible for example with the category which provides accessoires all around the head like hats or fancy haircuts. The order in which you select the items will be used to determine in which order the items should be rendered. The rule is: the first item you select, it the one which is the farthest in the background. It is like you would stack items on top of each other. So if you select a hat and then a haircut, you will end up having the hairs rendered in the foreground.
+
+![Pearls balance bar in Wapuu customizer](assets/images/hairs_in_front_of_wizard_hat.png)
+
 ## Pearls
 In the whimsical universe of Wapuugotchi, pearls have emerged as the cherished currency, opening a gateway to a treasure trove of delightful wearables for your beloved Wapuu companions. Through daring quests and exciting challenges, users have the opportunity to earn these precious pearls, embarking on thrilling adventures that test their wit, courage, and creativity. With each successfully completed quest, gleaming pearls are added to their collection, bringing them one step closer to adorning their digital companions with a dazzling array of costumes, accessories, and enchanting customizations. The pursuit of pearls adds an element of excitement and accomplishment to Wapuugotchi, empowering users to infuse their Wapuus with a unique charm that reflects their own personality and style. So, dive into the world of quests, earn your pearls, and let your imagination soar as you create a kaleidoscope of wonders for your cherished Wapuugotchi companions.
 

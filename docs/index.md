@@ -15,7 +15,7 @@ The installation of the plugin is very straightforward. You can download it from
 ## Dashboard
 After the installation, you will see your Wapuu in the Dashboard area on the bottom right corner. Your new friend will show you notifications here.
 
-*ADD SCREENSHOT OF WAPUU IN DASHBOARD HERE*
+![Wapuu in the dashboard](assets/images/wapuugotchi_on_dashboard.png)
 
 ## Pearls
 In the whimsical universe of Wapuugotchi, pearls have emerged as the cherished currency, opening a gateway to a treasure trove of delightful wearables for your beloved Wapuu companions. Through daring quests and exciting challenges, users have the opportunity to earn these precious pearls, embarking on thrilling adventures that test their wit, courage, and creativity. With each successfully completed quest, gleaming pearls are added to their collection, bringing them one step closer to adorning their digital companions with a dazzling array of costumes, accessories, and enchanting customizations. The pursuit of pearls adds an element of excitement and accomplishment to Wapuugotchi, empowering users to infuse their Wapuus with a unique charm that reflects their own personality and style. So, dive into the world of quests, earn your pearls, and let your imagination soar as you create a kaleidoscope of wonders for your cherished Wapuugotchi companions.
@@ -23,23 +23,23 @@ In the whimsical universe of Wapuugotchi, pearls have emerged as the cherished c
 ## Configure your Wapuu
 To configure your little pal, the plugin provides you with a boutique full of items which you already own or which can be exchanged for precious pearls. To enter the boutique click on *WapuuGotchi* in the sidebar navigation. You should see the customizer now.
 
-*ADD CUSTOMIZER SCREENSHOT HERE*
+![Wapuu Customizer](assets/images/customizer.png)
 
 Here in the customizer, you have different types of wearables, which you can use to dress your Wapuu. First of all you have some basic shapes, which differ in form and color. There is a section with things which the Wapuu can hold, like orbs or guitars. Furthermore you can give your little fellow a hat, a haircut or even a crown. Then you have a category with general accessiores like a superhero cape, a baguette or smart-looking glasses. Your Wapuu can also wear a sweater or a t-shirt. And finally you can also dress him with different shoes, which suit to the rest of their outfit.
 
 Some of the items are locked in the beginning and can be unlocked through pearls.
 
-*ADD SCREENSHOT OF PEARLS CARD HERE*
+![Pearls balance bar in Wapuu customizer](assets/images/customizer_locked_item.png)
 
 When you click on a locked wearable, a modal will popup and ask you if you want to buy this item. On the top right you can find an information icon. When you hover over that item, you will see more information about the currently shown Wapuu. If you click on *OK", you confirm your purchase and therefore unlock the item.
 
 A green bar in the customizer shows you how much pearls currently are in your possession.
 
-*ADD SCREENSHOT OF PEARLS BAR HERE*
+![Pearls balance bar in Wapuu customizer](assets/images/pearls_balance.png)
 
 You can also name your little fellow. Above your Wapuu you can see a text field. Just change the standard Wapuu's name *Wapuu" into something you like more.
 
 ## Earn pearls
 You can do quests to earn pearls. To see which quests are available, click on *WapuuGotchi* in the sidebar menu and then on *Quest Log*. You see two areas. The first tells you which quests are available, how to solve them, and how many pearls you will receive for finishing that quest. The second area shows you the list of resolved quests.
 
-*ADD SCREENSHOT OF QUEST LOG HERE*
+![Pearls balance bar in Wapuu customizer](assets/images/active_quests.png)

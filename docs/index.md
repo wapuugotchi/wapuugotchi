@@ -17,6 +17,11 @@ After the installation, you will see your Wapuu in the Dashboard area on the bot
 
 ![Wapuu in the dashboard](assets/images/wapuugotchi_on_dashboard.png)
 
+## Sidebar navigation
+You wil find *WapuuGotchi* in the sidebar navigation menu of WordPress. When you click on it, you will be redirected to the *Customizer* by default. There is another page you can access, the *Quest Log*.
+
+![Wapuu Customizer](assets/images/sidebar_navigation.png)
+
 ## Configure your Wapuu
 To configure your little pal, the plugin provides you with a boutique full of items which you already own or which can be exchanged for precious pearls. To enter the boutique click on *WapuuGotchi* in the sidebar navigation. You should see the customizer now.
 

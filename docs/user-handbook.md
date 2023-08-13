@@ -28,7 +28,7 @@ After the installation, you will see your Wapuu in the Dashboard area on the bot
 ![Wapuu in the dashboard](/_images/wapuugotchi_on_dashboard.png)
 
 ## Sidebar navigation
-You wil find *WapuuGotchi* in the sidebar navigation menu of WordPress. When you click on it, you will be redirected to the *Customizer* by default. There is another page you can access, the *Quest Log*.
+You wil find *WapuuGotchi* in the sidebar navigation menu of WordPress. When you click on it, you will be redirected to the *Customizer* by default. There is another page you can access, the *Quest Log*. 
 
 ![Sidebar navigation options](/_images/sidebar_navigation.png)
 

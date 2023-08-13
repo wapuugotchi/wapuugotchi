@@ -6,5 +6,4 @@ taxonomy:
 ---
 
 # WapuuGotchi Documentation
-
 [User Handbook](user-handbook.md)

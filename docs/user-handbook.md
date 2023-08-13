@@ -62,4 +62,4 @@ In the whimsical universe of Wapuugotchi, pearls have emerged as the cherished c
 ### Earning pearls
 You can do quests to earn pearls. To see which quests are available, click on *WapuuGotchi* in the sidebar menu and then on *Quest Log*. You see two areas. The first tells you which quests are available, how to solve them, and how many pearls you will receive for finishing that quest. The second area shows you the list of resolved quests.
 
-![Pearls balance bar in Wapuu customizer](_images/images/active_quests.png)
+![Pearls balance bar in Wapuu customizer](/_images/images/active_quests.png)

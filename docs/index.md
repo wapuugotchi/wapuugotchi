@@ -10,7 +10,7 @@ Moreover, the world of Wapuugotchi is brimming with unlockable surprises and cus
 Get ready to embark on an unforgettable adventure with Wapuugotchi, where your daily routines transform into exciting quests and where personalized Wapuu characters brighten your every moment. Join us in this one-of-a-kind project that promises to revolutionize the way you engage with technology and bring a smile to your face every step of the way. Welcome to Wapuugotchi, your personalized world of joy, fun, and endless possibilities.
 
 ## Install plugin
-The installation of the plugin is very straightforward. You can download it from the WordPress.org Plugin Directory as zip file or you can install it directly from your WordPress over the default plugin area. For that, you click on "Plugins" in the sidebar navigation and then on "Add New". You will find Wapuugotchi over the search.
+The installation of the plugin is very straightforward. You can download it from the WordPress.org Plugin Directory as zip file or you can install it directly from your WordPress over the default plugin area. For that, you click on *Plugins* in the sidebar navigation and then on *Add New*. You will find Wapuugotchi over the search.
 
 ## Dashboard
 After the installation, you will see your Wapuu in the Dashboard area on the bottom right corner. Your new friend will show you notifications here.
@@ -33,13 +33,13 @@ Some of the items are locked in the beginning and can be unlocked through pearls
 
 ![A locked item in the Customizer](assets/images/customizer_locked_item.png)
 
-When you click on a locked wearable, a modal will popup and ask you if you want to buy this item. On the top right you can find an information icon. When you hover over that item, you will see more information about the currently shown Wapuu. If you click on *OK", you confirm your purchase and therefore unlock the item.
+When you click on a locked wearable, a modal will popup and ask you if you want to buy this item. On the top right you can find an information icon. When you hover over that item, you will see more information about the currently shown Wapuu. If you click on *OK*, you confirm your purchase and therefore unlock the item.
 
 A green bar in the customizer shows you how much pearls currently are in your possession.
 
 ![Pearls balance bar in Wapuu customizer](assets/images/pearls_balance.png)
 
-You can also name your little fellow. Above your Wapuu you can see a text field. Just change the standard Wapuu's name *Wapuu" into something you like more.
+You can also name your little fellow. Above your Wapuu you can see a text field. Just change the standard Wapuu's name *Wapuu* into something you like more.
 
 ### Multiple wearables from one category
 Sometimes you have the possibility to use multiple items from a category. This is possible for example with the category which provides accessoires all around the head like hats or fancy haircuts. The order in which you select the items will be used to determine in which order the items should be rendered. The rule is: the first item you select, it the one which is the farthest in the background. It is like you would stack items on top of each other. So if you select a hat and then a haircut, you will end up having the hairs rendered in the foreground.

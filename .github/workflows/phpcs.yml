@@ -2,17 +2,18 @@ on: pull_request
 
 name: Inspections
 jobs:
-  runPHPCSInspection:
-    name: Run PHPCS inspection
+  phpcs:
+    name: PHP CS
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-      with:
-        ref: ${{ github.event.pull_request.head.sha }}
-    - name: Run PHPCS inspection
-      uses: rtCamp/action-phpcs-code-review@v3
-      env:
-        GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
-        SKIP_FOLDERS: "tests,.github,vendor"
-      with:
-        args: phpcs.xml
+      - uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+      - name: Check installed cs rules
+        run: vendor/bin/phpcs -i
+      - name: CS Check
+        run: ./vendor/bin/phpcs --runtime-set ignore_warnings_on_exit true --standard=phpcs.xml ./

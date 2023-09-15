@@ -70,7 +70,9 @@ function init() {
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );
 
-
+/**
+ * Load plugin text domain.
+ */
 function load_textdomain() {
 	\load_plugin_textdomain( 'wapuugotchi', false, \dirname( \plugin_basename( __FILE__ ) ) . '/languages/' );
 }

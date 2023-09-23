@@ -1,5 +1,7 @@
 import { useSelect, dispatch } from '@wordpress/data';
-import parse from 'html-react-parser';
+import { escapeHTML } from '@wordpress/escape-html';
+
+import { purify } from '../util/sanitization';
 import apiFetch from '@wordpress/api-fetch';
 import { STORE_NAME } from '../store';
 import './bubble.scss';
@@ -38,7 +40,7 @@ export default function Bubble() {
 				}
 				onClick={ handleClickMessage }
 			>
-				{ parse( message[ 0 ].message ) }
+				{ escapeHTML( message[ 0 ].message ) }
 			</div>
 		</>
 	) : (

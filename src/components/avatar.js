@@ -16,6 +16,7 @@ export default function Avatar() {
 			<div className="wapuugotchi__svg">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
+					id="wapuugotchi_svg__wapuu"
 					x="0"
 					y="0"
 					version="1.1"

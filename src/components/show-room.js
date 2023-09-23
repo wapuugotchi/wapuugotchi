@@ -3,9 +3,10 @@ import { useSelect } from '@wordpress/data';
 import './show-room.scss';
 
 export default function ShowRoom() {
-	const { svg } = useSelect( ( select ) => {
+	const { svg, animations } = useSelect( ( select ) => {
 		return {
 			svg: select( STORE_NAME ).getSvg(),
+			animations: select( STORE_NAME ).getAnimations(),
 		};
 	} );
 
@@ -14,6 +15,7 @@ export default function ShowRoom() {
 			{ /*		changes to the ViewBox can destroy the animations.		*/ }
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
+				id="wapuugotchi_svg__wapuu"
 				x="0"
 				y="0"
 				version="1.1"

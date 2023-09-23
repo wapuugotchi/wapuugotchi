@@ -63,8 +63,51 @@ async function __buildSvg( wapuu, items ) {
 					}
 				} );
 		}
-		return result.innerHTML;
+		return result;
 	}
+}
+
+async function __buildAnimations( svg ) {
+	if ( svg?.querySelectorAll( 'style' ).length === 0 ) {
+		return [];
+	}
+
+	const list = [];
+	svg.querySelectorAll( 'style' ).forEach( ( item ) => {
+		if ( item.tagName === 'style' && item?.sheet?.rules?.length > 0 ) {
+			list.push( {
+				animation: item.sheet,
+				duration: getItemDuration( item.sheet ),
+			} );
+		}
+	} );
+
+	return list;
+
+	//?.[ 0 ]?.sheet?.ownerNode
+	// 		?.ownerSVGElement?.id;
+}
+
+function getItemDuration( sheet ) {
+	let duration = 0;
+	if ( sheet?.rules?.length > 0 ) {
+		Object.values( sheet?.rules ).forEach( ( item ) => {
+			let iterationCount = 1;
+			if ( item?.style?.animationDuration ) {
+				if (
+					parseInt( item?.style?.animationIterationCount ) >
+					iterationCount
+				) {
+					iterationCount = parseInt(
+						item.style.animationIterationCount
+					);
+				}
+				duration =
+					parseFloat( item.style.animationDuration ) * iterationCount;
+			}
+		} );
+	}
+	return duration;
 }
 
 function create() {
@@ -94,6 +137,12 @@ function create() {
 					return {
 						...state,
 						items: payload,
+					};
+				}
+				case '__SET_ANIMATIONS': {
+					return {
+						...state,
+						animations: payload,
 					};
 				}
 				case '__SET_INTENTION': {
@@ -133,8 +182,10 @@ function create() {
 			setWapuu: ( payload ) =>
 				async function ( { dispatch, select } ) {
 					const svg = await __buildSvg( payload, select.getItems() );
+					const animation = await __buildAnimations( svg );
 
-					return dispatch.__setWapuu( payload, svg );
+					dispatch.__setWapuu( payload, svg.innerHTML );
+					dispatch.__setAnimation( payload, animation );
 				},
 			__setWapuu( wapuu, svg ) {
 				return {
@@ -142,6 +193,14 @@ function create() {
 					payload: {
 						wapuu: { ...wapuu },
 						svg,
+					},
+				};
+			},
+			__setAnimation( animations ) {
+				return {
+					type: '__SET_ANIMATIONS',
+					payload: {
+						animations: { ...animations },
 					},
 				};
 			},
@@ -216,6 +275,9 @@ function create() {
 			},
 			getSvg( state ) {
 				return state.svg;
+			},
+			getAnimations( state ) {
+				return state.animations;
 			},
 			getBalance( state ) {
 				return state.balance;

@@ -4,15 +4,17 @@ import Bubble from './bubble';
 import './avatar.scss';
 
 export default function Avatar() {
-	const { svg } = useSelect( ( select ) => {
+	const { svg, animations } = useSelect( ( select ) => {
 		return {
 			svg: select( STORE_NAME ).getSvg(),
+			animations: select( STORE_NAME ).getAnimations(),
 		};
 	} );
 
 	return (
 		<>
 			<Bubble></Bubble>
+			{ console.log( animations ) }
 			<div className="wapuugotchi__svg">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

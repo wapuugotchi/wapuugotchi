@@ -125,6 +125,7 @@ function create() {
 						...state,
 						wapuu: payload.wapuu,
 						svg: payload.svg,
+						animations: payload.animations,
 					};
 				}
 				case '__SET_BALANCE': {
@@ -182,17 +183,17 @@ function create() {
 			setWapuu: ( payload ) =>
 				async function ( { dispatch, select } ) {
 					const svg = await __buildSvg( payload, select.getItems() );
-					const animation = await __buildAnimations( svg );
+					const animations = await __buildAnimations( svg );
 
-					dispatch.__setWapuu( payload, svg.innerHTML );
-					dispatch.__setAnimation( payload, animation );
+					dispatch.__setWapuu( payload, svg.innerHTML, animations );
 				},
-			__setWapuu( wapuu, svg ) {
+			__setWapuu( wapuu, svg, animations ) {
 				return {
 					type: '__SET_WAPUU',
 					payload: {
 						wapuu: { ...wapuu },
 						svg,
+						animations,
 					},
 				};
 			},

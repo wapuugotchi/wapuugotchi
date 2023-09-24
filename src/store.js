@@ -88,6 +88,17 @@ async function __buildAnimations( svg ) {
 	// 		?.ownerSVGElement?.id;
 }
 
+async function __removeStyleFromSVG( svg ) {
+	const element = svg?.querySelectorAll( 'style' );
+	if ( element?.length ) {
+		element.forEach( () =>
+			svg?.querySelectorAll( 'style' )[ 0 ]?.remove()
+		);
+	}
+
+	return svg;
+}
+
 function getItemDuration( sheet ) {
 	let duration = 0;
 	if ( sheet?.rules?.length > 0 ) {
@@ -182,8 +193,9 @@ function create() {
 			},
 			setWapuu: ( payload ) =>
 				async function ( { dispatch, select } ) {
-					const svg = await __buildSvg( payload, select.getItems() );
+					let svg = await __buildSvg( payload, select.getItems() );
 					const animations = await __buildAnimations( svg );
+					svg = await __removeStyleFromSVG( svg );
 
 					dispatch.__setWapuu( payload, svg.innerHTML, animations );
 				},

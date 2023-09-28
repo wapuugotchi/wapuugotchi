@@ -3,6 +3,7 @@ import { useSelect } from '@wordpress/data';
 import Bubble from './bubble';
 import './avatar.scss';
 import { useEffect, useState } from '@wordpress/element';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Avatar() {
 	const { svg, animations } = useSelect( ( select ) => {
@@ -11,45 +12,45 @@ export default function Avatar() {
 			animations: select( STORE_NAME ).getAnimations(),
 		};
 	} );
-	const [ count, setCount ] = useState( 1000 );
+	const [ count, setCount ] = useState( { timeout: 1000 } );
 
 	useEffect( () => {
 		if ( animations !== undefined ) {
 			setTimeout( () => {
-				const style = document
-					?.getElementById( 'wapuugotchi_svg__wapuu' )
-					?.querySelectorAll( 'style' );
-				if ( style?.length ) {
-					style.forEach( () =>
-						document
-							?.getElementById( 'wapuugotchi_svg__wapuu' )
-							?.querySelectorAll( 'style' )[ 0 ]
-							?.remove()
-					);
-				}
+				// remove all style tags
+				document
+					.querySelectorAll( 'style' )
+					.forEach( ( tag ) => tag.parentNode.removeChild( tag ) );
 
 				// get random animation
-				const item =
+				const animation =
 					animations[
 						Math.floor( Math.random() * animations.length )
 					];
 
-				if ( item?.animation?.rules?.length > 0 ) {
-					Object.values( item.animation.rules ).forEach( function (
-						element
-					) {
-						const tag = document.createElement( 'style' );
-						tag.innerHTML = element.cssText;
-						document
-							.getElementById( 'wapuugotchi_svg__wapuu' )
-							.prepend( tag );
-					} );
+				// Insert random animation in DOM
+				if ( animation?.animation?.rules?.length > 0 ) {
+					Object.values( animation.animation.rules ).forEach(
+						function ( element ) {
+							const tag = document.createElement( 'style' );
+							tag.innerHTML = element.cssText;
+							document
+								.getElementById( 'wapuugotchi_svg__wapuu' )
+								.prepend( tag );
+						}
+					);
 				}
-				setCount(
-					( Math.floor( Math.random() * 15 ) + 5 + item.duration ) *
-						1000
-				);
-			}, count );
+				console.log( animation.animation );
+
+				setCount( {
+					...count,
+					timeout:
+						( Math.floor( Math.random() * 7 ) +
+							5 +
+							animation.duration ) *
+						1000,
+				} );
+			}, count.timeout );
 		}
 	} );
 	return (

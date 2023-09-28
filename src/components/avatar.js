@@ -28,7 +28,7 @@ export default function Avatar() {
 						Math.floor( Math.random() * animations.length )
 					];
 
-				// Insert random animation in DOM
+				// Insert random animation into DOM
 				if ( animation?.animation?.rules?.length > 0 ) {
 					Object.values( animation.animation.rules ).forEach(
 						function ( element ) {

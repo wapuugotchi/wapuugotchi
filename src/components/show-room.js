@@ -3,10 +3,9 @@ import { useSelect } from '@wordpress/data';
 import './show-room.scss';
 
 export default function ShowRoom() {
-	const { svg, animations } = useSelect( ( select ) => {
+	const { svg } = useSelect( ( select ) => {
 		return {
 			svg: select( STORE_NAME ).getSvg(),
-			animations: select( STORE_NAME ).getAnimations(),
 		};
 	} );
 

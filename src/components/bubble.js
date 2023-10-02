@@ -1,7 +1,5 @@
 import { useSelect, dispatch } from '@wordpress/data';
 import { escapeHTML } from '@wordpress/escape-html';
-
-import { purify } from '../util/sanitization';
 import apiFetch from '@wordpress/api-fetch';
 import { STORE_NAME } from '../store';
 import './bubble.scss';

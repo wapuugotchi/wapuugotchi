@@ -11,6 +11,14 @@
 		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
 	</rule>
 
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="wapuugotchi"/>
+			</property>
+		</properties>
+	</rule>
+
 	<!-- Check for todo comments. -->
 	<rule ref="Generic.Commenting.Todo"/>
 

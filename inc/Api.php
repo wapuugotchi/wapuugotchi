@@ -224,7 +224,7 @@ class Api {
 		}
 		$balance = $balance + $amount;
 		if ( $balance < 0 ) {
-			return rest_ensure_response( new WP_Error( __( 'Insufficent balance' ) ) );
+			return rest_ensure_response( new WP_Error( __( 'Insufficent balance', 'wapuugotchi' ) ) );
 		}
 		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', $balance );
 
@@ -243,13 +243,13 @@ class Api {
 		$params  = $request->get_json_params();
 
 		if ( ! isset( $params['uuid'] ) ) {
-			return rest_ensure_response( new WP_Error( 'missing_uuid', __( 'Missing UUID.' ), array( 'status' => 400 ) ) );
+			return rest_ensure_response( new WP_Error( 'missing_uuid', __( 'Missing UUID.', 'wapuugotchi' ), array( 'status' => 400 ) ) );
 		}
 
 		$unlocked_items = get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true );
 
 		if ( in_array( $params['uuid'], $unlocked_items, true ) ) {
-			return rest_ensure_response( new WP_Error( 'already_unlocked', __( 'Item already unlocked.' ), array( 'status' => 400 ) ) );
+			return rest_ensure_response( new WP_Error( 'already_unlocked', __( 'Item already unlocked.', 'wapuugotchi' ), array( 'status' => 400 ) ) );
 		}
 
 		$balance           = get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true );
@@ -262,11 +262,11 @@ class Api {
 			}
 		}
 		if ( null === $item ) {
-			return rest_ensure_response( new WP_Error( 'invalid_uuid', __( 'Item does not exist.' ), array( 'status' => 400 ) ) );
+			return rest_ensure_response( new WP_Error( 'invalid_uuid', __( 'Item does not exist.', 'wapuugotchi' ), array( 'status' => 400 ) ) );
 		}
 
 		if ( $balance < $item->meta->price ) {
-			return rest_ensure_response( new WP_Error( 'insufficient_balance', __( 'Insufficient balance.' ), array( 'status' => 400 ) ) );
+			return rest_ensure_response( new WP_Error( 'insufficient_balance', __( 'Insufficient balance.', 'wapuugotchi' ), array( 'status' => 400 ) ) );
 		}
 
 		$balance = $balance - $item->meta->price;

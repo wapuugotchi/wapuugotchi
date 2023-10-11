@@ -74,5 +74,3 @@ class Helper {
 		return array();
 	}
 }
-
-

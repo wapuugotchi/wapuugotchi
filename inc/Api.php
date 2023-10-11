@@ -297,6 +297,5 @@ class Api {
 		}
 
 		return rest_ensure_response( $bought );
-
 	}
 }

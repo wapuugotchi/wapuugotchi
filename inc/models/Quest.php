@@ -192,6 +192,4 @@ class Quest {
 
 		return false;
 	}
-
-
 }

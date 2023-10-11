@@ -157,12 +157,12 @@ class QuestDate {
 	/**
 	 * Check if one of the given plugins is active.
 	 *
-	 * @param array $list List of recommended plugins.
+	 * @param array $recommended_plugins List of recommended plugins.
 	 *
 	 * @return bool
 	 */
-	private static function is_active_plugin_in_list( $list ) {
-		if ( ! is_array( $list ) ) {
+	private static function is_active_plugin_in_list( $recommended_plugins ) {
+		if ( ! is_array( $recommended_plugins ) ) {
 			return false;
 		}
 		$activated_plugin = get_option( 'active_plugins' );
@@ -175,6 +175,6 @@ class QuestDate {
 			}
 		}
 
-		return ! empty( array_intersect( $list, $activated_plugin_slugs ) );
+		return ! empty( array_intersect( $recommended_plugins, $activated_plugin_slugs ) );
 	}
 }

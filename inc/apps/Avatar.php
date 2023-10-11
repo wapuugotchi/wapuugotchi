@@ -101,5 +101,4 @@ class Avatar {
 
 		return $result_array;
 	}
-
 }

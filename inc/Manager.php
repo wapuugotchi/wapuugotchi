@@ -26,11 +26,9 @@ class Manager {
 	/**
 	 * Initialization Manager
 	 *
-	 * @param string $hook_suffix The internal page name.
-	 *
 	 * @return void
 	 */
-	public function init( $hook_suffix ) {
+	public function init() {
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ) ) {
 			update_user_meta(
 				get_current_user_id(),
@@ -156,7 +154,6 @@ class Manager {
 		$total_config[ md5( Helper::COLLECTION_API_URL ) ] = $config;
 
 		return set_transient( 'wapuugotchi_collection', $total_config );
-
 	}
 
 	/**
@@ -218,7 +215,5 @@ class Manager {
 		delete_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha' );
 		delete_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha' );
 		delete_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha' );
-
 	}
-
 }

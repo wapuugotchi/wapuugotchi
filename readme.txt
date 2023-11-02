@@ -1,5 +1,5 @@
 === WapuuGotchi ===
-Contributors:      herrfeldmann
+Contributor:       herrfeldmann
 Tags:              assistant, wapuu, gamification
 Stable tag:        0.1.1
 Requires at least: 6.0

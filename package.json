@@ -45,7 +45,6 @@
 		"LICENSE",
 		"src",
 		"composer.json",
-		"package.json",
-		".wp-env.json"
+		"package.json"
 	]
 }

@@ -23,7 +23,7 @@ jobs:
           node-version: '19.x'
       - name: Install dependencies and build
         run: |
-          npm ci
+          npm install
           npm run build
       - name: Cache Node dependencies
         id: node-cache

@@ -34,20 +34,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-      # Composer Dependencies / Autoloader
-      - name: Validate composer.json and composer.lock
-        run: composer validate --strict
-      - name: Install Composer dependencies
-        run: composer install --prefer-dist --no-progress --no-dev
-      - name: Cache Composer packages
-        id: composer-cache
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-
       # Plugin Build/Upload
       - name: WordPress Plugin Deploy
         uses: 10up/action-wordpress-plugin-deploy@stable

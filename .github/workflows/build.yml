@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      # Node Dependencies
+      # Node Dependencies / Build
       - uses: actions/setup-node@v3
         with:
           node-version: '19.x'
@@ -34,7 +34,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-      # Composer Dependencies
+      # Composer Dependencies / Autoloader
       - name: Validate composer.json and composer.lock
         run: composer validate --strict
       - name: Install Composer dependencies
@@ -48,7 +48,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
 
-      # Plugin build/upload
+      # Plugin Build/Upload
       - name: WordPress Plugin Deploy
         uses: 10up/action-wordpress-plugin-deploy@stable
         with:

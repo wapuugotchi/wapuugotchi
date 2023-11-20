@@ -6,7 +6,9 @@
 /docs
 /src
 /node_modules
+/vendor
 /tests
+
 
 playwright.config.js
 babel.config.js
@@ -20,3 +22,11 @@ wapuugotchi.zip
 .eslintignore
 .distignore
 .gitignore
+.eslintrc.json
+.wp-env.json
+README.md
+composer.json
+composer.lock
+package-lock.json
+package.json
+phpcs.xml

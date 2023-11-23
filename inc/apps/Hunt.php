@@ -54,4 +54,5 @@ class Hunt {
 		\wp_set_script_translations( 'wapuugotchi-hunt', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
+	
 }

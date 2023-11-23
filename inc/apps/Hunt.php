@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) :
 endif; // No direct access allowed.
 
 /**
- * Class Log
+ * Class Hunt
  */
 class Hunt {
 

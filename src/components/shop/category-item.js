@@ -1,6 +1,6 @@
 import { useCallback } from '@wordpress/element';
 
-import { STORE_NAME } from '../store';
+import { STORE_NAME } from '../../store/wapuu';
 import { useSelect, dispatch } from '@wordpress/data';
 
 import priceTag from './category-item-pricetag.svg';

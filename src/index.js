@@ -1,6 +1,6 @@
 import { render, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
-import Avatar from './components/avatar';
+import Avatar from './components/avatar/avatar';
 
 const getDomElement = () => {
 	let domElement = document.getElementById( 'wapuugotchi__avatar' );

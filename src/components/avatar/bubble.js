@@ -1,7 +1,7 @@
 import { useSelect, dispatch } from '@wordpress/data';
 import parse from 'html-react-parser';
 import apiFetch from '@wordpress/api-fetch';
-import { STORE_NAME } from '../store';
+import { STORE_NAME } from '../../store/wapuu';
 import './bubble.scss';
 
 export default function Bubble() {

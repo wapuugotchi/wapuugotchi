@@ -1,0 +1,1242 @@
+{
+	"dashboard": [
+		{
+			"type": "guide",
+			"tabs": [
+				{
+					"image": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"title": "Willkommen",
+					"text": "… bei IONOS Journey! \n\nHier findest du eine Einführungstour durch deine WordPress-Instanz, in der dir Schritt für Schritt alle wichtigen Bereiche und Funktionen von WordPress gezeigt werden."
+				},
+				{
+					"image": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"title": "Zielgruppe",
+					"text": "IONOS Journey richtet sich insbesondere an Nutzer, die bisher wenig oder keine Erfahrung mit WordPress haben.\n\nDu kannst die Tour jederzeit beenden und zu einem späteren Zeitpunkt fortsetzen."
+				},
+				{
+					"image": "https://cdn.pixabay.com/photo/2016/11/22/19/24/archive-1850170_960_720.jpg",
+					"title": "Navigation",
+					"text": "Neben den Bedienelementen in dieser Box gibt es in der oberen Navigationsleiste weitere Steuerungselemente, die oben im Bild zu sehen sind.\n\nDamit kann zum vorherigen und nächsten Schritt gesprungen, IONOS Journey beendet oder die automatische Wiedergabe gestartet werden."
+				},
+				{
+					"image": "https://cdn.pixabay.com/photo/2016/11/22/19/24/archive-1850170_960_720.jpg",
+					"title": "Los geht’s!",
+					"text": "Nach dieser kurzen Einleitung wünschen wir dir viel Spaß mit IONOS Journey!"
+				}
+			]
+		},
+		{
+			"selector": "#wpcontent",
+			"type": "node",
+			"htmlContent": "Das Dashboard ist deine Mitteilungszentrale, hier laufen alle Fäden zusammen. Beispielsweise wirst du hier über Neuigkeiten im WordPress-Universum informiert und es werden dir auch letzte Änderungen angezeigt."
+		},
+		{
+			"htmlSelector": "#adminmenu",
+			"type": "focus",
+			"htmlContent": "Im Menü befinden sich die einzelnen Bereiche, die dir für die Bearbeitung deiner WordPress-Instanz zur Verfügung stehen. Im Laufe dieser Tour werden wir auf einige dieser Bereiche im Detail eingehen."
+		},
+		{
+			"htmlSelector": "#menu-posts",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "In diesem Bereich kannst du Beiträge erstellen, bearbeiten oder löschen.\n\nKlicke auf den Menüpunkt, wenn du mehr darüber erfahren möchtest."
+		},
+		{
+			"htmlSelector": "#menu-media",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Hier kannst du Medien (z.&nbsp;B.&nbsp;Bilder) hochladen, bearbeiten oder löschen.\n\nKlicke auf den Menüpunkt, wenn du mehr darüber erfahren möchtest."
+		},
+		{
+			"htmlSelector": "#menu-pages",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "In diesem Bereich kannst du neue Seiten anlegen und bereits vorhandene editieren oder löschen.\n\nMöchtest du mehr über diesen Bereich erfahren? Dann klicke jetzt auf diesen Menüpunkt.\n\nAlternativ kannst du wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "#menu-comments",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "In diesem Bereich kannst du erstellte Kommentare einsehen, bearbeiten oder auch entfernen.\n\nMöchtest du mehr über diesen Bereich erfahren? Dann klicke jetzt auf diesen Menüpunkt.\n\nAlternativ kannst du wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "#menu-appearance",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "In diesem Bereich kannst du das Aussehen deiner Instanz verändern, außerdem hast du die Möglichkeit, dir neue kostenlose Themes aus aus dem WordPress.org-Verzeichnis  zu installieren.\n\nMöchtest du mehr über diesen Bereich erfahren? Dann klicke jetzt auf diesen Menüpunkt.\n\nAlternativ kannst du wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "#menu-plugins",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "In diesem Bereich kannst du die Plugins deiner Instanz einsehen, neue installieren oder vorhandene löschen bzw. deaktivieren.\n\nMöchtest du mehr über diesen Bereich erfahren? Dann klicke jetzt auf diesen Menüpunkt.\n\nAlternativ kannst du wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "#menu-users",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "In diesem Bereich kannst du neue Benutzer anlegen, bereits vorhandene löschen oder Berechtigungen verändern.\n\nMöchtest du mehr über diesen Bereich erfahren? Dann klicke jetzt auf diesen Menüpunkt.\n\nAlternativ kannst du wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "#menu-tools",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "In diesem Bereich kannst du verschiedene nützliche Werkzeuge auf deiner Website nutzen.\n\nMöchtest du mehr über diesen Bereich erfahren? Dann klicke jetzt auf diesen Menüpunkt.\n\nAlternativ kannst du wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "#menu-settings",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "In diesem Bereich kannst du die Einstellungen deiner Instanz einsehen sowie verändern.\n\nMöchtest du mehr über diesen Bereich erfahren? Dann klicke jetzt auf diesen Menüpunkt.\n\nAlternativ kannst du wie gehabt weiter fortfahren."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "## Ende\nDeine Tour ist an dieser Stelle zu Ende, Du kannst diese jederzeit von Neuem beginnen oder nur einzelne Bereiche der Tour betrachten."
+		}
+	],
+	"edit-post": [
+		{
+			"htmlSelector": "#ionos-journey-guide",
+			"type": "guide",
+			"children": [
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2017/05/12/08/29/coffee-2306471_960_720.jpg",
+					"headline": "Übersicht",
+					"htmlContent": "Du befindest dich in der Beitragsübersicht. Von hier aus kannst du Beiträge erstellen, bearbeiten oder löschen."
+				},
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2016/11/22/19/24/archive-1850170_960_720.jpg",
+					"headline": "Was sind Beiträge?",
+					"htmlContent": "Hierbei handelt es sich um „klassische“ Blog-Beiträge, die in chronologischer Reihenfolge auf einer Betragsseite dargestellt werden.\n\nBeiträge können kategorisiert und verschlagwortet werden. Darüber hinaus hast du die Möglichkeit, Kommentare zu erlauben."
+				}
+			]
+		},
+		{
+			"htmlSelector": "#posts-filter thead",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Du kannst die Sortierung der Liste ändern, indem du auf einen Spaltentitel klickst.\n\nEs können jedoch nicht alle angeklickt werden und die Sortierung hat keinen Einfluss auf die Darstellung auf der Website."
+		},
+		{
+			"htmlSelector": ".manage-column.column-comments",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "In dieser Spalte erhältst du Informationen über die Anzahl freigegebener und ausstehender Kommentare.\n\nAusstehende Kommentare sind Kommentare, die noch nicht vom Autor freigegeben wurden."
+		},
+		{
+			"htmlSelector": ".page-title-action",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Über diesen Button kannst du einen neuen Beitrag erstellen.\n\n_Klicke auf den Button, wenn du mehr darüber erfahren möchtest._"
+		},
+		{
+			"htmlSelector": "#menu-posts a[href=\\\"edit-tags.php?taxonomy=category\\\"]",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "In diesem Bereich kannst du Kategorien erstellen, bearbeiten oder löschen.\n\n_Klicke auf den Menüpunkt, wenn du mehr darüber erfahren möchtest._"
+		},
+		{
+			"htmlSelector": "#menu-posts a[href=\\\"edit-tags.php?taxonomy=post_tag\\\"]",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "In diesem Bereich kannst du Schlagwörter erstellen, bearbeiten oder löschen.\n\n_Klicke auf den Menüpunkt, wenn du mehr darüber erfahren möchtest._"
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Jetzt hast du einen Überblick über die Beitragsverwaltung erhalten.\n\n_Solltest du die Tour vom Dashboard aus gestartet haben, schicken wir dich im nächsten Schritt dorthin zurück. Ansonsten ist die Tour beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "index",
+			"urlParams": {
+				"tour_index": 4
+			}
+		}
+	],
+	"post": [
+		{
+			"type": "guide",
+			"children": [
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2014/02/13/07/28/wordpress-265132_960_720.jpg",
+					"headline": "Editor",
+					"htmlContent": "Du befindest dich im Editor. Von hier aus kannst du Beiträge bearbeiten und veröffentlichen."
+				},
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2017/03/03/13/56/key-2114046_960_720.jpg",
+					"headline": "Sichtbarkeit",
+					"htmlContent": "Darüber hinaus gibt es die Möglichkeit festzulegen, wer den Beitrag sehen darf. Es ist möglich, den Beitrag für alle, niemand oder passwortgeschützt freizugeben."
+				},
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2015/03/05/17/34/calendar-660670_960_720.jpg",
+					"headline": "Planung",
+					"htmlContent": "Zusätzlich hast du die Möglichkeit, den Beitrag zu einem bestimmten Zeitpunkt (Datum und Uhrzeit) automatisch zu veröffentlichen."
+				}
+			]
+		},
+		{
+			"htmlSelector": ".block-editor-writing-flow",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Das ist der Editor-Bereich, hier wird dir der aktuelle Inhalt und Titel des Beitrages angezeigt."
+		},
+		{
+			"htmlSelector": ".editor-post-title__input",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "In diesem Feld kannst du den Titel des Beitrages festlegen."
+		},
+		{
+			"htmlSelector": ".block-editor-block-list__layout",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "In diesem Bereich kannst du dem Beitrag neue Blöcke wie z. B. Absätze oder Bilder hinzufügen."
+		},
+		{
+			"htmlSelector": ".interface-interface-skeleton__sidebar",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "In der Sidebar kannst du die Einstellungen des Beitrages einsehen und verändern.\n\nDazu gehören z. B. die Kategorien, Permalink oder die Sichtbarkeit."
+		},
+		{
+			"htmlSelector": ".edit-post-header",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "In der Werkzeugleiste hast du unter anderem folgende Möglichkeiten:\n\n\n* \\- Blöcke hinzufügen\n* \\- Änderungen rückgängig machen\n* \\- Vorschau des Beitrages\n* \\- Veröffentlichen des Beitrages\n* \\- Speichern des Beitrages\n"
+		},
+		{
+			"htmlSelector": ".block-editor-writing-flow",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Jetzt hast du einen Überblick über den Beitragseditor erhalten.\n\n_Solltest du die Tour nicht von hier aus gestartet haben, schicken wir dich im nächsten Schritt auf deine letzte Seite zurück. Ansonsten ist die Tour für diesen Bereich beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "edit",
+			"urlParams": {
+				"tour_index": 4
+			}
+		}
+	],
+	"page": [
+		{
+			"type": "guide",
+			"children": [
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2014/02/13/07/28/wordpress-265132_960_720.jpg",
+					"headline": "Editor",
+					"htmlContent": "Du befindest dich im Editor. Von hier aus kannst du Seiten bearbeiten und veröffentlichen."
+				},
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2017/03/03/13/56/key-2114046_960_720.jpg",
+					"headline": "Sichtbarkeit",
+					"htmlContent": "Darüber hinaus gibt es die Möglichkeit festzulegen, wer die Seite sehen darf. Es ist möglich, die Seite für alle, niemand oder passwortgeschützt freizugeben."
+				},
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2015/03/05/17/34/calendar-660670_960_720.jpg",
+					"headline": "Planung",
+					"htmlContent": "Zusätzlich hast du die Möglichkeit, die Seite zu einem bestimmten Zeitpunkt (Datum und Uhrzeit) automatisch zu veröffentlichen."
+				}
+			]
+		},
+		{
+			"htmlSelector": ".block-editor-writing-flow",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Das ist der Editor-Bereich, hier wird dir der aktuelle Inhalt und Titel der Seite angezeigt."
+		},
+		{
+			"htmlSelector": ".editor-post-title__input",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "In diesem Feld kannst du den Titel der Seite festlegen."
+		},
+		{
+			"htmlSelector": ".block-editor-block-list__layout",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "In diesem Bereich kannst du der Seite neue Blöcke wie z. B. Absätze oder Bilder hinzufügen."
+		},
+		{
+			"htmlSelector": ".interface-interface-skeleton__sidebar",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "In der Sidebar kannst du die Einstellungen der Seite einsehen und verändern.\n\nDazu gehören z. B. der Permalink oder die Sichtbarkeit."
+		},
+		{
+			"htmlSelector": ".edit-post-header",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "In der Werkzeugleiste hast du unter anderem folgende Möglichkeiten:\n\n\n* \\- Blöcke hinzufügen\n* \\- Änderungen rückgängig machen\n* \\- Vorschau der Seite\n* \\- Veröffentlichen der Seite\n* \\- Speichern der Seite\n"
+		},
+		{
+			"htmlSelector": ".block-editor-writing-flow",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Jetzt hast du einen Überblick über den Seiteneditor erhalten.\n\n_Solltest du die Tour nicht von hier aus gestartet haben, schicken wir dich im nächsten Schritt auf deine letzte Seite zurück. Ansonsten ist die Tour für diesen Bereich beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "index",
+			"urlParams": {
+				"tour_index": 6
+			}
+		}
+	],
+	"upload": [
+		{
+			"htmlSelector": "#ionos-journey-guide",
+			"type": "guide",
+			"children": [
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2016/06/27/07/30/elvis-presley-1482026_960_720.jpg",
+					"headline": "Übersicht",
+					"htmlContent": "Du befindest dich in der Mediathek. Von hier aus kannst du deine Medien verwalten, z. B. Bilder."
+				}
+			]
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Hier werden alle hochgeladenen Medien angezeigt, auch die, die direkt in Seiten oder Beiträgen eingefügt wurden."
+		},
+		{
+			"htmlSelector": ".page-title-action",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Hier kannst du neue Medien hochladen. Alternativ kannst du die Medien auch per Drag-&-Drop direkt auf diese Seite ziehen und damit hochladen."
+		},
+		{
+			"htmlSelector": ".media-toolbar",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Du kannst bei der Ansicht der Mediathek zwischen einer Listen- und einer Grid-Ansicht wechseln.\n\nAußerdem kannst du die Medien nach Art und Upload-Datum filtern."
+		},
+		{
+			"type": "redirect",
+			"page": "index",
+			"urlParams": {
+				"tour_index": 5
+			}
+		}
+	],
+	"edit-page": [
+		{
+			"htmlSelector": "#ionos-journey-guide",
+			"type": "guide",
+			"children": [
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2017/01/07/15/07/bible-1960635_960_720.jpg",
+					"headline": "Übersicht",
+					"htmlContent": "Du befindest dich in der Seitenübersicht. Von hier aus kannst du Seiten erstellen, bearbeiten oder löschen"
+				},
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2021/11/17/10/39/kangaroo-6803201_960_720.jpg",
+					"headline": "Was sind Seiten?",
+					"htmlContent": "Im Gegensatz zu Blog-Beiträgen werden Seiten zur Erstellung von Inhalten genutzt, die keine zeitliche Reihenfolge erfordern. Beispiele hierfür sind Impressum- und Über-uns-Seite"
+				}
+			]
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Hier werden dir alle Seiten deiner Website angezeigt. Darüber hinaus kannst du hier Informationen zum Autor und zum Status der Seite entnehmen."
+		},
+		{
+			"htmlSelector": "#posts-filter thead",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Du kannst die Sortierung der Liste ändern, indem du auf einen Spaltentitel klickst.\n\nEs können jedoch nicht alle angeklickt werden und die Sortierung hat keinen Einfluss auf die Darstellung auf der Website."
+		},
+		{
+			"htmlSelector": ".manage-column.column-comments",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "In dieser Spalte erhältst du Informationen über die Anzahl freigegebener und ausstehender Kommentare.\n\nAusstehende Kommentare sind Kommentare, die noch nicht vom Autor freigegeben wurden."
+		},
+		{
+			"htmlSelector": ".page-title-action",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Über diesen Button kannst du neue Seiten erstellen."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Jetzt hast du einen Überblick über die Seitenverwaltung erhalten.\n\n _Solltest du die Tour vom Dashboard aus gestartet haben, schicken wir dich im nächsten Schritt dorthin zurück. Ansonsten ist die Tour für diesen Bereich beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "index",
+			"urlParams": {
+				"tour_index": 6
+			}
+		}
+	],
+	"edit-comments": [
+		{
+			"htmlSelector": "#ionos-journey-guide",
+			"type": "guide",
+			"children": [
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Übersicht",
+					"htmlContent": "Du befindest dich jetzt in der Kommentarübersicht. Von hier aus kannst du Kommentare bearbeiten oder löschen."
+				},
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Was sind Kommentare?",
+					"htmlContent": "Mit dieser Funktion ist es dem Leser möglich Beiträge zu kommentieren. Der Leser kann sich so einbringen und mit dir in Austausch treten. Solltest du diese Funktion nicht verwenden wollen kannst du sie selbstverständlich deaktivieren."
+				}
+			]
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Hier werden dir alle Kommentare deiner Website angezeigt. Darüber hinaus kannst du hier Informationen zum Autor entnehmen und Informationen darüber auf welchen Beitrag sich der Kommentar bezieht."
+		},
+		{
+			"htmlSelector": ".comments thead",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Du kannst die Sortierung der Liste ändern, indem du auf einen Spaltentitel klickst.\n\nEs können jedoch nicht alle angeklickt werden und die Sortierung hat keinen Einfluss auf die Darstellung auf der Website."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Jetzt hast du einen Überblick über die Kommentarübersicht erhalten.\n\n_Solltest du die Tour vom Dashboard aus gestartet haben, schicken wir dich im nächsten Schritt dorthin zurück. Ansonsten ist die Tour für diesen Bereich beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "index",
+			"urlParams": {
+				"tour_index": 7
+			}
+		}
+	],
+	"themes": [
+		{
+			"type": "guide",
+			"children": [
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Übersicht",
+					"htmlContent": "Wir befinden uns jetzt im Themes-Bereich. Hier kannst du das Design deiner Instanz anpassen."
+				},
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Theme-Browser",
+					"htmlContent": "Über den Theme-Browser kannst du neue kostenlose Designs aus dem WordPress.org-Verzeichnis installieren."
+				}
+			]
+		},
+		{
+			"htmlSelector": ".theme-browser.rendered",
+			"type": "focus",
+			"htmlContent": "Hier werden alle deine heruntergeladenen Themes angezeigt."
+		},
+		{
+			"htmlSelector": ".theme.active",
+			"type": "focus",
+			"htmlContent": "Dies ist dein aktuelles Theme, es ist durch ein **Aktiv** vor dem Namen und eine andere Farbe gekennzeichnet."
+		},
+		{
+			"htmlSelector": ".theme.active .theme-actions",
+			"type": "focus",
+			"htmlContent": "Mit diesem Button kannst du das Theme deinen Wünschen anpassen.\n\nDu kannst beispielsweise den Hintergrund anpassen oder die Fußzeile um eine Copyright-Notiz erweitern."
+		},
+		{
+			"htmlSelector": ".theme.add-new-theme",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Mit einem Klick in diesen Bereich kannst du neue Themes hinzufügen bzw. herunterladen.\n\nMöchtest du mehr über das Hinzufügen von Themes erfahren? Dann klicke jetzt in diesen Bereich.\n\nAlternativ kannst du wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Jetzt hast du einen Überblick über den Theme-Bereich erhalten.\n\n_Solltest du die Tour vom Dashboard aus gestartet haben, schicken wir dich im nächsten Schritt dorthin zurück. Ansonsten ist die Tour für diesen Bereich beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "index",
+			"urlParams": {
+				"tour_index": 8
+			}
+		}
+	],
+	"theme-install": [
+		{
+			"type": "redirect",
+			"page": "theme-install",
+			"urlParams": {
+				"browse": "popular",
+				"tour_index": 1
+			}
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Du befindest dich jetzt im Theme-Browser. Hier findest du eine Vielzahl an Themes, welche du deinem WordPress hinzufügen kannst."
+		},
+		{
+			"htmlSelector": ".wp-filter",
+			"type": "focus",
+			"htmlContent": "Über diese Leiste kannst du einerseits nach Themes suchen oder dir empfohlene sowie neueste anzeigen lassen."
+		},
+		{
+			"htmlSelector": ".filter-count",
+			"type": "focus",
+			"htmlContent": "Hier wird dir angezeigt, wie viele Themes für deine Anfrage gefunden wurden und angezeigt werden."
+		},
+		{
+			"htmlSelector": ".theme-browser.content-filterable.rendered",
+			"type": "focus",
+			"htmlContent": "Hier werden dir alle gefundenen Themes zu deiner Anfrage angezeigt."
+		},
+		{
+			"htmlSelector": ".theme",
+			"type": "focus",
+			"htmlContent": "Für jedes Theme erhältst du einen Screenshot sowie dessen Namen. Mit einem Klick auf dieses bekommst du mehr Informationen über dieses."
+		},
+		{
+			"htmlSelector": ".notice.notice-success.notice-alt",
+			"type": "focus",
+			"htmlContent": "Bereits installierte Themes sind mit einem Banner gekennzeichnet, diese kannst du direkt von hier aus aktivieren, anpassen oder dir eine Vorschau anzeigen lassen."
+		},
+		{
+			"htmlSelector": ".page-title-action",
+			"type": "focus",
+			"htmlContent": "Über diesen Button kannst du ein eigenes Theme installieren (hierfür benötigst du es als **.zip**-Datei)."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Jetzt hast du einen Überblick über den Theme-Browser erhalten.\n\n_Solltest du die Tour nicht von hier aus gestartet haben, schicken wir dich im nächsten Schritt auf deine letzte Seite zurück. Ansonsten ist die Tour für diesen Bereich beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "themes",
+			"urlParams": {
+				"tour_index": 5
+			}
+		}
+	],
+	"plugins": [
+		{
+			"type": "guide",
+			"children": [
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Übersicht",
+					"htmlContent": "Du befindest dich jetzt im Plugin-Bereich. Hier kannst du dein WordPress um neue Funktionen erweitern und siehst eine Übersicht über bereits installierte Plugins."
+				},
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Plugin-Browser",
+					"htmlContent": "Über den Plugin-Browser kannst du deiner Instanz kostenlose Plugins aus dem WordPress.org-Verzeichnis hinzufügen."
+				}
+			]
+		},
+		{
+			"htmlSelector": ".wp-list-table.widefat.plugins",
+			"type": "focus",
+			"htmlContent": "In dieser Tabelle sind alle bereits heruntergeladenen Plugins aufgeführt."
+		},
+		{
+			"htmlSelector": ".manage-column.column-name",
+			"type": "focus",
+			"htmlContent": "In dieser Spalte steht der Name des Plugins. Du kannst es aktivieren, deaktivieren oder auch löschen."
+		},
+		{
+			"htmlSelector": ".manage-column.column-description",
+			"type": "focus",
+			"htmlContent": "In dieser Spalte findest du eine Beschreibung des Plugins sowie die installierte Version und den Autor."
+		},
+		{
+			"htmlSelector": ".page-title-action",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Hier kannst du neue Plugins hinzufügen.\n\nWillst du mehr über das Hinzufügen von Plugins erfahren? Dann klicke jetzt auf diesen Button.\n\nAnsonsten kannst du auch wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Jetzt hast du einen Überblick über den Plugin-Bereich erhalten.\n\n_Solltest du die Tour vom Dashboard aus gestartet haben, schicken wir dich im nächsten Schritt dorthin zurück. Ansonsten ist die Tour für diesen Bereich beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "index",
+			"urlParams": {
+				"tour_index": 9
+			}
+		}
+	],
+	"plugin-install": [
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Du befindest dich jetzt im Plugin-Browser. Hier findest du eine Vielzahl an Plugins, die du deinem WordPress hinzufügen kannst."
+		},
+		{
+			"htmlSelector": ".wp-filter",
+			"type": "focus",
+			"htmlContent": "Über diese Leiste kannst du einerseits nach Plugins suchen oder dir empfohlene Plugins anzeigen lassen."
+		},
+		{
+			"htmlSelector": ".plugin-card",
+			"type": "focus",
+			"htmlContent": "Für jedes Plugin erhältst du Informationen über den Autor, eine Beschreibung sowie wann es zuletzt aktualisiert wurde.\n\nAußerdem erfährst du wie die Bewertungen für das Plugin ausfallen und ob es mit deiner WordPress-Version kompatibel ist."
+		},
+		{
+			"htmlSelector": ".install-now.button",
+			"type": "focus",
+			"htmlContent": "Über diesen Button kannst du das Plugin installieren, aktivieren oder aktualisieren."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Jetzt hast du einen Überblick über den Plugin-Browser erhalten.\n\n_Solltest du die Tour nicht von hier aus gestartet haben, schicken wir dich im nächsten Schritt auf deine letzte Seite zurück. Ansonsten ist die Tour für diesen Bereich beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "plugins",
+			"urlParams": {
+				"tour_index": 5
+			}
+		}
+	],
+	"users": [
+		{
+			"type": "guide",
+			"children": [
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Benutzerverwaltung",
+					"htmlContent": "In der Benutzerverwaltung hast du eine Übersicht über alle Benutzerkonten, die auf deiner Website angelegt sind."
+				},
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Rollen",
+					"htmlContent": "Für die Rechtekontrolle kannst du Benutzern Rollen zuweisen, die verschiedene Berechtigungen haben."
+				}
+			]
+		},
+		{
+			"htmlSelector": ".manage-column.column-username",
+			"type": "focus",
+			"htmlContent": "In dieser Spalte wird der Benutzername des jeweiligen Benutzers sowie sein Profilbild angezeigt."
+		},
+		{
+			"htmlSelector": ".manage-column.column-role",
+			"type": "focus",
+			"htmlContent": "Jedem Benutzer können über die Benutzerverwaltung Rollen zugewiesen werden. Durch diese Rollen werden auch verschiedene Rechte vergeben."
+		},
+		{
+			"htmlSelector": "#new_role",
+			"type": "focus",
+			"htmlContent": "Um einem bereits existierenden Benutzer eine neue Rolle zuzuweisen, setze ein Häkchen neben den Benutzern, gehe zum Auswahlfeld **Rolle ändern in** und wähle die gewünschte Rolle."
+		},
+		{
+			"htmlSelector": ".page-title-action",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Über diesen Button kannst du einen neuen Benutzer anlegen.\n\nMöchtest du mehr über das Erstellen von Benutzern erfahren? Dann klicke einfach auf diesen Button.\n\nAnsonsten kannst du wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Jetzt hast du einen Überblick über die Benutzerverwaltung erhalten.\n\n_Solltest du die Tour vom Dashboard aus gestartet haben, schicken wir dich im nächsten Schritt dorthin zurück. Ansonsten ist die Tour für diesen Bereich beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "index",
+			"urlParams": {
+				"tour_index": 10
+			}
+		}
+	],
+	"user": [
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Hier kannst du neue Benutzer einfügen.\n\nFelder die mit **(erforderlich)** gekennzeichnet sind müssen ausgefüllt werden."
+		},
+		{
+			"htmlSelector": "#user_login",
+			"type": "focus",
+			"htmlContent": "Hier wird der Benutzername vergeben.\n\nDer Benutzername kann nach der Erstellung nicht mehr geändert werden."
+		},
+		{
+			"htmlSelector": "#email",
+			"type": "focus",
+			"htmlContent": "Die E-Mail-Adresse des Benutzers wird zum Versand von System-E-Mails verwendet, wie Passwort-Zurücksetzen-Mails. Außerdem kann die Mail-Adresse statt des Benutzernamens für den Login genutzt werden.."
+		},
+		{
+			"htmlSelector": ".form-field.form-required.user-pass1-wrap",
+			"type": "focus",
+			"htmlContent": "Hier kannst du ein Passwort vergeben oder eins generieren lassen."
+		},
+		{
+			"htmlSelector": "#role",
+			"type": "focus",
+			"htmlContent": "Hier kannst du festlegen, welche Rolle der neue Benutzer haben wird, so können z. B. neue Administratoren hinzugefügt werden."
+		},
+		{
+			"htmlSelector": "#createusersub",
+			"type": "focus",
+			"htmlContent": "Zu guter Letzt wird der neue Benutzer über diesen Button erstellt."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Jetzt hast du einen Überblick über die Erstellung neuer Benutzer erhalten."
+		},
+		{
+			"type": "redirect",
+			"page": "users",
+			"urlParams": {
+				"tour_index": 5
+			}
+		}
+	],
+	"tools": [
+		{
+			"type": "guide",
+			"borderColor": "transparent",
+			"children": [
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Importieren",
+					"htmlContent": "Mit den Werkzeugen hast du z. B. die Möglichkeit, Inhalts aus anderen CMS zu importieren."
+				},
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Exportieren",
+					"htmlContent": "Zusätzlich hast du auch die Möglichkeit Daten aus dem WordPress zu exportieren und so in ein anderes System zu übertragen."
+				},
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Personenbezogene Daten",
+					"htmlContent": "Für den Fall, dass du wegen der DSGVO personenbezogene Daten löschen oder freigeben müssen, ist das auch möglich."
+				}
+			]
+		},
+		{
+			"htmlSelector": "a[href^=import]",
+			"type": "focus",
+			"htmlContent": "Im Bereich **Daten importieren** erhälst du eine Auflistung von verfügbaren Importern, die du bei Bedarf installieren oder ausführen kannst."
+		},
+		{
+			"htmlSelector": "a[href^=export]",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Im Bereich **Daten exportieren** hast du die Möglichkeit Daten von deinem WordPress in eine XML-Datei zu exportieren.\n\nWenn du mehr über die Export-Funktion wissen möchtest, klicke einfach auf den Menüpunkt."
+		},
+		{
+			"htmlSelector": "a[href^=site-health]",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Im Bereich **Website-Zustand** wird eine Analyse der WordPress-Instanz angezeigt sowie gegebenenfalls vorhandene Punkte, die verbessert oder behoben werden sollten..\n\nWenn du mehr darüber erfahren möchtest, klicke einfach auf den Menüpunkt.."
+		},
+		{
+			"htmlSelector": "a[href^=export-personal-data]",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Im Bereich **Personenbezogene Daten exportieren** kannst du Daten eines Benutzers als ZIP-Datei exportieren.\n\nDurch einen Klick auf den Menüpunkt kannst du dir mehr Informationen dazu anzeigen lassen."
+		},
+		{
+			"htmlSelector": "a[href^=erase-personal-data]",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Im Bereich **Personenbezogene Daten löschen** kannst du die Daten eines Benutzers nach einer Anfrage komplett aus dem System entfernen.\n\nWenn du mehr darüber erfahren möchtest, klicke einfach auf den Menüpunkt"
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Jetzt hast du einen Überblick über die Werkzeuge erhalten."
+		},
+		{
+			"type": "redirect",
+			"page": "index",
+			"urlParams": {
+				"tour_index": 11
+			}
+		}
+	],
+	"export": [
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Du befindest dich jetzt im Bereich **Daten exportieren**, hier hast du die Möglichkeit Website-Daten im XML-Format zu exportieren."
+		},
+		{
+			"htmlSelector": "#export-filters fieldset",
+			"type": "focus",
+			"htmlContent": "Hier kannst du auswählen, welche Daten exportiert werden sollen. Es können alle oder nur einzelne Daten exportiert werden."
+		},
+		{
+			"htmlSelector": "#submit",
+			"type": "focus",
+			"htmlContent": "Um den Export durchzuführen, musst du dann nur noch auf diesen Button klicken (während der Tour nicht möglich)."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Jetzt hast du einen Überblick über das Exportieren von Daten erhalten."
+		},
+		{
+			"type": "redirect",
+			"page": "tools",
+			"urlParams": {
+				"tour_index": 3
+			}
+		}
+	],
+	"site-health": [
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Wir befinden uns jetzt im Bereich **Website-Zustand**. Hier erhältst du eine Analyse deiner WordPress-Instanz."
+		},
+		{
+			"htmlSelector": ".site-health-progress-label",
+			"type": "focus",
+			"htmlContent": "An dieser Stelle wird dir der Website-Zustand in einem Satz zusammengefasst."
+		},
+		{
+			"htmlSelector": ".health-check-body.health-check-status-tab.hide-if-no-js",
+			"type": "focus",
+			"htmlContent": "An dieser Stelle wird die Analyse für dich aufgegliedert und Prioritäten zugeordnet. Kritische Probleme z. B. solltest du versuchen, so schnell wie möglich zu beheben."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Jetzt hast du einen kurzen Überblick über die Analyse deiner Instanz erhalten."
+		},
+		{
+			"type": "redirect",
+			"page": "tools",
+			"urlParams": {
+				"tour_index": 4
+			}
+		}
+	],
+	"export-personal-data": [
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Wir befinden uns jetzt im Bereich **personenbezogene Daten exportieren**. Hier hast du die Möglichkeit Daten eines Benutzers als ZIP-Datei zu exportieren."
+		},
+		{
+			"htmlSelector": ".wp-privacy-request-form",
+			"type": "focus",
+			"htmlContent": "Bevor du personenbezogene Daten exportieren kannst, musst du mit Hilfe dieses Formulars einen Antrag erstellen. Um einen Antrag zu erstellen, benötigst du lediglich die E-Mail-Adresse des Benutzers."
+		},
+		{
+			"htmlSelector": ".wp-list-table.widefat.fixed.striped.table-view-list.privacy_requests",
+			"type": "focus",
+			"htmlContent": "Erstellte Anträge findest du in dieser Tabelle und hier kannst du auch die personenbezogenen Daten herunterladen sowie den Status des Antrags ändern und ihn wieder löschen."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Jetzt hast du einen kurzen Überblick über das Exportieren von personenbezogenen Daten erhalten."
+		},
+		{
+			"type": "redirect",
+			"page": "tools",
+			"urlParams": {
+				"tour_index": 5
+			}
+		}
+	],
+	"erase-personal-data": [
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Wir befinden uns jetzt im Bereich **personenbezogene Daten löschen**. Hier hast du die Möglichkeit Daten eines Benutzers zu löschen."
+		},
+		{
+			"htmlSelector": ".wp-privacy-request-form",
+			"type": "focus",
+			"htmlContent": "Jeder angemeldete Benutzer deiner Website kann mit Hilfe dieses Formulars einen Antrag erstellen auf Lösung seiner Daten stellen. Mit der E-Mail-Adresse des Benutzers kann auch jeder Administrator diesen Antrag einreichen."
+		},
+		{
+			"htmlSelector": ".wp-list-table.widefat.fixed.striped.table-view-list.privacy_requests",
+			"type": "focus",
+			"htmlContent": "Erstellte Anträge findest du in dieser Tabelle und kannst an dieser Stelle auch die personenbezogenen Daten löschen."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Jetzt hast du einen kurzen Überblick über das Löschen von personenbezogenen Daten erhalten.\n\n_Solltest du die Tour nicht von hier aus gestartet haben, schicken wir dich im nächsten Schritt auf deine letzte Seite zurück. Ansonsten ist die Tour für diesen Bereich beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "tools",
+			"urlParams": {
+				"tour_index": 6
+			}
+		}
+	],
+	"options-general": [
+		{
+			"type": "guide",
+			"borderColor": "transparent",
+			"children": [
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Einstellungen",
+					"htmlContent": "Wir befinden uns jetzt im Einstellungsbereich. Von hier aus kannst du die Einstellungen deiner WordPress-Instanz anpassen."
+				},
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Allgemeines",
+					"htmlContent": "Du hast  z. B. die Möglichkeit den Namen sowie die Beschreibung deines Blogs anzupassen."
+				}
+			]
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Mit Hilfe dieses Formulars kannst du die allgemeinen Einstellungen deiner Website editieren."
+		},
+		{
+			"htmlSelector": "#blogname",
+			"type": "focus",
+			"htmlContent": "Hier kannst du den Namen deiner Website bearbeiten."
+		},
+		{
+			"htmlSelector": "#blogdescription",
+			"type": "focus",
+			"htmlContent": "Hier kannst du die Beschreibung deiner Website bearbeiten."
+		},
+		{
+			"htmlSelector": "#new_admin_email",
+			"type": "focus",
+			"htmlContent": "Hier kannst du die Admin-E-Mail-Adresse bearbeiten."
+		},
+		{
+			"htmlSelector": "#users_can_register",
+			"type": "focus",
+			"htmlContent": "Hier kannst du einstellen, ob sich Benutzer registrieren dürfen."
+		},
+		{
+			"htmlSelector": "#submit",
+			"type": "focus",
+			"htmlContent": "Zum Speichern der Änderungen musst du nur noch auf diesen Button klicken."
+		},
+		{
+			"htmlSelector": "#menu-settings",
+			"type": "focus",
+			"htmlContent": "Die Einstellungen sind in verschiedene Unterbereiche eingeteilt, auf die du über dieses Menü zugreifen kannst."
+		},
+		{
+			"htmlSelector": ".wp-submenu.wp-submenu-wrap a[href^=options-general]",
+			"type": "focus",
+			"htmlContent": "Wir befinden uns gerade im Unterbereich **Allgemein**."
+		},
+		{
+			"htmlSelector": "a[href^=options-writing]",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Im Unterbereich **Schreiben** kannst du die Einstellungen für Beiträge anpassen.\n\nMöchtest du mehr über diesen Unterbereich erfahren? Dann klicke jetzt auf diesen Menüpunkt.\n\nAnsonsten kannst du auch wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "a[href^=options-reading]",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Im Unterbereich **Lesen** kannst du die Einstellungen zur Seitenindexierung oder Startseite anpassen.\n\nMöchtest du mehr über diesen Unterbereich erfahren? Dann klicke  jetzt auf diesen Menüpunkt.\n\nAnsonsten kannst du auch wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "a[href^=options-discussion]",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Im Unterbereich **Diskussion** kannst du die Einstellungen für Kommentare auf deiner WordPress-Instanz anpassen.\n\nMöchtest du mehr über diesen Unterbereich erfahren? Dann klicke hier jetzt auf diesen Menüpunkt.\n\nAnsonsten kannst du auch wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "a[href^=options-media]",
+			"type": "focus",
+			"isClickable": false,
+			"htmlContent": "Im Unterbereich **Medien** kannst du das Speichern von Medien auf deiner Website anpassen.\n\nMöchtest du mehr über diesen Unterbereich erfahren? Dann klicke jetzt auf diesen Menüpunkt.\n\nAnsonsten kannst du auch wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "a[href^=options-permalink]",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Im Unterbereich **Permalinks** kannst du anpassen, nach welcher Vorlage Permalinks in deiner Instanz erstellt werden sollen.\n\nMöchtest du mehr über diesen Unterbereich erfahren? Dann klicke jetzt auf diesen Menüpunkt.\n\nAnsonsten kannst du auch wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "a[href^=options-privacy]",
+			"type": "focus",
+			"isClickable": true,
+			"htmlContent": "Im Unterbereich **Datenschutz** kannst du festlegen, wo sich deine Datenschutzseite befindet und wo sie verlinkt werden soll.\n\nMöchtest du mehr über diesen Unterbereich erfahren? Dann klicke jetzt auf diesen Menüpunkt.\n\nAnsonsten kannst du auch wie gehabt fortfahren."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Jetzt hast du einen Überblick über den Bereich Einstellungen erhalten.\n\n_Solltest du die Tour vom Dashboard aus gestartet haben, schicken wir dich im nächsten Schritt dorthin zurück. Ansonsten ist die Tour für diesen Bereich beendet._ \uD83D\uDE0A"
+		},
+		{
+			"type": "redirect",
+			"page": "index",
+			"urlParams": {
+				"tour_index": 12
+			}
+		}
+	],
+	"options-writing": [
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Du befindest dich jetzt im Bereich *Schreiben*. Von hier aus kannst du die Einstellungen für Beiträge und Kommentare anpassen."
+		},
+		{
+			"htmlSelector": "table:nth-of-type(1)",
+			"type": "focus",
+			"htmlContent": "Im oberem Teil des Formulars kannst du die Standard-Beitragskategorie und das Standard-Beitragsformat bearbeiten."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Das war es auch schon mit dem Unterbereich **Schreiben**.\n\nSolltest du deine Tour nicht auf dieser Seite gestartet haben, senden wir dich nun wieder zur letzten Seite zurück.\n\nAnsonsten ist die Tour an dieser Stelle beendet."
+		},
+		{
+			"type": "redirect",
+			"page": "options-general",
+			"urlParams": {
+				"tour_index": 10
+			}
+		}
+	],
+	"options-reading": [
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Wir befinden uns jetzt im Unterbereich **Lesen*. Von hier aus kannst du die Einstellungen zur Anzeige von Beiträgen und deine Startseite anpassen."
+		},
+		{
+			"htmlSelector": "table tr:nth-of-type(1)",
+			"type": "focus",
+			"htmlContent": "Hier kannst du festlegen, ob eine statische Seite oder die neusten Beiträge als Startseite angezeigt werden soll."
+		},
+		{
+			"htmlSelector": "table tr:nth-of-type(2)",
+			"type": "focus",
+			"htmlContent": "Hier kannst du festlegen, wie viele Beiträge pro Seite angezeigt werden sollen."
+		},
+		{
+			"htmlSelector": "table tr:nth-of-type(3)",
+			"type": "focus",
+			"htmlContent": "Hier kannst du festlegen, wie viele Beiträge im RSS-Feed angezeigt werden sollen."
+		},
+		{
+			"htmlSelector": "table tr:nth-of-type(4)",
+			"type": "focus",
+			"htmlContent": "Hier kannst du festlegen, welcher Inhalt von Beiträgen im RSS-Feed angezeigt werden soll."
+		},
+		{
+			"htmlSelector": "table tr:nth-of-type(5)",
+			"type": "focus",
+			"htmlContent": "Hier kannst du festlegen, ob Suchmaschinen deine Website indexieren dürfen, also ob Unterseiten bei Suchmaschinen gelistet werden."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Das war es auch schon mit dem Unterbereich **Lesen**.\n\nSolltest du deine Tour nicht auf dieser Seite gestartet haben, wirst du zur letzten Seite zurückgeschickt.\n\nAnsonsten ist die Tour an dieser Stelle beendet."
+		},
+		{
+			"type": "redirect",
+			"page": "options-general",
+			"urlParams": {
+				"tour_index": 11
+			}
+		}
+	],
+	"options-discussion": [
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Du befindest dich jetzt im Unterbereich **Diskussion**. Von hier aus kannst du die Einstellungen für Kommentare und Avatare verändern."
+		},
+		{
+			"htmlSelector": "table:nth-of-type(1)",
+			"type": "focus",
+			"htmlContent": "Der obere Teil der Seite enthält alle Einstellungsmöglichkeiten für Kommentare und die Moderation dieser."
+		},
+		{
+			"htmlSelector": "table:nth-of-type(1) tr:nth-of-type(2)",
+			"type": "focus",
+			"htmlContent": "Du hast z. B. die Möglichkeit, eine Registrierung und Anmeldung des Kommentierenden vorauszusetzen."
+		},
+		{
+			"htmlSelector": "table:nth-of-type(2)",
+			"type": "focus",
+			"htmlContent": "Der untere Teil der Seite enthält die Einstellungsmöglichkeiten für Nutzer-Avatare."
+		},
+		{
+			"htmlSelector": "table:nth-of-type(2) tr:nth-of-type(1)",
+			"type": "focus",
+			"htmlContent": "Du hast beispielsweise die Möglichkeit, Avatare komplett zu deaktivieren..."
+		},
+		{
+			"htmlSelector": "table:nth-of-type(2) tr:nth-of-type(2)",
+			"type": "focus",
+			"htmlContent": "Oder nur Avatare mit einer bestimmten Altersfreigabe zuzulassen."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Das war es auch schon mit dem Unterbereich **Diskussion**.\n\nSolltest du deine Tour nicht auf dieser Seite gestartet haben, wirst du zur letzten Seite zurückgeschickt..\n\nAnsonsten ist die Tour an dieser Stelle beendet."
+		},
+		{
+			"type": "redirect",
+			"page": "options-general",
+			"urlParams": {
+				"tour_index": 12
+			}
+		}
+	],
+	"options-permalink": [
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Du befindest dich jetzt im Unterbereich **Permalinks**. Von hier aus kannst du die Einstellungen für den Link-Aufbau deiner WordPress-Instanz anpassen."
+		},
+		{
+			"htmlSelector": "table:nth-of-type(1)",
+			"type": "focus",
+			"htmlContent": "Hier hast du die Möglichkeit, den Link-Aufbau für Beiträge zu ändern. Du kannst dich entweder für eines der vorgefertigten Layouts oder für ein eigenes entscheiden."
+		},
+		{
+			"htmlSelector": "table:nth-of-type(2)",
+			"type": "focus",
+			"htmlContent": "Hier kannst du eine Basis für Kategorien und/oder Schlagwörter einrichten. Die Basis steht im Link dann immer vor der Kategorie bzw. dem Schlagwort."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Das war es auch schon mit dem Unterbereich **Permalinks**.\n\nSolltest du deine Tour nicht auf dieser Seite gestartet haben, schicken wir dich wieder zu letzten Seite zurück.\n\nAnsonsten ist die Tour an dieser Stelle beendet."
+		},
+		{
+			"type": "redirect",
+			"page": "options-general",
+			"urlParams": {
+				"tour_index": 14
+			}
+		}
+	],
+	"options-privacy": [
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Du befindest dich im Unterbereich **Datenschutz** von hier aus kannst du die Einstellungen für deine Datenschutzseite anpassen."
+		},
+		{
+			"htmlSelector": "table:nth-of-type(1) tr:nth-of-type(1)",
+			"type": "focus",
+			"htmlContent": "Du kannst z. B. eine neue Datenschutzseite erstellen."
+		},
+		{
+			"htmlSelector": "table:nth-of-type(1) tr:nth-of-type(2)",
+			"type": "focus",
+			"htmlContent": "Oder eine bereits vorhandene Seite als Datenschutzseite auswählen."
+		},
+		{
+			"htmlSelector": "#wpcontent",
+			"type": "focus",
+			"htmlContent": "Das war es auch schon mit dem Unterbereich **Datenschutz**.\n\nSolltest du die Tour nicht auf dieser Seite gestartet haben, wirst du auf die letzten Seite zurückgeschickt.\n\nAnsonsten ist die Tour an dieser Stelle beendet."
+		},
+		{
+			"type": "redirect",
+			"page": "options-general",
+			"urlParams": {
+				"tour_index": 15
+			}
+		}
+	],
+	"edit-category": [
+		{
+			"type": "guide",
+			"children": [
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2017/05/12/08/29/coffee-2306471_960_720.jpg",
+					"headline": "Kategorien",
+					"htmlContent": "Du befindest dich in der Kategorieübersicht. Von hier aus kannst du Kategorien erstellen, bearbeiten oder löschen."
+				},
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Was ist das?",
+					"htmlContent": "Kategorien können genutzt werden um thematisch ähnliche Beiträge zusammenzufassen. So können Besucher deiner Website die Beträge nach den Kategorien zu filtern."
+				}
+			]
+		},
+		{
+			"htmlSelector": "#col-left",
+			"type": "focus",
+			"htmlContent": "Hier kannst du neue Kategorien anlegen. Unter den jeweiligen Feldern findest du eine aussagekräftige Beschreibung ihrer Bedeutung."
+		},
+		{
+			"htmlSelector": "#col-right",
+			"type": "focus",
+			"htmlContent": "Das ist die Liste aller angelegten Kategorien. Zusätzlich zu Name, Beschreibung und Titelform kannst du die Anzahl der Artikel sehen, die der jeweiligen Kategorie zugewiesen sind.\n\nÜber die Headline kannst du die Sortierung der Liste ändern. Dies hat keinen Einfluss auf die Sortierung auf der Website."
+		},
+		{
+			"type": "redirect",
+			"page": "edit",
+			"urlParams": {
+				"tour_index": 5
+			}
+		}
+	],
+	"edit-post_tag": [
+		{
+			"type": "guide",
+			"children": [
+				{
+					"imageUrl": "https://cdn.pixabay.com/photo/2017/05/12/08/29/coffee-2306471_960_720.jpg",
+					"headline": "Schlagwörter",
+					"htmlContent": "Du befindest dich in der Schlagwörterübersicht. Von hier aus kannst du Schlagwörter erstellen, bearbeiten oder löschen."
+				},
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Was ist das?",
+					"htmlContent": "Schlagwörter haben eine ähnliche Funktion wie Kategorien, können jedoch nicht hierarchisch angelegt werden. Sie können dazu genutzt werden eine detaillierte Übersicht über die Inhalte genauer zu beschreiben."
+				},
+				{
+					"imageUrl": "https://s3-de-central.profitbricks.com/web-hosting/ionos/live/assets/journey/journey.png",
+					"headline": "Wofür ist das?",
+					"htmlContent": "Schlagwörter können genutzt werden um die Inhalte eines Blog-Artikels genauer zu beschreiben, so ähnlich wie Hashtags auf Twitter oder Instagram. Besucher deiner Website können die Beträge nach den Schlagwörtern filtern."
+				}
+			]
+		},
+		{
+			"htmlSelector": "#col-left",
+			"type": "focus",
+			"htmlContent": "Hier kannst du neue Schlagwörter anlegen. Unter den jeweiligen Feldern findest du eine aussagekräftige Beschreibung ihrer Bedeutung."
+		},
+		{
+			"htmlSelector": "#col-right",
+			"type": "focus",
+			"htmlContent": "Das ist die Liste aller angelegten Schlagwörter. Zusätzlich zu Name, Beschreibung und Titelform kannst du die Anzahl der Artikel sehen, die dem jeweiligen Schlagwort zugewiesen sind.\n\nÜber die Headline kannst du die Sortierung der Liste ändern. Dies hat keinen Einfluss auf die Sortierung auf der Website."
+		},
+		{
+			"type": "redirect",
+			"page": "edit",
+			"urlParams": {
+				"tour_index": 6
+			}
+		}
+	]
+}

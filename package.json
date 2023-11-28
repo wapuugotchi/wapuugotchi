@@ -6,8 +6,8 @@
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
-		"build": "wp-scripts build src/customizer.js src/scavenger-hunt.js src/quest-log.js src/index.js",
-		"watch": "wp-scripts build src/customizer.js src/scavenger-hunt.js src/quest-log.js src/index.js --watch",
+		"build": "wp-scripts build src/customizer.js src/scavenger-hunt.js src/quest-log.js src/onboarding.js src/index.js",
+		"watch": "wp-scripts build src/customizer.js src/scavenger-hunt.js src/quest-log.js src/onboarding.js src/index.js --watch",
 		"format": "wp-scripts format",
 		"lint": "concurrently \"npm run lint:lockfile\" \"npm run lint:tsconfig\" \"npm run lint:js\" \"npm run lint:pkg-json\" \"npm run lint:css\"",
 		"lint:css": "wp-scripts lint-style \"src/**/*.scss\"",

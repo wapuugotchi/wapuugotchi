@@ -1,5 +1,4 @@
 import { createReduxStore, register } from '@wordpress/data';
-import apiFetch from '@wordpress/api-fetch';
 
 const STORE_NAME = 'wapuugotchi/onboarding';
 
@@ -25,10 +24,10 @@ function create() {
 						...payload,
 					};
 				}
-				case '__SET_WAPUU': {
+				case '__SET_CONFIG': {
 					return {
 						...state,
-						wapuu: payload,
+						config: payload,
 					};
 				}
 			}
@@ -41,7 +40,7 @@ function create() {
 				async function ( { dispatch, select } ) {
 					dispatch.__setState( initialState );
 
-					dispatch.setWapuu( select.getWapuu() );
+					dispatch.setConfig( select.getConfig() );
 				},
 			__setState( payload ) {
 				return {
@@ -49,9 +48,9 @@ function create() {
 					payload,
 				};
 			},
-			setWapuu ( payload ) {
+			setConfig ( payload ) {
 				return {
-					type: '__SET_WAPUU',
+					type: '__SET_CONFIG',
 					payload: { ...payload },
 				};
 			},
@@ -61,8 +60,8 @@ function create() {
 			__getState( state ) {
 				return state;
 			},
-			getWapuu( state ) {
-				return state.wapuu;
+			getConfig( state ) {
+				return state.config;
 			},
 		},
 		resolvers: {},

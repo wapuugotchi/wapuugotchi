@@ -47,8 +47,15 @@ class Onboarding {
 		wp_enqueue_script( 'wapuugotchi-onboarding', WAPUUGOTCHI_URL . 'build/onboarding.js', $assets['dependencies'], $assets['version'], true );
 		wp_add_inline_script(
 			'wapuugotchi-onboarding',
-			'window.extWapuugotchiOnboardingData = ' . wp_json_encode( array() ),
-			'before'
+			sprintf(
+				"wp.data.dispatch('wapuugotchi/onboarding').__initialize(%s)",
+				wp_json_encode(
+					array(
+						'config' => 'rubbeldiekatz',
+					)
+				)
+			),
+			'after'
 		);
 
 		\wp_set_script_translations( 'wapuugotchi-onboarding', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );

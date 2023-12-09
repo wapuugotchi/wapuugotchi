@@ -5,6 +5,9 @@
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
+	"workspaces": [
+		"./storybook"
+	],
 	"scripts": {
 		"build": "wp-scripts build src/customizer.js src/scavenger-hunt.js src/quest-log.js src/index.js",
 		"watch": "wp-scripts build src/customizer.js src/scavenger-hunt.js src/quest-log.js src/index.js --watch",
@@ -19,6 +22,7 @@
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start src/customizer.js src/scavenger-hunt.js src/quest-log.js src/index.js",
+		"start:storybook": "npm run start --workspace=storybook",
 		"env": "wp-env",
 		"test": "npx playwright test --config playwright.config.js tests/addSource.test.js"
 	},

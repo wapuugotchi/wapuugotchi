@@ -2,7 +2,7 @@ import { useState } from '@wordpress/element';
 import { useSelect, dispatch } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
 import { __ } from '@wordpress/i18n';
-import { STORE_NAME } from '../store';
+import { STORE_NAME } from '../../store/wapuu';
 import Card from './card';
 import ShowRoom from './show-room';
 import PaymentDialog from './payment-dialog';

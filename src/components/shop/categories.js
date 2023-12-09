@@ -2,7 +2,7 @@ import Category from './category';
 import CategoryItems from './category-items';
 
 import { useCallback, useState } from '@wordpress/element';
-import { STORE_NAME } from '../store';
+import { STORE_NAME } from '../../store/wapuu';
 import { useSelect } from '@wordpress/data';
 
 import './categories.scss';

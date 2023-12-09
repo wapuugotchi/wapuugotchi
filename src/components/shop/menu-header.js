@@ -1,5 +1,5 @@
 import { useSelect } from '@wordpress/data';
-import { STORE_NAME } from '../store';
+import { STORE_NAME } from '../../store/wapuu';
 import { __ } from '@wordpress/i18n';
 import './menu-header.scss';
 import priceTag from './category-item-pricetag.svg';

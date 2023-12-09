@@ -1,6 +1,6 @@
 import { render, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
-import Log from './components/log';
+import Log from './components/questlog/log';
 
 domReady( () =>
 	render(

@@ -1,4 +1,4 @@
-import { STORE_NAME } from '../store';
+import { STORE_NAME } from '../../store/wapuu';
 import { useSelect, dispatch } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 // eslint-disable-next-line @wordpress/no-unsafe-wp-apis

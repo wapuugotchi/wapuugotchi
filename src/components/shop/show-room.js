@@ -1,4 +1,4 @@
-import { STORE_NAME } from '../store';
+import { STORE_NAME } from '../../store/wapuu';
 import { useSelect } from '@wordpress/data';
 import './show-room.scss';
 

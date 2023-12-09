@@ -1,6 +1,6 @@
 import { render, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
-import MenuHeader from './components/menu-header';
+import MenuHeader from './components/shop/menu-header';
 
 domReady( () =>
 	render(

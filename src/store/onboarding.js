@@ -13,7 +13,24 @@ const STORE_NAME = 'wapuugotchi/onboarding';
  *
 */
 
-
+async function __getCurrentElement( payload ) {
+	if( payload?.[0] ) {
+		return payload?.[0];
+	}
+	return undefined;
+}
+async function __getNextElement( payload ) {
+	if( payload?.[1] ) {
+		return payload[1];
+	}
+	return undefined;
+}
+async function __getLastElement( payload ) {
+	if( payload?.[0] ) {
+		return payload[0];
+	}
+	return undefined;
+}
 function create() {
 	const store = createReduxStore( STORE_NAME, {
 		reducer( state = {}, { type, payload } ) {
@@ -30,6 +47,30 @@ function create() {
 						config: payload,
 					};
 				}
+				case '__SET_CURRENT': {
+					return {
+						...state,
+						current: payload,
+					};
+				}
+				case '__SET_NEXT': {
+					return {
+						...state,
+						next: payload,
+					};
+				}
+				case '__SET_LAST': {
+					return {
+						...state,
+						last: payload,
+					};
+				}
+				case '__SET_PAGE': {
+					return {
+						...state,
+						page: payload,
+					};
+				}
 			}
 
 			return state;
@@ -39,8 +80,11 @@ function create() {
 			__initialize: ( initialState ) =>
 				async function ( { dispatch, select } ) {
 					dispatch.__setState( initialState );
-
 					dispatch.setConfig( select.getConfig() );
+					dispatch.setCurrent( select.getCurrent() );
+					dispatch.setNext( select.getNext() );
+					dispatch.setLast( select.getLast() );
+					dispatch.setPage( select.getPage() );
 				},
 			__setState( payload ) {
 				return {
@@ -50,7 +94,37 @@ function create() {
 			},
 			setConfig ( payload ) {
 				return {
-					type: '__SET_CONFIG',
+					type: '__SET_CURRENT',
+					payload: { ...payload },
+				};
+			},
+			setCurrent: ( payload ) => async function ( { dispatch, select } ) {
+				const current = await __getCurrentElement( payload );
+				console.log( current )
+
+				return dispatch.__setCurrent( current );
+			},
+			__setCurrent( payload ) {
+				return {
+					type: '__SET_CURRENT',
+					payload: { ...payload },
+				};
+			},
+			setNext ( payload ) {
+				return {
+					type: '__SET_NEXT',
+					payload: { ...payload },
+				};
+			},
+			setLast ( payload ) {
+				return {
+					type: '__SET_LAST',
+					payload: { ...payload },
+				};
+			},
+			setPage ( payload ) {
+				return {
+					type: '__SET_PAGE',
 					payload: { ...payload },
 				};
 			},
@@ -63,6 +137,18 @@ function create() {
 			getConfig( state ) {
 				return state.config;
 			},
+			getCurrent( state ) {
+				return state.current;
+			},
+			getNext( state ) {
+				return state.next;
+			},
+			getLast( state ) {
+				return state.last;
+			},
+			getPage( state ) {
+				return state.page;
+			}
 		},
 		resolvers: {},
 	} );

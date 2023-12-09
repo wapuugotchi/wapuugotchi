@@ -1,15 +1,23 @@
 import './guide-footer.scss';
+import {useSelect} from "@wordpress/data";
+import {STORE_NAME} from "../../store/onboarding";
 
-export default function GuideFooter() {
+export default function GuideFooter( param ) {
 
-	const guideNext = async () => {
-		console.log('Next step!!!!!')
+	const { current } = useSelect( ( select ) => {
+		return {
+			current: select( STORE_NAME ).getCurrent(),
+		};
+	} );
+
+	const handleNext = () => {
+		param.onHandleClick("next");
 	};
 
 	return (
 		<>
 			<div className="wapuugotchi_onboarding_guide__footer">
-				<button className="components-button" onClick={ guideNext }>Next</button>
+				<button className="components-button" onClick={ handleNext }>Next</button>
 			</div>
 		</>
 	);

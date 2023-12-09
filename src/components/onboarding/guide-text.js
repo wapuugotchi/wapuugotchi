@@ -1,11 +1,13 @@
 import './guide-text.scss';
+import {useSelect} from "@wordpress/data";
+import {STORE_NAME} from "../../store/onboarding";
 
 
-export default function GuideText() {
+export default function GuideText( param ) {
 	return (
 		<>
 			<div className="wapuugotchi_onboarding_guide__text">
-				<p>In the WordPress editor, each paragraph, image, or video is presented as a distinct “block” of content.</p>
+				<p>{ param?.text }</p>
 			</div>
 		</>
 	);

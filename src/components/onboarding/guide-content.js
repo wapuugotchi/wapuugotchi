@@ -2,17 +2,17 @@ import './guide-content.scss';
 import GuideTitle from "./guide-title";
 import GuideText from "./guide-text";
 import GuideControl from "./guide-control";
-import GuideFooter from "./guide-footer";
+import GuideImage from "./guide-image";
 
 
-export default function GuideContent() {
+export default function GuideContent( prop ) {
+
 	return (
 		<>
-			<div className="wapuugotchi_onboarding_guide__content">
-				<img src="https://s.w.org/images/block-editor/welcome-canvas.gif" width="312" height="240" alt="" />
-				<GuideControl />
-				<GuideTitle />
-				<GuideText />
+			<div className="wapuugotchi_onboarding_guide__content" >
+				<GuideImage image={ prop?.current?.image } />
+				<GuideTitle title={ prop?.current?.title } />
+				<GuideText text={ prop?.current?.text } />
 			</div>
 		</>
 	);

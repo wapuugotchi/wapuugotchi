@@ -1,19 +1,15 @@
 import './overlay.scss';
-import Guide from "./guide";
-import Node from "./node";
-import {useSelect} from "@wordpress/data";
+import Dialog from "./dialog";
+import {dispatch, useSelect} from "@wordpress/data";
 import {STORE_NAME} from "../../store/onboarding";
 
 export default function Overlay() {
-
-	const { config, next, page } = useSelect( ( select ) => {
+	const {index, pageConfig} = useSelect((select) => {
 		return {
-			config: select( STORE_NAME ).getConfig(),
-			next: select( STORE_NAME ).getNext(),
-			page: select( STORE_NAME ).getPage(),
+			index: select(STORE_NAME).getIndex(),
+			pageConfig: select(STORE_NAME).getPageConfig(),
 		};
-	} );
-
+	});
 	const fadeOut = () => {
 		let fadeTarget = document.getElementById("wapuugotchi__avatar");
 		let fadeEffect = setInterval(function () {
@@ -27,36 +23,26 @@ export default function Overlay() {
 			}
 		}, 10);
 	}
-	const fadeIn = () => {
-		let fadeTarget = document.getElementById("wapuugotchi__avatar");
-		let fadeEffect = setInterval(function () {
-			if (!fadeTarget.style.opacity) {
-				fadeTarget.style.opacity = 0;
-			}
-			if (fadeTarget.style.opacity < 1) {
-				fadeTarget.style.opacity += 0.1;
-			} else {
-				clearInterval(fadeEffect);
-			}
-		}, 10);
-	}
+	fadeOut();
+	const next = () => {
+		let keyList = Object.keys(pageConfig)
+		let indexPosition = keyList?.indexOf(index)
 
-	const getStep = () => {
-		const element = 'guide'
-		switch (element) {
-			case 'guide':
-				{fadeOut()}
-				return <Guide param={[]} />;
-			case 'node':
-				{fadeIn()}
-				return <Node param={[]} />;
+		if (indexPosition >= 0 && keyList?.length > indexPosition) {
+			let nextIndex = keyList[indexPosition + 1];
+			if (pageConfig?.[nextIndex] !== undefined) {
+				dispatch(STORE_NAME).setIndex(nextIndex);
+
+			}
 		}
 	}
 
 	return (
 		<>
-			<div id="wapuugotchi_onboarding__overlay">
-				{getStep()}
+			<div id="wapuugotchi_onboarding__overlay" onClick={next}>
+				<div className="wapuugotchi_onboarding__dialog">
+					<Dialog param={[]}/>;
+				</div>
 			</div>
 		</>
 	);

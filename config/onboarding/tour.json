@@ -1,29 +1,24 @@
 {
-	"index.php": [
-		{
-			"type": "guide",
-			"tabs": [
-				{
-					"image": "https://s.w.org/images/block-editor/welcome-canvas.gif",
-					"title": "Welcome to the block editor",
-					"text": "In the WordPress editor, each paragraph, image, or video is presented as a distinct “block” of content."
-				},
-				{
-					"image": "https://s.w.org/images/block-editor/welcome-editor.gif",
-					"title": "Make each block your own",
-					"text": "Each block comes with its own set of controls for changing things like color, width, and alignment. These will show and hide automatically when you have a block selected."
-				},
-				{
-					"image": "https://s.w.org/images/block-editor/welcome-library.gif",
-					"title": "Get to know the block library",
-					"text": "All of the blocks available to you live in the block library. You’ll find it wherever you see the inserter icon."
-				},
-				{
-					"image": "https://s.w.org/images/block-editor/welcome-documentation.gif",
-					"title": "Learn how to use the block editor",
-					"text": "New to the block editor? Want to learn more about using it? Here's a detailed guide."
-				}
-			]
+	"index.php": {
+		"welcome_1": {
+			"text": "In the WordPress editor, each paragraph, image, or video is presented as a distinct “block” of content.",
+			"target": null,
+			"clickable": false
+		},
+		"welcome_2": {
+			"text": "Each block comes with its own set of controls for changing things like color, width, and alignment. These will show and hide automatically when you have a block selected.",
+			"target": null,
+			"clickable": false
+		},
+		"navigation_1": {
+			"text": "All of the blocks available to you live in the block library. You’ll find it wherever you see the inserter icon.",
+			"target": "#adminmenuwrap",
+			"clickable": true
+		},
+		"media_tab_1": {
+			"text": "New to the block editor? Want to learn more about using it? Here's a detailed guide.",
+			"target": "#menu-media",
+			"clickable": true
 		}
-	]
+	}
 }

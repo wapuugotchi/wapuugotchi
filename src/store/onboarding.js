@@ -14,8 +14,10 @@ const STORE_NAME = 'wapuugotchi/onboarding';
 */
 
 async function __getCurrentElement( payload ) {
-	if( payload?.[0] ) {
-		return payload?.[0];
+	const list = Object.values(payload);
+
+	if( list?.[0] ) {
+		return list?.[0];
 	}
 	return undefined;
 }
@@ -41,34 +43,28 @@ function create() {
 						...payload,
 					};
 				}
-				case '__SET_CONFIG': {
+				case '__SET_GLOBAL_CONFIG': {
 					return {
 						...state,
-						config: payload,
+						global_config: payload,
 					};
 				}
-				case '__SET_CURRENT': {
+				case '__SET_PAGE_CONFIG': {
 					return {
 						...state,
-						current: payload,
+						page_config: payload,
 					};
 				}
-				case '__SET_NEXT': {
+				case '__SET_PAGE_NAME': {
 					return {
 						...state,
-						next: payload,
+						page_name: payload,
 					};
 				}
-				case '__SET_LAST': {
+				case '__SET_INDEX': {
 					return {
 						...state,
-						last: payload,
-					};
-				}
-				case '__SET_PAGE': {
-					return {
-						...state,
-						page: payload,
+						index: payload,
 					};
 				}
 			}
@@ -80,11 +76,10 @@ function create() {
 			__initialize: ( initialState ) =>
 				async function ( { dispatch, select } ) {
 					dispatch.__setState( initialState );
-					dispatch.setConfig( select.getConfig() );
-					dispatch.setCurrent( select.getCurrent() );
-					dispatch.setNext( select.getNext() );
-					dispatch.setLast( select.getLast() );
-					dispatch.setPage( select.getPage() );
+					dispatch.setGlobalConfig( select.getGlobalConfig() );
+					dispatch.setPageConfig( select.getPageConfig() );
+					dispatch.setPageName( select.getPageName() );
+					dispatch.setIndex( select.getIndex() );
 				},
 			__setState( payload ) {
 				return {
@@ -92,40 +87,28 @@ function create() {
 					payload,
 				};
 			},
-			setConfig ( payload ) {
+			setGlobalConfig ( payload ) {
 				return {
-					type: '__SET_CURRENT',
-					payload: { ...payload },
+					type: '__SET_GLOBAL_CONFIG',
+					payload: payload,
 				};
 			},
-			setCurrent: ( payload ) => async function ( { dispatch, select } ) {
-				const current = await __getCurrentElement( payload );
-				console.log( current )
-
-				return dispatch.__setCurrent( current );
-			},
-			__setCurrent( payload ) {
+			setPageConfig ( payload ) {
 				return {
-					type: '__SET_CURRENT',
-					payload: { ...payload },
+					type: '__SET_PAGE_CONFIG',
+					payload: payload,
 				};
 			},
-			setNext ( payload ) {
+			setPageName ( payload ) {
 				return {
-					type: '__SET_NEXT',
-					payload: { ...payload },
+					type: '__SET_PAGE_NAME',
+					payload: payload,
 				};
 			},
-			setLast ( payload ) {
+			setIndex ( payload ) {
 				return {
-					type: '__SET_LAST',
-					payload: { ...payload },
-				};
-			},
-			setPage ( payload ) {
-				return {
-					type: '__SET_PAGE',
-					payload: { ...payload },
+					type: '__SET_INDEX',
+					payload: payload,
 				};
 			},
 		},
@@ -134,21 +117,18 @@ function create() {
 			__getState( state ) {
 				return state;
 			},
-			getConfig( state ) {
-				return state.config;
+			getGlobalConfig( state ) {
+				return state.global_config;
 			},
-			getCurrent( state ) {
-				return state.current;
+			getPageConfig( state ) {
+				return state.page_config;
 			},
-			getNext( state ) {
-				return state.next;
+			getPageName( state ) {
+				return state.page_name;
 			},
-			getLast( state ) {
-				return state.last;
+			getIndex( state ) {
+				return state.index;
 			},
-			getPage( state ) {
-				return state.page;
-			}
 		},
 		resolvers: {},
 	} );

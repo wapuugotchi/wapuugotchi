@@ -1,0 +1,23 @@
+
+
+.wapuugotchi_onboarding__focus {
+
+	transition: all 0.5s;
+	border: solid 5px green;
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	overflow: auto;
+	animation: wapuugotchi-onboading__appear-animation .2s ease-out;
+	animation-fill-mode: forwards;
+	box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0);
+}
+
+@keyframes wapuugotchi-onboading__appear-animation{
+	0% {
+		box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0);
+	}
+	to {
+		box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.70);
+	}
+}

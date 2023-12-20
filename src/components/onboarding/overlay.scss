@@ -11,24 +11,3 @@
 body.wp-admin {
 	overflow: hidden;
 }
-
-.wapuugotchi_onboarding__dialog {
-	overflow: auto;
-	animation: wapuugotchi-onboading__appear-animation .2s ease-out;
-	animation-fill-mode: forwards;
-
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-
-	box-shadow: 0px 0px 2px 105vw rgba(0, 0, 0, 0);
-}
-
-@keyframes wapuugotchi-onboading__appear-animation{
-	0% {
-		box-shadow: 0px 0px 2px 105vw rgba(0, 0, 0, 0);
-	}
-	to {
-		box-shadow: 0px 0px 2px 105vw rgba(0, 0, 0, 0.35);
-	}
-}

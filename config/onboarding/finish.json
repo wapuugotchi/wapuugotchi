@@ -1,0 +1,13 @@
+{
+	"dashboard": {
+		"page" : "index.php",
+		"data" : {
+			"finish": {
+				"title": "Finish",
+				"text": "Jetzt hast du einen kleinen Überblick darüber! Ich hoffe die Tour hat dir gefallen! Für den Abschluss der Tour bekommen wir bestimmt ein paar Perlen!",
+				"target": null,
+				"clickable": false
+			}
+		}
+	}
+}

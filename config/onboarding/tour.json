@@ -1,24 +1,315 @@
 {
-	"index.php": {
-		"welcome_1": {
-			"text": "In the WordPress editor, each paragraph, image, or video is presented as a distinct “block” of content.",
-			"target": null,
-			"clickable": false
-		},
-		"welcome_2": {
-			"text": "Each block comes with its own set of controls for changing things like color, width, and alignment. These will show and hide automatically when you have a block selected.",
-			"target": null,
-			"clickable": false
-		},
-		"navigation_1": {
-			"text": "All of the blocks available to you live in the block library. You’ll find it wherever you see the inserter icon.",
-			"target": "#adminmenuwrap",
-			"clickable": true
-		},
-		"media_tab_1": {
-			"text": "New to the block editor? Want to learn more about using it? Here's a detailed guide.",
-			"target": "#menu-media",
-			"clickable": true
+	"dashboard": {
+		"page" : "index.php",
+		"data" : {
+			"welcome": {
+				"title": "Willkommen",
+				"text": "Herzlich willkommen auf deiner Reise durch das WordPress - Universum. Ich werde dich heute durch deine WordPress-Instanz führen und dich bei deinen ersten Schritten begleiten. Los gehts!!",
+				"target": null,
+				"clickable": false
+			},
+			"admin_bar": {
+				"title": "Admin-Bar",
+				"text": "Wir starten mit der Admin-Bar! Sie ermöglicht es dir schnell auf wichtige Seiten und Informationen zuzugreifen. Unter anderem bekommst du hier einen Überblick über offene Updates und eingegangene Kommentare.",
+				"target": "#wpadminbar",
+				"clickable": false
+			},
+			"admin_menu": {
+				"title": "Navigation",
+				"text": "Mit Hilfe der Navigation kannst du in die verschiedenen Bereiche deiner website betreten. Lass uns mal einen tieferen Blick darauf werfen.",
+				"target": "#adminmenuwrap",
+				"clickable": false
+			},
+			"dashboard_1": {
+				"title": "Dashboard im Menü",
+				"text": "Wir befinden uns gerade im Dashboard. Das Dashboard ist die erste Seite, die du siehst, wenn du dich in deinem WordPress einloggst.",
+				"target": "#menu-dashboard",
+				"clickable": false
+			},
+			"dashboard_2": {
+				"title": "Dashboard im Detail",
+				"text": "Das Dashboard bietet dir eine Zusammenfassung von Informationen aus allen Bereichen deiner website. Es informiert dich über aktuelle Geschehnisse auf deiner Website, wie neu veröffentlichte Beiträge, Kommentare oder Updates.",
+				"target": "#wpcontent",
+				"clickable": false
+			},
+			"dashboard_3": {
+				"title": "Dashboard anpassen",
+				"text": "Du hast aber auch die Möglichkeit dein Dashboard anzupassen. So kannst du beispielsweise Themenbereiche deaktivieren, die dich nicht interessieren.",
+				"target": "#screen-options-link-wrap",
+				"clickable": false
+			},
+			"next": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			}
+		}
+	},
+	"edit-post": {
+		"page" : "edit.php",
+		"data" : {
+			"beitrag_1": {
+				"title": "Beiträge im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Beiträge\". In diesen Bereich sind wir über die Navigation gekommen. Hier verwaltest du deine Artikel und Blogbeiträge.",
+				"target": "#menu-posts",
+				"clickable": false
+			},
+			"beitrag_2": {
+				"title": "Übersichtsseite",
+				"text": "Die Übersichtsseite bietet dir die Möglichkeit, deine Beiträge zu überblicken, zu organisieren und zu verwalten. Von hier aus kannst du schnell auf einzelne Beiträge zugreifen um beispielsweise Änderungen vorzunehmen.",
+				"target": "#wpcontent",
+				"clickable": false
+			},
+			"beitrag_3": {
+				"title": "Beitragsliste",
+				"text": "In der Beitragsliste kannst du alle deine Beiträge sehen. Darüber hinaus liefert sie dir Informationen wie den Titel, den Autor und das Veröffentlichungsdatum.",
+				"target": "table.wp-list-table",
+				"clickable": false
+			},
+			"beitrag_4": {
+				"title": "Titel",
+				"text": "Die Spalte zeigt die Titel aller Beiträge an. Durch Klicken auf den Titel kannst du den Beitrag bearbeiten und den Inhalt ändern.",
+				"target": "td.title",
+				"clickable": false
+			},
+			"beitrag_5": {
+				"title": "Autor",
+				"text": "Diese Spalte zeigt an, welcher Benutzer den Beitrag erstellt hat. Bei mehreren Autoren wird der jeweilige Benutzername angezeigt.",
+				"target": "td.author",
+				"clickable": false
+			},
+			"beitrag_6": {
+				"title": "Kategorien",
+				"text": "Hier siehst du die Kategorien, denen ein Beitrag zugeordnet ist. Kategorien helfen bei der strukturierten Organisation der Inhalte auf deiner Website.",
+				"target": "td.categories",
+				"clickable": false
+			},
+			"beitrag_7": {
+				"title": "Schlagwörter",
+				"text": "Diese Spalte zeigt die Schlagwörter (Tags) an, die den Beiträgen zugeordnet sind. Schlagwörter erleichtern das Auffinden von thematisch ähnlichen Inhalten.",
+				"target": "td.tags",
+				"clickable": false
+			},
+			"beitrag_8": {
+				"title": "Datum",
+				"text": "Diese Spalte zeigt das Datum und die Uhrzeit, wann der Beitrag veröffentlicht wurde oder veröffentlicht werden soll.",
+				"target": "td.date",
+				"clickable": false
+			},
+			"beitrag_9": {
+				"title": "Sortier- und Filteroptionen",
+				"text": "Du kannst deine Beiträge nach verschiedenen Kriterien sortieren, z.B. nach Datum. Es gibt auch Filteroptionen, mit denen du bestimmte Arten von Beiträgen anzeigen lassen kannst, z.B. Entwürfe.",
+				"target": ".tablenav.top",
+				"clickable": false
+			},
+			"beitrag_10": {
+				"title": "Sortier- und Filteroptionen",
+				"text": "Die Suchleiste ermöglicht es dir, nach bestimmten Beiträgen anhand von Stichwörtern oder Titeln zu suchen, was besonders hilfreich sein kann, wenn du viele Beiträge hast.",
+				"target": ".search-box",
+				"clickable": false
+			},
+			"beitrag_11": {
+				"title": "Beitrag erstellen",
+				"text": "Hinter dieser Schaltfläche befindet sich der Ort, an dem du neue Inhalte für deine Website erstellen kannst. Auf diese Seite kann ich dich leider nicht begleiten. Aber dort wird dir alles erklärt!",
+				"target": ".page-title-action",
+				"clickable": false
+			},
+			"next": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			}
+		}
+	},
+	"upload": {
+		"page" : "upload.php",
+		"data" : {
+			"einleitung": {
+				"title": "Beiträge im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Medien\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"target": "#menu-media",
+				"clickable": false
+			},
+			"upload_1": {
+				"title": "Einleitung",
+				"text": "Im Bereich \"Medien\" wirst du die Medieninhalte für deine Website verwalten. Hier kannst du verschiedene Dateitypen wie Bilder, Videos, Audiodateien und Dokumente hochladen, organisieren und in deine Beiträge oder Seiten einfügen.",
+				"target": "#wpcontent",
+				"clickable": false
+			},
+			"upload_2": {
+				"title": "Medienbibliothek",
+				"text": "Alle hochgeladenen Medien werden in der Medienbibliothek gespeichert. Hier hast du eine Übersicht über all diese Medien mit Vorschaubildern, Dateiinformationen und Metadaten wie Titel, Beschreibung und alternativen Texten für Bilder. ",
+				"target": "div.media-frame-tab-panel",
+				"clickable": false
+			},
+			"upload_4": {
+				"title": "Filter und Suchfunktion",
+				"text": "In der Medienbibliothek kannst du auf jedes Medium klicken und Details bearbeiten. Du kannst den Dateinamen ändern, zusätzliche Informationen hinzufügen, Metadaten anpassen und alternative Texte für Bilder einfügen.",
+				"target": "div.media-frame-tab-panel",
+				"clickable": false
+			},
+			"upload_3": {
+				"title": "Filter und Suchfunktion",
+				"text": "Du kannst auch Filter- und Suchfunktionen nutzen, um bestimmte Medien schnell zu finden.",
+				"target": "div.media-toolbar",
+				"clickable": false
+			},
+			"upload_5": {
+				"title": "Medien hochladen",
+				"text": "Hier kannst du neue Medien in deine Medienbibliothek hochladen. Nachdem du die Schaltfläche geklickt hast kannst du die Medien ganz einfach via Drag-and-Drop einfügen.",
+				"target": "a.page-title-action",
+				"clickable": false
+			},
+			"infos": {
+				"title": "Infos",
+				"text": "WordPress unterstützt eine Vielzahl von Dateiformaten, darunter Bilder (JPEG, PNG, GIF), Videos (MP4, MOV, WMV), Audiodateien (MP3, WAV) sowie Dokumente (PDF, DOC, PPT usw.).",
+				"target": null,
+				"clickable": false
+			},
+			"next": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			}
+		}
+	},
+	"edit-page": {
+		"page" : "edit.php?post_type=page",
+		"data" : {
+			"beitrag_1": {
+				"title": "Seiten im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Seiten\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"target": "#menu-pages",
+				"clickable": false
+			},
+			"next": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			}
+		}
+	},
+	"edit-comments": {
+		"page" : "edit-comments.php",
+		"data" : {
+			"beitrag_1": {
+				"title": "Beiträge im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Kommentare\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"target": "#menu-comments",
+				"clickable": false
+			},
+			"next": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			}
+		}
+	},
+	"themes": {
+		"page" : "themes.php",
+		"data" : {
+			"beitrag_1": {
+				"title": "Beiträge im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Design\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"target": "#menu-appearance",
+				"clickable": false
+			},
+			"next": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			}
+		}
+	},
+	"plugins": {
+		"page" : "plugins.php",
+		"data" : {
+			"beitrag_1": {
+				"title": "Beiträge im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Plugins\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"target": "#menu-plugins",
+				"clickable": false
+			},
+			"next": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			}
+		}
+	},
+	"users": {
+		"page" : "users.php",
+		"data" : {
+			"beitrag_1": {
+				"title": "Beiträge im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Benutzer\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"target": "#menu-users",
+				"clickable": false
+			},
+			"next": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			}
+		}
+	},
+	"tools": {
+		"page" : "tools.php",
+		"data" : {
+			"beitrag_1": {
+				"title": "Beiträge im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Werkzeuge\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"target": "#menu-tools",
+				"clickable": false
+			},
+			"next": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			}
+		}
+	},
+	"options-general": {
+		"page" : "options-general.php",
+		"data" : {
+			"beitrag_1": {
+				"title": "Beiträge im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Einstellungen\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"target": "#menu-settings",
+				"clickable": false
+			},
+			"next": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			}
+		}
+	},
+	"toplevel_page_wapuugotchi": {
+		"page": "admin.php?page=wapuugotchi",
+		"data": {
+			"beitrag_1": {
+				"title": "Beiträge im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Wapuugotchi\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"target": "#toplevel_page_wapuugotchi",
+				"clickable": false
+			},
+			"next": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			}
 		}
 	}
 }

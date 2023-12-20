@@ -30,9 +30,9 @@ class Onboarding {
 	 *
 	 * @return void
 	 */
-	public function init( $hook_suffix ) {
-		if ( isset( $_GET['onboarding'] ) ) {
-			$this->load_scripts( $hook_suffix );
+	public function init() {
+		if ( isset( $_GET['onboarding_mode'] ) ) {
+			$this->load_scripts();
 		}
 	}
 
@@ -41,9 +41,11 @@ class Onboarding {
 	 *
 	 * @return void
 	 */
-	public function load_scripts( $page_name ) {
-		$page_config    = $this->get_page_config( $page_name );
+	public function load_scripts() {
+		global $current_screen;
+		$page_config    = $this->get_page_config( $current_screen->id );
 		$global_config  = $this->get_global_config();
+		$first_index    = $this->getFirstIndexOfPageConfig( $page_config);
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/onboarding.asset.php';
 		wp_enqueue_style( 'wapuugotchi-onboarding', WAPUUGOTCHI_URL . 'build/onboarding.css', array(), $assets['version'] );
 		wp_enqueue_script( 'wapuugotchi-onboarding', WAPUUGOTCHI_URL . 'build/onboarding.js', $assets['dependencies'], $assets['version'], true );
@@ -54,10 +56,10 @@ class Onboarding {
 				"wp.data.dispatch('wapuugotchi/onboarding').__initialize(%s)",
 				wp_json_encode(
 					array(
-						'page_name'     => $page_name,
+						'page_name'     => $current_screen->id,
 						'global_config' => $global_config,
-						'page_config'   => $page_config,
-						'index'         => array_keys( $page_config )[0] ?: null
+						'page_config'   => isset( $page_config['data']) ?$page_config['data']: null,
+						'index'         => $first_index !== false ?$first_index: null
 					)
 				)
 			),
@@ -67,13 +69,22 @@ class Onboarding {
 		\wp_set_script_translations( 'wapuugotchi-onboarding', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
-	private function get_page_config($current_page = 'none') {
-		$config = $this->get_global_config();
-		if (isset( $config[$current_page])) {
-			return $config[$current_page];
-		} else {
-			return [];
+	private function getFirstIndexOfPageConfig($page_config = null) {
+		if ( empty( $page_config['data'] )) {
+			return false;
 		}
+
+		$configKeys = array_keys( $page_config['data'] );
+		if (count($configKeys) < 1) {
+			return false;
+		}
+
+		return array_keys( $page_config['data'] )[0];
+	}
+
+	private function get_page_config( $current_screen = 'none' ) {
+		$config = $this->get_global_config();
+		return isset( $config[$current_screen]) ?  $config[$current_screen] : [];
 	}
 
 	private function get_global_config() {

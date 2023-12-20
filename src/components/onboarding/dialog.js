@@ -3,6 +3,7 @@ import {useState} from "@wordpress/element";
 import {useSelect} from "@wordpress/data";
 import {STORE_NAME} from "../../store/onboarding";
 import Wapuu from "./wapuu";
+import Navigation from "./navigation";
 
 
 
@@ -18,6 +19,7 @@ export default function Dialog() {
 	return (
 		<>
 			<div className="wapuugotchi_onboarding__guide">
+				<Navigation />
 				<div className="wapuugotchi_onboarding__guide_text">
 					<p>{pageConfig?.[index]?.text}</p>
 				</div>

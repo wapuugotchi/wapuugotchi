@@ -1,0 +1,26 @@
+#wapuugotchi_onboarding__navigation {
+	background: #fff;
+	border: 1px solid #000;
+	bottom: 104px;
+	height: 20px;
+	position: absolute;
+	z-index: 100000;
+	margin-left: 96px;
+	display: inline-block;
+	border-bottom: unset;
+	padding: 0 6px;
+
+	button {
+		background: white;
+		border: none;
+		padding: 2px;
+		height: 20px;
+		width: 20px;
+		span {
+			color: #444;
+			&.disabled {
+				color: lightgray;
+			}
+		}
+	}
+}

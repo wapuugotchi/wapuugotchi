@@ -16,7 +16,7 @@
 			},
 			"admin_menu": {
 				"title": "Navigation",
-				"text": "Mit Hilfe der Navigation kannst du in die verschiedenen Bereiche deiner website betreten. Lass uns mal einen tieferen Blick darauf werfen.",
+				"text": "Mit Hilfe der Navigation kannst du in die verschiedenen Bereiche deiner website springen. Lass uns mal einen tieferen Blick darauf werfen.",
 				"target": "#adminmenuwrap",
 				"clickable": false
 			},
@@ -28,7 +28,7 @@
 			},
 			"dashboard_2": {
 				"title": "Dashboard im Detail",
-				"text": "Das Dashboard bietet dir eine Zusammenfassung von Informationen aus allen Bereichen deiner website. Es informiert dich über aktuelle Geschehnisse auf deiner Website, wie neu veröffentlichte Beiträge, Kommentare oder Updates.",
+				"text": "Das Dashboard bietet dir eine Zusammenfassung von Informationen aus allen Bereichen deiner website. Informiert wie neu veröffentlichte Beiträge, neue Kommentare oder Updates.",
 				"target": "#wpcontent",
 				"clickable": false
 			},
@@ -111,13 +111,13 @@
 			},
 			"beitrag_11": {
 				"title": "Beitrag erstellen",
-				"text": "Hinter dieser Schaltfläche befindet sich der Ort, an dem du neue Inhalte für deine Website erstellen kannst. Auf diese Seite kann ich dich leider nicht begleiten. Aber dort wird dir alles erklärt!",
+				"text": "Hinter dieser Schaltfläche befindet sich der Ort, an dem du neue Inhalte für deine Website erstellen kannst. Auf diese Seite kann ich dich leider nicht begleiten aber dort wird dir alles erklärt!",
 				"target": ".page-title-action",
 				"clickable": false
 			},
 			"next": {
 				"title": "redirect",
-				"text": "Auf zum nächsten Bereich!",
+				"text": "Das war erst mal alles, was ich dir zum Thema \"Beiträge\" erzählen kann. Weiter geht`s!",
 				"target": null,
 				"clickable": false
 			}
@@ -128,26 +128,26 @@
 		"data" : {
 			"einleitung": {
 				"title": "Beiträge im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Medien\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"text": "Jetzt befinden wir uns im Bereich \"Medien\". In diesen Bereich sind wir über die Navigation gekommen. Hier verwaltest du all deine ganzen Medien.",
 				"target": "#menu-media",
 				"clickable": false
 			},
 			"upload_1": {
 				"title": "Einleitung",
-				"text": "Im Bereich \"Medien\" wirst du die Medieninhalte für deine Website verwalten. Hier kannst du verschiedene Dateitypen wie Bilder, Videos, Audiodateien und Dokumente hochladen, organisieren und in deine Beiträge oder Seiten einfügen.",
+				"text": "Im Bereich \"Medien\" kannst du verschiedene Dateitypen wie Bilder, Videos, Audiodateien und Dokumente hochladen, organisieren und in deine Beiträge oder Seiten einfügen.",
 				"target": "#wpcontent",
 				"clickable": false
 			},
 			"upload_2": {
 				"title": "Medienbibliothek",
-				"text": "Alle hochgeladenen Medien werden in der Medienbibliothek gespeichert. Hier hast du eine Übersicht über all diese Medien mit Vorschaubildern, Dateiinformationen und Metadaten wie Titel, Beschreibung und alternativen Texten für Bilder. ",
+				"text": "Alle hochgeladenen Medien werden hier gespeichert und du erhältst eine Übersicht über all diese Medien mit Vorschaubildern, Dateiinformationen und Metadaten wie Titel, Beschreibung und alternativen Texten für Bilder. ",
 				"target": "div.media-frame-tab-panel",
 				"clickable": false
 			},
 			"upload_4": {
-				"title": "Filter und Suchfunktion",
-				"text": "In der Medienbibliothek kannst du auf jedes Medium klicken und Details bearbeiten. Du kannst den Dateinamen ändern, zusätzliche Informationen hinzufügen, Metadaten anpassen und alternative Texte für Bilder einfügen.",
-				"target": "div.media-frame-tab-panel",
+				"title": "Details anpassen",
+				"text": "Du kannst hier auch die Details deiner Medien ändern. Unter anderem kannst den Dateinamen ändern, zusätzliche Informationen hinzufügen oder Metadaten anpassen.",
+				"target": "div.attachments-wrapper",
 				"clickable": false
 			},
 			"upload_3": {
@@ -170,7 +170,7 @@
 			},
 			"next": {
 				"title": "redirect",
-				"text": "Auf zum nächsten Bereich!",
+				"text": "Jetzt habe ich dir alles erzählt, was ich über die Medienbibliothek weiß. Auf zum nächsten Bereich!",
 				"target": null,
 				"clickable": false
 			}
@@ -179,15 +179,63 @@
 	"edit-page": {
 		"page" : "edit.php?post_type=page",
 		"data" : {
-			"beitrag_1": {
+			"seiten_1": {
 				"title": "Seiten im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Seiten\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"text": "Jetzt befinden wir uns im Bereich \"Seiten\". In diesen Bereich sind wir über die Navigation gekommen. Hier verwaltest du deine statischen Inhalte.",
 				"target": "#menu-pages",
+				"clickable": false
+			},
+			"seiten_2": {
+				"title": "Seiten",
+				"text": "Dieser Bereich ist für die statischen Inhalte deiner Website verantwortlich. Im Gegensatz zu \"Beiträgen\" sind \"Seiten\" eher dauerhafte Inhalte wie beispielsweise Über-uns-Seiten oder Kontaktseiten.",
+				"target": "#wpcontent",
+				"clickable": false
+			},
+			"seiten_3": {
+				"title": "Übersicht",
+				"text": "Diese Seitenübersicht bietet dir einen guten Überblick über all deine Seiten, die du bereits erstellt hast. Darüber hinaus hast du die Möglichkeit deine Seiten zu organisieren und zu verwalten.",
+				"target": "table.wp-list-table",
+				"clickable": false
+			},
+			"seiten_4": {
+				"title": "Titel",
+				"text": "Diese Spalte zeigt die Titel aller Seiten an. Durch Klicken auf den Titel kannst du eine Seite bearbeiten und ihren Inhalt ändern.",
+				"target": "td.title",
+				"clickable": false
+			},
+			"seiten_5": {
+				"title": "Autor",
+				"text": "Diese Spalte zeigt an, welcher Benutzer die Seite erstellt hat. Bei mehreren Autoren wird der jeweilige Autorenname angezeigt.",
+				"target": "td.author",
+				"clickable": false
+			},
+			"seiten_6": {
+				"title": "Veröffentlichungsdatum",
+				"text": "Diese Spalte zeigt das Datum an, an dem die Seite erstellt oder zuletzt bearbeitet wurde.",
+				"target": "td.date",
+				"clickable": false
+			},
+			"seiten_7": {
+				"title": "Sortier- und Filteroptionen",
+				"text": "Du kannst deine Seiten nach verschiedenen Kriterien sortieren, z.B. nach Datum. Es gibt auch Filteroptionen, mit denen du bestimmte Arten von Seiten anzeigen lassen kannst, z.B. Entwürfe.",
+				"target": ".tablenav.top",
+				"clickable": false
+			},
+			"seiten_8": {
+				"title": "Sortier- und Filteroptionen",
+				"text": "Die Suchleiste ermöglicht es dir, nach bestimmten Seiten zu suchen, was besonders hilfreich sein kann, wenn du viele Seiten hast.",
+				"target": ".search-box",
+				"clickable": false
+			},
+			"seiten_9": {
+				"title": "Seite erstellen",
+				"text": "Hinter dieser Schaltfläche befindet sich der Ort, an dem du neue statische Inhalte für deine Website erstellen kannst. Auf diese Seite kann ich dich leider nicht begleiten aber dort wird dir alles erklärt!",
+				"target": ".page-title-action",
 				"clickable": false
 			},
 			"next": {
 				"title": "redirect",
-				"text": "Auf zum nächsten Bereich!",
+				"text": "Ist dir aufgefallen, dass ich dir fast das gleiche beim Bereich \"Beiträge\" erzählt habe? Naja, das liegt daran, dass die Bereiche ziemlich identisch sind!",
 				"target": null,
 				"clickable": false
 			}
@@ -196,9 +244,21 @@
 	"edit-comments": {
 		"page" : "edit-comments.php",
 		"data" : {
-			"beitrag_1": {
+			"Kommentar_1": {
+				"title": "Kommentare",
+				"text": "Jetzt befinden wir uns im Bereich \"Kommentare\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du die Kommentare verwalten, die du erhältst.",
+				"target": "#menu-comments",
+				"clickable": false
+			},
+			"Kommentar_2": {
+				"title": "Kommentare?",
+				"text": "Der Bereich \"Kommentare\" ist ein wichtiges Werkzeug, um die Interaktion mit deinen Besuchern zu verwalten und zu fördern. Hier kannst du Rückmeldungen reagieren und Diskussionen moderieren.",
+				"target": "#menu-comments",
+				"clickable": false
+			},
+			"Kommentar_3": {
 				"title": "Beiträge im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Kommentare\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"text": "Hier findest du eine Liste aller Kommentare, die Besucher auf deiner Website hinterlassen haben. Das beinhaltet den Kommentartext, den Autor des Kommentars, den kommentierten Beitrag und das Datum.",
 				"target": "#menu-comments",
 				"clickable": false
 			},

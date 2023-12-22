@@ -262,6 +262,12 @@
 				"target": "#menu-comments",
 				"clickable": false
 			},
+			"Kommentar_4": {
+				"title": "redirect",
+				"text": "Auf zum nächsten Bereich!",
+				"target": null,
+				"clickable": false
+			},
 			"next": {
 				"title": "redirect",
 				"text": "Auf zum nächsten Bereich!",

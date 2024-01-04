@@ -9,6 +9,7 @@
 	display: inline-block;
 	border-bottom: unset;
 	padding: 0 6px;
+	pointer-events: all;
 
 	button {
 		background: white;
@@ -17,8 +18,10 @@
 		height: 20px;
 		width: 20px;
 		span {
+			cursor: pointer;
 			color: #444;
 			&.disabled {
+				cursor: auto;
 				color: lightgray;
 			}
 		}

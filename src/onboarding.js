@@ -7,7 +7,7 @@ const getDomElement = () => {
 	if ( ! domElement ) {
 		domElement = document.createElement( 'DIV' );
 		domElement.id = 'wapuugotchi__onboarding';
-		document.getElementById( 'wpcontent' ).append( domElement );
+		document.body.prepend( domElement );
 	}
 	return domElement;
 };

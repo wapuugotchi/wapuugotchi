@@ -6,6 +6,10 @@
 	display: flex;
 	position: fixed;
 	z-index: 100000;
+	pointer-events: all;
+	&.locked {
+		pointer-events: none;
+	}
 }
 
 body.wp-admin {

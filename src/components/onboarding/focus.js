@@ -22,7 +22,7 @@ export default function Focus() {
 			requestAnimationFrame(() => {
 				focus.style.clipPath = getClipPath(targetElement);
 				border.style.clipPath = getClipPathBorder(targetElement);
-				border.style.backgroundColor = '#ffcc00ff'
+				border.style.backgroundColor = pageConfig?.[index]?.['color'] ? pageConfig?.[index]?.['color'] : 'unset'
 			});
 		};
 		setFocus();
@@ -42,54 +42,46 @@ export default function Focus() {
 
 	const getClipPath = (target) => {
 		const targetRect = target?.getBoundingClientRect();
-		let newPosition = 'polygon(0 0, 0 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 0 100%, 100% 100%, 100% 0)';
-		if (targetRect instanceof DOMRect) {
-			// set new position
-			const path = [
-				'0 0',
-				'0 100%',
-				targetRect.left + 'px' + ' ' + '100%',
-				targetRect.left + 'px' + ' ' + targetRect.top + 'px',
-				(targetRect.left + targetRect.width) + 'px' + ' ' + targetRect.top + 'px',
-				(targetRect.left + targetRect.width) + 'px' + ' ' + (targetRect.top + targetRect.height) + 'px',
-				targetRect.left + 'px' + ' ' + (targetRect.top + targetRect.height) + 'px',
-				'0 100%',
-				'100% 100%',
-				'100% 0',
-			];
-			return 'polygon(' + path.join(', ') + ')';
+		if (targetRect instanceof DOMRect === false) {
+			return `polygon(0 0, 0 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 0 100%, 100% 100%, 100% 0)`;
 		}
-		return newPosition;
+		return `polygon(
+			0 0,
+			0 100%,
+			${targetRect.left}px 100%,
+			${targetRect.left}px ${targetRect.top}px,
+			${targetRect.left + targetRect.width}px ${targetRect.top}px,
+			${targetRect.left + targetRect.width}px ${targetRect.top + targetRect.height}px,
+			${targetRect.left}px ${targetRect.top + targetRect.height}px,
+			0 100%,
+			100% 100%,
+			100% 0
+		)`;
 	};
-	const getClipPathBorder = (target) => {
-		const borderSizeMore = 2
+	const getClipPathBorder = (target, borderSizeMore = 2) => {
 		const targetRect = target?.getBoundingClientRect();
-		let newPosition = 'polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0)';
-		if (targetRect instanceof DOMRect) {
-			// set new position
-			const path = [
-				(targetRect.left) + 'px' + ' ' + (targetRect.top) + 'px',
-				(targetRect.left) + 'px' + ' '+ (targetRect.top + targetRect.height) + 'px',
-				targetRect.left + borderSizeMore + 'px' + ' ' + (targetRect.top + targetRect.height) + 'px',
-				targetRect.left + borderSizeMore + 'px' + ' ' + (targetRect.top + borderSizeMore) + 'px',
-				(targetRect.left + targetRect.width - borderSizeMore) + 'px' + ' ' + (targetRect.top + borderSizeMore) + 'px',
-				(targetRect.left + targetRect.width - borderSizeMore) + 'px' + ' ' + (targetRect.top + targetRect.height - borderSizeMore) + 'px',
-				targetRect.left + 'px' + ' ' + (targetRect.top + targetRect.height - borderSizeMore) + 'px',
-				(targetRect.left) + 'px' + ' ' + (targetRect.top + targetRect.height) + 'px',
-				(targetRect.left + targetRect.width) + 'px' + ' ' + (targetRect.top + targetRect.height) + 'px',
-				(targetRect.left + targetRect.width) + 'px' + ' ' + (targetRect.top) + 'px',
-			];
-			return 'polygon(' + path.join(', ') + ')';
+		if (targetRect instanceof DOMRect === false) {
+			return `polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0)`;
 		}
-		return newPosition;
+		// set new position
+		return `polygon(
+			${targetRect.left}px ${targetRect.top}px,
+			${targetRect.left}px ${targetRect.top + targetRect.height}px,
+			${targetRect.left + borderSizeMore}px ${targetRect.top + targetRect.height}px,
+			${targetRect.left + borderSizeMore}px ${targetRect.top + borderSizeMore}px,
+			${targetRect.left + targetRect.width - borderSizeMore}px ${targetRect.top + borderSizeMore}px,
+			${targetRect.left + targetRect.width - borderSizeMore}px ${targetRect.top + targetRect.height - borderSizeMore}px,
+			${targetRect.left}px ${targetRect.top + targetRect.height - borderSizeMore}px,
+			${targetRect.left}px ${targetRect.top + targetRect.height}px,
+			${targetRect.left + targetRect.width}px ${targetRect.top + targetRect.height}px,
+			${targetRect.left + targetRect.width}px ${targetRect.top}px
+		)`;
 	};
 
 	return (
 		<>
-			<div className="wapuugotchi_onboarding__focus">
-			</div>
-			<div className="wapuugotchi_onboarding__focus_border">
-			</div>
+			<div className="wapuugotchi_onboarding__focus" />
+			<div className="wapuugotchi_onboarding__focus_border" />
 		</>
 	);
 }

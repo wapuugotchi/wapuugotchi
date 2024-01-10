@@ -1,4 +1,5 @@
 import { createReduxStore, register } from '@wordpress/data';
+import textBox from './assets/text-box.json';
 
 const STORE_NAME = 'wapuugotchi/onboarding';
 
@@ -12,27 +13,63 @@ const STORE_NAME = 'wapuugotchi/onboarding';
  * - wp.data.select('wapuugotchi/onboarding').getCollections()
  *
 */
+const __getItemUrls = ( wapuu, items, category ) => {
+	if ( wapuu.char?.[ category ]?.key?.[ 0 ] ) {
+		return wapuu.char[ category ].key
+			.filter( ( uuid ) => items[ category ][ uuid ] )
+			.map( ( uuid ) => items[ category ][ uuid ].image );
+	}
+	return [];
+};
 
-async function __getCurrentElement( payload ) {
-	const list = Object.values(payload);
+async function __buildSvg( wapuu, items ) {
+	const responses = await Promise.all(
+		Object.keys( wapuu.char )
+			.map( ( category ) =>
+				__getItemUrls( wapuu, items, category ).map( ( url ) =>
+					fetch( url )
+				)
+			)
+			.flat()
+	);
 
-	if( list?.[0] ) {
-		return list?.[0];
+	const ignoreList = ['Front--group', 'RightHand--group', 'BeforeRightHand--part', 'BeforeLeftArm--part', 'Ball--group']
+	const svgs = (
+		await Promise.all( responses.map( ( response ) => response.text() ) )
+	).map( ( _ ) => new DOMParser().parseFromString( _, 'image/svg+xml' ) );
+	if ( svgs.length ) {
+		const result = svgs
+			.splice(
+				( svg ) => svg.querySelector( '#wapuugotchi_svg__wapuu' ),
+				1
+			)[ 0 ]
+			.querySelector( '#wapuugotchi_svg__wapuu' );
+		for ( const svg of svgs ) {
+			Array.from( svg.querySelectorAll( 'g' ) )
+				.filter( ( itemGroup ) => itemGroup.classList.value )
+				.forEach( ( itemGroup ) => {
+					const wapuuSvgGroup = result.querySelector(
+						'g#' + itemGroup.classList.value
+					);
+					if ( wapuuSvgGroup && ignoreList.includes(itemGroup.classList.value) === false ) {
+						const removePart =
+							wapuuSvgGroup.querySelector( '.remove--part' );
+						if ( removePart !== null ) {
+							removePart.remove();
+						}
+						itemGroup.removeAttribute( 'class' );
+						wapuuSvgGroup.append( itemGroup );
+					}
+				} );
+		}
+		let onboarding = document.createElement( 'g' );
+		onboarding.id = 'Onboarding--group';
+		onboarding.innerHTML = textBox.element;
+		result?.querySelector('g#wapuugotchi_type__wapuu')?.insertBefore(onboarding, result.querySelector('g#LeftArm--group'));
+		return result.innerHTML;
 	}
-	return undefined;
 }
-async function __getNextElement( payload ) {
-	if( payload?.[1] ) {
-		return payload[1];
-	}
-	return undefined;
-}
-async function __getLastElement( payload ) {
-	if( payload?.[0] ) {
-		return payload[0];
-	}
-	return undefined;
-}
+
 function create() {
 	const store = createReduxStore( STORE_NAME, {
 		reducer( state = {}, { type, payload } ) {
@@ -41,6 +78,19 @@ function create() {
 					return {
 						state,
 						...payload,
+					};
+				}
+				case '__SET_WAPUU': {
+					return {
+						...state,
+						wapuu: payload.wapuu,
+						svg: payload.svg,
+					};
+				}
+				case '__SET_ITEMS': {
+					return {
+						...state,
+						items: payload,
 					};
 				}
 				case '__SET_GLOBAL_CONFIG': {
@@ -76,6 +126,9 @@ function create() {
 			__initialize: ( initialState ) =>
 				async function ( { dispatch, select } ) {
 					dispatch.__setState( initialState );
+
+					dispatch.setWapuu( select.getWapuu() );
+					dispatch.setItems( select.getItems() );
 					dispatch.setGlobalConfig( select.getGlobalConfig() );
 					dispatch.setPageConfig( select.getPageConfig() );
 					dispatch.setPageName( select.getPageName() );
@@ -85,6 +138,27 @@ function create() {
 				return {
 					type: '__SET_STATE',
 					payload,
+				};
+			},
+			setWapuu: ( payload ) =>
+				async function ( { dispatch, select } ) {
+					const svg = await __buildSvg( payload, select.getItems() );
+
+					return dispatch.__setWapuu( payload, svg );
+				},
+			__setWapuu( wapuu, svg ) {
+				return {
+					type: '__SET_WAPUU',
+					payload: {
+						wapuu: { ...wapuu },
+						svg,
+					},
+				};
+			},
+			setItems( payload ) {
+				return {
+					type: '__SET_ITEMS',
+					payload: { ...payload },
 				};
 			},
 			setGlobalConfig ( payload ) {
@@ -117,11 +191,20 @@ function create() {
 			__getState( state ) {
 				return state;
 			},
+			getWapuu( state ) {
+				return state.wapuu;
+			},
+			getItems( state ) {
+				return state.items;
+			},
 			getGlobalConfig( state ) {
 				return state.global_config;
 			},
 			getPageConfig( state ) {
 				return state.page_config;
+			},
+			getSvg( state ) {
+				return state.svg;
 			},
 			getPageName( state ) {
 				return state.page_name;

@@ -59,7 +59,9 @@ class Onboarding {
 						'page_name'     => $current_screen->id,
 						'global_config' => $global_config,
 						'page_config'   => isset( $page_config['data']) ?$page_config['data']: null,
-						'index'         => $first_index !== false ?$first_index: null
+						'index'         => $first_index !== false ?$first_index: null,
+						'wapuu'         => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
+						'items'         => Helper::get_items(),
 					)
 				)
 			),

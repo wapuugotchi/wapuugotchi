@@ -18,7 +18,7 @@
 			},
 			"admin_menu": {
 				"title": "Navigation",
-				"text": "Mit Hilfe der Navigation kannst du in die verschiedenen Bereiche deiner website springen. Lass uns mal einen tieferen Blick darauf werfen.",
+				"text": "Mit Hilfe der Navigation kannst du in die verschiedenen Bereiche deiner Website springen. Lass uns mal einen tieferen Blick darauf werfen.",
 				"target": "#adminmenuwrap",
 				"hover": false,
 				"color": "#ffcc00"
@@ -32,7 +32,7 @@
 			},
 			"dashboard_2": {
 				"title": "Dashboard im Detail",
-				"text": "Das Dashboard bietet dir eine Zusammenfassung von Informationen aus allen Bereichen deiner website. Informiert wie neu veröffentlichte Beiträge, neue Kommentare oder Updates.",
+				"text": "Das Dashboard bietet dir eine Zusammenfassung von Informationen aus allen Bereichen deiner Website. Informiert wie neu veröffentlichte Beiträge, neue Kommentare oder Updates.",
 				"target": "#wpcontent",
 				"hover": false,
 				"color": "#ffcc00"
@@ -65,7 +65,7 @@
 			},
 			"update_1": {
 				"title": "Übersicht",
-				"text": "Hier kannst du sehen, ob für deine Website Updates zur Verfügung stehen. Das beinhaltet die Themes, Plugins aber auch die WordPress version selbst.",
+				"text": "Hier kannst du sehen, ob für deine Website Updates zur Verfügung stehen. Das beinhaltet alle Themes, Plugins und die WordPress version.",
 				"target": "#wpcontent",
 				"hover": false,
 				"color": "#ffcc00"
@@ -156,7 +156,7 @@
 				"title": "Datum",
 				"text": "Wenn du den Mauszeiger über einen Betrag bewegst, erscheint ein Menü mit dem du schnell auf wichtige Funktionen zugreifen kannst. Probiers doch gleich mal aus!.",
 				"target": "#the-list tr",
-				"hover": false,
+				"hover": true,
 				"color": "#ffcc00"
 			},
 			"beitrag_9": {
@@ -215,7 +215,7 @@
 			},
 			"upload_4": {
 				"title": "Details anpassen",
-				"text": "Du kannst hier auch die Details deiner Medien ändern. Unter anderem kannst den Dateinamen ändern, zusätzliche Informationen hinzufügen oder Metadaten anpassen.",
+				"text": "Du kannst hier auch die Details deiner Medien ändern. Unter anderem kannst du den Dateinamen ändern, zusätzliche Informationen hinzufügen oder Metadaten anpassen.",
 				"target": "div.attachments-wrapper",
 				"hover": false,
 				"color": "#ffcc00"
@@ -381,7 +381,7 @@
 				"title": "Beiträge im Überblick",
 				"text": "Wenn du den Mauszeiger über einen Kommentar bewegst erscheint ein Menü. Hier kannst du beispielsweise den Status des Kommentars ändern oder schnell darauf antworten.",
 				"target": "#the-comment-list tr",
-				"hover": false,
+				"hover": true,
 				"color": "#ffcc00"
 			},
 			"Kommentar_9": {
@@ -475,7 +475,7 @@
 				"title": "Inaktive Themes",
 				"text": "Wenn du den Mauszeiger über ein Theme bewegst, dass dich interessiert, kannst du in die Detailansicht wechseln. Der Detailansicht kannst du viel mehr Informationen entnehmen, wie beispielsweise Erfahrungsberichte.",
 				"target": ".theme:not(.active)",
-				"hover": false,
+				"hover": true,
 				"color": "#ffcc00"
 			},
 			"themes_5": {

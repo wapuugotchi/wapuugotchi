@@ -62,10 +62,12 @@ async function __buildSvg( wapuu, items ) {
 					}
 				} );
 		}
+
 		let onboarding = document.createElement( 'g' );
 		onboarding.id = 'Onboarding--group';
 		onboarding.innerHTML = textBox.element;
 		result?.querySelector('g#wapuugotchi_type__wapuu')?.insertBefore(onboarding, result.querySelector('g#LeftArm--group'));
+
 		return result.innerHTML;
 	}
 }

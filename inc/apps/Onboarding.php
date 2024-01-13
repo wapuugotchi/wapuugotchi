@@ -21,6 +21,7 @@ class Onboarding {
 	 */
 	public function __construct() {
 		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'my_disable_welcome_guides' ), 20 );
 	}
 
 	/**
@@ -44,6 +45,10 @@ class Onboarding {
 	public function load_scripts() {
 		global $current_screen;
 		$page_config    = $this->get_page_config( $current_screen->id );
+		if ( empty( $page_config ) ) {
+			return null;
+		}
+
 		$global_config  = $this->get_global_config();
 		$first_index    = $this->getFirstIndexOfPageConfig( $page_config);
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/onboarding.asset.php';
@@ -91,5 +96,26 @@ class Onboarding {
 
 	private function get_global_config() {
 		return json_decode( file_get_contents( dirname( __DIR__, 2 ) . '/config/onboarding/tour.json' ), true );
+	}
+
+	/**
+	 * Disable welcome guides in Gutenberg.
+	 */
+	public function my_disable_welcome_guides() {
+		wp_add_inline_script(
+			'wp-data', "window.onload = function() {
+			const selectPost = wp.data.select( 'core/edit-post' );
+			const selectPreferences = wp.data.select( 'core/preferences' );
+			const isWelcomeGuidePost = selectPost.isFeatureActive( 'welcomeGuide' );
+			const isWelcomeGuideWidget = selectPreferences.get( 'core/edit-widgets', 'welcomeGuide' );
+
+			if ( isWelcomeGuideWidget ) {
+				wp.data.dispatch( 'core/preferences' ).toggle( 'core/edit-widgets', 'welcomeGuide' );
+			}
+
+			if ( isWelcomeGuidePost ) {
+				wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'welcomeGuide' );
+			}
+		}" );
 	}
 }

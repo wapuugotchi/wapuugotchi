@@ -5,24 +5,6 @@ import {useEffect} from "@wordpress/element";
 import GlobalNavigation from "./global-navigation";
 
 export default function Navigation() {
-	useEffect(() => {
-		window.onkeyup = ( e ) => {
-			e.preventDefault();
-			e.stopPropagation();
-			switch ( e.key ) {
-				case 'ArrowRight':
-					nextStep();
-					break;
-				case 'ArrowLeft':
-					lastStep();
-					break;
-				case 'Escape':
-					stop();
-					break;
-			}
-		};
-	});
-
 	const { index, pageName, pageConfig, globalConfig } = useSelect( ( select ) => {
 		return {
 			index: select( STORE_NAME ).getIndex(),
@@ -31,6 +13,36 @@ export default function Navigation() {
 			globalConfig: select( STORE_NAME ).getGlobalConfig(),
 		};
 	} );
+
+	useEffect(() => {
+			window.onkeyup = (e) => {
+				if( isGutenbergGuideActive() === true) {
+				e.preventDefault();
+				e.stopPropagation();
+				switch (e.key) {
+					case 'ArrowRight':
+						nextStep();
+						break;
+					case 'ArrowLeft':
+						lastStep();
+						break;
+					case 'Escape':
+						stop();
+						break;
+				}
+			};
+		}
+	});
+
+	const isGutenbergGuideActive = () => {
+		if( wp?.data?.select( 'core/edit-post' )?.isFeatureActive( 'welcomeGuide' ) !== true
+			//&& wp?.data?.select( 'core/preferences' )?.get( 'core/edit-widgets', 'welcomeGuide' ) !== true
+		) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 	const getIndex = () => {
 		const pageKeyList = Object.keys(pageConfig);
@@ -59,7 +71,7 @@ export default function Navigation() {
 
 	const nextStep = () => {
 		const pageKeyList = Object.keys(pageConfig)
-		const indexPosition = pageKeyList?.indexOf(index)
+		const indexPosition = pageKeyList?.indexOf(index.toString())
 
 		if (indexPosition >= 0 && pageKeyList?.length > indexPosition) {
 			let nextIndex = pageKeyList[indexPosition + 1];
@@ -84,7 +96,7 @@ export default function Navigation() {
 
 	const lastStep = () => {
 		let keyList = Object.keys(pageConfig)
-		let indexPosition = keyList?.indexOf(index)
+		let indexPosition = keyList?.indexOf(index.toString())
 
 		if (indexPosition > 0) {
 			let nextIndex = keyList[indexPosition - 1];

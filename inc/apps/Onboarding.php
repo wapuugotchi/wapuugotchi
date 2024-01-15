@@ -20,8 +20,7 @@ class Onboarding {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
-		add_action( 'enqueue_block_editor_assets', array( $this, 'my_disable_welcome_guides' ), 20 );
+		add_action( 'admin_init', array( $this, 'init' ) );
 	}
 
 	/**
@@ -33,7 +32,8 @@ class Onboarding {
 	 */
 	public function init() {
 		if ( isset( $_GET['onboarding_mode'] ) ) {
-			$this->load_scripts();
+			add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
+			add_action( 'enqueue_block_editor_assets', array( $this, 'my_disable_welcome_guides' ), 20 );
 		}
 	}
 
@@ -109,11 +109,11 @@ class Onboarding {
 			const isWelcomeGuidePost = selectPost.isFeatureActive( 'welcomeGuide' );
 			const isWelcomeGuideWidget = selectPreferences.get( 'core/edit-widgets', 'welcomeGuide' );
 
-			if ( isWelcomeGuideWidget ) {
+			if ( !isWelcomeGuideWidget ) {
 				wp.data.dispatch( 'core/preferences' ).toggle( 'core/edit-widgets', 'welcomeGuide' );
 			}
 
-			if ( isWelcomeGuidePost ) {
+			if ( !isWelcomeGuidePost ) {
 				wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'welcomeGuide' );
 			}
 		}" );

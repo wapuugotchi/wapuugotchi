@@ -19,7 +19,7 @@ export default function Overlay() {
 	return (
 		<>
 			<div id="wapuugotchi_onboarding__overlay" className={
-				pageConfig?.[index]?.hover === true ? 'locked' : ''
+				pageConfig?.[index]?.target?.hover === true ? 'locked' : ''
 			}>
 				<div className="wapuugotchi_onboarding__dialog">
 					<Focus />

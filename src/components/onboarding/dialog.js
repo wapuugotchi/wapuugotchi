@@ -21,6 +21,7 @@ export default function Dialog() {
 			<div className="wapuugotchi_onboarding__guide">
 				<Navigation />
 				<div className="wapuugotchi_onboarding__guide_text">
+					<div className="wapuugotchi_onboarding__loader"></div>
 					<p>{pageConfig?.[index]?.text}</p>
 				</div>
 				<Wapuu />

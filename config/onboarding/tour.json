@@ -1,795 +1,986 @@
 {
 	"dashboard": {
-		"page" : "index.php",
-		"data" : [
+		"page": "index.php",
+		"data": [
 			{
 				"title": "Willkommen",
 				"text": "Herzlich willkommen auf deiner Reise durch das WordPress - Universum. Ich werde dich heute durch deine WordPress-Instanz führen und dich bei deinen ersten Schritten begleiten. Los gehts!!",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			},
 			{
 				"title": "Admin-Bar",
 				"text": "Wir starten mit der Admin-Bar! Sie ermöglicht es dir schnell auf wichtige Bereiche und Informationen zuzugreifen. Unter anderem bekommst du hier einen Überblick über offene Updates und eingegangene Kommentare.",
-				"target": {
-					"active": true,
-					"focus": "#wpadminbar",
-					"overlay": "#wpadminbar"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpadminbar",
+						"overlay": "#wpadminbar"
+					}
+				]
 			},
 			{
 				"title": "Navigation",
 				"text": "Mit Hilfe der Navigation kannst du in die verschiedenen Bereiche deiner Website springen. Lass uns mal einen tieferen Blick darauf werfen.",
-				"target": {
-					"active": true,
-					"focus": "#adminmenuwrap",
-					"overlay": "#adminmenuwrap"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#adminmenuwrap",
+						"overlay": "#adminmenuwrap"
+					}
+				]
 			},
 			{
 				"title": "Die Startseite",
 				"text": "Wir befinden uns gerade auf der Startseite. Die Startseite ist die erste Seite, die du siehst, wenn du dich in deinem WordPress einloggst.",
-				"target": {
-					"active": true,
-					"focus": "#menu-dashboard",
-					"overlay": "#menu-dashboard"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-dashboard",
+						"overlay": "#menu-dashboard"
+					}
+				]
 			},
 			{
 				"title": "Details zur Startseite",
 				"text": "Die Startseite bietet dir eine Zusammenfassung von Informationen aus allen Bereichen deiner Website. Informiert wie neu veröffentlichte Beiträge, neue Kommentare oder Updates.",
-				"target": {
-					"active": true,
-					"focus": "#wpcontent",
-					"overlay": "#wpcontent"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
 			},
 			{
 				"title": "Dashboard anpassen",
 				"text": "Du hast aber auch die Möglichkeit deine Startseite anzupassen. So kannst du beispielsweise Themenbereiche deaktivieren, die dich nicht interessieren.",
-				"target": {
-					"active": true,
-					"focus": "button#show-settings-link",
-					"overlay": "button#show-settings-link"
-				},
-				"click": {
-					"active": true,
-					"focus": "#screen-meta",
-					"overlay": "#screen-meta",
-					"delay": 500
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "button#show-settings-link",
+						"overlay": "button#show-settings-link"
+					}
+				]
+
+			},
+			{
+				"title": "Dashboard anpassen",
+				"text": "Du hast aber auch die Möglichkeit deine Startseite anzupassen. So kannst du beispielsweise Themenbereiche deaktivieren, die dich nicht interessieren.",
+				"freeze": 5500,
+				"targets": [
+					{
+						"active": true,
+						"focus": "button#show-settings-link",
+						"overlay": "button#show-settings-link",
+						"delay": 0,
+						"click": "button#show-settings-link"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#screen-meta",
+						"delay": 250
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#screen-meta",
+						"delay": 4000,
+						"click": "button#show-settings-link"
+					},
+					{
+						"active": true,
+						"focus": "button#show-settings-link",
+						"overlay": "button#show-settings-link",
+						"delay": 250
+					}
+				]
+
 			},
 			{
 				"title": "redirect",
 				"text": "Das reicht für den Anfang. Lass uns schnell weitermachen!",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
 	"update-core": {
-		"page" : "update-core.php",
-		"data" : [{
+		"page": "update-core.php",
+		"data": [
+			{
 				"title": "Subbereich Updates",
 				"text": "Hier befinden wir uns im Bereich \"Aktualisierungen\". Dieser Bereich hilft dir, deine Website auf dem neusten Stand zu halten. ",
-				"target": {
-					"active": true,
-					"focus": "#menu-dashboard",
-					"overlay": "#menu-dashboard"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-dashboard",
+						"overlay": "#menu-dashboard"
+					}
+				]
 			},
 			{
 				"title": "Übersicht",
 				"text": "Hier kannst du sehen, ob für deine Website Updates zur Verfügung stehen. Das beinhaltet alle Themes, Plugins und die WordPress version.",
-				"target": {
-					"active": true,
-					"focus": "#wpcontent",
-					"overlay": "#wpcontent"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
 			},
 			{
 				"title": "Sicherheitsrisiko!",
 				"text": "Halte deine Website immer schön auf dem neusten Stand! Veraltete Software kann nämlich die Sicherheit deiner Website gefährden und es Schurken ermöglichen uns anzugreifen. Darüber hinaus bringen Updates oft auch neue Funktionen mit.",
-				"target": {
-					"active": true,
-					"focus": "#wpcontent",
-					"overlay": "#wpcontent"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
 			},
 			{
 				"title": "Du bist nicht allein!",
 				"text": "Ich weiß, dass es manchmal nicht so einfach ist alles im Auge zu behalten. Du bist jetzt aber auch nicht mehr allein! Ich helfe dir dabei! \uD83D\uDCAA",
-				"target": {
-					"active": true,
-					"focus": "#wpcontent",
-					"overlay": "#wpcontent"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Ich hab dir noch so viel zu erzählen. Lass uns schnell weitermachen!",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
 	"edit-post": {
-		"page" : "edit.php",
-		"data" : [
+		"page": "edit.php",
+		"data": [
 			{
 				"title": "Beiträge im Überblick",
 				"text": "Jetzt befinden wir uns im Bereich \"Beiträge\". In diesen Bereich sind wir über die Navigation gekommen. Hier verwaltest du deine Artikel und Blogbeiträge.",
-				"target": {
-					"active": true,
-					"focus": "#menu-posts",
-					"overlay": "#menu-posts"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-posts",
+						"overlay": "#menu-posts"
+					}
+				]
 			},
 			{
 				"title": "Übersichtsseite",
 				"text": "Die Übersichtsseite bietet dir die Möglichkeit, deine Beiträge zu überblicken, zu organisieren und zu verwalten. Von hier aus kannst du schnell auf einzelne Beiträge zugreifen um beispielsweise Änderungen vorzunehmen.",
-				"target": {
-					"active": true,
-					"focus": "#wpcontent",
-					"overlay": "#wpcontent"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
 			},
 			{
 				"title": "Beitragsliste",
 				"text": "In der Beitragsliste kannst du alle deine Beiträge sehen. Darüber hinaus liefert sie dir Informationen wie den Titel, den Autor und das Veröffentlichungsdatum.",
-				"target": {
-					"active": true,
-					"focus": "table.wp-list-table",
-					"overlay": "table.wp-list-table"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "table.wp-list-table",
+						"overlay": "table.wp-list-table"
+					}
+				]
 			},
 			{
 				"title": "Titel",
 				"text": "Die Spalte zeigt die Titel aller Beiträge an. Durch Klicken auf den Titel kannst du den Beitrag bearbeiten und den Inhalt ändern.",
-				"target": {
-					"active": true,
-					"focus": "td.title",
-					"overlay": "td.title"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.title",
+						"overlay": "td.title"
+					}
+				]
 			},
 			{
 				"title": "Autor",
 				"text": "Diese Spalte zeigt an, welcher Benutzer den Beitrag erstellt hat. Bei mehreren Autoren wird der jeweilige Benutzername angezeigt.",
-				"target": {
-					"active": true,
-					"focus": "td.author",
-					"overlay": "td.author"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.author",
+						"overlay": "td.author"
+					}
+				]
 			},
 			{
 				"title": "Kategorien",
 				"text": "Hier siehst du die Kategorien, denen ein Beitrag zugeordnet ist. Kategorien helfen bei der strukturierten Organisation der Inhalte auf deiner Website.",
-				"target": {
-					"active": true,
-					"focus": "td.categories",
-					"overlay": "td.categories"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.categories",
+						"overlay": "td.categories"
+					}
+				]
 			},
 			{
 				"title": "Schlagwörter",
 				"text": "Diese Spalte zeigt die Schlagwörter (Tags) an, die den Beiträgen zugeordnet sind. Schlagwörter erleichtern das Auffinden von thematisch ähnlichen Inhalten.",
-				"target": {
-					"active": true,
-					"focus": "td.tags",
-					"overlay": "td.tags"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.tags",
+						"overlay": "td.tags"
+					}
+				]
 			},
 			{
 				"title": "Datum",
 				"text": "Diese Spalte zeigt das Datum und die Uhrzeit, wann der Beitrag veröffentlicht wurde oder veröffentlicht werden soll.",
-				"target": {
-					"active": true,
-					"focus": "td.date",
-					"overlay": "td.date"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.date",
+						"overlay": "td.date"
+					}
+				]
 			},
 			{
 				"title": "Datum",
 				"text": "Wenn du den Mauszeiger über einen Betrag bewegst, erscheint ein Menü mit dem du schnell auf wichtige Funktionen zugreifen kannst. Probiers doch gleich mal aus!.",
-				"target": {
-					"active": true,
-					"focus": "#the-list tr",
-					"overlay": "#the-list tr",
-					"hover": true
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#the-list tr",
+						"overlay": "#the-list tr",
+						"hover": true
+					}
+				]
 			},
 			{
 				"title": "Sortier- und Filteroptionen",
 				"text": "Du kannst deine Beiträge nach verschiedenen Kriterien sortieren, z.B. nach Datum. Es gibt auch Filteroptionen, mit denen du bestimmte Arten von Beiträgen anzeigen lassen kannst, z.B. Entwürfe.",
-				"target": {
-					"active": true,
-					"focus": ".tablenav.top",
-					"overlay": ".tablenav.top"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".tablenav.top",
+						"overlay": ".tablenav.top"
+					}
+				]
 			},
 			{
 				"title": "Sortier- und Filteroptionen",
 				"text": "Die Suchleiste ermöglicht es dir, nach bestimmten Beiträgen anhand von Stichwörtern oder Titeln zu suchen, was besonders hilfreich sein kann, wenn du viele Beiträge hast.",
-				"target": {
-					"active": true,
-					"focus": ".search-box",
-					"overlay": ".search-box"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".search-box",
+						"overlay": ".search-box"
+					}
+				]
 			},
 			{
 				"title": "Beitrag erstellen",
 				"text": "Hinter dieser Schaltfläche befindet sich der Ort, an dem du neue Inhalte für deine Website erstellen kannst. Auf diese Seite kann ich dich leider nicht begleiten aber dort wird dir alles erklärt!",
-				"target": {
-					"active": true,
-					"focus": ".page-title-action",
-					"overlay": ".page-title-action"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".page-title-action",
+						"overlay": ".page-title-action"
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Das war erst mal alles, was ich dir zum Thema \"Beiträge\" erzählen kann. Weiter geht`s!",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
 	"post": {
-		"page" : "post-new.php",
-		"data" : [
+		"page": "post-new.php",
+		"data": [
 			{
 				"title": "Tutorial",
 				"text": "Gib einfach bescheid, wenn das Gutenberg Tutorial vorbei ist... ... zzzzZZZZZzzzzZZZZZZ",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			},
 			{
 				"title": "Gutenberg Editor",
 				"text": "Wie du durch das Tutorial vielleicht erfahren hast, kannst du in diesem Bereich die Inhalte deiner Beiträge pflegen.",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			},
 			{
 				"title": "Obere Navigation",
 				"text": "Die obere Navigation bietet dir einen schnellen Zugriff auf grundlegende Steuerelemente im Editor. Sie ist unterteilt in die Werkzeugleiste und die Einstellungsleiste.",
-				"target": {
-					"active": true,
-					"focus": ".interface-navigable-region.interface-interface-skeleton__header",
-					"overlay": ".interface-navigable-region.interface-interface-skeleton__header"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-navigable-region.interface-interface-skeleton__header",
+						"overlay": ".interface-navigable-region.interface-interface-skeleton__header"
+					}
+				]
 			},
 			{
 				"title": "Werkzeugleiste",
 				"text": "Die Werkzeugleiste ",
-				"target": {
-					"active": true,
-					"focus": ".edit-post-header__toolbar",
-					"overlay": ".edit-post-header__toolbar"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar"
+					}
+				]
 			},
 			{
 				"title": "Einstellungsleiste",
 				"text": "Die Einstellungsleiste ",
-				"target": {
-					"active": true,
-					"focus": ".edit-post-header__settings",
-					"overlay": ".edit-post-header__settings"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".edit-post-header__settings",
+						"overlay": ".edit-post-header__settings"
+					}
+				]
 			},
 			{
 				"title": "Seitennavigation",
 				"text": "Die Seitennavigation ",
-				"target": {
-					"active": true,
-					"focus": ".interface-interface-skeleton__sidebar",
-					"overlay": ".interface-interface-skeleton__sidebar"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__sidebar",
+						"overlay": ".interface-interface-skeleton__sidebar"
+					}
+				]
 			},
 			{
 				"title": "Inhalte",
 				"text": "Hier kannst du deine Inhalte pflegen. ",
-				"target": {
-					"active": true,
-					"focus": ".interface-interface-skeleton__content",
-					"overlay": ".interface-interface-skeleton__content"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__content",
+						"overlay": ".interface-interface-skeleton__content"
+					}
+				]
 			},
 			{
 				"title": "Ende",
 				"text": "Der Texteditor bringt echt viele Funktionen mit und ich habe bestimmt die Hälfte vergessen zu erklären! Ich hoffe, dass ich dir zumindest einen kleinen Überblick geben konnte. Lass uns einen Blick in den nächsten Bereich werfen.",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
 	"upload": {
-		"page" : "upload.php",
-		"data" : [
+		"page": "upload.php",
+		"data": [
 			{
 				"title": "Beiträge im Überblick",
 				"text": "Jetzt befinden wir uns im Bereich \"Medien\". In diesen Bereich sind wir über die Navigation gekommen. Hier verwaltest du all deine ganzen Medien.",
-				"target": {
-					"active": true,
-					"focus": "#menu-media",
-					"overlay": "#menu-media"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-media",
+						"overlay": "#menu-media"
+					}
+				]
 			},
 			{
 				"title": "Einleitung",
 				"text": "Im Bereich \"Medien\" kannst du verschiedene Dateitypen wie Bilder, Videos, Audiodateien und Dokumente hochladen, organisieren und in deine Beiträge oder Seiten einfügen.",
-				"target": {
-					"active": true,
-					"focus": "#wpcontent",
-					"overlay": "#wpcontent"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
 			},
 			{
 				"title": "Medienbibliothek",
 				"text": "Alle hochgeladenen Medien werden hier gespeichert und du erhältst eine Übersicht über all diese Medien mit Vorschaubildern, Dateiinformationen und Metadaten wie Titel, Beschreibung und alternativen Texten für Bilder. ",
-				"target": {
-					"active": true,
-					"focus": "div.media-frame-tab-panel",
-					"overlay": "div.media-frame-tab-panel"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "div.media-frame-tab-panel",
+						"overlay": "div.media-frame-tab-panel"
+					}
+				]
 			},
 			{
 				"title": "Details anpassen",
 				"text": "Du kannst hier auch die Details deiner Medien ändern. Unter anderem kannst du den Dateinamen ändern, zusätzliche Informationen hinzufügen oder Metadaten anpassen.",
-				"target": {
-					"active": true,
-					"focus": "div.attachments-wrapper",
-					"overlay": "div.attachments-wrapper"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "div.attachments-wrapper",
+						"overlay": "div.attachments-wrapper"
+					}
+				]
 			},
 			{
 				"title": "Filter und Suchfunktion",
 				"text": "Du kannst auch Filter- und Suchfunktionen nutzen, um bestimmte Medien schnell zu finden.",
-				"target": {
-					"active": true,
-					"focus": "div.media-toolbar",
-					"overlay": "div.media-toolbar"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "div.media-toolbar",
+						"overlay": "div.media-toolbar"
+					}
+				]
 			},
 			{
 				"title": "Medien hochladen",
 				"text": "Hier kannst du neue Medien in deine Medienbibliothek hochladen. Nachdem du die Schaltfläche geklickt hast kannst du die Medien ganz einfach via Drag-and-Drop einfügen.",
-				"target": {
-					"active": true,
-					"focus": "a.page-title-action",
-					"overlay": "a.page-title-action"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "a.page-title-action",
+						"overlay": "a.page-title-action"
+					}
+				]
 			},
 			{
 				"title": "Infos",
 				"text": "WordPress unterstützt eine Vielzahl von Dateiformaten, darunter Bilder (JPEG, PNG, GIF), Videos (MP4, MOV, WMV), Audiodateien (MP3, WAV) sowie Dokumente (PDF, DOC, PPT usw.).",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Jetzt habe ich dir alles erzählt, was ich über die Medienbibliothek weiß. Auf zum nächsten Bereich!",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
 	"edit-page": {
-		"page" : "edit.php?post_type=page",
-		"data" : [
+		"page": "edit.php?post_type=page",
+		"data": [
 			{
 				"title": "Seiten im Überblick",
 				"text": "Jetzt befinden wir uns im Bereich \"Seiten\". In diesen Bereich sind wir über die Navigation gekommen. Hier verwaltest du deine statischen Inhalte.",
-				"target": {
-					"active": true,
-					"focus": "#menu-pages",
-					"overlay": "#menu-pages"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-pages",
+						"overlay": "#menu-pages"
+					}
+				]
 			},
 			{
 				"title": "Seiten",
 				"text": "Dieser Bereich ist für die statischen Inhalte deiner Website verantwortlich. Im Gegensatz zu \"Beiträgen\" sind \"Seiten\" eher dauerhafte Inhalte wie beispielsweise Über-uns-Seiten oder Kontaktseiten.",
-				"target": {
-					"active": true,
-					"focus": "#wpcontent",
-					"overlay": "#wpcontent"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
 			},
 			{
 				"title": "Übersicht",
 				"text": "Diese Seitenübersicht bietet dir einen guten Überblick über all deine Seiten, die du bereits erstellt hast. Darüber hinaus hast du die Möglichkeit deine Seiten zu organisieren und zu verwalten.",
-				"target": {
-					"active": true,
-					"focus": "table.wp-list-table",
-					"overlay": "table.wp-list-table"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "table.wp-list-table",
+						"overlay": "table.wp-list-table"
+					}
+				]
 			},
 			{
 				"title": "Titel",
 				"text": "Diese Spalte zeigt die Titel aller Seiten an. Durch Klicken auf den Titel kannst du eine Seite bearbeiten und ihren Inhalt ändern.",
-				"target": {
-					"active": true,
-					"focus": "td.title",
-					"overlay": "td.title"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.title",
+						"overlay": "td.title"
+					}
+				]
 			},
 			{
 				"title": "Autor",
 				"text": "Diese Spalte zeigt an, welcher Benutzer die Seite erstellt hat. Bei mehreren Autoren wird der jeweilige Autorenname angezeigt.",
-				"target": {
-					"active": true,
-					"focus": "td.author",
-					"overlay": "td.author"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.author",
+						"overlay": "td.author"
+					}
+				]
 			},
 			{
 				"title": "Veröffentlichungsdatum",
 				"text": "Diese Spalte zeigt das Datum an, an dem die Seite erstellt oder zuletzt bearbeitet wurde.",
-				"target": {
-					"active": true,
-					"focus": "td.date",
-					"overlay": "td.date"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.date",
+						"overlay": "td.date"
+					}
+				]
 			},
 			{
 				"title": "Sortier- und Filteroptionen",
 				"text": "Du kannst deine Seiten nach verschiedenen Kriterien sortieren, z.B. nach Datum. Es gibt auch Filteroptionen, mit denen du bestimmte Arten von Seiten anzeigen lassen kannst, z.B. Entwürfe.",
-				"target": {
-					"active": true,
-					"focus": ".tablenav.top",
-					"overlay": ".tablenav.top"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".tablenav.top",
+						"overlay": ".tablenav.top"
+					}
+				]
 			},
 			{
 				"title": "Sortier- und Filteroptionen",
 				"text": "Die Suchleiste ermöglicht es dir, nach bestimmten Seiten zu suchen, was besonders hilfreich sein kann, wenn du viele Seiten hast.",
-				"target": {
-					"active": true,
-					"focus": ".search-box",
-					"overlay": ".search-box"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".search-box",
+						"overlay": ".search-box"
+					}
+				]
 			},
 			{
 				"title": "Seite erstellen",
 				"text": "Hinter dieser Schaltfläche befindet sich der Ort, an dem du neue statische Inhalte für deine Website erstellen kannst. Auf diese Seite kann ich dich leider nicht begleiten aber dort wird dir alles erklärt!",
-				"target": {
-					"active": true,
-					"focus": ".page-title-action",
-					"overlay": ".page-title-action"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".page-title-action",
+						"overlay": ".page-title-action"
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Ist dir aufgefallen, dass ich dir fast das gleiche beim Bereich \"Beiträge\" erzählt habe? Naja, das liegt daran, dass die Bereiche ziemlich identisch sind!",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
 	"edit-comments": {
-		"page" : "edit-comments.php",
-		"data" : [
+		"page": "edit-comments.php",
+		"data": [
 			{
 				"title": "Kommentare",
 				"text": "Jetzt befinden wir uns im Bereich \"Kommentare\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du die Kommentare verwalten, die du erhältst.",
-				"target": {
-					"active": true,
-					"focus": "#menu-comments",
-					"overlay": "#menu-comments"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-comments",
+						"overlay": "#menu-comments"
+					}
+				]
 			},
 			{
 				"title": "Kommentare?",
 				"text": "Der Bereich \"Kommentare\" ist ein wichtiges Werkzeug, um die Interaktion mit deinen Besuchern zu verwalten und zu fördern. Hier kannst du Rückmeldungen reagieren und Diskussionen moderieren.",
-				"target": {
-					"active": true,
-					"focus": "#wpcontent",
-					"overlay": "#wpcontent"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
 			},
 			{
 				"title": "Beiträge im Überblick",
 				"text": "Hier findest du eine Liste aller Kommentare, die Besucher auf deiner Website hinterlassen haben. Das beinhaltet den Kommentartext, den Autor des Kommentars, den kommentierten Beitrag und das Datum.",
-				"target": {
-					"active": true,
-					"focus": "table.wp-list-table",
-					"overlay": "table.wp-list-table"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "table.wp-list-table",
+						"overlay": "table.wp-list-table"
+					}
+				]
 			},
 			{
 				"title": "Autor",
 				"text": "Dieses Feld ermöglicht es dir, schnell zu erkennen, wer den Kommentar hinterlassen hat. Bei registrierten Besuchern wird außerdem noch deren E-Mail-Adresse angezeigt",
-				"target": {
-					"active": true,
-					"focus": "td.author",
-					"overlay": "td.author"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.author",
+						"overlay": "td.author"
+					}
+				]
 			},
 			{
 				"title": "Kommentarstatus",
 				"text": "Das Feld \"Kommentar\" zeigt den eigentlichen Inhalt des Kommentars an, den Besucher auf Ihrer Website hinterlassen haben. ",
-				"target": {
-					"active": true,
-					"focus": "td.comment",
-					"overlay": "td.comment"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.comment",
+						"overlay": "td.comment"
+					}
+				]
 			},
 			{
 				"title": "Bezugsbeitrag",
 				"text": "Hier wird dir angezeigt, auf welchen Beitrag sich der Kommentar bezieht. Das wird dir helfen, den Kontext zu verstehen.",
-				"target": {
-					"active": true,
-					"focus": "td.response",
-					"overlay": "td.response"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.response",
+						"overlay": "td.response"
+					}
+				]
 			},
 			{
 				"title": "Kommentardatum",
 				"text": "Das Feld Datum gibt an, wann der Kommentar auf deiner Website hinterlassen wurde.",
-				"target": {
-					"active": true,
-					"focus": "td.date",
-					"overlay": "td.date"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.date",
+						"overlay": "td.date"
+					}
+				]
 			},
 			{
 				"title": "Beiträge im Überblick",
 				"text": "Wenn du den Mauszeiger über einen Kommentar bewegst erscheint ein Menü. Hier kannst du beispielsweise den Status des Kommentars ändern oder schnell darauf antworten.",
-				"target": {
-					"active": true,
-					"focus": "#the-comment-list tr",
-					"overlay": "#the-comment-list tr",
-					"hover": true
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#the-comment-list tr",
+						"overlay": "#the-comment-list tr",
+						"hover": true
+					}
+				]
 			},
 			{
 				"title": "Kommentarstatus",
 				"text": "Ein Kommentar kann den Status \"Ausstehend\", \"Genehmigt\", \"Im Papierkorb\" oder \"Spam\" haben. Ausstehende Kommentare werden auf deiner Website nicht angezeigt, bis du sie genehmigst.",
-				"target": {
-					"active": true,
-					"focus": "ul.subsubsub",
-					"overlay": "ul.subsubsub"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "ul.subsubsub",
+						"overlay": "ul.subsubsub"
+					}
+				]
 			},
 			{
 				"title": "Kommentarstatus",
 				"text": "Die Suchfunktion ermöglicht es dir, gezielt nach bestimmten Kommentaren zu suchen, basierend auf Stichwörtern, Benutzernamen, E-Mail-Adressen oder anderen relevanten Informationen.",
-				"target": {
-					"active": true,
-					"focus": ".search-box",
-					"overlay": ".search-box"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".search-box",
+						"overlay": ".search-box"
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Jetzt weißt du also, dass du Kommentare auf deiner Website kontrollieren kannst – von der Genehmigung über die Moderation bis hin zum Filtern von Spam –, um die Interaktion mit Besuchern zu steuern und die Diskussionsqualität zu bewahren.",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
 	"themes": {
-		"page" : "themes.php",
-		"data" : [
+		"page": "themes.php",
+		"data": [
 			{
 				"title": "Design im Überblick",
 				"text": "Jetzt befinden wir uns im Bereich \"Design\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du das Erscheinungsbild und die visuelle Darstellung deiner Website verwalten.",
-				"target": {
-					"active": true,
-					"focus": "#menu-appearance",
-					"overlay": "#menu-appearance"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-appearance",
+						"overlay": "#menu-appearance"
+					}
+				]
 			},
 			{
 				"title": "Aktives Themes",
 				"text": "Das aktive Theme ist das Theme, das aktuell auf deiner Website verwendet wird. Es ist das Design, das Besucher sehen, wenn sie deine Seite besuchen.",
-				"target": {
-					"active": true,
-					"focus": ".theme.active",
-					"overlay": ".theme.active",
-					"hover": true
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".theme.active",
+						"overlay": ".theme.active",
+						"hover": true
+					}
+				]
 			},
 			{
 				"title": "Inaktive Themes",
 				"text": "Es gibt aber auch Themes die zwar installiert aber nicht aktiv sind. Du kannst zwischen ihnen wechseln, indem du ein inaktives Theme aktivierst, was dann das Design deiner Website ändern würde.",
-				"target": {
-					"active": true,
-					"focus": ".theme:not(.active)",
-					"overlay": ".theme:not(.active)",
-					"hover": true
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".theme:not(.active)",
+						"overlay": ".theme:not(.active)",
+						"hover": true
+					}
+				]
 			},
 			{
 				"title": "Theme suchen",
 				"text": "Mit dieser Suchfunktion kannst du nach einem bestimmten, bereits installierten Themes suchen.",
-				"target": {
-					"active": true,
-					"focus": "#wp-filter-search-input",
-					"overlay": "#wp-filter-search-input"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wp-filter-search-input",
+						"overlay": "#wp-filter-search-input"
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Du kannst natürlich auch neue Themes installieren. Lass uns mal einen Blick reinwerfen.",
-				"target": {
-					"active": true,
-					"focus": ".wrap a",
-					"overlay": ".wrap a"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wrap a",
+						"overlay": ".wrap a"
+					}
+				]
 			}
 		]
 	},
 	"theme-install": {
-		"page" : "theme-install.php?browse=popular",
-		"data" : [ {
+		"page": "theme-install.php?browse=popular",
+		"data": [
+			{
 				"title": "Design im Überblick",
 				"text": "Ja es klingt verrückt... aber im Bereich \"Themes hinzufügen\" kannst du neue Themes hinzufügen! \uD83D\uDE05",
-				"target": {
-					"active": true,
-					"focus": "#menu-appearance",
-					"overlay": "#menu-appearance"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-appearance",
+						"overlay": "#menu-appearance"
+					}
+				]
 			},
 			{
 				"title": "Echt viele Themes",
 				"text": "Wenn du diesen Bereich betrittst wird dir eine Auswahl der beliebtesten Themes angezeigt. Das ist sehr nützlich, weil dir hier mehrere tausend Themes zur Auswahl stehen.",
-				"target": {
-					"active": true,
-					"focus": "#wpcontent",
-					"overlay": "#wpcontent"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Natürlich hast du auch die Möglichkeit nach anderen Kategorien zu filtern oder ein ganz bestimmte Theme zu suchen.",
-				"target": {
-					"active": true,
-					"focus": ".wp-filter",
-					"overlay": ".wp-filter"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wp-filter",
+						"overlay": ".wp-filter"
+					}
+				]
 			},
 			{
 				"title": "Inaktive Themes",
 				"text": "Wenn du den Mauszeiger über ein Theme bewegst, dass dich interessiert, kannst du in die Detailansicht wechseln. Der Detailansicht kannst du viel mehr Informationen entnehmen, wie beispielsweise Erfahrungsberichte.",
-				"target": {
-					"active": true,
-					"focus": ".theme:not(.active)",
-					"overlay": ".theme:not(.active)",
-					"hover": true
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": ".theme:not(.active)",
+						"overlay": ".theme:not(.active)",
+						"hover": true
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Oh... schon so spät?! Lass uns schnell zum nächsten Bereich springen! \uD83D\uDE28",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
 	"plugins": {
-		"page" : "plugins.php",
-		"data" : [
+		"page": "plugins.php",
+		"data": [
 			{
 				"title": "Beiträge im Überblick",
 				"text": "Jetzt befinden wir uns im Bereich \"Plugins\". In diesen Bereich sind wir über die Navigation gekommen.",
-				"target": {
-					"active": true,
-					"focus": "#menu-plugins",
-					"overlay": "#menu-plugins"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-plugins",
+						"overlay": "#menu-plugins"
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Auf zum nächsten Bereich!",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
 	"users": {
-		"page" : "users.php",
-		"data" : [
+		"page": "users.php",
+		"data": [
 			{
 				"title": "Beiträge im Überblick",
 				"text": "Jetzt befinden wir uns im Bereich \"Benutzer\". In diesen Bereich sind wir über die Navigation gekommen.",
-				"target": {
-					"active": true,
-					"focus": "#menu-users",
-					"overlay": "#menu-users"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-users",
+						"overlay": "#menu-users"
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Auf zum nächsten Bereich!",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
 	"tools": {
-		"page" : "tools.php",
-		"data" : [
+		"page": "tools.php",
+		"data": [
 			{
 				"title": "Beiträge im Überblick",
 				"text": "Jetzt befinden wir uns im Bereich \"Werkzeuge\". In diesen Bereich sind wir über die Navigation gekommen.",
-				"target": {
-					"active": true,
-					"focus": "#menu-tools",
-					"overlay": "#menu-tools"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools",
+						"overlay": "#menu-tools"
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Auf zum nächsten Bereich!",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
 	"options-general": {
-		"page" : "options-general.php",
-		"data" : [
+		"page": "options-general.php",
+		"data": [
 			{
 				"title": "Beiträge im Überblick",
 				"text": "Jetzt befinden wir uns im Bereich \"Einstellungen\". In diesen Bereich sind wir über die Navigation gekommen.",
-				"target": {
-					"active": true,
-					"focus": "#menu-settings",
-					"overlay": "#menu-settings"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings",
+						"overlay": "#menu-settings"
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Auf zum nächsten Bereich!",
-				"target": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
@@ -799,20 +990,24 @@
 			{
 				"title": "Beiträge im Überblick",
 				"text": "Jetzt befinden wir uns im Bereich \"Wapuugotchi\". In diesen Bereich sind wir über die Navigation gekommen.",
-				"target": {
-					"active": true,
-					"focus": "#toplevel_page_wapuugotchi",
-					"overlay": "#toplevel_page_wapuugotchi"
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": "#toplevel_page_wapuugotchi",
+						"overlay": "#toplevel_page_wapuugotchi"
+					}
+				]
 			},
 			{
 				"title": "redirect",
 				"text": "Auf zum nächsten Bereich!",
-				"overlay": {
-					"active": true,
-					"focus": null,
-					"overlay": null
-				}
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	}

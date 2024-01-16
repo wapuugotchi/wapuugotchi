@@ -15,35 +15,32 @@ export default function Focus() {
 
 	useEffect(() => {
 		const setFocus = () => {
-			if ( pageConfig?.[index]?.target?.active === true ) {
-				let focus = document.querySelector('.wapuugotchi_onboarding__focus');
-				const focusElement = document.querySelector(pageConfig[index].target?.focus);
-				focus.style.clipPath = getClipPath(focusElement);
-				focus.style.backgroundColor = pageConfig[index].target['color'] ?? '#ffcc00'
+			if ( Array.isArray(pageConfig?.[index]?.targets ) ) {
+				let delay = 0;
+				pageConfig[index].targets.forEach((item) => {
+					if ( item.active === true ) {
+						delay += parseInt( item.delay ?? 0, 10 )
+						setTimeout( function() {
+							let focus = document.querySelector( '.wapuugotchi_onboarding__focus' );
+							const focusElement = document.querySelector(item.focus);
+							focus.style.clipPath = getClipPath(focusElement);
+							focus.style.backgroundColor = item.color ?? '#ffcc00'
 
-				let overlay = document.querySelector('.wapuugotchi_onboarding__focus_overlay');
-				const overlayElement = pageConfig[index].target?.overlay !== undefined
-					? document.querySelector(pageConfig[index].target?.overlay)
-					: document.querySelector(pageConfig[index].target?.focus);
-				overlay.style.clipPath = getClipPathOverlay(overlayElement);
+							let overlay = document.querySelector('.wapuugotchi_onboarding__focus_overlay');
+							const overlayElement = document.querySelector(item.overlay);
+							overlay.style.clipPath = getClipPathOverlay(overlayElement);
 
-				if ( pageConfig?.[index]?.click?.active === true ) {
-					focusElement?.classList?.add('wapuugotchi__allow_click')
-
-					setTimeout(function() {
-						console.log(document.querySelector(pageConfig[index].target?.focus))
-						document.querySelector(pageConfig[index].target?.focus).click()
-						setTimeout(function() {
-							const clickFocusElement = document.querySelector(pageConfig[index].click?.focus);
-							const clickOverlayElement = pageConfig[index].click?.overlay !== undefined
-								? document.querySelector(pageConfig[index].click?.overlay)
-								: document.querySelector(pageConfig[index].click?.focus);
-							focus.style.clipPath = getClipPath(clickFocusElement);
-							overlay.style.clipPath = getClipPathOverlay(clickOverlayElement);
-						}, pageConfig?.[index]?.click?.delay ?? 1000);
-					}, 3000);
-				}
+							const clickElement = document.querySelector(item.click);
+							if ( clickElement instanceof HTMLElement ) {
+								focusElement?.classList?.add('wapuugotchi__allow_click')
+								clickElement.click();
+							}
+						}, delay )
+					}
+				});
 			}
+
+			handleLoader();
 		};
 		setFocus();
 	}, [index]);
@@ -62,6 +59,25 @@ export default function Focus() {
 		clickPrevent('click')
 		clickPrevent('dblclick')
 	}, []);
+
+	const handleLoader = () => {
+		// Loader handling
+		let loader = document.querySelector('.wapuugotchi_onboarding__loader');
+		let nextButton = document.querySelector('button.wapuugotchi_onboarding__navigation_next span');
+		let lastButton = document.querySelector('button.wapuugotchi_onboarding__navigation_last span');
+		if ( Number.isInteger(pageConfig?.[index]?.freeze) && pageConfig?.[index]?.freeze > 0) {
+			//show loader and disable next and last button
+			loader.style.display = 'block';
+			nextButton.classList.add('disabled')
+			lastButton.classList.add('disabled')
+			setTimeout(function() {
+				//hide loader and enable next and last button
+				loader.style.display = 'none';
+				nextButton.classList.remove('disabled')
+				lastButton.classList.remove('disabled')
+			}, pageConfig[index].freeze);
+		}
+	}
 
 	const getClipPathOverlay = (target) => {
 		const targetRect = target?.getBoundingClientRect();

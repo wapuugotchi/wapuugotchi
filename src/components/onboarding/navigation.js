@@ -46,7 +46,7 @@ export default function Navigation() {
 
 	const getIndex = () => {
 		const pageKeyList = Object.keys(pageConfig);
-		return pageKeyList?.indexOf(index);
+		return pageKeyList?.indexOf(index.toString());
 	}
 
 	const fadeOut = () => {
@@ -70,16 +70,33 @@ export default function Navigation() {
 	fadeOut();
 
 	const nextStep = () => {
-		const pageKeyList = Object.keys(pageConfig)
-		const indexPosition = pageKeyList?.indexOf(index.toString())
+		const keyList = Object.keys(pageConfig)
+		const indexPosition = keyList?.indexOf(index.toString())
 
-		if (indexPosition >= 0 && pageKeyList?.length > indexPosition) {
-			let nextIndex = pageKeyList[indexPosition + 1];
+		if (indexPosition >= 0 && keyList?.length > indexPosition) {
+			let nextIndex = keyList[indexPosition + 1];
+			let button = document.querySelector('button.wapuugotchi_onboarding__navigation_next span');
 			if (pageConfig?.[nextIndex] !== undefined) {
-				dispatch(STORE_NAME).setIndex(nextIndex);
-				return true;
+				if(button.classList.contains('disabled') === false) {
+					dispatch(STORE_NAME).setIndex(nextIndex);
+				}
 			} else {
 				nextPage();
+			}
+		}
+	}
+
+	const lastStep = () => {
+		let keyList = Object.keys(pageConfig)
+		let indexPosition = keyList?.indexOf(index.toString())
+
+		if (indexPosition > 0) {
+			let nextIndex = keyList[indexPosition - 1];
+			let button = document.querySelector('button.wapuugotchi_onboarding__navigation_last span');
+			if (pageConfig?.[nextIndex] !== undefined) {
+				if(button.classList.contains('disabled') === false) {
+					dispatch(STORE_NAME).setIndex(nextIndex);
+				}
 			}
 		}
 	}
@@ -91,18 +108,6 @@ export default function Navigation() {
 		if (pagePosition >= 0 && globalKeyList?.length > pagePosition) {
 			let nextPage = globalKeyList[pagePosition + 1];
 			redirectToPage( nextPage )
-		}
-	}
-
-	const lastStep = () => {
-		let keyList = Object.keys(pageConfig)
-		let indexPosition = keyList?.indexOf(index.toString())
-
-		if (indexPosition > 0) {
-			let nextIndex = keyList[indexPosition - 1];
-			if (pageConfig?.[nextIndex] !== undefined) {
-				dispatch(STORE_NAME).setIndex(nextIndex);
-			}
 		}
 	}
 

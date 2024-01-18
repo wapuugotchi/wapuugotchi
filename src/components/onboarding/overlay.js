@@ -7,23 +7,27 @@ import { STORE_NAME } from '../../store/onboarding';
 import Navigation from './navigation';
 import Focus from './focus';
 
-
 export default function Overlay() {
-	const { index, pageConfig } = useSelect((select) => {
+	const { index, pageConfig } = useSelect( ( select ) => {
 		return {
-			index: select(STORE_NAME).getIndex(),
-			pageConfig: select(STORE_NAME).getPageConfig(),
+			index: select( STORE_NAME ).getIndex(),
+			pageConfig: select( STORE_NAME ).getPageConfig(),
 		};
-	});
+	} );
 
 	return (
 		<>
-			<div id="wapuugotchi_onboarding__overlay" className={
-				pageConfig?.[index]?.targets?.[0]?.hover === true ? 'unlocked' : ''
-			}>
+			<div
+				id="wapuugotchi_onboarding__overlay"
+				className={
+					pageConfig?.[ index ]?.targets?.[ 0 ]?.hover === true
+						? 'unlocked'
+						: ''
+				}
+			>
 				<div className="wapuugotchi_onboarding__dialog">
 					<Focus />
-					<Dialog param={[]} />
+					<Dialog param={ [] } />
 				</div>
 			</div>
 		</>

@@ -15,7 +15,7 @@ export default function Wapuu() {
 			width="700px"
 			version="1.1"
 			viewBox="-820 0 1000 770"
-			dangerouslySetInnerHTML={{ __html: svg }}
+			dangerouslySetInnerHTML={ { __html: svg } }
 		></svg>
 	);
 }

@@ -12,7 +12,10 @@ const STORE_NAME = 'wapuugotchi/onboarding';
  *
  * - wp.data.select('wapuugotchi/onboarding').getCollections()
  *
-*/
+ * @param wapuu
+ * @param items
+ * @param category
+ */
 const __getItemUrls = ( wapuu, items, category ) => {
 	if ( wapuu.char?.[ category ]?.key?.[ 0 ] ) {
 		return wapuu.char[ category ].key
@@ -33,7 +36,13 @@ async function __buildSvg( wapuu, items ) {
 			.flat()
 	);
 
-	const ignoreList = ['Front--group', 'RightHand--group', 'BeforeRightHand--part', 'BeforeLeftArm--part', 'Ball--group']
+	const ignoreList = [
+		'Front--group',
+		'RightHand--group',
+		'BeforeRightHand--part',
+		'BeforeLeftArm--part',
+		'Ball--group',
+	];
 	const svgs = (
 		await Promise.all( responses.map( ( response ) => response.text() ) )
 	).map( ( _ ) => new DOMParser().parseFromString( _, 'image/svg+xml' ) );
@@ -51,7 +60,11 @@ async function __buildSvg( wapuu, items ) {
 					const wapuuSvgGroup = result.querySelector(
 						'g#' + itemGroup.classList.value
 					);
-					if ( wapuuSvgGroup && ignoreList.includes(itemGroup.classList.value) === false ) {
+					if (
+						wapuuSvgGroup &&
+						ignoreList.includes( itemGroup.classList.value ) ===
+							false
+					) {
 						const removePart =
 							wapuuSvgGroup.querySelector( '.remove--part' );
 						if ( removePart !== null ) {
@@ -63,10 +76,15 @@ async function __buildSvg( wapuu, items ) {
 				} );
 		}
 
-		let onboarding = document.createElement( 'g' );
+		const onboarding = document.createElement( 'g' );
 		onboarding.id = 'Onboarding--group';
 		onboarding.innerHTML = textBox.element;
-		result?.querySelector('g#wapuugotchi_type__wapuu')?.insertBefore(onboarding, result.querySelector('g#LeftArm--group'));
+		result
+			?.querySelector( 'g#wapuugotchi_type__wapuu' )
+			?.insertBefore(
+				onboarding,
+				result.querySelector( 'g#LeftArm--group' )
+			);
 
 		return result.innerHTML;
 	}
@@ -170,34 +188,34 @@ function create() {
 					payload: { ...payload },
 				};
 			},
-			setGlobalConfig ( payload ) {
+			setGlobalConfig( payload ) {
 				return {
 					type: '__SET_GLOBAL_CONFIG',
-					payload: payload,
+					payload,
 				};
 			},
-			setPageConfig ( payload ) {
+			setPageConfig( payload ) {
 				return {
 					type: '__SET_PAGE_CONFIG',
-					payload: payload,
+					payload,
 				};
 			},
-			setPageName ( payload ) {
+			setPageName( payload ) {
 				return {
 					type: '__SET_PAGE_NAME',
-					payload: payload,
+					payload,
 				};
 			},
-			setIndex ( payload ) {
+			setIndex( payload ) {
 				return {
 					type: '__SET_INDEX',
-					payload: payload,
+					payload,
 				};
 			},
-			setAnimated ( payload ) {
+			setAnimated( payload ) {
 				return {
 					type: '__SET_ANIMATED',
-					payload: payload,
+					payload,
 				};
 			},
 		},

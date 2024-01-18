@@ -1,14 +1,10 @@
 import './dialog.scss';
-import {useState} from "@wordpress/element";
-import {useSelect} from "@wordpress/data";
-import {STORE_NAME} from "../../store/onboarding";
-import Wapuu from "./wapuu";
-import Navigation from "./navigation";
-
-
+import { useSelect } from '@wordpress/data';
+import { STORE_NAME } from '../../store/onboarding';
+import Wapuu from './wapuu';
+import Navigation from './navigation';
 
 export default function Dialog() {
-
 	const { index, pageConfig } = useSelect( ( select ) => {
 		return {
 			index: select( STORE_NAME ).getIndex(),
@@ -21,7 +17,7 @@ export default function Dialog() {
 			<div className="wapuugotchi_onboarding__guide">
 				<Navigation />
 				<div className="wapuugotchi_onboarding__guide_text">
-					<p>{pageConfig?.[index]?.text}</p>
+					<p>{ pageConfig?.[ index ]?.text }</p>
 				</div>
 				<Wapuu />
 			</div>

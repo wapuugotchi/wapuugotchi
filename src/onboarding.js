@@ -1,6 +1,6 @@
 import { render, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
-import Main from "./components/onboarding/main";
+import Main from './components/onboarding/main';
 
 const getDomElement = () => {
 	let domElement = document.getElementById( 'wapuugotchi__onboarding' );

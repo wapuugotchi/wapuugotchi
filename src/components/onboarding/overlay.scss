@@ -7,6 +7,7 @@
 	position: fixed;
 	z-index: 100000;
 	pointer-events: all;
+
 	&.unlocked {
 		pointer-events: none;
 	}

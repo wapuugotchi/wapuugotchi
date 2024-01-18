@@ -10,10 +10,11 @@
 	border-bottom: unset;
 	padding: 0 6px;
 	pointer-events: all;
+
 	.wapuugotchi_onboarding__loader {
 		display: none;
-		height:8px;
-		width:8px;
+		height: 8px;
+		width: 8px;
 		//   margin:0 auto;
 		//   position:relative;
 		position: absolute;
@@ -24,57 +25,87 @@
 		-moz-animation: rotation 1s infinite linear;
 		-o-animation: rotation 1s infinite linear;
 		animation: rotation 1s infinite linear;
-		border:3px solid rgba(0,0,0,.2);
-		border-radius:100%;
+		border: 3px solid rgba(0, 0, 0, 0.2);
+		border-radius: 100%;
 
-		&:before {
-			content:"";
-			display:block;
-			position:absolute;
-			left:-3px;
-			top:-3px;
-			height:100%;
-			width:100%;
-			border-top:3px solid rgba(0,0,0,.8);
-			border-left:3px solid transparent;
-			border-bottom:3px solid transparent;
-			border-right:3px solid transparent;
-			border-radius:100%;
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: -3px;
+			top: -3px;
+			height: 100%;
+			width: 100%;
+			border-top: 3px solid rgba(0, 0, 0, 0.8);
+			border-left: 3px solid transparent;
+			border-bottom: 3px solid transparent;
+			border-right: 3px solid transparent;
+			border-radius: 100%;
 		}
 
 		@-webkit-keyframes rotation {
-			from {-webkit-transform: rotate(0deg);}
-			to {-webkit-transform: rotate(359deg);}
+
+			from {
+				-webkit-transform: rotate(0deg);
+			}
+
+			to {
+				-webkit-transform: rotate(359deg);
+			}
 		}
+
 		@-moz-keyframes rotation {
-			from {-moz-transform: rotate(0deg);}
-			to {-moz-transform: rotate(359deg);}
+
+			from {
+				-moz-transform: rotate(0deg);
+			}
+
+			to {
+				-moz-transform: rotate(359deg);
+			}
 		}
+
 		@-o-keyframes rotation {
-			from {-o-transform: rotate(0deg);}
-			to {-o-transform: rotate(359deg);}
+
+			from {
+				-o-transform: rotate(0deg);
+			}
+
+			to {
+				-o-transform: rotate(359deg);
+			}
 		}
+
 		@keyframes rotation {
-			from {transform: rotate(0deg);}
-			to {transform: rotate(359deg);}
+
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(359deg);
+			}
 		}
 
 	}
 
 	button {
-		background: white;
+		background: #fff;
 		border: none;
 		padding: 2px;
 		height: 20px;
 		width: 20px;
+
 		span {
 			cursor: pointer;
 			color: #444;
+
 			&.disabled {
 				cursor: auto;
-				color: lightgray;
+				color: #d3d3d3;
 			}
 		}
+
 		&.invisible {
 			visibility: hidden;
 		}

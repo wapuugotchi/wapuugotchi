@@ -5,12 +5,12 @@
 	right: 0;
 	height: 100vh;
 	width: 100vw;
-	background-color: black;
+	background-color: #000;
 	opacity: 0.8;
 	overflow: auto;
 	pointer-events: all;
 	transition: all 0.5s;
-	animation: wapuugotchi-onboading__appear-animation .2s ease-out;
+	animation: wapuugotchi-onboading__appear-animation 0.2s ease-out;
 	animation-fill-mode: forwards;
 
 	clip-path: polygon(0 0, 0 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 0 100%, 100% 100%, 100% 0);
@@ -27,18 +27,20 @@
 	overflow: auto;
 	pointer-events: all;
 	transition: all 0.5s;
-	animation: wapuugotchi-onboading__appear-animation .2s ease-out;
+	animation: wapuugotchi-onboading__appear-animation 0.2s ease-out;
 	animation-fill-mode: forwards;
 
 	clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
 }
 
 
-@keyframes wapuugotchi-onboading__appear-animation{
+@keyframes wapuugotchi-onboading__appear-animation {
+
 	0% {
 		box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0);
 	}
+
 	to {
-		box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.70);
+		box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
 	}
 }

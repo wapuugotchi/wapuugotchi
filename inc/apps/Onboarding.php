@@ -67,6 +67,7 @@ class Onboarding {
 						'index'         => $first_index !== false ?$first_index: null,
 						'wapuu'         => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
 						'items'         => Helper::get_items(),
+						'animated'      => false,
 					)
 				)
 			),

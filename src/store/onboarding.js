@@ -119,6 +119,12 @@ function create() {
 						index: payload,
 					};
 				}
+				case '__SET_ANIMATED': {
+					return {
+						...state,
+						animated: payload,
+					};
+				}
 			}
 
 			return state;
@@ -135,6 +141,7 @@ function create() {
 					dispatch.setPageConfig( select.getPageConfig() );
 					dispatch.setPageName( select.getPageName() );
 					dispatch.setIndex( select.getIndex() );
+					dispatch.setAnimated( select.getAnimated() );
 				},
 			__setState( payload ) {
 				return {
@@ -187,6 +194,12 @@ function create() {
 					payload: payload,
 				};
 			},
+			setAnimated ( payload ) {
+				return {
+					type: '__SET_ANIMATED',
+					payload: payload,
+				};
+			},
 		},
 		selectors: {
 			// should not be used except for js console debug purposes
@@ -213,6 +226,9 @@ function create() {
 			},
 			getIndex( state ) {
 				return state.index;
+			},
+			getAnimated( state ) {
+				return state.animated;
 			},
 		},
 		resolvers: {},

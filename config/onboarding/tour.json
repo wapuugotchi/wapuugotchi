@@ -60,45 +60,85 @@
 			{
 				"title": "Dashboard anpassen",
 				"text": "Du hast aber auch die Möglichkeit deine Startseite anzupassen. So kannst du beispielsweise Themenbereiche deaktivieren, die dich nicht interessieren.",
+				"freeze": 17000,
 				"targets": [
 					{
 						"active": true,
 						"focus": "button#show-settings-link",
-						"overlay": "button#show-settings-link"
-					}
-				]
-
-			},
-			{
-				"title": "Dashboard anpassen",
-				"text": "Du hast aber auch die Möglichkeit deine Startseite anzupassen. So kannst du beispielsweise Themenbereiche deaktivieren, die dich nicht interessieren.",
-				"freeze": 5500,
-				"targets": [
+						"overlay": "button#show-settings-link",
+						"delay": 0
+					},
 					{
 						"active": true,
 						"focus": "button#show-settings-link",
 						"overlay": "button#show-settings-link",
 						"delay": 0,
-						"click": "button#show-settings-link"
-					},
-					{
-						"active": true,
-						"focus": "#screen-meta",
-						"overlay": "#screen-meta",
-						"delay": 250
-					},
-					{
-						"active": true,
-						"focus": "#screen-meta",
-						"overlay": "#screen-meta",
-						"delay": 4000,
-						"click": "button#show-settings-link"
+						"color": "red"
 					},
 					{
 						"active": true,
 						"focus": "button#show-settings-link",
 						"overlay": "button#show-settings-link",
-						"delay": 250
+						"delay": 1200,
+						"click": "button#show-settings-link[aria-expanded=\"false\"]",
+						"clickable": 2,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#screen-meta",
+						"delay": 250,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#wpcontent",
+						"delay": 5000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#wpcontent",
+						"delay": 2000,
+						"click": "#wp_welcome_panel-hide",
+						"clickable": 2,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#wpcontent",
+						"delay": 2000,
+						"click": "#wp_welcome_panel-hide",
+						"clickable": 2,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#wpcontent",
+						"delay": 2000,
+						"click": "#wp_welcome_panel-hide",
+						"clickable": 2,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#wpcontent",
+						"delay": 2000,
+						"click": "#wp_welcome_panel-hide",
+						"clickable": 2,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#screen-meta",
+						"delay": 4000
 					}
 				]
 

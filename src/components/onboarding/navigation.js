@@ -5,12 +5,13 @@ import {useEffect} from "@wordpress/element";
 import GlobalNavigation from "./global-navigation";
 
 export default function Navigation() {
-	const { index, pageName, pageConfig, globalConfig } = useSelect( ( select ) => {
+	const { index, animated, pageName, pageConfig, globalConfig } = useSelect( ( select ) => {
 		return {
 			index: select( STORE_NAME ).getIndex(),
 			pageName: select( STORE_NAME ).getPageName(),
 			pageConfig: select( STORE_NAME ).getPageConfig(),
 			globalConfig: select( STORE_NAME ).getGlobalConfig(),
+			animated: select( STORE_NAME ).getAnimated(),
 		};
 	} );
 
@@ -28,6 +29,9 @@ export default function Navigation() {
 						break;
 					case 'Escape':
 						stop();
+						break;
+					case ' ':
+						startAnimation();
 						break;
 				}
 			};
@@ -142,15 +146,59 @@ export default function Navigation() {
 		window.location = url.toString();
 	}
 
+	const startAnimation = () => {
+		if (getTargetsCount() > 1 ) {
+			dispatch(STORE_NAME).setAnimated(true);
+			handleLoader()
+		}
+	}
+
+	const getTargetsCount = () => {
+		let count = 0;
+		if ( Array.isArray(pageConfig?.[index]?.targets ) ) {
+			count = pageConfig[index].targets.length
+		}
+		return count
+	}
+
+
+
+	const handleLoader = () => {
+		// Loader handling
+		let loader = document.querySelector('.wapuugotchi_onboarding__loader');
+		let nextButton = document.querySelector('button.wapuugotchi_onboarding__navigation_next span');
+		let lastButton = document.querySelector('button.wapuugotchi_onboarding__navigation_last span');
+		let playButton = document.querySelector('button.wapuugotchi_onboarding__navigation_play');
+		if ( Number.isInteger(pageConfig?.[index]?.freeze) && pageConfig?.[index]?.freeze > 0) {
+			//show loader and disable next and last button
+			loader.style.display = 'block';
+			nextButton.classList.add('disabled')
+			lastButton.classList.add('disabled')
+			playButton.classList.add('invisible')
+			setTimeout(function() {
+				//hide loader and enable next and last button
+				loader.style.display = 'none';
+				nextButton.classList.remove('disabled')
+				lastButton.classList.remove('disabled')
+				playButton.classList.remove('invisible')
+			}, pageConfig[index].freeze);
+		}
+	}
+
 	return (
 		<>
 			<div id="wapuugotchi_onboarding__navigation">
-				<button className='wapuugotchi_onboarding__navigation_last' onClick={lastStep}><span
-					className={'dashicons dashicons-controls-back' + (getIndex() === 0 ? ' disabled' : '')}></span></button>
 				<button className='wapuugotchi_onboarding__navigation_stop' onClick={stop}><span
 					className="dashicons dashicons-no"></span></button>
+				<button className='wapuugotchi_onboarding__navigation_last' onClick={lastStep}><span
+					className={'dashicons dashicons-controls-back' + (getIndex() === 0 ? ' disabled' : '')}></span>
+				</button>
+				<button className='wapuugotchi_onboarding__navigation_play' onClick={startAnimation}><span
+					className={'dashicons dashicons-controls-play' + (getTargetsCount() <= 1 ? ' disabled' : '')}></span>
+				</button>
 				<button className='wapuugotchi_onboarding__navigation_next' onClick={nextStep}><span
 					className='dashicons dashicons-controls-forward'></span></button>
+				<div className="wapuugotchi_onboarding__loader"></div>
 				<GlobalNavigation />
 			</div>
 		</>

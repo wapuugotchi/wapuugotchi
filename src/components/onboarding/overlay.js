@@ -1,10 +1,8 @@
 import './overlay.scss';
 import Dialog from './dialog';
-import { dispatch, useSelect } from '@wordpress/data';
-import { useState } from '@wordpress/element';
+import { useSelect } from '@wordpress/data';
 
 import { STORE_NAME } from '../../store/onboarding';
-import Navigation from './navigation';
 import Focus from './focus';
 
 export default function Overlay() {

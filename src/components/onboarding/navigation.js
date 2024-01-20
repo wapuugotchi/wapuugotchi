@@ -11,7 +11,8 @@ export default function Navigation() {
 				index: select( STORE_NAME ).getIndex(),
 				pageName: select( STORE_NAME ).getPageName(),
 				pageConfig: select( STORE_NAME ).getPageConfig(),
-				globalConfig: select( STORE_NAME ).getGlobalConfig(), };
+				globalConfig: select( STORE_NAME ).getGlobalConfig(),
+			};
 		}
 	);
 
@@ -56,16 +57,16 @@ export default function Navigation() {
 	};
 
 	const fadeOut = () => {
-		const fadeOut = document.getElementById( 'wapuugotchi__avatar' );
-		if ( ! fadeOut ) {
+		const fadeOutElement = document.getElementById( 'wapuugotchi__avatar' );
+		if ( ! fadeOutElement ) {
 			return false;
 		}
 		const fadeOutEffect = setInterval( function () {
-			if ( ! fadeOut.style.opacity ) {
-				fadeOut.style.opacity = 1;
+			if ( ! fadeOutElement.style.opacity ) {
+				fadeOutElement.style.opacity = 1;
 			}
-			if ( fadeOut.style.opacity > 0 ) {
-				fadeOut.style.opacity -= 0.1;
+			if ( fadeOutElement.style.opacity > 0 ) {
+				fadeOutElement.style.opacity -= 0.1;
 			} else {
 				clearInterval( fadeOutEffect );
 			}
@@ -116,15 +117,15 @@ export default function Navigation() {
 		const pagePosition = globalKeyList?.indexOf( pageName );
 
 		if ( pagePosition >= 0 && globalKeyList?.length > pagePosition ) {
-			const nextPage = globalKeyList[ pagePosition + 1 ];
-			redirectToPage( nextPage );
+			const nextPageElement = globalKeyList[ pagePosition + 1 ];
+			redirectToPage( nextPageElement );
 		}
 	};
 
 	const redirectToPage = ( nextPageName = '' ) => {
 		const currentPage = globalConfig?.[ pageName ]?.page;
-		const nextPage = globalConfig?.[ nextPageName ]?.page;
-		if ( currentPage === undefined || nextPage === undefined ) {
+		const nextPageElement = globalConfig?.[ nextPageName ]?.page;
+		if ( currentPage === undefined || nextPageElement === undefined ) {
 			stop();
 			return false;
 		}
@@ -134,10 +135,10 @@ export default function Navigation() {
 
 		if ( url?.pathname?.includes( '.php' ) ) {
 			const urlSplit = currentPage.split( '?', 1 );
-			const pathname = url.pathname.replace( urlSplit, nextPage );
+			const pathname = url.pathname.replace( urlSplit, nextPageElement );
 			urlString += pathname;
 		} else {
-			urlString += url.pathname + nextPage;
+			urlString += url.pathname + nextPageElement;
 		}
 
 		const redirect = new URL( urlString );

@@ -12,9 +12,9 @@ const STORE_NAME = 'wapuugotchi/onboarding';
  *
  * - wp.data.select('wapuugotchi/onboarding').getCollections()
  *
- * @param wapuu
- * @param items
- * @param category
+ * @param {Object} wapuu    - Config of the Wapuu
+ * @param {Object} items    - All items
+ * @param {Object} category - The category of the item
  */
 const __getItemUrls = ( wapuu, items, category ) => {
 	if ( wapuu.char?.[ category ]?.key?.[ 0 ] ) {

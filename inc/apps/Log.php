@@ -73,7 +73,9 @@ class Log {
 				'id'          => $active_quest->get_id(),
 				'title'       => $active_quest->get_title(),
 				'description' => $active_quest->get_description(),
-				'pearls'      => $active_quest->get_pearls(),
+				'rewards'     => array(
+					'pearls' => $active_quest->get_pearls(),
+				),
 			);
 		}
 

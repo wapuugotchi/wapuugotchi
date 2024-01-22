@@ -38,19 +38,31 @@
 
 					font-size: 1rem;
 					color: black;
-				}
 
-				.wapuugotchi_log_list_quest_completed {
-					@extend .wapuugotchi_log_list_quest;
-					border: 1px solid #4ab866;
-				}
+					&.active {
+						border: 1px solid #f0ad4e;
+					}
 
-				.wapuugotchi_log_list_quest:hover {
-					background-color: #f0f0f3;
-				}
+					&.selected {
+						border: 1px solid #4a9eb8;
+					}
 
-				.wapuugotchi_log_list_quest_completed:hover {
-					background-color: #c4decc;
+					&.completed {
+						border: 1px solid #4ab866;
+						&:hover {
+							background-color: #c4decc;
+						}
+					}
+
+					&.hidden {
+						&:hover {
+							background-color: #eed5d5;
+						}
+					}
+
+					&:hover {
+						background-color: #f0f0f3;
+					}
 				}
 			}
 
@@ -68,8 +80,25 @@
 				flex: 1;
 				max-width: 50%;
 
+				.wapuugotchi_log_description_divider {
+					width: 100%;
+					height: 1px;
+
+					border-radius: 25%;
+					background-color: #777777;
+				}
+
 				p {
 					font-size: 1.25rem;
+					flex: 1;
+				}
+
+				.wapuugotchi_log_description_rewards {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					align-content: center;
+					gap: 1rem;
 				}
 			}
 		}

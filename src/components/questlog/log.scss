@@ -1,6 +1,78 @@
 .wrap {
 
 	#wapuugotchi-app {
+		.wapuugotchi_log_pages {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			gap: 2rem;
+
+			.wapuugotchi_log_list {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+				max-width: 50%;
+				max-height: 90vh;
+
+				ul {
+					overflow-y: scroll;
+					overflow-x: hidden;
+
+					-ms-overflow-style: none;
+					scrollbar-width: none;
+				}
+
+				ul::-webkit-scrollbar {
+					display: none;
+				}
+
+				.wapuugotchi_log_list_quest {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					gap: 0.25rem;
+					border-radius: 0.25rem;
+
+					padding: 0.5rem 1rem;
+					border: 1px solid #c3c4c7;
+
+					font-size: 1rem;
+					color: black;
+				}
+
+				.wapuugotchi_log_list_quest_completed {
+					@extend .wapuugotchi_log_list_quest;
+					border: 1px solid #4ab866;
+				}
+
+				.wapuugotchi_log_list_quest:hover {
+					background-color: #f0f0f3;
+				}
+
+				.wapuugotchi_log_list_quest_completed:hover {
+					background-color: #c4decc;
+				}
+			}
+
+			.wapuugotchi_log_divider {
+				width: 2px;
+				height: 100%;
+
+				border-radius: 25%;
+				background-color: black;
+			}
+
+			.wapuugotchi_log_description {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+				max-width: 50%;
+
+				p {
+					font-size: 1.25rem;
+				}
+			}
+		}
 
 		.wapuugotchi_log {
 			border: 1px solid #c3c4c7;

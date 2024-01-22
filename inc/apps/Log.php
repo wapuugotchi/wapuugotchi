@@ -49,8 +49,9 @@ class Log {
 			'wapuugotchi-log',
 			'window.extWapuugotchiLogData = ' . wp_json_encode(
 				array(
-					'active_quests'    => $this->get_active_quests(),
-					'completed_quests' => $this->get_completed_quests(),
+					'quests'    => $this->get_all_quests(),
+					'completed' => $this->get_completed_quests(),
+					'active'    => $this->get_active_quests(),
 				)
 			),
 			'before'
@@ -64,14 +65,32 @@ class Log {
 	 *
 	 * @return array
 	 */
+	private function get_all_quests() {
+		$result        = array();
+		$active_quests = QuestManager::get_all_quests();
+		foreach ( $active_quests as $active_quest ) {
+			$result[] = array(
+				'id'          => $active_quest->get_id(),
+				'title'       => $active_quest->get_title(),
+				'description' => $active_quest->get_description(),
+				'pearls'      => $active_quest->get_pearls(),
+			);
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Get all active quests.
+	 *
+	 * @return array
+	 */
 	private function get_active_quests() {
 		$result        = array();
 		$active_quests = QuestManager::get_active_quests();
+
 		foreach ( $active_quests as $active_quest ) {
-			$result[] = array(
-				'title'  => $active_quest->get_title(),
-				'pearls' => $active_quest->get_pearls(),
-			);
+			$result[] = $active_quest->get_id();
 		}
 
 		return $result;
@@ -89,10 +108,8 @@ class Log {
 		foreach ( $completed_quests as $completed_quest_key => $completed_quest ) {
 			foreach ( $all_quests as $quest ) {
 				if ( $completed_quest_key === $quest->get_id() ) {
-					$result[] = array(
-						'title'  => $quest->get_title(),
-						'pearls' => $quest->get_pearls(),
-						'date'   => $completed_quest['date'],
+					$result[ $quest->get_id() ] = array(
+						'date' => $completed_quest['date'],
 					);
 
 					break;

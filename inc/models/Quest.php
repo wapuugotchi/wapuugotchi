@@ -35,6 +35,12 @@ class Quest {
 	 */
 	private $title = '';
 	/**
+	 * Description of the quest.
+	 *
+	 * @var string
+	 */
+	private $description = '';
+	/**
 	 * Message that is displayed when the quest is completed.
 	 *
 	 * @var string
@@ -77,6 +83,7 @@ class Quest {
 	 * @param string $id The ID.
 	 * @param string $parent_id The parent ID.
 	 * @param string $title The title.
+	 * @param string $description The description.
 	 * @param string $message The message.
 	 * @param string $type The type.
 	 * @param string $priority The priority.
@@ -84,10 +91,11 @@ class Quest {
 	 * @param string $active_callback The active state.
 	 * @param string $completed_callback The completed state.
 	 */
-	public function __construct( $id, $parent_id, $title, $message, $type, $priority, $pearls, $active_callback, $completed_callback ) {
+	public function __construct( $id, $parent_id, $title, $description, $message, $type, $priority, $pearls, $active_callback, $completed_callback ) {
 		$this->id                 = $id;
 		$this->parent_id          = $parent_id;
 		$this->title              = $title;
+		$this->description        = $description;
 		$this->message            = $message;
 		$this->type               = $type;
 		$this->priority           = $priority;
@@ -121,6 +129,15 @@ class Quest {
 	 */
 	public function get_title() {
 		return $this->title;
+	}
+
+	/**
+	 * Get description.
+	 *
+	 * @return string
+	 */
+	public function get_description() {
+		return $this->description;
 	}
 
 	/**

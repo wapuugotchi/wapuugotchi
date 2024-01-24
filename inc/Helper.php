@@ -63,7 +63,7 @@ class Helper {
 	/**
 	 * Get all wearable items.
 	 *
-	 * @return int
+	 * @return array
 	 */
 	public static function get_items() {
 		$items = \get_transient( 'wapuugotchi_items' );

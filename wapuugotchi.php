@@ -42,7 +42,6 @@ function init() {
 	new Api();
 	new Menu();
 	new Manager();
-	new Helper();
 
 	require_once 'inc/apps/Customizer.php';
 	new Customizer();

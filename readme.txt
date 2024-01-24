@@ -3,7 +3,7 @@ Contributor:       herrfeldmann
 Tags:              assistant, wapuu, gamification
 Stable tag:        0.1.4
 Requires at least: 6.0
-Tested up to:      6.3.2
+Tested up to:      6.4.2
 Requires PHP:      7.0
 License:           GPLv2 or later
 
@@ -18,6 +18,9 @@ Receive important messages and updates from your Wapuu, who will keep you inform
 Complete tasks within your WordPress instance to earn points, unlock new items, and personalize your Wapuu even further. Explore an ever-expanding world of customizations and accessories.
 
 == Changelog ==
+
+= 0.1.5 =
+- Tests for WordPress 6.4.2
 
 = 0.1.1 =
 - Animations are now part of the svg files.

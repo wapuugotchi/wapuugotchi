@@ -18,7 +18,6 @@ export default function Focus() {
 	 * If animated is false, get first element and focus it.
 	 */
 	useEffect( () => {
-
 		const handleItem = ( item ) => {
 			const focus = document.querySelector(
 				'.wapuugotchi_onboarding__focus'
@@ -61,7 +60,6 @@ export default function Focus() {
 				handleItem( item );
 			}
 		}
-
 	}, [ index, animated, pageConfig ] );
 
 	useEffect( () => {

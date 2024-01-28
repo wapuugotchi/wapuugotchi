@@ -25,10 +25,6 @@ class Onboarding {
 
 	/**
 	 * Initialization Log
-	 *
-	 * @param string $hook_suffix The internal page name.
-	 *
-	 * @return void
 	 */
 	public function init() {
 		if ( isset( $_GET['onboarding_mode'] ) ) {
@@ -39,19 +35,17 @@ class Onboarding {
 
 	/**
 	 * Load the Log scripts ( css and react ).
-	 *
-	 * @return void
 	 */
 	public function load_scripts() {
 		global $current_screen;
-		$page_config    = $this->get_page_config( $current_screen->id );
+		$page_config = $this->get_page_config( $current_screen->id );
 		if ( empty( $page_config ) ) {
 			return null;
 		}
 
-		$global_config  = $this->get_global_config();
-		$first_index    = $this->getFirstIndexOfPageConfig( $page_config);
-		$assets = include_once WAPUUGOTCHI_PATH . 'build/onboarding.asset.php';
+		$global_config = $this->get_global_config();
+		$first_index   = $this->get_first_index_of_page_config( $page_config );
+		$assets        = include_once WAPUUGOTCHI_PATH . 'build/onboarding.asset.php';
 		wp_enqueue_style( 'wapuugotchi-onboarding', WAPUUGOTCHI_URL . 'build/onboarding.css', array(), $assets['version'] );
 		wp_enqueue_script( 'wapuugotchi-onboarding', WAPUUGOTCHI_URL . 'build/onboarding.js', $assets['dependencies'], $assets['version'], true );
 
@@ -63,8 +57,8 @@ class Onboarding {
 					array(
 						'page_name'     => $current_screen->id,
 						'global_config' => $global_config,
-						'page_config'   => isset( $page_config['data']) ?$page_config['data']: null,
-						'index'         => $first_index !== false ?$first_index: null,
+						'page_config'   => isset( $page_config['data'] ) ? $page_config['data'] : null,
+						'index'         => false !== $first_index ? $first_index : null,
 						'wapuu'         => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
 						'items'         => Helper::get_items(),
 						'animated'      => false,
@@ -77,26 +71,39 @@ class Onboarding {
 		\wp_set_script_translations( 'wapuugotchi-onboarding', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
-	private function getFirstIndexOfPageConfig($page_config = null) {
-		if ( empty( $page_config['data'] )) {
+	/**
+	 * Get the first index of the page config.
+	 *
+	 * @param array $page_config The page config.
+	 */
+	private function get_first_index_of_page_config( $page_config = null ) {
+		if ( empty( $page_config['data'] ) ) {
 			return false;
 		}
 
-		$configKeys = array_keys( $page_config['data'] );
-		if (count($configKeys) < 1) {
+		$config_keys = array_keys( $page_config['data'] );
+		if ( count( $config_keys ) < 1 ) {
 			return false;
 		}
 
 		return array_keys( $page_config['data'] )[0];
 	}
 
+	/**
+	 * Get the page config.
+	 *
+	 * @param string $current_screen The current screen.
+	 */
 	private function get_page_config( $current_screen = 'none' ) {
 		$config = $this->get_global_config();
-		return isset( $config[$current_screen]) ?  $config[$current_screen] : [];
+		return isset( $config[ $current_screen ] ) ? $config[ $current_screen ] : array();
 	}
 
+	/**
+	 * Get the global config.
+	 */
 	private function get_global_config() {
-		return json_decode( file_get_contents( dirname( __DIR__, 2 ) . '/config/onboarding/tour.json' ), true );
+		return json_decode( wp_remote_get( dirname( __DIR__, 2 ) . '/config/onboarding/tour.json' ), true );
 	}
 
 	/**
@@ -104,7 +111,8 @@ class Onboarding {
 	 */
 	public function my_disable_welcome_guides() {
 		wp_add_inline_script(
-			'wp-data', "window.onload = function() {
+			'wp-data',
+			"window.onload = function() {
 			const selectPost = wp.data.select( 'core/edit-post' );
 			const selectPreferences = wp.data.select( 'core/preferences' );
 			const isWelcomeGuidePost = selectPost.isFeatureActive( 'welcomeGuide' );
@@ -117,6 +125,7 @@ class Onboarding {
 			if ( !isWelcomeGuidePost ) {
 				wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'welcomeGuide' );
 			}
-		}" );
+		}"
+		);
 	}
 }

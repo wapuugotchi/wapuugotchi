@@ -545,19 +545,20 @@
 				]
 			},
 			{
-				"title": "Einstellungsleiste",
-				"text": "Die Einstellungsleiste ",
+				"title": "Die Einstellungsleiste",
+				"text": "In der Einstellungsleiste kannst du deinen Beitrag speichern und veröffentlichen. Zudem kannst du zwischen verschiedenen Bildschirmmodi wie Desktop, Mobile und Tablet wechseln.",
 				"targets": [
 					{
 						"active": true,
 						"focus": ".edit-post-header__settings",
-						"overlay": ".edit-post-header__settings"
+						"overlay": ".edit-post-header__settings",
+						"click": ".interface-pinned-items button[aria-expanded=\"false\"]"
 					}
 				]
 			},
 			{
-				"title": "Seitennavigation",
-				"text": "Die Seitennavigation ",
+				"title": "Die Seitennavigation",
+				"text": "Hier kannst du zusätzliche Informationen über deinen Blogbeitrag einsehen. Außerdem kannst du hier auch einige Einstellungen an den einzelnen Blöcken, die du hinzugefügt hast, vornehmen.",
 				"targets": [
 					{
 						"active": true,
@@ -568,12 +569,13 @@
 			},
 			{
 				"title": "Inhalte",
-				"text": "Hier kannst du deine Inhalte pflegen. ",
+				"text": "Im Contentbereich kannst du deine Inhalte bearbeiten... Texte schreiben, Bilder einfügen, Blöcke bearbeiten. Deiner Kreativität sind keine Grenzen gesetzt!",
 				"targets": [
 					{
 						"active": true,
 						"focus": ".interface-interface-skeleton__content",
-						"overlay": ".interface-interface-skeleton__content"
+						"overlay": ".interface-interface-skeleton__content",
+						"click": ".interface-pinned-items button[aria-expanded=\"false\"]"
 					}
 				]
 			},
@@ -585,6 +587,115 @@
 						"active": true,
 						"focus": null,
 						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"edit-category": {
+		"page": "edit-tags.php?taxonomy=category",
+		"data": [
+			{
+				"title": "Übersicht",
+				"text": "Hier befinden wir uns im Bereich \"Kategorien\". In diesen Bereich sind wir über die Navigation gelangt. Kategorien helfen dir, deine Inhalte zu organisieren und zu strukturieren, damit Besucher deiner Website leichter relevante Informationen finden können.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-posts",
+						"overlay": "#menu-posts"
+					}
+				]
+			},
+			{
+				"title": "Erstellung von Kategorien",
+				"text": "Du kannst neue Kategorien erstellen, um deine Beiträge thematisch zu gruppieren. Dies erleichtert nicht nur die Navigation für die Benutzer, sondern verbessert auch die SEO, da suchende Nutzer auf deine Website gelangen können, wenn sie nach bestimmten Themen suchen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#col-left",
+						"overlay": "#col-left"
+					}
+				]
+			},
+			{
+				"title": "Hierarchie von Kategorien",
+				"text": "Kategorien können in einer hierarchischen Struktur organisiert werden. Das bedeutet, dass du Unterkategorien erstellen kannst, um eine noch feinere Unterteilung deiner Inhalte zu ermöglichen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".term-parent-wrap",
+						"overlay": ".term-parent-wrap"
+					}
+				]
+			},
+			{
+				"title": "Kategorieübersicht",
+				"text": "Auf der Übersichtsseite werden nicht nur alle angelegten Kategorien dargestellt, sondern auch ihre hierarchischen Beziehungen zueinander. Zudem erhältst du Informationen darüber, wie häufig deine Kategorien deinen Beiträgen zugeordnet sind.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#col-right",
+						"overlay": "#col-right"
+					}
+				]
+			},
+			{
+				"title": "Zusammenfassung",
+				"text": "Insgesamt bietet der \"Categories\" Bereich eine effektive Möglichkeit, die Organisation und Auffindbarkeit von Inhalten auf deiner Website zu verbessern. Bereit für den nächsten Bereich?",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"edit-post_tag": {
+		"page": "edit-tags.php?taxonomy=post_tag",
+		"data": [
+			{
+				"title": "Tutorial",
+				"text": "Willkommen im Bereich \"Schlagwörter\"! Wir haben diesen Bereich über die Navigation erreicht. Schlagwörter ermöglichen es dir, deine Beiträge mit zusätzlichen Schlüsselwörtern oder Phrasen zu versehen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-posts",
+						"overlay": "#menu-posts"
+					}
+				]
+			},
+			{
+				"title": "Erstellung von Schlagwörtern",
+				"text": "Du kannst Schlagwörter erstellen, die zu den spezifischen Inhalten deiner Beiträge passen. Diese können einzelne Wörter oder kurze Phrasen sein, die die wichtigsten Konzepte oder Themen des Beitrags widerspiegeln.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#col-left",
+						"overlay": "#col-left"
+					}
+				]
+			},
+			{
+				"title": "Schlagwörterübersicht",
+				"text": "Auf der Übersichtsseite werden dir alle angelegten Schlagwörter dargestellt. Zudem erhältst du Informationen darüber, wie häufig deine Schlagwörter deinen Beiträgen zugeordnet sind.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#col-right",
+						"overlay": "#col-right"
+					}
+				]
+			},
+			{
+				"title": "Zusammenfassung",
+				"text": "Im Gegensatz zu Kategorien, die dazu dienen, Beiträge in breite Themenbereiche zu unterteilen, bieten Schlagwörter eine feinere Granularität und ermöglichen es dir, spezifische Themen, Stichwörter oder Schlüsselbegriffe mit deinen Beiträgen zu verknüpfen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
 					}
 				]
 			}
@@ -753,6 +864,18 @@
 				]
 			},
 			{
+				"title": "Beiträge im Überblick",
+				"text": "Wenn du den Mauszeiger über eine Seite bewegst erscheint ein Menü, mit dem du beispielsweise die Seite bearbeiten kannst. Probier es doch gleich mal aus!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#the-list tr",
+						"overlay": "#the-list tr",
+						"hover": true
+					}
+				]
+			},
+			{
 				"title": "Sortier- und Filteroptionen",
 				"text": "Du kannst deine Seiten nach verschiedenen Kriterien sortieren, z.B. nach Datum. Es gibt auch Filteroptionen, mit denen du bestimmte Arten von Seiten anzeigen lassen kannst, z.B. Entwürfe.",
 				"targets": [
@@ -788,6 +911,233 @@
 			{
 				"title": "redirect",
 				"text": "Ist dir aufgefallen, dass ich dir fast das gleiche beim Bereich \"Beiträge\" erzählt habe? Naja, das liegt daran, dass die Bereiche ziemlich identisch sind!",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"page": {
+		"page": "post-new.php?post_type=page",
+		"data": [
+			{
+				"title": "Tutorial",
+				"text": "Gib einfach bescheid, wenn das Gutenberg Tutorial vorbei ist... ... zzzzZZZZZzzzzZZZZZZ",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Gutenberg Editor",
+				"text": "Wie du durch das Tutorial vielleicht erfahren hast, kannst du in diesem Bereich die Inhalte deiner Beiträge pflegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Obere Navigation",
+				"text": "Die obere Navigation bietet dir einen schnellen Zugriff auf grundlegende Steuerelemente im Editor. Sie ist unterteilt in die Werkzeugleiste und die Einstellungsleiste.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-navigable-region.interface-interface-skeleton__header",
+						"overlay": ".interface-navigable-region.interface-interface-skeleton__header"
+					}
+				]
+			},
+			{
+				"title": "Die Werkzeugleiste",
+				"text": "Die Werkzeugleiste stellt dir Funktionen zur Verfügung, die dir dabei helfen, deinen Beitrag schritt für schritt aufzubauen. Hier kannst du neue Blockelemente hinzufügen und Änderungen rückgängig machen. Willst du sehen wie das geht? Drücke auf \"Play\"!",
+				"freeze": 38000,
+				"targets": [
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar",
+						"delay": 500,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header-toolbar__left",
+						"overlay": ".edit-post-header-toolbar__left",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": "button.edit-post-header-toolbar__inserter-toggle",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": "button.edit-post-header-toolbar__inserter-toggle",
+						"delay": 1000,
+						"color": "red",
+						"click": "button.edit-post-header-toolbar__inserter-toggle[aria-pressed=\"false\"]"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__secondary-sidebar",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 4000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.editor-block-list-item-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.editor-block-list-item-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red",
+						"click": "button.editor-block-list-item-table"
+					},
+					{
+						"active": true,
+						"focus": ".block-editor-block-list__block.wp-block-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 4000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__undo"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__redo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__redo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__redo"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__undo"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": "button.edit-post-header-toolbar__inserter-toggle[aria-pressed=\"true\"]"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar",
+						"delay": 4000
+					}
+				]
+			},
+			{
+				"title": "Die Einstellungsleiste",
+				"text": "In der Einstellungsleiste kannst du deinen Beitrag speichern und veröffentlichen. Zudem kannst du zwischen verschiedenen Bildschirmmodi wie Desktop, Mobile und Tablet wechseln.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".edit-post-header__settings",
+						"overlay": ".edit-post-header__settings",
+						"click": ".interface-pinned-items button[aria-expanded=\"false\"]"
+					}
+				]
+			},
+			{
+				"title": "Die Seitennavigation",
+				"text": "Hier kannst du zusätzliche Informationen über deinen Blogbeitrag einsehen. Außerdem kannst du hier auch einige Einstellungen an den einzelnen Blöcken, die du hinzugefügt hast, vornehmen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__sidebar",
+						"overlay": ".interface-interface-skeleton__sidebar"
+					}
+				]
+			},
+			{
+				"title": "Inhalte",
+				"text": "Im Contentbereich kannst du deine Inhalte bearbeiten... Texte schreiben, Bilder einfügen, Blöcke bearbeiten. Deiner Kreativität sind keine Grenzen gesetzt!",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__content",
+						"overlay": ".interface-interface-skeleton__content",
+						"click": ".interface-pinned-items button[aria-expanded=\"false\"]"
+					}
+				]
+			},
+			{
+				"title": "Ende",
+				"text": "Der Texteditor bringt echt viele Funktionen mit und ich habe bestimmt die Hälfte vergessen zu erklären! Ich hoffe, dass ich dir zumindest einen kleinen Überblick geben konnte. Lass uns einen Blick in den nächsten Bereich werfen.",
 				"targets": [
 					{
 						"active": true,

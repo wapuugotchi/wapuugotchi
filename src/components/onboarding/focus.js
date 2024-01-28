@@ -12,73 +12,62 @@ export default function Focus() {
 		};
 	} );
 
+	/**
+	 * Focus handler.
+	 * If animated is true, get all elements and focus them one after the other.
+	 * If animated is false, get first element and focus it.
+	 */
 	useEffect( () => {
-		const target = pageConfig?.[ index ]?.targets?.[ 0 ];
-		if ( target?.active === true ) {
-			const focusElement = document.querySelector( target.focus );
+
+		const handleItem = ( item ) => {
 			const focus = document.querySelector(
 				'.wapuugotchi_onboarding__focus'
 			);
+			const focusElement = document.querySelector( item.focus );
 			focus.style.clipPath = getClipPath( focusElement );
-			focus.style.backgroundColor = target.color ?? '#ffcc00';
+			focus.style.backgroundColor = item.color ?? '#ffcc00';
 
 			const overlay = document.querySelector(
 				'.wapuugotchi_onboarding__focus_overlay'
 			);
-			const overlayElement = document.querySelector( target.overlay );
+			const overlayElement = document.querySelector( item.overlay );
 			overlay.style.clipPath = getClipPathOverlay( overlayElement );
-		}
-	}, [ index, pageConfig ] );
 
-	useEffect( () => {
-		clickPrevent( 'click' );
-		clickPrevent( 'dblclick' );
-	}, [] );
+			const clickElement = document.querySelector( item.click );
+			if ( clickElement instanceof HTMLElement ) {
+				clickElement?.classList?.add( 'wapuugotchi__allow_click' );
+				clickElement.click();
+			}
+		};
 
-	useEffect( () => {
 		if ( animated === true ) {
+			// If animated is true, get all elements and focus them one after the other.
 			if ( Array.isArray( pageConfig?.[ index ]?.targets ) ) {
 				let delay = 0;
 				pageConfig[ index ].targets.forEach( ( item ) => {
 					if ( item.active === true ) {
 						delay += parseInt( item.delay ?? 0, 10 );
-
-						const focusElement = document.querySelector(
-							item.focus
-						);
 						setTimeout( function () {
-							const focus = document.querySelector(
-								'.wapuugotchi_onboarding__focus'
-							);
-							focus.style.clipPath = getClipPath( focusElement );
-							focus.style.backgroundColor =
-								item.color ?? '#ffcc00';
-
-							const overlay = document.querySelector(
-								'.wapuugotchi_onboarding__focus_overlay'
-							);
-							const overlayElement = document.querySelector(
-								item.overlay
-							);
-							overlay.style.clipPath =
-								getClipPathOverlay( overlayElement );
-
-							const clickElement = document.querySelector(
-								item.click
-							);
-							if ( clickElement instanceof HTMLElement ) {
-								clickElement?.classList?.add(
-									'wapuugotchi__allow_click'
-								);
-								clickElement.click();
-							}
+							handleItem( item );
 						}, delay );
 					}
 				} );
 			}
 			dispatch( STORE_NAME ).setAnimated( false );
+		} else {
+			// If animated is false, get first element and focus it.
+			const item = pageConfig?.[ index ]?.targets?.[ 0 ];
+			if ( item?.active === true ) {
+				handleItem( item );
+			}
 		}
+
 	}, [ index, animated, pageConfig ] );
+
+	useEffect( () => {
+		clickPrevent( 'click' );
+		clickPrevent( 'dblclick' );
+	}, [] );
 
 	const clickPrevent = ( action ) => {
 		const content = document.querySelector( '#wpwrap' );

@@ -402,13 +402,145 @@
 				]
 			},
 			{
-				"title": "Werkzeugleiste",
-				"text": "Die Werkzeugleiste ",
+				"title": "Die Werkzeugleiste",
+				"text": "Die Werkzeugleiste stellt dir Funktionen zur Verfügung, die dir dabei helfen, deinen Beitrag schritt für schritt aufzubauen. Hier kannst du neue Blockelemente hinzufügen und Änderungen rückgängig machen. Willst du sehen wie das geht? Drücke auf \"Play\"!",
+				"freeze": 38000,
 				"targets": [
 					{
 						"active": true,
 						"focus": ".edit-post-header__toolbar",
 						"overlay": ".edit-post-header__toolbar"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar",
+						"delay": 500,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header-toolbar__left",
+						"overlay": ".edit-post-header-toolbar__left",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": "button.edit-post-header-toolbar__inserter-toggle",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": "button.edit-post-header-toolbar__inserter-toggle",
+						"delay": 1000,
+						"color": "red",
+						"click": "button.edit-post-header-toolbar__inserter-toggle[aria-pressed=\"false\"]"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__secondary-sidebar",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 4000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.editor-block-list-item-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.editor-block-list-item-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red",
+						"click": "button.editor-block-list-item-table"
+					},
+					{
+						"active": true,
+						"focus": ".block-editor-block-list__block.wp-block-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 4000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__undo"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__redo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__redo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__redo"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__undo"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": "button.edit-post-header-toolbar__inserter-toggle[aria-pressed=\"true\"]"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar",
+						"delay": 4000
 					}
 				]
 			},

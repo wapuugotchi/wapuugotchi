@@ -103,7 +103,7 @@ class Onboarding {
 	 * Get the global config.
 	 */
 	private function get_global_config() {
-		return json_decode( wp_remote_get( dirname( __DIR__, 2 ) . '/config/onboarding/tour.json' ), true );
+		return json_decode( file_get_contents( dirname( __DIR__, 2 ) . '/config/onboarding/tour.json' ), true );
 	}
 
 	/**

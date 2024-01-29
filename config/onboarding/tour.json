@@ -667,6 +667,17 @@
 				]
 			},
 			{
+				"title": "Zusammenfassung",
+				"text": "Im Gegensatz zu Kategorien, die dazu dienen, Beiträge in breite Themenbereiche zu unterteilen, bieten Schlagwörter eine feinere Granularität und ermöglichen es dir, spezifische Themen, Stichwörter oder Schlüsselbegriffe mit deinen Beiträgen zu verknüpfen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
+					}
+				]
+			},
+			{
 				"title": "Erstellung von Schlagwörtern",
 				"text": "Du kannst Schlagwörter erstellen, die zu den spezifischen Inhalten deiner Beiträge passen. Diese können einzelne Wörter oder kurze Phrasen sein, die die wichtigsten Konzepte oder Themen des Beitrags widerspiegeln.",
 				"targets": [
@@ -685,17 +696,6 @@
 						"active": true,
 						"focus": "#col-right",
 						"overlay": "#col-right"
-					}
-				]
-			},
-			{
-				"title": "Zusammenfassung",
-				"text": "Im Gegensatz zu Kategorien, die dazu dienen, Beiträge in breite Themenbereiche zu unterteilen, bieten Schlagwörter eine feinere Granularität und ermöglichen es dir, spezifische Themen, Stichwörter oder Schlüsselbegriffe mit deinen Beiträgen zu verknüpfen.",
-				"targets": [
-					{
-						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
 					}
 				]
 			}
@@ -1398,12 +1398,28 @@
 			}
 		]
 	},
+	"site-editor": {
+		"page": "site-editor.php",
+		"data": [
+			{
+				"title": "Kommentare",
+				"text": "Ganz ehrlich? Ich hab keine Ahnung... Aber ich kümmere mich drum!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#site-editor",
+						"overlay": "#site-editor"
+					}
+				]
+			}
+		]
+	},
 	"plugins": {
 		"page": "plugins.php",
 		"data": [
 			{
 				"title": "Beiträge im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Plugins\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"text": "Jetzt befinden wir uns im Bereich \"Plugins\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du neue Plugins suchen, installieren und aktivieren",
 				"targets": [
 					{
 						"active": true,
@@ -1413,8 +1429,63 @@
 				]
 			},
 			{
-				"title": "redirect",
-				"text": "Auf zum nächsten Bereich!",
+				"title": "Installieren von Plugins",
+				"text": "Plugins erweitern den Funktionsumfang deiner WordPress Instanz. Das können Dinge wie Kontaktformulare, Galerien, Slideshows, SEO-Tools, Sicherheitsfunktionen und mehr sein.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Plugin-Übersicht",
+				"text": "In der Plugin-Übersicht kannst du alle installierten Plugins sehen und verwalten. Hier hast du auch die Möglichkeit, deine genutzten Plugins ganz einfach zu aktivieren oder zu deaktivieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#the-list",
+						"overlay": "#the-list"
+					}
+				]
+			},
+			{
+				"title": "Suche nach bestimmten Plugins",
+				"text": "Du hast auch die Möglichkeit nach bestimmten Plugins zu suchen. Das ist dann nützlich, wenn du sehr viele Plugins installiert hast.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".search-box",
+						"overlay": ".search-box"
+					}
+				]
+			},
+			{
+				"title": "Installieren von Plugins",
+				"text": "Normalerweise erfolgt die Installation direkt aus der offiziellen WordPress Plugin-Bibliothek. Dadurch profitiert man von automatischen Aktualisierungen, Community-Support, Kompatibilität mit verschiedenen WordPress-Versionen sowie klaren Richtlinien für Entwickler und vielem mehr.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "a.page-title-action",
+						"overlay": "a.page-title-action"
+					}
+				]
+			},
+			{
+				"title": "Aktualisieren von Plugins",
+				"text": "Entwickler veröffentlichen regelmäßig Aktualisierungen für ihre Plugins, um Fehler zu beheben, Sicherheitslücken zu schließen oder neue Funktionen hinzuzufügen. Du wirst informiert, wenn Aktualisierungen verfügbar sind, und kannst sie hier mit wenigen Klicks installieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Zusammenfassung",
+				"text": "Es gibt unglaublich viele Plugins und du wirst sehen, dass für nahezu jedes Probleme eine passende Plugin-Lösung existiert! Bereit für den nächsten Bereich?",
 				"targets": [
 					{
 						"active": true,
@@ -1423,6 +1494,33 @@
 					}
 				]
 			}
+		]
+	},
+	"plugins": {
+		"page": "plugins.php",
+		"data": [
+			{
+				"title": "Beiträge im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Plugins hinzufügen\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du neue Plugins suchen, installieren und aktivieren",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-plugins",
+						"overlay": "#menu-plugins"
+					}
+				]
+			},
+			{
+				"title": "Plugins",
+				"text": "Diesmal beginnen wir mit der Suche. Denn in keinem Bereich spielt die Suche einen so übergeordnete Rolle wie hier. Du kannst nach bestimmten Plugins suchen oder nach Kategorien filtern.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
 		]
 	},
 	"users": {

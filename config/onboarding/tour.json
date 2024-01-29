@@ -1496,7 +1496,7 @@
 			}
 		]
 	},
-	"plugins": {
+	"plugin-install": {
 		"page": "plugins.php",
 		"data": [
 			{
@@ -1520,7 +1520,7 @@
 						"overlay": "#wpcontent"
 					}
 				]
-			},
+			}
 		]
 	},
 	"users": {

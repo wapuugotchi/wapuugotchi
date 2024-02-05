@@ -5,7 +5,7 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\Wapuugotchi;
+namespace Wapuugotchi\Wapuugotchi\Models;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();

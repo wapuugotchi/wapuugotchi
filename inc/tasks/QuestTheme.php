@@ -5,7 +5,7 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\Tasks;
+namespace Wapuugotchi\Wapuugotchi\Tasks;
 
 use Wapuugotchi\Wapuugotchi\Models\Quest;
 
@@ -34,7 +34,7 @@ class QuestTheme {
 	 */
 	public function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new Quest( 'cleanup_themes_1', null, __( 'Theme-tastic Tidiness', 'wapuugotchi' ), __( 'Embark on a daring adventure through the cluttered corridors of WordPress, where you must vanquish the unused themes that lurk in the shadows! Uninstall with precision, restore order, and emerge victorious as the Master of Theme Management!', 'wapuugotchi' ), __( 'You cleaned up! &#129529;', 'wapuugotchi' ) . PHP_EOL . 'We have only one theme now.', 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestTheme::always_true', 'Wapuugotchi\Wapuugotchi\QuestTheme::cleanup_themes_completed_1' ),
+			new Quest( 'cleanup_themes_1', null, __( 'Theme-tastic Tidiness', 'wapuugotchi' ), __( 'Embark on a daring adventure through the cluttered corridors of WordPress, where you must vanquish the unused themes that lurk in the shadows! Uninstall with precision, restore order, and emerge victorious as the Master of Theme Management!', 'wapuugotchi' ), __( 'You cleaned up! &#129529;', 'wapuugotchi' ) . PHP_EOL . 'We have only one theme now.', 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\Tasks\QuestTheme::always_true', 'Wapuugotchi\Wapuugotchi\Tasks\QuestTheme::cleanup_themes_completed_1' ),
 		);
 
 		return array_merge( $default_quest, $quests );

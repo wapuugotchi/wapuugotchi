@@ -49,13 +49,11 @@ class QuestManager {
 	 * @return bool|mixed|null
 	 */
 	public static function get_all_quests() {
-		/*
 		$quest = wp_cache_get( 'wapuugotchi_quests' );
 
 		if ( ! empty( $quest ) ) {
 			return $quest;
 		}
-		*/
 
 		$quest = apply_filters( 'wapuugotchi_quest_filter', array() );
 

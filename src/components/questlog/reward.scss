@@ -1,0 +1,25 @@
+.wapuugotchi_quest_reward {
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 6rem;
+	height: 6rem;
+	border: 1.5px solid #7c7c7c;
+	border-radius: 0.25rem;
+
+	&.claimed {
+		border: 1.5px solid #69b07b;
+	}
+
+	img {
+		margin-left: auto;
+		margin-right: auto;
+		width: 4rem;
+		height: 4rem;
+	}
+
+	span {
+		font-size: 1.5rem;
+	}
+}

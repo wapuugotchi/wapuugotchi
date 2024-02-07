@@ -152,7 +152,7 @@ class Api {
 	 * @return WP_Error|\WP_HTTP_Response|WP_REST_Response
 	 */
 	public function get_settings() {
-		return rest_ensure_response( json_decode( file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/default.json' ) ) );
+		return rest_ensure_response( json_decode( file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/shop/default.json' ) ) );
 	}
 
 	/**

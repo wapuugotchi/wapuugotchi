@@ -35,6 +35,8 @@ if ( is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
  * @return void
  */
 function init() {
+
+	/* Mains '*/
 	require_once 'inc/Api.php';
 	require_once 'inc/Menu.php';
 	require_once 'inc/Manager.php';
@@ -43,6 +45,7 @@ function init() {
 	new Menu();
 	new Manager();
 
+	/* Apps '*/
 	require_once 'inc/apps/Customizer.php';
 	new Customizer();
 	require_once 'inc/apps/Log.php';
@@ -51,7 +54,10 @@ function init() {
 	new Hunt();
 	require_once 'inc/apps/Avatar.php';
 	new Avatar();
+	require_once 'inc/apps/Onboarding.php';
+	new Onboarding();
 
+	/* Tasks '*/
 	require_once 'inc/feature/QuestManager.php';
 	require_once 'inc/models/Quest.php';
 	require_once 'inc/tasks/QuestContent.php';

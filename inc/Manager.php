@@ -33,7 +33,7 @@ class Manager {
 			update_user_meta(
 				get_current_user_id(),
 				'wapuugotchi__alpha',
-				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/default.json' )
+				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/shop/default.json' )
 			);
 		}
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ) ) ) {

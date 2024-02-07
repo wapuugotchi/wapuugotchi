@@ -1,0 +1,18 @@
+#wapuugotchi_onboarding__overlay {
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+	display: flex;
+	position: fixed;
+	z-index: 100000;
+	pointer-events: all;
+
+	&.unlocked {
+		pointer-events: none;
+	}
+}
+
+body.wp-admin {
+	overflow: hidden;
+}

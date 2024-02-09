@@ -1,4 +1,4 @@
-import { render, StrictMode } from '@wordpress/element';
+import { StrictMode, createRoot } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
 import Avatar from './components/avatar/avatar';
 
@@ -13,10 +13,9 @@ const getDomElement = () => {
 };
 
 domReady( () =>
-	render(
+	createRoot( getDomElement() ).render(
 		<StrictMode>
 			<Avatar />
-		</StrictMode>,
-		getDomElement()
+		</StrictMode>
 	)
 );

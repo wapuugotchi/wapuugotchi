@@ -15,6 +15,12 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
+use Wapuugotchi\Wapuugotchi\Tasks\QuestContent;
+use Wapuugotchi\Wapuugotchi\Tasks\QuestDate;
+use Wapuugotchi\Wapuugotchi\Tasks\QuestPlugin;
+use Wapuugotchi\Wapuugotchi\Tasks\QuestStart;
+use Wapuugotchi\Wapuugotchi\Tasks\QuestTheme;
+
 if ( ! defined( 'WAPUUGOTCHI_PATH' ) ) {
 	define( 'WAPUUGOTCHI_PATH', \plugin_dir_path( __FILE__ ) );
 }
@@ -42,7 +48,6 @@ function init() {
 	new Api();
 	new Menu();
 	new Manager();
-	new Helper();
 
 	require_once 'inc/apps/Customizer.php';
 	new Customizer();

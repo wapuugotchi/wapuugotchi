@@ -1463,7 +1463,8 @@
 			},
 			{
 				"title": "Installieren von Plugins",
-				"text": "Normalerweise erfolgt die Installation direkt aus der offiziellen WordPress Plugin-Bibliothek. Dadurch profitiert man von automatischen Aktualisierungen, Community-Support, Kompatibilität mit verschiedenen WordPress-Versionen sowie klaren Richtlinien für Entwickler und vielem mehr.",
+				"text":
+				"Am besten ist es, wenn du Plugins nur aus der offiziellen WordPress Plugin-Bibliothek installierst. Abgesehen davon, dass es sich hier um eine vertrauenswürdige Quelle handelt, hast du Vorteile wie automatische Aktualisierungen, Community-Support und vieles mehr.",
 				"targets": [
 					{
 						"active": true,
@@ -1474,12 +1475,12 @@
 			},
 			{
 				"title": "Aktualisieren von Plugins",
-				"text": "Entwickler veröffentlichen regelmäßig Aktualisierungen für ihre Plugins, um Fehler zu beheben, Sicherheitslücken zu schließen oder neue Funktionen hinzuzufügen. Du wirst informiert, wenn Aktualisierungen verfügbar sind, und kannst sie hier mit wenigen Klicks installieren.",
+				"text": "Entwickler veröffentlichen regelmäßig Updates für ihre Plugins, um Fehler zu beheben, Sicherheitslücken zu schließen oder neue Funktionen hinzuzufügen. Du solltest deine Plugins immer auf dem neuesten Stand halten.",
 				"targets": [
 					{
 						"active": true,
-						"focus": null,
-						"overlay": null
+						"focus": "#the-list tr",
+						"overlay": "#the-list tr"
 					}
 				]
 			},
@@ -1497,10 +1498,10 @@
 		]
 	},
 	"plugin-install": {
-		"page": "plugins.php",
+		"page": "plugin-install.php",
 		"data": [
 			{
-				"title": "Beiträge im Überblick",
+				"title": "Einleitung",
 				"text": "Jetzt befinden wir uns im Bereich \"Plugins hinzufügen\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du neue Plugins suchen, installieren und aktivieren",
 				"targets": [
 					{
@@ -1511,13 +1512,24 @@
 				]
 			},
 			{
-				"title": "Plugins",
-				"text": "Diesmal beginnen wir mit der Suche. Denn in keinem Bereich spielt die Suche einen so übergeordnete Rolle wie hier. Du kannst nach bestimmten Plugins suchen oder nach Kategorien filtern.",
+				"title": "Beiträge im Überblick",
+				"text": "Dieser Bereich ermöglicht es dir Plugins in der WordPress Bibliothek zu suchen und zu installieren. Es gibt tausende von Plugins, die dir Beispielweise dabei helfen können, Kontaktformulare zu erstellen, SEO-Tools zu nutzen oder die Sicherheit deiner Website zu verbessern.",
 				"targets": [
 					{
 						"active": true,
 						"focus": "#wpcontent",
 						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Navigation",
+				"text": "Du kannst hier auch die beliebtesten, neuesten und empfohlenen Plugins durchstöbern. Das wird dir helfen, das passende Plugin für deine Bedürfnisse zu finden, denn wir reden hier über mehr als 60.000 von Plugins!",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wp-filter ul.filter-links",
+						"overlay": ".wp-filter ul.filter-links"
 					}
 				]
 			}
@@ -1527,8 +1539,8 @@
 		"page": "users.php",
 		"data": [
 			{
-				"title": "Beiträge im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Benutzer\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"title": "Einleitung",
+				"text": "Jetzt befinden wir uns im Bereich \"Benutzer\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du die Benutzer deiner Website verwalten.",
 				"targets": [
 					{
 						"active": true,
@@ -1538,8 +1550,156 @@
 				]
 			},
 			{
-				"title": "redirect",
-				"text": "Auf zum nächsten Bereich!",
+				"title": "Benutzer-Übersicht",
+				"text": "\uD83D\uDEA7",
+				"targets": [
+					{
+						"active": true,
+						"focus": "table.wp-list-table.users",
+						"overlay": "table.wp-list-table.users"
+					}
+				]
+			},
+			{
+				"title": "Ein Benutzer",
+				"text": "\uD83D\uDEA7 Lass uns kurz über die wichtigsten Informationen sprechen, die du hier siehst. Der Benutzername, die E-Mail-Adresse, die Rolle und die Anzahl der veröffentlichten Beiträge.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "table #the-list tr",
+						"overlay": "table #the-list tr"
+					}
+				]
+			},
+			{
+				"title": "Username",
+				"text": "\uD83D\uDEA7",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.column-username",
+						"overlay": "td.column-username"
+					}
+				]
+			},
+			{
+				"title": "Email",
+				"text": "\uD83D\uDEA7",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.column-email",
+						"overlay": "td.column-email"
+					}
+				]
+			},
+			{
+				"title": "Rolle",
+				"text": "\uD83D\uDEA7",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.column-role",
+						"overlay": "td.column-role"
+					}
+				]
+			},
+			{
+				"title": "Posts",
+				"text": "\uD83D\uDEA7",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.column-posts",
+						"overlay": "td.column-posts"
+					}
+				]
+			},
+			{
+				"title": "Filter",
+				"text": "Hier kannst du nach Benutzergruppen filtern. Das ist besonders nützlich, wenn du viele Benutzer hast. Der Filter ist dynamisch und zeigt dir nur die Benutzergruppen an, die auch wirklich existieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "ul.subsubsub",
+						"overlay": "ul.subsubsub"
+					}
+				]
+			},
+			{
+				"title": "Suche",
+				"text": "Natürlich hast du auch hier die Möglichkeit nach bestimmten Benutzern und Rollen zu suchen. Das ist dann nützlich, wenn du sehr viele Benutzer hast.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "p.search-box",
+						"overlay": "p.search-box"
+					}
+				]
+			},
+			{
+				"title": "Neuen Benutzer hinzufügen",
+				"text": "Hier kannst du neue Benutzer hinzufügen. Lass uns mal einen Blick reinwerfen. Bereit?",
+				"targets": [
+					{
+						"active": true,
+						"focus": "a.page-title-action",
+						"overlay": "a.page-title-action"
+					}
+				]
+			}
+		]
+	},
+	"user": {
+		"page": "user-new.php",
+		"data": [
+			{
+				"title": "Einleitung",
+				"text": "Jetzt befinden wir uns im Bereich \"Benutzer hinzufügen\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du Benutzer hinzufügen und ihre Rollen verwalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-users",
+						"overlay": "#menu-users"
+					}
+				]
+			},
+			{
+				"title": "Tip 1",
+				"text": "Eigentlich ist diese Seite selbst erklärend. Sei aber unbedingt vorsichtig mit der Rollenvergabe, denn die Rollen bestimmen, welche Berechtigungen ein Benutzer hat!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
+					}
+				]
+			},
+			{
+				"title": "Tip 2",
+				"text": "Bereits die Rolle \"Autor\" kann, in den falschen Händen, großen Schaden an deiner Website anrichten, da Benutzer mit dieser Rolle bereits Beiträge schreiben und auch Veröffentlichen dürfen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#role",
+						"overlay": "#role"
+					}
+				]
+			},
+			{
+				"title": "Tip 3",
+				"text": "Ein Administrator kann allen Benutzern die Rechte entziehen... also auch dir! Sei also vorsichtig, wem du die Rolle \"Administrator\" gibst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#role",
+						"overlay": "#role"
+					}
+				]
+			},
+			{
+				"title": "Ende",
+				"text": "Lass uns mal einen Blick in den nächsten Bereich werfen.",
 				"targets": [
 					{
 						"active": true,
@@ -1550,12 +1710,28 @@
 			}
 		]
 	},
+	"profile": {
+		"page": "profile.php",
+		"data": [
+			{
+				"title": "Einleitung",
+				"text": "Jetzt befinden wir uns im Bereich \"Profil\". Machen wir es kurz: Hier kannst du dein Profil bearbeiten. Und weiter geht's! \uD83D\uDE05",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-users",
+						"overlay": "#menu-users"
+					}
+				]
+			}
+		]
+	},
 	"tools": {
 		"page": "tools.php",
 		"data": [
 			{
-				"title": "Beiträge im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Werkzeuge\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"title": "Tools im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich \"Werkzeuge\". Dieser Bereich stellt insbesondere dem Administrator zusätzliche Funktionen und Ressourcen zur verfügung. Lass uns kurz reinschauen.",
 				"targets": [
 					{
 						"active": true,
@@ -1565,13 +1741,77 @@
 				]
 			},
 			{
-				"title": "redirect",
-				"text": "Auf zum nächsten Bereich!",
+				"title": "Verfügbare Tools",
+				"text": "Dies ist die Übersichtsseite für die verfügbaren Tools. Hier findest du Tools, die dir bei der Verwaltung deiner Website helfen können. Einige Tools sind nur für Administratoren verfügbar. Die Tools variieren auch je nach installierten Plugins und WordPress Version.",
 				"targets": [
 					{
 						"active": true,
-						"focus": null,
-						"overlay": null
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
+					}
+				]
+			}
+		]
+	},
+	"import": {
+		"page": "import.php",
+		"data": [
+			{
+				"title": "Import",
+				"text": "Dieser Abschnitt ermöglicht es Benutzern, Inhalte von anderen Websites oder anderen WordPress-Installationen zu importieren. Das ist nützlich, wenn Benutzer ihre Website migrieren oder Inhalte zwischen verschiedenen WordPress-Installationen teilen möchten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools",
+						"overlay": "#menu-tools"
+					}
+				]
+			}
+		]
+	},
+	"export": {
+		"page": "export.php",
+		"data": [
+			{
+				"title": "Export",
+				"text": "Hier kannst du Inhalte deiner Website exportieren. Das ist nützlich, wenn du deine Website migrieren oder Inhalte zwischen verschiedenen WordPress-Installationen teilen möchtest.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools",
+						"overlay": "#menu-tools"
+					}
+				]
+			}
+		]
+	},
+	"site-health": {
+		"page": "site-health.php",
+		"data": [
+			{
+				"title": "Seitenzustand",
+				"text": "Der Bereich \"Seitenzustand\" bietet dir eine Übersicht über den Zustand deiner Website. Hier kannst du sehen, ob alles in Ordnung ist oder ob es Probleme gibt, die behoben werden müssen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools",
+						"overlay": "#menu-tools"
+					}
+				]
+			}
+		]
+	},
+	"export-personal-data": {
+		"page": "export-personal-data.php",
+		"data": [
+			{
+				"title": "Export",
+				"text": "Unter Umständen kann es notwendig sein, personenbezogene Daten für Benutzeranfragen oder Datenschutzanforderungen zu exportieren. Dieses Tool ermöglicht das Exportieren von persönlichen Daten, die von Besuchern der Website gesammelt wurden.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools",
+						"overlay": "#menu-tools"
 					}
 				]
 			}
@@ -1582,7 +1822,7 @@
 		"data": [
 			{
 				"title": "Beiträge im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Einstellungen\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"text": "Jetzt befinden wir uns im Bereich \"Einstellungen\" und sind damit tatsächlich auf der zielgeraden. Ich gebe dir kurz alle wichtigen Infos über die hier aufgeführten Bereiche im Schnelldurchlauf.",
 				"targets": [
 					{
 						"active": true,
@@ -1590,15 +1830,110 @@
 						"overlay": "#menu-settings"
 					}
 				]
-			},
-			{
-				"title": "redirect",
-				"text": "Auf zum nächsten Bereich!",
+			},			{
+				"title": "Übersicht",
+				"text": "Die Seite \"Allgemein\" ist die erste Seite der Einstellungen. Hier kannst du den Namen deiner Website, die URL, die Zeitzone und das Datum deiner Website festlegen.",
 				"targets": [
 					{
 						"active": true,
-						"focus": null,
-						"overlay": null
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
+					}
+				]
+			}
+		]
+	},
+	"options-writing": {
+		"page": "options-writing.php",
+		"data": [
+			{
+				"title": "Schreiben",
+				"text": "Der Bereich \"Schreiben\" ist die zweite Seite der Einstellungen. Hier kannst du die Einstellungen für das Schreiben und Veröffentlichen von Beiträgen festlegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
+					}
+				]
+			}
+		]
+	},
+	"options-reading": {
+		"page": "options-reading.php",
+		"data": [
+			{
+				"title": "Lesen",
+				"text": "Der Bereich \"Lesen\" ist die dritte Seite der Einstellungen. Hier kannst du die Einstellungen für die Anzeige deiner Website festlegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
+					}
+				]
+			}
+		]
+	},
+	"options-discussion": {
+		"page": "options-discussion.php",
+		"data": [
+			{
+				"title": "Discussion",
+				"text": "Der Bereich \"Diskussion\" ist die vierte Seite der Einstellungen. Hier kannst du die Einstellungen für die Kommentare und Diskussionen auf deiner Website festlegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
+					}
+				]
+			}
+		]
+	},
+	"options-media": {
+		"page": "options-media.php",
+		"data": [
+			{
+				"title": "Media",
+				"text": "Der Bereich \"Medien\" ist die fünfte Seite der Einstellungen. Hier kannst du die Einstellungen für die Medien auf deiner Website festlegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
+					}
+				]
+			}
+		]
+	},
+	"options-permalink": {
+		"page": "options-permalink.php",
+		"data": [
+			{
+				"title": "Permalink",
+				"text": "Der Bereich \"Permalinks\" ist die sechste Seite der Einstellungen. Hier kannst du die Einstellungen für die Permalinks auf deiner Website festlegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
+					}
+				]
+			}
+		]
+	},
+	"options-privacy": {
+		"page": "options-privacy.php",
+		"data": [
+			{
+				"title": "Datenschutz",
+				"text": "Der Bereich \"Datenschutz\" ist die letzte Seite der Einstellungen. Hier kannst du die Einstellungen für den Datenschutz auf deiner Website festlegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
 					}
 				]
 			}
@@ -1609,7 +1944,7 @@
 		"data": [
 			{
 				"title": "Beiträge im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Wapuugotchi\". In diesen Bereich sind wir über die Navigation gekommen.",
+				"text": "Willkommen im aller aller aller wichtigsten Bereich von WordPress! ... Mein Bereich! \uD83D\uDE05",
 				"targets": [
 					{
 						"active": true,

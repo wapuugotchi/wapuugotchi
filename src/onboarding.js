@@ -1,4 +1,4 @@
-import { render, StrictMode } from '@wordpress/element';
+import {createRoot, StrictMode} from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
 import Main from './components/onboarding/main';
 
@@ -13,10 +13,9 @@ const getDomElement = () => {
 };
 
 domReady( () =>
-	render(
+	createRoot(	getDomElement() ).render(
 		<StrictMode>
 			<Main />
-		</StrictMode>,
-		getDomElement()
+		</StrictMode>
 	)
 );

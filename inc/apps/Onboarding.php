@@ -38,6 +38,13 @@ class Onboarding {
 	 */
 	public function load_scripts() {
 		global $current_screen;
+		if ( isset( $_GET['pagename'] ) ) {
+			/*************** DumpDebugDie ***************/
+			echo '<pre>';
+			wp_die(var_dump($current_screen->id));
+			echo '</pre>';
+			/*************** DumpDebugDie ***************/
+		}
 		$page_config = $this->get_page_config( $current_screen->id );
 		if ( empty( $page_config ) ) {
 			return null;

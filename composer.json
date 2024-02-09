@@ -12,7 +12,8 @@
         "phpcompatibility/phpcompatibility-wp": "*",
         "squizlabs/php_codesniffer": "3.*",
         "wp-coding-standards/wpcs": "*",
-		"dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpunit/phpunit": "^11"
     },
     "extra": {
         "installer-name": "wapuugotchi"

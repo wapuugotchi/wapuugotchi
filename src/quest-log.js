@@ -1,12 +1,11 @@
-import { render, StrictMode } from '@wordpress/element';
+import { StrictMode, createRoot } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
 import Log from './components/questlog/log';
 
 domReady( () =>
-	render(
+createRoot( document.getElementById( 'wapuugotchi__questlog' ) ).render(
 		<StrictMode>
 			<Log />
-		</StrictMode>,
-		document.getElementById( 'wapuugotchi-app' )
+		</StrictMode>
 	)
 );

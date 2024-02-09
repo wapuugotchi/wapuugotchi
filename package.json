@@ -19,11 +19,11 @@
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start src/customizer.js src/scavenger-hunt.js src/quest-log.js src/index.js",
-		"env": "WP_ENV_HOME=wp-env-home wp-env",
+		"env": "wp-env",
 		"test": "npx playwright test --config playwright.config.js tests/addSource.test.js"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.41.1",
+		"@playwright/test": "^1.41.2",
 		"@wordpress/env": "^9.2.0",
 		"@wordpress/scripts": "^27.1.0"
 	},
@@ -33,8 +33,8 @@
 		"@wordpress/dom-ready": "^3.50.0",
 		"@wordpress/element": "^5.27.0",
 		"@wordpress/i18n": "^4.50.0",
-		"html-react-parser": "^5.1.1",
-		"react-svg": "^16.1.32"
+		"html-react-parser": "^5.1.2",
+		"react-svg": "^16.1.33"
 	},
 	"files": [
 		"build",

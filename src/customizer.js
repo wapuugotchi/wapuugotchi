@@ -1,12 +1,11 @@
-import { render, StrictMode } from '@wordpress/element';
+import {createRoot, StrictMode} from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
 import Shop from './components/shop/shop';
 
 domReady( () =>
-	render(
+	createRoot( document.getElementById( 'wapuugotchi-app' ) ).render(
 		<StrictMode>
 			<Shop />
-		</StrictMode>,
-		document.getElementById( 'wapuugotchi-app' )
+		</StrictMode>
 	)
 );

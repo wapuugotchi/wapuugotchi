@@ -1943,8 +1943,8 @@
 		"page": "admin.php?page=wapuugotchi",
 		"data": [
 			{
-				"title": "Beiträge im Überblick",
-				"text": "Willkommen im aller aller aller wichtigsten Bereich von WordPress! ... Mein Bereich! \uD83D\uDE05",
+				"title": "Wapuugotchi",
+				"text": "Willkommen im aller aller aller wichtigsten Bereich von allen! ... Mein Bereich! \uD83D\uDE05 Naja, zugegeben, er ist nicht unbedingt wichtig, aber lustig! Im Moment gibt es hier drei Abschnitte: \"Anpassen\", \"Aufgaben\" und \"Einführung\". Lass uns mal reinschauen!",
 				"targets": [
 					{
 						"active": true,
@@ -1954,8 +1954,101 @@
 				]
 			},
 			{
-				"title": "redirect",
-				"text": "Auf zum nächsten Bereich!",
+				"title": "Anpassen",
+				"text": "Hier kannst du mein Aussehen anpassen. Du kannst mir eine neue Frisur verpassen, mir eine Brille aufsetzen oder mir ein neues T-Shirt anziehen. Ich bin gespannt, was du aus mir machst!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wapuugotchi-app",
+						"overlay": "#wapuugotchi-app"
+					}
+				]
+			},
+			{
+				"title": "Kategorien",
+				"text": "Die Item, die du mir mir anlegen kannst, sind in Kategorien unterteilt. Schau immer mal wieder vorbei, denn es kommen ständig neue Items hinzu!",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wapuu_card__categories",
+						"overlay": ".wapuu_card__categories"
+					}
+				]
+			},
+			{
+				"title": "Items",
+				"text": "Hier kannst du alle Items einer Kategorie sehen. Wenn du ein Item anklickst, wird es mir angelegt. Einige Items sind schon freigeschaltet, andere musst du erst freischalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wapuu_card__items",
+						"overlay": ".wapuu_card__items"
+					}
+				]
+			},
+			{
+				"title": "Perlen",
+				"text": "Hier kannst du sehen, wieviele Perlen du besitzt. Perlen sind die Währung, mit der du neue Items freischalten kannst. Du bekommst Perlen, wenn du Aufgaben erledigst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wapuu_shop__pearls",
+						"overlay": ".wapuu_shop__pearls"
+					}
+				]
+			},
+			{
+				"title": "Community Items",
+				"text": "Zum großen Teil sind die Items von der WordPress Community erstellt worden. Von wem das Item ist, siehst du, wenn du es freischalten möchtest.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wapuu_card__item.selected",
+						"overlay": ".wapuu_card__item.selected"
+					}
+				]
+			}
+		]
+	},
+	"wapuugotchi_page_wapuugotchi-quests": {
+		"page": "admin.php?page=wapuugotchi-quests",
+		"data": [
+			{
+				"title": "Aufgaben im Überblick",
+				"text": "Hier befinden wir uns im Bereich \"Aufgaben\". Hier bekommst du einen Überblick darüber, welche Aufgaben du erledigt hast und welche noch auf dich warten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#toplevel_page_wapuugotchi",
+						"overlay": "#toplevel_page_wapuugotchi"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Auf der Übersichtsseite siehst du alle Aufgaben. Du kannst sehen, welche Aufgaben du bereits erledigt hast und welche noch offen sind. Darüber hinaus kannst du auch sehen, wie viele Perlen du für das Abschließen einer bestimmten Aufgabe bekommst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#toplevel_page_wapuugotchi",
+						"overlay": "#toplevel_page_wapuugotchi"
+					}
+				]
+			},
+			{
+				"title": "Ende!!!",
+				"text": "Weißt du was? Wir sind fertig! Ich habe dir alles erzählt, was ich weiß. Ich hoffe, ich konnte dir helfen und du hast jetzt einen guten Überblick über deine WordPress-Instanz. Viel Spaß beim erstellen deiner ersten Website!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#toplevel_page_wapuugotchi",
+						"overlay": "#toplevel_page_wapuugotchi"
+					}
+				]
+			},
+			{
+				"title": "Ende!!!",
+				"text": "Wusstest du, dass dieses Plugin ein Hobbyprojekt ist? Nur eine Hand voll Menschen entwickeln fleißig in ihrer Freizeit daran und hoffen inständig, dass dir dieses kleine Plugin gefällt! Machs gut und viel spaß mit deinem deinem neuen Freund!",
 				"targets": [
 					{
 						"active": true,

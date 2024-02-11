@@ -25,8 +25,8 @@
 				]
 			},
 			{
-				"title": "Navigation",
-				"text": "Mit Hilfe der Navigation kannst du in die verschiedenen Bereiche deiner Website springen. Lass uns mal einen tieferen Blick darauf werfen.",
+				"title": "Seitennavigation",
+				"text": "Mit Hilfe der Seitennavigation kannst du in die verschiedenen Bereiche deiner Website springen. Lass uns mal einen tieferen Blick darauf werfen.",
 				"targets": [
 					{
 						"active": true,
@@ -35,9 +35,10 @@
 					}
 				]
 			},
+
 			{
-				"title": "Die Startseite",
-				"text": "Wir befinden uns gerade auf der Startseite. Die Startseite ist die erste Seite, die du siehst, wenn du dich in deinem WordPress einloggst.",
+				"title": "Dashboard",
+				"text": "Der erste Bereich den wir uns ansehen werden ist das \"Dashboard\". Das Dashboard fasst dir die wichtigsten Informationen aus allen Bereichen deiner Website zusammen. Lass uns mal einen Blick darauf werfen.",
 				"targets": [
 					{
 						"active": true,
@@ -47,8 +48,19 @@
 				]
 			},
 			{
-				"title": "Details zur Startseite",
-				"text": "Die Startseite bietet dir eine Zusammenfassung von Informationen aus allen Bereichen deiner Website. Informiert wie neu veröffentlichte Beiträge, neue Kommentare oder Updates.",
+				"title": "Startseite",
+				"text": "Wir befinden uns gerade auf der Startseite. Die Startseite ist die erste Seite, die du siehst, wenn du dich in deinem WordPress einloggst und ist Bestandteil des Dashboards.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-dashboard .wp-submenu li a[href=\"index.php\"]",
+						"overlay": "#menu-dashboard"
+					}
+				]
+			},
+			{
+				"title": "Erklärung",
+				"text": "Die Startseite bietet dir eine Zusammenfassung von Informationen aus allen Bereichen deiner Website. Informiert wie neu veröffentlichte Beiträge, neue Kommentare und alle möglichen Statistiken.",
 				"targets": [
 					{
 						"active": true,
@@ -58,7 +70,7 @@
 				]
 			},
 			{
-				"title": "Dashboard anpassen",
+				"title": "Anpassung",
 				"text": "Du hast aber auch die Möglichkeit deine Startseite anzupassen. So kannst du beispielsweise Themenbereiche deaktivieren, die dich nicht interessieren.",
 				"freeze": 17000,
 				"targets": [
@@ -142,17 +154,6 @@
 					}
 				]
 
-			},
-			{
-				"title": "redirect",
-				"text": "Das reicht für den Anfang. Lass uns schnell weitermachen!",
-				"targets": [
-					{
-						"active": true,
-						"focus": null,
-						"overlay": null
-					}
-				]
 			}
 		]
 	},
@@ -160,19 +161,19 @@
 		"page": "update-core.php",
 		"data": [
 			{
-				"title": "Subbereich Updates",
-				"text": "Hier befinden wir uns im Bereich \"Aktualisierungen\". Dieser Bereich hilft dir, deine Website auf dem neusten Stand zu halten. ",
+				"title": "Aktualisierungen",
+				"text": "Jetzt befinden wir uns im Abschnitt \"Aktualisierungen\", der ebenfalls zum Dashboard gehört. Dieser Abschnitt hilft dir, deine Website auf dem neuesten Stand zu halten.",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#menu-dashboard",
+						"focus": "#menu-dashboard .wp-submenu li a[href=\"update-core.php\"]",
 						"overlay": "#menu-dashboard"
 					}
 				]
 			},
 			{
-				"title": "Übersicht",
-				"text": "Hier kannst du sehen, ob für deine Website Updates zur Verfügung stehen. Das beinhaltet alle Themes, Plugins und die WordPress version.",
+				"title": "Erklärung",
+				"text": "Hier kannst du sehen, ob für deine Website Updates verfügbar sind. Das beinhaltet alle Themes und Plugins, die du verwendest, aber auch die WordPress-Version selbst.",
 				"targets": [
 					{
 						"active": true,
@@ -182,7 +183,7 @@
 				]
 			},
 			{
-				"title": "Sicherheitsrisiko!",
+				"title": "Sicherheitsrisiko",
 				"text": "Halte deine Website immer schön auf dem neusten Stand! Veraltete Software kann nämlich die Sicherheit deiner Website gefährden und es Schurken ermöglichen uns anzugreifen. Darüber hinaus bringen Updates oft auch neue Funktionen mit.",
 				"targets": [
 					{
@@ -193,19 +194,8 @@
 				]
 			},
 			{
-				"title": "Du bist nicht allein!",
-				"text": "Ich weiß, dass es manchmal nicht so einfach ist alles im Auge zu behalten. Du bist jetzt aber auch nicht mehr allein! Ich helfe dir dabei! \uD83D\uDCAA",
-				"targets": [
-					{
-						"active": true,
-						"focus": "#wpcontent",
-						"overlay": "#wpcontent"
-					}
-				]
-			},
-			{
-				"title": "redirect",
-				"text": "Ich hab dir noch so viel zu erzählen. Lass uns schnell weitermachen!",
+				"title": "Schlusswort",
+				"text": "Das war es schon zum Bereich \"Dashboard\". Aber wir sind noch lange nicht am Ende der Tour. Ich möchte dir noch viel mehr zeigen. Lass uns schnell weitermachen!",
 				"targets": [
 					{
 						"active": true,
@@ -220,8 +210,8 @@
 		"page": "edit.php",
 		"data": [
 			{
-				"title": "Beiträge im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Beiträge\". In diesen Bereich sind wir über die Navigation gekommen. Hier verwaltest du deine Artikel und Blogbeiträge.",
+				"title": "Beiträge",
+				"text": "Hier befinden wir uns im Bereich \"Beiträge\". Hier erstellst, bearbeitest und verwaltest du die dynamischen Inhalte deiner Website.",
 				"targets": [
 					{
 						"active": true,
@@ -231,8 +221,19 @@
 				]
 			},
 			{
+				"title": "Alle Beiträge",
+				"text": "Der Abschnitt \"Alle Beiträge\" ermöglicht es dir, deine Beiträge zu überblicken, zu organisieren und zu verwalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-posts .wp-submenu li a[href=\"edit.php\"]",
+						"overlay": "#menu-posts"
+					}
+				]
+			},
+			{
 				"title": "Übersichtsseite",
-				"text": "Die Übersichtsseite bietet dir die Möglichkeit, deine Beiträge zu überblicken, zu organisieren und zu verwalten. Von hier aus kannst du schnell auf einzelne Beiträge zugreifen um beispielsweise Änderungen vorzunehmen.",
+				"text": "Die Übersichtsseite zeigt dir alle deine Beiträge an. Von dieser Seite aus kannst du sowohl neue Beiträge erstellen als auch schnell auf bestehende Beiträge zugreifen, um beispielsweise Änderungen vorzunehmen.",
 				"targets": [
 					{
 						"active": true,
@@ -308,7 +309,7 @@
 				]
 			},
 			{
-				"title": "Datum",
+				"title": "Schnellzugriff",
 				"text": "Wenn du den Mauszeiger über einen Betrag bewegst, erscheint ein Menü mit dem du schnell auf wichtige Funktionen zugreifen kannst. Probiers doch gleich mal aus!.",
 				"targets": [
 					{
@@ -320,7 +321,7 @@
 				]
 			},
 			{
-				"title": "Sortier- und Filteroptionen",
+				"title": "Sortieren und Filtern",
 				"text": "Du kannst deine Beiträge nach verschiedenen Kriterien sortieren, z.B. nach Datum. Es gibt auch Filteroptionen, mit denen du bestimmte Arten von Beiträgen anzeigen lassen kannst, z.B. Entwürfe.",
 				"targets": [
 					{
@@ -331,7 +332,7 @@
 				]
 			},
 			{
-				"title": "Sortier- und Filteroptionen",
+				"title": "Suchen",
 				"text": "Die Suchleiste ermöglicht es dir, nach bestimmten Beiträgen anhand von Stichwörtern oder Titeln zu suchen, was besonders hilfreich sein kann, wenn du viele Beiträge hast.",
 				"targets": [
 					{
@@ -342,24 +343,13 @@
 				]
 			},
 			{
-				"title": "Beitrag erstellen",
+				"title": "Erstellen",
 				"text": "Hinter dieser Schaltfläche befindet sich der Ort, an dem du neue Inhalte für deine Website erstellen kannst. Auf diese Seite kann ich dich leider nicht begleiten aber dort wird dir alles erklärt!",
 				"targets": [
 					{
 						"active": true,
 						"focus": ".page-title-action",
 						"overlay": ".page-title-action"
-					}
-				]
-			},
-			{
-				"title": "redirect",
-				"text": "Das war erst mal alles, was ich dir zum Thema \"Beiträge\" erzählen kann. Weiter geht`s!",
-				"targets": [
-					{
-						"active": true,
-						"focus": null,
-						"overlay": null
 					}
 				]
 			}
@@ -370,7 +360,7 @@
 		"data": [
 			{
 				"title": "Tutorial",
-				"text": "Gib einfach bescheid, wenn das Gutenberg Tutorial vorbei ist... ... zzzzZZZZZzzzzZZZZZZ",
+				"text": "Jetzt befinden wir uns im Abschnitt \"Erstellen\". Gib einfach bescheid, wenn das Gutenberg Tutorial vorbei ist. Ich werde dich dann noch ein bisschen herumführen.",
 				"targets": [
 					{
 						"active": true,
@@ -380,7 +370,7 @@
 				]
 			},
 			{
-				"title": "Gutenberg Editor",
+				"title": "Zusammenfassung",
 				"text": "Wie du durch das Tutorial vielleicht erfahren hast, kannst du in diesem Bereich die Inhalte deiner Beiträge pflegen.",
 				"targets": [
 					{
@@ -545,7 +535,7 @@
 				]
 			},
 			{
-				"title": "Die Einstellungsleiste",
+				"title": "Einstellungsleiste",
 				"text": "In der Einstellungsleiste kannst du deinen Beitrag speichern und veröffentlichen. Zudem kannst du zwischen verschiedenen Bildschirmmodi wie Desktop, Mobile und Tablet wechseln.",
 				"targets": [
 					{
@@ -557,7 +547,7 @@
 				]
 			},
 			{
-				"title": "Die Seitennavigation",
+				"title": "Seitennavigation",
 				"text": "Hier kannst du zusätzliche Informationen über deinen Blogbeitrag einsehen. Außerdem kannst du hier auch einige Einstellungen an den einzelnen Blöcken, die du hinzugefügt hast, vornehmen.",
 				"targets": [
 					{
@@ -580,8 +570,8 @@
 				]
 			},
 			{
-				"title": "Ende",
-				"text": "Der Texteditor bringt echt viele Funktionen mit und ich habe bestimmt die Hälfte vergessen zu erklären! Ich hoffe, dass ich dir zumindest einen kleinen Überblick geben konnte. Lass uns einen Blick in den nächsten Bereich werfen.",
+				"title": "Schlusswort",
+				"text": "Der Texteditor bringt echt viele Funktionen mit und ich habe bestimmt die Hälfte vergessen zu erklären! Ich hoffe, dass ich dir zumindest einen kleinen Überblick geben konnte.",
 				"targets": [
 					{
 						"active": true,
@@ -596,12 +586,12 @@
 		"page": "edit-tags.php?taxonomy=category",
 		"data": [
 			{
-				"title": "Übersicht",
-				"text": "Hier befinden wir uns im Bereich \"Kategorien\". In diesen Bereich sind wir über die Navigation gelangt. Kategorien helfen dir, deine Inhalte zu organisieren und zu strukturieren, damit Besucher deiner Website leichter relevante Informationen finden können.",
+				"title": "Kategorien",
+				"text": "Hier befinden wir uns im Abschnitt \"Kategorien\". In diesen Bereich sind wir über die Navigation gelangt. Kategorien helfen dir, deine Inhalte zu organisieren und zu strukturieren, damit Besucher deiner Website leichter relevante Informationen finden können.",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#menu-posts",
+						"focus": "#menu-posts .wp-submenu li a[href=\"edit-tags.php?taxonomy=category\"]",
 						"overlay": "#menu-posts"
 					}
 				]
@@ -641,7 +631,7 @@
 			},
 			{
 				"title": "Zusammenfassung",
-				"text": "Insgesamt bietet der \"Categories\" Bereich eine effektive Möglichkeit, die Organisation und Auffindbarkeit von Inhalten auf deiner Website zu verbessern. Bereit für den nächsten Bereich?",
+				"text": "Insgesamt bietet der Abschnitt \"Kategorien\" eine effektive Möglichkeit, die Organisation und Auffindbarkeit von Inhalten auf deiner Website zu verbessern.",
 				"targets": [
 					{
 						"active": true,
@@ -656,18 +646,18 @@
 		"page": "edit-tags.php?taxonomy=post_tag",
 		"data": [
 			{
-				"title": "Tutorial",
-				"text": "Willkommen im Bereich \"Schlagwörter\"! Wir haben diesen Bereich über die Navigation erreicht. Schlagwörter ermöglichen es dir, deine Beiträge mit zusätzlichen Schlüsselwörtern oder Phrasen zu versehen.",
+				"title": "Schlagwörter",
+				"text": "Willkommen im Abschnitt \"Schlagwörter\"! Schlagwörter ermöglichen es dir, deine Beiträge mit zusätzlichen Schlüsselwörtern oder Phrasen zu versehen.",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#menu-posts",
+						"focus": "#menu-posts .wp-submenu li a[href=\"edit-tags.php?taxonomy=post_tag\"]",
 						"overlay": "#menu-posts"
 					}
 				]
 			},
 			{
-				"title": "Zusammenfassung",
+				"title": "Differenzierung",
 				"text": "Im Gegensatz zu Kategorien, die dazu dienen, Beiträge in breite Themenbereiche zu unterteilen, bieten Schlagwörter eine feinere Granularität und ermöglichen es dir, spezifische Themen, Stichwörter oder Schlüsselbegriffe mit deinen Beiträgen zu verknüpfen.",
 				"targets": [
 					{
@@ -678,7 +668,7 @@
 				]
 			},
 			{
-				"title": "Erstellung von Schlagwörtern",
+				"title": "Erstellung",
 				"text": "Du kannst Schlagwörter erstellen, die zu den spezifischen Inhalten deiner Beiträge passen. Diese können einzelne Wörter oder kurze Phrasen sein, die die wichtigsten Konzepte oder Themen des Beitrags widerspiegeln.",
 				"targets": [
 					{
@@ -689,8 +679,19 @@
 				]
 			},
 			{
-				"title": "Schlagwörterübersicht",
+				"title": "Übersicht",
 				"text": "Auf der Übersichtsseite werden dir alle angelegten Schlagwörter dargestellt. Zudem erhältst du Informationen darüber, wie häufig deine Schlagwörter deinen Beiträgen zugeordnet sind.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#col-right",
+						"overlay": "#col-right"
+					}
+				]
+			},
+			{
+				"title": "Schlusswort",
+				"text": "Damit verlassen wir auch den Bereich \"Beiträge\". Es geht spannend weiter! Bereit für den nächsten Bereich?",
 				"targets": [
 					{
 						"active": true,
@@ -705,8 +706,8 @@
 		"page": "upload.php",
 		"data": [
 			{
-				"title": "Beiträge im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Medien\". In diesen Bereich sind wir über die Navigation gekommen. Hier verwaltest du all deine ganzen Medien.",
+				"title": "Medien",
+				"text": "Jetzt befinden wir uns im Bereich \"Medien\". Hier verwaltest du all Medien, die du in deine Beiträge oder Seiten einfügst.",
 				"targets": [
 					{
 						"active": true,
@@ -716,13 +717,13 @@
 				]
 			},
 			{
-				"title": "Einleitung",
-				"text": "Im Bereich \"Medien\" kannst du verschiedene Dateitypen wie Bilder, Videos, Audiodateien und Dokumente hochladen, organisieren und in deine Beiträge oder Seiten einfügen.",
+				"title": "Medienübersicht",
+				"text": "Der erste Abschnitt, den wir uns ansehen werden, ist die \"Medienübersicht\". Hier erhältst du eine Übersicht über alle Medien, die du bereits hochgeladen hast.",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpcontent",
-						"overlay": "#wpcontent"
+						"focus": "#menu-media .wp-submenu li a[href=\"upload.php\"]",
+						"overlay": "#menu-media"
 					}
 				]
 			},
@@ -738,7 +739,7 @@
 				]
 			},
 			{
-				"title": "Details anpassen",
+				"title": "Details",
 				"text": "Du kannst hier auch die Details deiner Medien ändern. Unter anderem kannst du den Dateinamen ändern, zusätzliche Informationen hinzufügen oder Metadaten anpassen.",
 				"targets": [
 					{
@@ -749,7 +750,7 @@
 				]
 			},
 			{
-				"title": "Filter und Suchfunktion",
+				"title": "Filtern und Suche",
 				"text": "Du kannst auch Filter- und Suchfunktionen nutzen, um bestimmte Medien schnell zu finden.",
 				"targets": [
 					{
@@ -760,13 +761,40 @@
 				]
 			},
 			{
-				"title": "Medien hochladen",
+				"title": "Hochladen",
 				"text": "Hier kannst du neue Medien in deine Medienbibliothek hochladen. Nachdem du die Schaltfläche geklickt hast kannst du die Medien ganz einfach via Drag-and-Drop einfügen.",
 				"targets": [
 					{
 						"active": true,
 						"focus": "a.page-title-action",
 						"overlay": "a.page-title-action"
+					}
+				]
+			}
+		]
+	},
+	"media": {
+		"page": "media-new.php",
+		"data": [
+			{
+				"title": "Neu hinzufügen",
+				"text": "Der Abschnitt \"Neu hinzufügen\" ermöglicht es dir, neue Medien wie Bilder, Videos oder Audiodateien in deine Medienbibliothek hochzuladen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-media .wp-submenu li a[href=\"media-new.php\"]",
+						"overlay": "#menu-media"
+					}
+				]
+			},
+			{
+				"title": "Drag-and-Drop",
+				"text": "Deine Mediendateien kannst du ganz einfach per Drag-and-Drop in den Bereich ziehen oder du klickst auf die Schaltfläche, um deine Dateien auszuwählen. Anschließend ist das neue Medium sofort in deiner Medienbibliothek verfügbar.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
 					}
 				]
 			},
@@ -783,7 +811,7 @@
 			},
 			{
 				"title": "redirect",
-				"text": "Jetzt habe ich dir alles erzählt, was ich über die Medienbibliothek weiß. Auf zum nächsten Bereich!",
+				"text": "Jetzt sind wir auch schon mit dem Bereich \"Medien\" fertig. Schnell ein Käffchen und dann geht's weiter!",
 				"targets": [
 					{
 						"active": true,
@@ -799,7 +827,7 @@
 		"data": [
 			{
 				"title": "Seiten im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Seiten\". In diesen Bereich sind wir über die Navigation gekommen. Hier verwaltest du deine statischen Inhalte.",
+				"text": "Jetzt befinden wir uns im Bereich \"Seiten\". Hier verwaltest du deine statischen Inhalte.",
 				"targets": [
 					{
 						"active": true,
@@ -809,13 +837,24 @@
 				]
 			},
 			{
-				"title": "Seiten",
-				"text": "Dieser Bereich ist für die statischen Inhalte deiner Website verantwortlich. Im Gegensatz zu \"Beiträgen\" sind \"Seiten\" eher dauerhafte Inhalte wie beispielsweise Über-uns-Seiten oder Kontaktseiten.",
+				"title": "Alle Seiten",
+				"text": "Der Abschnitt \"Alle Seiten\" ermöglicht es dir, deine Seiten zu überblicken, zu organisieren und zu verwalten.",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpcontent",
-						"overlay": "#wpcontent"
+						"focus": "#menu-pages .wp-submenu li a[href=\"edit.php?post_type=page\"]",
+						"overlay": "#menu-pages"
+					}
+				]
+			},
+			{
+				"title": "Seiten",
+				"text": "Wie bereits erwähnt, handelt es sich bei \"Seiten\" um statische Inhalte. Im Gegensatz zu \"Beiträgen\" sind \"Seiten\" eher dauerhafte Inhalte wie beispielsweise Über-uns-Seiten oder Kontaktseiten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpbody-content",
+						"overlay": "#wpbody-content"
 					}
 				]
 			},
@@ -876,7 +915,7 @@
 				]
 			},
 			{
-				"title": "Sortier- und Filteroptionen",
+				"title": "Sortieren und Filtern",
 				"text": "Du kannst deine Seiten nach verschiedenen Kriterien sortieren, z.B. nach Datum. Es gibt auch Filteroptionen, mit denen du bestimmte Arten von Seiten anzeigen lassen kannst, z.B. Entwürfe.",
 				"targets": [
 					{
@@ -887,7 +926,7 @@
 				]
 			},
 			{
-				"title": "Sortier- und Filteroptionen",
+				"title": "Suchen",
 				"text": "Die Suchleiste ermöglicht es dir, nach bestimmten Seiten zu suchen, was besonders hilfreich sein kann, wenn du viele Seiten hast.",
 				"targets": [
 					{
@@ -898,7 +937,7 @@
 				]
 			},
 			{
-				"title": "Seite erstellen",
+				"title": "Erstellen",
 				"text": "Hinter dieser Schaltfläche befindet sich der Ort, an dem du neue statische Inhalte für deine Website erstellen kannst. Auf diese Seite kann ich dich leider nicht begleiten aber dort wird dir alles erklärt!",
 				"targets": [
 					{
@@ -909,7 +948,7 @@
 				]
 			},
 			{
-				"title": "redirect",
+				"title": "Schlusswort",
 				"text": "Ist dir aufgefallen, dass ich dir fast das gleiche beim Bereich \"Beiträge\" erzählt habe? Naja, das liegt daran, dass die Bereiche ziemlich identisch sind!",
 				"targets": [
 					{
@@ -926,7 +965,7 @@
 		"data": [
 			{
 				"title": "Tutorial",
-				"text": "Gib einfach bescheid, wenn das Gutenberg Tutorial vorbei ist... ... zzzzZZZZZzzzzZZZZZZ",
+				"text": "Jetzt befinden wir uns im Abschnitt \"Erstellen\". Gib einfach bescheid, wenn das Gutenberg Tutorial vorbei ist. Ich werde dich dann noch ein bisschen herumführen.",
 				"targets": [
 					{
 						"active": true,
@@ -1153,7 +1192,7 @@
 		"data": [
 			{
 				"title": "Kommentare",
-				"text": "Jetzt befinden wir uns im Bereich \"Kommentare\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du die Kommentare verwalten, die du erhältst.",
+				"text": "Jetzt befinden wir uns im Bereich \"Kommentare\". Hier kannst du die Kommentare verwalten, die du erhältst.",
 				"targets": [
 					{
 						"active": true,
@@ -1280,7 +1319,7 @@
 		"data": [
 			{
 				"title": "Design im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Design\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du das Erscheinungsbild und die visuelle Darstellung deiner Website verwalten.",
+				"text": "Jetzt befinden wir uns im Bereich \"Design\". Hier kannst du das Erscheinungsbild und die visuelle Darstellung deiner Website verwalten.",
 				"targets": [
 					{
 						"active": true,
@@ -1419,7 +1458,7 @@
 		"data": [
 			{
 				"title": "Beiträge im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Plugins\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du neue Plugins suchen, installieren und aktivieren",
+				"text": "Jetzt befinden wir uns im Bereich \"Plugins\". Hier kannst du neue Plugins suchen, installieren und aktivieren",
 				"targets": [
 					{
 						"active": true,
@@ -1502,7 +1541,7 @@
 		"data": [
 			{
 				"title": "Einleitung",
-				"text": "Jetzt befinden wir uns im Bereich \"Plugins hinzufügen\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du neue Plugins suchen, installieren und aktivieren",
+				"text": "Jetzt befinden wir uns im Bereich \"Plugins hinzufügen\". Hier kannst du neue Plugins suchen, installieren und aktivieren",
 				"targets": [
 					{
 						"active": true,
@@ -1540,7 +1579,7 @@
 		"data": [
 			{
 				"title": "Einleitung",
-				"text": "Jetzt befinden wir uns im Bereich \"Benutzer\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du die Benutzer deiner Website verwalten.",
+				"text": "Jetzt befinden wir uns im Bereich \"Benutzer\". Hier kannst du die Benutzer deiner Website verwalten.",
 				"targets": [
 					{
 						"active": true,
@@ -1655,7 +1694,7 @@
 		"data": [
 			{
 				"title": "Einleitung",
-				"text": "Jetzt befinden wir uns im Bereich \"Benutzer hinzufügen\". In diesen Bereich sind wir über die Navigation gekommen. Hier kannst du Benutzer hinzufügen und ihre Rollen verwalten.",
+				"text": "Jetzt befinden wir uns im Bereich \"Benutzer hinzufügen\". Hier kannst du Benutzer hinzufügen und ihre Rollen verwalten.",
 				"targets": [
 					{
 						"active": true,

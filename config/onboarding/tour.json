@@ -662,8 +662,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			},
@@ -793,8 +793,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			},
@@ -853,8 +853,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			},
@@ -1318,7 +1318,7 @@
 		"page": "themes.php",
 		"data": [
 			{
-				"title": "Design im Überblick",
+				"title": "Design",
 				"text": "Jetzt befinden wir uns im Bereich \"Design\". Hier kannst du das Erscheinungsbild und die visuelle Darstellung deiner Website verwalten.",
 				"targets": [
 					{
@@ -1329,8 +1329,30 @@
 				]
 			},
 			{
-				"title": "Aktives Themes",
-				"text": "Das aktive Theme ist das Theme, das aktuell auf deiner Website verwendet wird. Es ist das Design, das Besucher sehen, wenn sie deine Seite besuchen.",
+				"title": "Themes",
+				"text": "Der Abschnitt \"Themes\" ermöglicht es dir, das Design deiner Website zu ändern.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-appearance .wp-submenu li a[href=\"themes.php\"]",
+						"overlay": "#menu-appearance"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Auf der Übersichtsseite findest du eine Liste aller installierten Themes. Hier kannst du auch das aktive Theme sehen, das aktuell auf deiner Website verwendet wird.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Aktive Themes",
+				"text": "Hier siehst du das aktive Theme. Dieses Theme bestimmt das Design deiner Website. Das ist dann auch das Design, das deine Besucher im Moment sehen, wenn sie deine Website besuchen.",
 				"targets": [
 					{
 						"active": true,
@@ -1341,8 +1363,8 @@
 				]
 			},
 			{
-				"title": "Inaktive Themes",
-				"text": "Es gibt aber auch Themes die zwar installiert aber nicht aktiv sind. Du kannst zwischen ihnen wechseln, indem du ein inaktives Theme aktivierst, was dann das Design deiner Website ändern würde.",
+				"title": "Inaktiv Themes",
+				"text": "Es gibt aber auch Themes die zwar installiert aber nicht aktiv sind. Du kannst zwischen ihnen wechseln, indem du ein inaktives Theme aktivierst, was dann das Design deiner Website entsprechend ändern würde.",
 				"targets": [
 					{
 						"active": true,
@@ -1353,7 +1375,7 @@
 				]
 			},
 			{
-				"title": "Theme suchen",
+				"title": "Suchen",
 				"text": "Mit dieser Suchfunktion kannst du nach einem bestimmten, bereits installierten Themes suchen.",
 				"targets": [
 					{
@@ -1364,7 +1386,7 @@
 				]
 			},
 			{
-				"title": "redirect",
+				"title": "Installieren",
 				"text": "Du kannst natürlich auch neue Themes installieren. Lass uns mal einen Blick reinwerfen.",
 				"targets": [
 					{
@@ -1380,19 +1402,19 @@
 		"page": "theme-install.php?browse=popular",
 		"data": [
 			{
-				"title": "Design im Überblick",
-				"text": "Ja es klingt verrückt... aber im Bereich \"Themes hinzufügen\" kannst du neue Themes hinzufügen! \uD83D\uDE05",
+				"title": "Hinzufügen",
+				"text": "Es klingt vielleicht verrückt... aber im Abschnitt \"Themes hinzufügen\" kannst du neue Themes hinzufügen! \uD83D\uDE05",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#menu-appearance",
-						"overlay": "#menu-appearance"
+						"focus": null,
+						"overlay": null
 					}
 				]
 			},
 			{
-				"title": "Echt viele Themes",
-				"text": "Wenn du diesen Bereich betrittst wird dir eine Auswahl der beliebtesten Themes angezeigt. Das ist sehr nützlich, weil dir hier mehrere tausend Themes zur Auswahl stehen.",
+				"title": "Info",
+				"text": "Wenn du diesen Abschnitt betrittst wird dir eine Auswahl der beliebtesten Themes angezeigt. Das ist sehr nützlich, weil dir hier mehr als 10.000 Themes zur Auswahl stehen.",
 				"targets": [
 					{
 						"active": true,
@@ -1402,7 +1424,7 @@
 				]
 			},
 			{
-				"title": "redirect",
+				"title": "Filter",
 				"text": "Natürlich hast du auch die Möglichkeit nach anderen Kategorien zu filtern oder ein ganz bestimmte Theme zu suchen.",
 				"targets": [
 					{
@@ -1423,17 +1445,6 @@
 						"hover": true
 					}
 				]
-			},
-			{
-				"title": "redirect",
-				"text": "Oh... schon so spät?! Lass uns schnell zum nächsten Bereich springen! \uD83D\uDE28",
-				"targets": [
-					{
-						"active": true,
-						"focus": null,
-						"overlay": null
-					}
-				]
 			}
 		]
 	},
@@ -1446,8 +1457,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#site-editor",
-						"overlay": "#site-editor"
+						"focus": null,
+						"overlay": null
 					}
 				]
 			}
@@ -1468,8 +1479,19 @@
 				]
 			},
 			{
-				"title": "Installieren von Plugins",
-				"text": "Plugins erweitern den Funktionsumfang deiner WordPress Instanz. Das können Dinge wie Kontaktformulare, Galerien, Slideshows, SEO-Tools, Sicherheitsfunktionen und mehr sein.",
+				"title": "Installierte Plugins",
+				"text": "Der Abschnitt \"Installierte Plugins\" ermöglicht es dir, die Plugins zu verwalten, die du bereits installiert hast.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-plugins .wp-submenu li a[href=\"plugins.php\"]",
+						"overlay": "#menu-plugins"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Plugins erweitern den Funktionsumfang deiner WordPress Instanz. Das können Dinge wie Kontaktformulare, Galerien, Slideshows, SEO-Tools, Sicherheitsfunktionen und vieles mehr sein.",
 				"targets": [
 					{
 						"active": true,
@@ -1541,18 +1563,18 @@
 		"data": [
 			{
 				"title": "Einleitung",
-				"text": "Jetzt befinden wir uns im Bereich \"Plugins hinzufügen\". Hier kannst du neue Plugins suchen, installieren und aktivieren",
+				"text": "Jetzt befinden wir uns im Abschnitt \"Installieren\". Hier kannst du neue Plugins suchen, installieren und aktivieren.",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#menu-plugins",
+						"focus": "#menu-plugins .wp-submenu li a[href=\"plugin-install.php\"]",
 						"overlay": "#menu-plugins"
 					}
 				]
 			},
 			{
-				"title": "Beiträge im Überblick",
-				"text": "Dieser Bereich ermöglicht es dir Plugins in der WordPress Bibliothek zu suchen und zu installieren. Es gibt tausende von Plugins, die dir Beispielweise dabei helfen können, Kontaktformulare zu erstellen, SEO-Tools zu nutzen oder die Sicherheit deiner Website zu verbessern.",
+				"title": "Übersicht",
+				"text": "Plugins erweitern den Funktionsumfang deiner WordPress Instanz erheblich. Die richtigen Plugins zu verwenden kann für den Erfolg deiner Website entscheidend sein. Im Internet findest du viele Artikel, die dir dabei helfen, die besten Plugins für deine Bedürfnisse zu finden.",
 				"targets": [
 					{
 						"active": true,
@@ -1562,8 +1584,19 @@
 				]
 			},
 			{
+				"title": "Übersicht",
+				"text": "Gleich nachdem du diesen Abschnitt betrittst, wird dir bereits eine Auswahl an Plugins vorgestellt. Das ist sehr nützlich, weil dir hier mehr als 60.000 Plugins zur Auswahl stehen. Auch das kann dir dabei helfen, die passenden Plugins zu finden.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#the-list",
+						"overlay": "#the-list"
+					}
+				]
+			},
+			{
 				"title": "Navigation",
-				"text": "Du kannst hier auch die beliebtesten, neuesten und empfohlenen Plugins durchstöbern. Das wird dir helfen, das passende Plugin für deine Bedürfnisse zu finden, denn wir reden hier über mehr als 60.000 von Plugins!",
+				"text": "Du kannst hier auch nach den beliebtesten, neuesten und empfohlenen Plugins filtern. So kannst du dich beispielsweise an den Favoriten der anderer WordPress Nutzer orientieren.",
 				"targets": [
 					{
 						"active": true,
@@ -1589,68 +1622,47 @@
 				]
 			},
 			{
-				"title": "Benutzer-Übersicht",
-				"text": "\uD83D\uDEA7",
+				"title": "Alle Benutzer",
+				"text": "Im Abschnitt \"Alle Benutzer\" kannst du alle Benutzer deiner Website sehen und verwalten.",
 				"targets": [
 					{
 						"active": true,
-						"focus": "table.wp-list-table.users",
-						"overlay": "table.wp-list-table.users"
+						"focus": "#menu-users .wp-submenu li a[href=\"users.php\"]",
+						"overlay": "#menu-users"
 					}
 				]
 			},
 			{
-				"title": "Ein Benutzer",
-				"text": "\uD83D\uDEA7 Lass uns kurz über die wichtigsten Informationen sprechen, die du hier siehst. Der Benutzername, die E-Mail-Adresse, die Rolle und die Anzahl der veröffentlichten Beiträge.",
+				"title": "Übersicht",
+				"text": "Auf der Übersichtsseite findest du eine Liste aller Benutzer, die auf deiner Website registriert sind.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Benutzer",
+				"text": "Die einzelnen Benutzer werden in einer Tabelle dargestellt. Abgesehen vom Benutzernamen, kannst du hier auch die E-Mail-Adresse und die Rolle des Benutzers sehen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "table",
+						"overlay": "table"
+					}
+				]
+			},
+			{
+				"title": "Benutzer",
+				"text": "Wenn du mit dem Mauszeiger über einen Benutzer fährst, erscheint ein Menü. Hier kannst du beispielsweise den Benutzer bearbeiten oder löschen. Probier es mal aus!",
 				"targets": [
 					{
 						"active": true,
 						"focus": "table #the-list tr",
-						"overlay": "table #the-list tr"
-					}
-				]
-			},
-			{
-				"title": "Username",
-				"text": "\uD83D\uDEA7",
-				"targets": [
-					{
-						"active": true,
-						"focus": "td.column-username",
-						"overlay": "td.column-username"
-					}
-				]
-			},
-			{
-				"title": "Email",
-				"text": "\uD83D\uDEA7",
-				"targets": [
-					{
-						"active": true,
-						"focus": "td.column-email",
-						"overlay": "td.column-email"
-					}
-				]
-			},
-			{
-				"title": "Rolle",
-				"text": "\uD83D\uDEA7",
-				"targets": [
-					{
-						"active": true,
-						"focus": "td.column-role",
-						"overlay": "td.column-role"
-					}
-				]
-			},
-			{
-				"title": "Posts",
-				"text": "\uD83D\uDEA7",
-				"targets": [
-					{
-						"active": true,
-						"focus": "td.column-posts",
-						"overlay": "td.column-posts"
+						"overlay": "table #the-list tr",
+						"hover": true
 					}
 				]
 			},
@@ -1678,7 +1690,7 @@
 			},
 			{
 				"title": "Neuen Benutzer hinzufügen",
-				"text": "Hier kannst du neue Benutzer hinzufügen. Lass uns mal einen Blick reinwerfen. Bereit?",
+				"text": "Hier kannst du neue Benutzer hinzufügen. Komm, wir schauen uns das mal an!",
 				"targets": [
 					{
 						"active": true,
@@ -1694,7 +1706,7 @@
 		"data": [
 			{
 				"title": "Einleitung",
-				"text": "Jetzt befinden wir uns im Bereich \"Benutzer hinzufügen\". Hier kannst du Benutzer hinzufügen und ihre Rollen verwalten.",
+				"text": "Jetzt befinden wir uns im Abschnitt \"Neuen Benutzer hinzufügen\". Hier kannst du Benutzer hinzufügen und ihre Rollen verwalten.",
 				"targets": [
 					{
 						"active": true,
@@ -1709,8 +1721,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			},
@@ -1735,17 +1747,6 @@
 						"overlay": "#role"
 					}
 				]
-			},
-			{
-				"title": "Ende",
-				"text": "Lass uns mal einen Blick in den nächsten Bereich werfen.",
-				"targets": [
-					{
-						"active": true,
-						"focus": null,
-						"overlay": null
-					}
-				]
 			}
 		]
 	},
@@ -1762,6 +1763,28 @@
 						"overlay": "#menu-users"
 					}
 				]
+			},
+			{
+				"title": "Schlusswort",
+				"text": "Und damit sind wir schon mit dem nächsten Bereich durch. Benutzer bringen Leben in deine Website, bürgen aber auch ein gewisses Risiko. Sei also vorsichtig, wem du welche Rechte gibst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Tip",
+				"text": "Ein letzter Tip noch: Es gibt Plugins, die eine Zwei-Faktor-Authentifizierung ermöglichen. Das ist eine zusätzliche Sicherheitsmaßnahme, die ich dir nur empfehlen kann.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
 			}
 		]
 	},
@@ -1769,7 +1792,7 @@
 		"page": "tools.php",
 		"data": [
 			{
-				"title": "Tools im Überblick",
+				"title": "Werkzeuge",
 				"text": "Jetzt befinden wir uns im Bereich \"Werkzeuge\". Dieser Bereich stellt insbesondere dem Administrator zusätzliche Funktionen und Ressourcen zur verfügung. Lass uns kurz reinschauen.",
 				"targets": [
 					{
@@ -1780,13 +1803,24 @@
 				]
 			},
 			{
-				"title": "Verfügbare Tools",
-				"text": "Dies ist die Übersichtsseite für die verfügbaren Tools. Hier findest du Tools, die dir bei der Verwaltung deiner Website helfen können. Einige Tools sind nur für Administratoren verfügbar. Die Tools variieren auch je nach installierten Plugins und WordPress Version.",
+				"title": "Verfügbare Werkzeuge",
+				"text": "Das ist der Abschnitt \"Verfügbare Werkzeuge\". Hier findest du eine Liste von Werkzeugen, die dir bei der Verwaltung deiner Website helfen können.",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#menu-tools .wp-submenu li a[href=\"tools.php\"]",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Verfügbare Werkzeuge",
+				"text": "Dies ist die Übersichtsseite für die verfügbaren Werkzeuge. Hier kannst du die verfügbaren Werkzeuge sehen und verwalten. Sie variieren je nach installierten Plugins und WordPress Version.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			}
@@ -1797,12 +1831,56 @@
 		"data": [
 			{
 				"title": "Import",
-				"text": "Dieser Abschnitt ermöglicht es Benutzern, Inhalte von anderen Websites oder anderen WordPress-Installationen zu importieren. Das ist nützlich, wenn Benutzer ihre Website migrieren oder Inhalte zwischen verschiedenen WordPress-Installationen teilen möchten.",
+				"text": "Dieser Abschnitt \"Import\" ermöglicht es dir, Inhalte von anderen Websites oder anderen WordPress-Installationen zu importieren.",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#menu-tools",
+						"focus": "#menu-tools .wp-submenu li a[href=\"import.php\"]",
 						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Nutzen",
+				"text": "Das Importieren von Inhalten ist nützlich, wenn du beispielsweise Inhalte von einer anderen Website hierher übertragen möchtest oder ein Backup deiner Website wiederherstellen willst",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Die Übersichtsseite zeigt dir eine Liste von Werkzeugen, die dir beim Importieren von Inhalten helfen können. Sie variieren je nach installierten Plugins und WordPress Version.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "table.importers",
+						"overlay": "table.importers"
+					}
+				]
+			},
+			{
+				"title": "Tip 1",
+				"text": "Achte unbedingt darauf, dass du ausschließlich deine eigenen Backups wiederherstellst, da unbekannte Quellen möglicherweise schädlichen Code enthalten können.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Tip 2",
+				"text": "Außerdem können Backups persönliche Daten enthalten, und das Importieren von Backups unbekannter Herkunft kann gegen Datenschutzrichtlinien verstoßen. Dies könnte zu rechtlichen Problemen führen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
 					}
 				]
 			}
@@ -1813,13 +1891,56 @@
 		"data": [
 			{
 				"title": "Export",
-				"text": "Hier kannst du Inhalte deiner Website exportieren. Das ist nützlich, wenn du deine Website migrieren oder Inhalte zwischen verschiedenen WordPress-Installationen teilen möchtest.",
+				"text": "Im Abschnitt \"Export\" kannst du ausgewählte Inhalte deiner Website exportieren. Dieser Abschnitt ist das Gegenstück zum Importieren von Inhalten.",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#menu-tools",
+						"focus": "#menu-tools .wp-submenu li a[href=\"export.php\"]",
 						"overlay": "#menu-tools"
 					}
+				]
+			},
+			{
+				"title": "Nutzen",
+				"text": "Das Exportieren von Inhalten ist nützlich, wenn du beispielsweise Inhalte von deiner Website auf eine andere Website übertragen möchtest oder ein Backup deiner Website erstellen willst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier hast du die Möglichkeit, Inhalte deiner Website zu exportieren. Du musst aber nicht die gesamte Website exportieren, sondern kannst auch nur bestimmte Inhalte auswählen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#export-filters",
+						"overlay": "#export-filters"
+					}
+				]
+			},
+			{
+				"title": "Tip 1",
+				"text": "Beachte bitte, dass ein Export auch persönliche Daten oder urheberrechtlich geschützte Inhalte enthalten kann. Daher solltest du vorsichtig sein, wem du dein Export zur Verfügung stellst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Tip 2",
+				"text": "Darüber hinaus solltest du auch darauf achten, dass ein Export echt groß werden kann. Das ärgerlich werden, wenn der Speicher in deinem Workspace stark limitiert ist.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null					}
 				]
 			}
 		]
@@ -1829,7 +1950,67 @@
 		"data": [
 			{
 				"title": "Seitenzustand",
-				"text": "Der Bereich \"Seitenzustand\" bietet dir eine Übersicht über den Zustand deiner Website. Hier kannst du sehen, ob alles in Ordnung ist oder ob es Probleme gibt, die behoben werden müssen.",
+				"text": "Im Abschnitt \"Seitenzustand\" kannst du sehen, wie es um die Gesundheit deiner Website bestellt ist.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a[href=\"site-health.php\"]",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Status",
+				"text": "Hier siehst du bereits auf den ersten Blick, wie es um die Leiustung und Sicherheit deiner Website bestellt ist. Hier kannst du auch sehen, ob es Probleme gibt, die behoben werden müssen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Bericht",
+				"text": "Wenn du auf den Reiter \"Bericht\" klickst, erhältst du eine detaillierte Übersicht über die technischen Aspekte deiner Website. Schau doch einfach mal rein, wenn du dich komplett verwirren lassen möchtest!",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".health-check-tabs-wrapper a:not(.active)",
+						"overlay": ".health-check-tabs-wrapper a:not(.active)"
+					}
+				]
+			}
+		]
+	},
+	"export-personal-data": {
+		"page": "export-personal-data.php",
+		"data": [
+			{
+				"title": "Persönliche Daten exportieren",
+				"text": "Als nächstes schauen wir uns den Abschnitt \"Persönliche Daten exportieren\" an. Hier kannst du die persönlichen Daten deiner Benutzer exportieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a[href=\"export-personal-data.php\"]",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier hast du die Möglichkeit, die persönlichen Daten eines bestimmten Benutzers zu exportieren. Das ist nützlich, wenn ein Benutzer seine Daten mitnehmen möchte, beispielsweise wenn er die Website wechselt.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Tip 1",
+				"text": "Achte darauf, dass du die Daten nur an den Benutzer weitergibst, dem sie gehören. Das ist wichtig, um Datenschutzrichtlinien einzuhalten und damit rechtliche Probleme zu vermeiden.",
 				"targets": [
 					{
 						"active": true,
@@ -1840,17 +2021,115 @@
 			}
 		]
 	},
-	"export-personal-data": {
-		"page": "export-personal-data.php",
+	"erase-personal-data": {
+		"page": "erase-personal-data.php",
 		"data": [
 			{
-				"title": "Export",
-				"text": "Unter Umständen kann es notwendig sein, personenbezogene Daten für Benutzeranfragen oder Datenschutzanforderungen zu exportieren. Dieses Tool ermöglicht das Exportieren von persönlichen Daten, die von Besuchern der Website gesammelt wurden.",
+				"title": "Persönliche Daten löschen",
+				"text": "Was kann man in dem Abschnitt \"Persönliche Daten löschen\" machen? Richtig! Hier kannst du die persönlichen Daten deiner Benutzer löschen. Das war zu einfach, oder?",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#menu-tools",
+						"focus": "#menu-tools .wp-submenu li a[href=\"erase-personal-data.php\"]",
 						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Im Grunde ist die Seite genau so aufgebaut wie die Seite zum Exportieren von persönlichen Daten. Hier hast du die Möglichkeit, die persönlichen Daten eines bestimmten Benutzers zu löschen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Nutzen",
+				"text": "Es kann sein, dass ein Benutzer möchte, dass seine Daten gelöscht werden. Das kann beispielsweise der Fall sein, wenn er die Website wechselt oder aus anderen Gründen nicht mehr möchte, dass seine Daten auf deiner Website gespeichert sind.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"theme-editor": {
+		"page": "theme-editor.php",
+		"data": [
+			{
+				"title": "Themes bearbeiten",
+				"text": "Der Abschnitt \"Themes bearbeiten\" ermöglicht es dir, die Dateien deines Themes zu bearbeiten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a[href=\"theme-editor.php\"]",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier kannst du direkt in den Dateien deines Themes Änderungen vornehmen. Wenn du dich in diesem Abschnitt aufhältst, solltest du über Programmierkenntnisse verfügen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Warnung",
+				"text": "Achtung! Das Bearbeiten von Dateien kann deine Website beschädigen. Wenn du nicht genau weißt, was du tust, solltest du das besser lassen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"plugin-editor": {
+		"page": "plugin-editor.php",
+		"data": [
+			{
+				"title": "Plugins bearbeiten",
+				"text": "Dieser Bereich ermöglicht es dir, die Dateien deiner Plugins zu bearbeiten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a[href=\"plugin-editor.php\"]",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier gilt das gleiche wie beim Bearbeiten von Themes. Du kannst in diesem Abschnitt direkt in den Dateien deines Plugins Änderungen vornehmen. Wenn du dich in diesem Abschnitt aufhältst, solltest du über Programmierkenntnisse verfügen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Warnung",
+				"text": "Achtung! Das Bearbeiten von Dateien kann deine Website beschädigen. Wenn du nicht genau weißt, was du tust, solltest du das besser lassen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
 					}
 				]
 			}
@@ -1875,8 +2154,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			}
@@ -1891,8 +2170,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			}
@@ -1907,8 +2186,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			}
@@ -1923,8 +2202,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			}
@@ -1939,8 +2218,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			}
@@ -1955,8 +2234,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			}
@@ -1971,8 +2250,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#wpbody-content",
-						"overlay": "#wpbody-content"
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
 					}
 				]
 			}

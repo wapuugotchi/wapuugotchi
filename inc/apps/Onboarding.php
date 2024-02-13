@@ -117,22 +117,24 @@ class Onboarding {
 	 * Disable welcome guides in Gutenberg.
 	 */
 	public function my_disable_welcome_guides() {
-		wp_add_inline_script(
-			'wp-data',
-			"window.onload = function() {
-			const selectPost = wp.data.select( 'core/edit-post' );
-			const selectPreferences = wp.data.select( 'core/preferences' );
-			const isWelcomeGuidePost = selectPost.isFeatureActive( 'welcomeGuide' );
-			const isWelcomeGuideWidget = selectPreferences.get( 'core/edit-widgets', 'welcomeGuide' );
+		wp_add_inline_script( 'wp-data', "window.onload = function() {
+		const selectPost = wp.data.select( 'core/edit-post' );
+		const selectPreferences = wp.data.select( 'core/preferences' );
+		const isFullscreenMode = selectPost.isFeatureActive( 'fullscreenMode' );
+		const isWelcomeGuidePost = selectPost.isFeatureActive( 'welcomeGuide' );
+		const isWelcomeGuideWidget = selectPreferences.get( 'core/edit-widgets', 'welcomeGuide' );
 
-			if ( !isWelcomeGuideWidget ) {
-				wp.data.dispatch( 'core/preferences' ).toggle( 'core/edit-widgets', 'welcomeGuide' );
-			}
+		if ( !isWelcomeGuideWidget ) {
+			wp.data.dispatch( 'core/preferences' ).toggle( 'core/edit-widgets', 'welcomeGuide' );
+		}
 
-			if ( !isWelcomeGuidePost ) {
-				wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'welcomeGuide' );
-			}
-		}"
-		);
+		if ( isFullscreenMode ) {
+			wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' );
+		}
+
+		if ( !isWelcomeGuidePost ) {
+			wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'welcomeGuide' );
+		}
+	}" );
 	}
 }

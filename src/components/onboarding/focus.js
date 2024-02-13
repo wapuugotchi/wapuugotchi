@@ -23,7 +23,7 @@ export default function Focus() {
 				'.wapuugotchi_onboarding__focus'
 			);
 			const focusElement = document.querySelector( item.focus );
-			focus.style.clipPath = getClipPath( focusElement );
+			focus.style.clipPath = getClipPathFocus( focusElement );
 			focus.style.backgroundColor = item.color ?? '#ffcc00';
 
 			const overlay = document.querySelector(
@@ -87,10 +87,19 @@ export default function Focus() {
 	};
 
 	const getClipPathOverlay = ( target ) => {
-		const targetRect = target?.getBoundingClientRect();
+		let targetRect = target?.getBoundingClientRect();
+
+		// if target is not found, use defaults
 		if ( targetRect instanceof DOMRect === false ) {
-			return `polygon(0 0, 0 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 0 100%, 100% 100%, 100% 0)`;
+			const defaultRect = document?.querySelector('#Onboarding--group')?.getBoundingClientRect();
+			if ( defaultRect instanceof DOMRect === true ) {
+				targetRect = defaultRect;
+			} else {
+				return `polygon(0 0, 0 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 0)`;
+
+			}
 		}
+
 		return `polygon(
 			0 0,
 			0 100%,
@@ -106,11 +115,20 @@ export default function Focus() {
 			100% 0
 		)`;
 	};
-	const getClipPath = ( target, borderSizeMore = 2 ) => {
-		const targetRect = target?.getBoundingClientRect();
+	const getClipPathFocus = ( target, borderSizeMore = 2 ) => {
+		let targetRect = target?.getBoundingClientRect();
+
+		// if target is not found, use defaults
 		if ( targetRect instanceof DOMRect === false ) {
-			return `polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0)`;
+			const defaultRect = document?.querySelector('#Onboarding--group')?.getBoundingClientRect();
+			if ( defaultRect instanceof DOMRect === true ) {
+				targetRect = defaultRect;
+			} else {
+				return `polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0)`;
+
+			}
 		}
+
 		// set new position
 		return `polygon(
 			${ targetRect.left }px ${ targetRect.top }px,

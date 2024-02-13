@@ -1814,7 +1814,7 @@
 				]
 			},
 			{
-				"title": "Verfügbare Werkzeuge",
+				"title": "Übersicht",
 				"text": "Dies ist die Übersichtsseite für die verfügbaren Werkzeuge. Hier kannst du die verfügbaren Werkzeuge sehen und verwalten. Sie variieren je nach installierten Plugins und WordPress Version.",
 				"targets": [
 					{
@@ -1988,7 +1988,7 @@
 		"data": [
 			{
 				"title": "Persönliche Daten exportieren",
-				"text": "Als nächstes schauen wir uns den Abschnitt \"Persönliche Daten exportieren\" an. Hier kannst du die persönlichen Daten deiner Benutzer exportieren.",
+				"text": "Als nächstes schauen wir uns den Abschnitt \"Persönliche Daten exportieren\" an. Hier kannst du gezielt die persönlichen Daten deiner Benutzer exportieren.",
 				"targets": [
 					{
 						"active": true,
@@ -2014,8 +2014,8 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#menu-tools",
-						"overlay": "#menu-tools"
+						"focus": null,
+						"overlay": null
 					}
 				]
 			}
@@ -2026,7 +2026,7 @@
 		"data": [
 			{
 				"title": "Persönliche Daten löschen",
-				"text": "Was kann man in dem Abschnitt \"Persönliche Daten löschen\" machen? Richtig! Hier kannst du die persönlichen Daten deiner Benutzer löschen. Das war zu einfach, oder?",
+				"text": "Du wirst es bereits vermuten: Im Abschnitt \"Persönliche Daten löschen\" kannst du die persönlichen Daten eines Benutzers löschen. Lass uns trotzdem mal reinschauen.",
 				"targets": [
 					{
 						"active": true,
@@ -2139,8 +2139,8 @@
 		"page": "options-general.php",
 		"data": [
 			{
-				"title": "Beiträge im Überblick",
-				"text": "Jetzt befinden wir uns im Bereich \"Einstellungen\" und sind damit tatsächlich auf der zielgeraden. Ich gebe dir kurz alle wichtigen Infos über die hier aufgeführten Bereiche im Schnelldurchlauf.",
+				"title": "Einstellungen",
+				"text": "Der Bereich \"Einstellungen\" kannst du die allgemeinen Einstellungen deiner Website festlegen.",
 				"targets": [
 					{
 						"active": true,
@@ -2148,9 +2148,21 @@
 						"overlay": "#menu-settings"
 					}
 				]
-			},			{
-				"title": "Übersicht",
-				"text": "Die Seite \"Allgemein\" ist die erste Seite der Einstellungen. Hier kannst du den Namen deiner Website, die URL, die Zeitzone und das Datum deiner Website festlegen.",
+			},
+			{
+				"title": "Allgemein",
+				"text": "Der Abschnitt \"Allgemein\" ist die erste Seite die du siehst, wenn du den Bereich \"Einstellungen\" betrittst. Hier kannst du den Namen deiner Website, die URL, die Zeitzone und das Datum deiner Website festlegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a[href=\"options-general.php\"]",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Nützlich",
+				"text": "Die Einstellungen, die du hier festlegst, sind sehr nützlich, da sie die Grundlage für deine Website bilden. Daher solltest du diese Einstellungen sehr sorgfältig prüfen und festlegen.",
 				"targets": [
 					{
 						"active": true,
@@ -2166,7 +2178,18 @@
 		"data": [
 			{
 				"title": "Schreiben",
-				"text": "Der Bereich \"Schreiben\" ist die zweite Seite der Einstellungen. Hier kannst du die Einstellungen für das Schreiben und Veröffentlichen von Beiträgen festlegen.",
+				"text": "Der Abschnitt \"Schreiben\" unterstützt dich bei der Erstellung von Beiträgen und Artikeln.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a[href=\"options-writing.php\"]",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Wenn du die Einstellungen korrekt nach deinen Bedürfnissen festlegst, erhöhst du die Benutzerfreundlichkeit und Effizienz beim Verfassen von Inhalten.",
 				"targets": [
 					{
 						"active": true,
@@ -2182,7 +2205,40 @@
 		"data": [
 			{
 				"title": "Lesen",
-				"text": "Der Bereich \"Lesen\" ist die dritte Seite der Einstellungen. Hier kannst du die Einstellungen für die Anzeige deiner Website festlegen.",
+				"text": "Der Abschnitt \"Lesen\" ermöglicht es dir grundlegende Einstellungen für die Anzeige deiner Website festzulegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a[href=\"options-reading.php\"]",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier kannst du die Einstellungen für die Startseite und die Beitragsseite festlegen. Du kannst auch festlegen, wie viele Beiträge auf der Startseite angezeigt werden sollen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Startseite",
+				"text": "Wenn du eine statische Startseite festlegst, kannst du die Startseite deiner Website individuell gestalten. Das ist besonders nützlich, wenn du eine Unternehmenswebsite oder eine Landingpage betreibst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#front-static-pages",
+						"overlay": "#front-static-pages"
+					}
+				]
+			},
+			{
+				"title": "Suchmaschinen",
+				"text": "Vielleicht bemerkst du, dass trotz der Verwendung von SEO-Plugins keine Besucher über Suchmaschinen kommen. Das könnte daran liegen, dass du die Suchmaschinenindexierung hier deaktiviert hast.",
 				"targets": [
 					{
 						"active": true,
@@ -2198,12 +2254,34 @@
 		"data": [
 			{
 				"title": "Discussion",
-				"text": "Der Bereich \"Diskussion\" ist die vierte Seite der Einstellungen. Hier kannst du die Einstellungen für die Kommentare und Diskussionen auf deiner Website festlegen.",
+				"text": "Der Abschnitt \"Diskussion\" befasst sich mit den Einstellungen rund um Kommentare und Diskussionen auf deiner Website",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a[href=\"options-discussion.php\"]",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Die Einstellungen, die du hier festlegst, beeinflusst die Interaktion mit deinen Besuchern. Du kannst beispielsweise festlegen, zu welchen Bedingungen Kommentare zugelassen werden.",
 				"targets": [
 					{
 						"active": true,
 						"focus": "#wpcontent",
 						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Kontrolle",
+				"text": "Achte darauf, dass du die Kontrolle über die Interaktionen auf deiner Website behältst. Dieser Abschnitt hilft dir dabei, die Interaktionen zu steuern. Kommentare können nämlich auch rechtlichen Probleme verursachen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
 					}
 				]
 			}
@@ -2214,12 +2292,45 @@
 		"data": [
 			{
 				"title": "Media",
-				"text": "Der Bereich \"Medien\" ist die fünfte Seite der Einstellungen. Hier kannst du die Einstellungen für die Medien auf deiner Website festlegen.",
+				"text": "Der Abschnitt \"Medien\" befasst sich mit den grundlegenden Einstellungen für die Verwaltung von Medien-Dateien auf deiner Website",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a[href=\"options-media.php\"]",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier kannst du die Einstellungen für die Medien-Dateien festlegen. Du kannst beispielsweise festlegen, wie die Medien-Dateien organisiert werden sollen und wie groß die Vorschaubilder sein sollen.",
 				"targets": [
 					{
 						"active": true,
 						"focus": "#wpcontent",
 						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Tip 1",
+				"text": "Achte darauf, dass du die Größe der Vorschaubilder nicht zu groß wählst, da das die Ladezeit deiner Website negativ beeinflussen kann.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Tip 2",
+				"text": "Achte auch darauf, dass du die Medien-Dateien sinnvoll organisierst. Das ist besonders nützlich, wenn du viele Medien-Dateien hast.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
 					}
 				]
 			}
@@ -2230,12 +2341,34 @@
 		"data": [
 			{
 				"title": "Permalink",
-				"text": "Der Bereich \"Permalinks\" ist die sechste Seite der Einstellungen. Hier kannst du die Einstellungen für die Permalinks auf deiner Website festlegen.",
+				"text": "Der Abschnitt \"Permalink\" befasst sich mit den Einstellungen für die URL-Struktur deiner Website",
 				"targets": [
 					{
 						"active": true,
 						"focus": "#wpcontent",
 						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Permalink-Struktur",
+				"text": "Es ist wichtig, die Permalink-Struktur sorgfältig auszuwählen, da sie nicht nur die Ästhetik der URLs beeinflusst, sondern auch die Suchmaschinenoptimierung (SEO) und die Benutzerfreundlichkeit deiner Website beeinflussen kann",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".permalink-structure",
+						"overlay": ".permalink-structure"
+					}
+				]
+			},
+			{
+				"title": "Tip 2",
+				"text": "Um die Suchmaschinen zu unterstützen, empfiehlt es sich, eine Permalink-Struktur zu wählen, die sprechende URLs verwendet. Idealerweise sollten deine URLs die Keywords deiner Beiträge und Seiten enthalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
 					}
 				]
 			}
@@ -2246,12 +2379,46 @@
 		"data": [
 			{
 				"title": "Datenschutz",
-				"text": "Der Bereich \"Datenschutz\" ist die letzte Seite der Einstellungen. Hier kannst du die Einstellungen für den Datenschutz auf deiner Website festlegen.",
+				"text": "Der Abschnitt \"Datenschutz\" Ist dafür vorgesehen, dass du die Datenschutzrichtlinien deiner Website verwalten kannst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a[href=\"options-privacy.php\"]",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier kannst du sicherstellen, dass deine Website den Datenschutzrichtlinien und den gesetzlichen Anforderungen entspricht. Es gibt natürlich auch Plugins, die dir eine erweiterte hilfestellung bieten können.",
 				"targets": [
 					{
 						"active": true,
 						"focus": "#wpcontent",
 						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Tip 1",
+				"text": "Datenschutzrichtlinien sind dann besonders wichtig, wenn deine Website persönliche Daten von Benutzern sammelt, sei es durch Kommentare, Formulare und so weiter. So kannst du dich vor rechtlichen Problemen schützen.",
+
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Tip 2",
+				"text": "Wenn du nachts mal nicht schlafen kannst, solltest du dir den 'Richtlinien-Leitfaden' zur Datenschutzerklärung durchlesen. Das hilft mir IMMER binnen weniger Sekunden einzuschlafen! \uD83D\uDE05",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".privacy-settings-header a:not(.active)",
+						"overlay": ".privacy-settings-header a:not(.active)"
 					}
 				]
 			}
@@ -2262,7 +2429,7 @@
 		"data": [
 			{
 				"title": "Wapuugotchi",
-				"text": "Willkommen im aller aller aller wichtigsten Bereich von allen! ... Mein Bereich! \uD83D\uDE05 Naja, zugegeben, er ist nicht unbedingt wichtig, aber lustig! Im Moment gibt es hier drei Abschnitte: \"Anpassen\", \"Aufgaben\" und \"Einführung\". Lass uns mal reinschauen!",
+				"text": "Willkommen im aller, aller, allerwichtigsten Bereich von allen! ... Mein Bereich! 😄 Naja, zugegeben, er ist nicht unbedingt wichtig, aber lustig! Lass uns mal reinschauen!",
 				"targets": [
 					{
 						"active": true,
@@ -2273,6 +2440,17 @@
 			},
 			{
 				"title": "Anpassen",
+				"text": "In diesem Abschnitt kannst du mein Aussehen anpassen. Abgesehen davon hast du hier auch die Möglichkeit mir einen Namen zu geben.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#toplevel_page_wapuugotchi .wp-submenu li a[href=\"admin.php?page=wapuugotchi\"]",
+						"overlay": "#toplevel_page_wapuugotchi"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
 				"text": "Hier kannst du mein Aussehen anpassen. Du kannst mir eine neue Frisur verpassen, mir eine Brille aufsetzen oder mir ein neues T-Shirt anziehen. Ich bin gespannt, was du aus mir machst!",
 				"targets": [
 					{
@@ -2348,25 +2526,25 @@
 				"targets": [
 					{
 						"active": true,
-						"focus": "#toplevel_page_wapuugotchi",
-						"overlay": "#toplevel_page_wapuugotchi"
+						"focus": "#wapuugotchi-app",
+						"overlay": "#wapuugotchi-app"
 					}
 				]
 			},
 			{
 				"title": "Ende!!!",
-				"text": "Weißt du was? Wir sind fertig! Ich habe dir alles erzählt, was ich weiß. Ich hoffe, ich konnte dir helfen und du hast jetzt einen guten Überblick über deine WordPress-Instanz. Viel Spaß beim erstellen deiner ersten Website!",
+				"text": "Weißt du was? Wir sind fertig! Ich habe dir alles erzählt, was ich weiß. Ich hoffe, du hattest ein wenig Spaß und vielleicht auch ein bisschen dazugelernt. Auf jeden Fall finde ich es toll, dass du bis zum Ende durchgehalten hast!",
 				"targets": [
 					{
 						"active": true,
-						"focus": "#toplevel_page_wapuugotchi",
-						"overlay": "#toplevel_page_wapuugotchi"
+						"focus": null,
+						"overlay": null
 					}
 				]
 			},
 			{
-				"title": "Ende!!!",
-				"text": "Wusstest du, dass dieses Plugin ein Hobbyprojekt ist? Nur eine Hand voll Menschen entwickeln fleißig in ihrer Freizeit daran und hoffen inständig, dass dir dieses kleine Plugin gefällt! Machs gut und viel spaß mit deinem deinem neuen Freund!",
+				"title": "Feedback",
+				"text": "Ich würde mich wahnsinnig freuen, wenn du meinen Entwicklern ein Feedback hinterlassen würdest. Das hilft ihnen, mich zu verbessern und dir in Zukunft noch besser zu helfen.",
 				"targets": [
 					{
 						"active": true,

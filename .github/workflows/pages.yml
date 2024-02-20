@@ -42,7 +42,7 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: pwd && ls
+        run: bundle exec jekyll build --baseurl "./docs"
         env:
           JEKYLL_ENV: production
       - name: Upload artifact

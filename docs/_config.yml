@@ -2,6 +2,8 @@ lsi: false
 theme: just-the-docs
 safe: true
 source: ./
+destination: ../_site
+baseurl: https://wapuugotchi.github.io/wapuugotchi/
 incremental: false
 highlighter: rouge
 gist:

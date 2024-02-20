@@ -1,7 +1,1 @@
-lsi: false
 theme: jekyll-theme-cayman
-safe: true
-source: ./
-destination: ../_site
-incremental: false
-markdown: kramdown

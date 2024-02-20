@@ -1,4 +1,5 @@
 ---
+layout: default
 title: WapuuGotchi User Handbook
 menu_order: 1
 post_status: publish

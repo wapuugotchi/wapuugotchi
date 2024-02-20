@@ -1,5 +1,5 @@
 lsi: false
-theme: minima
+theme: architect
 safe: true
 source: ./
 destination: ../_site

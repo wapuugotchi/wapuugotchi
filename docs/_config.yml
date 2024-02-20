@@ -1,5 +1,5 @@
 lsi: false
-theme: minima
+theme: just-the-docs
 safe: true
 source: ./
 destination: ../_site

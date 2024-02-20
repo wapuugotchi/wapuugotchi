@@ -42,7 +42,7 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: cd ${{ steps.pages.outputs.base_path }}/docs && bundle exec jekyll build
+        run: pwd && ls
         env:
           JEKYLL_ENV: production
       - name: Upload artifact

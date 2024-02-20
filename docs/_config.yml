@@ -1,4 +1,5 @@
 lsi: false
+theme: just-the-docs
 safe: true
 source: /docs
 incremental: false

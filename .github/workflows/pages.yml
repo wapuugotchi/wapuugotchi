@@ -32,10 +32,9 @@ jobs:
         with:
           ruby-version: '2.7' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - run: jekyll build --config ./docs/_config.yml
+      - run: bundle exec jekyll build --config ./docs/_config.yml
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      - run: bundle install --gemfile "./docs/Gemfile"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

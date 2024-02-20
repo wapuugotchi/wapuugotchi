@@ -6,6 +6,7 @@ destination: ../_site
 baseurl: https://wapuugotchi.github.io/wapuugotchi/
 incremental: false
 highlighter: rouge
+markdown: kramdown
 gist:
   noscript: false
 kramdown:

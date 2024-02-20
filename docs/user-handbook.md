@@ -1,14 +1,7 @@
 ---
 layout: default
 title: WapuuGotchi User Handbook
-menu_order: 1
-post_status: publish
-post_excerpt: This is the user handbook for WapuuGotchi. It tells about the features and usage of this project.
-taxonomy:
-    post_tag:
-        - documentation
 ---
-
 # WapuuGotchi User Handbook
 Welcome to Wapuugotchi, a groundbreaking project that brings a whole new level of personalization, fun, and rewards to your everyday life! At its core, Wapuugotchi combines the charm of Wapuu characters with the excitement of gamified notifications and unlockable rewards, creating an unparalleled experience like no other.
 

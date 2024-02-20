@@ -1,5 +1,5 @@
 lsi: false
-theme: architect
+theme: jekyll-theme-cayman
 safe: true
 source: ./
 destination: ../_site

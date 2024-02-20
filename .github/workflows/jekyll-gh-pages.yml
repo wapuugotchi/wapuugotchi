@@ -31,7 +31,7 @@ jobs:
       - uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
         with:
           ruby-version: '3.1'
-      - run: cd ./docs && bundle install
+      - run: gem install just-the-docs
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll

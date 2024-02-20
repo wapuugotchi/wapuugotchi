@@ -32,9 +32,9 @@ jobs:
         with:
           ruby-version: '3.3' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - run: bundle config set path './docs'
-      - run: bundle install --gemfile ./docs/Gemfile
-      - run: bundle exec jekyll build --source ./docs --destination ./_site
+      - run: cd docs
+      - run: bundle install
+      - run: bundle exec jekyll build --source ./ --destination ./_site --baseurl https://wapuugotchi.github.io/wapuugotchi/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

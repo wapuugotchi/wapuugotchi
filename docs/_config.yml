@@ -1,4 +1,3 @@
 theme: just-the-docs
 source: ./
 destination: ../_site
-baseurl: /wapuugotchi

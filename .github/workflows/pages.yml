@@ -1,0 +1,27 @@
+name: Build docs with Jekyll
+
+on:
+  push:
+    branches:
+      - fix-gh-pages-docs
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ruby:3.3
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Ruby and build Jekyll site
+      run: |
+        cd ./docs
+        gem install jekyll just-the-docs
+        bundle exec jekyll build
+      env:
+        JEKYLL_ENV: production
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3

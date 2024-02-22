@@ -1,9 +1,3 @@
-lsi: false
-safe: true
-source: /docs
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  syntax_highlighter: rouge
+theme: just-the-docs
+source: ./
+destination: ../_site

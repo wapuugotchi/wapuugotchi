@@ -15,6 +15,8 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
+use Wapuugotchi\Onboarding\DashboardData;
+
 if ( ! defined( 'WAPUUGOTCHI_PATH' ) ) {
 	define( 'WAPUUGOTCHI_PATH', \plugin_dir_path( __FILE__ ) );
 }
@@ -71,6 +73,15 @@ function init() {
 	new QuestTheme();
 	new QuestDate();
 	new QuestStart();
+
+	/* Onboarding*/
+	require_once 'inc/feature/OnboardingManager.php';
+	require_once 'inc/models/OnboardingPage.php';
+	require_once 'inc/models/OnboardingTarget.php';
+	require_once 'inc/models/OnboardingItem.php';
+	require_once 'inc/data/onboarding/OnboardingContent.php';
+	new OnboardingManager();
+	new OnboardingContent();
 }
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

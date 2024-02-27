@@ -21,6 +21,7 @@ class Menu {
 	 */
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'create_menu_page' ) );
+		add_action( 'current_screen', array( $this, 'force_redirect_to_dashboard' ) );
 	}
 
 	/**
@@ -56,6 +57,14 @@ class Menu {
 			$slug . '-quests',
 			array( $this, 'quests_page_template' )
 		);
+		add_submenu_page(
+			$slug,
+			__( 'Wapuugotchi', 'wapuugotchi' ),
+			__( 'Tour', 'wapuugotchi' ),
+			$capability,
+			$slug . '-onboarding',
+			array( $this, 'onboarding_page_template' )
+		);
 	}
 
 	/**
@@ -83,5 +92,24 @@ class Menu {
 	 */
 	public function quests_page_template() {
 		echo '<div class="wrap"><div id="wapuugotchi-app"></div></div>';
+	}
+
+	/**
+	 * Add html starting point to quest manu page.
+	 *
+	 * @return void
+	 */
+	public function onboarding_page_template() {
+		echo '<div class="wrap"><div id="wapuugotchi-app"></div></div>';
+	}
+
+	public function force_redirect_to_dashboard() {
+		global $current_screen;
+		if ( isset( $current_screen->id ) && $current_screen->base == 'wapuugotchi_page_wapuugotchi-onboarding' ) {
+			wp_redirect(
+				admin_url( 'index.php?onboarding_mode=true' )
+			);
+			exit;
+		}
 	}
 }

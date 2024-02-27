@@ -162,8 +162,8 @@ export default function Navigation() {
 
 	const getTargetsCount = () => {
 		let count = 0;
-		if ( Array.isArray( pageConfig?.[ index ]?.targets ) ) {
-			count = pageConfig[ index ].targets.length;
+		if ( Array.isArray( pageConfig?.[ index ]?.target_list ) ) {
+			count = pageConfig[ index ].target_list.length;
 		}
 		return count;
 	};

@@ -1,4 +1,4 @@
-import {createRoot, StrictMode} from '@wordpress/element';
+import { createRoot, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
 import Shop from './components/shop/shop';
 

@@ -38,21 +38,15 @@ class Onboarding {
 	 */
 	public function load_scripts() {
 		global $current_screen;
-		if ( isset( $_GET['pagename'] ) ) {
-			/*************** DumpDebugDie ***************/
-			echo '<pre>';
-			wp_die(var_dump($current_screen->id));
-			echo '</pre>';
-			/*************** DumpDebugDie ***************/
-		}
-		$page_config = $this->get_page_config( $current_screen->id );
+		$page_config = OnboardingManager::get_page_data( $current_screen->id );
 		if ( empty( $page_config ) ) {
 			return null;
 		}
 
-		$global_config = $this->get_global_config();
+		$global_config = OnboardingManager::get_global_data();
 		$first_index   = $this->get_first_index_of_page_config( $page_config );
-		$assets        = include_once WAPUUGOTCHI_PATH . 'build/onboarding.asset.php';
+
+		$assets = include_once WAPUUGOTCHI_PATH . 'build/onboarding.asset.php';
 		wp_enqueue_style( 'wapuugotchi-onboarding', WAPUUGOTCHI_URL . 'build/onboarding.css', array(), $assets['version'] );
 		wp_enqueue_script( 'wapuugotchi-onboarding', WAPUUGOTCHI_URL . 'build/onboarding.js', $assets['dependencies'], $assets['version'], true );
 
@@ -64,7 +58,7 @@ class Onboarding {
 					array(
 						'page_name'     => $current_screen->id,
 						'global_config' => $global_config,
-						'page_config'   => isset( $page_config['data'] ) ? $page_config['data'] : null,
+						'page_config'   => isset( $page_config['item_list'] ) ? $page_config['item_list'] : null,
 						'index'         => false !== $first_index ? $first_index : null,
 						'wapuu'         => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
 						'items'         => Helper::get_items(),
@@ -84,16 +78,16 @@ class Onboarding {
 	 * @param array $page_config The page config.
 	 */
 	private function get_first_index_of_page_config( $page_config = null ) {
-		if ( empty( $page_config['data'] ) ) {
+		if ( empty( $page_config['item_list'] ) ) {
 			return false;
 		}
 
-		$config_keys = array_keys( $page_config['data'] );
+		$config_keys = array_keys( $page_config['item_list'] );
 		if ( count( $config_keys ) < 1 ) {
 			return false;
 		}
 
-		return array_keys( $page_config['data'] )[0];
+		return array_keys( $page_config['item_list'] )[0];
 	}
 
 	/**
@@ -117,7 +111,9 @@ class Onboarding {
 	 * Disable welcome guides in Gutenberg.
 	 */
 	public function my_disable_welcome_guides() {
-		wp_add_inline_script( 'wp-data', "window.onload = function() {
+		wp_add_inline_script(
+			'wp-data',
+			"window.onload = function() {
 		const selectPost = wp.data.select( 'core/edit-post' );
 		const selectPreferences = wp.data.select( 'core/preferences' );
 		const isFullscreenMode = selectPost.isFeatureActive( 'fullscreenMode' );
@@ -135,6 +131,7 @@ class Onboarding {
 		if ( !isWelcomeGuidePost ) {
 			wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'welcomeGuide' );
 		}
-	}" );
+	}"
+		);
 	}
 }

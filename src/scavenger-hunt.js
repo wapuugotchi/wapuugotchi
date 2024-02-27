@@ -1,4 +1,4 @@
-import {createRoot, StrictMode} from '@wordpress/element';
+import { createRoot, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
 import MenuHeader from './components/shop/menu-header';
 

@@ -41,9 +41,9 @@ export default function Focus() {
 
 		if ( animated === true ) {
 			// If animated is true, get all elements and focus them one after the other.
-			if ( Array.isArray( pageConfig?.[ index ]?.targets ) ) {
+			if ( Array.isArray( pageConfig?.[ index ]?.target_list ) ) {
 				let delay = 0;
-				pageConfig[ index ].targets.forEach( ( item ) => {
+				pageConfig[ index ].target_list.forEach( ( item ) => {
 					if ( item.active === true ) {
 						delay += parseInt( item.delay ?? 0, 10 );
 						setTimeout( function () {
@@ -55,7 +55,7 @@ export default function Focus() {
 			dispatch( STORE_NAME ).setAnimated( false );
 		} else {
 			// If animated is false, get first element and focus it.
-			const item = pageConfig?.[ index ]?.targets?.[ 0 ];
+			const item = pageConfig?.[ index ]?.target_list?.[ 0 ];
 			if ( item?.active === true ) {
 				handleItem( item );
 			}
@@ -91,12 +91,13 @@ export default function Focus() {
 
 		// if target is not found, use defaults
 		if ( targetRect instanceof DOMRect === false ) {
-			const defaultRect = document?.querySelector('#Onboarding--group')?.getBoundingClientRect();
+			const defaultRect = document
+				?.querySelector( '#Onboarding--group' )
+				?.getBoundingClientRect();
 			if ( defaultRect instanceof DOMRect === true ) {
 				targetRect = defaultRect;
 			} else {
 				return `polygon(0 0, 0 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 0)`;
-
 			}
 		}
 
@@ -120,12 +121,13 @@ export default function Focus() {
 
 		// if target is not found, use defaults
 		if ( targetRect instanceof DOMRect === false ) {
-			const defaultRect = document?.querySelector('#Onboarding--group')?.getBoundingClientRect();
+			const defaultRect = document
+				?.querySelector( '#Onboarding--group' )
+				?.getBoundingClientRect();
 			if ( defaultRect instanceof DOMRect === true ) {
 				targetRect = defaultRect;
 			} else {
 				return `polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0)`;
-
 			}
 		}
 

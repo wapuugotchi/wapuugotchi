@@ -56,13 +56,12 @@ class Onboarding {
 				"wp.data.dispatch('wapuugotchi/onboarding').__initialize(%s)",
 				wp_json_encode(
 					array(
-						'page_name'     => $current_screen->id,
-						'global_config' => $global_config,
-						'page_config'   => isset( $page_config['item_list'] ) ? $page_config['item_list'] : null,
-						'index'         => false !== $first_index ? $first_index : null,
-						'wapuu'         => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
-						'items'         => Helper::get_items(),
-						'animated'      => false,
+						'next_page'   => OnboardingManager::get_next_page_by_current_page( $current_screen->id ),
+						'page_config' => isset( $page_config['item_list'] ) ? $page_config['item_list'] : null,
+						'index'       => false !== $first_index ? $first_index : null,
+						'wapuu'       => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
+						'items'       => Helper::get_items(),
+						'animated'    => false,
 					)
 				)
 			),

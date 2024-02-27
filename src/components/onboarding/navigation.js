@@ -5,14 +5,13 @@ import { useEffect } from '@wordpress/element';
 import GlobalNavigation from './global-navigation';
 
 export default function Navigation() {
-	const { index, pageName, pageConfig, globalConfig } = useSelect(
+	const { index, pageConfig, nextPage } = useSelect(
 		( select ) => {
 			return {
 				index: select( STORE_NAME ).getIndex(),
-				pageName: select( STORE_NAME ).getPageName(),
 				pageConfig: select( STORE_NAME ).getPageConfig(),
-				globalConfig: select( STORE_NAME ).getGlobalConfig(),
-			};
+				nextPage: select( STORE_NAME ).getNextPage()
+			}
 		}
 	);
 
@@ -90,7 +89,7 @@ export default function Navigation() {
 					dispatch( STORE_NAME ).setIndex( nextIndex );
 				}
 			} else {
-				nextPage();
+				redirectToPage( nextPage );
 			}
 		}
 	};
@@ -111,37 +110,11 @@ export default function Navigation() {
 			}
 		}
 	};
-
-	const nextPage = () => {
-		const globalKeyList = Object.keys( globalConfig );
-		const pagePosition = globalKeyList?.indexOf( pageName );
-
-		if ( pagePosition >= 0 && globalKeyList?.length > pagePosition ) {
-			const nextPageElement = globalKeyList[ pagePosition + 1 ];
-			redirectToPage( nextPageElement );
-		}
-	};
-
-	const redirectToPage = ( nextPageName = '' ) => {
-		const currentPage = globalConfig?.[ pageName ]?.page;
-		const nextPageElement = globalConfig?.[ nextPageName ]?.page;
-		if ( currentPage === undefined || nextPageElement === undefined ) {
-			stop();
-			return false;
-		}
-
+	const redirectToPage = ( nextPageFile = '' ) => {
 		const url = new URL( window.location );
 		let urlString = url.origin;
 
-		if ( url?.pathname?.includes( '.php' ) ) {
-			const urlSplit = currentPage.split( '?', 1 );
-			const pathname = url.pathname.replace( urlSplit, nextPageElement );
-			urlString += pathname;
-		} else {
-			urlString += url.pathname + nextPageElement;
-		}
-
-		const redirect = new URL( urlString );
+		const redirect = new URL( url.origin + url.pathname + nextPageFile );
 		redirect.searchParams.append( 'onboarding_mode', 'tour' );
 		window.location = redirect.toString();
 		return true;

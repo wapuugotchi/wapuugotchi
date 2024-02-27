@@ -113,22 +113,16 @@ function create() {
 						items: payload,
 					};
 				}
-				case '__SET_GLOBAL_CONFIG': {
-					return {
-						...state,
-						global_config: payload,
-					};
-				}
 				case '__SET_PAGE_CONFIG': {
 					return {
 						...state,
 						page_config: payload,
 					};
 				}
-				case '__SET_PAGE_NAME': {
+				case '__SET_NEXT_PAGE': {
 					return {
 						...state,
-						page_name: payload,
+						next_page: payload,
 					};
 				}
 				case '__SET_INDEX': {
@@ -155,9 +149,8 @@ function create() {
 
 					dispatch.setWapuu( select.getWapuu() );
 					dispatch.setItems( select.getItems() );
-					dispatch.setGlobalConfig( select.getGlobalConfig() );
 					dispatch.setPageConfig( select.getPageConfig() );
-					dispatch.setPageName( select.getPageName() );
+					dispatch.setNextPage( select.getNextPage() );
 					dispatch.setIndex( select.getIndex() );
 					dispatch.setAnimated( select.getAnimated() );
 				},
@@ -188,21 +181,15 @@ function create() {
 					payload: { ...payload },
 				};
 			},
-			setGlobalConfig( payload ) {
-				return {
-					type: '__SET_GLOBAL_CONFIG',
-					payload,
-				};
-			},
 			setPageConfig( payload ) {
 				return {
 					type: '__SET_PAGE_CONFIG',
 					payload,
 				};
 			},
-			setPageName( payload ) {
+			setNextPage( payload ) {
 				return {
-					type: '__SET_PAGE_NAME',
+					type: '__SET_NEXT_PAGE',
 					payload,
 				};
 			},
@@ -230,17 +217,14 @@ function create() {
 			getItems( state ) {
 				return state.items;
 			},
-			getGlobalConfig( state ) {
-				return state.global_config;
-			},
 			getPageConfig( state ) {
 				return state.page_config;
 			},
 			getSvg( state ) {
 				return state.svg;
 			},
-			getPageName( state ) {
-				return state.page_name;
+			getNextPage( state ) {
+				return state.next_page;
 			},
 			getIndex( state ) {
 				return state.index;

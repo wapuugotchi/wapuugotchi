@@ -39,9 +39,9 @@ class OnboardingContent {
 			return;
 		}
 
-		$screen    = ucfirst( $current_screen->id );
-		$file_name = $screen . 'Data';
-		$file_path = plugin_dir_path( __FILE__ ) . $wp_version . '/' . $file_name . '.php';
+		$camel_case_id = str_replace( array( '_', '-' ), '', ucwords( $current_screen->id, '_-' ) );
+		$file_name     = $camel_case_id . 'Data';
+		$file_path     = plugin_dir_path( __FILE__ ) . $wp_version . '/' . $file_name . '.php';
 
 		if ( file_exists( $file_path ) ) {
 			include_once $file_path;

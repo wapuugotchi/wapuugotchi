@@ -127,7 +127,7 @@ export default function Focus() {
 			if ( defaultRect instanceof DOMRect === true ) {
 				targetRect = defaultRect;
 			} else {
-				return `polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0)`;
+				return `polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%)`;
 			}
 		}
 

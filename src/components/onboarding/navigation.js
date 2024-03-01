@@ -110,13 +110,15 @@ export default function Navigation() {
 			}
 		}
 	};
-	const redirectToPage = ( nextPageFile = '' ) => {
-		const url = new URL( window.location );
-		let urlString = url.origin;
+	const redirectToPage = ( file = '' ) => {
+		if ( ! file ) {
+			return false;
+		}
 
-		const redirect = new URL( url.origin + url.pathname + nextPageFile );
-		redirect.searchParams.append( 'onboarding_mode', 'tour' );
-		window.location = redirect.toString();
+		const dir = window.location.href.substring(0, window.location.href.lastIndexOf('wp-admin'));
+		let url = new URL( dir + 'wp-admin/' + file );
+		url.searchParams.append( 'onboarding_mode', 'tour' );
+		window.location = url.toString();
 		return true;
 	};
 

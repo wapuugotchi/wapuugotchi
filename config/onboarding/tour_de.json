@@ -1,0 +1,2555 @@
+{
+	"dashboard": {
+		"page": "index.php",
+		"data": [
+			{
+				"title": "Willkommen",
+				"text": "Herzlich willkommen auf deiner Reise durch das WordPress-Universum! Ich freue mich, dich heute bei den ersten Schritten in deiner WordPress-Instanz zu begleiten. Lass uns direkt loslegen!",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Admin-Bar",
+				"text": "Beginnen wir mit der Admin-Bar! Sie ist dein schneller Zugang zu wichtigen Bereichen und Informationen. Hier erhältst du auch einen Überblick über offene Updates und Kommentare.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpadminbar",
+						"overlay": "#wpadminbar"
+					}
+				]
+			},
+			{
+				"title": "Seitennavigation",
+				"text": "Mit der Seitennavigation, kannst du mühelos zwischen den verschiedenen Bereichen deiner Website wechseln. Ein Bereich enthält in der Regel mehrere Unterabschnitte, die wir im Folgenden 'Abschnitte' nennen werden.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#adminmenuwrap",
+						"overlay": "#adminmenuwrap"
+					}
+				]
+			},
+			{
+				"title": "Dashboard",
+				"text": "Lass uns den ersten Bereich genauer erkunden: das 'Dashboard'. Hier bekommst du die wichtigsten Informationen aus allen Bereichen deiner Website präsentiert. Wir schauen ganz kurz rein!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-dashboard",
+						"overlay": "#menu-dashboard"
+					}
+				]
+			},
+			{
+				"title": "Startseite",
+				"text": "Der erste Abschnitt, den wir uns ansehen, ist die 'Startseite'. Das ist die Seite, die erscheint, wenn du dich in dein WordPress einloggst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-dashboard .wp-submenu li a.current",
+						"overlay": "#menu-dashboard"
+					}
+				]
+			},
+			{
+				"title": "Erklärung",
+				"text": "Die Startseite bietet eine Zusammenfassung von Informationen aus allen Bereichen deiner Website, wie neu veröffentlichte Beiträge, neue Kommentare und Statistiken.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Anpassung",
+				"text": "Du kannst deine Startseite nach deinen Wünschen anpassen, zum Beispiel Themenbereiche deaktivieren, die dich nicht interessieren. Du hast die Kontrolle!",
+				"freeze": 17000,
+				"targets": [
+					{
+						"active": true,
+						"focus": "button#show-settings-link",
+						"overlay": "button#show-settings-link",
+						"delay": 0
+					},
+					{
+						"active": true,
+						"focus": "button#show-settings-link",
+						"overlay": "button#show-settings-link",
+						"delay": 0,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button#show-settings-link",
+						"overlay": "button#show-settings-link",
+						"delay": 1200,
+						"click": "button#show-settings-link[aria-expanded=\"false\"]",
+						"clickable": 2,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#screen-meta",
+						"delay": 250,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#wpcontent",
+						"delay": 5000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#wpcontent",
+						"delay": 2000,
+						"click": "#wp_welcome_panel-hide",
+						"clickable": 2,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#wpcontent",
+						"delay": 2000,
+						"click": "#wp_welcome_panel-hide",
+						"clickable": 2,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#wpcontent",
+						"delay": 2000,
+						"click": "#wp_welcome_panel-hide",
+						"clickable": 2,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#wpcontent",
+						"delay": 2000,
+						"click": "#wp_welcome_panel-hide",
+						"clickable": 2,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "#screen-meta",
+						"overlay": "#screen-meta",
+						"delay": 4000
+					}
+				]
+			}
+		]
+	},
+	"update-core": {
+		"page": "update-core.php",
+		"data": [
+			{
+				"title": "Aktualisierungen",
+				"text": "Wir befinden uns jetzt im Abschnitt 'Aktualisierungen', der ebenfalls zum Dashboard gehört. Dieser Abschnitt unterstützt dich dabei, deine Website auf dem neuesten Stand zu halten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-dashboard .wp-submenu li a.current",
+						"overlay": "#menu-dashboard"
+					}
+				]
+			},
+			{
+				"title": "Erklärung",
+				"text": "Hier kannst du sehen, ob Updates für deine Website verfügbar sind, einschließlich Themes, Plugins und der WordPress-Version selbst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Sicherheitsrisiko",
+				"text": "Es ist wichtig, deine Website immer auf dem neuesten Stand zu halten! Veraltete Software kann die Sicherheit gefährden. Updates bringen nicht nur Sicherheitsverbesserungen, sondern auch neue Funktionen mit.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Schlusswort",
+				"text": "Das war es zum Bereich 'Dashboard', aber unsere Tour ist noch lange nicht vorbei. Ich freue mich darauf, dir noch viel mehr zu zeigen. Lass uns schnell weitermachen!",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"edit-post": {
+		"page": "edit.php",
+		"data": [
+			{
+				"title": "Beiträge",
+				"text": "Willkommen im Bereich 'Beiträge'. Hier kannst du dynamische Inhalte erstellen, bearbeiten und verwalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-posts",
+						"overlay": "#menu-posts"
+					}
+				]
+			},
+			{
+				"title": "Alle Beiträge",
+				"text": "Der Abschnitt 'Alle Beiträge' ermöglicht dir, deine Beiträge zu überblicken, zu organisieren und zu verwalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-posts .wp-submenu li a.current",
+						"overlay": "#menu-posts"
+					}
+				]
+			},
+			{
+				"title": "Übersichtsseite",
+				"text": "Die Übersichtsseite zeigt dir alle deine Beiträge an. Von hier aus kannst du neue Beiträge erstellen und schnell auf bestehende Beiträge zugreifen, um Änderungen vorzunehmen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Beitragsliste",
+				"text": "In der Beitragsliste kannst du alle deine Beiträge sehen und wichtige Informationen wie den Titel, den Autor und das Veröffentlichungsdatum finden.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "table.wp-list-table",
+						"overlay": "table.wp-list-table"
+					}
+				]
+			},
+			{
+				"title": "Titel",
+				"text": "Die Titelspalte zeigt die Titel aller Beiträge an. Klicke auf den Titel, um den Beitrag zu bearbeiten und den Inhalt zu ändern.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.title",
+						"overlay": "td.title"
+					}
+				]
+			},
+			{
+				"title": "Autor",
+				"text": "Die Autorspalte zeigt an, welcher Benutzer den Beitrag erstellt hat. Bei mehreren Autoren wird der jeweilige Benutzername angezeigt.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.author",
+						"overlay": "td.author"
+					}
+				]
+			},
+			{
+				"title": "Kategorien",
+				"text": "Hier siehst du die Kategorien, denen ein Beitrag zugeordnet ist. Kategorien helfen bei der strukturierten Organisation der Inhalte auf deiner Website.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.categories",
+						"overlay": "td.categories"
+					}
+				]
+			},
+			{
+				"title": "Schlagwörter",
+				"text": "Die Schlagwörter-Spalte zeigt die Tags an, die den Beiträgen zugeordnet sind. Tags erleichtern das Auffinden thematisch ähnlicher Inhalte.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.tags",
+						"overlay": "td.tags"
+					}
+				]
+			},
+			{
+				"title": "Datum",
+				"text": "Die Datums-Spalte zeigt an, wann der Beitrag veröffentlicht wurde oder veröffentlicht werden soll.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.date",
+						"overlay": "td.date"
+					}
+				]
+			},
+			{
+				"title": "Schnellzugriff",
+				"text": "Bewege den Mauszeiger über einen Beitrag, um ein Menü mit schnellem Zugriff auf wichtige Funktionen zu sehen. Probier es gleich mal aus!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#the-list tr",
+						"overlay": "#the-list tr",
+						"hover": true
+					}
+				]
+			},
+			{
+				"title": "Sortieren und Filtern",
+				"text": "Sortiere deine Beiträge nach verschiedenen Kriterien wie Datum und nutze Filteroptionen, um bestimmte Arten von Beiträgen anzuzeigen, wie z.B. Entwürfe.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".tablenav.top",
+						"overlay": ".tablenav.top"
+					}
+				]
+			},
+			{
+				"title": "Suchen",
+				"text": "Die Suchleiste ermöglicht es dir, nach bestimmten Beiträgen anhand von Stichwörtern oder Titeln zu suchen. Besonders nützlich bei vielen Beiträgen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".search-box",
+						"overlay": ".search-box"
+					}
+				]
+			},
+			{
+				"title": "Erstellen",
+				"text": "Hinter der Schaltfläche 'Erstellen' kannst du neue Inhalte für deine Website erstellen. Dort wirst du Schritt für Schritt durch den Prozess geführt!",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".page-title-action",
+						"overlay": ".page-title-action"
+					}
+				]
+			}
+		]
+	},
+	"post": {
+		"page": "post-new.php",
+		"data": [
+			{
+				"title": "Warten",
+				"text": "Das Gutenberg Tutorial ist gleich vorbei. Ich werde dich dann noch ein bisschen herumführen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Tutorial",
+				"text": "Jetzt sind wir im Abschnitt 'Erstellen'. Wie du im Tutorial erfahren hast, kannst du hier die Inhalte deiner Beiträge pflegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-posts .wp-submenu li a.current",
+						"overlay": "#menu-posts"
+					}
+				]
+			},
+			{
+				"title": "Obere Navigation",
+				"text": "Die obere Navigation bietet schnellen Zugriff auf grundlegende Steuerelemente im Editor. Sie ist unterteilt in Werkzeugleiste und Einstellungsleiste.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-navigable-region.interface-interface-skeleton__header",
+						"overlay": ".interface-navigable-region.interface-interface-skeleton__header"
+					}
+				]
+			},
+			{
+				"title": "Die Werkzeugleiste",
+				"text": "Die Werkzeugleiste stellt dir Funktionen zur Verfügung, um deinen Beitrag schrittweise aufzubauen. Füge neue Blockelemente hinzu und mache Änderungen rückgängig. Willst du sehen, wie das geht? Drücke auf 'Play'!",
+				"freeze": 38000,
+				"targets": [
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar",
+						"delay": 500,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header-toolbar__left",
+						"overlay": ".edit-post-header-toolbar__left",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": "button.edit-post-header-toolbar__inserter-toggle",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": "button.edit-post-header-toolbar__inserter-toggle",
+						"delay": 1000,
+						"color": "red",
+						"click": "button.edit-post-header-toolbar__inserter-toggle[aria-pressed=\"false\"]"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__secondary-sidebar",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 4000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.editor-block-list-item-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.editor-block-list-item-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red",
+						"click": "button.editor-block-list-item-table"
+					},
+					{
+						"active": true,
+						"focus": ".block-editor-block-list__block.wp-block-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 4000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__undo"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__redo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__redo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__redo"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__undo"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": "button.edit-post-header-toolbar__inserter-toggle[aria-pressed=\"true\"]"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar",
+						"delay": 4000
+					}
+				]
+			},
+			{
+				"title": "Einstellungsleiste",
+				"text": "In der Einstellungsleiste kannst du deinen Beitrag speichern und veröffentlichen. Zudem kannst du zwischen verschiedenen Bildschirmmodi wie Desktop, Mobile und Tablet wechseln.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".edit-post-header__settings",
+						"overlay": ".edit-post-header__settings",
+						"click": ".interface-pinned-items button[aria-expanded=\"false\"]"
+					}
+				]
+			},
+			{
+				"title": "Seitennavigation",
+				"text": "Hier findest du zusätzliche Informationen zu deinem Blogbeitrag und kannst Einstellungen an den einzelnen Blöcken vornehmen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__sidebar",
+						"overlay": ".interface-interface-skeleton__sidebar"
+					}
+				]
+			},
+			{
+				"title": "Inhalte",
+				"text": "Im Contentbereich kannst du deine Inhalte bearbeiten, Texte schreiben, Bilder einfügen und Blöcke bearbeiten. Deiner Kreativität sind keine Grenzen gesetzt!",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__content",
+						"overlay": ".interface-interface-skeleton__content",
+						"click": ".interface-pinned-items button[aria-expanded=\"false\"]"
+					}
+				]
+			},
+			{
+				"title": "Schlusswort",
+				"text": "Der Texteditor bietet viele Funktionen, und ich habe bestimmt die Hälfte vergessen zu erklären! Ich hoffe, ich konnte dir zumindest einen kleinen Überblick geben.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"edit-category": {
+		"page": "edit-tags.php?taxonomy=category",
+		"data": [
+			{
+				"title": "Kategorien",
+				"text": "Willkommen im Bereich 'Kategorien'. Diese helfen dir, deine Inhalte zu organisieren und zu strukturieren, damit Besucher leicht relevante Informationen finden können.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-posts .wp-submenu li a.current",
+						"overlay": "#menu-posts"
+					}
+				]
+			},
+			{
+				"title": "Erstellung",
+				"text": "Du kannst neue Kategorien erstellen, um deine Beiträge thematisch zu gruppieren. Dies erleichtert die Navigation und verbessert die SEO, da suchende Nutzer auf deine Website gelangen können.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#col-left",
+						"overlay": "#col-left"
+					}
+				]
+			},
+			{
+				"title": "Hierarchien",
+				"text": "Kategorien können hierarchisch strukturiert werden. Erstelle Unterkategorien, um eine noch feinere Unterteilung deiner Inhalte zu ermöglichen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".term-parent-wrap",
+						"overlay": ".term-parent-wrap"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Die Übersichtsseite zeigt nicht nur alle angelegten Kategorien, sondern auch ihre hierarchischen Beziehungen. Erfahre, wie oft deine Kategorien deinen Beiträgen zugeordnet sind.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#col-right",
+						"overlay": "#col-right"
+					}
+				]
+			},
+			{
+				"title": "Zusammenfassung",
+				"text": "Insgesamt bietet der Abschnitt 'Kategorien' eine effektive Möglichkeit, die Organisation und Auffindbarkeit von Inhalten auf deiner Website zu verbessern.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"edit-post_tag": {
+		"page": "edit-tags.php?taxonomy=post_tag",
+		"data": [
+			{
+				"title": "Schlagwörter",
+				"text": "Herzlich willkommen im Abschnitt 'Schlagwörter'! Schlagwörter ermöglichen es dir, deine Beiträge mit zusätzlichen Schlüsselwörtern oder Phrasen zu versehen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-posts .wp-submenu li a[href=\"edit-tags.php?taxonomy=post_tag\"]",
+						"overlay": "#menu-posts"
+					}
+				]
+			},
+			{
+				"title": "Differenzierung",
+				"text": "Im Gegensatz zu Kategorien, die dazu dienen, Beiträge in breite Themenbereiche zu unterteilen, bieten Schlagwörter eine feinere Granularität und ermöglichen es dir, spezifische Themen, Stichwörter oder Schlüsselbegriffe mit deinen Beiträgen zu verknüpfen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Erstellung",
+				"text": "Du kannst Schlagwörter erstellen, die zu den spezifischen Inhalten deiner Beiträge passen. Diese können einzelne Wörter oder kurze Phrasen sein, die die wichtigsten Konzepte oder Themen des Beitrags widerspiegeln.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#col-left",
+						"overlay": "#col-left"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Auf der Übersichtsseite werden dir alle angelegten Schlagwörter dargestellt. Zudem erhältst du Informationen darüber, wie häufig deine Schlagwörter deinen Beiträgen zugeordnet sind.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#col-right",
+						"overlay": "#col-right"
+					}
+				]
+			},
+			{
+				"title": "Schlusswort",
+				"text": "Damit verlassen wir auch den Bereich 'Beiträge'. Es geht spannend weiter! Bereit für den nächsten Bereich?",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"upload": {
+		"page": "upload.php",
+		"data": [
+			{
+				"title": "Medien",
+				"text": "Jetzt befinden wir uns im Bereich 'Medien'. Hier verwaltest du alle Medien, die du in deine Beiträge oder Seiten einfügst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-media",
+						"overlay": "#menu-media"
+					}
+				]
+			},
+			{
+				"title": "Medienübersicht",
+				"text": "Der erste Abschnitt, den wir uns ansehen werden, ist die 'Medienübersicht'. Hier erhältst du eine Übersicht über alle Medien, die du bereits hochgeladen hast.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-media .wp-submenu li a.current",
+						"overlay": "#menu-media"
+					}
+				]
+			},
+			{
+				"title": "Medienbibliothek",
+				"text": "Alle hochgeladenen Medien werden hier gespeichert, und du erhältst eine Übersicht über all diese Medien mit Vorschaubildern, Dateiinformationen und Metadaten wie Titel, Beschreibung und alternativen Texten für Bilder.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "div.media-frame-tab-panel",
+						"overlay": "div.media-frame-tab-panel"
+					}
+				]
+			},
+			{
+				"title": "Details",
+				"text": "Du kannst hier auch die Details deiner Medien ändern. Unter anderem kannst du den Dateinamen ändern, zusätzliche Informationen hinzufügen oder Metadaten anpassen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "div.attachments-wrapper",
+						"overlay": "div.attachments-wrapper"
+					}
+				]
+			},
+			{
+				"title": "Filtern und Suche",
+				"text": "Du kannst auch Filter- und Suchfunktionen nutzen, um bestimmte Medien schnell zu finden.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "div.media-toolbar",
+						"overlay": "div.media-toolbar"
+					}
+				]
+			},
+			{
+				"title": "Hochladen",
+				"text": "Hier kannst du neue Medien in deine Medienbibliothek hochladen. Nachdem du die Schaltfläche geklickt hast, kannst du die Medien ganz einfach via Drag-and-Drop einfügen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "a.page-title-action",
+						"overlay": "a.page-title-action"
+					}
+				]
+			}
+		]
+	},
+	"media": {
+		"page": "media-new.php",
+		"data": [
+			{
+				"title": "Neu hinzufügen",
+				"text": "Der Abschnitt 'Neu hinzufügen' ermöglicht es dir, neue Medien wie Bilder, Videos oder Audiodateien in deine Medienbibliothek hochzuladen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-media .wp-submenu li a.current",
+						"overlay": "#menu-media"
+					}
+				]
+			},
+			{
+				"title": "Drag-and-Drop",
+				"text": "Deine Mediendateien kannst du ganz einfach per Drag-and-Drop in den Bereich ziehen oder du klickst auf die Schaltfläche, um deine Dateien auszuwählen. Anschließend ist das neue Medium sofort in deiner Medienbibliothek verfügbar.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Infos",
+				"text": "WordPress unterstützt eine Vielzahl von Dateiformaten, darunter Bilder (JPEG, PNG, GIF), Videos (MP4, MOV, WMV), Audiodateien (MP3, WAV) sowie Dokumente (PDF, DOC, PPT usw.).",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "redirect",
+				"text": "Jetzt sind wir auch schon mit dem Bereich 'Medien' fertig. Schnell ein Käffchen, und dann geht's weiter!",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"edit-page": {
+		"page": "edit.php?post_type=page",
+		"data": [
+			{
+				"title": "Seiten im Überblick",
+				"text": "Jetzt befinden wir uns im Bereich 'Seiten'. Hier verwaltest du deine statischen Inhalte.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-pages",
+						"overlay": "#menu-pages"
+					}
+				]
+			},
+			{
+				"title": "Alle Seiten",
+				"text": "Der Abschnitt 'Alle Seiten' ermöglicht es dir, deine Seiten zu überblicken, zu organisieren und zu verwalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-pages .wp-submenu li a[href=\"edit.php?post_type=page\"]",
+						"overlay": "#menu-pages"
+					}
+				]
+			},
+			{
+				"title": "Seiten",
+				"text": "Wie bereits erwähnt, handelt es sich bei 'Seiten' um statische Inhalte. Im Gegensatz zu 'Beiträgen' sind 'Seiten' eher dauerhafte Inhalte wie beispielsweise Über-uns-Seiten oder Kontaktseiten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Diese Seitenübersicht bietet dir einen guten Überblick über all deine Seiten, die du bereits erstellt hast. Darüber hinaus hast du die Möglichkeit, deine Seiten zu organisieren und zu verwalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "table.wp-list-table",
+						"overlay": "table.wp-list-table"
+					}
+				]
+			},
+			{
+				"title": "Titel",
+				"text": "Diese Spalte zeigt die Titel aller Seiten an. Durch Klicken auf den Titel kannst du eine Seite bearbeiten und ihren Inhalt ändern.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.title",
+						"overlay": "td.title"
+					}
+				]
+			},
+			{
+				"title": "Autor",
+				"text": "Diese Spalte zeigt an, welcher Benutzer die Seite erstellt hat. Bei mehreren Autoren wird der jeweilige Autorenname angezeigt.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.author",
+						"overlay": "td.author"
+					}
+				]
+			},
+			{
+				"title": "Veröffentlichungsdatum",
+				"text": "Diese Spalte zeigt das Datum an, an dem die Seite erstellt oder zuletzt bearbeitet wurde.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.date",
+						"overlay": "td.date"
+					}
+				]
+			},
+			{
+				"title": "Beiträge im Überblick",
+				"text": "Wenn du den Mauszeiger über eine Seite bewegst, erscheint ein Menü, mit dem du beispielsweise die Seite bearbeiten kannst. Probier es doch gleich mal aus!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#the-list tr",
+						"overlay": "#the-list tr",
+						"hover": true
+					}
+				]
+			},
+			{
+				"title": "Sortieren und Filtern",
+				"text": "Du kannst deine Seiten nach verschiedenen Kriterien sortieren, z.B. nach Datum. Es gibt auch Filteroptionen, mit denen du bestimmte Arten von Seiten anzeigen lassen kannst, z.B. Entwürfe.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".tablenav.top",
+						"overlay": ".tablenav.top"
+					}
+				]
+			},
+			{
+				"title": "Suchen",
+				"text": "Die Suchleiste ermöglicht es dir, nach bestimmten Seiten zu suchen, was besonders hilfreich sein kann, wenn du viele Seiten hast.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".search-box",
+						"overlay": ".search-box"
+					}
+				]
+			},
+			{
+				"title": "Erstellen",
+				"text": "Hinter dieser Schaltfläche befindet sich der Ort, an dem du neue statische Inhalte für deine Website erstellen kannst. Auf diese Seite kann ich dich leider nicht begleiten, aber dort wird dir alles erklärt!",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".page-title-action",
+						"overlay": ".page-title-action"
+					}
+				]
+			},
+			{
+				"title": "Schlusswort",
+				"text": "Ist dir aufgefallen, dass ich dir fast das Gleiche beim Bereich 'Beiträge' erzählt habe? Naja, das liegt daran, dass die Bereiche ziemlich identisch sind!",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"page": {
+		"page": "post-new.php?post_type=page",
+		"data": [
+			{
+				"title": "Tutorial",
+				"text": "Jetzt befinden wir uns im Abschnitt 'Erstellen'. Gib einfach Bescheid, wenn das Gutenberg Tutorial vorbei ist. Ich werde dich dann noch ein bisschen herumführen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Gutenberg Editor",
+				"text": "Wie du durch das Tutorial vielleicht erfahren hast, kannst du in diesem Bereich die Inhalte deiner Beiträge pflegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Obere Navigation",
+				"text": "Die obere Navigation bietet dir einen schnellen Zugriff auf grundlegende Steuerelemente im Editor. Sie ist unterteilt in die Werkzeugleiste und die Einstellungsleiste.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-navigable-region.interface-interface-skeleton__header",
+						"overlay": ".interface-navigable-region.interface-interface-skeleton__header"
+					}
+				]
+			},
+			{
+				"title": "Die Werkzeugleiste",
+				"text": "Die Werkzeugleiste stellt dir Funktionen zur Verfügung, die dir dabei helfen, deinen Beitrag schrittweise aufzubauen. Hier kannst du neue Blockelemente hinzufügen und Änderungen rückgängig machen. Willst du sehen, wie das geht? Drücke auf 'Play'!",
+				"freeze": 38000,
+				"targets": [
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar",
+						"delay": 500,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header-toolbar__left",
+						"overlay": ".edit-post-header-toolbar__left",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": "button.edit-post-header-toolbar__inserter-toggle",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": "button.edit-post-header-toolbar__inserter-toggle",
+						"delay": 1000,
+						"color": "red",
+						"click": "button.edit-post-header-toolbar__inserter-toggle[aria-pressed=\"false\"]"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__secondary-sidebar",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 4000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.editor-block-list-item-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.editor-block-list-item-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red",
+						"click": "button.editor-block-list-item-table"
+					},
+					{
+						"active": true,
+						"focus": ".block-editor-block-list__block.wp-block-table",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 4000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__undo"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__redo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__redo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__redo"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": ".editor-history__undo",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": ".editor-history__undo"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 2000,
+						"color": "red"
+					},
+					{
+						"active": true,
+						"focus": "button.edit-post-header-toolbar__inserter-toggle",
+						"overlay": ".interface-interface-skeleton__editor",
+						"delay": 1000,
+						"color": "red",
+						"click": "button.edit-post-header-toolbar__inserter-toggle[aria-pressed=\"true\"]"
+					},
+					{
+						"active": true,
+						"focus": ".edit-post-header__toolbar",
+						"overlay": ".edit-post-header__toolbar",
+						"delay": 4000
+					}
+				]
+			},
+			{
+				"title": "Die Einstellungsleiste",
+				"text": "In der Einstellungsleiste kannst du deinen Beitrag speichern und veröffentlichen. Zudem kannst du zwischen verschiedenen Bildschirmmodi wie Desktop, Mobile und Tablet wechseln.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".edit-post-header__settings",
+						"overlay": ".edit-post-header__settings",
+						"click": ".interface-pinned-items button[aria-expanded=\"false\"]"
+					}
+				]
+			},
+			{
+				"title": "Die Seitennavigation",
+				"text": "Hier kannst du zusätzliche Informationen über deinen Blogbeitrag einsehen. Außerdem kannst du hier auch einige Einstellungen an den einzelnen Blöcken, die du hinzugefügt hast, vornehmen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__sidebar",
+						"overlay": ".interface-interface-skeleton__sidebar"
+					}
+				]
+			},
+			{
+				"title": "Inhalte",
+				"text": "Im Contentbereich kannst du deine Inhalte bearbeiten... Texte schreiben, Bilder einfügen, Blöcke bearbeiten. Deiner Kreativität sind keine Grenzen gesetzt!",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".interface-interface-skeleton__content",
+						"overlay": ".interface-interface-skeleton__content",
+						"click": ".interface-pinned-items button[aria-expanded=\"false\"]"
+					}
+				]
+			},
+			{
+				"title": "Ende",
+				"text": "Der Texteditor bringt echt viele Funktionen mit, und ich habe bestimmt die Hälfte vergessen zu erklären! Ich hoffe, dass ich dir zumindest einen kleinen Überblick geben konnte. Lass uns einen Blick in den nächsten Bereich werfen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"edit-comments": {
+		"page": "edit-comments.php",
+		"data": [
+			{
+				"title": "Kommentare",
+				"text": "Willkommen im Bereich 'Kommentare'. Hier kannst du die Kommentare verwalten, die du erhältst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-comments",
+						"overlay": "#menu-comments"
+					}
+				]
+			},
+			{
+				"title": "Warum Kommentare?",
+				"text": "Der Bereich 'Kommentare' ist ein wichtiges Werkzeug, um die Interaktion mit deinen Besuchern zu steuern und zu fördern. Hier kannst du auf Rückmeldungen reagieren und Diskussionen moderieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Beiträge im Überblick",
+				"text": "Hier findest du eine Liste aller Kommentare, die Besucher auf deiner Website hinterlassen haben. Das beinhaltet den Kommentartext, den Autor des Kommentars, den kommentierten Beitrag und das Datum.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "table.wp-list-table",
+						"overlay": "table.wp-list-table"
+					}
+				]
+			},
+			{
+				"title": "Autor",
+				"text": "Dieses Feld ermöglicht es dir, schnell zu erkennen, wer den Kommentar hinterlassen hat. Bei registrierten Besuchern wird außerdem noch deren E-Mail-Adresse angezeigt.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.author",
+						"overlay": "td.author"
+					}
+				]
+			},
+			{
+				"title": "Kommentarstatus",
+				"text": "Das Feld 'Kommentar' zeigt den eigentlichen Inhalt des Kommentars an, den Besucher auf deiner Website hinterlassen haben.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.comment",
+						"overlay": "td.comment"
+					}
+				]
+			},
+			{
+				"title": "Bezugsbeitrag",
+				"text": "Hier wird dir angezeigt, auf welchen Beitrag sich der Kommentar bezieht. Das wird dir helfen, den Kontext zu verstehen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.response",
+						"overlay": "td.response"
+					}
+				]
+			},
+			{
+				"title": "Kommentardatum",
+				"text": "Das Feld Datum gibt an, wann der Kommentar auf deiner Website hinterlassen wurde.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "td.date",
+						"overlay": "td.date"
+					}
+				]
+			},
+			{
+				"title": "Beiträge im Überblick",
+				"text": "Wenn du den Mauszeiger über einen Kommentar bewegst, erscheint ein Menü. Hier kannst du beispielsweise den Status des Kommentars ändern oder schnell darauf antworten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#the-comment-list tr",
+						"overlay": "#the-comment-list tr",
+						"hover": true
+					}
+				]
+			},
+			{
+				"title": "Kommentarstatus ändern",
+				"text": "Ein Kommentar kann den Status 'Ausstehend', 'Genehmigt', 'Im Papierkorb' oder 'Spam' haben. Ausstehende Kommentare werden auf deiner Website nicht angezeigt, bis du sie genehmigst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "ul.subsubsub",
+						"overlay": "ul.subsubsub"
+					}
+				]
+			},
+			{
+				"title": "Suchfunktion nutzen",
+				"text": "Die Suchfunktion ermöglicht es dir, gezielt nach bestimmten Kommentaren zu suchen, basierend auf Stichwörtern, Benutzernamen, E-Mail-Adressen oder anderen relevanten Informationen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".search-box",
+						"overlay": ".search-box"
+					}
+				]
+			},
+			{
+				"title": "Fazit",
+				"text": "Jetzt weißt du also, wie du Kommentare auf deiner Website kontrollieren kannst \u2013 von der Genehmigung über die Moderation bis hin zum Filtern von Spam \u2013, um die Interaktion mit Besuchern zu steuern und die Diskussionsqualität zu bewahren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"themes": {
+		"page": "themes.php",
+		"data": [
+			{
+				"title": "Design",
+				"text": "Willkommen im Bereich 'Design'. Hier kannst du das Erscheinungsbild und die visuelle Darstellung deiner Website verwalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-appearance",
+						"overlay": "#menu-appearance"
+					}
+				]
+			},
+			{
+				"title": "Themes",
+				"text": "Der Abschnitt 'Themes' ermöglicht es dir, das Design deiner Website zu ändern.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-appearance .wp-submenu li a.current",
+						"overlay": "#menu-appearance"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Auf der Übersichtsseite findest du eine Liste aller installierten Themes. Hier kannst du auch das aktive Theme sehen, das aktuell auf deiner Website verwendet wird.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Aktive Themes",
+				"text": "Hier siehst du das aktive Theme. Dieses Theme bestimmt das Design deiner Website. Das ist dann auch das Design, das deine Besucher im Moment sehen, wenn sie deine Website besuchen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".theme.active",
+						"overlay": ".theme.active",
+						"hover": true
+					}
+				]
+			},
+			{
+				"title": "Inaktive Themes",
+				"text": "Es gibt aber auch Themes, die zwar installiert, aber nicht aktiv sind. Du kannst zwischen ihnen wechseln, indem du ein inaktives Theme aktivierst, was dann das Design deiner Website entsprechend ändern würde.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".theme:not(.active)",
+						"overlay": ".theme:not(.active)",
+						"hover": true
+					}
+				]
+			},
+			{
+				"title": "Suchen",
+				"text": "Mit dieser Suchfunktion kannst du nach einem bestimmten, bereits installierten Theme suchen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wp-filter-search-input",
+						"overlay": "#wp-filter-search-input"
+					}
+				]
+			},
+			{
+				"title": "Installieren",
+				"text": "Du kannst natürlich auch neue Themes installieren. Lass uns mal einen Blick reinwerfen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wrap a",
+						"overlay": ".wrap a"
+					}
+				]
+			}
+		]
+	},
+	"theme-install": {
+		"page": "theme-install.php?browse=popular",
+		"data": [
+			{
+				"title": "Hinzufügen",
+				"text": "Es klingt vielleicht verrückt... aber im Abschnitt 'Themes hinzufügen' kannst du neue Themes hinzufügen! \ud83d\ude05",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Info",
+				"text": "Wenn du diesen Abschnitt betrittst, wird dir eine Auswahl der beliebtesten Themes angezeigt. Das ist sehr nützlich, weil dir hier mehr als 10.000 Themes zur Auswahl stehen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Filter",
+				"text": "Natürlich hast du auch die Möglichkeit nach anderen Kategorien zu filtern oder ein ganz bestimmtes Theme zu suchen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wp-filter",
+						"overlay": ".wp-filter"
+					}
+				]
+			},
+			{
+				"title": "Inaktive Themes",
+				"text": "Wenn du den Mauszeiger über ein Theme bewegst, das dich interessiert, kannst du in die Detailansicht wechseln. Der Detailansicht kannst du viel mehr Informationen entnehmen, wie beispielsweise Erfahrungsberichte.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".theme:not(.active)",
+						"overlay": ".theme:not(.active)",
+						"hover": true
+					}
+				]
+			}
+		]
+	},
+	"site-editor": {
+		"page": "site-editor.php",
+		"data": [
+			{
+				"title": "Kommentare",
+				"text": "Ganz ehrlich? Ich habe keine Ahnung... Aber ich kümmere mich drum!",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"plugins": {
+		"page": "plugins.php",
+		"data": [
+			{
+				"title": "Beiträge im Überblick",
+				"text": "Willkommen im Bereich 'Plugins'. Hier kannst du neue Plugins suchen, installieren und aktivieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-plugins",
+						"overlay": "#menu-plugins"
+					}
+				]
+			},
+			{
+				"title": "Installierte Plugins",
+				"text": "Der Abschnitt 'Installierte Plugins' ermöglicht es dir, die Plugins zu verwalten, die du bereits installiert hast.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-plugins .wp-submenu li a.current",
+						"overlay": "#menu-plugins"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Plugins erweitern den Funktionsumfang deiner WordPress-Instanz. Das können Dinge wie Kontaktformulare, Galerien, Slideshows, SEO-Tools, Sicherheitsfunktionen und vieles mehr sein.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Plugin-Übersicht",
+				"text": "In der Plugin-Übersicht kannst du alle installierten Plugins sehen und verwalten. Hier hast du auch die Möglichkeit, deine genutzten Plugins ganz einfach zu aktivieren oder zu deaktivieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#the-list",
+						"overlay": "#the-list"
+					}
+				]
+			},
+			{
+				"title": "Suche nach bestimmten Plugins",
+				"text": "Du hast auch die Möglichkeit nach bestimmten Plugins zu suchen. Das ist dann nützlich, wenn du sehr viele Plugins installiert hast.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".search-box",
+						"overlay": ".search-box"
+					}
+				]
+			},
+			{
+				"title": "Installieren von Plugins",
+				"text": "Am besten ist es, wenn du Plugins nur aus der offiziellen WordPress Plugin-Bibliothek installierst. Abgesehen davon, dass es sich hier um eine vertrauenswürdige Quelle handelt, hast du Vorteile wie automatische Aktualisierungen, Community-Support und vieles mehr.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "a.page-title-action",
+						"overlay": "a.page-title-action"
+					}
+				]
+			},
+			{
+				"title": "Aktualisieren von Plugins",
+				"text": "Entwickler veröffentlichen regelmäßig Updates für ihre Plugins, um Fehler zu beheben, Sicherheitslücken zu schließen oder neue Funktionen hinzuzufügen. Du solltest deine Plugins immer auf dem neuesten Stand halten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#the-list tr",
+						"overlay": "#the-list tr"
+					}
+				]
+			},
+			{
+				"title": "Zusammenfassung",
+				"text": "Es gibt unglaublich viele Plugins, und du wirst sehen, dass für nahezu jedes Problem eine passende Plugin-Lösung existiert! Bereit für den nächsten Bereich?",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"plugin-install": {
+		"page": "plugin-install.php",
+		"data": [
+			{
+				"title": "Einleitung",
+				"text": "Willkommen im Abschnitt 'Installieren'. Hier kannst du neue Plugins suchen, installieren und aktivieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-plugins .wp-submenu li a.current",
+						"overlay": "#menu-plugins"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Plugins erweitern den Funktionsumfang deiner WordPress-Instanz erheblich. Die richtigen Plugins zu verwenden kann für den Erfolg deiner Website entscheidend sein. Im Internet findest du viele Artikel, die dir dabei helfen, die besten Plugins für deine Bedürfnisse zu finden.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Gleich nachdem du diesen Abschnitt betrittst, wird dir bereits eine Auswahl an Plugins vorgestellt. Das ist sehr nützlich, weil dir hier mehr als 60.000 Plugins zur Auswahl stehen. Auch das kann dir dabei helfen, die passenden Plugins zu finden.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#the-list",
+						"overlay": "#the-list"
+					}
+				]
+			},
+			{
+				"title": "Navigation",
+				"text": "Du kannst hier auch nach den beliebtesten, neuesten und empfohlenen Plugins filtern. So kannst du dich beispielsweise an den Favoriten der anderen WordPress-Nutzer orientieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wp-filter ul.filter-links",
+						"overlay": ".wp-filter ul.filter-links"
+					}
+				]
+			}
+		]
+	},
+	"users": {
+		"page": "users.php",
+		"data": [
+			{
+				"title": "Einleitung",
+				"text": "Willkommen im Bereich 'Benutzer'. Hier kannst du die Benutzer deiner Website verwalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-users",
+						"overlay": "#menu-users"
+					}
+				]
+			},
+			{
+				"title": "Alle Benutzer",
+				"text": "Im Abschnitt 'Alle Benutzer' kannst du alle Benutzer deiner Website sehen und verwalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-users .wp-submenu li a.current",
+						"overlay": "#menu-users"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Auf der Übersichtsseite findest du eine Liste aller Benutzer, die auf deiner Website registriert sind.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Benutzerdetails",
+				"text": "Die einzelnen Benutzer werden in einer Tabelle dargestellt. Abgesehen vom Benutzernamen kannst du hier auch die E-Mail-Adresse und die Rolle des Benutzers sehen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "table",
+						"overlay": "table"
+					}
+				]
+			},
+			{
+				"title": "Benutzeraktionen",
+				"text": "Wenn du mit dem Mauszeiger über einen Benutzer fährst, erscheint ein Menü. Hier kannst du beispielsweise den Benutzer bearbeiten oder löschen. Probier es mal aus!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "table #the-list tr",
+						"overlay": "table #the-list tr",
+						"hover": true
+					}
+				]
+			},
+			{
+				"title": "Benutzergruppen filtern",
+				"text": "Hier kannst du nach Benutzergruppen filtern. Das ist besonders nützlich, wenn du viele Benutzer hast. Der Filter ist dynamisch und zeigt dir nur die Benutzergruppen an, die auch wirklich existieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "ul.subsubsub",
+						"overlay": "ul.subsubsub"
+					}
+				]
+			},
+			{
+				"title": "Benutzer suchen",
+				"text": "Natürlich hast du auch hier die Möglichkeit nach bestimmten Benutzern und Rollen zu suchen. Das ist dann nützlich, wenn du sehr viele Benutzer hast.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "p.search-box",
+						"overlay": "p.search-box"
+					}
+				]
+			},
+			{
+				"title": "Neuen Benutzer hinzufügen",
+				"text": "Hier kannst du neue Benutzer hinzufügen. Komm, wir schauen uns das mal an!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "a.page-title-action",
+						"overlay": "a.page-title-action"
+					}
+				]
+			}
+		]
+	},
+	"user": {
+		"page": "user-new.php",
+		"data": [
+			{
+				"title": "Einleitung",
+				"text": "Willkommen im Abschnitt 'Neuen Benutzer hinzufügen'. Hier kannst du Benutzer hinzufügen und ihre Rollen verwalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-users",
+						"overlay": "#menu-users"
+					}
+				]
+			},
+			{
+				"title": "Tipp 1",
+				"text": "Diese Seite ist eigentlich selbst erklärend. Sei aber unbedingt vorsichtig mit der Rollenvergabe, denn die Rollen bestimmen, welche Berechtigungen ein Benutzer hat!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Tipp 2",
+				"text": "Bereits die Rolle 'Autor' kann, in den falschen Händen, großen Schaden an deiner Website anrichten, da Benutzer mit dieser Rolle bereits Beiträge schreiben und auch veröffentlichen dürfen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#role",
+						"overlay": "#role"
+					}
+				]
+			},
+			{
+				"title": "Tipp 3",
+				"text": "Ein Administrator kann allen Benutzern die Rechte entziehen... also auch dir! Sei also vorsichtig, wem du die Rolle 'Administrator' gibst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#role",
+						"overlay": "#role"
+					}
+				]
+			}
+		]
+	},
+	"profile": {
+		"page": "profile.php",
+		"data": [
+			{
+				"title": "Einleitung",
+				"text": "Willkommen im Bereich 'Profil'. Machen wir es kurz: Hier kannst du dein Profil bearbeiten. Und weiter geht's! \ud83d\ude05",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-users",
+						"overlay": "#menu-users"
+					}
+				]
+			},
+			{
+				"title": "Abschluss",
+				"text": "Und damit sind wir schon mit dem nächsten Bereich durch. Benutzer bringen Leben in deine Website, bürgen aber auch ein gewisses Risiko. Sei also vorsichtig, wem du welche Rechte gibst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Tipp",
+				"text": "Ein letzter Tipp noch: Es gibt Plugins, die eine Zwei-Faktor-Authentifizierung ermöglichen. Das ist eine zusätzliche Sicherheitsmaßnahme, die ich dir nur empfehlen kann.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"tools": {
+		"page": "tools.php",
+		"data": [
+			{
+				"title": "Werkzeuge",
+				"text": "Willkommen im Bereich 'Werkzeuge'. Dieser Bereich stellt insbesondere dem Administrator zusätzliche Funktionen und Ressourcen zur Verfügung. Lass uns kurz reinschauen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Verfügbare Werkzeuge",
+				"text": "Das ist der Abschnitt 'Verfügbare Werkzeuge'. Hier findest du eine Liste von Werkzeugen, die dir bei der Verwaltung deiner Website helfen können.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a.current",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Dies ist die Übersichtsseite für die verfügbaren Werkzeuge. Hier kannst du die verfügbaren Werkzeuge sehen und verwalten. Sie variieren je nach installierten Plugins und WordPress-Version.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			}
+		]
+	},
+	"import": {
+		"page": "import.php",
+		"data": [
+			{
+				"title": "Import",
+				"text": "Willkommen im Abschnitt 'Import'. Hier kannst du Inhalte von anderen Websites oder anderen WordPress-Installationen importieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a.current",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Nutzen",
+				"text": "Das Importieren von Inhalten ist nützlich, wenn du beispielsweise Inhalte von einer anderen Website hierher übertragen möchtest oder ein Backup deiner Website wiederherstellen willst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Die Übersichtsseite zeigt dir eine Liste von Werkzeugen, die dir beim Importieren von Inhalten helfen können. Sie variieren je nach installierten Plugins und WordPress-Version.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "table.importers",
+						"overlay": "table.importers"
+					}
+				]
+			},
+			{
+				"title": "Tipp 1",
+				"text": "Achte unbedingt darauf, dass du ausschließlich deine eigenen Backups wiederherstellst, da unbekannte Quellen möglicherweise schädlichen Code enthalten können.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Tipp 2",
+				"text": "Außerdem können Backups persönliche Daten enthalten, und das Importieren von Backups unbekannter Herkunft kann gegen Datenschutzrichtlinien verstoßen. Dies könnte zu rechtlichen Problemen führen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"export": {
+		"page": "export.php",
+		"data": [
+			{
+				"title": "Export",
+				"text": "Im Abschnitt 'Export' kannst du ausgewählte Inhalte deiner Website exportieren. Dieser Abschnitt ist das Gegenstück zum Importieren von Inhalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a.current",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Nutzen",
+				"text": "Das Exportieren von Inhalten ist nützlich, wenn du beispielsweise Inhalte von deiner Website auf eine andere Website übertragen möchtest oder ein Backup deiner Website erstellen willst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier hast du die Möglichkeit, Inhalte deiner Website zu exportieren. Du musst aber nicht die gesamte Website exportieren, sondern kannst auch nur bestimmte Inhalte auswählen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#export-filters",
+						"overlay": "#export-filters"
+					}
+				]
+			},
+			{
+				"title": "Tipp 1",
+				"text": "Beachte bitte, dass ein Export auch persönliche Daten oder urheberrechtlich geschützte Inhalte enthalten kann. Daher solltest du vorsichtig sein, wem du dein Export zur Verfügung stellst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Tipp 2",
+				"text": "Darüber hinaus solltest du auch darauf achten, dass ein Export echt groß werden kann. Das kann ärgerlich werden, wenn der Speicher in deinem Workspace stark limitiert ist.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"site-health": {
+		"page": "site-health.php",
+		"data": [
+			{
+				"title": "Seitenzustand",
+				"text": "Im Abschnitt 'Seitenzustand' kannst du sehen, wie es um die Gesundheit deiner Website bestellt ist.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a.current",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Status",
+				"text": "Hier siehst du bereits auf den ersten Blick, wie es um die Leistung und Sicherheit deiner Website bestellt ist. Hier kannst du auch sehen, ob es Probleme gibt, die behoben werden müssen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Bericht",
+				"text": "Wenn du auf den Reiter 'Bericht' klickst, erhältst du eine detaillierte Übersicht über die technischen Aspekte deiner Website. Schau doch einfach mal rein, wenn du dich komplett verwirren lassen möchtest!",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".health-check-tabs-wrapper a:not(.active)",
+						"overlay": ".health-check-tabs-wrapper a:not(.active)"
+					}
+				]
+			}
+		]
+	},
+	"export-personal-data": {
+		"page": "export-personal-data.php",
+		"data": [
+			{
+				"title": "Persönliche Daten exportieren",
+				"text": "Im Abschnitt 'Persönliche Daten exportieren' kannst du gezielt die persönlichen Daten deiner Benutzer exportieren.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a.current",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier hast du die Möglichkeit, die persönlichen Daten eines bestimmten Benutzers zu exportieren. Das ist nützlich, wenn ein Benutzer seine Daten mitnehmen möchte, beispielsweise wenn er die Website wechselt.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Tipp 1",
+				"text": "Achte darauf, dass du die Daten nur an den Benutzer weitergibst, dem sie gehören. Das ist wichtig, um Datenschutzrichtlinien einzuhalten und damit rechtliche Probleme zu vermeiden.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"erase-personal-data": {
+		"page": "erase-personal-data.php",
+		"data": [
+			{
+				"title": "Persönliche Daten löschen",
+				"text": "Im Abschnitt 'Persönliche Daten löschen' kannst du die persönlichen Daten eines Benutzers löschen. Lass uns trotzdem mal reinschauen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a.current",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Im Grunde ist die Seite genau so aufgebaut wie die Seite zum Exportieren von persönlichen Daten. Hier hast du die Möglichkeit, die persönlichen Daten eines bestimmten Benutzers zu löschen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Nutzen",
+				"text": "Es kann sein, dass ein Benutzer möchte, dass seine Daten gelöscht werden. Das kann beispielsweise der Fall sein, wenn er die Website wechselt oder aus anderen Gründen nicht mehr möchte, dass seine Daten auf deiner Website gespeichert sind.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"theme-editor": {
+		"page": "theme-editor.php",
+		"data": [
+			{
+				"title": "Themes bearbeiten",
+				"text": "Der Abschnitt 'Themes bearbeiten' ermöglicht es dir, die Dateien deines Themes zu bearbeiten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a.current",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier kannst du direkt in den Dateien deines Themes Änderungen vornehmen. Wenn du dich in diesem Abschnitt aufhältst, solltest du über Programmierkenntnisse verfügen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Warnung",
+				"text": "Achtung! Das Bearbeiten von Dateien kann deine Website beschädigen. Wenn du nicht genau weißt, was du tust, solltest du das besser lassen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"plugin-editor": {
+		"page": "plugin-editor.php",
+		"data": [
+			{
+				"title": "Plugins bearbeiten",
+				"text": "Dieser Bereich ermöglicht es dir, die Dateien deiner Plugins zu bearbeiten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-tools .wp-submenu li a.current",
+						"overlay": "#menu-tools"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier gilt das gleiche wie beim Bearbeiten von Themes. Du kannst in diesem Abschnitt direkt in den Dateien deines Plugins Änderungen vornehmen. Wenn du dich in diesem Abschnitt aufhältst, solltest du über Programmierkenntnisse verfügen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Warnung",
+				"text": "Achtung! Das Bearbeiten von Dateien kann deine Website beschädigen. Wenn du nicht genau weißt, was du tust, solltest du das besser lassen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"options-general": {
+		"page": "options-general.php",
+		"data": [
+			{
+				"title": "Einstellungen",
+				"text": "Der Bereich 'Einstellungen' ermöglicht es dir, die allgemeinen Einstellungen deiner Website festzulegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Allgemein",
+				"text": "Der Abschnitt 'Allgemein' ist die erste Seite, die du siehst, wenn du den Bereich 'Einstellungen' betrittst. Hier kannst du den Namen deiner Website, die URL, die Zeitzone und das Datum deiner Website festlegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a.current",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Nützlich",
+				"text": "Die Einstellungen, die du hier festlegst, sind sehr nützlich, da sie die Grundlage für deine Website bilden. Daher solltest du diese Einstellungen sehr sorgfältig prüfen und festlegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			}
+		]
+	},
+	"options-writing": {
+		"page": "options-writing.php",
+		"data": [
+			{
+				"title": "Schreiben",
+				"text": "Der Abschnitt 'Schreiben' unterstützt dich bei der Erstellung von Beiträgen und Artikeln.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a.current",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Wenn du die Einstellungen korrekt nach deinen Bedürfnissen festlegst, erhöhst du die Benutzerfreundlichkeit und Effizienz beim Verfassen von Inhalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			}
+		]
+	},
+	"options-reading": {
+		"page": "options-reading.php",
+		"data": [
+			{
+				"title": "Lesen",
+				"text": "Der Abschnitt 'Lesen' ermöglicht es dir grundlegende Einstellungen für die Anzeige deiner Website festzulegen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a.current",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier kannst du die Einstellungen für die Startseite und die Beitragsseite festlegen. Du kannst auch festlegen, wie viele Beiträge auf der Startseite angezeigt werden sollen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Startseite",
+				"text": "Wenn du eine statische Startseite festlegst, kannst du die Startseite deiner Website individuell gestalten. Das ist besonders nützlich, wenn du eine Unternehmenswebsite oder eine Landingpage betreibst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#front-static-pages",
+						"overlay": "#front-static-pages"
+					}
+				]
+			},
+			{
+				"title": "Suchmaschinen",
+				"text": "Vielleicht bemerkst du, dass trotz der Verwendung von SEO-Plugins keine Besucher über Suchmaschinen kommen. Das könnte daran liegen, dass du die Suchmaschinenindexierung hier deaktiviert hast.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			}
+		]
+	},
+	"options-discussion": {
+		"page": "options-discussion.php",
+		"data": [
+			{
+				"title": "Diskussion",
+				"text": "Der Abschnitt 'Diskussion' befasst sich mit den Einstellungen rund um Kommentare und Diskussionen auf deiner Website",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a.current",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Die Einstellungen, die du hier festlegst, beeinflussen die Interaktion mit deinen Besuchern. Du kannst beispielsweise festlegen, unter welchen Bedingungen Kommentare zugelassen werden.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Kontrolle",
+				"text": "Achte darauf, dass du die Kontrolle über die Interaktionen auf deiner Website behältst. Dieser Abschnitt hilft dir dabei, die Interaktionen zu steuern. Kommentare können nämlich auch rechtliche Probleme verursachen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"options-media": {
+		"page": "options-media.php",
+		"data": [
+			{
+				"title": "Media",
+				"text": "Der Abschnitt 'Medien' befasst sich mit den grundlegenden Einstellungen für die Verwaltung von Medien-Dateien auf deiner Website",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a.current",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier kannst du die Einstellungen für die Medien-Dateien festlegen. Du kannst beispielsweise festlegen, wie die Medien-Dateien organisiert werden sollen und wie groß die Vorschaubilder sein sollen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Tipp 1",
+				"text": "Achte darauf, dass du die Größe der Vorschaubilder nicht zu groß wählst, da das die Ladezeit deiner Website negativ beeinflussen kann.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Tipp 2",
+				"text": "Achte auch darauf, dass du die Medien-Dateien sinnvoll organisierst. Das ist besonders nützlich, wenn du viele Medien-Dateien hast.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"options-permalink": {
+		"page": "options-permalink.php",
+		"data": [
+			{
+				"title": "Permalink",
+				"text": "Der Abschnitt 'Permalink' befasst sich mit den Einstellungen für die URL-Struktur deiner Website",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Permalink-Struktur",
+				"text": "Es ist wichtig, die Permalink-Struktur sorgfältig auszuwählen, da sie nicht nur die Ästhetik der URLs beeinflusst, sondern auch die Suchmaschinenoptimierung (SEO) und die Benutzerfreundlichkeit deiner Website beeinflussen kann",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".permalink-structure",
+						"overlay": ".permalink-structure"
+					}
+				]
+			},
+			{
+				"title": "Tipp 2",
+				"text": "Um die Suchmaschinen zu unterstützen, empfiehlt es sich, eine Permalink-Struktur zu wählen, die sprechende URLs verwendet. Idealerweise sollten deine URLs die Keywords deiner Beiträge und Seiten enthalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	},
+	"options-privacy": {
+		"page": "options-privacy.php",
+		"data": [
+			{
+				"title": "Datenschutz",
+				"text": "Der Abschnitt 'Datenschutz' ist dafür vorgesehen, dass du die Datenschutzrichtlinien deiner Website verwalten kannst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#menu-settings .wp-submenu li a.current",
+						"overlay": "#menu-settings"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier kannst du sicherstellen, dass deine Website den Datenschutzrichtlinien und den gesetzlichen Anforderungen entspricht. Es gibt natürlich auch Plugins, die dir eine erweiterte Hilfe bieten können.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wpcontent",
+						"overlay": "#wpcontent"
+					}
+				]
+			},
+			{
+				"title": "Tipp 1",
+				"text": "Datenschutzrichtlinien sind besonders wichtig, wenn deine Website persönliche Daten von Benutzern sammelt, sei es durch Kommentare, Formulare und so weiter. So kannst du dich vor rechtlichen Problemen schützen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Tipp 2",
+				"text": "Wenn du nachts mal nicht schlafen kannst, solltest du dir den 'Richtlinien-Leitfaden' zur Datenschutzerklärung durchlesen. Das hilft mir IMMER binnen weniger Sekunden einzuschlafen! \ud83d\ude05",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".privacy-settings-header a:not(.active)",
+						"overlay": ".privacy-settings-header a:not(.active)"
+					}
+				]
+			}
+		]
+	},
+	"toplevel_page_wapuugotchi": {
+		"page": "admin.php?page=wapuugotchi",
+		"data": [
+			{
+				"title": "Wapuugotchi",
+				"text": "Willkommen im aller, aller, allerwichtigsten Bereich von allen! ... Mein Bereich! \ud83d\ude04 Naja, zugegeben, er ist nicht unbedingt wichtig, aber lustig! Lass uns mal reinschauen!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#toplevel_page_wapuugotchi",
+						"overlay": "#toplevel_page_wapuugotchi"
+					}
+				]
+			},
+			{
+				"title": "Anpassen",
+				"text": "In diesem Abschnitt kannst du mein Aussehen anpassen. Abgesehen davon hast du hier auch die Möglichkeit mir einen Namen zu geben.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#toplevel_page_wapuugotchi .wp-submenu li a.current",
+						"overlay": "#toplevel_page_wapuugotchi"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Hier kannst du mein Aussehen anpassen. Du kannst mir eine neue Frisur verpassen, mir eine Brille aufsetzen oder mir ein neues T-Shirt anziehen. Ich bin gespannt, was du aus mir machst!",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wapuugotchi-app",
+						"overlay": "#wapuugotchi-app"
+					}
+				]
+			},
+			{
+				"title": "Kategorien",
+				"text": "Die Items, die du mir anlegen kannst, sind in Kategorien unterteilt. Schau immer mal wieder vorbei, denn es kommen ständig neue Items hinzu!",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wapuu_card__categories",
+						"overlay": ".wapuu_card__categories"
+					}
+				]
+			},
+			{
+				"title": "Items",
+				"text": "Hier kannst du alle Items einer Kategorie sehen. Wenn du ein Item anklickst, wird es mir angelegt. Einige Items sind schon freigeschaltet, andere musst du erst freischalten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wapuu_card__items",
+						"overlay": ".wapuu_card__items"
+					}
+				]
+			},
+			{
+				"title": "Perlen",
+				"text": "Hier kannst du sehen, wie viele Perlen du besitzt. Perlen sind die Währung, mit der du neue Items freischalten kannst. Du bekommst Perlen, wenn du Aufgaben erledigst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wapuu_shop__pearls",
+						"overlay": ".wapuu_shop__pearls"
+					}
+				]
+			},
+			{
+				"title": "Community Items",
+				"text": "Zum großen Teil sind die Items von der WordPress Community erstellt worden. Von wem das Item ist, siehst du, wenn du es freischalten möchtest.",
+				"targets": [
+					{
+						"active": true,
+						"focus": ".wapuu_card__item.selected",
+						"overlay": ".wapuu_card__item.selected"
+					}
+				]
+			}
+		]
+	},
+	"wapuugotchi_page_wapuugotchi-quests": {
+		"page": "admin.php?page=wapuugotchi-quests",
+		"data": [
+			{
+				"title": "Aufgaben im Überblick",
+				"text": "Hier befinden wir uns im Bereich 'Aufgaben'. Hier bekommst du einen Überblick darüber, welche Aufgaben du erledigt hast und welche noch auf dich warten.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#toplevel_page_wapuugotchi",
+						"overlay": "#toplevel_page_wapuugotchi"
+					}
+				]
+			},
+			{
+				"title": "Übersicht",
+				"text": "Auf der Übersichtsseite siehst du alle Aufgaben. Du kannst sehen, welche Aufgaben du bereits erledigt hast und welche noch offen sind. Darüber hinaus kannst du auch sehen, wie viele Perlen du für das Abschließen einer bestimmten Aufgabe bekommst.",
+				"targets": [
+					{
+						"active": true,
+						"focus": "#wapuugotchi-app",
+						"overlay": "#wapuugotchi-app"
+					}
+				]
+			},
+			{
+				"title": "Ende!!!",
+				"text": "Weißt du was? Wir sind fertig! Ich habe dir alles erzählt, was ich weiß. Ich hoffe, du hattest ein wenig Spaß und vielleicht auch ein bisschen dazugelernt. Auf jeden Fall finde ich es toll, dass du bis zum Ende durchgehalten hast!",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			},
+			{
+				"title": "Feedback",
+				"text": "Ich würde mich wahnsinnig freuen, wenn du meinen Entwicklern ein Feedback hinterlassen würdest. Das hilft ihnen, mich zu verbessern und dir in Zukunft noch besser zu helfen.",
+				"targets": [
+					{
+						"active": true,
+						"focus": null,
+						"overlay": null
+					}
+				]
+			}
+		]
+	}
+}

@@ -33,7 +33,6 @@ class OnboardingContent {
 	 */
 	public function add_onboarding_data() {
 		global $current_screen;
-		global $wp_version;
 
 		if ( ! $current_screen ) {
 			return;
@@ -41,7 +40,7 @@ class OnboardingContent {
 
 		$camel_case_id = str_replace( array( '_', '-' ), '', ucwords( $current_screen->id, '_-' ) );
 		$file_name     = $camel_case_id . 'Data';
-		$file_path     = plugin_dir_path( __FILE__ ) . $wp_version . '/' . $file_name . '.php';
+		$file_path     = plugin_dir_path( __FILE__ ) . 'data/' . $file_name . '.php';
 
 		if ( file_exists( $file_path ) ) {
 			include_once $file_path;

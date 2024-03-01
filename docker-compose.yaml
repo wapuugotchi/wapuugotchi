@@ -1,0 +1,116 @@
+version: '3.7'
+services:
+  mysql:
+    image: mariadb
+    ports:
+      - '3306'
+    environment:
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: wordpress
+    volumes:
+      - 'mysql:/var/lib/mysql'
+  tests-mysql:
+    image: mariadb
+    ports:
+      - '3306'
+    environment:
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: tests-wordpress
+    volumes:
+      - 'mysql-test:/var/lib/mysql'
+  wordpress:
+    depends_on:
+      - mysql
+    build:
+      context: .
+      dockerfile: WordPress.Dockerfile
+      args: &ref_0
+        HOST_USERNAME: mfeldmann
+        HOST_UID: '501'
+        HOST_GID: '20'
+    ports:
+      - '${WP_ENV_PORT:-8888}:80'
+    environment:
+      APACHE_RUN_USER: '#501'
+      APACHE_RUN_GROUP: '#20'
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: wordpress
+      WP_TESTS_DIR: /wordpress-phpunit
+    volumes: &ref_1
+      - >-
+        /Users/mfeldmann/.wp-env/74371f8d78293c059abcdb1e33a6c79d/WordPress:/var/www/html
+      - >-
+        /Users/mfeldmann/.wp-env/74371f8d78293c059abcdb1e33a6c79d/WordPress-PHPUnit/tests/phpunit:/wordpress-phpunit
+      - 'user-home:/home/mfeldmann'
+      - >-
+        /Users/mfeldmann/Projects/js/react/wapuugotchi/wapuugotchi-onboarding:/var/www/html/wp-content/plugins/wapuugotchi-onboarding
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+  tests-wordpress:
+    depends_on:
+      - tests-mysql
+    build:
+      context: .
+      dockerfile: Tests-WordPress.Dockerfile
+      args: *ref_0
+    ports:
+      - '${WP_ENV_TESTS_PORT:-8889}:80'
+    environment:
+      APACHE_RUN_USER: '#501'
+      APACHE_RUN_GROUP: '#20'
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: tests-wordpress
+      WORDPRESS_DB_HOST: tests-mysql
+      WP_TESTS_DIR: /wordpress-phpunit
+    volumes: &ref_2
+      - >-
+        /Users/mfeldmann/.wp-env/74371f8d78293c059abcdb1e33a6c79d/tests-WordPress:/var/www/html
+      - >-
+        /Users/mfeldmann/.wp-env/74371f8d78293c059abcdb1e33a6c79d/tests-WordPress-PHPUnit/tests/phpunit:/wordpress-phpunit
+      - 'tests-user-home:/home/mfeldmann'
+      - >-
+        /Users/mfeldmann/Projects/js/react/wapuugotchi/wapuugotchi-onboarding:/var/www/html/wp-content/plugins/wapuugotchi-onboarding
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+  cli:
+    depends_on:
+      - wordpress
+    build:
+      context: .
+      dockerfile: CLI.Dockerfile
+      args: *ref_0
+    volumes: *ref_1
+    user: '501:20'
+    environment:
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: wordpress
+      WP_TESTS_DIR: /wordpress-phpunit
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+  tests-cli:
+    depends_on:
+      - tests-wordpress
+    build:
+      context: .
+      dockerfile: Tests-CLI.Dockerfile
+      args: *ref_0
+    volumes: *ref_2
+    user: '501:20'
+    environment:
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: tests-wordpress
+      WORDPRESS_DB_HOST: tests-mysql
+      WP_TESTS_DIR: /wordpress-phpunit
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+volumes:
+  mysql: {}
+  mysql-test: {}
+  user-home: {}
+  tests-user-home: {}

@@ -15,7 +15,6 @@ endif; // No direct access allowed.
  * Class Menu
  */
 class Menu {
-
 	/**
 	 * "Constructor" of this Class
 	 */
@@ -106,10 +105,12 @@ class Menu {
 	public function force_redirect_to_dashboard() {
 		global $current_screen;
 		if ( isset( $current_screen->id ) && $current_screen->base == 'wapuugotchi_page_wapuugotchi-onboarding' ) {
-			wp_redirect(
-				admin_url( 'index.php?onboarding_mode=true' )
-			);
-			exit;
+			if( ! isset( $_GET['onboarding_mode'] ) ) {
+				wp_redirect(
+					admin_url( 'admin.php?page=wapuugotchi-onboarding&onboarding_mode=true' )
+				);
+				exit;
+			}
 		}
 	}
 }

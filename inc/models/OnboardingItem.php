@@ -24,12 +24,20 @@ class OnboardingItem {
 	 * @var string
 	 */
 	public $title = '';
+
 	/**
 	 * The text of the page item.
 	 *
 	 * @var string|null
 	 */
 	public $text = '';
+
+	/**
+	 * Freeze the page if the item is active.
+	 *
+	 * @var string|null
+	 */
+	public $freeze = '';
 
 	/**
 	 * The list of targets for the page item.
@@ -63,6 +71,17 @@ class OnboardingItem {
 	 */
 	public function set_text( $text ) {
 		$this->text = $text;
+		return $this;
+	}
+
+
+	/**
+	 * @param string $freeze
+	 *
+	 * @return OnboardingItem
+	 */
+	public function set_freeze( $freeze ) {
+		$this->freeze = $freeze;
 		return $this;
 	}
 

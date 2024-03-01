@@ -79,7 +79,7 @@ function init() {
 	require_once 'inc/models/OnboardingPage.php';
 	require_once 'inc/models/OnboardingTarget.php';
 	require_once 'inc/models/OnboardingItem.php';
-	require_once 'inc/data/onboarding/OnboardingContent.php';
+	require_once 'inc/filter/onboarding/OnboardingContent.php';
 	new OnboardingManager();
 	new OnboardingContent();
 }

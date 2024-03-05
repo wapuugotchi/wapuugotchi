@@ -37,27 +37,26 @@ class ProfileData {
 	 */
 	public function add_wapuugotchi_filter( $tour ) {
 		$page[] = Page::create()
-		              ->set_page( 'profile' )
-		              ->set_file( 'profile.php' )
-		              ->add_item(
-			              Item::create()
-			                  ->set_title( __( 'Introduction', 'wapuugotchi' ) )
-			                  ->set_text( __( "Welcome to the 'Profile' section. Let's keep it brief: here, you can edit your profile. And on we go! 😅", 'wapuugotchi' ) )
-			                  ->add_target( Target::create()->set_active( true )->set_focus( '#menu-users' )->set_overlay( '#menu-users' ) )
-		              )
-		              ->add_item(
-			              Item::create()
-			                  ->set_title( __( 'Wrap-Up', 'wapuugotchi' ) )
-			                  ->set_text( __( "And just like that, we're done with another section. Users bring life to your website but also pose certain risks. So be careful about who you give what rights to.", 'wapuugotchi' ) )
-			                  ->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
-		              )
-		              ->add_item(
-			              Item::create()
-			                  ->set_title( __( 'Tip', 'wapuugotchi' ) )
-			                  ->set_text( __( "One last tip: there are plugins that enable two-factor authentication. It's an extra layer of security I highly recommend.", 'wapuugotchi' ) )
-			                  ->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
-		              );
-
+						->set_page( 'profile' )
+						->set_file( 'profile.php' )
+						->add_item(
+							Item::create()
+								->set_title( __( 'Introduction', 'wapuugotchi' ) )
+								->set_text( __( "Welcome to the 'Profile' section. Let's keep it brief: here, you can edit your profile. And on we go! 😅", 'wapuugotchi' ) )
+								->add_target( Target::create()->set_active( true )->set_focus( '#menu-users' )->set_overlay( '#menu-users' ) )
+						)
+						->add_item(
+							Item::create()
+								->set_title( __( 'Wrap-Up', 'wapuugotchi' ) )
+								->set_text( __( "And just like that, we're done with another section. Users bring life to your website but also pose certain risks. So be careful about who you give what rights to.", 'wapuugotchi' ) )
+								->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
+						)
+						->add_item(
+							Item::create()
+								->set_title( __( 'Tip', 'wapuugotchi' ) )
+								->set_text( __( "One last tip: there are plugins that enable two-factor authentication. It's an extra layer of security I highly recommend.", 'wapuugotchi' ) )
+								->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
+						);
 
 		return array_merge( $tour, array( $page ) );
 	}

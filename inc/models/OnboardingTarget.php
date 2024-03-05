@@ -24,51 +24,60 @@ class OnboardingTarget {
 	 * @var string
 	 */
 	public $active = true;
+
 	/**
 	 * Focus of the Element.
 	 *
 	 * @var string|null
 	 */
 	public $focus = null;
+
 	/**
 	 * Overlay of the Element.
 	 *
 	 * @var string|null
 	 */
 	public $overlay = null;
+
 	/**
 	 * Delay of the Element.
 	 *
 	 * @var string
 	 */
 	public $delay = 0;
+
 	/**
 	 * Color of the Element.
 	 *
 	 * @var string
 	 */
 	public $color = '#ffcc00';
+
 	/**
 	 * Click of the Element.
 	 *
 	 * @var string
 	 */
 	public $click = null;
+
 	/**
 	 * Clickable of the Element.
 	 *
 	 * @var string
 	 */
 	public $clickable = 0;
+
 	/**
-	 * Hoverability of the Element.
+	 * Possible to hover the element
 	 *
 	 * @var string
 	 */
 	public $hover = 0;
 
 	/**
-	 * @param bool|string $active
+	 * Set to active and return the OnboardingTarget object
+	 *
+	 * @param bool|string $active Active or not.
 	 */
 	public function set_active( $active ) {
 		$this->active = $active;
@@ -76,7 +85,9 @@ class OnboardingTarget {
 	}
 
 	/**
-	 * @param string|null $focus
+	 * Set the focus and return the OnboardingTarget object
+	 *
+	 * @param string|null $focus Focus.
 	 */
 	public function set_focus( $focus ) {
 		$this->focus = $focus;
@@ -84,7 +95,9 @@ class OnboardingTarget {
 	}
 
 	/**
-	 * @param string|null $overlay
+	 * Set the overlay and return the OnboardingTarget object
+	 *
+	 * @param string|null $overlay Overlay.
 	 *
 	 * @return OnboardingTarget
 	 */
@@ -94,7 +107,9 @@ class OnboardingTarget {
 	}
 
 	/**
-	 * @param int|string $delay
+	 * Set the delay and return the OnboardingTarget object
+	 *
+	 * @param int|string $delay Delay.
 	 *
 	 * @return OnboardingTarget
 	 */
@@ -104,7 +119,9 @@ class OnboardingTarget {
 	}
 
 	/**
-	 * @param string $color
+	 * Set the color and return the OnboardingTarget object
+	 *
+	 * @param string $color Color.
 	 *
 	 * @return OnboardingTarget
 	 */
@@ -114,7 +131,9 @@ class OnboardingTarget {
 	}
 
 	/**
-	 * @param string|null $click
+	 * Set the click and return the OnboardingTarget object
+	 *
+	 * @param string|null $click Click.
 	 *
 	 * @return OnboardingTarget
 	 */
@@ -124,7 +143,9 @@ class OnboardingTarget {
 	}
 
 	/**
-	 * @param int|string $clickable
+	 * Set the clickable and return the OnboardingTarget object
+	 *
+	 * @param int|string $clickable Clickable.
 	 *
 	 * @return OnboardingTarget
 	 */
@@ -134,7 +155,9 @@ class OnboardingTarget {
 	}
 
 	/**
-	 * @param false|int|string $hover
+	 * Set the hover and return the OnboardingTarget object
+	 *
+	 * @param false|int|string $hover Hover.
 	 *
 	 * @return OnboardingTarget
 	 */
@@ -144,7 +167,9 @@ class OnboardingTarget {
 	}
 
 	/**
-	 * @return OnboardingTarget
+	 * Create a new OnboardingTarget object
+	 *
+	 * @return OnboardingTarget New OnboardingTarget object.
 	 */
 	public static function create() {
 		return new OnboardingTarget();

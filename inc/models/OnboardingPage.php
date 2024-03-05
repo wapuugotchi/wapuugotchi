@@ -48,9 +48,11 @@ class OnboardingPage {
 	}
 
 	/**
-	 * @param string $page
+	 * Sets the page name
 	 *
-	 * @return OnboardingPage
+	 * @param string $page The name of the page.
+	 *
+	 * @return OnboardingPage the current instance of the class.
 	 */
 	public function set_page( $page ) {
 		$this->page = $page;
@@ -58,9 +60,11 @@ class OnboardingPage {
 	}
 
 	/**
-	 * @param string $file
+	 * Sets the file name of the page.
 	 *
-	 * @return OnboardingPage
+	 * @param string $file The file name of the page.
+	 *
+	 * @return OnboardingPage the current instance of the class.
 	 */
 	public function set_file( $file ) {
 		$this->file = $file;
@@ -68,9 +72,11 @@ class OnboardingPage {
 	}
 
 	/**
-	 * @param array $item_list
+	 * Adds an item to the list of items for the page.
 	 *
-	 * @return OnboardingPage
+	 * @param array $item The list of items for the page.
+	 *
+	 * @return OnboardingPage the current instance of the class.
 	 */
 	public function add_item( $item ) {
 		$this->item_list[] = $item;

@@ -24,7 +24,9 @@ class OnboardingManager {
 	/**
 	 * Get page specific tour data submitted using the filter.
 	 *
-	 * @return bool|mixed|null
+	 * @param string $page The page name.
+	 *
+	 * @return bool|mixed|null The onboarding data.
 	 */
 	public static function get_page_data( $page = null ) {
 		if ( empty( $page ) ) {
@@ -47,6 +49,11 @@ class OnboardingManager {
 		return json_decode( wp_json_encode( $onboarding[0] ), true );
 	}
 
+	/**
+	 * Get global onboarding data.
+	 *
+	 * @return mixed|null The onboarding data.
+	 */
 	public static function get_global_data() {
 		$onboarding = wp_cache_get( 'wapuugotchi_onboarding' );
 
@@ -65,6 +72,11 @@ class OnboardingManager {
 		return $onboarding[0];
 	}
 
+	/**
+	 * Get the onboarding order.
+	 *
+	 * @return array The onboarding order.
+	 */
 	public static function get_onboarding_order() {
 		return array(
 			'wapuugotchi_page_wapuugotchi-onboarding' => 'admin.php?page=wapuugotchi-onboarding',
@@ -107,12 +119,19 @@ class OnboardingManager {
 		);
 	}
 
+	/**
+	 * Get the next page by the current page.
+	 *
+	 * @param string $current_page The current page.
+	 *
+	 * @return string|null The next page.
+	 */
 	public static function get_next_page_by_current_page( $current_page ) {
 		$onboarding_order = self::get_onboarding_order();
 		$next_page        = null;
 
 		$keys        = array_keys( $onboarding_order );
-		$first_index = array_search( $current_page, $keys );
+		$first_index = array_search( $current_page, $keys, true );
 		if ( false !== $first_index && isset( $keys[ $first_index + 1 ] ) ) {
 			$next_page = $onboarding_order[ $keys[ $first_index + 1 ] ];
 		}

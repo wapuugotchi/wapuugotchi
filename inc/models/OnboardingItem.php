@@ -40,7 +40,6 @@ class OnboardingItem {
 	public $freeze = '';
 
 	/**
-	 * The list of targets for the page item.
 	 * The list is an array of OnboardingTarget objects.
 	 *
 	 * @var array
@@ -55,9 +54,11 @@ class OnboardingItem {
 	}
 
 	/**
-	 * @param string $title
+	 * Sets the title of the onboarding item.
 	 *
-	 * @return OnboardingItem
+	 * @param string $title The title of the onboarding item.
+	 *
+	 * @return OnboardingItem The current instance of the class.
 	 */
 	public function set_title( $title ) {
 		$this->title = $title;
@@ -65,9 +66,11 @@ class OnboardingItem {
 	}
 
 	/**
-	 * @param string $texta
+	 * Sets the text of the onboarding item.
 	 *
-	 * @return OnboardingItem
+	 * @param string $text The text of the onboarding item.
+	 *
+	 * @return OnboardingItem The current instance of the class.
 	 */
 	public function set_text( $text ) {
 		$this->text = $text;
@@ -76,9 +79,11 @@ class OnboardingItem {
 
 
 	/**
-	 * @param string $freeze
+	 * Sets the freeze of the onboarding item.
 	 *
-	 * @return OnboardingItem
+	 * @param string $freeze The freeze of the onboarding item.
+	 *
+	 * @return OnboardingItem The current instance of the class.
 	 */
 	public function set_freeze( $freeze ) {
 		$this->freeze = $freeze;
@@ -90,7 +95,7 @@ class OnboardingItem {
 	 *
 	 * @param OnboardingTarget $target The target that shall be added.
 	 *
-	 * @return OnboardingItem
+	 * @return OnboardingItem The current instance of the class.
 	 */
 	public function add_target( $target ) {
 		$this->target_list[] = $target;

@@ -102,11 +102,16 @@ class Menu {
 		echo '<div class="wrap"><div id="wapuugotchi-app"></div></div>';
 	}
 
+	/**
+	 * Redirect to onboarding page if onboarding_mode is not set.
+	 *
+	 * @return void
+	 */
 	public function force_redirect_to_dashboard() {
 		global $current_screen;
-		if ( isset( $current_screen->id ) && $current_screen->base == 'wapuugotchi_page_wapuugotchi-onboarding' ) {
-			if( ! isset( $_GET['onboarding_mode'] ) ) {
-				wp_redirect(
+		if ( isset( $current_screen->id ) && 'wapuugotchi_page_wapuugotchi-onboarding' === $current_screen->base ) {
+			if ( ! isset( $_GET['onboarding_mode'] ) ) {
+				wp_safe_redirect(
 					admin_url( 'admin.php?page=wapuugotchi-onboarding&onboarding_mode=true' )
 				);
 				exit;

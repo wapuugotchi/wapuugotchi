@@ -18,7 +18,7 @@ endif; // No direct access allowed.
 /**
  * Class QuestContent
  */
-class OptionsDiscussionData {
+class OptionsPrivacyData {
 
 	/**
 	 * "Constructor" of the class
@@ -36,25 +36,31 @@ class OptionsDiscussionData {
 	 */
 	public function add_wapuugotchi_filter( $tour ) {
 		$page[] = Page::create()
-						->set_page( 'options-discussion' )
-						->set_file( 'options-discussion.php' )
+						->set_page( 'options-privacy' )
+						->set_file( 'options-privacy.php' )
 						->add_item(
 							Item::create()
-								->set_title( __( 'Discussion', 'wapuugotchi' ) )
-								->set_text( __( "The 'Discussion' section deals with settings related to comments and discussions on your website.", 'wapuugotchi' ) )
+								->set_title( __( 'Privacy', 'wapuugotchi' ) )
+								->set_text( __( "The 'Privacy' section is designed for managing your website's privacy policies.", 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-settings .wp-submenu li a.current' )->set_overlay( '#menu-settings' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Overview', 'wapuugotchi' ) )
-								->set_text( __( 'The settings you choose here will impact how you interact with your visitors. For example, you can set conditions under which comments are allowed.', 'wapuugotchi' ) )
+								->set_text( __( 'This area allows you to ensure that your website complies with privacy policies and legal requirements. There are also plugins available that provide additional support.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						)
 						->add_item(
 							Item::create()
-								->set_title( __( 'Control', 'wapuugotchi' ) )
-								->set_text( __( 'Make sure you maintain control over interactions on your site. This section helps you manage those interactions. Comments, after all, can sometimes lead to legal issues.', 'wapuugotchi' ) )
-								->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
+								->set_title( __( 'Tip 1', 'wapuugotchi' ) )
+								->set_text( __( 'Privacy policies are crucial, especially if your website collects personal data from users through comments, forms, etc. This helps protect you from legal issues.', 'wapuugotchi' ) )
+								->add_target( Target::create()->set_active( true ) )
+						)
+						->add_item(
+							Item::create()
+								->set_title( __( 'Tip 2', 'wapuugotchi' ) )
+								->set_text( __( "If you're having trouble sleeping, consider reading the 'Policy Guide' on privacy statements. It always puts me to sleep in seconds! 😅", 'wapuugotchi' ) )
+								->add_target( Target::create()->set_active( true )->set_focus( '.privacy-settings-header a:not(.active)' )->set_overlay( '.privacy-settings-header a:not(.active)' ) )
 						);
 
 		return array_merge( $tour, array( $page ) );

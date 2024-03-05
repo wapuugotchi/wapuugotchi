@@ -5,15 +5,13 @@ import { useEffect } from '@wordpress/element';
 import GlobalNavigation from './global-navigation';
 
 export default function Navigation() {
-	const { index, pageConfig, nextPage } = useSelect(
-		( select ) => {
-			return {
-				index: select( STORE_NAME ).getIndex(),
-				pageConfig: select( STORE_NAME ).getPageConfig(),
-				nextPage: select( STORE_NAME ).getNextPage()
-			}
-		}
-	);
+	const { index, pageConfig, nextPage } = useSelect( ( select ) => {
+		return {
+			index: select( STORE_NAME ).getIndex(),
+			pageConfig: select( STORE_NAME ).getPageConfig(),
+			nextPage: select( STORE_NAME ).getNextPage(),
+		};
+	} );
 
 	useEffect( () => {
 		window.onkeyup = ( e ) => {
@@ -115,8 +113,11 @@ export default function Navigation() {
 			return false;
 		}
 
-		const dir = window.location.href.substring(0, window.location.href.lastIndexOf('wp-admin'));
-		let url = new URL( dir + 'wp-admin/' + file );
+		const dir = window.location.href.substring(
+			0,
+			window.location.href.lastIndexOf( 'wp-admin' )
+		);
+		const url = new URL( dir + 'wp-admin/' + file );
 		url.searchParams.append( 'onboarding_mode', 'tour' );
 		window.location = url.toString();
 		return true;

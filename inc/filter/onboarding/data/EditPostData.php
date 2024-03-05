@@ -96,7 +96,7 @@ class EditPostData {
 							Item::create()
 								->set_title( __( 'Quick Access', 'wapuugotchi' ) )
 								->set_text( __( 'Hover over a post to see a quick-access menu for important functions. Give it a try!', 'wapuugotchi' ) )
-								->add_target( Target::create()->set_focus( '#the-list tr' )->set_overlay( '#the-list tr' )->set_hover( true ) )
+								->add_target( Target::create()->set_focus( '#the-list tr' )->set_overlay( '#the-list tr' )->set_hover( 1 ) )
 						)
 						->add_item(
 							Item::create()

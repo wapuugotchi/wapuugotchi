@@ -85,7 +85,7 @@ class EditPageData {
 							Item::create()
 								->set_title( __( 'Quick Overview', 'wapuugotchi' ) )
 								->set_text( __( 'Hover over a page to see a menu for quick actions like editing. Give it a try!', 'wapuugotchi' ) )
-								->add_target( Target::create()->set_active( true )->set_focus( '#the-list tr' )->set_overlay( '#the-list tr' )->set_hover( true ) )
+								->add_target( Target::create()->set_active( true )->set_focus( '#the-list tr' )->set_overlay( '#the-list tr' )->set_hover( 1 ) )
 						)
 						->add_item(
 							Item::create()

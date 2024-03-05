@@ -18,7 +18,7 @@ export default function Overlay() {
 			<div
 				id="wapuugotchi_onboarding__overlay"
 				className={
-					pageConfig?.[ index ]?.targets?.[ 0 ]?.hover === true
+					pageConfig?.[ index ]?.target_list?.[ 0 ]?.hover === 1
 						? 'unlocked'
 						: ''
 				}

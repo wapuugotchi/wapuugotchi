@@ -42,7 +42,7 @@ class DashboardData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Exploring the Dashboard', 'wapuugotchi' ) )
-								->set_text( __( 'Let\'s zoom into our first area: the "Dashboard". This is where you\'ll find all the key info from every corner of your site. Let\'s peek inside!', 'wapuugotchi' ) )
+								->set_text( __( 'Let\'s zoom into our first area: the "Dashboard". This is where you\'ll find all the key info from every corner of your website. Let\'s peek inside!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '#menu-dashboard' )->set_overlay( '#menu-dashboard' ) )
 						)
 						->add_item(
@@ -54,13 +54,13 @@ class DashboardData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'The Rundown', 'wapuugotchi' ) )
-								->set_text( __( 'Your homepage gives you a summary of everything – new posts, recent comments, and stats from across your site.', 'wapuugotchi' ) )
+								->set_text( __( 'This section gives you a summary of everything – new posts, recent comments, and stats from across your site.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Customize It', 'wapuugotchi' ) )
-								->set_text( __( 'You\'ve got the power to tweak your homepage. Turn off sections that don\'t spark your interest. It\'s all in your hands!', 'wapuugotchi' ) )
+								->set_text( __( 'You\'ve got the power to tweak your "Home" screen. Turn off elements that don\'t spark your interest. It\'s all in your hands!', 'wapuugotchi' ) )
 								->set_freeze( 20000 )
 								->add_target( Target::create()->set_focus( 'button#show-settings-link' )->set_overlay( 'button#show-settings-link' ) )
 								->add_target( Target::create()->set_focus( 'button#show-settings-link' )->set_overlay( 'button#show-settings-link' )->set_color( '#FF0000' ) )

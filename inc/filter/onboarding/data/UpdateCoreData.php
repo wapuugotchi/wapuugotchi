@@ -41,7 +41,7 @@ class UpdateCoreData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Updates', 'wapuugotchi' ) )
-								->set_text( __( 'Alright, we\'re now in the "Updates" area of the Dashboard. This is where you\'ll get to keep your website looking sharp and up-to-date.', 'wapuugotchi' ) )
+								->set_text( __( 'Alright, we\'re now in the "Updates" section of the Dashboard. This is where you\'ll get to keep your website looking sharp and up-to-date.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '#menu-dashboard .wp-submenu li a.current' )->set_overlay( '#menu-dashboard' ) )
 						)
 						->add_item(

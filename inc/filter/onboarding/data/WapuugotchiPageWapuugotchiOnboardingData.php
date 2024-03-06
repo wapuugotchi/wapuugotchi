@@ -42,7 +42,7 @@ class WapuugotchiPageWapuugotchiOnboardingData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Welcome Aboard!', 'wapuugotchi' ) )
-								->set_text( __( 'Hey there! Welcome to your journey through the WordPress universe! I\'m super excited to guide you through your first steps in WordPress. Let\'s dive right in!', 'wapuugotchi' ) )
+								->set_text( __( 'Hey there! Welcome to your journey through the WordPress universe! I\'m super excited to guide you through your first steps in WordPress. First things first, we\'re diving into two essentials: the Admin Bar and the Sidebar. Let\'s go!', 'wapuugotchi' ) )
 								->add_target( Target::create() )
 						)
 						->add_item(
@@ -54,7 +54,30 @@ class WapuugotchiPageWapuugotchiOnboardingData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Navigating the Site', 'wapuugotchi' ) )
-								->set_text( __( 'The side navigation makes hopping between different parts of your site a breeze. Each main area has several subsections, which we\'ll call "sections" from here on.', 'wapuugotchi' ) )
+								->set_text( __( 'The Sidebar makes hopping between different areas of your site a breeze. Each main area has several subsections, which we\'ll call "sections" from here on.', 'wapuugotchi' ) )
+								->add_target( Target::create()->set_focus( '#adminmenuwrap' )->set_overlay( '#adminmenuwrap' ) )
+						)
+						->add_item(
+							Item::create()
+								->set_title( __( 'Tip 1', 'wapuugotchi' ) )
+								->set_text( __( 'Quick heads-up: Want a clearer view of your side? You can always collapse the sidebar. Neat trick, right?', 'wapuugotchi' ) )
+								->set_freeze( 5500 )
+								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' ) )
+								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_color( '#FF0000' ) )
+								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_click( '#collapse-button' )->set_delay( 1000 )->set_color( '#FF0000' ) )
+								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_color( '#FF0000' ) )
+								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_click( '#collapse-button' )->set_delay( 1000 )->set_color( '#FF0000' ) )
+								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_color( '#FF0000' ) )
+								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_click( '#collapse-button' )->set_delay( 1000 )->set_color( '#FF0000' ) )
+								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_color( '#FF0000' ) )
+								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_click( '#collapse-button' )->set_delay( 1000 )->set_color( '#FF0000' ) )
+								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_color( '#FF0000' ) )
+								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_delay( 500 ) )
+						)
+						->add_item(
+							Item::create()
+								->set_title( __( 'Navigating the Site', 'wapuugotchi' ) )
+								->set_text( __( 'Let\'s take a closer look at each area and there sections. We\'ll uncover the ins and outs, showing you how every part plays its role in the grand WordPress scheme. Ready to explore?', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '#adminmenuwrap' )->set_overlay( '#adminmenuwrap' ) )
 						);
 

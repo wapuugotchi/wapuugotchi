@@ -109,5 +109,32 @@
 		&.invisible {
 			visibility: hidden;
 		}
+
+		.dashicons-controls-play:not(.disabled) {
+			animation: pulse 2s 2 linear 3s;
+		}
+		@keyframes pulse {
+			0% {
+				transform: scale(1);  /* Startgröße */
+				opacity: 1;  /* Startopazität */
+			}
+			15% {
+				transform: scale(2); /* Vergrößerte Größe */
+				opacity: 0.2; /* Verringerte Opazität */
+			}
+			30% {
+				transform: scale(1); /* Rückkehr zur Startgröße */
+				opacity: 1; /* Rückkehr zur Startopazität */
+			}
+			45% {
+				transform: scale(2); /* Vergrößerte Größe */
+				opacity: 0.2; /* Verringerte Opazität */
+			}
+			60% {
+				transform: scale(1); /* Rückkehr zur Startgröße */
+				opacity: 1; /* Rückkehr zur Startopazität */
+			}
+		}
+
 	}
 }

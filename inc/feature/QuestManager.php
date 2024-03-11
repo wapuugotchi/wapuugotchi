@@ -5,7 +5,7 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\Wapuugotchi;
+namespace Wapuugotchi\Wapuugotchi\Feature;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
@@ -162,9 +162,9 @@ class QuestManager {
 		}
 
 		if ( $pearls > 0 ) {
-			$balance  = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ) );
+			$balance  = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', true ) );
 			$balance += $pearls;
-			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', $balance );
+			update_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', $balance );
 		}
 	}
 }

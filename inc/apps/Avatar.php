@@ -5,7 +5,10 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\Wapuugotchi;
+namespace Wapuugotchi\Wapuugotchi\Apps;
+
+use Wapuugotchi\Wapuugotchi\Feature\QuestManager;
+use Wapuugotchi\Wapuugotchi\Helper;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
@@ -53,8 +56,8 @@ class Avatar {
 					array(
 						'categories' => \get_transient( 'wapuugotchi_categories' ),
 						'items'      => Helper::get_items(),
-						'balance'    => get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ),
-						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ),
+						'balance'    => get_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', true ),
+						'wapuu'      => json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_equipped_items__alpha', true ) ),
 						'message'    => $this->get_notifications(),
 						'intention'  => false,
 						'restBase'   => Helper::get_rest_api(),

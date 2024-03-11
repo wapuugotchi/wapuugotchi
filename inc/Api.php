@@ -139,7 +139,7 @@ class Api {
 	public function set_settings( $req ) {
 		$check = false;
 		if ( ! empty( $req['wapuu'] ) ) {
-			update_user_meta( get_current_user_id(), 'wapuugotchi__alpha', wp_json_encode( $req['wapuu'] ) );
+			update_user_meta( get_current_user_id(), 'wapuugotchi_equipped_items__alpha', wp_json_encode( $req['wapuu'] ) );
 			$check = true;
 		}
 
@@ -203,7 +203,7 @@ class Api {
 	 * @return WP_Error|\WP_HTTP_Response|WP_REST_Response
 	 */
 	public function get_balance() {
-		$balance = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ) );
+		$balance = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', true ) );
 
 		return rest_ensure_response( array( 'balance' => $balance ) );
 	}
@@ -216,7 +216,7 @@ class Api {
 	 * @return WP_Error|\WP_HTTP_Response|WP_REST_Response
 	 */
 	public function update_balance( $req ) {
-		$balance = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ) );
+		$balance = json_decode( get_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', true ) );
 		$body    = json_decode( $req->get_body() );
 		$amount  = $body->amount;
 		if ( gettype( $amount ) !== 'integer' ) {
@@ -226,7 +226,7 @@ class Api {
 		if ( $balance < 0 ) {
 			return rest_ensure_response( new WP_Error( __( 'Insufficent balance', 'wapuugotchi' ) ) );
 		}
-		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', $balance );
+		update_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', $balance );
 
 		return rest_ensure_response( array( 'balance' => $balance ) );
 	}
@@ -239,7 +239,7 @@ class Api {
 	 * @return WP_Error|\WP_HTTP_Response|WP_REST_Response
 	 */
 	public function unlock_wearable( WP_REST_Request $request ) {
-		$balance = get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true );
+		$balance = get_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', true );
 		$params  = $request->get_json_params();
 
 		if ( ! isset( $params['uuid'] ) ) {
@@ -252,7 +252,7 @@ class Api {
 			return rest_ensure_response( new WP_Error( 'already_unlocked', __( 'Item already unlocked.', 'wapuugotchi' ), array( 'status' => 400 ) ) );
 		}
 
-		$balance           = get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true );
+		$balance           = get_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', true );
 		$wapuugotchi_items = get_transient( 'wapuugotchi_items' );
 
 		$item = null;
@@ -270,7 +270,7 @@ class Api {
 		}
 
 		$balance = $balance - $item->meta->price;
-		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', $balance );
+		update_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', $balance );
 		$unlocked_items[] = $params['uuid'];
 		update_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', $unlocked_items );
 
@@ -286,12 +286,12 @@ class Api {
 	 */
 	public function update_purchases( $req ) {
 		$bought    = false;
-		$purchases = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true );
-		$balance   = bcsub( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ), $req['item']['price'] );
+		$purchases = get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true );
+		$balance   = bcsub( get_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', true ), $req['item']['price'] );
 		if ( ! in_array( $req['item']['key'], $purchases, true ) && $balance >= 0 ) {
 			$purchases[] = $req['item']['key'];
-			update_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', $purchases );
-			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', $balance );
+			update_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', $purchases );
+			update_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', $balance );
 
 			$bought = true;
 		}

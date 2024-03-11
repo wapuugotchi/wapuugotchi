@@ -22,5 +22,10 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "composer/installers": true
         }
-    }
+    },
+	"autoload": {
+		"psr-4": {
+			"Wapuugotchi\\Wapuugotchi\\": "inc/"
+		}
+	}
 }

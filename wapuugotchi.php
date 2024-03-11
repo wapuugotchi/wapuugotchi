@@ -15,6 +15,16 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
+use Wapuugotchi\Wapuugotchi\Apps\Avatar;
+use Wapuugotchi\Wapuugotchi\Apps\Customizer;
+use Wapuugotchi\Wapuugotchi\Apps\Log;
+use Wapuugotchi\Wapuugotchi\Feature\QuestManager;
+use Wapuugotchi\Wapuugotchi\Tasks\QuestContent;
+use Wapuugotchi\Wapuugotchi\Tasks\QuestDate;
+use Wapuugotchi\Wapuugotchi\Tasks\QuestPlugin;
+use Wapuugotchi\Wapuugotchi\Tasks\QuestStart;
+use Wapuugotchi\Wapuugotchi\Tasks\QuestTheme;
+
 if ( ! defined( 'WAPUUGOTCHI_PATH' ) ) {
 	define( 'WAPUUGOTCHI_PATH', \plugin_dir_path( __FILE__ ) );
 }
@@ -35,28 +45,15 @@ if ( is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
  * @return void
  */
 function init() {
-	require_once 'inc/Api.php';
-	require_once 'inc/Menu.php';
-	require_once 'inc/Manager.php';
-	require_once 'inc/Helper.php';
+
 	new Api();
 	new Menu();
 	new Manager();
 
-	require_once 'inc/apps/Customizer.php';
 	new Customizer();
-	require_once 'inc/apps/Log.php';
 	new Log();
-	require_once 'inc/apps/Avatar.php';
 	new Avatar();
 
-	require_once 'inc/feature/QuestManager.php';
-	require_once 'inc/models/Quest.php';
-	require_once 'inc/tasks/QuestContent.php';
-	require_once 'inc/tasks/QuestPlugin.php';
-	require_once 'inc/tasks/QuestTheme.php';
-	require_once 'inc/tasks/QuestDate.php';
-	require_once 'inc/tasks/QuestStart.php';
 	new QuestManager();
 	new QuestContent();
 	new QuestPlugin();

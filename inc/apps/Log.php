@@ -5,7 +5,9 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\Wapuugotchi;
+namespace Wapuugotchi\Wapuugotchi\Apps;
+
+use Wapuugotchi\Wapuugotchi\Feature\QuestManager;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();

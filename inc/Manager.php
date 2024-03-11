@@ -29,20 +29,22 @@ class Manager {
 	 * @return void
 	 */
 	public function init() {
-		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi__alpha', true ) ) ) {
+		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_equipped_items__alpha', true ) ) ) {
 			update_user_meta(
 				get_current_user_id(),
-				'wapuugotchi__alpha',
+				'wapuugotchi_equipped_items__alpha',
 				file_get_contents( \plugin_dir_path( __DIR__ ) . 'config/default.json' )
 			);
 		}
-		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ) ) ) {
-			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 0 );
+		update_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', 1000 );
+
+		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', true ) ) ) {
+			update_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha', 0 );
 		}
-		if ( !is_array( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) ) {
+		if ( ! is_array( get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true ) ) ) {
 			update_user_meta(
 				get_current_user_id(),
-				'wapuugotchi_purchases__alpha',
+				'wapuugotchi_unlocked_items__alpha',
 				array()
 			);
 		}
@@ -122,7 +124,7 @@ class Manager {
 		}
 
 		$keys = array_keys( $item );
-		$md5  = md5( wp_json_encode( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ), true ) );
+		$md5  = md5( wp_json_encode( get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true ), true ) );
 		if ( $keys[0] !== $md5 ) {
 			return false;
 		}
@@ -161,7 +163,7 @@ class Manager {
 	 */
 	private function set_frontend_data() {
 		$result     = array();
-		$purchases  = get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true );
+		$purchases  = get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true );
 		$collection = get_transient( 'wapuugotchi_collection' );
 		if ( ! is_array( $collection ) ) {
 			return;
@@ -194,7 +196,7 @@ class Manager {
 				$items_collection[ $collection->slug ][ $item->meta->key ] = $item;
 			}
 		}
-		$md5 = md5( wp_json_encode( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) );
+		$md5 = md5( wp_json_encode( get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true ) ) );
 
 		set_transient( 'wapuugotchi_items', array( $md5 => $items_collection ) );
 		set_transient( 'wapuugotchi_categories', $category_collection );
@@ -211,9 +213,9 @@ class Manager {
 		delete_transient( 'wapuugotchi_items' );
 		delete_transient( 'wapuugotchi_collection_checked_today' );
 
-		delete_user_meta( get_current_user_id(), 'wapuugotchi__alpha' );
+		delete_user_meta( get_current_user_id(), 'wapuugotchi_equipped_items__alpha' );
 		delete_user_meta( get_current_user_id(), 'wapuugotchi_completed_quests__alpha' );
-		delete_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha' );
-		delete_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha' );
+		delete_user_meta( get_current_user_id(), 'wapuugotchi_pearls_balance__alpha' );
+		delete_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha' );
 	}
 }

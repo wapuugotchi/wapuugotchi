@@ -5,7 +5,7 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\Wapuugotchi;
+namespace Wapuugotchi\Wapuugotchi\Tasks;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
@@ -32,15 +32,15 @@ class QuestContent {
 	 */
 	public function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Wapuugotchi\Quest( 'count_posts_1', null, __( 'Create 3 posts', 'wapuugotchi' ), __( 'You created 3 posts!!', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Wapuugotchi\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\QuestContent::first_post_completed' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'count_posts_2', 'count_posts_1', __( 'Create 5 posts', 'wapuugotchi' ), __( 'You created 5 posts!!', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\QuestContent::second_post_completed' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'count_posts_3', 'count_posts_2', __( 'Create 7 posts', 'wapuugotchi' ), __( 'You created 7 posts!!', 'wapuugotchi' ), 'success', 100, 3, 'Wapuugotchi\Wapuugotchi\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\QuestContent::third_post_completed' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'count_pages_1', null, __( 'Create 3 pages', 'wapuugotchi' ), __( 'You created 3 pages!!', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Wapuugotchi\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\QuestContent::first_page_completed' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'count_pages_2', 'count_pages_1', __( 'Create 5 pages', 'wapuugotchi' ), __( 'You created 5 pages!!', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\QuestContent::second_page_completed' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'count_pages_3', 'count_pages_3', __( 'Create 7 pages', 'wapuugotchi' ), __( 'You created 7 pages!!', 'wapuugotchi' ), 'success', 100, 3, 'Wapuugotchi\Wapuugotchi\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\QuestContent::third_page_completed' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'count_comment_1', null, __( 'Get 1 comment', 'wapuugotchi' ), __( 'Cool, we get some attention. &#10024;', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Wapuugotchi\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\QuestContent::get_comments_completed_1' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'count_comment_2', 'count_comment_1', __( 'Get 5 comments', 'wapuugotchi' ), __( 'We get more and more attention. &#10024;', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\QuestContent::get_comments_completed_2' ),
-			new \Wapuugotchi\Wapuugotchi\Quest( 'count_comment_3', 'count_comment_2', __( 'Get 10 comments', 'wapuugotchi' ), __( 'Oh my god!', 'wapuugotchi' ) . PHP_EOL . __( 'We are starting to become famous. &#127775;', 'wapuugotchi' ), 'success', 100, 3, 'Wapuugotchi\Wapuugotchi\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\QuestContent::get_comments_completed_3' ),
+			new \Wapuugotchi\Wapuugotchi\Models\Quest( 'count_posts_1', null, __( 'Create 3 posts', 'wapuugotchi' ), __( 'You created 3 posts!!', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::first_post_completed' ),
+			new \Wapuugotchi\Wapuugotchi\Models\Quest( 'count_posts_2', 'count_posts_1', __( 'Create 5 posts', 'wapuugotchi' ), __( 'You created 5 posts!!', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::second_post_completed' ),
+			new \Wapuugotchi\Wapuugotchi\Models\Quest( 'count_posts_3', 'count_posts_2', __( 'Create 7 posts', 'wapuugotchi' ), __( 'You created 7 posts!!', 'wapuugotchi' ), 'success', 100, 3, 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::third_post_completed' ),
+			new \Wapuugotchi\Wapuugotchi\Models\Quest( 'count_pages_1', null, __( 'Create 3 pages', 'wapuugotchi' ), __( 'You created 3 pages!!', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::first_page_completed' ),
+			new \Wapuugotchi\Wapuugotchi\Models\Quest( 'count_pages_2', 'count_pages_1', __( 'Create 5 pages', 'wapuugotchi' ), __( 'You created 5 pages!!', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::second_page_completed' ),
+			new \Wapuugotchi\Wapuugotchi\Models\Quest( 'count_pages_3', 'count_pages_3', __( 'Create 7 pages', 'wapuugotchi' ), __( 'You created 7 pages!!', 'wapuugotchi' ), 'success', 100, 3, 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::third_page_completed' ),
+			new \Wapuugotchi\Wapuugotchi\Models\Quest( 'count_comment_1', null, __( 'Get 1 comment', 'wapuugotchi' ), __( 'Cool, we get some attention. &#10024;', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::get_comments_completed_1' ),
+			new \Wapuugotchi\Wapuugotchi\Models\Quest( 'count_comment_2', 'count_comment_1', __( 'Get 5 comments', 'wapuugotchi' ), __( 'We get more and more attention. &#10024;', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::get_comments_completed_2' ),
+			new \Wapuugotchi\Wapuugotchi\Models\Quest( 'count_comment_3', 'count_comment_2', __( 'Get 10 comments', 'wapuugotchi' ), __( 'Oh my god!', 'wapuugotchi' ) . PHP_EOL . __( 'We are starting to become famous. &#127775;', 'wapuugotchi' ), 'success', 100, 3, 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::always_true', 'Wapuugotchi\Wapuugotchi\Tasks\QuestContent::get_comments_completed_3' ),
 		);
 
 		return array_merge( $default_quest, $quests );

@@ -15,6 +15,7 @@ endif; // No direct access allowed.
  * Class Avatar
  */
 class Avatar {
+	const PREVENT_AVATAR_DISPLAY = array( 'post.php', 'toplevel_page_wapuugotchi' );
 
 	/**
 	 * "Constructor" of this Class
@@ -31,7 +32,7 @@ class Avatar {
 	 * @return void
 	 */
 	public function init( $hook_suffix ) {
-		if ( 'index.php' === $hook_suffix ) {
+		if ( ! in_array( $hook_suffix, self::PREVENT_AVATAR_DISPLAY, true ) ) {
 			$this->load_scripts();
 		}
 	}

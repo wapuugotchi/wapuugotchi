@@ -86,8 +86,10 @@ export default function Navigation() {
 				if ( button.classList.contains( 'disabled' ) === false ) {
 					dispatch( STORE_NAME ).setIndex( nextIndex );
 				}
-			} else {
+			} else if ( typeof nextPage === 'string' ) {
 				redirectToPage( nextPage );
+			} else {
+				stop();
 			}
 		}
 	};

@@ -19,6 +19,9 @@ Complete tasks within your WordPress instance to earn points, unlock new items, 
 
 == Changelog ==
 
+= 0.1.6 =
+- Tests for WordPress 6.5
+
 = 0.1.5 =
 - Tests for WordPress 6.4.2
 

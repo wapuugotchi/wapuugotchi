@@ -2,7 +2,7 @@
 Contributors:      wapuugotchi, herrfeldmann, ancocodet, acali, coachbirgit, pfefferle, lgersman, tobibode, sabrinaw, fettnei, dionysous, thchoperpilot
 Tags:              assistant, wapuu, gamification
 Stable tag:        0.1.5
-Requires at least: 6.0
+Requires at least: 6.2
 Tested up to:      6.5
 Requires PHP:      7.0
 License:           GPLv2 or later

@@ -41,13 +41,13 @@ class OptionsPermalinkData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Permalink', 'wapuugotchi' ) )
-								->set_text( __( "The 'Permalink' section deals with settings for the URL structure of your website.", 'wapuugotchi' ) )
+								->set_text( __( 'The "Permalink" page deals with settings for the URL structure of your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Permalink Structure', 'wapuugotchi' ) )
-								->set_text( __( "It's important to carefully choose your permalink structure, as it affects not just the aesthetics of your URLs but also your website’s search engine optimization (SEO) and user-friendliness.", 'wapuugotchi' ) )
+								->set_text( __( 'It\'s important to carefully choose your permalink structure, as it affects not just the aesthetics of your URLs but also your website’s search engine optimization (SEO) and user-friendliness.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '.permalink-structure' )->set_overlay( '.permalink-structure' ) )
 						)
 						->add_item(

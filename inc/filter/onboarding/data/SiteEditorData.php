@@ -42,7 +42,7 @@ class SiteEditorData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Comments', 'wapuugotchi' ) )
-								->set_text( __( "To be totally honest? I'm not sure... But I'll take care of it!", 'wapuugotchi' ) )
+								->set_text( __( 'To be totally honest? I\'m not sure... But I\'ll take care of it!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
 						);
 

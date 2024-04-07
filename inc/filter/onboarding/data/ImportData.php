@@ -41,7 +41,7 @@ class ImportData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Import', 'wapuugotchi' ) )
-								->set_text( __( "Welcome to the 'Import' section. Here, you can import content from other websites or WordPress installations.", 'wapuugotchi' ) )
+								->set_text( __( 'Welcome to the "Import" page. Here, you can import content from other websites or WordPress installations.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-tools .wp-submenu li a.current' )->set_overlay( '#menu-tools' ) )
 						)
 						->add_item(

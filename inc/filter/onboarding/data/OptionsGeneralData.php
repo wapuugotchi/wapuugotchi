@@ -41,13 +41,13 @@ class OptionsGeneralData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Settings', 'wapuugotchi' ) )
-								->set_text( __( "The 'Settings' section allows you to set up the general settings for your website.", 'wapuugotchi' ) )
+								->set_text( __( 'The "Settings" page allows you to set up the general settings for your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-settings' )->set_overlay( '#menu-settings' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'General', 'wapuugotchi' ) )
-								->set_text( __( "The 'General' section is the first page you see when you enter 'Settings'. Here, you can set your website's name, URL, timezone, and date format.", 'wapuugotchi' ) )
+								->set_text( __( 'The "General" page is the first page you see when you enter "Settings". Here, you can set your website\'s name, URL, timezone, and date format.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-settings .wp-submenu li a.current' )->set_overlay( '#menu-settings' ) )
 						)
 						->add_item(

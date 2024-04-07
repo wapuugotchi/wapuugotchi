@@ -42,7 +42,7 @@ class UploadData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Media', 'wapuugotchi' ) )
-								->set_text( __( 'Now we\'re in the "Media" section. This is where you manage all the media files you add to your posts or pages.', 'wapuugotchi' ) )
+								->set_text( __( 'Now we\'re on the "Media" page. This is where you manage all the media files you add to your posts or pages.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-media' )->set_overlay( '#menu-media' ) )
 						)
 						->add_item(

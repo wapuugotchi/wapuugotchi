@@ -41,7 +41,7 @@ class OptionsDiscussionData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Discussion', 'wapuugotchi' ) )
-								->set_text( __( "The 'Discussion' section deals with settings related to comments and discussions on your website.", 'wapuugotchi' ) )
+								->set_text( __( 'The "Discussion" page deals with settings related to comments and discussions on your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-settings .wp-submenu li a.current' )->set_overlay( '#menu-settings' ) )
 						)
 						->add_item(
@@ -53,7 +53,7 @@ class OptionsDiscussionData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Control', 'wapuugotchi' ) )
-								->set_text( __( 'Make sure you maintain control over interactions on your site. This section helps you manage those interactions. Comments, after all, can sometimes lead to legal issues.', 'wapuugotchi' ) )
+								->set_text( __( 'Make sure you maintain control over interactions on your website. This page helps you manage those interactions. Comments, after all, can sometimes lead to legal issues.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
 						);
 

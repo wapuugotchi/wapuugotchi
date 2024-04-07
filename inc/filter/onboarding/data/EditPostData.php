@@ -41,13 +41,13 @@ class EditPostData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Welcome to Posts', 'wapuugotchi' ) )
-								->set_text( __( 'Welcome to your "Posts" section! This is where you get to create, edit, and manage all your dynamic content.', 'wapuugotchi' ) )
+								->set_text( __( 'We\'re on the "Posts" page now! This is where you can create, tweak, and organize all your dynamic content.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '#menu-posts' )->set_overlay( '#menu-posts' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'All Posts', 'wapuugotchi' ) )
-								->set_text( __( 'In "All Posts", you can view, organize, and manage all your posts at a glance. Additionally, you can create new posts from here.', 'wapuugotchi' ) )
+								->set_text( __( 'In "All Posts", you can view, organize, and manage all your posts at a glance. Additionally, you can start making new posts right from here!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '#menu-posts .wp-submenu li a.current' )->set_overlay( '#menu-posts' ) )
 						)
 						->add_item(
@@ -77,7 +77,7 @@ class EditPostData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Categories', 'wapuugotchi' ) )
-								->set_text( __( 'This shows the categories assigned to a post. Categories help organize content on your site in a structured way.', 'wapuugotchi' ) )
+								->set_text( __( 'This shows the categories assigned to a post. Categories help organize content on your website in a structured way.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( 'td.categories' )->set_overlay( 'td.categories' ) )
 						)
 						->add_item(
@@ -113,7 +113,7 @@ class EditPostData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Create', 'wapuugotchi' ) )
-								->set_text( __( 'Behind the "Create" button, you can start crafting new content for your site. It\'ll guide you through the process step by step!', 'wapuugotchi' ) )
+								->set_text( __( 'Behind the "Create" button, you can start crafting new content for your website. It\'ll guide you through the process step by step!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '.page-title-action' )->set_overlay( '.page-title-action' ) )
 						);
 

@@ -42,7 +42,7 @@ class MediaData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Add New', 'wapuugotchi' ) )
-								->set_text( __( 'The "Add New" section lets you upload fresh media like images, videos, or audio files to your media library.', 'wapuugotchi' ) )
+								->set_text( __( 'The "Add New" page lets you upload fresh media like images, videos, or audio files to your media library.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-media .wp-submenu li a.current' )->set_overlay( '#menu-media' ) )
 						)
 						->add_item(

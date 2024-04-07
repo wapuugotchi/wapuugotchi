@@ -41,19 +41,19 @@ class ThemeEditorData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Edit Themes', 'wapuugotchi' ) )
-								->set_text( __( "The 'Edit Themes' section allows you to modify the files of your theme.", 'wapuugotchi' ) )
+								->set_text( __( 'The "Edit Themes" page allows you to modify the files of your theme.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-tools .wp-submenu li a.current' )->set_overlay( '#menu-tools' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Overview', 'wapuugotchi' ) )
-								->set_text( __( "Here, you can make direct changes to the files of your theme. You should have some programming knowledge if you're going to hang out in this section.", 'wapuugotchi' ) )
+								->set_text( __( 'Here, you can make direct changes to the files of your theme. You should have some programming knowledge if you\'re going to hang out in this page.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Warning', 'wapuugotchi' ) )
-								->set_text( __( "Heads up! Editing files can damage your website. If you're not sure what you're doing, it's better to steer clear of this.", 'wapuugotchi' ) )
+								->set_text( __( 'Heads up! Editing files can damage your website. If you\'re not sure what you\'re doing, it\'s better to steer clear of this.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
 						);
 

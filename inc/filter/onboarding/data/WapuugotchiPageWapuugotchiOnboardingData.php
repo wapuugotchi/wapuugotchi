@@ -42,25 +42,31 @@ class WapuugotchiPageWapuugotchiOnboardingData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Welcome Aboard!', 'wapuugotchi' ) )
-								->set_text( __( 'Hey there! Welcome to your journey through the WordPress universe! I\'m super excited to guide you through your first steps in WordPress. First things first, we\'re diving into two essentials: the Admin Bar and the Sidebar. Let\'s go!', 'wapuugotchi' ) )
+								->set_text( __( 'Hey there! Welcome to your journey through the WordPress universe! I\'m super excited to guide you through your first steps in WordPress. First, we are going to dive into two essentials: the admin bar and the admin menu. Let\'s go!', 'wapuugotchi' ) )
 								->add_target( Target::create() )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'The Admin-Bar', 'wapuugotchi' ) )
-								->set_text( __( 'First stop, the Admin-Bar! This is your quick access lane to key areas and info. You\'ll also get a snapshot of pending updates and comments here.', 'wapuugotchi' ) )
+								->set_text( __( 'First stop, the admin bar! This is your quick access lane to key areas and information. You will also get a snapshot of pending updates and comments here.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '#wpadminbar' )->set_overlay( '#wpadminbar' ) )
 						)
 						->add_item(
 							Item::create()
-								->set_title( __( 'Navigating the Site', 'wapuugotchi' ) )
-								->set_text( __( 'The Sidebar makes hopping between different areas of your site a breeze. Each main area has several subsections, which we\'ll call "sections" from here on.', 'wapuugotchi' ) )
-								->add_target( Target::create()->set_focus( '#adminmenuwrap' )->set_overlay( '#adminmenuwrap' ) )
+							    ->set_title( __( 'Navigating the website', 'wapuugotchi' ) )
+							    ->set_text( __( 'The admin menu makes switching between different areas of your website a breeze. You can easily access one of these areas by clicking on a main menu item.', 'wapuugotchi' ) )
+							    ->add_target( Target::create()->set_focus( '#adminmenuwrap' )->set_overlay( '#adminmenuwrap' ) )
+						)
+						->add_item(
+							Item::create()
+							    ->set_title( __( 'About submenus', 'wapuugotchi' ) )
+								->set_text( __( 'After clicking on a main menu item, you’ll see some submenu items pop up underneath. They\'re like special little tools that let you do things related to the main menu item you clicked on. It\'s pretty neat and super helpful!', 'wapuugotchi' ) )
+							    ->add_target( Target::create()->set_focus( '#toplevel_page_wapuugotchi' )->set_overlay( '#toplevel_page_wapuugotchi' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Tip 1', 'wapuugotchi' ) )
-								->set_text( __( 'Quick heads-up: Want a clearer view of your side? You can always collapse the sidebar. Neat trick, right?', 'wapuugotchi' ) )
+								->set_text( __( 'A quick heads-up: Want a wider view of your website? You can always collapse the admin menu. Neat trick, right?', 'wapuugotchi' ) )
 								->set_freeze( 5500 )
 								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' ) )
 								->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_color( '#FF0000' ) )
@@ -76,8 +82,8 @@ class WapuugotchiPageWapuugotchiOnboardingData {
 						)
 						->add_item(
 							Item::create()
-								->set_title( __( 'Navigating the Site', 'wapuugotchi' ) )
-								->set_text( __( 'Let\'s take a closer look at each area and there sections. We\'ll uncover the ins and outs, showing you how every part plays its role in the grand WordPress scheme. Ready to explore?', 'wapuugotchi' ) )
+								->set_title( __( 'Navigating the website', 'wapuugotchi' ) )
+								->set_text( __( 'Let\'s take a closer look at each main menu item. We\'ll uncover the ins and outs, showing you how every part plays its role in the grand WordPress scheme. Ready to explore?', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '#adminmenuwrap' )->set_overlay( '#adminmenuwrap' ) )
 						);
 

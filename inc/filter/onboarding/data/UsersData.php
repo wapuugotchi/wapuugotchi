@@ -42,19 +42,19 @@ class UsersData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Introduction', 'wapuugotchi' ) )
-								->set_text( __( "Welcome to the 'Users' section. Here, you can manage the users of your website.", 'wapuugotchi' ) )
+								->set_text( __( 'Welcome to the "Users" page. Here, you can manage the users of your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-users' )->set_overlay( '#menu-users' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'All Users', 'wapuugotchi' ) )
-								->set_text( __( "In the 'All Users' section, you can see and manage all the users of your site.", 'wapuugotchi' ) )
+								->set_text( __( 'In the "All Users" page, you can see and manage all the users of your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-users .wp-submenu li a.current' )->set_overlay( '#menu-users' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Overview', 'wapuugotchi' ) )
-								->set_text( __( "On the overview page, you'll find a list of all users who are registered on your site.", 'wapuugotchi' ) )
+								->set_text( __( 'On the overview page, you\'ll find a list of all users who are registered on your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						)
 						->add_item(
@@ -84,7 +84,7 @@ class UsersData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Add New User', 'wapuugotchi' ) )
-								->set_text( __( "Here's where you can add new users. Let's check it out!", 'wapuugotchi' ) )
+								->set_text( __( 'Here\'s where you can add new users. Let\'s check it out!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( 'a.page-title-action' )->set_overlay( 'a.page-title-action' ) )
 						);
 

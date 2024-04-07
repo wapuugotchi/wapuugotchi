@@ -42,13 +42,13 @@ class EditCategoryData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Categories', 'wapuugotchi' ) )
-								->set_text( __( 'Welcome to the "Categories" section! These are super handy for organizing and structuring your content, making it easier for visitors to find relevant info.', 'wapuugotchi' ) )
+								->set_text( __( 'This is the "Categories" page! These are super handy for organizing and structuring your content, making it easier for visitors to find relevant info.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-posts .wp-submenu li a.current' )->set_overlay( '#menu-posts' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Creating New Ones', 'wapuugotchi' ) )
-								->set_text( __( 'You can create new categories to group your posts thematically. This not only makes navigation a breeze but also boosts SEO, helping users find your site when they search.', 'wapuugotchi' ) )
+								->set_text( __( 'You can create new categories to group your posts thematically. This not only makes navigation a breeze but also boosts SEO, helping users find your website when they search.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#col-left' )->set_overlay( '#col-left' ) )
 						)
 						->add_item(
@@ -66,7 +66,7 @@ class EditCategoryData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'In Summary', 'wapuugotchi' ) )
-								->set_text( __( 'Overall, the "Categories" section offers an effective way to enhance the organization and findability of content on your website.', 'wapuugotchi' ) )
+								->set_text( __( 'Overall, the "Categories" page offers an effective way to enhance the organization and findability of content on your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
 						);
 

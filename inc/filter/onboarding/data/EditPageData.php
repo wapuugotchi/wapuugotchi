@@ -42,7 +42,7 @@ class EditPageData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Pages Overview', 'wapuugotchi' ) )
-								->set_text( __( 'Here we are in the "Pages" section. This is where you manage all your static content.', 'wapuugotchi' ) )
+								->set_text( __( 'Here we are on the "Pages" page. This is where you manage all your static content.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-pages' )->set_overlay( '#menu-pages' ) )
 						)
 						->add_item(
@@ -102,13 +102,13 @@ class EditPageData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Create', 'wapuugotchi' ) )
-								->set_text( __( 'Behind this button is where you can create new static content for your site. I can\'t join you on this page, but everything you need to know is explained there!', 'wapuugotchi' ) )
+								->set_text( __( 'Behind the "Create" button, you can start crafting new content for your website. It\'ll guide you through the process step by step!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '.page-title-action' )->set_overlay( '.page-title-action' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Closing Thoughts', 'wapuugotchi' ) )
-								->set_text( __( 'Did you notice I almost said the same thing as in the "Posts" section? Well, that\'s because these areas are pretty similar!', 'wapuugotchi' ) )
+								->set_text( __( 'Did you notice I almost said the same thing as in the "Posts" page? Well, that\'s because these pages are pretty similar!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
 						);
 

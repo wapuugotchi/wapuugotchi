@@ -41,7 +41,7 @@ class OptionsReadingData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Reading', 'wapuugotchi' ) )
-								->set_text( __( "The 'Reading' section allows you to set basic display settings for your website.", 'wapuugotchi' ) )
+								->set_text( __( 'The "Reading" page allows you to set basic display settings for your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-settings .wp-submenu li a.current' )->set_overlay( '#menu-settings' ) )
 						)
 						->add_item(
@@ -53,13 +53,13 @@ class OptionsReadingData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Homepage', 'wapuugotchi' ) )
-								->set_text( __( "Setting a static homepage allows you to customize the front page of your website. This is particularly useful if you're running a business website or a landing page.", 'wapuugotchi' ) )
+								->set_text( __( 'Setting a static homepage allows you to customize the front page of your website. This is particularly useful if you\'re running a business website or a landing page.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#front-static-pages' )->set_overlay( '#front-static-pages' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Search Engines', 'wapuugotchi' ) )
-								->set_text( __( "You might notice that despite using SEO plugins, visitors aren't coming through search engines. This could be because you've disabled search engine indexing here.", 'wapuugotchi' ) )
+								->set_text( __( 'You might notice that despite using SEO plugins, visitors aren\'t coming through search engines. This could be because you\'ve disabled search engine indexing here.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						);
 

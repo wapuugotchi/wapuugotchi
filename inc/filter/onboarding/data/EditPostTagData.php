@@ -42,13 +42,13 @@ class EditPostTagData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Tags', 'wapuugotchi' ) )
-								->set_text( __( 'Welcome to the "Tags" section! Tags let you enhance your posts with additional keywords or phrases.', 'wapuugotchi' ) )
+								->set_text( __( 'This is the "Tags" page! Tags let you enhance your posts with additional keywords or phrases. That way, your content becomes easier to find and search through!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-posts .wp-submenu li a[href=\'edit-tags.php?taxonomy=post_tag\']' )->set_overlay( '#menu-posts' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Differentiating', 'wapuugotchi' ) )
-								->set_text( __( 'Unlike categories, which sort posts into broad thematic areas, tags provide finer detail, allowing you to link specific topics, keywords, or key phrases to your posts.', 'wapuugotchi' ) )
+								->set_text( __( 'Unlike categories, which group posts into broad themes, tags give more specific details. They help you connect particular topics, keywords, or phrases to your posts.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						)
 						->add_item(
@@ -60,7 +60,7 @@ class EditPostTagData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Overview', 'wapuugotchi' ) )
-								->set_text( __( 'The overview page shows all your created tags. You\'ll also see info on how often your tags are used in your posts.', 'wapuugotchi' ) )
+								->set_text( __( 'The overview section shows all your created tags. You\'ll also see info on how often your tags are used in your posts.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#col-right' )->set_overlay( '#col-right' ) )
 						)
 						->add_item(

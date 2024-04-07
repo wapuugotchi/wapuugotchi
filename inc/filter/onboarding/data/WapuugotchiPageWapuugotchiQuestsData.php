@@ -41,19 +41,19 @@ class WapuugotchiPageWapuugotchiQuestsData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Task Overview', 'wapuugotchi' ) )
-								->set_text( __( "This section, 'Tasks', provides an overview of the tasks you've completed and those still awaiting your attention.", 'wapuugotchi' ) )
+								->set_text( __( 'This page, "Tasks", provides an overview of the tasks you\'ve completed and those still awaiting your attention.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#toplevel_page_wapuugotchi' )->set_overlay( '#toplevel_page_wapuugotchi' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Overview', 'wapuugotchi' ) )
-								->set_text( __( "On the overview page, you can see all tasks. It shows which tasks you've completed and which ones remain. Additionally, you can see how many pearls you'll earn for completing each task.", 'wapuugotchi' ) )
+								->set_text( __( 'On the overview page, you can see all tasks. It shows which tasks you\'ve completed and which ones remain. Additionally, you can see how many pearls you\'ll earn for completing each task.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wapuugotchi-app' )->set_overlay( '#wapuugotchi-app' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Conclusion!!!', 'wapuugotchi' ) )
-								->set_text( __( "Guess what? We're done! I've shared everything I know with you. I hope you had some fun and learned a bit along the way. I'm glad you stuck with it until the end!", 'wapuugotchi' ) )
+								->set_text( __( 'Guess what? We\'re done! I\'ve shared everything I know with you. I hope you had some fun and learned a bit along the way. I\'m glad you stuck with it until the end!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true ) )
 						)
 						->add_item(

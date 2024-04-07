@@ -42,13 +42,13 @@ class PageData {
 							->add_item(
 								Item::create()
 									->set_title( __( 'Tutorial', 'wapuugotchi' ) )
-									->set_text( __( 'We\'re now in the "Add New" section. Just let me know once you\'re done with the Gutenberg tutorial, and I\'ll show you around some more.', 'wapuugotchi' ) )
+									->set_text( __( 'We\'re now on the "Add New" page. Just let me know once you\'re done with the Gutenberg tutorial, and I\'ll show you around some more.', 'wapuugotchi' ) )
 									->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
 							)
 							->add_item(
 								Item::create()
 									->set_title( __( 'Gutenberg Editor', 'wapuugotchi' ) )
-									->set_text( __( 'As you might have learned in the tutorial, this area is where you can manage the content of your pages.', 'wapuugotchi' ) )
+									->set_text( __( 'As you might have learned in the tutorial, this page is where you can manage the content of your pages.', 'wapuugotchi' ) )
 									->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
 							)
 							->add_item(

@@ -41,7 +41,7 @@ class OptionsMediaData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Media', 'wapuugotchi' ) )
-								->set_text( __( "The 'Media' section deals with the basic settings for managing media files on your website.", 'wapuugotchi' ) )
+								->set_text( __( 'The "Media" page deals with the basic settings for managing media files on your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-settings .wp-submenu li a.current' )->set_overlay( '#menu-settings' ) )
 						)
 						->add_item(
@@ -53,7 +53,7 @@ class OptionsMediaData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Tip 1', 'wapuugotchi' ) )
-								->set_text( __( "Be careful not to choose too large a size for your thumbnails, as it can negatively impact your website's loading time.", 'wapuugotchi' ) )
+								->set_text( __( 'Be careful not to choose too large a size for your thumbnails, as it can negatively impact your website\'s loading time.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( null )->set_overlay( null ) )
 						)
 						->add_item(

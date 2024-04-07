@@ -42,13 +42,13 @@ class ThemeInstallData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Add', 'wapuugotchi' ) )
-								->set_text( __( 'It might sound crazy, but in the "Add Themes" section, you can... well, add new themes! 😅', 'wapuugotchi' ) )
+								->set_text( __( 'It might sound crazy, but on the "Add Themes" page, you can... well, add new themes!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Info', 'wapuugotchi' ) )
-								->set_text( __( 'When you enter this section, you\'ll see a selection of the most popular themes. This is super handy since there are more than 10,000 themes to choose from.', 'wapuugotchi' ) )
+								->set_text( __( 'When you enter this page, you\'ll see a selection of the most popular themes. This is super handy since there are more than 10,000 themes to choose from.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						)
 						->add_item(

@@ -41,13 +41,13 @@ class ExportPersonalDataData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Export Personal Data', 'wapuugotchi' ) )
-								->set_text( __( "In the 'Export Personal Data' section, you can specifically export the personal data of your users.", 'wapuugotchi' ) )
+								->set_text( __( 'On the "Export Personal Data" page, you can specifically export the personal data of your users.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-tools .wp-submenu li a.current' )->set_overlay( '#menu-tools' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Overview', 'wapuugotchi' ) )
-								->set_text( __( "Here, you have the option to export the personal data of a specific user. This is useful if a user wants to take their data with them, like when they're switching websites.", 'wapuugotchi' ) )
+								->set_text( __( 'Here, you have the option to export the personal data of a specific user. This is useful if a user wants to take their data with them, like when they\'re switching websites.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						)
 						->add_item(

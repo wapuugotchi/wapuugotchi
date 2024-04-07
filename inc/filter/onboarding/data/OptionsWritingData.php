@@ -41,7 +41,7 @@ class OptionsWritingData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Writing', 'wapuugotchi' ) )
-								->set_text( __( "The 'Writing' section helps you with creating posts and articles.", 'wapuugotchi' ) )
+								->set_text( __( 'The "Writing" page helps you with creating posts and articles.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-settings .wp-submenu li a.current' )->set_overlay( '#menu-settings' ) )
 						)
 						->add_item(

@@ -40,8 +40,8 @@ class UpdateCoreData {
 						->set_file( 'index.php' )
 						->add_item(
 							Item::create()
+								->set_text( __( 'Alright, we\'re now on the "Updates" page of the Dashboard. This is where you\'ll get to keep your website looking sharp and up-to-date.', 'wapuugotchi' ) )
 								->set_title( __( 'Updates', 'wapuugotchi' ) )
-								->set_text( __( 'Alright, we\'re now in the "Updates" section of the Dashboard. This is where you\'ll get to keep your website looking sharp and up-to-date.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '#menu-dashboard .wp-submenu li a.current' )->set_overlay( '#menu-dashboard' ) )
 						)
 						->add_item(
@@ -59,7 +59,7 @@ class UpdateCoreData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Automatic Updates', 'wapuugotchi' ) )
-								->set_text( __( 'A little tip – you might want to turn on automatic updates. It\'s a real time-saver and keeps your site on the cutting edge, not to mention secure.', 'wapuugotchi' ) )
+								->set_text( __( 'One last tip – you might want to turn on automatic updates. It\'s a real time-saver and keeps your website on the cutting edge, not to mention secure.', 'wapuugotchi' ) )
 								->add_target( Target::create() )
 						);
 

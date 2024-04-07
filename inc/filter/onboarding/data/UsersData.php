@@ -42,7 +42,7 @@ class UsersData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Introduction', 'wapuugotchi' ) )
-								->set_text( __( 'Welcome to the "Users" page. Here, you can manage the users of your website.', 'wapuugotchi' ) )
+								->set_text( __( 'We\'re in the submenu that falls under the "Users" main menu item. Here, you can manage the users of your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-users' )->set_overlay( '#menu-users' ) )
 						)
 						->add_item(

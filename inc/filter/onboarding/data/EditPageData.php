@@ -42,7 +42,7 @@ class EditPageData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Pages Overview', 'wapuugotchi' ) )
-								->set_text( __( 'Here we are on the "Pages" page. This is where you manage all your static content.', 'wapuugotchi' ) )
+								->set_text( __( 'We\'re now exploring the submenu of the "Pages" main menu item. This is where you manage all your static content.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-pages' )->set_overlay( '#menu-pages' ) )
 						)
 						->add_item(

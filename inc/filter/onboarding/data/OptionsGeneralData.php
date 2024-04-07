@@ -41,7 +41,7 @@ class OptionsGeneralData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Settings', 'wapuugotchi' ) )
-								->set_text( __( 'The "Settings" page allows you to set up the general settings for your website.', 'wapuugotchi' ) )
+								->set_text( __( 'Right now, we\'re checking out the submenu of the "Settings" main menu item. These pages allow you to set up the general settings for your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-settings' )->set_overlay( '#menu-settings' ) )
 						)
 						->add_item(

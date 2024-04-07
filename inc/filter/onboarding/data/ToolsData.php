@@ -41,7 +41,7 @@ class ToolsData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Tools', 'wapuugotchi' ) )
-								->set_text( __( 'Welcome to the "Tools" page. This page provides additional functions and resources, especially for administrators. Let\'s take a quick look.', 'wapuugotchi' ) )
+								->set_text( __( 'We\'ve just moved into the submenu of the "Tools" main menu item. This page provides additional functions and resources, especially for administrators. Let\'s take a quick look.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-tools' )->set_overlay( '#menu-tools' ) )
 						)
 						->add_item(

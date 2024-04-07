@@ -42,7 +42,7 @@ class PluginsData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Overview', 'wapuugotchi' ) )
-								->set_text( __( 'Welcome to the "Plugins" page. Here, you can search for, install, and activate new plugins.', 'wapuugotchi' ) )
+								->set_text( __( 'We are currently in the submenu of the "Plugins" main menu item. Here, you can search for, install, and activate new plugins.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-plugins' )->set_overlay( '#menu-plugins' ) )
 						)
 						->add_item(

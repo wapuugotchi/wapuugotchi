@@ -47,7 +47,7 @@ class ToplevelPageWapuugotchiData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Customize', 'wapuugotchi' ) )
-								->set_text( __( 'In this page, you can customize my appearance. You also have the opportunity to give me a name.', 'wapuugotchi' ) )
+								->set_text( __( 'In this page, you can customize the appearance. You also have the opportunity to give me a name.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#toplevel_page_wapuugotchi .wp-submenu li a.current' )->set_overlay( '#toplevel_page_wapuugotchi' ) )
 						)
 						->add_item(

@@ -41,7 +41,7 @@ class EditPostData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Welcome to Posts', 'wapuugotchi' ) )
-								->set_text( __( 'We\'re on the "Posts" page now! This is where you can create, tweak, and organize all your dynamic content.', 'wapuugotchi' ) )
+								->set_text( __( 'Currently, we\'re in the submenu of the "Posts" main menu item. This is where you can create, tweak, and organize all your dynamic content.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '#menu-posts' )->set_overlay( '#menu-posts' ) )
 						)
 						->add_item(

@@ -42,13 +42,13 @@ class EditCommentsData {
 		              ->add_item(
 			              Item::create()
 			                  ->set_title( __( 'Comments', 'wapuugotchi' ) )
-			                  ->set_text( __( 'Now, I\'m going to tell you everything I know about the "Comments" page. This is the place where all the conversations on your website happen.', 'wapuugotchi' ) )
+			                  ->set_text( __( 'Now, I\'m going to tell you everything I know about the "Comments" main menu item. This is the place where all the conversations on your website happen.', 'wapuugotchi' ) )
 			                  ->add_target( Target::create()->set_active( true )->set_focus( '#menu-comments' )->set_overlay( '#menu-comments' ) )
 		              )
 		              ->add_item(
 			              Item::create()
 			                  ->set_title( __( 'Why Comments?', 'wapuugotchi' ) )
-			                  ->set_text( __( 'The "Comments" page is a key tool for engaging with your visitors. Here, you can respond to feedback and moderate discussions.', 'wapuugotchi' ) )
+			                  ->set_text( __( 'This page is a key tool for engaging with your visitors. Here, you can respond to feedback and moderate discussions.', 'wapuugotchi' ) )
 			                  ->add_target( Target::create()->set_active( true )->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 		              )
 		              ->add_item(

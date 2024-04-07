@@ -42,7 +42,7 @@ class ThemesData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Design', 'wapuugotchi' ) )
-								->set_text( __( 'Welcome to the "Design" page. This is where you can manage the appearance and visual presentation of your website.', 'wapuugotchi' ) )
+								->set_text( __( 'Welcome to the submenu of the "Appearance" main menu item. This is where you can manage the appearance and visual presentation of your website.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#menu-appearance' )->set_overlay( '#menu-appearance' ) )
 						)
 						->add_item(

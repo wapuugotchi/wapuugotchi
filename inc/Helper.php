@@ -60,6 +60,11 @@ class Helper {
 		return $tomorrow->getTimestamp() - $today->getTimestamp();
 	}
 
+	public static function is_mobile_device() {
+		$user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+		return ( strpos($user_agent, 'mobile') !== false || strpos($user_agent, 'android') !== false );
+	}
+
 	/**
 	 * Get all wearable items.
 	 *

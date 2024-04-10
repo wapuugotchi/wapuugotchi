@@ -4,7 +4,7 @@
  * Description:       Meet Your Personalized Wapuu Assistant.
  * Requires at least: 6.0
  * Requires PHP:      7.0
- * Version:           0.1.5
+ * Version:           0.2.0
  * Author:            herrfeldmann
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -37,12 +37,16 @@ if ( is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
  * @return void
  */
 function init() {
+	require_once 'inc/Helper.php';
+	// Check if the user is on a mobile device. If so, stop plugin.
+	if ( Helper::is_mobile_device() === true ) {
+		return false;
+	}
 
 	/* Mains '*/
 	require_once 'inc/Api.php';
 	require_once 'inc/Menu.php';
 	require_once 'inc/Manager.php';
-	require_once 'inc/Helper.php';
 	new Api();
 	new Menu();
 	new Manager();

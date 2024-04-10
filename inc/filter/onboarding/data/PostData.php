@@ -41,7 +41,7 @@ class PostData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Just a Moment', 'wapuugotchi' ) )
-								->set_text( __( 'Hang tight, we\'re almost through the Gutenberg tutorial. I\'ll give you a bit more of a tour afterward.', 'wapuugotchi' ) )
+								->set_text( __( 'Hang tight, we\'re almost through the Gutenberg editor tutorial. I\'ll give you a bit more of a tour afterward.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( null )->set_overlay( null ) )
 						)
 						->add_item(

@@ -47,7 +47,7 @@ class UpdateCoreData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Explanation', 'wapuugotchi' ) )
-								->set_text( __( 'So, this is where you can spot any new updates waiting for your website. That includes stuff like themes, , plugins you\'ve installed and even the WordPress core itself.', 'wapuugotchi' ) )
+								->set_text( __( 'So, this is where you can spot any new updates waiting for your website. That includes stuff like themes, plugins you\'ve installed and even the WordPress core itself.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						)
 						->add_item(

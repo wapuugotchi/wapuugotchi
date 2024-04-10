@@ -53,7 +53,7 @@ class WapuugotchiPageWapuugotchiQuestsData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Conclusion!!!', 'wapuugotchi' ) )
-								->set_text( __( 'Guess what? We\'re done! I\'ve shared everything I know with you. I hope you had some fun and learned a bit along the way. I\'m glad you stuck with it until the end!', 'wapuugotchi' ) )
+								->set_text( __( 'Guess what? We\'re done! I\'ve shared everything I know with you. I hope you had some fun and learned a bit along the way. I\'m glad you stuck with me until the end!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true ) )
 						)
 						->add_item(

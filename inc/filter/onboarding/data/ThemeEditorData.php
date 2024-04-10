@@ -47,7 +47,7 @@ class ThemeEditorData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Overview', 'wapuugotchi' ) )
-								->set_text( __( 'Here, you can make direct changes to the files of your theme. You should have some programming knowledge if you\'re going to hang out in this page.', 'wapuugotchi' ) )
+								->set_text( __( 'Here, you can make direct changes to the files of your theme. You should have some programming knowledge if you\'re going to hang out on this page.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wpcontent' )->set_overlay( '#wpcontent' ) )
 						)
 						->add_item(

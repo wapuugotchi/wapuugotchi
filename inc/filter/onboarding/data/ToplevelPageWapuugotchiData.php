@@ -47,13 +47,13 @@ class ToplevelPageWapuugotchiData {
 						->add_item(
 							Item::create()
 								->set_title( __( 'Customize', 'wapuugotchi' ) )
-								->set_text( __( 'In this page, you can customize the appearance. You also have the opportunity to give me a name.', 'wapuugotchi' ) )
+								->set_text( __( 'On this page, you can customize the appearance. You also have the opportunity to give me a name.', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#toplevel_page_wapuugotchi .wp-submenu li a.current' )->set_overlay( '#toplevel_page_wapuugotchi' ) )
 						)
 						->add_item(
 							Item::create()
 								->set_title( __( 'Overview', 'wapuugotchi' ) )
-								->set_text( __( 'Here, you can adjust my appearance. You can change my hairstyle, put glasses on me, or dress me in a new T-shirt. I\'m curious to see what you\'ll do!', 'wapuugotchi' ) )
+								->set_text( __( 'Here, you can adjust my appearance. You can change my hairstyle, put glasses on me, or dress me in a new t-shirt. I\'m curious to see what you\'ll do!', 'wapuugotchi' ) )
 								->add_target( Target::create()->set_active( true )->set_focus( '#wapuugotchi-app' )->set_overlay( '#wapuugotchi-app' ) )
 						)
 						->add_item(

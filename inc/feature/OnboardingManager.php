@@ -45,7 +45,6 @@ class OnboardingManager {
 			}
 		}
 
-		// TODO - merge all the onboarding data into one array. consider the priority of the data and level of the single onboarding data information.
 		return json_decode( wp_json_encode( $onboarding[0] ), true );
 	}
 

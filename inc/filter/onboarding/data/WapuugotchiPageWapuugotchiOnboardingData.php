@@ -53,15 +53,15 @@ class WapuugotchiPageWapuugotchiOnboardingData {
 						)
 						->add_item(
 							Item::create()
-							    ->set_title( __( 'Navigating the website', 'wapuugotchi' ) )
-							    ->set_text( __( 'The admin menu makes switching between different areas of your website a breeze. You can easily access one of these areas by clicking on a main menu item.', 'wapuugotchi' ) )
-							    ->add_target( Target::create()->set_focus( '#adminmenuwrap' )->set_overlay( '#adminmenuwrap' ) )
+								->set_title( __( 'Navigating the website', 'wapuugotchi' ) )
+								->set_text( __( 'The admin menu makes switching between different areas of your website a breeze. You can easily access one of these areas by clicking on a main menu item.', 'wapuugotchi' ) )
+								->add_target( Target::create()->set_focus( '#adminmenuwrap' )->set_overlay( '#adminmenuwrap' ) )
 						)
 						->add_item(
 							Item::create()
-							    ->set_title( __( 'About submenus', 'wapuugotchi' ) )
+								->set_title( __( 'About submenus', 'wapuugotchi' ) )
 								->set_text( __( 'After clicking on a main menu item, you’ll see some submenu items pop up underneath. They\'re like special little tools that let you do things related to the main menu item you clicked on. It\'s pretty neat and super helpful!', 'wapuugotchi' ) )
-							    ->add_target( Target::create()->set_focus( '#toplevel_page_wapuugotchi' )->set_overlay( '#toplevel_page_wapuugotchi' ) )
+								->add_target( Target::create()->set_focus( '#toplevel_page_wapuugotchi' )->set_overlay( '#toplevel_page_wapuugotchi' ) )
 						)
 						->add_item(
 							Item::create()

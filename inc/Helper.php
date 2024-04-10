@@ -60,9 +60,18 @@ class Helper {
 		return $tomorrow->getTimestamp() - $today->getTimestamp();
 	}
 
+	/**
+	 * Check if the user is on a mobile device.
+	 *
+	 * @return bool
+	 */
 	public static function is_mobile_device() {
-		$user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
-		return ( strpos($user_agent, 'mobile') !== false || strpos($user_agent, 'android') !== false );
+		if ( ! isset( $_SERVER['HTTP_USER_AGENT'] ) ) {
+			return false;
+		}
+
+		$user_agent = strtolower( sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) );
+		return ( strpos( $user_agent, 'mobile' ) !== false || strpos( $user_agent, 'android' ) !== false );
 	}
 
 	/**

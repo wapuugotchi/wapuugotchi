@@ -21,6 +21,7 @@ class Onboarding {
 	 */
 	public function __construct() {
 		add_action( 'admin_init', array( $this, 'init' ) );
+		add_filter( 'login_redirect', array( $this, 'autostart' ), 10000, 3 );
 	}
 
 	/**
@@ -69,6 +70,7 @@ class Onboarding {
 		);
 
 		\wp_set_script_translations( 'wapuugotchi-onboarding', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
+		\update_option( 'wapuugotchi_onboarding_autostart_executedf', '1' );
 	}
 
 	/**
@@ -104,6 +106,24 @@ class Onboarding {
 	 */
 	private function get_global_config() {
 		return json_decode( file_get_contents( dirname( __DIR__, 2 ) . '/config/onboarding/tour.json' ), true );
+	}
+
+	/**
+	 * Autostart the onboarding.
+	 *
+	 * @param string $redirect_to The redirect to.
+	 * @param string $request The request.
+	 * @param string $user The user.
+	 */
+	public function autostart( $redirect_to, $request, $user ) {
+		if ( \get_option( 'wapuugotchi_onboarding_autostart_executedf' ) === '1' ) {
+			return $redirect_to;
+		}
+
+		if ( is_a( $user, 'WP_User' ) && user_can( $user, 'manage_options' ) ) {
+				return home_url( '/wp-admin/admin.php?page=wapuugotchi-onboarding&onboarding_mode=true' );
+		}
+		return $redirect_to;
 	}
 
 	/**

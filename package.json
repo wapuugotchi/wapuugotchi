@@ -6,8 +6,8 @@
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
-		"build": "wp-scripts build src/customizer.js src/quest-log.js src/index.js",
-		"watch": "wp-scripts build src/customizer.js src/quest-log.js src/index.js --watch",
+		"build": "wp-scripts build src/customizer.js src/scavenger-hunt.js src/quest-log.js src/onboarding.js src/index.js",
+		"watch": "wp-scripts build src/customizer.js src/scavenger-hunt.js src/quest-log.js src/onboarding.js src/index.js --watch",
 		"format": "wp-scripts format",
 		"lint": "concurrently \"npm run lint:lockfile\" \"npm run lint:tsconfig\" \"npm run lint:js\" \"npm run lint:pkg-json\" \"npm run lint:css\"",
 		"lint:css": "wp-scripts lint-style \"src/**/*.scss\"",
@@ -18,13 +18,13 @@
 		"lint:php": "wp-env run composer run-script lint",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start src/customizer.js src/quest-log.js src/index.js",
+		"start": "wp-scripts start src/customizer.js src/scavenger-hunt.js src/quest-log.js src/index.js",
 		"env": "wp-env",
 		"test": "npx playwright test --config playwright.config.js tests/addSource.test.js"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.42.1",
-		"@wordpress/env": "^9.7.0",
+		"@playwright/test": "^1.43.0",
+		"@wordpress/env": "9.7.0",
 		"@wordpress/scripts": "^27.6.0"
 	},
 	"dependencies": {
@@ -34,7 +34,8 @@
 		"@wordpress/element": "^5.32.0",
 		"@wordpress/i18n": "^4.55.0",
 		"html-react-parser": "^5.1.10",
-		"react-svg": "^16.1.34"
+		"react-svg": "^16.1.34",
+		"docker-compose": "^0.24.8"
 	},
 	"files": [
 		"build",

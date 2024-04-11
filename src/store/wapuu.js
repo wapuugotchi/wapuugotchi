@@ -37,7 +37,7 @@ async function __buildSvg( wapuu, items ) {
 
 	const svgs = (
 		await Promise.all( responses.map( ( response ) => response.text() ) )
-	 ).map( ( _ ) => new DOMParser().parseFromString( _, 'image/svg+xml' ) );
+	).map( ( _ ) => new DOMParser().parseFromString( _, 'image/svg+xml' ) );
 	if ( svgs.length ) {
 		const result = svgs
 			.splice(

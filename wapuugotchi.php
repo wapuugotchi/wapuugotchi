@@ -56,8 +56,6 @@ function init() {
 	new Customizer();
 	require_once 'inc/apps/Log.php';
 	new Log();
-	require_once 'inc/apps/Hunt.php';
-	new Hunt();
 	require_once 'inc/apps/Avatar.php';
 	new Avatar();
 	require_once 'inc/apps/Onboarding.php';

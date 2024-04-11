@@ -39,7 +39,7 @@ class Manager {
 		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true ) ) ) {
 			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 0 );
 		}
-		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) ) {
+		if ( ! is_array( get_user_meta( get_current_user_id(), 'wapuugotchi_purchases__alpha', true ) ) ) {
 			update_user_meta(
 				get_current_user_id(),
 				'wapuugotchi_purchases__alpha',

@@ -47,6 +47,6 @@ jobs:
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
-          files: ${{github.workspace}}/}/wapuugotchi.zip
+          files: ${{ steps.deploy.outputs.zip-path }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

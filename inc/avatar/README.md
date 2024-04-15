@@ -11,11 +11,11 @@ The 'MessageHandler' class implements a filter that enables developers to issue 
 	new Message(
 		'my_first_message',  			// Identifier
 		'Thank you for using my plugin!!', 	// Message
-		'info', 				// Border color   info|success|warning|error
-		'My\Namespace\Message::is_active', 	// Display callback   true|false
+		'info', 				// Border color # info|success|warning|error
+		'My\Namespace\Message::is_active', 	// Display callback # true|false
 		'My\Namespace\Message::on_submit' 	// Disable message callback
 	),
-You can find a real-life example in the 'Messages.php' file.
+You can find a real-life example in the 'Wapuugotchi\Avatar\Messages.php' file.
 
 #### Attention ####
 It is important to note that the 'submit_handler callback' must ensure that the 'is_active callback' returns 'false' after the user has submitted the message. Otherwise, the message will be displayed repeatedly.

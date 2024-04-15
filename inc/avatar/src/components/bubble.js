@@ -1,16 +1,19 @@
-import { useSelect, dispatch } from '@wordpress/data';
+import { useEffect, useCallback } from 'react';
+import { STORE_NAME } from '../store';
+import { useSelect, useDispatch } from '@wordpress/data';
 import parse from 'html-react-parser';
 import apiFetch from '@wordpress/api-fetch';
-import { STORE_NAME } from '../store';
 import './bubble.scss';
 
 export default function Bubble() {
+	const { setMessages } = useDispatch( STORE_NAME );
 	const { messages } = useSelect( ( select ) => {
 		return {
 			messages: select( STORE_NAME ).getMessages(),
 		};
 	} );
-	const handleClickMessage = async () => {
+
+	const handleClickMessage = useCallback(async () => {
 		const removedItem = messages.shift();
 
 		await apiFetch( {
@@ -19,12 +22,11 @@ export default function Bubble() {
 			data: {
 				id: removedItem?.id
 			},
-		} ).then( ( response ) => { console.log( response ) } );
+		} );
 
+		setMessages( messages );
 
-		dispatch( STORE_NAME ).setMessages( messages );
-
-	};
+	}, [messages, setMessages]);
 
 	return messages.length > 0 ? (
 		<div

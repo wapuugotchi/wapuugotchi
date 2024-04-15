@@ -110,7 +110,7 @@ class Message {
 
 	/**
 	 * What is happening when the message is submitted.
-	 *
+	 * The callback is executed by the submit_message function in the Api class.
 	 *
 	 * @return bool result of the callback.
 	 */

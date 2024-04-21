@@ -1,0 +1,134 @@
+<?php
+/**
+ * The Api Class.
+ *
+ * @package WapuuGotchi
+ */
+
+namespace Wapuugotchi\Shop\Handler;
+
+use Wapuugotchi\Shop\Services\CollectionService;
+
+if ( ! defined( 'ABSPATH' ) ) :
+	exit();
+endif; // No direct access allowed.
+
+/**
+ * Class ItemHandler
+ */
+class ItemHandler {
+
+	/**
+	 * The all items.
+	 *
+	 * @throws \Exception
+	 */
+	public static function get_items() {
+		$collection   = CollectionService::get_collection();
+		$bought_items = self::get_unlocked_items();
+
+		if (!is_array($collection)) {
+			return array();
+		}
+
+		$items = array();
+		foreach ($collection as $category) {
+			if (!isset($category['slug'], $category['items'])) {
+				continue;
+			}
+
+			$items[$category['slug']] = array();
+			foreach ($category['items'] as $key => $item) {
+				if ($item['meta']['deactivated'] !== 0) {
+					continue;
+				}
+				if (in_array($item['meta']['key'], $bought_items)) {
+					$item['meta']['price'] = 0;  // setting the price to 0 if bought
+				}
+				$items[$category['slug']][$item['meta']['key']] = $item;
+			}
+
+			// Sortieren der Items in dieser Kategorie nach Preis, Schlüssel beibehalten
+			uasort($items[$category['slug']], function ($a, $b) {
+				return $a['meta']['price'] <=> $b['meta']['price'];
+			});
+		}
+
+		return $items;
+	}
+
+	/**
+	 * Get the items by id.
+	 *
+	 * @param string $id The id of the item.
+	 * @param string $category The category of the item.
+	 *
+	 * @throws \Exception
+	 */
+	public static function get_items_by_id( $id, $category ) {
+		$items = self::get_items();
+		if ( ! isset( $items[ $category ] ) ) {
+			return false;
+		}
+
+		if ( ! isset( $items[ $category ][ $id ] ) ) {
+			return false;
+		}
+
+		return $items[ $category ][ $id ];
+	}
+
+
+	/**
+	 * Give all already unlocked items.
+	 *
+	 * @return array
+	 *
+	 * @throws \Exception
+	 */
+	public static function get_unlocked_items() {
+		$unlocked_items = get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true );
+		if ( ! is_array( $unlocked_items ) ) {
+			return array();
+		}
+
+		return $unlocked_items;
+	}
+
+	/**
+	 * Check if the item is already unlocked.
+	 *
+	 * @param string $id The id of the item.
+	 *
+	 * @return bool
+	 * @throws \Exception
+	 */
+	public static function is_item_unlocked( $id ) {
+		$unlocked_items = self::get_unlocked_items();
+		if ( ! is_array( $unlocked_items ) ) {
+			return false;
+		}
+
+		return in_array( $id, $unlocked_items );
+	}
+
+	/**
+	 * Unlock an item by id.
+	 *
+	 * @param string $id The id of the item.
+	 *
+	 * @return bool
+	 * @throws \Exception
+	 */
+	public static function unlock_item( $id ) {
+		$unlocked_items = self::get_unlocked_items();
+		if ( in_array( $id, $unlocked_items ) ) {
+			return false;
+		}
+
+		$unlocked_items[] = $id;
+		update_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', $unlocked_items );
+
+		return true;
+	}
+}

@@ -7,6 +7,8 @@
 
 namespace Wapuugotchi\Avatar;
 
+use Wapuugotchi\Avatar\Handler\BubbleHandler;
+
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.

@@ -5,7 +5,7 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\Avatar\Quests;
+namespace Wapuugotchi\Quests;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();

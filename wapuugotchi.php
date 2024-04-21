@@ -3,7 +3,7 @@
  * Plugin Name:       WapuuGotchi
  * Description:       Meet Your Personalized Wapuu Assistant.
  * Requires at least: 6.0
- * Requires PHP:      7.0
+ * Requires PHP:      7.2
  * Version:           0.2.0
  * Author:            herrfeldmann
  * License:           GPL-2.0-or-later
@@ -42,10 +42,19 @@ function init() {
 		require_once WAPUUGOTCHI_PATH . 'vendor/autoload.php';
 	}
 
+	new \Wapuugotchi\Core\Menu();
+
 	new \Wapuugotchi\Avatar\Manager();
 	new \Wapuugotchi\Avatar\Api();
 	new \Wapuugotchi\Avatar\Filters\Messages();
 
+	new \Wapuugotchi\Shop\Manager();
+	new \Wapuugotchi\Shop\Menu();
+	new \Wapuugotchi\Shop\Api();
+
+	new \Wapuugotchi\Quests\Menu();
+
+	new \Wapuugotchi\Onboarding\Menu();
 
 }
 

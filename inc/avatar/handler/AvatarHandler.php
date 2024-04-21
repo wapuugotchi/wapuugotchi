@@ -5,7 +5,7 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\Avatar;
+namespace Wapuugotchi\Avatar\Handler;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
@@ -23,12 +23,12 @@ class AvatarHandler {
 	 * @return false|string
 	 */
 	public static function get_avatar() {
-		$avatar = apply_filters( 'wapuugotchi_avatar', false );
+		$avatar = \apply_filters( 'wapuugotchi_avatar', false );
 
 		if ( false === $avatar ) {
 			$default = WAPUUGOTCHI_PATH . 'config/avatar.svg';
-			if ( file_exists( $default ) && is_readable( $default ) ) {
-				$avatar = file_get_contents( $default );
+			if ( \file_exists( $default ) && \is_readable( $default ) ) {
+				$avatar = \file_get_contents( $default );
 			}
 		}
 

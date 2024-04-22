@@ -46,13 +46,19 @@ function init() {
 
 	new \Wapuugotchi\Avatar\Manager();
 	new \Wapuugotchi\Avatar\Api();
-	new \Wapuugotchi\Avatar\Filters\Messages();
 
 	new \Wapuugotchi\Shop\Manager();
 	new \Wapuugotchi\Shop\Menu();
 	new \Wapuugotchi\Shop\Api();
 
-	new \Wapuugotchi\Quests\Menu();
+	new \Wapuugotchi\Quest\Manager();
+	new \Wapuugotchi\Quest\Menu();
+	new \Wapuugotchi\Quest\Filters\MessageManager();
+	new \Wapuugotchi\Quest\Filters\QuestContent();
+	new \Wapuugotchi\Quest\Filters\QuestPlugin();
+	new \Wapuugotchi\Quest\Filters\QuestTheme();
+	new \Wapuugotchi\Quest\Filters\QuestDate();
+	new \Wapuugotchi\Quest\Filters\QuestStart();
 
 	new \Wapuugotchi\Onboarding\Menu();
 

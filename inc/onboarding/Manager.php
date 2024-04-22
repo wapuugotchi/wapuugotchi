@@ -5,7 +5,7 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\Quests;
+namespace Wapuugotchi\Onboarding;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();

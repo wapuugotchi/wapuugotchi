@@ -7,10 +7,6 @@
 
 namespace Wapuugotchi\Shop\Handler;
 
-
-use function Wapuugotchi\shop\get_user_meta;
-use function Wapuugotchi\shop\update_user_meta;
-
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -19,6 +15,11 @@ endif; // No direct access allowed.
  * Class AvatarHandler
  */
 class AvatarHandler {
+	/**
+	 * Get the avatar configuration of the current user
+	 *
+	 * @return array
+	 */
 	public static function get_avatar_config() {
 		if ( empty( \get_user_meta( \get_current_user_id(), 'wapuugotchi_avatar__alpha', false ) ) ) {
 			$config = file_get_contents( \plugin_dir_path( __DIR__ ) . 'assets/avatar.json' );
@@ -32,6 +33,13 @@ class AvatarHandler {
 		return \get_user_meta( \get_current_user_id(), 'wapuugotchi_avatar__alpha', true );
 	}
 
+	/**
+	 * Update the avatar configuration of the current user
+	 *
+	 * @param array $data The data to update the avatar with.
+	 *
+	 * @return bool
+	 */
 	public static function update_avatar_config( $data ) {
 		\update_user_meta(
 			\get_current_user_id(),
@@ -42,10 +50,22 @@ class AvatarHandler {
 		return true;
 	}
 
+	/**
+	 * Get the avatar svg of the current user
+	 *
+	 * @return string
+	 */
 	public static function get_avatar_svg() {
 		return \get_user_meta( \get_current_user_id(), 'wapuugotchi_shop_svg__alpha', true );
 	}
 
+	/**
+	 * Update the avatar svg of the current user
+	 *
+	 * @param string $svg The svg to update the avatar with.
+	 *
+	 * @return bool
+	 */
 	public static function update_avatar_svg( $svg ) {
 		\update_user_meta(
 			\get_current_user_id(),

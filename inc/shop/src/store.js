@@ -1,4 +1,4 @@
-import {createReduxStore, register} from '@wordpress/data';
+import { createReduxStore, register } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
 
 const STORE_NAME = 'wapuugotchi/shop';
@@ -15,62 +15,62 @@ const STORE_NAME = 'wapuugotchi/shop';
  *    contains ALL items (both available(paid or price===0) and unavailable (=> not yet paid))
  */
 
-const __getItemUrls = (wapuu, items, category) => {
-	if (wapuu.char?.[category]?.key?.[0]) {
-		return wapuu.char[category].key
-			.filter((uuid) => items[category][uuid])
-			.map((uuid) => items[category][uuid].image);
+const __getItemUrls = ( wapuu, items, category ) => {
+	if ( wapuu.char?.[ category ]?.key?.[ 0 ] ) {
+		return wapuu.char[ category ].key
+			.filter( ( uuid ) => items[ category ][ uuid ] )
+			.map( ( uuid ) => items[ category ][ uuid ].image );
 	}
 	return [];
 };
 
-async function __buildSvg(wapuu, items) {
+async function __buildSvg( wapuu, items ) {
 	const responses = await Promise.all(
-		Object.keys(wapuu.char)
-			.map((category) =>
-				__getItemUrls(wapuu, items, category).map((url) =>
-					fetch(url)
+		Object.keys( wapuu.char )
+			.map( ( category ) =>
+				__getItemUrls( wapuu, items, category ).map( ( url ) =>
+					fetch( url )
 				)
 			)
 			.flat()
 	);
 
 	const svgs = (
-		await Promise.all(responses.map((response) => response.text()))
-	).map((_) => new DOMParser().parseFromString(_, 'image/svg+xml'));
-	if (svgs.length) {
+		await Promise.all( responses.map( ( response ) => response.text() ) )
+	).map( ( _ ) => new DOMParser().parseFromString( _, 'image/svg+xml' ) );
+	if ( svgs.length ) {
 		const result = svgs
 			.splice(
-				(svg) => svg.querySelector('#wapuugotchi_svg__wapuu'),
+				( svg ) => svg.querySelector( '#wapuugotchi_svg__wapuu' ),
 				1
-			)[0]
-			.querySelector('#wapuugotchi_svg__wapuu');
-		for (const svg of svgs) {
-			Array.from(svg.querySelectorAll('g'))
-				.filter((itemGroup) => itemGroup.classList.value)
-				.forEach((itemGroup) => {
+			)[ 0 ]
+			.querySelector( '#wapuugotchi_svg__wapuu' );
+		for ( const svg of svgs ) {
+			Array.from( svg.querySelectorAll( 'g' ) )
+				.filter( ( itemGroup ) => itemGroup.classList.value )
+				.forEach( ( itemGroup ) => {
 					const wapuuSvgGroup = result.querySelector(
 						'g#' + itemGroup.classList.value
 					);
-					if (wapuuSvgGroup) {
+					if ( wapuuSvgGroup ) {
 						const removePart =
-							wapuuSvgGroup.querySelector('.remove--part');
-						if (removePart !== null) {
+							wapuuSvgGroup.querySelector( '.remove--part' );
+						if ( removePart !== null ) {
 							removePart.remove();
 						}
-						itemGroup.removeAttribute('class');
-						wapuuSvgGroup.append(itemGroup);
+						itemGroup.removeAttribute( 'class' );
+						wapuuSvgGroup.append( itemGroup );
 					}
-				});
+				} );
 		}
 		return result.innerHTML;
 	}
 }
 
 function create() {
-	const store = createReduxStore(STORE_NAME, {
-		reducer(state = {}, {type, payload}) {
-			switch (type) {
+	const store = createReduxStore( STORE_NAME, {
+		reducer( state = {}, { type, payload } ) {
+			switch ( type ) {
 				case '__SET_STATE': {
 					return {
 						state,
@@ -114,112 +114,111 @@ function create() {
 		},
 		actions: {
 			// this is just once used to initialize the store with the initial data
-			__initialize: (initialState) =>
-				async function ({dispatch, select}) {
-					dispatch.__setState(initialState);
-					dispatch.setWapuu(select.getWapuu());
+			__initialize: ( initialState ) =>
+				async function ( { dispatch, select } ) {
+					dispatch.__setState( initialState );
+					dispatch.setWapuu( select.getWapuu() );
 				},
-			__setState(payload) {
+			__setState( payload ) {
 				return {
 					type: '__SET_STATE',
 					payload,
 				};
 			},
-			setWapuu: (payload) =>
-				async function ({dispatch, select}) {
-
-					const svg = await __buildSvg(payload, select.getItems());
-					return dispatch.__setWapuu(payload, svg);
+			setWapuu: ( payload ) =>
+				async function ( { dispatch, select } ) {
+					const svg = await __buildSvg( payload, select.getItems() );
+					return dispatch.__setWapuu( payload, svg );
 				},
-			__setWapuu(wapuu, svg) {
+			__setWapuu( wapuu, svg ) {
 				return {
 					type: '__SET_WAPUU',
 					payload: {
-						wapuu: {...wapuu},
+						wapuu: { ...wapuu },
 						svg,
 					},
 				};
 			},
-			purchaseItem: (item) =>
-				async function ({dispatch, select}) {
-					await apiFetch({
+			purchaseItem: ( item ) =>
+				async function ( { dispatch, select } ) {
+					await apiFetch( {
 						path: `wapuugotchi/v1/wapuugotchi/shop/unlock-item`,
 						method: 'POST',
 						data: {
 							item: {
 								key: item.meta.key,
-								category: select.getSelectedCategory()
+								category: select.getSelectedCategory(),
 							},
 						},
-					}).then(response => {
-						if (response.status === '200') {
-							dispatch.setBalance(select.getBalance() - item.meta.price);
+					} ).then( ( response ) => {
+						if ( response.status === '200' ) {
+							dispatch.setBalance(
+								select.getBalance() - item.meta.price
+							);
 							item.meta.price = 0;
-							dispatch.setItems(select.getItems());
+							dispatch.setItems( select.getItems() );
 						}
-					}).catch(error => {
-						console.error(error); // Fehlerbehandlung
-					});
+					} );
 				},
-			setBalance(payload) {
+			setBalance( payload ) {
 				return {
 					type: '__SET_BALANCE',
 					payload,
 				};
 			},
-			setItems(payload) {
+			setItems( payload ) {
 				return {
 					type: '__SET_ITEMS',
-					payload: {...payload},
+					payload: { ...payload },
 				};
 			},
-			showItemDetail(payload) {
+			showItemDetail( payload ) {
 				return {
 					type: '__SET_ITEM_DETAIL',
 					payload,
 				};
 			},
 
-			setSelectedCategory(payload) {
+			setSelectedCategory( payload ) {
 				return {
 					type: '__SET_SELECTED_CATEGORY',
 					payload,
 				};
-			}
+			},
 		},
 		selectors: {
 			// should not be used except for js console debug purposes
-			__getState(state) {
+			__getState( state ) {
 				return state;
 			},
-			getItems(state) {
+			getItems( state ) {
 				return state.items;
 			},
-			getCategories(state) {
+			getCategories( state ) {
 				return state.categories;
 			},
-			getWapuu(state) {
+			getWapuu( state ) {
 				return state.wapuu;
 			},
-			getSvg(state) {
+			getSvg( state ) {
 				return state.svg;
 			},
-			getBalance(state) {
+			getBalance( state ) {
 				return state.balance;
 			},
-			getItemDetail(state) {
+			getItemDetail( state ) {
 				return state.itemDetail;
 			},
-			getSelectedCategory(state) {
+			getSelectedCategory( state ) {
 				return state.selectedCategory;
 			},
 		},
-	});
+	} );
 
-	register(store);
+	register( store );
 }
 
 // register the store now (lazy registration is not needed)
 create();
 
-export {STORE_NAME};
+export { STORE_NAME };

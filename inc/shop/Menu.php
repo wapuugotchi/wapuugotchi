@@ -32,9 +32,9 @@ class Menu {
 	 */
 	public function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(
-			'title'     => \__( 'Shop', 'wapuugotchi' ),
-			'slug'      => 'wapuugotchi',
-			'callback'  => 'Wapuugotchi\Shop\Menu::shop_page_template'
+			'title'    => \__( 'Shop', 'wapuugotchi' ),
+			'slug'     => 'wapuugotchi',
+			'callback' => 'Wapuugotchi\Shop\Menu::shop_page_template',
 		);
 
 		return $submenus;
@@ -48,5 +48,4 @@ class Menu {
 	public static function shop_page_template() {
 		echo '<div class="wrap"><div id="wapuugotchi-submenu__shop"></div></div>';
 	}
-
 }

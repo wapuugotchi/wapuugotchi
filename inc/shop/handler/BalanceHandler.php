@@ -32,11 +32,11 @@ class BalanceHandler {
 	/**
 	 * Pay for an item
 	 *
-	 * @param array $item The item to pay for
+	 * @param array $item The item to pay for.
 	 *
 	 * @return bool
 	 */
-	public static function pay_item( $item ) {
+	public static function decrease_balance( $item ) {
 		$balance  = self::get_balance();
 		$balance -= $item['meta']['price'];
 		if ( $balance >= 0 ) {
@@ -45,5 +45,18 @@ class BalanceHandler {
 		} else {
 			return false;
 		}
+	}
+
+	/**
+	 * Increase the balance of the current user
+	 *
+	 * @param int $amount The amount to increase the balance by.
+	 *
+	 * @return void
+	 */
+	public static function increase_balance( $amount ) {
+		$balance  = self::get_balance();
+		$balance += $amount;
+		\update_user_meta( \get_current_user_id(), 'wapuugotchi_balance__alpha', $balance );
 	}
 }

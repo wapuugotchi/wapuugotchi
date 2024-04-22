@@ -23,7 +23,7 @@ class CategoryHandler {
 	 * Gets the list of categories.
 	 * The MAIN_CATEGORY is the category that is displayed first in the shop.
 	 *
-	 * @throws \Exception
+	 * @throws \Exception If the collection could not be retrieved.
 	 */
 	public static function get_categories() {
 		$collection = CollectionService::get_collection();
@@ -54,7 +54,7 @@ class CategoryHandler {
 	 * @return array The updated category list.
 	 */
 	private static function set_main_category_first( array $categories ) {
-		if ( key_exists( self::MAIN_CATEGORY, $categories) ) {
+		if ( key_exists( self::MAIN_CATEGORY, $categories ) ) {
 			$main_category = $categories[ self::MAIN_CATEGORY ];
 			unset( $categories[ self::MAIN_CATEGORY ] );
 			$categories = array_merge( array( self::MAIN_CATEGORY => $main_category ), $categories );
@@ -62,5 +62,4 @@ class CategoryHandler {
 
 		return $categories;
 	}
-
 }

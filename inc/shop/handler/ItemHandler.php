@@ -21,37 +21,40 @@ class ItemHandler {
 	/**
 	 * The all items.
 	 *
-	 * @throws \Exception
+	 * @throws \Exception If the item could not be unlocked.
 	 */
 	public static function get_items() {
 		$collection   = CollectionService::get_collection();
 		$bought_items = self::get_unlocked_items();
 
-		if (!is_array($collection)) {
+		if ( ! is_array( $collection ) ) {
 			return array();
 		}
 
 		$items = array();
-		foreach ($collection as $category) {
-			if (!isset($category['slug'], $category['items'])) {
+		foreach ( $collection as $category ) {
+			if ( ! isset( $category['slug'], $category['items'] ) ) {
 				continue;
 			}
 
-			$items[$category['slug']] = array();
-			foreach ($category['items'] as $key => $item) {
-				if ($item['meta']['deactivated'] !== 0) {
+			$items[ $category['slug'] ] = array();
+			foreach ( $category['items'] as $key => $item ) {
+				if ( 0 !== $item['meta']['deactivated'] ) {
 					continue;
 				}
-				if (in_array($item['meta']['key'], $bought_items)) {
-					$item['meta']['price'] = 0;  // setting the price to 0 if bought
+				if ( in_array( $item['meta']['key'], $bought_items, true ) ) {
+					$item['meta']['price'] = 0;  // setting the price to 0 if bought.
 				}
-				$items[$category['slug']][$item['meta']['key']] = $item;
+				$items[ $category['slug'] ][ $item['meta']['key'] ] = $item;
 			}
 
-			// Sortieren der Items in dieser Kategorie nach Preis, Schlüssel beibehalten
-			uasort($items[$category['slug']], function ($a, $b) {
-				return $a['meta']['price'] <=> $b['meta']['price'];
-			});
+			// Sortieren der Items in dieser Kategorie nach Preis, Schlüssel beibehalten.
+			uasort(
+				$items[ $category['slug'] ],
+				function ( $a, $b ) {
+					return $a['meta']['price'] <=> $b['meta']['price'];
+				}
+			);
 		}
 
 		return $items;
@@ -63,7 +66,7 @@ class ItemHandler {
 	 * @param string $id The id of the item.
 	 * @param string $category The category of the item.
 	 *
-	 * @throws \Exception
+	 * @throws \Exception If the item could not be unlocked.
 	 */
 	public static function get_items_by_id( $id, $category ) {
 		$items = self::get_items();
@@ -82,9 +85,9 @@ class ItemHandler {
 	/**
 	 * Give all already unlocked items.
 	 *
-	 * @return array
+	 * @return array The unlocked items.
 	 *
-	 * @throws \Exception
+	 * @throws \Exception If the item could not be unlocked.
 	 */
 	public static function get_unlocked_items() {
 		$unlocked_items = get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true );
@@ -101,7 +104,7 @@ class ItemHandler {
 	 * @param string $id The id of the item.
 	 *
 	 * @return bool
-	 * @throws \Exception
+	 * @throws \Exception If the item could not be unlocked.
 	 */
 	public static function is_item_unlocked( $id ) {
 		$unlocked_items = self::get_unlocked_items();
@@ -109,7 +112,7 @@ class ItemHandler {
 			return false;
 		}
 
-		return in_array( $id, $unlocked_items );
+		return in_array( $id, $unlocked_items, true );
 	}
 
 	/**
@@ -118,11 +121,11 @@ class ItemHandler {
 	 * @param string $id The id of the item.
 	 *
 	 * @return bool
-	 * @throws \Exception
+	 * @throws \Exception If the item could not be unlocked.
 	 */
 	public static function unlock_item( $id ) {
 		$unlocked_items = self::get_unlocked_items();
-		if ( in_array( $id, $unlocked_items ) ) {
+		if ( in_array( $id, $unlocked_items, true ) ) {
 			return false;
 		}
 

@@ -1,65 +1,60 @@
 import './item.scss';
 import Pearl from './assets/pearl.svg';
 
-import {useCallback} from 'react';
-import {dispatch, useSelect} from "@wordpress/data";
+import { useCallback } from 'react';
+import { dispatch, useSelect } from '@wordpress/data';
 
-import {STORE_NAME} from "../store";
-import PaymentDialog from "./payment-dialog";
+import { STORE_NAME } from '../store';
 
-export default function Item({uuid, item}) {
-	const {wapuu, balance, selectedCategory, showItemDetail} = useSelect((select) => {
+export default function Item( { uuid, item } ) {
+	const { wapuu, balance, selectedCategory } = useSelect( ( select ) => {
 		return {
-			wapuu: select(STORE_NAME).getWapuu(),
-			balance: select(STORE_NAME).getBalance(),
-			selectedCategory: select(STORE_NAME).getSelectedCategory(),
-			showItemDetail: select(STORE_NAME).getItemDetail(),
+			wapuu: select( STORE_NAME ).getWapuu(),
+			balance: select( STORE_NAME ).getBalance(),
+			selectedCategory: select( STORE_NAME ).getSelectedCategory(),
 		};
-	});
+	} );
 
-	const handleItemClick = useCallback(() => {
-		console.log(uuid)
-		const avatar_config = wapuu?.char?.[selectedCategory]
-		if (item.meta.price === 0) {
-			const isItemSelected = avatar_config?.key?.includes(uuid);
-			const canDeselect = avatar_config.key.length > avatar_config.min;
-			const canSelect = avatar_config.key.length < avatar_config.max;
+	const handleItemClick = useCallback( () => {
+		const avatarConfig = wapuu?.char?.[ selectedCategory ];
+		if ( item.meta.price === 0 ) {
+			const isItemSelected = avatarConfig?.key?.includes( uuid );
+			const canDeselect = avatarConfig.key.length > avatarConfig.min;
+			const canSelect = avatarConfig.key.length < avatarConfig.max;
 
-			if (isItemSelected && canDeselect) {
-				const index = avatar_config.key.indexOf(uuid);
-				avatar_config.key.splice(index, 1);
-				dispatch(STORE_NAME).setWapuu(wapuu);
-			} else if (!isItemSelected && canSelect) {
-				avatar_config.key.push(uuid);
-				dispatch(STORE_NAME).setWapuu(wapuu);
-			} else if (!isItemSelected && !canSelect) {
-				avatar_config.key.pop();
-				avatar_config.key.push(uuid);
-				dispatch(STORE_NAME).setWapuu(wapuu);
+			if ( isItemSelected && canDeselect ) {
+				const index = avatarConfig.key.indexOf( uuid );
+				avatarConfig.key.splice( index, 1 );
+				dispatch( STORE_NAME ).setWapuu( wapuu );
+			} else if ( ! isItemSelected && canSelect ) {
+				avatarConfig.key.push( uuid );
+				dispatch( STORE_NAME ).setWapuu( wapuu );
+			} else if ( ! isItemSelected && ! canSelect ) {
+				avatarConfig.key.pop();
+				avatarConfig.key.push( uuid );
+				dispatch( STORE_NAME ).setWapuu( wapuu );
 			}
-		} else {
-			// Purchase item
-			if (item.meta.price <= balance) {
-				dispatch(STORE_NAME).showItemDetail(uuid);
-			}
-
+		} else if ( item.meta.price <= balance ) {
+			dispatch( STORE_NAME ).showItemDetail( uuid );
 		}
-	}, []);
+	}, [ balance, item, selectedCategory, uuid, wapuu ] );
 
 	return (
 		<div
-			onClick={handleItemClick}
+			onClick={ handleItemClick }
 			className={
-				wapuu?.char?.[selectedCategory]?.key?.includes(uuid)
+				wapuu?.char?.[ selectedCategory ]?.key?.includes( uuid )
 					? 'wapuugotchi_shop__item selected'
-					: 'wapuugotchi_shop__item'}>
-			<img src={item.preview} alt="Placeholder"/>
-			{item?.meta?.price > 0 && (
+					: 'wapuugotchi_shop__item'
+			}
+		>
+			<img src={ item.preview } alt="Placeholder" />
+			{ item?.meta?.price > 0 && (
 				<div className="wapuugotchi_shop__price">
-					<img src={Pearl}/>
-					<span>{item.meta.price}</span>
+					<img src={ Pearl } />
+					<span>{ item.meta.price }</span>
 				</div>
-			)}
+			) }
 		</div>
 	);
 }

@@ -38,7 +38,7 @@ class Manager {
 				\wp_json_encode(
 					array(
 						'avatar'   => AvatarHandler::get_avatar(),
-						'messages' => BubbleHandler::get_active_messages()
+						'messages' => BubbleHandler::get_active_messages(),
 					)
 				)
 			)

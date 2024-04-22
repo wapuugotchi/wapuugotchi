@@ -25,7 +25,7 @@ class Menu {
 	/**
 	 * Add manu to backend sidebar.
 	 *
-	 * @return void
+	 * @return false
 	 */
 	public function create_menu_page() {
 		$capability = 'manage_options';
@@ -40,7 +40,7 @@ class Menu {
 			return false;
 		}
 
-		if (  ! \is_callable( $submenus[0]['callback'] ) ) {
+		if ( ! \is_callable( $submenus[0]['callback'] ) ) {
 			return false;
 		}
 

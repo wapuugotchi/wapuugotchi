@@ -22,7 +22,6 @@ class Menu {
 	public function __construct() {
 		\add_filter( 'wapuugotchi_add_submenu', array( $this, 'wapuugotchi_add_submenu' ), 30 );
 		\add_action( 'current_screen', array( $this, 'force_redirect_to_dashboard' ) );
-
 	}
 
 	/**
@@ -34,9 +33,9 @@ class Menu {
 	 */
 	public function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(
-			'title'     => \__( 'Tour', 'wapuugotchi' ),
-			'slug'      => 'wapuugotchi__tour',
-			'callback'  => 'Wapuugotchi\Onboarding\Menu::onboarding_page_template'
+			'title'    => \__( 'Tour', 'wapuugotchi' ),
+			'slug'     => 'wapuugotchi__tour',
+			'callback' => 'Wapuugotchi\Onboarding\Menu::onboarding_page_template',
 		);
 
 		return $submenus;

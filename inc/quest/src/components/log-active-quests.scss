@@ -1,0 +1,33 @@
+.wapuugotchi_log__items {
+	width: 100%;
+	margin-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	.wapuugotchi_log__item {
+		padding: 10px 25px;
+		border-radius: 15px;
+		margin: 10px;
+		position: relative;
+		min-width: 250px;
+		max-width: 380px;
+	}
+
+	.wapuugotchi_log__active {
+		background-color: #fff;
+		border: solid 2px #00a32a;
+
+		h2 {
+			padding-top: 7px;
+			max-width: 235px;
+		}
+
+		span {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+
+		}
+	}
+}

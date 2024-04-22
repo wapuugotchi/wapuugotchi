@@ -1,0 +1,43 @@
+.wapuugotchi_log__items {
+	width: 100%;
+	margin-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	.wapuugotchi_log__item {
+		padding: 10px 25px;
+		border-radius: 15px;
+		margin: 10px;
+		position: relative;
+		min-width: 250px;
+		max-width: 380px;
+	}
+
+	.wapuugotchi_log__completed {
+		background-color: #fff;
+		border: solid 2px #888;
+
+		h2 {
+			padding-top: 7px;
+			max-width: 235px;
+			color: #888;
+			margin-bottom: 1px;
+		}
+
+		p {
+			color: #888;
+			margin-top: 1px;
+		}
+
+		span {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+
+			img {
+				filter: invert(58%) sepia(6%) saturate(8%) hue-rotate(331deg) brightness(91%) contrast(92%);
+			}
+		}
+	}
+}

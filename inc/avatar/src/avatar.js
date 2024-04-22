@@ -1,7 +1,7 @@
-import { StrictMode, createRoot } from '@wordpress/element';
+import { createRoot, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
 import Avatar from './components/avatar';
-import Bubble from "./components/bubble";
+import Bubble from './components/bubble';
 
 const getDomElement = () => {
 	let domElement = document.getElementById( 'wapuugotchi__avatar' );

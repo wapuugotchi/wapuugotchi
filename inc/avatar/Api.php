@@ -64,13 +64,13 @@ class Api {
 	 * @return WP_Error|\WP_HTTP_Response|WP_REST_Response
 	 */
 	public function submit_message( $req ) {
-		$body  = json_decode( $req->get_body() );
+		$body   = \json_decode( $req->get_body() );
 		$result = false;
 
 		if ( null !== $body->id ) {
-			$message = BubbleHandler::get_message_by_id($body->id);
-			if ($message && is_callable( $message->handle_submit() )) {
-				$result = call_user_func( $message->handle_submit() );
+			$message = BubbleHandler::get_message_by_id( $body->id );
+			if ( $message && \is_callable( $message->handle_submit() ) ) {
+				$result = \call_user_func( $message->handle_submit(), $body->id );
 			}
 		}
 

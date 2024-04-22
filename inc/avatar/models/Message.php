@@ -57,11 +57,11 @@ class Message {
 	 * @param string $handle_submit The completed state.
 	 */
 	public function __construct( $id, $message, $type, $is_active, $handle_submit ) {
-		$this->id                 = $id;
-		$this->message            = $message;
-		$this->type               = $type;
-		$this->is_active          = $is_active;
-		$this->handle_submit      = $handle_submit;
+		$this->id            = $id;
+		$this->message       = $message;
+		$this->type          = $type;
+		$this->is_active     = $is_active;
+		$this->handle_submit = $handle_submit;
 	}
 
 	/**

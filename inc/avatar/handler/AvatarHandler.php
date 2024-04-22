@@ -26,7 +26,7 @@ class AvatarHandler {
 		$avatar = \apply_filters( 'wapuugotchi_avatar', false );
 
 		if ( false === $avatar ) {
-			$default = WAPUUGOTCHI_PATH . 'config/avatar.svg';
+			$default = WAPUUGOTCHI_PATH . 'inc/avatar/assets/avatar.svg';
 			if ( \file_exists( $default ) && \is_readable( $default ) ) {
 				$avatar = \file_get_contents( $default );
 			}

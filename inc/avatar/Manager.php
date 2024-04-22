@@ -24,7 +24,7 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
+		\add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
 
 	/**
@@ -56,7 +56,7 @@ class Manager {
 				\wp_json_encode(
 					array(
 						'avatar'   => AvatarHandler::get_avatar(),
-						'messages' => BubbleHandler::get_active_messages()
+						'messages' => BubbleHandler::get_active_messages(),
 					)
 				)
 			)

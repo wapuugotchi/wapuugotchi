@@ -1,6 +1,6 @@
-import { useEffect, useCallback } from 'react';
+import { useCallback } from 'react';
 import { STORE_NAME } from '../store';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useDispatch, useSelect } from '@wordpress/data';
 import parse from 'html-react-parser';
 import apiFetch from '@wordpress/api-fetch';
 import './bubble.scss';
@@ -13,27 +13,26 @@ export default function Bubble() {
 		};
 	} );
 
-	const handleClickMessage = useCallback(async () => {
+	const handleClickMessage = useCallback( async () => {
 		const removedItem = messages.shift();
 
 		await apiFetch( {
 			path: `wapuugotchi/v1/submit_message`,
 			method: 'POST',
 			data: {
-				id: removedItem?.id
+				id: removedItem?.id,
 			},
 		} );
 
 		setMessages( messages );
-
-	}, [messages, setMessages]);
+	}, [ messages, setMessages ] );
 
 	return messages.length > 0 ? (
 		<div
-			className={`wapuugotchi__bubble fade_in_lazy ${messages[0].type}_bubble`}
-			onClick={handleClickMessage}
+			className={ `wapuugotchi__bubble fade_in_lazy ${ messages[ 0 ].type }_bubble` }
+			onClick={ handleClickMessage }
 		>
-			{parse(messages[0].message)}
+			{ parse( messages[ 0 ].message ) }
 		</div>
 	) : null;
 }

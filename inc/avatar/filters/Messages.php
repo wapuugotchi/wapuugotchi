@@ -9,7 +9,6 @@ namespace Wapuugotchi\Avatar\Filters;
 
 use Wapuugotchi\Avatar\Models\Message;
 
-
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -51,12 +50,11 @@ class Messages {
 	}
 
 	/**
-	 * Get true.
+	 * Set the transient.
 	 *
 	 * @return bool
 	 */
 	public static function handle_submit() {
-		return \set_transient( 'wapuugotchi_first_submit', true, 10 );
+		return \set_transient( 'wapuugotchi_first_submit', true, 60 );
 	}
-
 }

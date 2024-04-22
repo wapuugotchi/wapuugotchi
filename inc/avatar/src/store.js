@@ -60,13 +60,15 @@ function create() {
 			},
 			setAvatar: ( payload ) =>
 				async function ( { dispatch } ) {
-					return dispatch.__setAvatar( await __getInnerSvg( payload ) );
+					return dispatch.__setAvatar(
+						await __getInnerSvg( payload )
+					);
 				},
 			__setAvatar( avatar ) {
 				return {
 					type: '__SET_AVATAR',
 					payload: {
-						avatar: avatar,
+						avatar,
 					},
 				};
 			},
@@ -74,7 +76,7 @@ function create() {
 				return {
 					type: '__SET_MESSAGES',
 					payload: {
-						messages: [...payload],
+						messages: [ ...payload ],
 					},
 				};
 			},

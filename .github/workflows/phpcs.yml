@@ -12,7 +12,7 @@ jobs:
         with:
           php-version: '7.4'
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
+        run: composer install --prefer-dist --no-progress --ignore-platform-reqs
       - name: Check installed cs rules
         run: vendor/bin/phpcs -i
       - name: CS Check

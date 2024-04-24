@@ -35,12 +35,11 @@ function parseSvg( svg ) {
  * @param {Object} avatar - The SVG DOM.
  */
 function insertOnboardingTag( avatar ) {
-	avatar
-		.querySelector( 'g#wapuugotchi_type__wapuu' )
-		?.insertBefore(
-			__getOnboardingTag(),
-			avatar.querySelector( 'g#LeftArm--group' )
-		);
+	let selectedElement = avatar.querySelector('g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear');
+	selectedElement?.insertBefore(
+		__getOnboardingTag(),
+		avatar.querySelector('g#LeftArm--group')
+	);
 }
 
 /**

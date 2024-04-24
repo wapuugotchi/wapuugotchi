@@ -23,6 +23,13 @@ class TourOrder {
 		add_filter( 'wapuugotchi_onboarding_tour_files', array( $this, 'add_wapuugotchi_filter' ), 1 );
 	}
 
+	/**
+	 * Initialization filter for OnboardingData
+	 *
+	 * @param array $elements Array of onboarding objects.
+	 *
+	 * @return array|OnboardingPage[]
+	 */
 	public function add_wapuugotchi_filter( $elements ) {
 		$element = array(
 			'\Wapuugotchi\Onboarding\Filters\WapuugotchiTour',

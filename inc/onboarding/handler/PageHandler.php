@@ -89,6 +89,11 @@ class PageHandler {
 		return $tour;
 	}
 
+	/**
+	 * Get the last onboarding step.
+	 *
+	 * @return mixed|null
+	 */
 	public static function get_last_tour_data() {
 		global $current_screen;
 		$tour = self::get_tour_data();

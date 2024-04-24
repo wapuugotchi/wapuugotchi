@@ -7,7 +7,6 @@
 
 namespace Wapuugotchi\Onboarding;
 
-
 use Wapuugotchi\Onboarding\Handler\PageHandler;
 use Wapuugotchi\Onboarding\Models\Guide;
 
@@ -37,6 +36,11 @@ class Helper {
 		return $next_data->file;
 	}
 
+	/**
+	 * Get the first tour step of the current page.
+	 *
+	 * @return string|null
+	 */
 	public static function get_first_index_of_current_page() {
 		$item_list = self::get_current_page_item_list();
 		if ( empty( $item_list ) ) {
@@ -51,6 +55,11 @@ class Helper {
 		return $keys[0];
 	}
 
+	/**
+	 * Get a list of items for the current page.
+	 *
+	 * @return string|null
+	 */
 	public static function get_current_page_item_list() {
 		$current_data = PageHandler::get_current_tour_data();
 		if ( empty( $current_data ) ) {

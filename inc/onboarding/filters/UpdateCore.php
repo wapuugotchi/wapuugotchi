@@ -24,7 +24,7 @@ class UpdateCore {
 	 * "Constructor" of the class
 	 */
 	public function __construct() {
-		add_filter( 'wapuugotchi_onboarding_filter', array( $this, 'add_wapuugotchi_filter' ), 100, 1);
+		add_filter( 'wapuugotchi_onboarding_filter', array( $this, 'add_wapuugotchi_filter' ), 50, 1);
 	}
 
 	/**

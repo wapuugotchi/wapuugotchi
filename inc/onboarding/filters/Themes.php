@@ -24,7 +24,7 @@ class Themes {
 	 * 'Constructor" of the class
 	 */
 	public function __construct() {
-		add_filter( 'wapuugotchi_onboarding_filter', array( $this, 'add_wapuugotchi_filter' ) );
+		add_filter( 'wapuugotchi_onboarding_filter', array( $this, 'add_wapuugotchi_filter' ), 300, 1);
 	}
 
 	/**

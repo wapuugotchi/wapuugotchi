@@ -2,9 +2,9 @@ import { useSelect } from '@wordpress/data';
 import { STORE_NAME } from '../store';
 
 export default function Wapuu() {
-	const { svg } = useSelect( ( select ) => {
+	const { avatar } = useSelect( ( select ) => {
 		return {
-			svg: select( STORE_NAME ).getSvg(),
+			avatar: select( STORE_NAME ).getAvatar(),
 		};
 	} );
 
@@ -15,7 +15,7 @@ export default function Wapuu() {
 			width="700px"
 			version="1.1"
 			viewBox="-820 0 1000 770"
-			dangerouslySetInnerHTML={ { __html: svg } }
+			dangerouslySetInnerHTML={ { __html: avatar } }
 		></svg>
 	);
 }

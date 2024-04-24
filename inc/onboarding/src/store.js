@@ -1,128 +1,101 @@
-import { createReduxStore, register } from '@wordpress/data';
-import textBox from './assets/text-box.json';
+import {createReduxStore, register} from '@wordpress/data';
+import textBox from './components/assets/text-box.json';
 
 const STORE_NAME = 'wapuugotchi/onboarding';
 
 /**
- * returns the whole state data containing ALMOST ANYTHING
- * should be removed after finishing porting to react
- * exists just for debugging purposes
+ * Parse the SVG string into a DOM and modify it.
  *
- * - wp.data.select('wapuugotchi/onboarding').__getState()
- *
- * - wp.data.select('wapuugotchi/onboarding').getCollections()
- *
- * @param {Object} wapuu    - Config of the Wapuu
- * @param {Object} items    - All items
- * @param {Object} category - The category of the item
+ * @param {string} svg - The SVG string.
+ * @return {string} The modified SVG string.
  */
-const __getItemUrls = ( wapuu, items, category ) => {
-	if ( wapuu.char?.[ category ]?.key?.[ 0 ] ) {
-		return wapuu.char[ category ].key
-			.filter( ( uuid ) => items[ category ][ uuid ] )
-			.map( ( uuid ) => items[ category ][ uuid ].image );
-	}
-	return [];
-};
+async function __buildSvgMops(svg) {
+	const avatar = parseSvg(svg);
+	insertOnboardingTag(avatar);
+	removeIgnoredElements(avatar);
 
-async function __buildSvg( wapuu, items ) {
-	const responses = await Promise.all(
-		Object.keys( wapuu.char )
-			.map( ( category ) =>
-				__getItemUrls( wapuu, items, category ).map( ( url ) =>
-					fetch( url )
-				)
-			)
-			.flat()
+	return avatar.innerHTML;
+}
+
+/**
+ * Parse the SVG string into a DOM.
+ *
+ * @param {string} svg - The SVG string.
+ * @return {Object} The SVG DOM.
+ */
+function parseSvg(svg) {
+	const parser = new DOMParser();
+	const doc = parser.parseFromString(svg, 'image/svg+xml');
+	return doc.querySelector('svg');
+}
+
+/**
+ * Insert the onboarding tag into the SVG DOM.
+ *
+ * @param {Object} avatar - The SVG DOM.
+ */
+function insertOnboardingTag(avatar) {
+	avatar.querySelector('g#wapuugotchi_type__wapuu')?.insertBefore(
+		__getOnboardingTag(),
+		avatar.querySelector('g#LeftArm--group')
 	);
+}
 
-	const ignoreList = [
-		'Front--group',
-		'RightHand--group',
-		'BeforeRightHand--part',
-		'BeforeLeftArm--part',
-		'Ball--group',
+/**
+ * Remove ignored elements from the SVG DOM.
+ *
+ * @param {Object} avatar - The SVG DOM.
+ */
+function removeIgnoredElements(avatar) {
+	__getRemoveList()?.forEach((ignore) => {
+		avatar.querySelectorAll(ignore)?.forEach((item) => {
+			item?.remove();
+		});
+	});
+}
+
+/**
+ * Get the list of elements to be removed from the SVG DOM.
+ *
+ * @return {Array} The list of elements to be removed.
+ */
+function __getRemoveList() {
+	return [
+		'style',
+		'g#Front--group g',
+		'g#RightHand--group g',
+		'g#BeforeRightHand--part g',
+		'g#BeforeLeftArm--part g',
+		'g#Ball--group',
 	];
-	const svgs = (
-		await Promise.all( responses.map( ( response ) => response.text() ) )
-	).map( ( _ ) => new DOMParser().parseFromString( _, 'image/svg+xml' ) );
-	if ( svgs.length ) {
-		const result = svgs
-			.splice(
-				( svg ) => svg.querySelector( '#wapuugotchi_svg__wapuu' ),
-				1
-			)[ 0 ]
-			.querySelector( '#wapuugotchi_svg__wapuu' );
-		for ( const svg of svgs ) {
-			Array.from( svg.querySelectorAll( 'g' ) )
-				.filter( ( itemGroup ) => itemGroup.classList.value )
-				.forEach( ( itemGroup ) => {
-					const wapuuSvgGroup = result.querySelector(
-						'g#' + itemGroup.classList.value
-					);
-					if (
-						wapuuSvgGroup &&
-						ignoreList.includes( itemGroup.classList.value ) ===
-							false
-					) {
-						const removePart =
-							wapuuSvgGroup.querySelector( '.remove--part' );
-						if ( removePart !== null ) {
-							removePart.remove();
-						}
-						itemGroup.removeAttribute( 'class' );
-						wapuuSvgGroup.append( itemGroup );
-					}
-				} );
-		}
+}
 
-		const onboarding = document.createElement( 'g' );
-		onboarding.id = 'Onboarding--group';
-		onboarding.innerHTML = textBox.element;
-		result
-			?.querySelector( 'g#wapuugotchi_type__wapuu' )
-			?.insertBefore(
-				onboarding,
-				result.querySelector( 'g#LeftArm--group' )
-			);
-
-		return result.innerHTML;
-	}
+/**
+ * Get the onboarding tag.
+ *
+ * @return {Object} The onboarding tag.
+ */
+function __getOnboardingTag() {
+	const onboarding = document.createElement('g');
+	onboarding.id = 'Onboarding--group';
+	onboarding.innerHTML = textBox.element;
+	return onboarding;
 }
 
 function create() {
-	const store = createReduxStore( STORE_NAME, {
-		reducer( state = {}, { type, payload } ) {
-			switch ( type ) {
+	const store = createReduxStore(STORE_NAME, {
+		reducer(state = {}, {type, payload}) {
+			switch (type) {
 				case '__SET_STATE': {
 					return {
 						state,
 						...payload,
 					};
 				}
-				case '__SET_WAPUU': {
+				case '__SET_AVATAR': {
 					return {
 						...state,
-						wapuu: payload.wapuu,
-						svg: payload.svg,
-					};
-				}
-				case '__SET_ITEMS': {
-					return {
-						...state,
-						items: payload,
-					};
-				}
-				case '__SET_PAGE_CONFIG': {
-					return {
-						...state,
-						page_config: payload,
-					};
-				}
-				case '__SET_NEXT_PAGE': {
-					return {
-						...state,
-						next_page: payload,
+						avatar: payload,
 					};
 				}
 				case '__SET_INDEX': {
@@ -143,57 +116,30 @@ function create() {
 		},
 		actions: {
 			// this is just once used to initialize the store with the initial data
-			__initialize: ( initialState ) =>
-				async function ( { dispatch, select } ) {
-					dispatch.__setState( initialState );
-
-					dispatch.setWapuu( select.getWapuu() );
-					dispatch.setItems( select.getItems() );
-					dispatch.setPageConfig( select.getPageConfig() );
-					dispatch.setNextPage( select.getNextPage() );
-					dispatch.setIndex( select.getIndex() );
-					dispatch.setAnimated( select.getAnimated() );
+			__initialize: (initialState) =>
+				async function ({dispatch, select}) {
+					dispatch.__setState(initialState);
+					dispatch.setAvatar(select.getAvatar());
 				},
-			__setState( payload ) {
+			__setState(payload) {
 				return {
 					type: '__SET_STATE',
 					payload,
 				};
 			},
-			setWapuu: ( payload ) =>
-				async function ( { dispatch, select } ) {
-					const svg = await __buildSvg( payload, select.getItems() );
+			setAvatar: (payload) =>
+				async function ({dispatch, select}) {
+					const svg = await __buildSvgMops(payload);
 
-					return dispatch.__setWapuu( payload, svg );
+					return dispatch.__setAvatar(svg);
 				},
-			__setWapuu( wapuu, svg ) {
+			__setAvatar(payload) {
 				return {
-					type: '__SET_WAPUU',
-					payload: {
-						wapuu: { ...wapuu },
-						svg,
-					},
-				};
-			},
-			setItems( payload ) {
-				return {
-					type: '__SET_ITEMS',
-					payload: { ...payload },
-				};
-			},
-			setPageConfig( payload ) {
-				return {
-					type: '__SET_PAGE_CONFIG',
+					type: '__SET_AVATAR',
 					payload,
 				};
 			},
-			setNextPage( payload ) {
-				return {
-					type: '__SET_NEXT_PAGE',
-					payload,
-				};
-			},
-			setIndex( payload ) {
+			setIndex(payload) {
 				return {
 					type: '__SET_INDEX',
 					payload,
@@ -208,38 +154,32 @@ function create() {
 		},
 		selectors: {
 			// should not be used except for js console debug purposes
-			__getState( state ) {
+			__getState(state) {
 				return state;
 			},
-			getWapuu( state ) {
-				return state.wapuu;
+			getAvatar(state) {
+				return state.avatar;
 			},
-			getItems( state ) {
-				return state.items;
-			},
-			getPageConfig( state ) {
+			getPageConfig(state) {
 				return state.page_config;
 			},
-			getSvg( state ) {
-				return state.svg;
-			},
-			getNextPage( state ) {
+			getNextPage(state) {
 				return state.next_page;
 			},
-			getIndex( state ) {
+			getIndex(state) {
 				return state.index;
 			},
-			getAnimated( state ) {
+			getAnimated(state) {
 				return state.animated;
 			},
 		},
 		resolvers: {},
-	} );
+	});
 
-	register( store );
+	register(store);
 }
 
 // register the store now (lazy registration is not needed)
 create();
 
-export { STORE_NAME };
+export {STORE_NAME};

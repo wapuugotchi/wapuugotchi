@@ -60,7 +60,9 @@ function init() {
 	new \Wapuugotchi\Quest\Filters\QuestDate();
 	new \Wapuugotchi\Quest\Filters\QuestStart();
 
+	new \Wapuugotchi\Onboarding\Manager();
 	new \Wapuugotchi\Onboarding\Menu();
+	new \Wapuugotchi\Onboarding\Filters\TourOrder();
 
 }
 

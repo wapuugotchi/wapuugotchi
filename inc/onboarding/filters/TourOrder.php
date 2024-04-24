@@ -20,7 +20,7 @@ class TourOrder {
 	 * "Constructor" of the class
 	 */
 	public function __construct() {
-		add_filter( 'wapuugotchi_onboarding_tour_files', array( $this, 'add_wapuugotchi_filter' ), 1);
+		add_filter( 'wapuugotchi_onboarding_tour_files', array( $this, 'add_wapuugotchi_filter' ), 1 );
 	}
 
 	public function add_wapuugotchi_filter( $elements ) {

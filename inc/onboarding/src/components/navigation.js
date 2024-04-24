@@ -50,7 +50,7 @@ export default function Navigation() {
 
 	const getIndex = () => {
 		const pageKeyList = Object.keys( pageConfig );
-		return pageKeyList?.indexOf( index.toString() );
+		return pageKeyList?.indexOf( index?.toString() );
 	};
 
 	const fadeOut = () => {

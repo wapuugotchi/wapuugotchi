@@ -73,12 +73,22 @@ class Target {
 	public $hover = 0;
 
 	/**
+	 * Create a new Target object
+	 *
+	 * @return Target New Target object.
+	 */
+	public static function create() {
+		return new Target();
+	}
+
+	/**
 	 * Set to active and return the Target object
 	 *
 	 * @param bool|string $active Active or not.
 	 */
 	public function set_active( $active ) {
 		$this->active = $active;
+
 		return $this;
 	}
 
@@ -89,6 +99,7 @@ class Target {
 	 */
 	public function set_focus( $focus ) {
 		$this->focus = $focus;
+
 		return $this;
 	}
 
@@ -101,6 +112,7 @@ class Target {
 	 */
 	public function set_overlay( $overlay ) {
 		$this->overlay = $overlay;
+
 		return $this;
 	}
 
@@ -113,6 +125,7 @@ class Target {
 	 */
 	public function set_delay( $delay ) {
 		$this->delay = $delay;
+
 		return $this;
 	}
 
@@ -125,6 +138,7 @@ class Target {
 	 */
 	public function set_color( $color ) {
 		$this->color = $color;
+
 		return $this;
 	}
 
@@ -137,6 +151,7 @@ class Target {
 	 */
 	public function set_click( $click ) {
 		$this->click = $click;
+
 		return $this;
 	}
 
@@ -149,6 +164,7 @@ class Target {
 	 */
 	public function set_clickable( $clickable ) {
 		$this->clickable = $clickable;
+
 		return $this;
 	}
 
@@ -161,15 +177,7 @@ class Target {
 	 */
 	public function set_hover( $hover ) {
 		$this->hover = $hover;
-		return $this;
-	}
 
-	/**
-	 * Create a new Target object
-	 *
-	 * @return Target New Target object.
-	 */
-	public static function create() {
-		return new Target();
+		return $this;
 	}
 }

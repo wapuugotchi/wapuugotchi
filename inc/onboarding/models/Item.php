@@ -7,8 +7,6 @@
 
 namespace Wapuugotchi\Onboarding\Models;
 
-use Wapuugotchi\Onboarding\Models\Target;
-
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -62,6 +60,7 @@ class Item {
 	 */
 	public function set_title( $title ) {
 		$this->title = $title;
+
 		return $this;
 	}
 
@@ -74,6 +73,7 @@ class Item {
 	 */
 	public function set_text( $text ) {
 		$this->text = $text;
+
 		return $this;
 	}
 
@@ -87,6 +87,7 @@ class Item {
 	 */
 	public function set_freeze( $freeze ) {
 		$this->freeze = $freeze;
+
 		return $this;
 	}
 
@@ -99,6 +100,7 @@ class Item {
 	 */
 	public function add_target( $target ) {
 		$this->target_list[] = $target;
+
 		return $this;
 	}
 }

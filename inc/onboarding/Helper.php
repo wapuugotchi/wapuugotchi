@@ -37,19 +37,6 @@ class Helper {
 		return $next_data->file;
 	}
 
-	public static function get_current_page_item_list() {
-		$current_data = PageHandler::get_current_tour_data();
-		if ( empty( $current_data ) ) {
-			return null;
-		}
-
-		if ( ! $current_data instanceof Guide ) {
-			return null;
-		}
-
-		return $current_data->item_list;
-	}
-
 	public static function get_first_index_of_current_page() {
 		$item_list = self::get_current_page_item_list();
 		if ( empty( $item_list ) ) {
@@ -62,5 +49,18 @@ class Helper {
 		}
 
 		return $keys[0];
+	}
+
+	public static function get_current_page_item_list() {
+		$current_data = PageHandler::get_current_tour_data();
+		if ( empty( $current_data ) ) {
+			return null;
+		}
+
+		if ( ! $current_data instanceof Guide ) {
+			return null;
+		}
+
+		return $current_data->item_list;
 	}
 }

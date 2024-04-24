@@ -9,6 +9,13 @@ namespace Wapuugotchi\Onboarding;
 
 use Wapuugotchi\Onboarding\Handler\AvatarHandler;
 use Wapuugotchi\Onboarding\Handler\PageHandler;
+use function add_action;
+use function sprintf;
+use function wp_add_inline_script;
+use function wp_enqueue_script;
+use function wp_enqueue_style;
+use function wp_json_encode;
+use function wp_set_script_translations;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
@@ -23,7 +30,7 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		\add_action( 'admin_init', array( $this, 'init' ) );
+		add_action( 'admin_init', array( $this, 'init' ) );
 	}
 
 	/**
@@ -32,8 +39,8 @@ class Manager {
 	public function init() {
 		if ( isset( $_GET['onboarding_mode'] ) ) {
 			PageHandler::load_tour_files();
-			\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
-			\add_action( 'enqueue_block_editor_assets', array( $this, 'enable_welcome_guides' ), 20 );
+			add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
+			add_action( 'enqueue_block_editor_assets', array( $this, 'enable_welcome_guides' ), 20 );
 		}
 	}
 
@@ -42,14 +49,14 @@ class Manager {
 	 */
 	public function load_scripts() {
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/onboarding.asset.php';
-		\wp_enqueue_style( 'wapuugotchi-onboarding', WAPUUGOTCHI_URL . 'build/onboarding.css', array(), $assets['version'] );
-		\wp_enqueue_script( 'wapuugotchi-onboarding', WAPUUGOTCHI_URL . 'build/onboarding.js', $assets['dependencies'], $assets['version'], true );
+		wp_enqueue_style( 'wapuugotchi-onboarding', WAPUUGOTCHI_URL . 'build/onboarding.css', array(), $assets['version'] );
+		wp_enqueue_script( 'wapuugotchi-onboarding', WAPUUGOTCHI_URL . 'build/onboarding.js', $assets['dependencies'], $assets['version'], true );
 
-		\wp_add_inline_script(
+		wp_add_inline_script(
 			'wapuugotchi-onboarding',
-			\sprintf(
+			sprintf(
 				"wp.data.dispatch('wapuugotchi/onboarding').__initialize(%s)",
-				\wp_json_encode(
+				wp_json_encode(
 					array(
 						'next_page'   => Helper::get_next_page_path(),
 						'page_config' => Helper::get_current_page_item_list(),
@@ -62,7 +69,7 @@ class Manager {
 			'after'
 		);
 
-		\wp_set_script_translations( 'wapuugotchi-onboarding', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
+		wp_set_script_translations( 'wapuugotchi-onboarding', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
 	/**

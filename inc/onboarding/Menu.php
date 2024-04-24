@@ -7,6 +7,10 @@
 
 namespace Wapuugotchi\Onboarding;
 
+use function __;
+use function add_action;
+use function add_filter;
+
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -20,8 +24,17 @@ class Menu {
 	 * "Constructor" of the class
 	 */
 	public function __construct() {
-		\add_filter( 'wapuugotchi_add_submenu', array( $this, 'wapuugotchi_add_submenu' ), 30 );
-		\add_action( 'current_screen', array( $this, 'force_redirect_to_dashboard' ) );
+		add_filter( 'wapuugotchi_add_submenu', array( $this, 'wapuugotchi_add_submenu' ), 30 );
+		add_action( 'current_screen', array( $this, 'force_redirect_to_dashboard' ) );
+	}
+
+	/**
+	 * Add html starting point to quest manu page.
+	 *
+	 * @return void
+	 */
+	public static function onboarding_page_template() {
+		echo '<div class="wrap"><div id="wapuugotchi-submenu__onboarding"></div></div>';
 	}
 
 	/**
@@ -33,21 +46,12 @@ class Menu {
 	 */
 	public function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(
-			'title'    => \__( 'Tour', 'wapuugotchi' ),
+			'title'    => __( 'Tour', 'wapuugotchi' ),
 			'slug'     => 'wapuugotchi__tour',
 			'callback' => 'Wapuugotchi\Onboarding\Menu::onboarding_page_template',
 		);
 
 		return $submenus;
-	}
-
-	/**
-	 * Add html starting point to quest manu page.
-	 *
-	 * @return void
-	 */
-	public static function onboarding_page_template() {
-		echo '<div class="wrap"><div id="wapuugotchi-submenu__onboarding"></div></div>';
 	}
 
 	/**

@@ -56,6 +56,7 @@ class Guide {
 	 */
 	public function set_page( $page ) {
 		$this->page = $page;
+
 		return $this;
 	}
 
@@ -68,6 +69,7 @@ class Guide {
 	 */
 	public function set_file( $file ) {
 		$this->file = $file;
+
 		return $this;
 	}
 
@@ -80,6 +82,7 @@ class Guide {
 	 */
 	public function add_item( $item ) {
 		$this->item_list[] = $item;
+
 		return $this;
 	}
 }

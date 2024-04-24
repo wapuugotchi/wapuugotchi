@@ -8,6 +8,8 @@
 namespace Wapuugotchi\Avatar\Filters;
 
 use Wapuugotchi\Avatar\Models\Message;
+use function get_transient;
+use function set_transient;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
@@ -26,6 +28,24 @@ class Messages {
 	}
 
 	/**
+	 * Get true.
+	 *
+	 * @return bool
+	 */
+	public static function is_active() {
+		return get_transient( 'wapuugotchi_first_submit' ) === false;
+	}
+
+	/**
+	 * Set the transient.
+	 *
+	 * @return bool
+	 */
+	public static function handle_submit() {
+		return set_transient( 'wapuugotchi_first_submit', true, 60 );
+	}
+
+	/**
 	 * Initialization filter for QuestStart
 	 *
 	 * @param array $quests Array of quest objects.
@@ -38,23 +58,5 @@ class Messages {
 		);
 
 		return array_merge( $default_quest, $quests );
-	}
-
-	/**
-	 * Get true.
-	 *
-	 * @return bool
-	 */
-	public static function is_active() {
-		return \get_transient( 'wapuugotchi_first_submit' ) === false;
-	}
-
-	/**
-	 * Set the transient.
-	 *
-	 * @return bool
-	 */
-	public static function handle_submit() {
-		return \set_transient( 'wapuugotchi_first_submit', true, 60 );
 	}
 }

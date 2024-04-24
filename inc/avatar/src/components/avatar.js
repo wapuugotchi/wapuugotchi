@@ -1,16 +1,16 @@
-import { STORE_NAME } from '../store';
-import { useSelect } from '@wordpress/data';
-import { useMemo } from 'react';
+import {STORE_NAME} from '../store';
+import {useSelect} from '@wordpress/data';
+import {useMemo} from 'react';
 import './avatar.scss';
 
 export default function Avatar() {
-	const { avatar } = useSelect( ( select ) => {
+	const {avatar} = useSelect((select) => {
 		return {
-			avatar: select( STORE_NAME ).getAvatar(),
+			avatar: select(STORE_NAME).getAvatar(),
 		};
-	} );
+	});
 
-	const memoizedAvatar = useMemo( () => avatar, [ avatar ] );
+	const memoizedAvatar = useMemo(() => avatar, [avatar]);
 
 	return (
 		<div className="wapuugotchi__svg">
@@ -20,7 +20,7 @@ export default function Avatar() {
 				y="0"
 				version="1.1"
 				viewBox="0 0 1000 1000"
-				dangerouslySetInnerHTML={ { __html: memoizedAvatar } }
+				dangerouslySetInnerHTML={{__html: memoizedAvatar}}
 			></svg>
 		</div>
 	);

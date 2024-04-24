@@ -1,16 +1,16 @@
-import { STORE_NAME } from '../store';
-import { useSelect } from '@wordpress/data';
-import { useMemo } from 'react';
+import {STORE_NAME} from '../store';
+import {useSelect} from '@wordpress/data';
+import {useMemo} from 'react';
 import './show-room.scss';
 
 export default function ShowRoom() {
-	const { svg } = useSelect( ( select ) => {
+	const {svg} = useSelect((select) => {
 		return {
-			svg: select( STORE_NAME ).getSvg(),
+			svg: select(STORE_NAME).getSvg(),
 		};
-	} );
+	});
 
-	const memoizedSvg = useMemo( () => svg, [ svg ] );
+	const memoizedSvg = useMemo(() => svg, [svg]);
 	return (
 		<div className="wapuugotchi_shop__image">
 			<div className="wapuu_show_room">
@@ -20,7 +20,7 @@ export default function ShowRoom() {
 					y="0"
 					version="1.1"
 					viewBox="0 0 1000 1000"
-					dangerouslySetInnerHTML={ { __html: memoizedSvg } }
+					dangerouslySetInnerHTML={{__html: memoizedSvg}}
 				></svg>
 			</div>
 		</div>

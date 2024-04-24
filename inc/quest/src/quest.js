@@ -1,13 +1,13 @@
-import { createRoot, StrictMode } from '@wordpress/element';
+import {createRoot, StrictMode} from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
 import Log from './components/log';
 
-domReady( () =>
+domReady(() =>
 	createRoot(
-		document.getElementById( 'wapuugotchi-submenu__quests' )
+		document.getElementById('wapuugotchi-submenu__quests')
 	).render(
 		<StrictMode>
-			<Log />
+			<Log/>
 		</StrictMode>
 	)
 );

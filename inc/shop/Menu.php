@@ -7,6 +7,9 @@
 
 namespace Wapuugotchi\Shop;
 
+use function __;
+use function add_filter;
+
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -20,7 +23,16 @@ class Menu {
 	 * "Constructor" of the class
 	 */
 	public function __construct() {
-		\add_filter( 'wapuugotchi_add_submenu', array( $this, 'wapuugotchi_add_submenu' ), 10 );
+		add_filter( 'wapuugotchi_add_submenu', array( $this, 'wapuugotchi_add_submenu' ), 10 );
+	}
+
+	/**
+	 * Add html starting point to customizer manu page.
+	 *
+	 * @return void
+	 */
+	public static function shop_page_template() {
+		echo '<div class="wrap"><div id="wapuugotchi-submenu__shop"></div></div>';
 	}
 
 	/**
@@ -32,20 +44,11 @@ class Menu {
 	 */
 	public function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(
-			'title'    => \__( 'Shop', 'wapuugotchi' ),
+			'title'    => __( 'Shop', 'wapuugotchi' ),
 			'slug'     => 'wapuugotchi',
 			'callback' => 'Wapuugotchi\Shop\Menu::shop_page_template',
 		);
 
 		return $submenus;
-	}
-
-	/**
-	 * Add html starting point to customizer manu page.
-	 *
-	 * @return void
-	 */
-	public static function shop_page_template() {
-		echo '<div class="wrap"><div id="wapuugotchi-submenu__shop"></div></div>';
 	}
 }

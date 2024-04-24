@@ -1,11 +1,11 @@
-import { createRoot, StrictMode } from '@wordpress/element';
+import {createRoot, StrictMode} from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
 import Container from './components/container';
 
-domReady( () =>
-	createRoot( document.getElementById( 'wapuugotchi-submenu__shop' ) ).render(
+domReady(() =>
+	createRoot(document.getElementById('wapuugotchi-submenu__shop')).render(
 		<StrictMode>
-			<Container />
+			<Container/>
 		</StrictMode>
 	)
 );

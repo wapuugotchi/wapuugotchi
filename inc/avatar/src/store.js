@@ -1,4 +1,4 @@
-import { createReduxStore, register } from '@wordpress/data';
+import {createReduxStore, register} from '@wordpress/data';
 
 const STORE_NAME = 'wapuugotchi/avatar';
 
@@ -14,15 +14,15 @@ const STORE_NAME = 'wapuugotchi/avatar';
  *    contains ALL items (both available(paid or price===0) and unavailable (=> not yet paid))
  */
 
-async function __getInnerSvg( avatar ) {
-	const svg = new DOMParser().parseFromString( avatar, 'image/svg+xml' );
-	return svg?.querySelector( 'svg' )?.innerHTML;
+async function __getInnerSvg(avatar) {
+	const svg = new DOMParser().parseFromString(avatar, 'image/svg+xml');
+	return svg?.querySelector('svg')?.innerHTML;
 }
 
 function create() {
-	const store = createReduxStore( STORE_NAME, {
-		reducer( state = {}, { type, payload } ) {
-			switch ( type ) {
+	const store = createReduxStore(STORE_NAME, {
+		reducer(state = {}, {type, payload}) {
+			switch (type) {
 				case '__SET_STATE': {
 					return {
 						state,
@@ -47,24 +47,24 @@ function create() {
 		},
 		actions: {
 			// this is just once used to initialize the store with the initial data
-			__initialize: ( initialState ) =>
-				async function ( { dispatch, select } ) {
-					dispatch.__setState( initialState );
-					dispatch.setAvatar( select.getAvatar() );
+			__initialize: (initialState) =>
+				async function ({dispatch, select}) {
+					dispatch.__setState(initialState);
+					dispatch.setAvatar(select.getAvatar());
 				},
-			__setState( payload ) {
+			__setState(payload) {
 				return {
 					type: '__SET_STATE',
 					payload,
 				};
 			},
-			setAvatar: ( payload ) =>
-				async function ( { dispatch } ) {
+			setAvatar: (payload) =>
+				async function ({dispatch}) {
 					return dispatch.__setAvatar(
-						await __getInnerSvg( payload )
+						await __getInnerSvg(payload)
 					);
 				},
-			__setAvatar( avatar ) {
+			__setAvatar(avatar) {
 				return {
 					type: '__SET_AVATAR',
 					payload: {
@@ -72,33 +72,33 @@ function create() {
 					},
 				};
 			},
-			setMessages( payload ) {
+			setMessages(payload) {
 				return {
 					type: '__SET_MESSAGES',
 					payload: {
-						messages: [ ...payload ],
+						messages: [...payload],
 					},
 				};
 			},
 		},
 		selectors: {
 			// should not be used except for js console debug purposes
-			__getState( state ) {
+			__getState(state) {
 				return state;
 			},
-			getAvatar( state ) {
+			getAvatar(state) {
 				return state.avatar;
 			},
-			getMessages( state ) {
+			getMessages(state) {
 				return state.messages;
 			},
 		},
-	} );
+	});
 
-	register( store );
+	register(store);
 }
 
 // register the store now (lazy registration is not needed)
 create();
 
-export { STORE_NAME };
+export {STORE_NAME};

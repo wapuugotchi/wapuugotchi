@@ -1,22 +1,22 @@
 import './category.scss';
-import { dispatch, useSelect } from '@wordpress/data';
-import { STORE_NAME } from '../store';
+import {dispatch, useSelect} from '@wordpress/data';
+import {STORE_NAME} from '../store';
 
-export default function Category( { slug, meta } ) {
-	const { selectedCategory } = useSelect( ( select ) => {
+export default function Category({slug, meta}) {
+	const {selectedCategory} = useSelect((select) => {
 		return {
-			selectedCategory: select( STORE_NAME ).getSelectedCategory(),
+			selectedCategory: select(STORE_NAME).getSelectedCategory(),
 		};
-	} );
+	});
 
 	const handleSelectedCategory = async () => {
-		dispatch( STORE_NAME ).setSelectedCategory( slug );
+		dispatch(STORE_NAME).setSelectedCategory(slug);
 	};
 	return (
 		meta && (
 			<div
-				onClick={ () => handleSelectedCategory() }
-				id={ 'category_' + slug }
+				onClick={() => handleSelectedCategory()}
+				id={'category_' + slug}
 				className={
 					slug === selectedCategory
 						? 'wapuugotchi_shop__category selected'
@@ -25,7 +25,7 @@ export default function Category( { slug, meta } ) {
 			>
 				<img
 					className="wapuugotchi_shop__category_icon"
-					src={ meta.image }
+					src={meta.image}
 				/>
 			</div>
 		)

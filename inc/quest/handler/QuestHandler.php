@@ -8,6 +8,18 @@
 namespace Wapuugotchi\Quest\Handler;
 
 use Wapuugotchi\Shop\Handler\BalanceHandler;
+use function apply_filters;
+use function array_keys;
+use function array_merge;
+use function array_unique;
+use function get_current_user_id;
+use function get_user_meta;
+use function gmdate;
+use function in_array;
+use function is_array;
+use function update_user_meta;
+use function wp_cache_get;
+use function wp_cache_set;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
@@ -44,20 +56,20 @@ class QuestHandler {
 	 * @return array
 	 */
 	private static function find_active_quests() {
-		$completed_quests = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
+		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
 		$all_quests       = self::get_all_quests();
 		$active_quests    = array();
 
-		if ( ! \is_array( $completed_quests ) ) {
+		if ( ! is_array( $completed_quests ) ) {
 			$completed_quests = array();
 		}
 
 		foreach ( $all_quests as $quest ) {
-			if ( \in_array( $quest->get_id(), \array_keys( $completed_quests ), true ) ) {
+			if ( in_array( $quest->get_id(), array_keys( $completed_quests ), true ) ) {
 				continue;
 			}
 
-			if ( $quest->get_parent_id() !== null && ! \in_array( $quest->get_parent_id(), \array_keys( $completed_quests ), true ) ) {
+			if ( $quest->get_parent_id() !== null && ! in_array( $quest->get_parent_id(), array_keys( $completed_quests ), true ) ) {
 				continue;
 			}
 
@@ -77,15 +89,15 @@ class QuestHandler {
 	 * @return array
 	 */
 	public static function get_all_quests() {
-		$quest = \wp_cache_get( 'wapuugotchi_all_quests' );
+		$quest = wp_cache_get( 'wapuugotchi_all_quests' );
 
 		if ( ! empty( $quest ) ) {
 			return $quest;
 		}
 
-		$quest = \apply_filters( 'wapuugotchi_quest_filter', array() );
+		$quest = apply_filters( 'wapuugotchi_quest_filter', array() );
 
-		\wp_cache_set( 'wapuugotchi_all_quests', $quest );
+		wp_cache_set( 'wapuugotchi_all_quests', $quest );
 
 		return $quest;
 	}
@@ -98,8 +110,8 @@ class QuestHandler {
 	public static function get_completed_quests() {
 		$result           = array();
 		$all_quests       = self::get_all_quests();
-		$completed_quests = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
-		if ( ! \is_array( $completed_quests ) ) {
+		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
+		if ( ! is_array( $completed_quests ) ) {
 			return array();
 		}
 
@@ -163,9 +175,9 @@ class QuestHandler {
 	 * @return bool
 	 */
 	private static function set_quest_completed( $quest_id ) {
-		$completed_quests     = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
+		$completed_quests     = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
 		$new_completed_quests = array();
-		if ( ! \is_array( $completed_quests ) ) {
+		if ( ! is_array( $completed_quests ) ) {
 			$completed_quests = array();
 		}
 
@@ -182,14 +194,14 @@ class QuestHandler {
 		}
 
 		$new_completed_quests[ $quest_id ] = array(
-			'date'     => \gmdate( 'j F, Y \@ g:ia' ),
+			'date'     => gmdate( 'j F, Y \@ g:ia' ),
 			'notified' => false,
 		);
 
-		\update_user_meta(
-			\get_current_user_id(),
+		update_user_meta(
+			get_current_user_id(),
 			'wapuugotchi_quest_completed__alpha',
-			\array_unique( \array_merge( $completed_quests, $new_completed_quests ), SORT_REGULAR )
+			array_unique( array_merge( $completed_quests, $new_completed_quests ), SORT_REGULAR )
 		);
 
 		return true;

@@ -26,6 +26,15 @@ class QuestStart {
 	}
 
 	/**
+	 * Get true.
+	 *
+	 * @return true
+	 */
+	public static function always_true() {
+		return true;
+	}
+
+	/**
 	 * Initialization filter for QuestStart
 	 *
 	 * @param array $quests Array of quest objects.
@@ -38,14 +47,5 @@ class QuestStart {
 		);
 
 		return array_merge( $default_quest, $quests );
-	}
-
-	/**
-	 * Get true.
-	 *
-	 * @return true
-	 */
-	public static function always_true() {
-		return true;
 	}
 }

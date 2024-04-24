@@ -8,6 +8,12 @@
 namespace Wapuugotchi\Quest;
 
 use Wapuugotchi\Quest\Handler\QuestHandler;
+use function add_action;
+use function wp_add_inline_script;
+use function wp_enqueue_script;
+use function wp_enqueue_style;
+use function wp_json_encode;
+use function wp_set_script_translations;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
@@ -22,8 +28,8 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		\add_action( 'admin_init', array( $this, 'manage_quest_completion' ), 1000, 0 );
-		\add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
+		add_action( 'admin_init', array( $this, 'manage_quest_completion' ), 1000, 0 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
 
 	/**
@@ -46,11 +52,11 @@ class Manager {
 	 */
 	public function load_scripts() {
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/quest.asset.php';
-		\wp_enqueue_style( 'wapuugotchi-quest', WAPUUGOTCHI_URL . 'build/quest.css', array(), $assets['version'] );
-		\wp_enqueue_script( 'wapuugotchi-quest', WAPUUGOTCHI_URL . 'build/quest.js', $assets['dependencies'], $assets['version'], true );
-		\wp_add_inline_script(
+		wp_enqueue_style( 'wapuugotchi-quest', WAPUUGOTCHI_URL . 'build/quest.css', array(), $assets['version'] );
+		wp_enqueue_script( 'wapuugotchi-quest', WAPUUGOTCHI_URL . 'build/quest.js', $assets['dependencies'], $assets['version'], true );
+		wp_add_inline_script(
 			'wapuugotchi-quest',
-			'window.extWapuugotchiLogData = ' . \wp_json_encode(
+			'window.extWapuugotchiLogData = ' . wp_json_encode(
 				array(
 					'active_quests'    => QuestHandler::get_active_quests(),
 					'completed_quests' => QuestHandler::get_completed_quests(),
@@ -59,7 +65,7 @@ class Manager {
 			'before'
 		);
 
-		\wp_set_script_translations( 'wapuugotchi-quest', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
+		wp_set_script_translations( 'wapuugotchi-quest', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
 	/**

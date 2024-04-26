@@ -4,7 +4,7 @@ Tags:              assistant, wapuu, gamification
 Stable tag:        0.1.5
 Requires at least: 6.2
 Tested up to:      6.5
-Requires PHP:      7.0
+Requires PHP:      7.2
 License:           GPLv2 or later
 
 Gamify Your WordPress Experience with Customizable Wapuu Notifications & Rewards

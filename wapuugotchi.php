@@ -3,7 +3,7 @@
  * Plugin Name:       WapuuGotchi
  * Description:       Meet Your Personalized Wapuu Assistant.
  * Requires at least: 6.0
- * Requires PHP:      7.0
+ * Requires PHP:      7.2
  * Version:           0.2.0
  * Author:            herrfeldmann
  * License:           GPL-2.0-or-later
@@ -14,8 +14,6 @@
  */
 
 namespace Wapuugotchi\Wapuugotchi;
-
-use Wapuugotchi\Onboarding\DashboardData;
 
 if ( ! defined( 'WAPUUGOTCHI_PATH' ) ) {
 	define( 'WAPUUGOTCHI_PATH', \plugin_dir_path( __FILE__ ) );
@@ -37,62 +35,35 @@ if ( is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
  * @return void
  */
 function init() {
-	require_once 'inc/Helper.php';
-	// Check if the user is on a mobile device. If so, stop plugin.
-	if ( Helper::is_mobile_device() === true ) {
-		return false;
+	/**
+	 * Implements the composer autoloader if not already done.
+	 */
+	if ( is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
+		require_once WAPUUGOTCHI_PATH . 'vendor/autoload.php';
 	}
 
-	/* Mains '*/
-	require_once 'inc/Api.php';
-	require_once 'inc/Menu.php';
-	require_once 'inc/Manager.php';
-	new Api();
-	new Menu();
-	new Manager();
+	new \Wapuugotchi\Core\Menu();
 
-	/* Apps '*/
-	require_once 'inc/apps/Customizer.php';
-	new Customizer();
-	require_once 'inc/apps/Log.php';
-	new Log();
-	require_once 'inc/apps/Avatar.php';
-	new Avatar();
-	require_once 'inc/apps/Onboarding.php';
-	new Onboarding();
+	new \Wapuugotchi\Avatar\Manager();
+	new \Wapuugotchi\Avatar\Api();
 
-	/* Tasks '*/
-	require_once 'inc/feature/QuestManager.php';
-	require_once 'inc/models/Quest.php';
-	require_once 'inc/tasks/QuestContent.php';
-	require_once 'inc/tasks/QuestPlugin.php';
-	require_once 'inc/tasks/QuestTheme.php';
-	require_once 'inc/tasks/QuestDate.php';
-	require_once 'inc/tasks/QuestStart.php';
-	new QuestManager();
-	new QuestContent();
-	new QuestPlugin();
-	new QuestTheme();
-	new QuestDate();
-	new QuestStart();
+	new \Wapuugotchi\Shop\Manager();
+	new \Wapuugotchi\Shop\Menu();
+	new \Wapuugotchi\Shop\Api();
 
-	/* Onboarding*/
-	require_once 'inc/feature/OnboardingManager.php';
-	require_once 'inc/models/OnboardingPage.php';
-	require_once 'inc/models/OnboardingTarget.php';
-	require_once 'inc/models/OnboardingItem.php';
-	require_once 'inc/filter/onboarding/OnboardingContent.php';
-	new OnboardingManager();
-	new OnboardingContent();
+	new \Wapuugotchi\Quest\Manager();
+	new \Wapuugotchi\Quest\Menu();
+	new \Wapuugotchi\Quest\Filters\AutoMessage();
+	new \Wapuugotchi\Quest\Filters\QuestContent();
+	new \Wapuugotchi\Quest\Filters\QuestPlugin();
+	new \Wapuugotchi\Quest\Filters\QuestTheme();
+	new \Wapuugotchi\Quest\Filters\QuestDate();
+	new \Wapuugotchi\Quest\Filters\QuestStart();
+
+	new \Wapuugotchi\Onboarding\Manager();
+	new \Wapuugotchi\Onboarding\Menu();
+	new \Wapuugotchi\Onboarding\Filters\TourOrder();
+
 }
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );
-
-/**
- * Load plugin text domain.
- */
-function load_textdomain() {
-	\load_plugin_textdomain( 'wapuugotchi', false, \dirname( \plugin_basename( __FILE__ ) ) . '/languages/' );
-}
-
-add_action( 'init', __NAMESPACE__ . '\load_textdomain' );

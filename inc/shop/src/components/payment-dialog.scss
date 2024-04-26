@@ -1,0 +1,214 @@
+#wapuugotchi-submenu__shop {
+
+	.wapuugotchi_shop__overlay {
+		position: absolute;
+		left: -20px;
+		right: 0;
+		top: 0;
+		height: 100%;
+		background: #000;
+		z-index: 1;
+		opacity: 0.6;
+	}
+}
+
+.components-modal__screen-overlay {
+	position: fixed;
+	top: 32px;
+	bottom: 0;
+	right: 0;
+	left: 160px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.wapuu_payment__confirm_dialog {
+		position: relative;
+		width: 300px;
+		background-color: #fff;
+		border: 1px solid #c3c4c7;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+
+		.components-button {
+			-webkit-appearance: none;
+			background: #f6f7f7;
+			border: 1px solid #2271b1;
+			border-radius: 3px;
+			box-sizing: border-box;
+			color: #2271b1;
+			cursor: pointer;
+			display: inline-block;
+			font-size: 13px;
+			line-height: 2.15384615;
+			min-height: 30px;
+			padding: 0 10px;
+			text-decoration: none;
+			white-space: nowrap;
+			width: 100%;
+
+			&:last-of-type {
+				margin-left: 0;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				background: #2271b1;
+				border-color: #2271b1;
+				color: #fff;
+				text-decoration: none;
+				text-shadow: none;
+			}
+
+			&:first-of-type {
+				margin-left: 10px;
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+		}
+
+		.wapuu_payment__confirm_text {
+			text-align: center;
+			margin-bottom: 0;
+		}
+
+		.wapuu_payment__item_preview {
+			position: relative;
+			margin: 0 20px;
+			background-color: #fafafa;
+
+			.wapuu_payment__item_tooltip_shadow {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+			}
+
+			.wapuu_payment__item_tooltip {
+				opacity: 0;
+
+				.wapuu_payment__item_tooltip_shadow {
+					background-color: #000;
+					opacity: 0.7;
+				}
+
+				.wapuu_payment__item_tooltip_author {
+					bottom: 30px;
+					color: #fff;
+					left: 15px;
+					right: 15px;
+					margin: 0;
+					position: absolute;
+				}
+
+				.wapuu_payment__item_tooltip_text {
+					bottom: 30px;
+					color: #fff;
+					left: 15px;
+					right: 15px;
+					margin: 0;
+					position: absolute;
+					top: 30px;
+				}
+
+				.wapuu_payment__item_tooltip_author {
+					bottom: 10px;
+					text-align: right;
+				}
+			}
+		}
+
+		.wapuu_payment__item_name {
+			text-align: center;
+		}
+
+		.wapuu_payment__info_icon {
+			color: #2271b1;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			z-index: 10000;
+
+			&:hover {
+				color: #fff;
+
+				+ .wapuu_payment__item_tooltip {
+					opacity: 1;
+					-webkit-animation: wapuugotchifadein 0.5s ease-out;
+					-moz-animation: wapuugotchifadein 0.5s ease-out;
+					-o-animation: wapuugotchifadein 0.5s ease-out;
+					animation: WapuugotchiFadeIn 0.5s ease-out;
+				}
+			}
+		}
+	}
+}
+
+@-webkit-keyframes WapuugotchiFadeIn {
+
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes WapuugotchiFadeIn {
+
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}
+
+@-o-keyframes WapuugotchiFadeIn {
+
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}
+
+@keyframes WapuugotchiFadeIn {
+
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}

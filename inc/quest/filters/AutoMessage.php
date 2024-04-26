@@ -7,7 +7,6 @@
 
 namespace Wapuugotchi\Quest\Filters;
 
-use Wapuugotchi\Quest\Handler\MessageHandler;
 use Wapuugotchi\Quest\Handler\QuestHandler;
 use Wapuugotchi\Quest\Models\Quest;
 
@@ -24,7 +23,7 @@ class AutoMessage {
 	 * "Constructor" of the class
 	 */
 	public function __construct() {
-		add_filter( 'wapuugotchi_speech_bubble', array( $this, 'add_wapuugotchi_messages' ) );
+		\add_filter( 'wapuugotchi_speech_bubble', array( $this, 'add_wapuugotchi_messages' ) );
 	}
 
 	/**
@@ -38,12 +37,12 @@ class AutoMessage {
 
 		$message = class_exists( '\Wapuugotchi\Avatar\Models\Message' );
 		if ( ! $message ) {
-			return false;
+			return $messages;
 		}
 
-		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
+		$completed_quests = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
 		if ( empty( $completed_quests ) ) {
-			return false;
+			return $messages;
 		}
 
 		foreach ( $completed_quests as $id => $completed_quest ) {
@@ -58,7 +57,6 @@ class AutoMessage {
 
 			$messages[] = new \Wapuugotchi\Avatar\Models\Message( $quest->get_id(), $quest->get_message(), $quest->get_type(), 'Wapuugotchi\Quest\Handler\MessageHandler::is_active', 'Wapuugotchi\Quest\Handler\MessageHandler::set_message_submitted' );
 		}
-
 
 		return $messages;
 	}

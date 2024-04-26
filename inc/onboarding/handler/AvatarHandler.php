@@ -7,11 +7,6 @@
 
 namespace Wapuugotchi\Onboarding\Handler;
 
-use function apply_filters;
-use function file_exists;
-use function file_get_contents;
-use function is_readable;
-
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -28,12 +23,12 @@ class AvatarHandler {
 	 * @return false|string
 	 */
 	public static function get_avatar() {
-		$avatar = apply_filters( 'wapuugotchi_avatar', false );
+		$avatar = \apply_filters( 'wapuugotchi_avatar', false );
 
 		if ( false === $avatar ) {
 			$default = WAPUUGOTCHI_PATH . 'inc/onboarding/assets/avatar.svg';
-			if ( file_exists( $default ) && is_readable( $default ) ) {
-				$avatar = file_get_contents( $default );
+			if ( \file_exists( $default ) && \is_readable( $default ) ) {
+				$avatar = \file_get_contents( $default );
 			}
 		}
 

@@ -7,12 +7,6 @@
 
 namespace Wapuugotchi\Core;
 
-use function add_action;
-use function add_menu_page;
-use function add_submenu_page;
-use function apply_filters;
-use function is_callable;
-
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -25,7 +19,7 @@ class Menu {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		add_action( 'admin_menu', array( $this, 'create_menu_page' ) );
+		\add_action( 'admin_menu', array( $this, 'create_menu_page' ) );
 	}
 
 	/**
@@ -37,7 +31,7 @@ class Menu {
 		$capability = 'manage_options';
 		$slug       = 'wapuugotchi';
 
-		$submenus = apply_filters( 'wapuugotchi_add_submenu', array() );
+		$submenus = \apply_filters( 'wapuugotchi_add_submenu', array() );
 		if ( ! is_array( $submenus ) || empty( $submenus ) ) {
 			return false;
 		}
@@ -46,11 +40,11 @@ class Menu {
 			return false;
 		}
 
-		if ( ! is_callable( $submenus[0]['callback'] ) ) {
+		if ( ! \is_callable( $submenus[0]['callback'] ) ) {
 			return false;
 		}
 
-		add_menu_page(
+		\add_menu_page(
 			__( 'WapuuGotchi', 'wapuugotchi' ),
 			__( 'WapuuGotchi', 'wapuugotchi' ),
 			$capability,
@@ -60,7 +54,7 @@ class Menu {
 		);
 
 		foreach ( $submenus as $submenu ) {
-			add_submenu_page(
+			\add_submenu_page(
 				$slug,
 				__( 'WapuuGotchi', 'wapuugotchi' ),
 				$submenu['title'],

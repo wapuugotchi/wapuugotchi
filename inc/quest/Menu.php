@@ -7,9 +7,6 @@
 
 namespace Wapuugotchi\Quest;
 
-use function __;
-use function add_filter;
-
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -23,7 +20,7 @@ class Menu {
 	 * "Constructor" of the class
 	 */
 	public function __construct() {
-		add_filter( 'wapuugotchi_add_submenu', array( $this, 'wapuugotchi_add_submenu' ), 20 );
+		\add_filter( 'wapuugotchi_add_submenu', array( $this, 'wapuugotchi_add_submenu' ), 20 );
 	}
 
 	/**
@@ -44,7 +41,7 @@ class Menu {
 	 */
 	public function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(
-			'title'    => __( 'Quest Log', 'wapuugotchi' ),
+			'title'    => \__( 'Quest Log', 'wapuugotchi' ),
 			'slug'     => 'wapuugotchi__quests',
 			'callback' => 'Wapuugotchi\Quest\Menu::quests_page_template',
 		);

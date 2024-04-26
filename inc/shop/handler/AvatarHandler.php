@@ -7,11 +7,6 @@
 
 namespace Wapuugotchi\Shop\Handler;
 
-use function get_current_user_id;
-use function get_user_meta;
-use function plugin_dir_path;
-use function update_user_meta;
-
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -26,16 +21,16 @@ class AvatarHandler {
 	 * @return array
 	 */
 	public static function get_avatar_config() {
-		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_avatar__alpha', false ) ) ) {
-			$config = file_get_contents( plugin_dir_path( __DIR__ ) . 'assets/avatar.json' );
-			update_user_meta(
-				get_current_user_id(),
+		if ( empty( \get_user_meta( \get_current_user_id(), 'wapuugotchi_avatar__alpha', false ) ) ) {
+			$config = file_get_contents( \plugin_dir_path( __DIR__ ) . 'assets/avatar.json' );
+			\update_user_meta(
+				\get_current_user_id(),
 				'wapuugotchi_avatar__alpha',
 				json_decode( $config, true )
 			);
 		}
 
-		return get_user_meta( get_current_user_id(), 'wapuugotchi_avatar__alpha', true );
+		return \get_user_meta( \get_current_user_id(), 'wapuugotchi_avatar__alpha', true );
 	}
 
 	/**
@@ -46,8 +41,8 @@ class AvatarHandler {
 	 * @return bool
 	 */
 	public static function update_avatar_config( $data ) {
-		update_user_meta(
-			get_current_user_id(),
+		\update_user_meta(
+			\get_current_user_id(),
 			'wapuugotchi_avatar__alpha',
 			$data
 		);
@@ -61,7 +56,7 @@ class AvatarHandler {
 	 * @return string
 	 */
 	public static function get_avatar_svg() {
-		return get_user_meta( get_current_user_id(), 'wapuugotchi_shop_svg__alpha', true );
+		return \get_user_meta( \get_current_user_id(), 'wapuugotchi_shop_svg__alpha', true );
 	}
 
 	/**
@@ -72,8 +67,8 @@ class AvatarHandler {
 	 * @return bool
 	 */
 	public static function update_avatar_svg( $svg ) {
-		update_user_meta(
-			get_current_user_id(),
+		\update_user_meta(
+			\get_current_user_id(),
 			'wapuugotchi_shop_svg__alpha',
 			$svg
 		);

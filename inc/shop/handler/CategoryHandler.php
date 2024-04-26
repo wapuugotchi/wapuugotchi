@@ -7,7 +7,6 @@
 
 namespace Wapuugotchi\Shop\Handler;
 
-use Exception;
 use Wapuugotchi\Shop\Services\CollectionService;
 
 if ( ! defined( 'ABSPATH' ) ) :
@@ -24,7 +23,7 @@ class CategoryHandler {
 	 * Gets the list of categories.
 	 * The MAIN_CATEGORY is the category that is displayed first in the shop.
 	 *
-	 * @throws Exception If the collection could not be retrieved.
+	 * @throws \Exception If the collection could not be retrieved.
 	 */
 	public static function get_categories() {
 		$collection = CollectionService::get_collection();

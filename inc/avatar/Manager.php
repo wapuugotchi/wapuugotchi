@@ -9,11 +9,6 @@ namespace Wapuugotchi\Avatar;
 
 use Wapuugotchi\Avatar\Handler\AvatarHandler;
 use Wapuugotchi\Avatar\Handler\BubbleHandler;
-use function add_action;
-use function wp_add_inline_script;
-use function wp_enqueue_script;
-use function wp_enqueue_style;
-use function wp_json_encode;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
@@ -29,7 +24,7 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
+		\add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
 
 	/**
@@ -52,13 +47,13 @@ class Manager {
 	 */
 	private function load_scripts() {
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/avatar.asset.php';
-		wp_enqueue_style( 'wapuugotchi-avatar', WAPUUGOTCHI_URL . 'build/avatar.css', array(), $assets['version'] );
-		wp_enqueue_script( 'wapuugotchi-avatar', WAPUUGOTCHI_URL . 'build/avatar.js', $assets['dependencies'], $assets['version'], true );
-		wp_add_inline_script(
+		\wp_enqueue_style( 'wapuugotchi-avatar', WAPUUGOTCHI_URL . 'build/avatar.css', array(), $assets['version'] );
+		\wp_enqueue_script( 'wapuugotchi-avatar', WAPUUGOTCHI_URL . 'build/avatar.js', $assets['dependencies'], $assets['version'], true );
+		\wp_add_inline_script(
 			'wapuugotchi-avatar',
 			sprintf(
 				"wp.data.dispatch('wapuugotchi/avatar').__initialize(%s)",
-				wp_json_encode(
+				\wp_json_encode(
 					array(
 						'avatar'   => AvatarHandler::get_avatar(),
 						'messages' => BubbleHandler::get_active_messages(),

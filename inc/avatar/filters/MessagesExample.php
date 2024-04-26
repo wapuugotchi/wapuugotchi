@@ -8,8 +8,6 @@
 namespace Wapuugotchi\Avatar\Filters;
 
 use Wapuugotchi\Avatar\Models\Message;
-use function get_transient;
-use function set_transient;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
@@ -33,7 +31,7 @@ class Messages {
 	 * @return bool
 	 */
 	public static function is_active() {
-		return get_transient( 'wapuugotchi_first_submit' ) === false;
+		return \get_transient( 'wapuugotchi_first_submit' ) === false;
 	}
 
 	/**
@@ -42,7 +40,7 @@ class Messages {
 	 * @return bool
 	 */
 	public static function handle_submit() {
-		return set_transient( 'wapuugotchi_first_submit', true, 60 );
+		return \set_transient( 'wapuugotchi_first_submit', true, 60 );
 	}
 
 	/**

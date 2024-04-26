@@ -7,8 +7,6 @@
 
 namespace Wapuugotchi\Alive;
 
-use function add_action;
-
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -21,7 +19,7 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
+		\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
 	}
 
 	/**

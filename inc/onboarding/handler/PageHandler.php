@@ -8,9 +8,6 @@
 namespace Wapuugotchi\Onboarding\Handler;
 
 use Wapuugotchi\Onboarding\Models\Guide;
-use function apply_filters;
-use function wp_cache_get;
-use function wp_cache_set;
 
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
@@ -27,7 +24,7 @@ class PageHandler {
 	 */
 	public static function load_tour_files() {
 
-		$data = apply_filters( 'wapuugotchi_onboarding_tour_files', array() );
+		$data = \apply_filters( 'wapuugotchi_onboarding_tour_files', array() );
 		if ( ! is_array( $data ) ) {
 			return false;
 		}
@@ -72,15 +69,15 @@ class PageHandler {
 	 * @return mixed|null The onboarding data.
 	 */
 	public static function get_tour_data() {
-		$tour = wp_cache_get( 'wapuugotchi_onboarding__quests' );
+		$tour = \wp_cache_get( 'wapuugotchi_onboarding__quests' );
 
 		if ( ! empty( $tour ) ) {
 			return $tour;
 		}
 
-		$tour = apply_filters( 'wapuugotchi_onboarding_filter', array() );
+		$tour = \apply_filters( 'wapuugotchi_onboarding_filter', array() );
 
-		wp_cache_set( 'wapuugotchi_onboarding__quests', $tour );
+		\wp_cache_set( 'wapuugotchi_onboarding__quests', $tour );
 
 		if ( empty( $tour ) ) {
 			return null;

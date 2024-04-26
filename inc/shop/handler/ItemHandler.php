@@ -7,7 +7,6 @@
 
 namespace Wapuugotchi\Shop\Handler;
 
-use Exception;
 use Wapuugotchi\Shop\Services\CollectionService;
 
 if ( ! defined( 'ABSPATH' ) ) :
@@ -25,7 +24,7 @@ class ItemHandler {
 	 * @param string $id The id of the item.
 	 * @param string $category The category of the item.
 	 *
-	 * @throws Exception If the item could not be unlocked.
+	 * @throws \Exception If the item could not be unlocked.
 	 */
 	public static function get_items_by_id( $id, $category ) {
 		$items = self::get_items();
@@ -43,7 +42,7 @@ class ItemHandler {
 	/**
 	 * The all items.
 	 *
-	 * @throws Exception If the item could not be unlocked.
+	 * @throws \Exception If the item could not be unlocked.
 	 */
 	public static function get_items() {
 		$collection   = CollectionService::get_collection();
@@ -87,10 +86,10 @@ class ItemHandler {
 	 *
 	 * @return array The unlocked items.
 	 *
-	 * @throws Exception If the item could not be unlocked.
+	 * @throws \Exception If the item could not be unlocked.
 	 */
 	public static function get_unlocked_items() {
-		$unlocked_items = get_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true );
+		$unlocked_items = \get_user_meta( \get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true );
 		if ( ! is_array( $unlocked_items ) ) {
 			return array();
 		}
@@ -104,7 +103,7 @@ class ItemHandler {
 	 * @param string $id The id of the item.
 	 *
 	 * @return bool
-	 * @throws Exception If the item could not be unlocked.
+	 * @throws \Exception If the item could not be unlocked.
 	 */
 	public static function is_item_unlocked( $id ) {
 		$unlocked_items = self::get_unlocked_items();
@@ -121,7 +120,7 @@ class ItemHandler {
 	 * @param string $id The id of the item.
 	 *
 	 * @return bool
-	 * @throws Exception If the item could not be unlocked.
+	 * @throws \Exception If the item could not be unlocked.
 	 */
 	public static function unlock_item( $id ) {
 		$unlocked_items = self::get_unlocked_items();
@@ -130,7 +129,7 @@ class ItemHandler {
 		}
 
 		$unlocked_items[] = $id;
-		update_user_meta( get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', $unlocked_items );
+		\update_user_meta( \get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', $unlocked_items );
 
 		return true;
 	}

@@ -7,10 +7,6 @@
 
 namespace Wapuugotchi\Shop\Handler;
 
-use function get_current_user_id;
-use function get_user_meta;
-use function update_user_meta;
-
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -31,7 +27,7 @@ class BalanceHandler {
 		$balance  = self::get_balance();
 		$balance -= $item['meta']['price'];
 		if ( $balance >= 0 ) {
-			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', $balance );
+			\update_user_meta( \get_current_user_id(), 'wapuugotchi_balance__alpha', $balance );
 
 			return true;
 		} else {
@@ -45,11 +41,11 @@ class BalanceHandler {
 	 * @return int
 	 */
 	public static function get_balance() {
-		if ( empty( get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha' ) ) ) {
-			update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', 100 );
+		if ( empty( \get_user_meta( \get_current_user_id(), 'wapuugotchi_balance__alpha' ) ) ) {
+			\update_user_meta( \get_current_user_id(), 'wapuugotchi_balance__alpha', 100 );
 		}
 
-		return get_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', true );
+		return \get_user_meta( \get_current_user_id(), 'wapuugotchi_balance__alpha', true );
 	}
 
 	/**
@@ -62,6 +58,6 @@ class BalanceHandler {
 	public static function increase_balance( $amount ) {
 		$balance  = self::get_balance();
 		$balance += $amount;
-		update_user_meta( get_current_user_id(), 'wapuugotchi_balance__alpha', $balance );
+		\update_user_meta( \get_current_user_id(), 'wapuugotchi_balance__alpha', $balance );
 	}
 }

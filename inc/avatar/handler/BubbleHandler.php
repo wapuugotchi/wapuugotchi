@@ -7,9 +7,6 @@
 
 namespace Wapuugotchi\Avatar\Handler;
 
-use function apply_filters;
-use function array_filter;
-
 if ( ! defined( 'ABSPATH' ) ) :
 	exit();
 endif; // No direct access allowed.
@@ -37,7 +34,7 @@ class BubbleHandler {
 	private static function get_message_by_is_active( bool $state ) {
 		$messages = self::get_all_messages();
 
-		$filtered_messages = array_filter(
+		$filtered_messages = \array_filter(
 			$messages,
 			function ( $message ) use ( $state ) {
 				return $message->is_active() === $state;
@@ -62,7 +59,7 @@ class BubbleHandler {
 	 * @return array
 	 */
 	public static function get_all_messages() {
-		return apply_filters( 'wapuugotchi_speech_bubble', array() );
+		return \apply_filters( 'wapuugotchi_speech_bubble', array() );
 	}
 
 	/**

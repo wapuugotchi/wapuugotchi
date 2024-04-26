@@ -53,7 +53,7 @@ function init() {
 
 	new \Wapuugotchi\Quest\Manager();
 	new \Wapuugotchi\Quest\Menu();
-	new \Wapuugotchi\Quest\Filters\MessageManager();
+	new \Wapuugotchi\Quest\Filters\AutoMessage();
 	new \Wapuugotchi\Quest\Filters\QuestContent();
 	new \Wapuugotchi\Quest\Filters\QuestPlugin();
 	new \Wapuugotchi\Quest\Filters\QuestTheme();

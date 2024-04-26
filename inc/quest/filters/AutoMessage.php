@@ -7,7 +7,6 @@
 
 namespace Wapuugotchi\Quest\Filters;
 
-use Wapuugotchi\Avatar\Models\Message;
 use Wapuugotchi\Quest\Handler\MessageHandler;
 use Wapuugotchi\Quest\Handler\QuestHandler;
 use Wapuugotchi\Quest\Models\Quest;
@@ -17,35 +16,15 @@ if ( ! defined( 'ABSPATH' ) ) :
 endif; // No direct access allowed.
 
 /**
- * Class MessageManager
+ * Class AutoMessage
  */
-class MessageManager {
+class AutoMessage {
 
 	/**
 	 * "Constructor" of the class
 	 */
 	public function __construct() {
 		add_filter( 'wapuugotchi_speech_bubble', array( $this, 'add_wapuugotchi_messages' ) );
-	}
-
-	/**
-	 * Get true.
-	 *
-	 * @return bool
-	 */
-	public static function is_active() {
-		return true;
-	}
-
-	/**
-	 * Get true.
-	 *
-	 * @param int $id The ID of the message.
-	 *
-	 * @return bool
-	 */
-	public static function handle_submit( $id ) {
-		return MessageHandler::set_message_submitted( $id );
 	}
 
 	/**
@@ -57,17 +36,18 @@ class MessageManager {
 	 */
 	public function add_wapuugotchi_messages( $messages ) {
 
-		$completed_quests = QuestHandler::get_completed_quests();
+		$message = class_exists( '\Wapuugotchi\Avatar\Models\Message' );
+		if ( ! $message ) {
+			return false;
+		}
+
+		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
 		if ( empty( $completed_quests ) ) {
 			return false;
 		}
 
 		foreach ( $completed_quests as $id => $completed_quest ) {
-			if ( ! isset( $completed_quest['notified'] ) ) {
-				continue;
-			}
-
-			if ( false !== $completed_quest['notified'] ) {
+			if ( ! isset( $completed_quest['notified'] ) || true === $completed_quest['notified'] ) {
 				continue;
 			}
 
@@ -76,12 +56,9 @@ class MessageManager {
 				continue;
 			}
 
-			$new_message = array(
-				new Message( $quest->get_id(), $quest->get_message(), 'info', 'Wapuugotchi\Quest\Filters\MessageManager::is_active', 'Wapuugotchi\Quest\Filters\MessageManager::handle_submit' ),
-			);
-
-			$messages = array_merge( $new_message, $messages );
+			$messages[] = new \Wapuugotchi\Avatar\Models\Message( $quest->get_id(), $quest->get_message(), $quest->get_type(), 'Wapuugotchi\Quest\Handler\MessageHandler::is_active', 'Wapuugotchi\Quest\Handler\MessageHandler::set_message_submitted' );
 		}
+
 
 		return $messages;
 	}

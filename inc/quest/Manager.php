@@ -23,8 +23,7 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		\add_action( 'admin_init', array( $this, 'manage_quest_completion' ), 1000, 0 );
-		\add_action( 'admin_init', array( MessageHandler::class, 'send_message_to_avatar' ) );
+		\add_action( 'admin_init', array( QuestHandler::class, 'manage_quest_progress' ), 1000, 0 );
 		\add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 	}
 
@@ -62,14 +61,5 @@ class Manager {
 		);
 
 		\wp_set_script_translations( 'wapuugotchi-quest', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
-	}
-
-	/**
-	 * Manage Quest Completion
-	 *
-	 * @return void
-	 */
-	public function manage_quest_completion() {
-		QuestHandler::manage_quest_progress();
 	}
 }

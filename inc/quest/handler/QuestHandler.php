@@ -189,7 +189,7 @@ class QuestHandler {
 		\update_user_meta(
 			\get_current_user_id(),
 			'wapuugotchi_quest_completed__alpha',
-			\array_unique( \array_merge( $completed_quests, $new_completed_quests ), SORT_REGULAR )
+			\array_merge_recursive( $completed_quests, $new_completed_quests )
 		);
 
 		return true;

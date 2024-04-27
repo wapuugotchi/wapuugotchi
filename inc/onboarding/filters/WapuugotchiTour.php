@@ -46,6 +46,12 @@ class WapuugotchiTour {
 					)
 					->add_item(
 						Item::create()
+							->set_title( __( 'Navigation', 'wapuugotchi' ) )
+							->set_text( __( '"First, let\'s look at how to navigate the tour. Above this dialog box are the navigation controls, allowing you to move forward or backward, end the tour, or start a demo at key points."', 'wapuugotchi' ) )
+							->add_target( Target::create()->set_focus( '#wpadminbar' )->set_overlay( '#wpadminbar' ) )
+					)
+					->add_item(
+						Item::create()
 							->set_title( __( 'The Admin-Bar', 'wapuugotchi' ) )
 							->set_text( __( 'First stop, the "Admin Bar"! This is your quick access lane to key areas and information. You will also get a snapshot of pending updates and comments here.', 'wapuugotchi' ) )
 							->add_target( Target::create()->set_focus( '#wpadminbar' )->set_overlay( '#wpadminbar' ) )
@@ -65,7 +71,7 @@ class WapuugotchiTour {
 					->add_item(
 						Item::create()
 							->set_title( __( 'Tip 1', 'wapuugotchi' ) )
-							->set_text( __( 'A small hint: If you want a wider view of your website, you can always collapse the admin menu. Nice trick, right?', 'wapuugotchi' ) )
+							->set_text( __( 'A small hint: If you want a wider view of your website, you can always collapse the admin menu. Give it a try by clicking the ► button.', 'wapuugotchi' ) )
 							->set_freeze( 5500 )
 							->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' ) )
 							->add_target( Target::create()->set_focus( '#collapse-button' )->set_overlay( '#collapse-button' )->set_color( '#FF0000' ) )

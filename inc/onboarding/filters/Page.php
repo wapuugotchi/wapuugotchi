@@ -59,7 +59,7 @@ class Page {
 					->add_item(
 						Item::create()
 							->set_title( __( 'The Toolbar', 'wapuugotchi' ) )
-							->set_text( __( 'The toolbar provides functions to help you build your page step by step. Here you can add new block elements and undo changes. Want to see how it works? Hit ►!', 'wapuugotchi' ) )
+							->set_text( __( 'The toolbar provides functions to help you build your page step by step. Here you can add new block elements and undo changes. Want to see how it works? Hit the ► button!', 'wapuugotchi' ) )
 							->set_freeze( 35000 )
 							->add_target( Target::create()->set_focus( '.edit-post-header__toolbar' )->set_overlay( '.edit-post-header__toolbar' ) )
 							->add_target( Target::create()->set_focus( '.edit-post-header__toolbar' )->set_overlay( '.edit-post-header__toolbar' )->set_delay( 1000 )->set_color( '#FF0000' ) )

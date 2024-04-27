@@ -59,7 +59,7 @@ class Dashboard {
 					->add_item(
 						Item::create()
 							->set_title( __( 'Customize It', 'wapuugotchi' ) )
-							->set_text( __( 'You\'ve got the power to tweak your "Home" page. Turn off elements that don\'t spark your interest. It\'s all in your hands!', 'wapuugotchi' ) )
+							->set_text( __( 'You\'ve got the power to tweak your "Home" page. Turn off elements that don\'t spark your interest. It\'s all in your hands! Click the ► button to see how does it work.', 'wapuugotchi' ) )
 							->set_freeze( 17000 )
 							->add_target( Target::create()->set_focus( 'button#show-settings-link' )->set_overlay( 'button#show-settings-link' ) )
 							->add_target( Target::create()->set_focus( 'button#show-settings-link' )->set_overlay( 'button#show-settings-link' )->set_color( '#FF0000' ) )

@@ -56,7 +56,7 @@ class BubbleHandler {
 			$filtered_messages
 		);
 
-		return array_values($result);
+		return array_values( $result );
 	}
 
 	/**

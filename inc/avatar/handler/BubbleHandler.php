@@ -34,6 +34,10 @@ class BubbleHandler {
 	private static function get_message_by_is_active( bool $state ) {
 		$messages = self::get_all_messages();
 
+		if ( ! \is_array( $messages ) ) {
+			return array();
+		}
+
 		$filtered_messages = \array_filter(
 			$messages,
 			function ( $message ) use ( $state ) {
@@ -41,7 +45,7 @@ class BubbleHandler {
 			}
 		);
 
-		return array_map(
+		$result = array_map(
 			function ( $message ) {
 				return array(
 					'id'      => $message->get_id(),
@@ -51,6 +55,8 @@ class BubbleHandler {
 			},
 			$filtered_messages
 		);
+
+		return array_values( $result );
 	}
 
 	/**

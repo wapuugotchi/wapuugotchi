@@ -40,12 +40,8 @@ class QuestDate {
 	 * @return bool
 	 */
 	public static function login_completed_1() {
-		$quest_meta = self::count_days();
-		if ( $quest_meta['day_count']['days'] >= 10 ) {
-			return true;
-		}
-
-		return false;
+		$days = self::count_days();
+		return $days >= 10;
 	}
 
 	/**
@@ -78,7 +74,7 @@ class QuestDate {
 			);
 		}
 
-		return $quest_meta;
+		return $quest_meta['day_count']['days'];
 	}
 
 	/**
@@ -87,12 +83,8 @@ class QuestDate {
 	 * @return bool
 	 */
 	public static function login_completed_2() {
-		$quest_meta = self::count_days();
-		if ( $quest_meta['day_count']['days'] >= 20 ) {
-			return true;
-		}
-
-		return false;
+		$days = self::count_days();
+		return $days >= 20;
 	}
 
 	/**
@@ -101,12 +93,8 @@ class QuestDate {
 	 * @return bool
 	 */
 	public static function login_completed_3() {
-		$quest_meta = self::count_days();
-		if ( $quest_meta['day_count']['days'] >= 30 ) {
-			return true;
-		}
-
-		return false;
+		$days = self::count_days();
+		return $days >= 30;
 	}
 
 	/**
@@ -115,12 +103,8 @@ class QuestDate {
 	 * @return bool
 	 */
 	public static function login_completed_4() {
-		$quest_meta = self::count_days();
-		if ( $quest_meta['day_count']['days'] >= 40 ) {
-			return true;
-		}
-
-		return false;
+		$days = self::count_days();
+		return $days >= 40;
 	}
 
 	/**
@@ -129,12 +113,8 @@ class QuestDate {
 	 * @return bool
 	 */
 	public static function login_completed_5() {
-		$quest_meta = self::count_days();
-		if ( $quest_meta['day_count']['days'] >= 50 ) {
-			return true;
-		}
-
-		return false;
+		$days = self::count_days();
+		return $days >= 50;
 	}
 
 	/**

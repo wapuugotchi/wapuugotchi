@@ -64,6 +64,9 @@ function init() {
 	new \Wapuugotchi\Onboarding\Menu();
 	new \Wapuugotchi\Onboarding\Filters\TourOrder();
 
+
+	new \Wapuugotchi\Buddy\Manager();
+
 }
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

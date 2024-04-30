@@ -23,6 +23,9 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
+		if ( false === Helper::is_valid_version() ) {
+			return;
+		}
 		\add_action( 'admin_init', array( $this, 'init' ) );
 	}
 
@@ -30,11 +33,13 @@ class Manager {
 	 * Initialization Log
 	 */
 	public function init() {
-		if ( isset( $_GET['onboarding_mode'] ) ) {
-			PageHandler::load_tour_files();
-			\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
-			\add_action( 'enqueue_block_editor_assets', array( $this, 'enable_welcome_guides' ), 20 );
+		if ( ! isset( $_GET['onboarding_mode'] ) ) {
+			return;
 		}
+
+		PageHandler::load_tour_files();
+		\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
+		\add_action( 'enqueue_block_editor_assets', array( $this, 'enable_welcome_guides' ), 20 );
 	}
 
 	/**

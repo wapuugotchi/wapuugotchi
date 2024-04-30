@@ -18,6 +18,14 @@ endif; // No direct access allowed.
  * Class Helper
  */
 class Helper {
+
+	/**
+	 * The expected WordPress version.
+	 *
+	 * @var string
+	 */
+	const EXPECTED_WP_VERSION = '6.5';
+
 	/**
 	 * Get the next page path.
 	 *
@@ -71,5 +79,14 @@ class Helper {
 		}
 
 		return $current_data->item_list;
+	}
+
+	/**
+	 * Check if the current version of WordPress is 6.5 or higher.
+	 *
+	 * @return bool
+	 */
+	public static function is_valid_version() {
+		return version_compare( get_bloginfo( 'version' ), self::EXPECTED_WP_VERSION, '>=' );
 	}
 }

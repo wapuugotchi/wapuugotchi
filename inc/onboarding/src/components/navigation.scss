@@ -1,0 +1,113 @@
+#wapuugotchi_onboarding__navigation {
+	background: #fff;
+	border: 1px solid #000;
+	bottom: 104px;
+	height: 20px;
+	position: absolute;
+	z-index: 100000;
+	margin-left: 96px;
+	display: inline-block;
+	border-bottom: unset;
+	padding: 0 6px;
+	pointer-events: all;
+
+	.wapuugotchi_onboarding__loader {
+		display: none;
+		height: 8px;
+		width: 8px;
+		//   margin:0 auto;
+		//   position:relative;
+		position: absolute;
+		bottom: 2px;
+		left: 55px;
+		margin: -4px 0 0 -4px;
+		-webkit-animation: rotation 1s infinite linear;
+		-moz-animation: rotation 1s infinite linear;
+		-o-animation: rotation 1s infinite linear;
+		animation: rotation 1s infinite linear;
+		border: 3px solid rgba(0, 0, 0, 0.2);
+		border-radius: 100%;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: -3px;
+			top: -3px;
+			height: 100%;
+			width: 100%;
+			border-top: 3px solid rgba(0, 0, 0, 0.8);
+			border-left: 3px solid transparent;
+			border-bottom: 3px solid transparent;
+			border-right: 3px solid transparent;
+			border-radius: 100%;
+		}
+
+		@keyframes rotation {
+
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(359deg);
+			}
+		}
+
+	}
+
+	button {
+		background: #fff;
+		border: none;
+		padding: 2px;
+		height: 20px;
+		width: 20px;
+
+		span {
+			cursor: pointer;
+			color: #444;
+
+			&.disabled {
+				cursor: auto;
+				color: #d3d3d3;
+			}
+		}
+
+		&.invisible {
+			visibility: hidden;
+		}
+
+		.dashicons-controls-play:not(.disabled) {
+			animation: pulse 2s 20 linear 2s;
+		}
+
+		@keyframes pulse {
+
+			0% {
+				transform: scale(1);
+				opacity: 1;
+			}
+
+			15% {
+				transform: scale(2);
+				opacity: 0.2;
+			}
+
+			30% {
+				transform: scale(1);
+				opacity: 1;
+			}
+
+			45% {
+				transform: scale(2);
+				opacity: 0.2;
+			}
+
+			60% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+	}
+}

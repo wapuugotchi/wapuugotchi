@@ -1,0 +1,39 @@
+$category_unselected: #007cba;
+$category_selected: #0063a1;
+
+#wapuugotchi-submenu__shop {
+
+	.wapuugotchi_shop__categories {
+		width: 128px;
+
+		.wapuugotchi_shop__category {
+			background: $category_unselected;
+			width: 96px;
+			height: 96px;
+			display: flex;
+
+			&.selected {
+				position: relative;
+				background: $category_selected;
+
+				&::after {
+					content: "";
+					position: absolute;
+					display: block;
+					border-style: solid;
+					border-color: transparent $category_selected;
+					border-width: 12px 0 12px 13px;
+					top: 50%;
+					right: -13px;
+					margin-top: -12px;
+				}
+			}
+
+			.wapuugotchi_shop__category_icon {
+				width: 72px;
+				height: 72px;
+				margin: auto;
+			}
+		}
+	}
+}

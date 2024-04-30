@@ -1,0 +1,34 @@
+$item_unselected: #fafafa;
+$item_selected: #cce3eb;
+$price_background: #4ab866;
+$price_color: #fff;
+
+#wapuugotchi-submenu__shop {
+
+	.wapuugotchi_shop__item {
+		height: 100%;
+		width: 100%;
+		background-color: $item_unselected;
+		position: relative;
+
+		&.selected {
+			background-color: $item_selected;
+		}
+
+		.wapuugotchi_shop__price {
+			position: absolute;
+			bottom: 5px;
+			right: 5px;
+			background-color: $price_background;
+			padding: 5px;
+			border-radius: 5px;
+			font-size: 12px;
+			font-weight: 700;
+			color: $price_color;
+
+			svg {
+				padding-right: 5px;
+			}
+		}
+	}
+}

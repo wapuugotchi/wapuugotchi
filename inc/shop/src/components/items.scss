@@ -1,0 +1,33 @@
+#wapuugotchi-submenu__shop {
+
+	.wapuugotchi_shop__items {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(100px, 1fr));
+		flex: 1;
+		gap: 12px;
+		align-items: start;
+		align-content: start;
+		justify-content: start;
+	}
+
+	@media (max-width: 960px) {
+
+		.wapuugotchi_shop__items {
+			grid-template-columns: repeat(2, minmax(100px, 1fr));
+		}
+	}
+
+	@media (max-width: 782px) {
+
+		.wapuugotchi_shop__items {
+			grid-template-columns: repeat(1, minmax(100px, 1fr));
+		}
+	}
+
+	@media (max-width: 588px) {
+
+		.wapuugotchi_shop__items {
+			grid-template-columns: repeat(1, minmax(100px, 1fr));
+		}
+	}
+}

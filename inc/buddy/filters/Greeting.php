@@ -27,8 +27,7 @@ class Greeting {
 		if ( \get_transient( 'wapuugotchi_buddy__greeting' ) ) {
 			return false;
 		} else {
-			\set_transient( 'wapuugotchi_buddy__greeting', true, 10 );
-
+			\set_transient( 'wapuugotchi_buddy__greeting', true, self::get_random_greeting() );
 			return true;
 		}
 	}
@@ -39,7 +38,7 @@ class Greeting {
 	 * @return bool
 	 */
 	public static function handle_submit() {
-		return \set_transient( 'wapuugotchi_buddy__greeting', true, 10 );
+		return \set_transient( 'wapuugotchi_buddy__greeting', true, self::get_random_greeting() );
 	}
 
 	/**

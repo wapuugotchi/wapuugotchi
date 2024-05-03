@@ -5,7 +5,7 @@
  * Requires at least: 6.0
  * Requires PHP:      7.2
  * Version:           0.2.0
- * Author:            herrfeldmann
+ * Author:            wapuugotchi
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       wapuugotchi
@@ -15,18 +15,18 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
-if ( ! defined( 'WAPUUGOTCHI_PATH' ) ) {
-	define( 'WAPUUGOTCHI_PATH', \plugin_dir_path( __FILE__ ) );
+if ( ! \defined( 'WAPUUGOTCHI_PATH' ) ) {
+	\define( 'WAPUUGOTCHI_PATH', \plugin_dir_path( __FILE__ ) );
 }
 
-if ( ! defined( 'WAPUUGOTCHI_URL' ) ) {
-	define( 'WAPUUGOTCHI_URL', \plugin_dir_url( __FILE__ ) );
+if ( ! \defined( 'WAPUUGOTCHI_URL' ) ) {
+	\define( 'WAPUUGOTCHI_URL', \plugin_dir_url( __FILE__ ) );
 }
 
 if ( ! defined( 'WAPUUGOTCHI_SLUG' ) ) {
-	define( 'WAPUUGOTCHI_SLUG', \plugin_basename( __DIR__ . '/wapuugotchi.php' ) );
+	\define( 'WAPUUGOTCHI_SLUG', \plugin_basename( __DIR__ . '/wapuugotchi.php' ) );
 }
-if ( is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
+if ( \is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
 	require WAPUUGOTCHI_PATH . 'vendor/autoload.php';
 }
 /**
@@ -38,7 +38,7 @@ function init() {
 	/**
 	 * Implements the composer autoloader if not already done.
 	 */
-	if ( is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
+	if ( \is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
 		require_once WAPUUGOTCHI_PATH . 'vendor/autoload.php';
 	}
 
@@ -64,9 +64,7 @@ function init() {
 	new \Wapuugotchi\Onboarding\Menu();
 	new \Wapuugotchi\Onboarding\Filters\TourOrder();
 
-
 	new \Wapuugotchi\Buddy\Manager();
-
 }
 
-add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );
+\add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

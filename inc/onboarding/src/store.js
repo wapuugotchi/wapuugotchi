@@ -1,4 +1,4 @@
-import {createReduxStore, register} from '@wordpress/data';
+import { createReduxStore, register } from '@wordpress/data';
 import textBox from './components/assets/text-box.json';
 
 const STORE_NAME = 'wapuugotchi/onboarding';
@@ -9,10 +9,10 @@ const STORE_NAME = 'wapuugotchi/onboarding';
  * @param {string} svg - The SVG string.
  * @return {string} The modified SVG string.
  */
-async function __buildSvg(svg) {
-	const avatar = parseSvg(svg);
-	insertOnboardingTag(avatar);
-	removeIgnoredElements(avatar);
+async function __buildSvg( svg ) {
+	const avatar = parseSvg( svg );
+	insertOnboardingTag( avatar );
+	removeIgnoredElements( avatar );
 
 	return avatar.innerHTML;
 }
@@ -23,10 +23,10 @@ async function __buildSvg(svg) {
  * @param {string} svg - The SVG string.
  * @return {Object} The SVG DOM.
  */
-function parseSvg(svg) {
+function parseSvg( svg ) {
 	const parser = new DOMParser();
-	const doc = parser.parseFromString(svg, 'image/svg+xml');
-	return doc.querySelector('svg');
+	const doc = parser.parseFromString( svg, 'image/svg+xml' );
+	return doc.querySelector( 'svg' );
 }
 
 /**
@@ -34,11 +34,13 @@ function parseSvg(svg) {
  *
  * @param {Object} avatar - The SVG DOM.
  */
-function insertOnboardingTag(avatar) {
-	let selectedElement = avatar.querySelector('g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear');
+function insertOnboardingTag( avatar ) {
+	const selectedElement = avatar.querySelector(
+		'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear'
+	);
 	selectedElement?.insertBefore(
 		__getOnboardingTag(),
-		avatar.querySelector('g#LeftArm--group')
+		avatar.querySelector( 'g#LeftArm--group' )
 	);
 }
 
@@ -47,12 +49,12 @@ function insertOnboardingTag(avatar) {
  *
  * @param {Object} avatar - The SVG DOM.
  */
-function removeIgnoredElements(avatar) {
-	__getRemoveList()?.forEach((ignore) => {
-		avatar.querySelectorAll(ignore)?.forEach((item) => {
+function removeIgnoredElements( avatar ) {
+	__getRemoveList()?.forEach( ( ignore ) => {
+		avatar.querySelectorAll( ignore )?.forEach( ( item ) => {
 			item?.remove();
-		});
-	});
+		} );
+	} );
 }
 
 /**
@@ -77,16 +79,16 @@ function __getRemoveList() {
  * @return {Object} The onboarding tag.
  */
 function __getOnboardingTag() {
-	const onboarding = document.createElement('g');
+	const onboarding = document.createElement( 'g' );
 	onboarding.id = 'Onboarding--group';
 	onboarding.innerHTML = textBox.element;
 	return onboarding;
 }
 
 function create() {
-	const store = createReduxStore(STORE_NAME, {
-		reducer(state = {}, {type, payload}) {
-			switch (type) {
+	const store = createReduxStore( STORE_NAME, {
+		reducer( state = {}, { type, payload } ) {
+			switch ( type ) {
 				case '__SET_STATE': {
 					return {
 						state,
@@ -117,36 +119,36 @@ function create() {
 		},
 		actions: {
 			// this is just once used to initialize the store with the initial data
-			__initialize: (initialState) =>
-				async function ({dispatch, select}) {
-					dispatch.__setState(initialState);
-					dispatch.setAvatar(select.getAvatar());
+			__initialize: ( initialState ) =>
+				async function ( { dispatch, select } ) {
+					dispatch.__setState( initialState );
+					dispatch.setAvatar( select.getAvatar() );
 				},
-			__setState(payload) {
+			__setState( payload ) {
 				return {
 					type: '__SET_STATE',
 					payload,
 				};
 			},
-			setAvatar: (payload) =>
-				async function ({dispatch}) {
-					const svg = await __buildSvg(payload);
+			setAvatar: ( payload ) =>
+				async function ( { dispatch } ) {
+					const svg = await __buildSvg( payload );
 
-					return dispatch.__setAvatar(svg);
+					return dispatch.__setAvatar( svg );
 				},
-			__setAvatar(payload) {
+			__setAvatar( payload ) {
 				return {
 					type: '__SET_AVATAR',
 					payload,
 				};
 			},
-			setIndex(payload) {
+			setIndex( payload ) {
 				return {
 					type: '__SET_INDEX',
 					payload,
 				};
 			},
-			setAnimated(payload) {
+			setAnimated( payload ) {
 				return {
 					type: '__SET_ANIMATED',
 					payload,
@@ -155,32 +157,32 @@ function create() {
 		},
 		selectors: {
 			// should not be used except for js console debug purposes
-			__getState(state) {
+			__getState( state ) {
 				return state;
 			},
-			getAvatar(state) {
+			getAvatar( state ) {
 				return state.avatar;
 			},
-			getPageConfig(state) {
+			getPageConfig( state ) {
 				return state.page_config;
 			},
-			getNextPage(state) {
+			getNextPage( state ) {
 				return state.next_page;
 			},
-			getIndex(state) {
+			getIndex( state ) {
 				return state.index;
 			},
-			getAnimated(state) {
+			getAnimated( state ) {
 				return state.animated;
 			},
 		},
 		resolvers: {},
-	});
+	} );
 
-	register(store);
+	register( store );
 }
 
 // register the store now (lazy registration is not needed)
 create();
 
-export {STORE_NAME};
+export { STORE_NAME };

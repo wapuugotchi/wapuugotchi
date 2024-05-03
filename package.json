@@ -23,20 +23,18 @@
 		"test": "npx playwright test --config playwright.config.js tests/addSource.test.js"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.43.1",
-		"@wordpress/env": "^9.9.0",
-		"@wordpress/scripts": "^27.8.0"
+		"@playwright/test": "^1.40.1",
+		"@wordpress/env": "^8.13.0",
+		"@wordpress/scripts": "^26.18.0"
 	},
 	"dependencies": {
-		"@wordpress/api-fetch": "^6.54.0",
-		"@wordpress/components": "^27.5.0",
-		"@wordpress/dom-ready": "^3.57.0",
-		"@wordpress/element": "^5.34.0",
-		"@wordpress/i18n": "^4.57.0",
-		"docker-compose": "^0.24.8",
-		"html-react-parser": "^5.1.10",
-		"react": "^18.3.1",
-		"react-svg": "^16.1.34"
+		"@wordpress/api-fetch": "^6.44.0",
+		"@wordpress/components": "^25.13.0",
+		"@wordpress/dom-ready": "^3.47.0",
+		"@wordpress/element": "^5.24.0",
+		"@wordpress/i18n": "^4.47.0",
+		"html-react-parser": "^5.0.7",
+		"react-svg": "^16.1.31"
 	},
 	"files": [
 		"build",

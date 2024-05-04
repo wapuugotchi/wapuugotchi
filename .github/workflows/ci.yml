@@ -26,14 +26,14 @@ jobs:
         with:
           node-version: '19.x'
 
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
       - name: Setup WordPress and our plugin
         run: |
           npm ci
           npm run build
           WP_ENV_CORE=wordpress/wordpress#${{ matrix.wpVersion }} WP_ENV_PHP_VERSION=${{ matrix.phpVersion }} npm run env start
-
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
 
       - name: Install playwright
         run: |

@@ -1,6 +1,8 @@
 {
-	"core": "WordPress/WordPress",
+	"core": "WordPress/WordPress#6.5",
 	"plugins": [
-		"."
+		".",
+		"https://downloads.wordpress.org/plugin/transients-manager.2.0.5.zip"
+
 	]
 }

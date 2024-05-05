@@ -39,6 +39,7 @@ jobs:
           npm ci
           npm run build
           WP_ENV_CORE=wordpress/wordpress#${{ matrix.wpVersion }} WP_ENV_PHP_VERSION=${{ matrix.phpVersion }} npm run env start
+          ls -R
 
       - name: Install playwright
         run: |

@@ -17,7 +17,7 @@ export default function Bubble() {
 		const removedItem = messages.shift();
 
 		await apiFetch( {
-			path: `wapuugotchi/v1/submit_message`,
+			path: `wapuugotchi/v1/dismiss_message`,
 			method: 'POST',
 			data: {
 				id: removedItem?.id,

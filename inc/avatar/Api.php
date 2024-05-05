@@ -9,9 +9,9 @@ namespace Wapuugotchi\Avatar;
 
 use Wapuugotchi\Avatar\Handler\BubbleHandler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Api
@@ -38,10 +38,10 @@ class Api {
 	public function create_rest_routes() {
 		\register_rest_route(
 			self::REST_BASE,
-			'/submit_message',
+			'/dismiss_message',
 			array(
 				'methods'             => 'POST',
-				'callback'            => array( $this, 'submit_message' ),
+				'callback'            => array( $this, 'dismiss_message' ),
 				'permission_callback' => array( $this, 'has_get_message_permission' ),
 			)
 		);
@@ -63,7 +63,7 @@ class Api {
 	 *
 	 * @return WP_Error|\WP_HTTP_Response|WP_REST_Response
 	 */
-	public function submit_message( $req ) {
+	public function dismiss_message( $req ) {
 		$body   = \json_decode( $req->get_body() );
 		$result = false;
 

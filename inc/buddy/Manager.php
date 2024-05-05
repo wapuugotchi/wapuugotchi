@@ -1,6 +1,6 @@
 <?php
 /**
- * The Avatar Class.
+ * The Manager Class.
  *
  * @package WapuuGotchi
  */

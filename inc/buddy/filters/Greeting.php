@@ -1,6 +1,6 @@
 <?php
 /**
- * The QuestStart Class.
+ * The Greeting Class.
  *
  * @package WapuuGotchi
  */
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class QuestStart
+ * Class Greeting
  */
 class Greeting {
 

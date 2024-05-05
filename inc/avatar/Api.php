@@ -27,7 +27,7 @@ class Api {
 	 * "Constructor" of the class
 	 */
 	public function __construct() {
-		\add_action( 'rest_api_init', array( $this, 'register_endpoints') );
+		\add_action( 'rest_api_init', array( $this, 'register_endpoints' ) );
 	}
 
 	/**
@@ -42,7 +42,7 @@ class Api {
 			array(
 				'methods'             => 'POST',
 				'callback'            => array( $this, 'dismiss_message' ),
-				'permission_callback' => array( $this, 'has_dismiss_message_permission'),
+				'permission_callback' => array( $this, 'has_dismiss_message_permission' ),
 			)
 		);
 	}
@@ -64,10 +64,9 @@ class Api {
 	 * @return \WP_Error|\WP_HTTP_Response|\WP_REST_Response
 	 */
 	public function dismiss_message( $req ) {
-		$id = $this->get_message_id_from_request_body( $req );
+		$id     = $this->get_message_id_from_request_body( $req );
 		$result = false;
 
-		/** @var \Wapuugotchi\Avatar\Models\Message $message */
 		$message = BubbleHandler::get_message_by_id( $id );
 		if ( $message && \is_callable( $message->dismiss() ) ) {
 			$result = \call_user_func( $message->dismiss(), $id );
@@ -86,8 +85,8 @@ class Api {
 	 */
 	private function get_message_id_from_request_body( $req ) {
 		$body = \json_decode( $req->get_body() );
-		$id = $body->id ?? null;
-		if ( $id === null ) {
+		$id   = $body->id ?? null;
+		if ( null === $id ) {
 			return \rest_ensure_response( new \WP_Error( 'invalid_json', 'Invalid JSON body.', array( 'status' => 400 ) ) );
 		}
 

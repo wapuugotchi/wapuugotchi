@@ -1,15 +1,15 @@
 <?php
 /**
- * The QuestStart Class.
+ * The Menu class of the Onboarding feature.
  *
  * @package WapuuGotchi
  */
 
 namespace Wapuugotchi\Onboarding;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Menu
@@ -25,7 +25,7 @@ class Menu {
 	}
 
 	/**
-	 * Add html starting point to quest manu page.
+	 * Add html starting point to quest menu page.
 	 *
 	 * @return void
 	 */
@@ -34,11 +34,11 @@ class Menu {
 	}
 
 	/**
-	 * Initialization filter for QuestStart
+	 * Adds a submenu page to the admin menu. The filter used is 'wapuugotchi_add_submenu'.
 	 *
-	 * @param array $submenus Array of quest objects.
+	 * @param array $submenus Submenu items.
 	 *
-	 * @return array|Message[]
+	 * @return array
 	 */
 	public function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(

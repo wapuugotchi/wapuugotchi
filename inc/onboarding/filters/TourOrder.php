@@ -24,11 +24,11 @@ class TourOrder {
 	}
 
 	/**
-	 * Initialization filter for OnboardingData
+	 * Init and add a guide item to the array of items.
 	 *
 	 * @param array $elements Array of onboarding objects.
 	 *
-	 * @return array|OnboardingPage[]
+	 * @return Guide[]
 	 */
 	public function add_wapuugotchi_filter( $elements ) {
 		$element = array(

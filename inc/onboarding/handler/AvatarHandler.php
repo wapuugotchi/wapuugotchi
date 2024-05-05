@@ -28,6 +28,7 @@ class AvatarHandler {
 		if ( false === $avatar ) {
 			$default = WAPUUGOTCHI_PATH . 'inc/onboarding/assets/avatar.svg';
 			if ( \file_exists( $default ) && \is_readable( $default ) ) {
+				// phpcs:ignore
 				$avatar = \file_get_contents( $default );
 			}
 		}

@@ -10,9 +10,9 @@ namespace Wapuugotchi\Onboarding;
 use Wapuugotchi\Onboarding\Handler\AvatarHandler;
 use Wapuugotchi\Onboarding\Handler\PageHandler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Log

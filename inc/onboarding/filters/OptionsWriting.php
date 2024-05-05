@@ -28,11 +28,11 @@ class OptionsWriting {
 	}
 
 	/**
-	 * Initialization filter for OnboardingData
+	 * Init and add a guide item to the array of items.
 	 *
 	 * @param array $tour Array of onboarding objects.
 	 *
-	 * @return array|OnboardingPage[]
+	 * @return Guide[]
 	 */
 	public function add_wapuugotchi_filter( $tour ) {
 		$page = Guide::create()

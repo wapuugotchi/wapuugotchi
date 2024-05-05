@@ -26,8 +26,6 @@
     },
 
 	"autoload": {
-		"psr-4": {
-			"Wapuugotchi\\": "inc/"
-		}
+        "classmap": ["inc/"]
 	}
 }

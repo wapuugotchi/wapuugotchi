@@ -48,7 +48,6 @@
 		"LICENSE",
 		"src",
 		"composer.json",
-		"package.json",
-		"vendor"
+		"package.json"
 	]
 }

@@ -31,14 +31,10 @@ jobs:
         with:
           node-version: '19.x'
 
-      - name: Output content recursively
-        run: ls -R
-
       - name: Setup WordPress and our plugin
         run: |
           npm ci
           npm run build
-          composer dump-auto
           WP_ENV_CORE=wordpress/wordpress#${{ matrix.wpVersion }} WP_ENV_PHP_VERSION=${{ matrix.phpVersion }} npm run env start
 
       - name: Install playwright

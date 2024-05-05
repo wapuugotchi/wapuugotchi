@@ -1,15 +1,15 @@
 <?php
 /**
- * The Quest Class.
+ * The Message object class.
  *
  * @package WapuuGotchi
  */
 
 namespace Wapuugotchi\Avatar\Models;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Quest

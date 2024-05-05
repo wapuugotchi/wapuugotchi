@@ -7,11 +7,9 @@
 
 namespace Wapuugotchi\Buddy\Filters;
 
-use Wapuugotchi\Avatar\Models\Message;
-
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class QuestStart
@@ -27,7 +25,7 @@ class Greeting {
 		if ( \get_transient( 'wapuugotchi_buddy__greeting' ) ) {
 			return false;
 		} else {
-			\set_transient( 'wapuugotchi_buddy__greeting', true, self::get_random_greeting() );
+			\set_transient( 'wapuugotchi_buddy__greeting', true, self::get_seconds_until_tomorrow_morning() );
 			return true;
 		}
 	}
@@ -38,11 +36,11 @@ class Greeting {
 	 * @return bool
 	 */
 	public static function handle_submit() {
-		return \set_transient( 'wapuugotchi_buddy__greeting', true, self::get_random_greeting() );
+		return \set_transient( 'wapuugotchi_buddy__greeting', true, self::get_seconds_until_tomorrow_morning() );
 	}
 
 	/**
-	 * Add greetings filter.
+	 * Add a greeting to the beginning of the bubble messages.
 	 *
 	 * @param array $messages The messages.
 	 *
@@ -50,9 +48,18 @@ class Greeting {
 	 * @throws \Exception When the timezone is invalid.
 	 **/
 	public static function add_greetings_filter( $messages ) {
-		$message[] = new Message( 'buddy-greeting', self::get_random_greeting(), 'none', 'Wapuugotchi\Buddy\Filters\Greeting::is_active', 'Wapuugotchi\Buddy\Filters\Greeting::handle_submit' );
+		array_unshift(
+			$messages,
+			new \Wapuugotchi\Avatar\Models\Message(
+				'buddy-greeting',
+				self::get_random_greeting(),
+				'none',
+				'Wapuugotchi\Buddy\Filters\Greeting::is_active',
+				'Wapuugotchi\Buddy\Filters\Greeting::handle_submit'
+			)
+		);
 
-		return array_merge( $message, $messages );
+		return $messages;
 	}
 
 	/**

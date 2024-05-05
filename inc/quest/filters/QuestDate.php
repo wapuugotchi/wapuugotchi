@@ -9,9 +9,9 @@ namespace Wapuugotchi\Quest\Filters;
 
 use Wapuugotchi\Quest\Models\Quest;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class QuestDate

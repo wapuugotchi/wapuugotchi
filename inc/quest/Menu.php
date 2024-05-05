@@ -7,9 +7,9 @@
 
 namespace Wapuugotchi\Quest;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Menu
@@ -24,7 +24,7 @@ class Menu {
 	}
 
 	/**
-	 * Add html starting point to customizer manu page.
+	 * Add html starting point to customizer menu page.
 	 *
 	 * @return void
 	 */
@@ -33,11 +33,11 @@ class Menu {
 	}
 
 	/**
-	 * Initialization filter for QuestStart
+	 * Add submenu for the quest log.
 	 *
 	 * @param array $submenus Array of quest objects.
 	 *
-	 * @return array|Message[]
+	 * @return array
 	 */
 	public function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(

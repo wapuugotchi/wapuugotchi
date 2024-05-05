@@ -7,9 +7,9 @@
 
 namespace Wapuugotchi\Onboarding\Handler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Manager

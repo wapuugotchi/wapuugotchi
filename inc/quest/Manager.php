@@ -10,9 +10,9 @@ namespace Wapuugotchi\Quest;
 use Wapuugotchi\Quest\Handler\MessageHandler;
 use Wapuugotchi\Quest\Handler\QuestHandler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Log

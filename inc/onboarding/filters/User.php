@@ -11,9 +11,9 @@ use Wapuugotchi\Onboarding\Models\Guide;
 use Wapuugotchi\Onboarding\Models\Item;
 use Wapuugotchi\Onboarding\Models\Target;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class QuestContent

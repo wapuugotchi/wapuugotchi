@@ -7,9 +7,9 @@
 
 namespace Wapuugotchi\Quest\Handler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class MessageHandler

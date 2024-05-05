@@ -9,9 +9,9 @@ namespace Wapuugotchi\Onboarding\Handler;
 
 use Wapuugotchi\Onboarding\Models\Guide;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class PageHandler

@@ -9,9 +9,9 @@ namespace Wapuugotchi\Quest\Handler;
 
 use Wapuugotchi\Shop\Handler\BalanceHandler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class QuestHandler

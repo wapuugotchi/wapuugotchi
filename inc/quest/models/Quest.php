@@ -7,9 +7,9 @@
 
 namespace Wapuugotchi\Quest\Models;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Quest

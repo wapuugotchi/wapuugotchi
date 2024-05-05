@@ -9,9 +9,9 @@ namespace Wapuugotchi\Shop\Handler;
 
 use Wapuugotchi\Shop\Services\CollectionService;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class ItemHandler

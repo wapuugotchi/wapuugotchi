@@ -11,9 +11,9 @@ use Wapuugotchi\Shop\Handler\AvatarHandler;
 use Wapuugotchi\Shop\Handler\BalanceHandler;
 use Wapuugotchi\Shop\Handler\ItemHandler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Api

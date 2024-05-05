@@ -7,9 +7,9 @@
 
 namespace Wapuugotchi\Onboarding\Models;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Element

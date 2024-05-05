@@ -27,6 +27,7 @@ if ( ! defined( 'WAPUUGOTCHI_SLUG' ) ) {
 	\define( 'WAPUUGOTCHI_SLUG', \plugin_basename( __DIR__ . '/wapuugotchi.php' ) );
 }
 if ( \is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
+	throw new \Exception( WAPUUGOTCHI_PATH . " ist richtig geiles Zeug!" );
 	require WAPUUGOTCHI_PATH . 'vendor/autoload.php';
 }
 /**

@@ -23,7 +23,7 @@ class AutoMessage {
 	 * "Constructor" of the class
 	 */
 	public function __construct() {
-		\add_filter( 'wapuugotchi_speech_bubble', array( $this, 'add_wapuugotchi_messages' ) );
+		\add_filter( 'wapuugotchi_bubble_messages', array( $this, 'add_wapuugotchi_messages' ) );
 	}
 
 	/**

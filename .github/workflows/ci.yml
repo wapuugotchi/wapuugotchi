@@ -24,7 +24,6 @@ jobs:
           key: ${{ github.sha }}
       - uses: php-actions/composer@v6
         with:
-          path: .
           php_version: ${{ matrix.phpVersion }}
           dev: no
       - uses: actions/setup-node@v4

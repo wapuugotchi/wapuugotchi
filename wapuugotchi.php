@@ -15,32 +15,23 @@
 
 namespace Wapuugotchi\Wapuugotchi;
 
-if ( ! \defined( 'WAPUUGOTCHI_PATH' ) ) {
-	\define( 'WAPUUGOTCHI_PATH', \plugin_dir_path( __FILE__ ) );
-}
-
-if ( ! \defined( 'WAPUUGOTCHI_URL' ) ) {
-	\define( 'WAPUUGOTCHI_URL', \plugin_dir_url( __FILE__ ) );
-}
-
-if ( ! defined( 'WAPUUGOTCHI_SLUG' ) ) {
-	\define( 'WAPUUGOTCHI_SLUG', \plugin_basename( __DIR__ . '/wapuugotchi.php' ) );
-}
-if ( \is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
-	require WAPUUGOTCHI_PATH . 'vendor/autoload.php';
-}
 /**
  * Init plugin.
  *
  * @return void
  */
 function init() {
-	/**
-	 * Implements the composer autoloader if not already done.
-	 */
-	if ( \is_readable( WAPUUGOTCHI_PATH . 'vendor/autoload.php' ) ) {
-		require_once WAPUUGOTCHI_PATH . 'vendor/autoload.php';
+	\define( 'WAPUUGOTCHI_PATH', \plugin_dir_path( __FILE__ ) );
+	\define( 'WAPUUGOTCHI_URL', \plugin_dir_url( __FILE__ ) );
+	\define( 'WAPUUGOTCHI_SLUG', \plugin_basename( __DIR__ . '/wapuugotchi.php' ) );
+
+	$autoloader = WAPUUGOTCHI_PATH . 'vendor/autoload.php';
+	if ( ! \is_readable( $autoloader ) ) {
+		error_log("Wapuugotchi: $autoloader is not readable or does not exist");
+		return;
 	}
+
+	require_once $autoloader;
 
 	new \Wapuugotchi\Core\Menu();
 

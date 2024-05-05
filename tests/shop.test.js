@@ -62,7 +62,7 @@ test('items clickable', async ({page}) => {
 	await expect(page.locator('.wapuugotchi_shop__items > div:nth-child(3)')).not.toHaveClass(/selected/)
 });
 
-test.only('items purchasable', async ({page}) => {
+test('items purchasable', async ({page}) => {
 	await page.goto('/wp-admin/admin.php?page=wapuugotchi', {waitUntil: 'networkidle'});
 	await page.locator('#category_caps').click();
 	await expect(page.locator('.wapuugotchi_shop__items > div:nth-child(2)')).not.toHaveClass(/selected/)

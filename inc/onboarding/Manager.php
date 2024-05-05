@@ -26,6 +26,7 @@ class Manager {
 		if ( false === Helper::is_valid_version() ) {
 			return;
 		}
+		\add_action( 'admin_init', array( $this, 'force_autostart' ) );
 		\add_action( 'admin_init', array( $this, 'init' ) );
 	}
 
@@ -68,6 +69,21 @@ class Manager {
 		);
 
 		\wp_set_script_translations( 'wapuugotchi-onboarding', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
+	}
+
+	/**
+	 * Force autostart of the onboarding.
+	 * This is used to force to autostart of the onboarding.
+	 * @return void
+	 */
+	public function force_autostart() {
+		if ( ! empty( \get_user_meta( \get_current_user_id(), 'wapuugotchi_onboarding_autostart_executed', true ) ) ) {
+			return;
+		}
+
+		\update_user_meta( \get_current_user_id(), 'wapuugotchi_onboarding_autostart_executed', true );
+		\wp_redirect( \home_url( 'wp-admin/admin.php?page=wapuugotchi__tour' ) );
+		exit();
 	}
 
 	/**

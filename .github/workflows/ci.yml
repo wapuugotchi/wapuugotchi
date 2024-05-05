@@ -22,7 +22,7 @@ jobs:
         with:
           path: .
           key: ${{ github.sha }}
-      - uses: actions/composer@v6
+      - uses: php-actions/composer@v6
         with:
           composer-json: composer.json
           composer-options: --prefer-dist --no-progress

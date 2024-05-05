@@ -28,7 +28,7 @@ class Manager {
 	}
 
 	/**
-	 * Initialization Log
+	 * Enqueue scripts and styles.
 	 *
 	 * @param string $hook_suffix The internal page name.
 	 *

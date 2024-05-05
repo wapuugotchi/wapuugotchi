@@ -114,7 +114,7 @@ class Message {
 	 *
 	 * @return bool result of the callback.
 	 */
-	public function handle_submit() {
+	public function dismiss() {
 		if ( is_callable( $this->handle_submit ) ) {
 			return $this->handle_submit;
 		}

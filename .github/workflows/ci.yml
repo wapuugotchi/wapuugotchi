@@ -24,11 +24,15 @@ jobs:
           key: ${{ github.sha }}
       - uses: php-actions/composer@v6
         with:
-          composer-json: composer.json
-          composer-options: --prefer-dist --no-progress
+          path: .
+          php_version: ${{ matrix.phpVersion }}
+          dev: no
       - uses: actions/setup-node@v4
         with:
           node-version: '19.x'
+
+      - name: Output content recursively
+        run: ls -R
 
       - name: Setup WordPress and our plugin
         run: |

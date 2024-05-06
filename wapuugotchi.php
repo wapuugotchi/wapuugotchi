@@ -36,7 +36,6 @@ function init() {
 	new \Wapuugotchi\Core\Menu();
 
 	new \Wapuugotchi\Avatar\Manager();
-	new \Wapuugotchi\Avatar\Api();
 
 	new \Wapuugotchi\Shop\Manager();
 	new \Wapuugotchi\Shop\Menu();

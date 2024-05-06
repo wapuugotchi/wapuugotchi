@@ -37,6 +37,8 @@ function init() {
 
 	new \Wapuugotchi\Avatar\Manager();
 
+	new \Wapuugotchi\Buddy\Manager();
+
 	new \Wapuugotchi\Shop\Manager();
 	new \Wapuugotchi\Shop\Menu();
 	new \Wapuugotchi\Shop\Api();
@@ -53,8 +55,6 @@ function init() {
 	new \Wapuugotchi\Onboarding\Manager();
 	new \Wapuugotchi\Onboarding\Menu();
 	new \Wapuugotchi\Onboarding\Filters\TourOrder();
-
-	new \Wapuugotchi\Buddy\Manager();
 }
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

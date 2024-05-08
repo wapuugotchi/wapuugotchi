@@ -18,6 +18,7 @@ class AnimationHandler {
 
 	/**
 	 * remove all animations from avatar.
+	 *
 	 * @param $avatar
 	 *
 	 * @return array|mixed
@@ -30,7 +31,7 @@ class AnimationHandler {
 		$domDocument = new \DOMDocument();
 		$domDocument->loadXML( $avatar );
 
-		if ( empty( $domDocument->textContent) ) {
+		if ( empty( $domDocument->textContent ) ) {
 			return $avatar;
 		}
 
@@ -44,7 +45,7 @@ class AnimationHandler {
 			$animations[] = $styleElement->nodeValue;
 		}
 
-		do_action('animations_extracted', $animations);
+		do_action( 'animations_extracted', $animations );
 
 		// Remove all style elements
 		while ( $styleElement = $styleElements->item( 0 ) ) {

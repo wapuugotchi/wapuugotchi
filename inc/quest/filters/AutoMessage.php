@@ -20,21 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 class AutoMessage {
 
 	/**
-	 * "Constructor" of the class
-	 */
-	public function __construct() {
-		\add_filter( 'wapuugotchi_bubble_messages', array( $this, 'add_wapuugotchi_messages' ) );
-	}
-
-	/**
 	 * Initialization filter for QuestStart
 	 *
 	 * @param array $messages The messages.
 	 *
 	 * @return array|Quest[]
 	 */
-	public function add_wapuugotchi_messages( $messages ) {
-
+	public static function add_wapuugotchi_messages( $messages ) {
 		$message = class_exists( '\Wapuugotchi\Avatar\Models\Message' );
 		if ( ! $message ) {
 			return $messages;

@@ -19,13 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 class QuestPlugin {
 
 	/**
-	 * "Constructor" of the class
-	 */
-	public function __construct() {
-		add_filter( 'wapuugotchi_quest_filter', array( $this, 'add_wapuugotchi_filter' ) );
-	}
-
-	/**
 	 * Get true.
 	 *
 	 * @return true
@@ -121,7 +114,7 @@ class QuestPlugin {
 	 *
 	 * @return array|Quest[]
 	 */
-	public function add_wapuugotchi_filter( $quests ) {
+	public static function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
 			new Quest( 'use_seo_plugin_1', null, __( 'Activate a SEO plugin', 'wapuugotchi' ), __( 'Awesome! &#128261;', 'wapuugotchi' ) . PHP_EOL . __( 'You\'ve installed a SEO plugin. Let\'s add some keywords so that search engines can find us better.', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Quest\Filters\QuestPlugin::always_true', 'Wapuugotchi\Quest\Filters\QuestPlugin::seo_installed_completed_1' ),
 			new Quest( 'use_caching_plugin_1', null, __( 'Activate a caching plugin', 'wapuugotchi' ), __( 'Fantastic! &#128171;', 'wapuugotchi' ) . PHP_EOL . __( 'You\'ve installed a caching plugin. This way we can increase the speed of our website.', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Quest\Filters\QuestPlugin::always_true', 'Wapuugotchi\Quest\Filters\QuestPlugin::caching_installed_completed_1' ),

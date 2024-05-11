@@ -7,7 +7,12 @@
 
 namespace Wapuugotchi\Quest;
 
-use Wapuugotchi\Quest\Handler\MessageHandler;
+use Wapuugotchi\Quest\Filters\AutoMessage;
+use Wapuugotchi\Quest\Filters\QuestContent;
+use Wapuugotchi\Quest\Filters\QuestDate;
+use Wapuugotchi\Quest\Filters\QuestPlugin;
+use Wapuugotchi\Quest\Filters\QuestStart;
+use Wapuugotchi\Quest\Filters\QuestTheme;
 use Wapuugotchi\Quest\Handler\QuestHandler;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -23,8 +28,12 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
+		\add_filter( 'wapuugotchi_bubble_messages', array( AutoMessage::class, 'add_wapuugotchi_messages' ), PHP_INT_MAX, 1 );
+
+		$this->load_quests();
 		\add_action( 'admin_init', array( QuestHandler::class, 'manage_quest_progress' ), 1000, 0 );
-		\add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
+		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 20 );
+		\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
 	}
 
 	/**
@@ -34,18 +43,11 @@ class Manager {
 	 *
 	 * @return void
 	 */
-	public function init( $hook_suffix ) {
-		if ( 'wapuugotchi_page_wapuugotchi__quests' === $hook_suffix ) {
-			$this->load_scripts();
+	public function load_scripts( $hook_suffix ) {
+		if ( 'wapuugotchi_page_wapuugotchi__quests' !== $hook_suffix ) {
+			return;
 		}
-	}
 
-	/**
-	 * Load the Log scripts ( css and react ).
-	 *
-	 * @return void
-	 */
-	public function load_scripts() {
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/quest.asset.php';
 		\wp_enqueue_style( 'wapuugotchi-quest', WAPUUGOTCHI_URL . 'build/quest.css', array(), $assets['version'] );
 		\wp_enqueue_script( 'wapuugotchi-quest', WAPUUGOTCHI_URL . 'build/quest.js', $assets['dependencies'], $assets['version'], true );
@@ -61,5 +63,13 @@ class Manager {
 		);
 
 		\wp_set_script_translations( 'wapuugotchi-quest', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
+	}
+
+	public function load_quests() {
+		\add_filter( 'wapuugotchi_quest_filter', array( QuestContent::class, 'add_wapuugotchi_filter' ), 10, 1 );
+		\add_filter( 'wapuugotchi_quest_filter', array( QuestPlugin::class, 'add_wapuugotchi_filter' ), 10, 1 );
+		\add_filter( 'wapuugotchi_quest_filter', array( QuestTheme::class, 'add_wapuugotchi_filter' ), 10, 1 );
+		\add_filter( 'wapuugotchi_quest_filter', array( QuestDate::class, 'add_wapuugotchi_filter' ), 10, 1 );
+		\add_filter( 'wapuugotchi_quest_filter', array( QuestStart::class, 'add_wapuugotchi_filter' ), 1, 1 );
 	}
 }

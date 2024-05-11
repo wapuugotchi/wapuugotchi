@@ -17,13 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Menu {
 
 	/**
-	 * "Constructor" of the class
-	 */
-	public function __construct() {
-		\add_filter( 'wapuugotchi_add_submenu', array( $this, 'wapuugotchi_add_submenu' ), 20 );
-	}
-
-	/**
 	 * Add html starting point to customizer menu page.
 	 *
 	 * @return void
@@ -39,7 +32,7 @@ class Menu {
 	 *
 	 * @return array
 	 */
-	public function wapuugotchi_add_submenu( $submenus ) {
+	public static function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(
 			'title'    => \__( 'Quest Log', 'wapuugotchi' ),
 			'slug'     => 'wapuugotchi__quests',

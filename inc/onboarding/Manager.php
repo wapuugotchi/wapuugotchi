@@ -7,6 +7,7 @@
 
 namespace Wapuugotchi\Onboarding;
 
+use Wapuugotchi\Onboarding\Filters\TourOrder;
 use Wapuugotchi\Onboarding\Handler\AvatarHandler;
 use Wapuugotchi\Onboarding\Handler\PageHandler;
 
@@ -26,7 +27,10 @@ class Manager {
 		if ( false === Helper::is_valid_version() ) {
 			return;
 		}
-		\add_action( 'admin_init', array( $this, 'init' ) );
+
+		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 30 );
+		\add_action( 'current_screen', array( Menu::class, 'force_redirect_to_dashboard' ) );
+		\add_action( 'admin_init', array( $this, 'init' ), 100 );
 	}
 
 	/**
@@ -37,6 +41,7 @@ class Manager {
 			return;
 		}
 
+		add_filter( 'wapuugotchi_onboarding_tour_files', array( TourOrder::class, 'add_wapuugotchi_filter' ), 1 );
 		PageHandler::load_tour_files();
 		\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
 		\add_action( 'enqueue_block_editor_assets', array( $this, 'enable_welcome_guides' ), 20 );

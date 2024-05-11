@@ -19,13 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 class QuestDate {
 
 	/**
-	 * "Constructor" of the class
-	 */
-	public function __construct() {
-		add_filter( 'wapuugotchi_quest_filter', array( $this, 'add_wapuugotchi_filter' ) );
-	}
-
-	/**
 	 * Get true.
 	 *
 	 * @return true
@@ -148,7 +141,7 @@ class QuestDate {
 	 *
 	 * @return array|Quest[]
 	 */
-	public function add_wapuugotchi_filter( $quests ) {
+	public static function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
 			new Quest( 'login_1', null, __( 'Log in on 10 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 10 consecutive days!', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Quest\Filters\QuestDate::always_true', 'Wapuugotchi\Quest\Filters\QuestDate::login_completed_1' ),
 			new Quest( 'login_2', 'login_1', __( 'Log in on 20 different days', 'wapuugotchi' ), __( 'Nice, you logged in for 20 consecutive days!', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Quest\Filters\QuestDate::always_true', 'Wapuugotchi\Quest\Filters\QuestDate::login_completed_2' ),

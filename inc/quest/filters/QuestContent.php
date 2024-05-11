@@ -19,13 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 class QuestContent {
 
 	/**
-	 * "Constructor" of the class
-	 */
-	public function __construct() {
-		add_filter( 'wapuugotchi_quest_filter', array( $this, 'add_wapuugotchi_filter' ) );
-	}
-
-	/**
 	 * Get true.
 	 *
 	 * @return true
@@ -94,7 +87,7 @@ class QuestContent {
 	 * @return bool
 	 */
 	public static function get_comments_completed_1() {
-		return ( wp_count_comments()->approved >= 1 );
+		return ( wp_count_comments()->approved >= 2 );
 	}
 
 	/**
@@ -122,7 +115,7 @@ class QuestContent {
 	 *
 	 * @return array|Quest[]
 	 */
-	public function add_wapuugotchi_filter( $quests ) {
+	public static function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
 			new Quest( 'count_posts_1', null, __( 'Create 3 posts', 'wapuugotchi' ), __( 'You created 3 posts!!', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Quest\Filters\QuestContent::always_true', 'Wapuugotchi\Quest\Filters\QuestContent::first_post_completed' ),
 			new Quest( 'count_posts_2', 'count_posts_1', __( 'Create 5 posts', 'wapuugotchi' ), __( 'You created 5 posts!!', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Quest\Filters\QuestContent::always_true', 'Wapuugotchi\Quest\Filters\QuestContent::second_post_completed' ),
@@ -131,7 +124,7 @@ class QuestContent {
 			new Quest( 'count_pages_1', null, __( 'Create 3 pages', 'wapuugotchi' ), __( 'You created 3 pages!!', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Quest\Filters\QuestContent::always_true', 'Wapuugotchi\Quest\Filters\QuestContent::first_page_completed' ),
 			new Quest( 'count_pages_2', 'count_pages_1', __( 'Create 5 pages', 'wapuugotchi' ), __( 'You created 5 pages!!', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Quest\Filters\QuestContent::always_true', 'Wapuugotchi\Quest\Filters\QuestContent::second_page_completed' ),
 			new Quest( 'count_pages_3', 'count_pages_3', __( 'Create 7 pages', 'wapuugotchi' ), __( 'You created 7 pages!!', 'wapuugotchi' ), 'success', 100, 3, 'Wapuugotchi\Quest\Filters\QuestContent::always_true', 'Wapuugotchi\Quest\Filters\QuestContent::third_page_completed' ),
-			new Quest( 'count_comment_1', null, __( 'Get 1 comment', 'wapuugotchi' ), __( 'Cool, we get some attention. &#10024;', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Quest\Filters\QuestContent::always_true', 'Wapuugotchi\Quest\Filters\QuestContent::get_comments_completed_1' ),
+			new Quest( 'count_comment_1', null, __( 'Get 2 comment', 'wapuugotchi' ), __( 'Cool, we get some attention. &#10024;', 'wapuugotchi' ), 'success', 100, 1, 'Wapuugotchi\Quest\Filters\QuestContent::always_true', 'Wapuugotchi\Quest\Filters\QuestContent::get_comments_completed_1' ),
 			new Quest( 'count_comment_2', 'count_comment_1', __( 'Get 5 comments', 'wapuugotchi' ), __( 'We get more and more attention. &#10024;', 'wapuugotchi' ), 'success', 100, 2, 'Wapuugotchi\Quest\Filters\QuestContent::always_true', 'Wapuugotchi\Quest\Filters\QuestContent::get_comments_completed_2' ),
 			new Quest( 'count_comment_3', 'count_comment_2', __( 'Get 10 comments', 'wapuugotchi' ), __( 'Oh my god!', 'wapuugotchi' ) . PHP_EOL . __( 'We are starting to become famous. &#127775;', 'wapuugotchi' ), 'success', 100, 3, 'Wapuugotchi\Quest\Filters\QuestContent::always_true', 'Wapuugotchi\Quest\Filters\QuestContent::get_comments_completed_3' ),
 		);

@@ -38,10 +38,6 @@ function init() {
 	new \Wapuugotchi\Shop\Manager();
 	new \Wapuugotchi\Quest\Manager();
 	new \Wapuugotchi\Onboarding\Manager();
-	new \Wapuugotchi\Onboarding\Menu();
-	new \Wapuugotchi\Onboarding\Filters\TourOrder();
-
-	new \Wapuugotchi\Buddy\Manager();
 }
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

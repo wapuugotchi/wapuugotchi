@@ -20,7 +20,7 @@ class AvatarHandler {
 	 *
 	 * @var string
 	 */
-	const AVATAR_CONFIG_KEY = 'wapuugotchi_avatar';
+	const AVATAR_CONFIG_KEY = 'wapuugotchi_shop_avatar_config';
 	/**
 	 * The key for the avatar svg user meta.
 	 *
@@ -29,23 +29,50 @@ class AvatarHandler {
 	const AVATAR_SVG_KEY = 'wapuugotchi_shop_svg';
 
 	/**
+	 * Initialize the avatar handler.
+	 *
+	 * @return void
+	 */
+	public static function init() {
+		self::init_avatar_config();
+	}
+
+	/**
+	 * Initialize the avatar configuration and set it to the default if it is not set.
+	 *
+	 * @return void
+	 */
+	private static function init_avatar_config() {
+		$config = \get_user_meta( \get_current_user_id(), self::AVATAR_CONFIG_KEY, true );
+		if ( ! empty( $config ) ) {
+			return;
+		}
+
+		$default_config_path = \plugin_dir_path( __DIR__ ) . 'assets/avatar.json';
+		if ( ! is_readable( $default_config_path ) ) {
+			error_log( 'Could not read default avatar config file.' );
+			return;
+		}
+
+		$config = \json_decode(
+			\file_get_contents( $default_config_path ),
+			true
+		);
+		if ( false === $config ) {
+			error_log( 'Could not decode default avatar config file.' );
+			return;
+		}
+
+		self::update( self::AVATAR_CONFIG_KEY, $config );
+	}
+
+	/**
 	 * Get the avatar configuration of the current user
 	 *
 	 * @return array
 	 */
 	public static function get_avatar_config() {
-		$config = \get_user_meta( \get_current_user_id(), 'wapuugotchi_avatar', true );
-		if ( ! empty( $config ) ) {
-			return $config;
-		}
-
-		$config = \json_decode(
-			\file_get_contents( \plugin_dir_path( __DIR__ ) . 'assets/avatar.json' ),
-			true
-		);
-		self::update( self::AVATAR_CONFIG_KEY, $config );
-
-		return $config;
+		return \get_user_meta( \get_current_user_id(), self::AVATAR_CONFIG_KEY, true );
 	}
 
 	/**
@@ -53,10 +80,10 @@ class AvatarHandler {
 	 *
 	 * @param array $data The data to update the avatar with.
 	 *
-	 * @return bool
+	 * @return void
 	 */
 	public static function update_avatar_config( $data ) {
-		return self::update( self::AVATAR_CONFIG_KEY, $data );
+		self::update( self::AVATAR_CONFIG_KEY, $data );
 	}
 
 	/**
@@ -73,10 +100,10 @@ class AvatarHandler {
 	 *
 	 * @param string $svg The svg to update the avatar with.
 	 *
-	 * @return bool
+	 * @return void
 	 */
 	public static function update_avatar_svg( $svg ) {
-		return self::update( self::AVATAR_SVG_KEY, $svg );
+		self::update( self::AVATAR_SVG_KEY, $svg );
 	}
 
 	/**
@@ -85,19 +112,13 @@ class AvatarHandler {
 	 * @param string $key The key to update.
 	 * @param mixed  $value The value to update the key with.
 	 *
-	 * @return bool
+	 * @return void
 	 */
 	private static function update( $key, $value ) {
-		$result = \update_user_meta(
+		\update_user_meta(
 			\get_current_user_id(),
 			$key,
 			$value
 		);
-
-		if ( is_int( $result ) ) {
-			return true;
-		}
-
-		return $result;
 	}
 }

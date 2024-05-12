@@ -43,7 +43,7 @@ class QuestDate {
 	 * @return array|array[]|mixed
 	 */
 	private static function count_days() {
-		$quest_meta = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_meta__alpha', true );
+		$quest_meta = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_meta', true );
 		if ( ! is_array( $quest_meta )
 			|| ! isset( $quest_meta['day_count'] )
 			|| ! isset( $quest_meta['day_count']['days'] )
@@ -62,7 +62,7 @@ class QuestDate {
 			$quest_meta['day_count']['days']  += 1;
 			update_user_meta(
 				get_current_user_id(),
-				'wapuugotchi_quest_meta__alpha',
+				'wapuugotchi_quest_meta',
 				$quest_meta
 			);
 		}

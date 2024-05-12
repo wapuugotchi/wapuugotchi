@@ -32,7 +32,7 @@ class AutoMessage {
 			return $messages;
 		}
 
-		$completed_quests = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
+		$completed_quests = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed', true );
 		if ( empty( $completed_quests ) ) {
 			return $messages;
 		}

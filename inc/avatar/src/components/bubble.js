@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback } from '@wordpress/element';
 import { STORE_NAME } from '../store';
 import { useDispatch, useSelect } from '@wordpress/data';
 import parse from 'html-react-parser';

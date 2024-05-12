@@ -10,7 +10,7 @@ export default function ShowRoom() {
 		};
 	} );
 
-	const memoizedSvg = useMemo( () => svg, [ svg ] );
+	const memorizedAvatar = useMemo( () => svg, [ svg ] );
 	return (
 		<div className="wapuugotchi_shop__image">
 			<div className="wapuu_show_room">
@@ -20,7 +20,7 @@ export default function ShowRoom() {
 					y="0"
 					version="1.1"
 					viewBox="0 0 1000 1000"
-					dangerouslySetInnerHTML={ { __html: memoizedSvg } }
+					dangerouslySetInnerHTML={ { __html: memorizedAvatar } }
 				></svg>
 			</div>
 		</div>

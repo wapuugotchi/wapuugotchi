@@ -10,7 +10,7 @@ export default function Avatar() {
 		};
 	} );
 
-	const memoizedAvatar = useMemo( () => avatar, [ avatar ] );
+	const memorizedAvatar = useMemo( () => avatar, [ avatar ] );
 
 	return (
 		<div className="wapuugotchi__svg">
@@ -20,7 +20,7 @@ export default function Avatar() {
 				y="0"
 				version="1.1"
 				viewBox="0 0 1000 1000"
-				dangerouslySetInnerHTML={ { __html: memoizedAvatar } }
+				dangerouslySetInnerHTML={ { __html: memorizedAvatar } }
 			></svg>
 		</div>
 	);

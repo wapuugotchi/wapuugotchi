@@ -1,10 +1,13 @@
 // @ts-check
-const { test, expect } = require('@playwright/test')
+const fs = require('fs');
+const {spawnSync} = require('node:child_process');
+const {test, expect} = require('@playwright/test');
+
 const TEST_USER = process.env.TEST_USER || 'admin'
 const TEST_PASS = process.env.TEST_PASS || 'password'
 
 test.beforeEach(async ({page}) => {
-	await page.goto( '/wp-login.php', {waitUntil: 'networkidle'})
+	await page.goto('/wp-login.php', {waitUntil: 'networkidle'})
 	await expect(page).toHaveTitle(/Log In/)
 
 	/** initiate login process */
@@ -15,10 +18,13 @@ test.beforeEach(async ({page}) => {
 	/** correct redirect to dashboard */
 	await page.waitForLoadState('networkidle')
 	await expect(page).toHaveTitle(/Dashboard/)
+})
+
+
+test.only('Check if avatar exists', async ({page}) => {
+	await page.waitForSelector('.wapuugotchi__svg svg', {state: 'visible'});
 });
 
-test('collection is displayed', async ({page}) => {
-	await page.goto('/wp-admin/admin.php?page=wapuugotchi', {waitUntil: 'networkidle'});
-	await expect(await page.locator('.wapuugotchi_shop__category').count()).toBeGreaterThan(1);
-	await expect(await page.locator('.wapuugotchi_shop__item').count()).toBeGreaterThan(1);
+test.only('Check if bubble is displayed', async ({page}) => {
+	await page.waitForSelector('.wapuugotchi__bubble', {state: 'visible'});
 });

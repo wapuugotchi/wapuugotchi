@@ -7,12 +7,12 @@
 
 namespace Wapuugotchi\Quest;
 
-use Wapuugotchi\Quest\Filters\AutoMessage;
-use Wapuugotchi\Quest\Filters\QuestContent;
-use Wapuugotchi\Quest\Filters\QuestDate;
-use Wapuugotchi\Quest\Filters\QuestPlugin;
-use Wapuugotchi\Quest\Filters\QuestStart;
-use Wapuugotchi\Quest\Filters\QuestTheme;
+use Wapuugotchi\Quest\Data\AutoMessage;
+use Wapuugotchi\Quest\Data\QuestContent;
+use Wapuugotchi\Quest\Data\QuestDate;
+use Wapuugotchi\Quest\Data\QuestPlugin;
+use Wapuugotchi\Quest\Data\QuestStart;
+use Wapuugotchi\Quest\Data\QuestTheme;
 use Wapuugotchi\Quest\Handler\QuestHandler;
 
 if ( ! defined( 'ABSPATH' ) ) {

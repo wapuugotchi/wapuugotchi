@@ -1,6 +1,6 @@
 <?php
 /**
- * The Api Class.
+ * This file contains the AvatarHandler class.
  *
  * @package WapuuGotchi
  */
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class AvatarHandler
+ * Gets and updates the avatar configuration and svg of the current user.
  */
 class AvatarHandler {
 	/**

@@ -7,7 +7,7 @@
 
 namespace Wapuugotchi\Onboarding;
 
-use Wapuugotchi\Onboarding\Filters\TourOrder;
+use Wapuugotchi\Onboarding\Data\TourOrder;
 use Wapuugotchi\Onboarding\Handler\AvatarHandler;
 use Wapuugotchi\Onboarding\Handler\PageHandler;
 
@@ -41,7 +41,7 @@ class Manager {
 			return;
 		}
 
-		add_filter( 'wapuugotchi_onboarding_tour_files', array( TourOrder::class, 'add_wapuugotchi_filter' ), 1 );
+		\add_filter( 'wapuugotchi_onboarding_tour_files', array( TourOrder::class, 'add_wapuugotchi_filter' ), 1 );
 		PageHandler::load_tour_files();
 		\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
 		\add_action( 'enqueue_block_editor_assets', array( $this, 'enable_welcome_guides' ), 20 );

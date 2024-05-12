@@ -1,6 +1,6 @@
 import { STORE_NAME } from '../store';
 import { useSelect } from '@wordpress/data';
-import { useMemo } from 'react';
+import { useMemo } from '@wordpress/element';
 import './show-room.scss';
 
 export default function ShowRoom() {

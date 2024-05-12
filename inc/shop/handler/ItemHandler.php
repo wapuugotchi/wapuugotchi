@@ -89,7 +89,7 @@ class ItemHandler {
 	 * @throws \Exception If the item could not be unlocked.
 	 */
 	public static function get_unlocked_items() {
-		$unlocked_items = \get_user_meta( \get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', true );
+		$unlocked_items = \get_user_meta( \get_current_user_id(), 'wapuugotchi_unlocked_items', true );
 		if ( ! is_array( $unlocked_items ) ) {
 			return array();
 		}
@@ -129,7 +129,7 @@ class ItemHandler {
 		}
 
 		$unlocked_items[] = $id;
-		\update_user_meta( \get_current_user_id(), 'wapuugotchi_unlocked_items__alpha', $unlocked_items );
+		\update_user_meta( \get_current_user_id(), 'wapuugotchi_unlocked_items', $unlocked_items );
 
 		return true;
 	}

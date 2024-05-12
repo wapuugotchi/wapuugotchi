@@ -23,7 +23,7 @@ class MessageHandler {
 	 * @return bool
 	 */
 	public static function set_message_submitted( $quest_id ) {
-		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
+		$completed_quests = get_user_meta( get_current_user_id(), 'wapuugotchi_quest_completed', true );
 		if ( empty( $completed_quests ) ) {
 			return false;
 		}
@@ -33,7 +33,7 @@ class MessageHandler {
 		}
 
 		$completed_quests[ $quest_id ]['notified'] = true;
-		update_user_meta( get_current_user_id(), 'wapuugotchi_quest_completed__alpha', $completed_quests );
+		update_user_meta( get_current_user_id(), 'wapuugotchi_quest_completed', $completed_quests );
 
 		return true;
 	}

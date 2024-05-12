@@ -1,6 +1,6 @@
 <?php
 /**
- * The Api Class.
+ * Contains classes and methods for the WapuuGotchi shop API.
  *
  * @package WapuuGotchi
  */
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class Api
+ * Registers the WapuuGotchi shop endpoints and provides the necessary methods.
  */
 class Api {
 
@@ -152,10 +152,8 @@ class Api {
 			new \WP_REST_Response(
 				array(
 					'status'  => '200',
-					'data1'   => $req['svg'],
 					'message' => 'Avatar successfully updated',
-				),
-				200
+				)
 			)
 		);
 	}

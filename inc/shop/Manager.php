@@ -1,6 +1,6 @@
 <?php
 /**
- * The Customizer Class.
+ * Entry point for the shop feature. Manages the shop menu and the shop api.
  *
  * @package WapuuGotchi
  */
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Manager {
 
 	/**
-	 * "Constructor" of this Class
+	 * Entry point for the shop feature. Manages the shop menu and the shop api.
 	 */
 	public function __construct() {
 		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 10 );

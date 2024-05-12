@@ -45,7 +45,7 @@ class QuestTheme {
 	 */
 	public static function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new Quest( 'cleanup_themes_1', null, __( 'Remove all unused themes', 'wapuugotchi' ), __( 'You cleaned up! &#129529;', 'wapuugotchi' ) . PHP_EOL . 'We have only one theme now.', 'success', 100, 2, 'Wapuugotchi\Quest\Filters\QuestTheme::always_true', 'Wapuugotchi\Quest\Filters\QuestTheme::cleanup_themes_completed_1' ),
+			new Quest( 'cleanup_themes_1', null, __( 'Remove all unused themes', 'wapuugotchi' ), __( 'You cleaned up! &#129529;', 'wapuugotchi' ) . PHP_EOL . 'We have only one theme now.', 'success', 100, 2, 'Wapuugotchi\Quest\Data\QuestTheme::always_true', 'Wapuugotchi\Quest\Data\QuestTheme::cleanup_themes_completed_1' ),
 		);
 
 		return array_merge( $default_quest, $quests );

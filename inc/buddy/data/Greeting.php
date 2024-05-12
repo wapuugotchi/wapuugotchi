@@ -54,8 +54,8 @@ class Greeting {
 				'buddy-greeting',
 				self::get_random_greeting(),
 				'none',
-				'Wapuugotchi\Buddy\Filters\Greeting::is_active',
-				'Wapuugotchi\Buddy\Filters\Greeting::handle_submit'
+				'Wapuugotchi\Buddy\Data\Greeting::is_active',
+				'Wapuugotchi\Buddy\Data\Greeting::handle_submit'
 			)
 		);
 

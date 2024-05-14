@@ -31,12 +31,27 @@ class Manager {
 	 * @return void
 	 */
 	public function add_animations( $animations ) {
+		global $current_screen;
+		if ( ! $current_screen || 'dashboard' !== $current_screen->id ) {
+			return;
+		}
+
 		\add_action( 'admin_enqueue_scripts', function () use ( $animations ) {
-			/*************** DumpDebugDie ***************/
-			echo '<pre>';
-			wp_die( var_dump( $animations ) );
-			echo '</pre>';
-			/*************** DumpDebugDie ***************/
+			$assets = include_once WAPUUGOTCHI_PATH . 'build/alive.asset.php';
+			\wp_enqueue_style( 'wapuugotchi-alive', WAPUUGOTCHI_URL . 'build/alive.css', array(), $assets['version'] );
+			\wp_enqueue_script( 'wapuugotchi-alive', WAPUUGOTCHI_URL . 'build/alive.js', $assets['dependencies'], $assets['version'], true );
+			\wp_add_inline_script(
+				'wapuugotchi-alive',
+				sprintf(
+					"wp.data.dispatch('wapuugotchi/alive').__initialize(%s)",
+					\wp_json_encode(
+						array(
+							'animations' => $animations,
+						)
+					)
+				)
+			);
+
 		}, 20 );
 
 	}

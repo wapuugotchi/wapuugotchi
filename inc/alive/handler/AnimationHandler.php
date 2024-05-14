@@ -42,7 +42,7 @@ class AnimationHandler {
 
 		$animations = array();
 		foreach ( $styleElements as $styleElement ) {
-			$animations[] = $styleElement->nodeValue;
+			$animations[] = preg_replace('/\s+/', ' ', trim($styleElement->nodeValue));
 		}
 
 		do_action( 'animations_extracted', $animations );

@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class CollectionService {
 	const COLLECTION_API_URL  = 'https://api.wapuugotchi.com/collection';
-	const ITEM_LIST_TRANSIENT = 'wapuugotchi_collection__alpha';
+	const ITEM_LIST_TRANSIENT = 'wapuugotchi_collection';
 
 	/**
 	 * Get the collection from the transient or fetch it from the remote server.

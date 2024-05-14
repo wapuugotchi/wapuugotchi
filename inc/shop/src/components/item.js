@@ -1,7 +1,7 @@
 import './item.scss';
 import Pearl from './assets/pearl.svg';
 
-import { useCallback } from 'react';
+import { useCallback } from '@wordpress/element';
 import { dispatch, useSelect } from '@wordpress/data';
 
 import { STORE_NAME } from '../store';

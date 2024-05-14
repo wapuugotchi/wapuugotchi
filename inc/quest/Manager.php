@@ -7,12 +7,12 @@
 
 namespace Wapuugotchi\Quest;
 
-use Wapuugotchi\Quest\Filters\AutoMessage;
-use Wapuugotchi\Quest\Filters\QuestContent;
-use Wapuugotchi\Quest\Filters\QuestDate;
-use Wapuugotchi\Quest\Filters\QuestPlugin;
-use Wapuugotchi\Quest\Filters\QuestStart;
-use Wapuugotchi\Quest\Filters\QuestTheme;
+use Wapuugotchi\Quest\Data\AutoMessage;
+use Wapuugotchi\Quest\Data\QuestContent;
+use Wapuugotchi\Quest\Data\QuestDate;
+use Wapuugotchi\Quest\Data\QuestPlugin;
+use Wapuugotchi\Quest\Data\QuestStart;
+use Wapuugotchi\Quest\Data\QuestTheme;
 use Wapuugotchi\Quest\Handler\QuestHandler;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -65,6 +65,9 @@ class Manager {
 		\wp_set_script_translations( 'wapuugotchi-quest', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
+	/**
+	 * Load Quests
+	 */
 	public function load_quests() {
 		\add_filter( 'wapuugotchi_quest_filter', array( QuestContent::class, 'add_wapuugotchi_filter' ), 10, 1 );
 		\add_filter( 'wapuugotchi_quest_filter', array( QuestPlugin::class, 'add_wapuugotchi_filter' ), 10, 1 );

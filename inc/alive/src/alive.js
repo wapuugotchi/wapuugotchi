@@ -1,32 +1,112 @@
 export default class Alive {
-	constructor( animations ) {
-		if ( ! Array.isArray( animations ) ) {
+	init = ( animations ) => {
+		if ( ! Array.isArray( animations ) || animations.length === 0 ) {
 			return;
 		}
 
 		this.animations = animations;
-		this.init();
-	}
+		this.animateAvatar();
+	};
 
 	/**
-	 * Wartet, bis ein bestimmtes Element im DOM vorhanden ist.
-	 * @param {string} selector - Der CSS-Selektor des Elements, auf das gewartet wird.
-	 * @return {Promise} - Ein Promise, das sich auflöst, wenn das Element gefunden wird.
+	 * Starts the animation of the avatar.
 	 */
-	waitForElement( selector ) {
-		return new Promise( ( resolve ) => {
-			// Überprüfen, ob das Element bereits existiert
-			const initialElement = document.querySelector( selector );
-			if ( initialElement ) {
-				resolve( initialElement );
+	animateAvatar = () => {
+		this.waitForElement( '#wapuugotchi_type__wapuu' ).then( ( element ) => {
+			if ( ! element ) {
 				return;
 			}
+			const animate = () => {
+				const styles = Array.from(
+					element.querySelectorAll( 'style' )
+				);
+				styles.forEach( ( style ) => style.remove() );
 
-			// Erstellen eines MutationObservers, um das DOM zu überwachen
+				const animationIndex = Math.floor(
+					Math.random() * this.animations.length
+				);
+				const animation = this.animations[ animationIndex ];
+
+				const style = document.createElement( 'style' );
+				element.appendChild( style );
+				style.appendChild( document.createTextNode( animation ) );
+
+				const rules = style.sheet.cssRules;
+				if ( ! ( rules instanceof CSSRuleList ) ) {
+					element.removeChild( style );
+					return;
+				}
+
+				const delay = this.getMinDelay( rules );
+				Array.from( rules ).forEach( ( rule ) => {
+					if ( ! ( rule instanceof CSSStyleRule ) ) {
+						return;
+					}
+					rule.style.animationDelay = `${
+						parseFloat( rule.style.animationDelay ) - delay
+					}s`;
+				} );
+
+				this.duration = Math.floor(
+					this.getMaxDuration( rules ) + ( Math.random() * 15 + 5 )
+				);
+				console.log( 'Duration:', this.duration );
+				setTimeout( animate, this.duration * 1000 );
+			};
+
+			animate();
+		} );
+	};
+
+	/**
+	 * Gets the maximum duration from a set of CSS rules.
+	 * @param {CSSRuleList} rules - The CSS rules to be checked.
+	 * @return {number} The maximum duration.
+	 */
+	getMaxDuration = ( rules ) => {
+		if ( ! ( rules instanceof CSSRuleList ) ) {
+			return 0;
+		}
+
+		const durations = Array.from( rules )
+			.filter( ( rule ) => rule instanceof CSSStyleRule )
+			.map( ( rule ) => parseFloat( rule.style.animationDuration ) )
+			.filter( ( duration ) => ! isNaN( duration ) );
+		return Math.max( ...durations );
+	};
+
+	/**
+	 * Gets the minimum delay from a set of CSS rules.
+	 * @param {CSSRuleList} rules - The CSS rules to be checked.
+	 * @return {number} The minimum delay.
+	 */
+	getMinDelay = ( rules ) => {
+		if ( ! ( rules instanceof CSSRuleList ) ) {
+			return 0;
+		}
+
+		const delays = Array.from( rules )
+			.filter( ( rule ) => rule instanceof CSSStyleRule )
+			.map( ( rule ) => parseFloat( rule.style.animationDelay ) )
+			.filter( ( delay ) => ! isNaN( delay ) );
+		return Math.min( ...delays );
+	};
+
+	/**
+	 * Waits for an element to appear in the DOM.
+	 * @param {string} selector - The CSS selector of the element to wait for.
+	 * @return {Promise} A promise that resolves when the element is found.
+	 */
+	waitForElement = ( selector ) => {
+		const initialElement = document.querySelector( selector );
+		if ( initialElement ) {
+			return Promise.resolve( initialElement );
+		}
+
+		return new Promise( ( resolve ) => {
 			const observer = new MutationObserver(
 				( mutations, observerInstance ) => {
 					mutations.forEach( () => {
-						// Überprüfen, ob das Element jetzt existiert
 						const observedElement =
 							document.querySelector( selector );
 						if ( observedElement ) {
@@ -37,29 +117,14 @@ export default class Alive {
 				}
 			);
 
-			// Konfigurieren des Observers
 			observer.observe( document.getElementById( 'wpbody-content' ), {
 				childList: true,
 				subtree: true,
 			} );
 		} );
-	}
-	/**
-	 * Initialisiert die Klasse, indem sie auf das Vorhandensein des Elements wartet und dann die Animationen hinzufügt.
-	 */
-	init() {
-		this.waitForElement( '#wapuugotchi_type__wapuu' ).then( ( element ) => {
-			this.animations.forEach( ( animation ) => {
-				const style = document.createElement( 'style' );
-				style.innerHTML = animation;
-				element.prepend( style );
-			} );
-		} );
-	}
+	};
 }
 
-/**
- * wapuugotchiAnimations is set by wp_add_inline_script() in inc/alive/Manager.php
- */
 /* global wapuugotchiAnimations */
-new Alive( wapuugotchiAnimations );
+const alive = new Alive();
+alive.init( wapuugotchiAnimations );

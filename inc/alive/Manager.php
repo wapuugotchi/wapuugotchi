@@ -30,6 +30,7 @@ class Manager {
 	/**
 	 * Init plugin.
 	 *
+	 * @param array $animations The animations to add.
 	 * @return void
 	 */
 	public function add_animations( $animations ) {
@@ -38,11 +39,14 @@ class Manager {
 			return;
 		}
 
-		\add_action( 'admin_enqueue_scripts', function () use ( $animations ) {
-			$assets = include_once WAPUUGOTCHI_PATH . 'build/alive.asset.php';
-			\wp_enqueue_script( self::ANIMATION_HANDLE, WAPUUGOTCHI_URL . 'build/alive.js', $assets['dependencies'], $assets['version'], true );
-			\wp_add_inline_script(self::ANIMATION_HANDLE, 'var wapuugotchiAnimations = ' . wp_json_encode( $animations ) . ';', 'before');
-		}, 20 );
-
+		\add_action(
+			'admin_enqueue_scripts',
+			function () use ( $animations ) {
+				$assets = include_once WAPUUGOTCHI_PATH . 'build/alive.asset.php';
+				\wp_enqueue_script( self::ANIMATION_HANDLE, WAPUUGOTCHI_URL . 'build/alive.js', $assets['dependencies'], $assets['version'], true );
+				\wp_add_inline_script( self::ANIMATION_HANDLE, 'var wapuugotchiAnimations = ' . wp_json_encode( $animations ) . ';', 'before' );
+			},
+			20
+		);
 	}
 }

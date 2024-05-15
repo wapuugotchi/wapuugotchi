@@ -12,47 +12,58 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Handles all animation related tasks.
+ * The AnimationHandler Class.
+ *
+ * This class handles all tasks related to animations.
+ * It provides a method to extract animations from an avatar.
+ *
+ * @package WapuuGotchi
  */
 class AnimationHandler {
 
 	/**
-	 * remove all animations from avatar.
+	 * Extracts all animations from the avatar and returns them.
 	 *
-	 * @param $avatar
+	 * This method takes an avatar as input and extracts all animations from it.
+	 * The extracted animations are returned in an array.
+	 * If the avatar is empty or contains no animations, the avatar is returned unchanged.
 	 *
-	 * @return array|mixed
+	 * @param string $avatar The avatar from which the animations should be extracted.
+	 *
+	 * @return array|string An array with the extracted animations or the unchanged avatar if no animations were found.
 	 */
 	public static function extract_animations( $avatar ) {
 		if ( false === $avatar ) {
 			return $avatar;
 		}
 
-		$domDocument = new \DOMDocument();
-		$domDocument->loadXML( $avatar );
+		$dom_document = new \DOMDocument();
+		$dom_document->loadXML( $avatar );
 
-		if ( empty( $domDocument->textContent ) ) {
+// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		if ( empty( $dom_document->textContent ) ) {
 			return $avatar;
 		}
 
-		$styleElements = $domDocument->getElementsByTagName( 'style' );
-		if ( false === $styleElements instanceof \DOMNodeList || 0 === $styleElements->length ) {
+		$style_elements = $dom_document->getElementsByTagName( 'style' );
+		if ( false === $style_elements instanceof \DOMNodeList || 0 === $style_elements->length ) {
 			return $avatar;
 		}
 
 		$animations = array();
-		foreach ( $styleElements as $styleElement ) {
-			$animations[] = preg_replace('/\s+/', ' ', trim($styleElement->nodeValue));
+		foreach ( $style_elements as $style_element ) {
+			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$animations[] = preg_replace( '/\s+/', ' ', trim( $style_element->nodeValue ) );
 		}
 
 		do_action( 'animations_extracted', $animations );
 
-		// Remove all style elements
-		while ( $styleElement = $styleElements->item( 0 ) ) {
-			$styleElement->parentNode->removeChild( $styleElement );
+		// Remove all style elements.
+		while ( $style_element = $style_elements->item( 0 ) ) {
+			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$style_element->parentNode->removeChild( $style_element );
 		}
 
-		return $domDocument->saveHTML();
+		return $dom_document->saveHTML();
 	}
-
 }

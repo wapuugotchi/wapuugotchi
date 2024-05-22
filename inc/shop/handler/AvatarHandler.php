@@ -50,7 +50,6 @@ class AvatarHandler {
 
 		$default_config_path = \plugin_dir_path( __DIR__ ) . 'assets/avatar.json';
 		if ( ! is_readable( $default_config_path ) ) {
-			error_log( 'Could not read default avatar config file.' );
 			return;
 		}
 
@@ -59,7 +58,6 @@ class AvatarHandler {
 			true
 		);
 		if ( false === $config ) {
-			error_log( 'Could not decode default avatar config file.' );
 			return;
 		}
 

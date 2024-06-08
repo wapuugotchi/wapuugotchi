@@ -56,7 +56,7 @@ test('tour is closeable', async ({ page }) => {
 	await expect(page).toHaveTitle(/Dashboard/);
 });
 
-test.only('step forward and backwards works', async ({ page }) => {
+test('step forward and backwards works', async ({ page }) => {
 	await page.goto('/wp-admin/admin.php?page=wapuugotchi__tour', { waitUntil: 'networkidle' });
 	await expect(page).toHaveTitle(/WapuuGotchi/);
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay #wapuugotchi_onboarding__navigation').count()).toBe(1);

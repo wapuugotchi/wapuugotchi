@@ -21,7 +21,7 @@
 		"start": "wp-scripts start inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js",
 		"env": "wp-env",
 		"cli": "wp-env run cli",
-		"test": "npx playwright test --config playwright.config.js tests/shop.test.js"
+		"test": "npx playwright test --config playwright.config.js tests"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.44.1",

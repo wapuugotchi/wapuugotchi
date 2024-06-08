@@ -1,4 +1,17 @@
+/**
+ * The Alive Class.
+ *
+ * This class is responsible for managing the animations in the WapuuGotchi plugin.
+ * It provides methods to initialize the animations, animate the avatar, and handle CSS rules.
+ *
+ * @package
+ */
 export default class Alive {
+	/**
+	 * Initializes the animations.
+	 *
+	 * @param {Array} animations The animations to initialize.
+	 */
 	init = ( animations ) => {
 		if ( ! Array.isArray( animations ) || animations.length === 0 ) {
 			return;
@@ -50,7 +63,6 @@ export default class Alive {
 				this.duration = Math.floor(
 					this.getMaxDuration( rules ) + ( Math.random() * 15 + 5 )
 				);
-				console.log( 'Duration:', this.duration );
 				setTimeout( animate, this.duration * 1000 );
 			};
 
@@ -60,6 +72,7 @@ export default class Alive {
 
 	/**
 	 * Gets the maximum duration from a set of CSS rules.
+	 *
 	 * @param {CSSRuleList} rules - The CSS rules to be checked.
 	 * @return {number} The maximum duration.
 	 */
@@ -77,6 +90,7 @@ export default class Alive {
 
 	/**
 	 * Gets the minimum delay from a set of CSS rules.
+	 *
 	 * @param {CSSRuleList} rules - The CSS rules to be checked.
 	 * @return {number} The minimum delay.
 	 */
@@ -94,6 +108,7 @@ export default class Alive {
 
 	/**
 	 * Waits for an element to appear in the DOM.
+	 *
 	 * @param {string} selector - The CSS selector of the element to wait for.
 	 * @return {Promise} A promise that resolves when the element is found.
 	 */

@@ -2,6 +2,9 @@
 /**
  * The AnimationHandler Class.
  *
+ * This class is responsible for handling all tasks related to animations.
+ * It provides a method to extract animations from an avatar.
+ *
  * @package WapuuGotchi
  */
 
@@ -14,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * The AnimationHandler Class.
  *
- * This class handles all tasks related to animations.
+ * This class is responsible for handling all tasks related to animations.
  * It provides a method to extract animations from an avatar.
  *
  * @package WapuuGotchi
@@ -40,7 +43,7 @@ class AnimationHandler {
 		$dom_document = new \DOMDocument();
 		$dom_document->loadXML( $avatar );
 
-// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		if ( empty( $dom_document->textContent ) ) {
 			return $avatar;
 		}

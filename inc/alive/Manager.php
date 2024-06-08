@@ -2,6 +2,9 @@
 /**
  * The Manager Class.
  *
+ * This class is responsible for managing the animations in the WapuuGotchi plugin.
+ * It provides methods to extract animations from an avatar and add them to the admin dashboard.
+ *
  * @package WapuuGotchi
  */
 
@@ -15,12 +18,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Class Manager
+ *
+ * This class is responsible for managing the animations in the WapuuGotchi plugin.
+ * It provides methods to extract animations from an avatar and add them to the admin dashboard.
+ *
+ * @package WapuuGotchi
  */
 class Manager {
 	const ANIMATION_HANDLE = 'wapuugotchi-alive';
 
 	/**
 	 * "Constructor" of this Class
+	 *
+	 * This method initializes the Manager class by adding the necessary filters and actions.
 	 */
 	public function __construct() {
 		\add_filter( 'wapuugotchi_avatar', array( AnimationHandler::class, 'extract_animations' ), PHP_INT_MAX, 1 );
@@ -28,7 +38,10 @@ class Manager {
 	}
 
 	/**
-	 * Init plugin.
+	 * Adds animations to the admin dashboard.
+	 *
+	 * This method is hooked into the 'animations_extracted' action and adds the extracted animations
+	 * to the admin dashboard by enqueuing a script and passing the animations to it.
 	 *
 	 * @param array $animations The animations to add.
 	 * @return void

@@ -63,9 +63,11 @@ async function __buildSvg( wapuu, items ) {
 					}
 				} );
 			//script tags in svg sollen auf die oberste ebene von wapuuSvgGroup hinzugefügt werden
-			Array.from( svg.querySelectorAll( 'style' ) ).forEach( ( style ) => {
-				result.prepend( style );
-			} );
+			Array.from( svg.querySelectorAll( 'style' ) ).forEach(
+				( style ) => {
+					result.prepend( style );
+				}
+			);
 		}
 		return result.innerHTML;
 	}

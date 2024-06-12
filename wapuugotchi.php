@@ -3,8 +3,8 @@
  * Plugin Name:       WapuuGotchi
  * Description:       Meet Your Personalized Wapuu Assistant.
  * Requires at least: 6.2
- * Requires PHP:      7.4
- * Version:           0.1.6
+ * Requires PHP:      8.0
+ * Version:           1.0.0
  * Author:            wapuugotchi
  * Author URI:        https://wapuugotchi.com/
  * License:           GPL-2.0-or-later

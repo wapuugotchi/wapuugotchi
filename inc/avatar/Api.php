@@ -24,25 +24,18 @@ class Api {
 	const REST_BASE = 'wapuugotchi/v1';
 
 	/**
-	 * "Constructor" of the class
-	 */
-	public function __construct() {
-		\add_action( 'rest_api_init', array( $this, 'register_endpoints' ) );
-	}
-
-	/**
 	 * Register all API endpoints.
 	 *
 	 * @return void
 	 */
-	public function register_endpoints() {
+	public static function register_endpoints() {
 		\register_rest_route(
 			self::REST_BASE,
 			'/dismiss_message',
 			array(
 				'methods'             => 'POST',
-				'callback'            => array( $this, 'dismiss_message' ),
-				'permission_callback' => array( $this, 'has_dismiss_message_permission' ),
+				'callback'            => array( self::class, 'dismiss_message' ),
+				'permission_callback' => array( self::class, 'has_dismiss_message_permission' ),
 			)
 		);
 	}
@@ -52,7 +45,7 @@ class Api {
 	 *
 	 * @return bool
 	 */
-	public function has_dismiss_message_permission() {
+	public static function has_dismiss_message_permission() {
 		return \is_user_logged_in();
 	}
 
@@ -63,8 +56,8 @@ class Api {
 	 *
 	 * @return \WP_Error|\WP_HTTP_Response|\WP_REST_Response
 	 */
-	public function dismiss_message( $req ) {
-		$id     = $this->get_message_id_from_request_body( $req );
+	public static function dismiss_message( $req ) {
+		$id     = self::get_message_id_from_request_body( $req );
 		$result = false;
 
 		$message = BubbleHandler::get_message_by_id( $id );
@@ -83,7 +76,7 @@ class Api {
 	 *
 	 * @return mixed
 	 */
-	private function get_message_id_from_request_body( $req ) {
+	private static function get_message_id_from_request_body( $req ) {
 		$body = \json_decode( $req->get_body() );
 		$id   = $body->id ?? null;
 		if ( null === $id ) {

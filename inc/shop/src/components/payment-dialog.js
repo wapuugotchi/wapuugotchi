@@ -2,7 +2,7 @@ import { STORE_NAME } from '../store';
 import { useDispatch, useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 import { __experimentalConfirmDialog as ConfirmDialog } from '@wordpress/components';
-import { useCallback } from 'react';
+import { useCallback } from '@wordpress/element';
 
 import './payment-dialog.scss';
 

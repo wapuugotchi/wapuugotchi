@@ -1,6 +1,6 @@
 <?php
 /**
- * The Api Class.
+ * Contains classes and methods for the WapuuGotchi shop API.
  *
  * @package WapuuGotchi
  */
@@ -11,12 +11,12 @@ use Wapuugotchi\Shop\Handler\AvatarHandler;
 use Wapuugotchi\Shop\Handler\BalanceHandler;
 use Wapuugotchi\Shop\Handler\ItemHandler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
- * Class Api
+ * Registers the WapuuGotchi shop endpoints and provides the necessary methods.
  */
 class Api {
 
@@ -26,24 +26,17 @@ class Api {
 	const REST_BASE = 'wapuugotchi/v1';
 
 	/**
-	 * "Constructor" of the class
-	 */
-	public function __construct() {
-		add_action( 'rest_api_init', array( $this, 'create_rest_routes' ) );
-	}
-
-	/**
 	 * Register all API endpoints.
 	 *
 	 * @return void
 	 */
-	public function create_rest_routes() {
+	public static function create_rest_routes() {
 		register_rest_route(
 			self::REST_BASE,
 			'/wapuugotchi/shop/unlock-item',
 			array(
 				'methods'             => 'POST',
-				'callback'            => array( $this, 'update_purchases' ),
+				'callback'            => array( self::class, 'update_purchases' ),
 				'permission_callback' => 'is_user_logged_in',
 			)
 		);
@@ -53,7 +46,7 @@ class Api {
 			'/wapuugotchi/shop/update-avatar',
 			array(
 				'methods'             => 'POST',
-				'callback'            => array( $this, 'update_avatar' ),
+				'callback'            => array( self::class, 'update_avatar' ),
 				'permission_callback' => 'is_user_logged_in',
 			)
 		);
@@ -67,7 +60,7 @@ class Api {
 	 *
 	 * @throws \Exception If the item could not be unlocked.
 	 */
-	public function update_purchases( $req ) {
+	public static function update_purchases( $req ) {
 
 		if ( ! isset( $req['item'] ) || ! isset( $req['item']['key'], $req['item']['category'] ) ) {
 			return rest_ensure_response(
@@ -151,7 +144,7 @@ class Api {
 	 *
 	 * @return \WP_REST_Response
 	 */
-	public function update_avatar( $req ) {
+	public static function update_avatar( $req ) {
 		AvatarHandler::update_avatar_config( $req['avatar'] );
 		AvatarHandler::update_avatar_svg( $req['svg'] );
 
@@ -159,10 +152,8 @@ class Api {
 			new \WP_REST_Response(
 				array(
 					'status'  => '200',
-					'data1'   => $req['svg'],
 					'message' => 'Avatar successfully updated',
-				),
-				200
+				)
 			)
 		);
 	}

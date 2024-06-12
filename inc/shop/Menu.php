@@ -1,30 +1,23 @@
 <?php
 /**
- * The QuestStart Class.
+ * Contains classes for the shop menu.
  *
  * @package WapuuGotchi
  */
 
 namespace Wapuugotchi\Shop;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
- * Class Menu
+ * Adds a new submenu to the Wapuugotchi menu.
  */
 class Menu {
 
 	/**
-	 * "Constructor" of the class
-	 */
-	public function __construct() {
-		\add_filter( 'wapuugotchi_add_submenu', array( $this, 'wapuugotchi_add_submenu' ), 10 );
-	}
-
-	/**
-	 * Add html starting point to customizer manu page.
+	 * Add html starting point to customizer menu page.
 	 *
 	 * @return void
 	 */
@@ -33,13 +26,13 @@ class Menu {
 	}
 
 	/**
-	 * Initialization filter for QuestStart
+	 * Is used by the Manager class to add the submenu to the Wapuugotchi menu.
 	 *
-	 * @param array $submenus Array of quest objects.
+	 * @param array $submenus Array of submenus.
 	 *
-	 * @return array|Message[]
+	 * @return array
 	 */
-	public function wapuugotchi_add_submenu( $submenus ) {
+	public static function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(
 			'title'    => \__( 'Shop', 'wapuugotchi' ),
 			'slug'     => 'wapuugotchi',

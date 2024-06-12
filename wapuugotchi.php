@@ -27,35 +27,18 @@ function init() {
 
 	$autoloader = WAPUUGOTCHI_PATH . 'vendor/autoload.php';
 	if ( ! \is_readable( $autoloader ) ) {
-		error_log("Wapuugotchi: $autoloader is not readable or does not exist");
 		return;
 	}
 
 	require_once $autoloader;
 
 	new \Wapuugotchi\Core\Menu();
-
 	new \Wapuugotchi\Avatar\Manager();
-	new \Wapuugotchi\Avatar\Api();
-
-	new \Wapuugotchi\Shop\Manager();
-	new \Wapuugotchi\Shop\Menu();
-	new \Wapuugotchi\Shop\Api();
-
-	new \Wapuugotchi\Quest\Manager();
-	new \Wapuugotchi\Quest\Menu();
-	new \Wapuugotchi\Quest\Filters\AutoMessage();
-	new \Wapuugotchi\Quest\Filters\QuestContent();
-	new \Wapuugotchi\Quest\Filters\QuestPlugin();
-	new \Wapuugotchi\Quest\Filters\QuestTheme();
-	new \Wapuugotchi\Quest\Filters\QuestDate();
-	new \Wapuugotchi\Quest\Filters\QuestStart();
-
-	new \Wapuugotchi\Onboarding\Manager();
-	new \Wapuugotchi\Onboarding\Menu();
-	new \Wapuugotchi\Onboarding\Filters\TourOrder();
-
 	new \Wapuugotchi\Buddy\Manager();
+	new \Wapuugotchi\Shop\Manager();
+	new \Wapuugotchi\Quest\Manager();
+	new \Wapuugotchi\Onboarding\Manager();
+	new \Wapuugotchi\Alive\Manager();
 }
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

@@ -1,6 +1,6 @@
 <?php
 /**
- * The Customizer Class.
+ * Entry point for the shop feature. Manages the shop menu and the shop api.
  *
  * @package WapuuGotchi
  */
@@ -12,9 +12,9 @@ use Wapuugotchi\Shop\Handler\BalanceHandler;
 use Wapuugotchi\Shop\Handler\CategoryHandler;
 use Wapuugotchi\Shop\Handler\ItemHandler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Customizer
@@ -22,15 +22,20 @@ endif; // No direct access allowed.
 class Manager {
 
 	/**
-	 * "Constructor" of this Class
+	 * Entry point for the shop feature. Manages the shop menu and the shop api.
 	 */
 	public function __construct() {
+		AvatarHandler::init();
+		BalanceHandler::init();
+
+		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 10 );
+		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
 		\add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
 		\add_filter( 'wapuugotchi_avatar', array( $this, 'modify_avatar' ), 10, 1 );
 	}
 
 	/**
-	 * Initialization Log
+	 * Init the shop, load the scripts.
 	 *
 	 * @param string $hook_suffix The internal page name.
 	 *
@@ -44,7 +49,7 @@ class Manager {
 	}
 
 	/**
-	 * Load the Log scripts ( css and react ).
+	 * Enqueue the shop scripts and styles.
 	 *
 	 * @return void
 	 * @throws \Exception If the asset file is not found.
@@ -72,7 +77,7 @@ class Manager {
 	}
 
 	/**
-	 * Modify the avatar.
+	 * Return the avatar from the avatar handler or the default avatar.
 	 *
 	 * @param string $avatar The avatar.
 	 *
@@ -81,7 +86,7 @@ class Manager {
 	public function modify_avatar( $avatar ) {
 		$svg = AvatarHandler::get_avatar_svg();
 		if ( $svg ) {
-			$avatar = $svg;
+			return $svg;
 		}
 
 		return $avatar;

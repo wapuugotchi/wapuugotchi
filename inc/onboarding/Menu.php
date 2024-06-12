@@ -1,15 +1,15 @@
 <?php
 /**
- * The QuestStart Class.
+ * The Menu class of the Onboarding feature.
  *
  * @package WapuuGotchi
  */
 
 namespace Wapuugotchi\Onboarding;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Menu
@@ -17,15 +17,7 @@ endif; // No direct access allowed.
 class Menu {
 
 	/**
-	 * "Constructor" of the class
-	 */
-	public function __construct() {
-		\add_filter( 'wapuugotchi_add_submenu', array( $this, 'wapuugotchi_add_submenu' ), 30 );
-		\add_action( 'current_screen', array( $this, 'force_redirect_to_dashboard' ) );
-	}
-
-	/**
-	 * Add html starting point to quest manu page.
+	 * Add html starting point to quest menu page.
 	 *
 	 * @return void
 	 */
@@ -34,13 +26,13 @@ class Menu {
 	}
 
 	/**
-	 * Initialization filter for QuestStart
+	 * Adds a submenu page to the admin menu. The filter used is 'wapuugotchi_add_submenu'.
 	 *
-	 * @param array $submenus Array of quest objects.
+	 * @param array $submenus Submenu items.
 	 *
-	 * @return array|Message[]
+	 * @return array
 	 */
-	public function wapuugotchi_add_submenu( $submenus ) {
+	public static function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(
 			'title'    => \__( 'Tour', 'wapuugotchi' ),
 			'slug'     => 'wapuugotchi__tour',
@@ -55,7 +47,7 @@ class Menu {
 	 *
 	 * @return void
 	 */
-	public function force_redirect_to_dashboard() {
+	public static function force_redirect_to_dashboard() {
 		global $current_screen;
 		if ( isset( $current_screen->id ) && 'wapuugotchi_page_wapuugotchi__tour' === $current_screen->base ) {
 			if ( ! isset( $_GET['onboarding_mode'] ) ) {

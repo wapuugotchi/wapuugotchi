@@ -24,6 +24,8 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
+
+		\add_action( 'rest_api_init', array( Api::class, 'register_endpoints' ) );
 		\add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 

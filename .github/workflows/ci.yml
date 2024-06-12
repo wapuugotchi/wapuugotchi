@@ -43,7 +43,7 @@ jobs:
 
       - name: Run test
         run: |
-          npx playwright test tests/addSource.test.js
+          npx playwright test
 
       - name: Archive test artifacts
         if: failure()

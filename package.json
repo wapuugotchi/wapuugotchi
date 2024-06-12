@@ -6,8 +6,8 @@
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
-		"build": "wp-scripts build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js",
-		"watch": "wp-scripts build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js --watch",
+		"build": "wp-scripts build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js",
+		"watch": "wp-scripts build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js --watch",
 		"format": "wp-scripts format",
 		"lint": "concurrently \"npm run lint:lockfile\" \"npm run lint:tsconfig\" \"npm run lint:js\" \"npm run lint:pkg-json\" \"npm run lint:css\"",
 		"lint:css": "wp-scripts lint-style \"inc/**/*.scss\"",
@@ -18,21 +18,22 @@
 		"lint:php": "wp-env run composer run-script lint",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js",
+		"start": "wp-scripts start inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js",
 		"env": "wp-env",
-		"test": "npx playwright test --config playwright.config.js tests/addSource.test.js"
+		"cli": "wp-env run cli",
+		"test": "npx playwright test --config playwright.config.js tests"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.43.1",
-		"@wordpress/env": "^9.9.0",
-		"@wordpress/scripts": "^27.8.0"
+		"@playwright/test": "^1.44.1",
+		"@wordpress/env": "^10.0.0",
+		"@wordpress/scripts": "^27.9.0"
 	},
 	"dependencies": {
-		"@wordpress/api-fetch": "^6.54.0",
-		"@wordpress/components": "^27.5.0",
-		"@wordpress/dom-ready": "^3.57.0",
-		"@wordpress/element": "^5.34.0",
-		"@wordpress/i18n": "^4.57.0",
+		"@wordpress/api-fetch": "^7.0.0",
+		"@wordpress/components": "^28.0.0",
+		"@wordpress/dom-ready": "^4.0.0",
+		"@wordpress/element": "^6.0.0",
+		"@wordpress/i18n": "^5.0.0",
 		"docker-compose": "^0.24.8",
 		"html-react-parser": "^5.1.10",
 		"react": "^18.3.1",
@@ -47,6 +48,7 @@
 		"LICENSE",
 		"src",
 		"composer.json",
-		"package.json"
+		"package.json",
+		"vendor"
 	]
 }

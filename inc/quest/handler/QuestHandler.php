@@ -9,9 +9,9 @@ namespace Wapuugotchi\Quest\Handler;
 
 use Wapuugotchi\Shop\Handler\BalanceHandler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class QuestHandler
@@ -44,7 +44,7 @@ class QuestHandler {
 	 * @return array
 	 */
 	private static function find_active_quests() {
-		$completed_quests = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
+		$completed_quests = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed', true );
 		$all_quests       = self::get_all_quests();
 		$active_quests    = array();
 
@@ -98,7 +98,7 @@ class QuestHandler {
 	public static function get_completed_quests() {
 		$result           = array();
 		$all_quests       = self::get_all_quests();
-		$completed_quests = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
+		$completed_quests = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed', true );
 		if ( ! \is_array( $completed_quests ) ) {
 			return array();
 		}
@@ -163,7 +163,7 @@ class QuestHandler {
 	 * @return bool
 	 */
 	private static function set_quest_completed( $quest_id ) {
-		$completed_quests     = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed__alpha', true );
+		$completed_quests     = \get_user_meta( \get_current_user_id(), 'wapuugotchi_quest_completed', true );
 		$new_completed_quests = array();
 		if ( ! \is_array( $completed_quests ) ) {
 			$completed_quests = array();
@@ -188,7 +188,7 @@ class QuestHandler {
 
 		\update_user_meta(
 			\get_current_user_id(),
-			'wapuugotchi_quest_completed__alpha',
+			'wapuugotchi_quest_completed',
 			\array_merge_recursive( $completed_quests, $new_completed_quests )
 		);
 

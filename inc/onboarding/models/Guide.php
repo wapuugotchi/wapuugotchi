@@ -7,9 +7,9 @@
 
 namespace Wapuugotchi\Onboarding\Models;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Element
@@ -76,7 +76,7 @@ class Guide {
 	/**
 	 * Adds an item to the list of items for the page.
 	 *
-	 * @param array $item The list of items for the page.
+	 * @param Item $item The list of items for the page.
 	 *
 	 * @return Guide the current instance of the class.
 	 */

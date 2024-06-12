@@ -1,18 +1,18 @@
 <?php
 /**
- * The Avatar Class.
+ * The BubbleHandler Class.
  *
  * @package WapuuGotchi
  */
 
 namespace Wapuugotchi\Avatar\Handler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
- * Class Manager
+ * Handles all bubble related tasks.
  */
 class BubbleHandler {
 	/**
@@ -65,7 +65,7 @@ class BubbleHandler {
 	 * @return array
 	 */
 	public static function get_all_messages() {
-		return \apply_filters( 'wapuugotchi_speech_bubble', array() );
+		return \apply_filters( 'wapuugotchi_bubble_messages', array() );
 	}
 
 	/**

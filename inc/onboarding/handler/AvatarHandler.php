@@ -7,9 +7,9 @@
 
 namespace Wapuugotchi\Onboarding\Handler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Manager
@@ -28,6 +28,7 @@ class AvatarHandler {
 		if ( false === $avatar ) {
 			$default = WAPUUGOTCHI_PATH . 'inc/onboarding/assets/avatar.svg';
 			if ( \file_exists( $default ) && \is_readable( $default ) ) {
+				// phpcs:ignore
 				$avatar = \file_get_contents( $default );
 			}
 		}

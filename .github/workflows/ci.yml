@@ -22,12 +22,13 @@ jobs:
         with:
           path: .
           key: ${{ github.sha }}
+      - uses: php-actions/composer@v6
+        with:
+          php_version: ${{ matrix.phpVersion }}
+          dev: no
       - uses: actions/setup-node@v4
         with:
           node-version: '19.x'
-
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
 
       - name: Setup WordPress and our plugin
         run: |

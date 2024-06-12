@@ -1,6 +1,6 @@
 <?php
 /**
- * The Avatar Class.
+ * The Manager Class.
  *
  * @package WapuuGotchi
  */
@@ -10,9 +10,9 @@ namespace Wapuugotchi\Avatar;
 use Wapuugotchi\Avatar\Handler\AvatarHandler;
 use Wapuugotchi\Avatar\Handler\BubbleHandler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Manager
@@ -24,28 +24,23 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		\add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
+
+		\add_action( 'rest_api_init', array( Api::class, 'register_endpoints' ) );
+		\add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 
 	/**
-	 * Initialization Log
+	 * Enqueue scripts and styles.
 	 *
 	 * @param string $hook_suffix The internal page name.
 	 *
 	 * @return void
 	 */
-	public function init( $hook_suffix ) {
-		if ( ! in_array( $hook_suffix, self::PREVENT_AVATAR_DISPLAY, true ) ) {
-			$this->load_scripts();
+	public function enqueue_scripts( $hook_suffix ) {
+		if ( in_array( $hook_suffix, self::PREVENT_AVATAR_DISPLAY, true ) ) {
+			return;
 		}
-	}
 
-	/**
-	 * Load the Log scripts ( css and react ).
-	 *
-	 * @return void
-	 */
-	private function load_scripts() {
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/avatar.asset.php';
 		\wp_enqueue_style( 'wapuugotchi-avatar', WAPUUGOTCHI_URL . 'build/avatar.css', array(), $assets['version'] );
 		\wp_enqueue_script( 'wapuugotchi-avatar', WAPUUGOTCHI_URL . 'build/avatar.js', $assets['dependencies'], $assets['version'], true );

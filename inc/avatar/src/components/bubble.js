@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback } from '@wordpress/element';
 import { STORE_NAME } from '../store';
 import { useDispatch, useSelect } from '@wordpress/data';
 import parse from 'html-react-parser';
@@ -17,7 +17,7 @@ export default function Bubble() {
 		const removedItem = messages.shift();
 
 		await apiFetch( {
-			path: `wapuugotchi/v1/submit_message`,
+			path: `wapuugotchi/v1/dismiss_message`,
 			method: 'POST',
 			data: {
 				id: removedItem?.id,

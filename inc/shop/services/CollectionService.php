@@ -7,16 +7,16 @@
 
 namespace Wapuugotchi\Shop\Services;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class CollectionService
  */
 class CollectionService {
 	const COLLECTION_API_URL  = 'https://api.wapuugotchi.com/collection';
-	const ITEM_LIST_TRANSIENT = 'wapuugotchi_collection__alpha';
+	const ITEM_LIST_TRANSIENT = 'wapuugotchi_collection';
 
 	/**
 	 * Get the collection from the transient or fetch it from the remote server.
@@ -25,12 +25,33 @@ class CollectionService {
 	 * @throws \Exception When the timezone is invalid.
 	 */
 	public static function get_collection() {
-		$config = \get_transient( self::ITEM_LIST_TRANSIENT );
-		if ( false === $config ) {
-			$config = self::fetch_and_store_collection();
+		$collection = \get_transient( self::ITEM_LIST_TRANSIENT );
+		if ( false === self::is_valid_collection( $collection ) ) {
+			$collection = self::fetch_and_store_collection();
 		}
 
-		return $config;
+		return $collection;
+	}
+
+	/**
+	 * Validate the collection.
+	 *
+	 * @param array $collection The collection to validate.
+	 *
+	 * @return bool
+	 */
+	private static function is_valid_collection( $collection ) {
+		if ( empty( $collection ) || ! is_array( $collection ) ) {
+			return false;
+		}
+
+		foreach ( $collection as $category ) {
+			if ( empty( $category ) || ! is_array( $category ) ) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 	/**
@@ -51,7 +72,7 @@ class CollectionService {
 			return false;
 		}
 
-		$config = json_decode( $body, true );
+		$config = \json_decode( $body, true );
 		if ( empty( $config ) || ! is_array( $config ) ) {
 			return false;
 		}

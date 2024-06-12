@@ -1,15 +1,15 @@
 <?php
 /**
- * The Quest Class.
+ * The Message object class.
  *
  * @package WapuuGotchi
  */
 
 namespace Wapuugotchi\Avatar\Models;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
  * Class Quest
@@ -114,7 +114,7 @@ class Message {
 	 *
 	 * @return bool result of the callback.
 	 */
-	public function handle_submit() {
+	public function dismiss() {
 		if ( is_callable( $this->handle_submit ) ) {
 			return $this->handle_submit;
 		}

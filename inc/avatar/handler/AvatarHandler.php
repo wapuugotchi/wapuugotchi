@@ -1,18 +1,18 @@
 <?php
 /**
- * The Avatar Class.
+ * The AvatarHandler Class.
  *
  * @package WapuuGotchi
  */
 
 namespace Wapuugotchi\Avatar\Handler;
 
-if ( ! defined( 'ABSPATH' ) ) :
+if ( ! defined( 'ABSPATH' ) ) {
 	exit();
-endif; // No direct access allowed.
+}
 
 /**
- * Class Manager
+ * Handles all avatar related tasks.
  */
 class AvatarHandler {
 

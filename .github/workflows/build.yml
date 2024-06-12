@@ -34,13 +34,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-      # PHP Dependencies
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+      - name: Composer Setup
+        uses: php-actions/composer@v6
         with:
-          php-version: '8.0'
-      - name: Dump Autoloader
-        run: composer dump-autoload
+          php_version: '8.0'
+          dev: no
 
       # Plugin Build/Upload
       - name: WordPress Plugin Deploy

@@ -1,6 +1,6 @@
 import { STORE_NAME } from '../store';
 import { useSelect } from '@wordpress/data';
-import { useMemo } from '@wordpress/element';
+import { useEffect, useState } from '@wordpress/element';
 import './show-room.scss';
 
 export default function ShowRoom() {
@@ -10,7 +10,12 @@ export default function ShowRoom() {
 		};
 	} );
 
-	const memorizedAvatar = useMemo( () => svg, [ svg ] );
+	const [avatar, setAvatar] = useState(svg);
+
+	useEffect(() => {
+		setAvatar(svg);
+	}, [svg]);
+
 	return (
 		<div className="wapuugotchi_shop__image">
 			<div className="wapuu_show_room">
@@ -20,7 +25,7 @@ export default function ShowRoom() {
 					y="0"
 					version="1.1"
 					viewBox="0 0 1000 1000"
-					dangerouslySetInnerHTML={ { __html: memorizedAvatar } }
+					dangerouslySetInnerHTML={ { __html: avatar } }
 				></svg>
 			</div>
 		</div>

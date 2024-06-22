@@ -40,6 +40,7 @@ function init() {
 	new \Wapuugotchi\Quest\Manager();
 	new \Wapuugotchi\Onboarding\Manager();
 	new \Wapuugotchi\Alive\Manager();
+	new \Wapuugotchi\Mission\Manager();
 }
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

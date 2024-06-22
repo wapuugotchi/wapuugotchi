@@ -8,7 +8,7 @@ const getDomElement = () => {
 	if ( ! domElement ) {
 		domElement = document.createElement( 'DIV' );
 		domElement.id = 'wapuugotchi__avatar';
-		document.getElementById( 'wpwrap' ).append( domElement );
+		document.getElementById( 'wpbody-content' ).append( domElement );
 	}
 	return domElement;
 };

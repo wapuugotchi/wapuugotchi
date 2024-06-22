@@ -1,52 +1,58 @@
 name: Build plugin-zip
 
 on:
-    push:
-        tags:
-            - '*.*.*'
+  push:
+    tags:
+      - "*.*.*"
 
 permissions:
-    contents: write
-    discussions: write
+  contents: write
+  discussions: write
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        if: startsWith(github.ref, 'refs/tags/')
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-            # Node Dependencies / Build
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: '19.x'
-            - name: Install dependencies and build
-              run: |
-                  npm install
-                  npm run build
-            - name: Cache Node dependencies
-              id: node-cache
-              uses: actions/cache@v4
-              with:
-                  path: node_modules
-                  key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-                  restore-keys: |
-                      ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      # Node Dependencies / Build
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '19.x'
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+      - name: Cache Node dependencies
+        id: node-cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-            # Plugin Build/Upload
-            - name: WordPress Plugin Deploy
-              id: deploy
-              uses: 10up/action-wordpress-plugin-deploy@stable
-              with:
-                  generate-zip: true
-              env:
-                  SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-                  SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-                  SLUG: wapuugotchi
-            - name: Upload Release Asset
-              uses: softprops/action-gh-release@v2
-              with:
-                  files: ${{ steps.deploy.outputs.zip-path }}
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Composer Setup
+        uses: php-actions/composer@v6
+        with:
+          php_version: '8.0'
+          dev: no
+
+      # Plugin Build/Upload
+      - name: WordPress Plugin Deploy
+        id: deploy
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        with:
+          generate-zip: true
+        env:
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SLUG: wapuugotchi
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.deploy.outputs.zip-path }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

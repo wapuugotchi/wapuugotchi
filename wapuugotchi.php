@@ -2,10 +2,11 @@
 /**
  * Plugin Name:       WapuuGotchi
  * Description:       Meet Your Personalized Wapuu Assistant.
- * Requires at least: 6.0
- * Requires PHP:      7.2
- * Version:           0.2.0
+ * Requires at least: 6.2
+ * Requires PHP:      8.0
+ * Version:           1.0.1
  * Author:            wapuugotchi
+ * Author URI:        https://wapuugotchi.com/
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       wapuugotchi
@@ -38,7 +39,7 @@ function init() {
 	new \Wapuugotchi\Shop\Manager();
 	new \Wapuugotchi\Quest\Manager();
 	new \Wapuugotchi\Onboarding\Manager();
-	new \Wapuugotchi\Quiz\Manager();
+	new \Wapuugotchi\Alive\Manager();
 }
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

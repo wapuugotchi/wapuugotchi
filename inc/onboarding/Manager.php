@@ -76,6 +76,22 @@ class Manager {
 	}
 
 	/**
+	 * Force autostart of the onboarding.
+	 * This is used to force to autostart of the onboarding.
+	 *
+	 * @return void
+	 */
+	public function force_autostart() {
+		if ( ! empty( \get_user_meta( \get_current_user_id(), 'wapuugotchi_onboarding_autostart_executed', true ) ) ) {
+			return;
+		}
+
+		\update_user_meta( \get_current_user_id(), 'wapuugotchi_onboarding_autostart_executed', true );
+		\wp_safe_redirect( \home_url( 'wp-admin/admin.php?page=wapuugotchi__tour' ) );
+		exit();
+	}
+
+	/**
 	 * Disable welcome guides in Gutenberg.
 	 */
 	public function enable_welcome_guides() {

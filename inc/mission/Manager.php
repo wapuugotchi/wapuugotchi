@@ -68,14 +68,13 @@ class Manager {
 				"wp.data.dispatch('wapuugotchi/mission').__initialize(%s)",
 				\wp_json_encode(
 					array(
-						'progress' => $mission_data['progress'],
-						'markers' => $mission->markers,
-						'reward' => $mission->reward,
+						'progress'    => $mission_data['progress'],
+						'markers'     => $mission->markers,
+						'reward'      => $mission->reward,
 						'description' => $mission->description,
-						'map' => MapHandler::getMapById( $mission->id ),
-
-						'nonce' => \wp_create_nonce( 'wapuugotchi' ),
-						'ajaxurl' => \admin_url( 'admin-ajax.php' ),
+						'map'         => MapHandler::getMapById( $mission->id ),
+						'nonce'       => \wp_create_nonce( 'wapuugotchi' ),
+						'ajaxurl'     => \admin_url( 'admin-ajax.php' ),
 					)
 				)
 			)

@@ -24,9 +24,14 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
+		\add_action( 'load-wapuugotchi_page_wapuugotchi__mission', array( $this, 'init' ) );
+	}
 
+	/**
+	 * Initialization Log
+	 */
+	public function init() {
 		\add_filter( 'wapuugotchi_quiz__filter', array( QuizWordPress::class, 'add_wp_quiz' ) );
-
 		\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
 	}
 

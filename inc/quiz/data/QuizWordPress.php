@@ -50,7 +50,7 @@ class QuizWordPress {
 		$quiz[] = new Quiz(
 			'wp_question_4',
 			'What is the name of the first version of WordPress?',
-			array( 'WordPress 1.0', 'WordPress 0.7' ),
+			array( 'WordPress 1.0', 'WordPress 0.0.7' ),
 			'WordPress 0.7',
 			'That\'s correct! The first version of WordPress was WordPress 0.7, released on May 27, 2003.'
 		);
@@ -106,7 +106,7 @@ class QuizWordPress {
 		$quiz[] = new Quiz(
 			'wp_question_12',
 			'What does the acronym SEO stand for?',
-			array( 'Super Easy Optimization', 'Search Engine Operation' ),
+			array( 'Super Easy Optimization', 'Space Exploration Organization', 'Secret Engine Operation' ),
 			'Search Engine Optimization',
 			'That\'s correct! SEO stands for Search Engine Optimization and is the process of improving the visibility of a website in search engines.'
 		);

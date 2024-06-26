@@ -21,92 +21,98 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Handles the missions in the WapuuGotchi game.
  */
 class MissionHandler {
+	/**
+	 * The key used to store mission data in user meta.
+	 */
 	const MISSION_KEY = 'wapuugotchi_mission';
 
 	/**
-	 * Gets the current mission of the user.
+	 * Retrieves the mission data for the current user.
 	 *
-	 * @return array|null The current mission or null if no mission is found.
+	 * @return array|null The mission data for the current user, or null if no mission data is found.
 	 */
-	public static function getMissionUserData() {
+	public static function get_mission_user_data() {
 		$mission = \get_user_meta( \get_current_user_id(), self::MISSION_KEY, true );
 
-		if ( empty( $mission ) ) {
-			return null;
+		if ( isset( $mission ) ) {
+			return $mission;
 		}
 
-		return $mission;
+		return null;
 	}
 
 	/**
-	 * Initializes a new mission for the user.
+	 * Initializes a new mission for the current user.
 	 *
-	 * @return array|null The new mission or null if no missions are available.
+	 * @return array|null The data for the new mission, or null if no missions are available.
 	 */
-	public static function initMissionUserData() {
-		$missions = self::getMissions();
-		if ( empty( $missions ) ) {
-			return null;
+	public static function init_new_mission() {
+		$missions = self::get_missions();
+		if ( isset( $missions ) ) {
+			$mission = $missions[ \array_rand( $missions ) ];
+
+			$actions = array();
+			for ( $i = 0; $i < $mission->markers; $i++ ) {
+				$action    = ActionHandler::get_random_action();
+				$actions[] = $action['id'];
+			}
+
+			$current = array(
+				'id'       => $mission->id,
+				'progress' => 1,
+				'actions'  => $actions,
+			);
+
+			\update_user_meta( \get_current_user_id(), self::MISSION_KEY, $current );
+
+			return $current;
 		}
 
-		$mission = $missions[ \array_rand( $missions ) ];
-
-		$current = array(
-			'id'       => $mission->id,
-			'progress' => 1,
-		);
-
-		\update_user_meta( \get_current_user_id(), self::MISSION_KEY, $current );
-
-		return $current;
+		return null;
 	}
 
 	/**
-	 * Gets all available missions.
+	 * Retrieves all available missions.
 	 *
-	 * @return array|null The available missions or null if no missions are found.
+	 * @return array|null An array of all available missions, or null if no missions are found.
 	 */
-	public static function getMissions() {
+	private static function get_missions() {
 		$missions = \wp_cache_get( 'wapuugotchi_mission__missions' );
-
 		if ( ! empty( $missions ) ) {
 			return $missions;
 		}
 
 		$missions = \apply_filters( 'wapuugotchi_mission_filter', array() );
-
-		foreach ( $missions as $key => $mission ) {
-			if ( ! self::validateMission( $mission ) ) {
-				unset( $missions[ $key ] );
+		$missions = \array_filter(
+			$missions,
+			function ( $mission ) {
+				return self::validate_mission( $mission );
 			}
+		);
+
+		if ( isset( $missions ) ) {
+			\wp_cache_set( 'wapuugotchi_mission__missions', $missions );
+
+			return $missions;
 		}
 
-		if ( empty( $missions ) ) {
-			return null;
-		}
-
-		\wp_cache_set( 'wapuugotchi_mission__missions', $missions );
-
-		return $missions;
+		return null;
 	}
 
 	/**
-	 * Gets a mission by its ID.
+	 * Retrieves a mission by its ID.
 	 *
-	 * @param int $id The ID of the mission.
+	 * @param string $id The ID of the mission to retrieve.
 	 *
-	 * @return Mission|null The mission or null if no mission is found.
+	 * @return Mission|null The mission with the given ID, or null if no such mission is found.
 	 */
-	public static function getMissionById( $id ) {
-		$missions = self::getMissions();
-
-		if ( empty( $missions ) ) {
-			return null;
-		}
-
-		foreach ( $missions as $mission ) {
-			if ( $mission->id === $id ) {
-				return $mission;
+	public static function get_mission_by_id( $id ) {
+		$missions = self::get_missions();
+		if ( \is_array( $missions ) ) {
+			foreach ( $missions as $mission ) {
+				if ( $mission->id === $id ) {
+					return $mission;
+				}
 			}
 		}
 
@@ -116,21 +122,21 @@ class MissionHandler {
 	/**
 	 * Validates a mission.
 	 *
-	 * @param Mission $mission The mission to validate.
+	 * @param mixed $mission The mission to validate.
 	 *
 	 * @return bool True if the mission is valid, false otherwise.
 	 */
-	private static function validateMission( $mission ) {
+	private static function validate_mission( $mission ) {
 		if ( ! $mission instanceof Mission ) {
 			return false;
 		}
 
 		if ( empty( $mission->id )
-		     || empty( $mission->name )
-		     || empty( $mission->description )
-		     || empty( $mission->url )
-		     || $mission->markers < 1
-		     || $mission->reward < 1
+			|| empty( $mission->name )
+			|| empty( $mission->description )
+			|| empty( $mission->url )
+			|| $mission->markers < 1
+			|| $mission->reward < 1
 		) {
 			return false;
 		}

@@ -7,7 +7,7 @@ const getDomElement = () => {
 	if ( ! domElement ) {
 		domElement = document.createElement( 'DIV' );
 		domElement.id = 'wapuugotchi__quiz';
-		document.body.prepend( domElement );
+		document.querySelector('#wpcontent').appendChild( domElement );
 	}
 	return domElement;
 };

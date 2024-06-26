@@ -75,8 +75,6 @@ export default function Wapuu() {
 		return avatar.outerHTML;
 	}
 
-	const svgHtml = prepareAvatar( avatar );
-
 	/**
 	 * Parse the SVG string into a DOM.
 	 *
@@ -96,7 +94,7 @@ export default function Wapuu() {
 			width="700px"
 			version="1.1"
 			viewBox="0 0 1000 1000"
-			dangerouslySetInnerHTML={ { __html: svgHtml } }
+			dangerouslySetInnerHTML={ { __html: prepareAvatar( avatar ) } }
 		></svg>
 	);
 }

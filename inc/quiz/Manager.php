@@ -19,6 +19,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class Manager
  */
 class Manager {
+	/**
+	 * The Game ID
+	 */
+	const GAME_ID = 'game__2aae341c-cba7-4369-b353-208a0f74d01a';
 
 	/**
 	 * "Constructor" of this Class
@@ -31,14 +35,22 @@ class Manager {
 	 * Initialization Log
 	 */
 	public function init() {
+		\add_filter( 'wapuugotchi_register_action__filter', array( $this, 'register_game' ) );
 		\add_filter( 'wapuugotchi_quiz__filter', array( QuizWordPress::class, 'add_wp_quiz' ) );
-		\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
+		// This action is triggered by Wapuugotchi\Mission\Manager.php to load the scripts for the selected game by its game ID.
+		\add_action( 'wapuugotchi_mission__enqueue_scripts', array( $this, 'load_scripts' ) );
 	}
 
 	/**
 	 * Load the scripts for the Quiz page.
+	 *
+	 * @param string $action The action to load the scripts for.
 	 */
-	public function load_scripts() {
+	public function load_scripts( $action ) {
+		if ( self::GAME_ID !== $action ) {
+			return;
+		}
+
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/quiz.asset.php';
 		\wp_enqueue_style( 'wapuugotchi-quiz', WAPUUGOTCHI_URL . 'build/quiz.css', array(), $assets['version'] );
 		\wp_enqueue_script( 'wapuugotchi-quiz', WAPUUGOTCHI_URL . 'build/quiz.js', $assets['dependencies'], $assets['version'], true );
@@ -58,5 +70,22 @@ class Manager {
 		);
 
 		\wp_set_script_translations( 'wapuugotchi-quiz', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
+	}
+
+	/**
+	 * Register the Game
+	 *
+	 * @param array $games The games array.
+	 *
+	 * @return array
+	 */
+	public function register_game( $games ) {
+		$games[] = array(
+			'id'          => self::GAME_ID,
+			'name'        => __( 'WordPress Quiz', 'wapuugotchi' ),
+			'description' => __( 'Test your knowledge about WordPress.', 'wapuugotchi' ),
+		);
+
+		return $games;
 	}
 }

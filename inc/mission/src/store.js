@@ -91,6 +91,9 @@ function create() {
 			getMap( state ) {
 				return state.map;
 			},
+			getAction( state ) {
+				return state.action;
+			},
 			getNonce( state ) {
 				return state.nonce;
 			},

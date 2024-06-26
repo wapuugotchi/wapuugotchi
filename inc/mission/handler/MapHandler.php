@@ -1,6 +1,8 @@
 <?php
 /**
- * The MissionHandler Class.
+ * The MapHandler Class.
+ *
+ * This class is responsible for handling the map related tasks in the WapuuGotchi game.
  *
  * @package WapuuGotchi
  */
@@ -12,37 +14,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Handles the mission map related tasks
+ * Class MapHandler
+ *
+ * Handles the mission map related tasks.
  */
 class MapHandler {
-	public static function getRandomMap() {
-
-	}
-
 	/**
-	 * Get the current map. If no map is set, return a random map.
-	 * @return void
+	 * Retrieves a map by its ID.
+	 *
+	 * @param string $id The ID of the map to retrieve.
+	 *
+	 * @return string|null The URL of the map with the given ID, or null if no such map is found.
 	 */
-	public static function getMapById( $id ) {
-		$mission = MissionHandler::getMissionById( $id );
-		if ( empty( $mission ) ) {
+	public static function get_map_by_id( $id ) {
+		$mission = MissionHandler::get_mission_by_id( $id );
+		if ( ! isset( $mission ) ) {
 			return null;
 		}
 
 		$map = $mission->url;
-		if ( empty( $map ) ) {
+		if ( ! isset( $map ) ) {
 			return null;
 		}
 
-		if ( ! self::validateMapByUrl( $map ) ) {
+		if ( ! self::validate_map_by_url( $map ) ) {
 			return null;
 		}
 
 		return $map;
 	}
 
-	private static function validateMapByUrl( $url ) {
-		if ( empty( $url ) ) {
+	/**
+	 * Validates a map by its URL.
+	 *
+	 * @param string $url The URL of the map to validate.
+	 *
+	 * @return bool True if the map is valid, false otherwise.
+	 */
+	private static function validate_map_by_url( $url ) {
+		if ( ! isset( $url ) ) {
 			return false;
 		}
 
@@ -50,13 +60,13 @@ class MapHandler {
 			return false;
 		}
 
-		$response = wp_remote_get($url);
-		if (is_wp_error($response)) {
+		$response = wp_remote_get( $url );
+		if ( is_wp_error( $response ) ) {
 			return false;
 		}
 
-		$body = wp_remote_retrieve_body($response);
-		if (strpos($body, '<svg') === false || strpos($body, '</svg>') === false) {
+		$body = wp_remote_retrieve_body( $response );
+		if ( strpos( $body, '<svg' ) === false || strpos( $body, '</svg>' ) === false ) {
 			return false;
 		}
 

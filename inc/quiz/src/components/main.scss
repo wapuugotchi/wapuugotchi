@@ -1,0 +1,17 @@
+#wapuugotchi_mission__action {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	border: 0;
+	top: 0;
+	margin-left: -20px;
+	&.zoomIn {
+		display: block;
+		animation: zoomIn 0.5s ease-in-out;
+		@keyframes zoomIn {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+	}
+}

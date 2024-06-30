@@ -34,7 +34,7 @@ class Missions {
 			->set_name( __( 'The Endless Steppes', 'wapuugotchi' ) )
 			->set_description( __( 'Embark with your brave Wapuu on an adventure through the endless steppes in search of a hidden treasure. But the journey is fraught with dangers and tricky puzzles! Only with your help can your Wapuu overcome these challenges. Support your courageous companion on their journey and together, become the heroes of this adventure!', 'wapuugotchi' ) )
 			// ->set_url( \plugin_dir_url( __DIR__ ) . 'assets/maps/endless_steppes.svg' )
-			->set_url( 'https://wapuugotchi.com/wp-content/uploads/2024/06/endless_steppes_2.svg' )
+			->set_url( 'https://wapuugotchi.com/wp-content/uploads/2024/06/endless_steppes_7.svg' )
 			->set_markers( 5 )
 			->set_reward( 3 );
 

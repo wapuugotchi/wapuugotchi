@@ -11,6 +11,7 @@ use Wapuugotchi\Mission\Data\Missions;
 use Wapuugotchi\Mission\Handler\ActionHandler;
 use Wapuugotchi\Mission\Handler\MissionHandler;
 use Wapuugotchi\Mission\Handler\MapHandler;
+use Wapuugotchi\Mission\Api;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit();
@@ -26,6 +27,7 @@ class Manager {
 	 */
 	public function __construct() {
 		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 30 );
+		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
 		\add_action( 'load-wapuugotchi_page_wapuugotchi__mission', array( $this, 'init' ), 100 );
 	}
 
@@ -43,15 +45,7 @@ class Manager {
 	 * @return void
 	 */
 	public function load_scripts() {
-		$mops = ActionHandler::get_random_action();
-
-		$mission_data = MissionHandler::get_mission_user_data();
-		if ( empty( $mission_data ) || empty( $mission_data['id'] ) ) {
-			$mission_data = MissionHandler::init_new_mission();
-			if ( empty( $mission_data ) ) {
-				return;
-			}
-		}
+		$mission_data = MissionHandler::get_mission();
 
 		$mission = MissionHandler::get_mission_by_id( $mission_data['id'] );
 		if ( empty( $mission ) ) {
@@ -60,6 +54,8 @@ class Manager {
 
 		$progress = ( (int) $mission_data['progress'] - 1 ) || 0;
 		$action   = $mission_data['actions'][ $progress ];
+
+		$svg = MapHandler::get_map_svg_by_id( $mission->id );
 
 		// set an entrypoint to load the script of the selected action (for example minigames).
 		do_action( 'wapuugotchi_mission__enqueue_scripts', $action );
@@ -77,7 +73,7 @@ class Manager {
 						'markers'     => $mission->markers,
 						'reward'      => $mission->reward,
 						'description' => $mission->description,
-						'map'         => MapHandler::get_map_by_id( $mission->id ),
+						'map'         => MapHandler::get_map_svg_by_id( $mission->id ),
 						'action'      => $action,
 
 						'nonce'       => \wp_create_nonce( 'wapuugotchi' ),

@@ -26,7 +26,7 @@ class MapHandler {
 	 *
 	 * @return string|null The URL of the map with the given ID, or null if no such map is found.
 	 */
-	public static function get_map_by_id( $id ) {
+	private static function get_map_by_id( $id ) {
 		$mission = MissionHandler::get_mission_by_id( $id );
 		if ( ! isset( $mission ) ) {
 			return null;
@@ -44,6 +44,25 @@ class MapHandler {
 		return $map;
 	}
 
+	public static function get_map_svg_by_id( $id ) {
+		$map = self::get_map_by_id( $id );
+		if ( ! isset( $map ) ) {
+			return null;
+		}
+
+		$response = wp_remote_get( $map );
+		if ( is_wp_error( $response ) ) {
+			return null;
+		}
+
+		$body = wp_remote_retrieve_body( $response );
+		if ( strpos( $body, '<svg' ) === false || strpos( $body, '</svg>' ) === false ) {
+			return null;
+		}
+
+		return $body;
+
+	}
 	/**
 	 * Validates a map by its URL.
 	 *

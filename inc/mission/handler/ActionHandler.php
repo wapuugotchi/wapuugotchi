@@ -26,7 +26,6 @@ class ActionHandler {
 	 */
 	public static function get_random_action() {
 		$actions = self::get_all_actions();
-
 		if ( ! is_array( $actions ) || empty( $actions ) ) {
 			return null;
 		}
@@ -52,12 +51,13 @@ class ActionHandler {
 		}
 
 		$actions = \apply_filters( 'wapuugotchi_register_action__filter', array() );
-
 		if ( empty( $actions ) ) {
 			return null;
 		}
 
 		\wp_cache_set( 'wapuugotchi_mission__actions', $actions );
+
+		return $actions;
 	}
 
 	/**

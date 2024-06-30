@@ -26,6 +26,35 @@ class MissionHandler {
 	 */
 	const MISSION_KEY = 'wapuugotchi_mission';
 
+
+	public static function get_mission() {
+		// The user data of the current mission!
+		$mission_data = self::get_mission_user_data();
+		if ( empty( $mission_data ) || empty( $mission_data['id'] ) ) {
+			$mission_data = self::init_new_mission();
+			if ( empty( $mission_data ) ) {
+				return false;
+			}
+		}
+
+		// The mission data!
+		$mission = self::get_mission_by_id( $mission_data['id'] );
+		if ( empty( $mission ) ) {
+			return false;
+		}
+
+		// Check if the mission is completed!
+		if( (int)$mission_data['progress'] >= $mission->markers ) {
+			$timezone = new \DateTimeZone( \wp_timezone_string() );
+			$now = new \DateTime( 'now', $timezone );
+			if ( $now->getTimestamp() > (int) $mission_data['date'] ) {
+				return self::init_new_mission();
+			}
+		}
+
+		return $mission_data;
+	}
+
 	/**
 	 * Retrieves the mission data for the current user.
 	 *
@@ -54,13 +83,17 @@ class MissionHandler {
 			$actions = array();
 			for ( $i = 0; $i < $mission->markers; $i++ ) {
 				$action    = ActionHandler::get_random_action();
+				if ( empty( $action ) ) {
+					continue;
+				}
 				$actions[] = $action['id'];
 			}
 
 			$current = array(
 				'id'       => $mission->id,
-				'progress' => 1,
+				'progress' => 0,
 				'actions'  => $actions,
+				'date'     => 0
 			);
 
 			\update_user_meta( \get_current_user_id(), self::MISSION_KEY, $current );
@@ -142,5 +175,25 @@ class MissionHandler {
 		}
 
 		return true;
+	}
+
+	public static function raise_mission_step() {
+		$mission_data = self::get_mission_user_data();
+		if ( empty( $mission_data ) || empty( $mission_data['id'] ) ) {
+			$mission_data = self::init_new_mission();
+		}
+
+		if ( ! isset( $mission_data['progress'] ) ) {
+			return;
+		}
+
+		$timezone = new \DateTimeZone( \wp_timezone_string() );
+
+		$midnight_date_time = new \DateTime( 'tomorrow midnight', $timezone );
+
+		$mission_data['date'] = (int) $midnight_date_time->getTimestamp();
+		$mission_data['progress'] = (int) $mission_data['progress'] + 1;
+
+		\update_user_meta( \get_current_user_id(), self::MISSION_KEY, $mission_data );
 	}
 }

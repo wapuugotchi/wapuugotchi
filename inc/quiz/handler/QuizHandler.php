@@ -66,11 +66,12 @@ class QuizHandler {
 
 		foreach ( $quiz as $item ) {
 			$quiz_array[] = array(
-				'id'            => $item->get_id(),
-				'question'      => $item->get_question(),
-				'wrongAnswers'  => $item->get_wrong_answers(),
-				'correctAnswer' => $item->get_correct_answer(),
-				'detail'        => $item->get_detail(),
+				'id'               => $item->get_id(),
+				'question'         => $item->get_question(),
+				'wrongAnswers'     => $item->get_wrong_answers(),
+				'correctAnswer'    => $item->get_correct_answer(),
+				'correct_notice'   => $item->get_correct_notice(),
+				'incorrect_notice' => $item->get_incorrect_notice(),
 			);
 		}
 

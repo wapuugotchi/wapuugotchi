@@ -1,3 +1,12 @@
 .wapuugotchi_missions__map {
 	padding: 16px;
+	#mission_section {
+		cursor: default;
+		pointer-events: none;
+		text.active {
+			opacity: 1;
+			cursor: pointer;
+			pointer-events: auto;
+		}
+	}
 }

@@ -45,11 +45,18 @@ class Quiz {
 	private $correct_answer = '';
 
 	/**
-	 * Detail of the answer.
+	 * Notice of the right answer.
 	 *
 	 * @var string
 	 */
-	private $detail = '';
+	private $correct_notice = '';
+
+	/**
+	 * Notice of the wrong answer.
+	 *
+	 * @var string
+	 */
+	private $incorrect_notice = '';
 
 	/**
 	 * "Constructor" of this Class
@@ -58,14 +65,16 @@ class Quiz {
 	 * @param string $question Question of the quiz.
 	 * @param array  $wrong_answers Wrong answers of the quiz.
 	 * @param string $correct_answer Correct answer of the quiz.
-	 * @param string $detail Detail of the answer.
+	 * @param string $correct_notice Notice of the answer.
+	 * @param string $incorrect_notice Notice of the wrong answer.
 	 */
-	public function __construct( $id, $question, $wrong_answers, $correct_answer, $detail ) {
-		$this->id             = $id;
-		$this->question       = $question;
-		$this->wrong_answers  = $wrong_answers;
-		$this->correct_answer = $correct_answer;
-		$this->detail         = $detail;
+	public function __construct( $id, $question, $wrong_answers, $correct_answer, $correct_notice, $incorrect_notice) {
+		$this->id               = $id;
+		$this->question         = $question;
+		$this->wrong_answers    = $wrong_answers;
+		$this->correct_answer   = $correct_answer;
+		$this->correct_notice   = $correct_notice;
+		$this->incorrect_notice = $incorrect_notice;
 	}
 
 	/**
@@ -141,20 +150,38 @@ class Quiz {
 	}
 
 	/**
-	 * Get the detail of the answer.
+	 * Get the notice of the correct answer.
 	 *
-	 * @return string $detail
+	 * @return string $correct_notice
 	 */
-	public function get_detail() {
-		return $this->detail;
+	public function get_correct_notice() {
+		return $this->correct_notice;
 	}
 
 	/**
-	 * Set the detail of the answer.
+	 * Set the notice of the correct answer.
 	 *
-	 * @param string $detail Detail of the answer.
+	 * @param string $correct_notice Notice of the correct answer.
 	 */
-	public function set_detail( $detail ) {
-		$this->detail = $detail;
+	public function set_correct_notice( $correct_notice ) {
+		$this->correct_notice = $correct_notice;
+	}
+
+	/**
+	 * Get the notice of the incorrect answer.
+	 *
+	 * @return string $correct_notice
+	 */
+	public function get_incorrect_notice() {
+		return $this->incorrect_notice;
+	}
+
+	/**
+	 * Set the notice of the incorrect answer.
+	 *
+	 * @param string $incorrect_notice Notice of the incorrect answer.
+	 */
+	public function set_incorrect_notice( $incorrect_notice ) {
+		$this->incorrect_notice = $incorrect_notice;
 	}
 }

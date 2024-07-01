@@ -26,6 +26,13 @@ class MissionHandler {
 	 */
 	const MISSION_KEY = 'wapuugotchi_mission';
 
+	/**
+	 * Validates the user data for a mission.
+	 *
+	 * @param array $user_data The user data to validate.
+	 *
+	 * @return bool True if the user data is valid, false otherwise.
+	 */
 	public static function validate_user_data( $user_data ) {
 		if ( empty( $user_data ) || empty( $user_data['id'] ) ) {
 			return false;
@@ -47,7 +54,6 @@ class MissionHandler {
 		if ( (int) $user_data['progress'] >= $mission->markers ) {
 			return false;
 		}
-
 
 		return true;
 	}
@@ -168,6 +174,12 @@ class MissionHandler {
 		return true;
 	}
 
+	/**
+	 * Raises the mission step for the current user.
+	 *
+	 * @return bool True if the mission step was raised, false otherwise.
+	 * @throws \Exception If the current date cannot be retrieved.
+	 */
 	public static function raise_mission_step() {
 		$mission_data = self::get_user_data();
 		if ( empty( $mission_data ) || empty( $mission_data['id'] ) ) {
@@ -199,7 +211,7 @@ class MissionHandler {
 	 * @param array $user_data The user data for the current mission.
 	 *
 	 * @return bool True if the mission is locked, false otherwise.
-	 * @throws \Exception
+	 * @throws \Exception If the current date cannot be retrieved.
 	 */
 	public static function is_mission_locked( $user_data ) {
 		$timezone = new \DateTimeZone( \wp_timezone_string() );

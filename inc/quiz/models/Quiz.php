@@ -68,7 +68,7 @@ class Quiz {
 	 * @param string $correct_notice Notice of the answer.
 	 * @param string $incorrect_notice Notice of the wrong answer.
 	 */
-	public function __construct( $id, $question, $wrong_answers, $correct_answer, $correct_notice, $incorrect_notice) {
+	public function __construct( $id, $question, $wrong_answers, $correct_answer, $correct_notice, $incorrect_notice ) {
 		$this->id               = $id;
 		$this->question         = $question;
 		$this->wrong_answers    = $wrong_answers;

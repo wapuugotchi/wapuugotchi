@@ -177,7 +177,6 @@ class Api {
 	public static function raise_balance( $req ) {
 		$body = json_decode( $req->get_body() );
 
-
 		if ( ! isset( $body->nonce ) || ! isset( $body->pearls ) ) {
 			return rest_ensure_response(
 				new \WP_REST_Response(
@@ -202,7 +201,7 @@ class Api {
 			);
 		}
 
-		BalanceHandler::increase_balance(1);
+		BalanceHandler::increase_balance( 1 );
 
 		return rest_ensure_response(
 			new \WP_REST_Response(

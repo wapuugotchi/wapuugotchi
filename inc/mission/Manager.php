@@ -8,10 +8,8 @@
 namespace Wapuugotchi\Mission;
 
 use Wapuugotchi\Mission\Data\Missions;
-use Wapuugotchi\Mission\Handler\ActionHandler;
 use Wapuugotchi\Mission\Handler\MissionHandler;
 use Wapuugotchi\Mission\Handler\MapHandler;
-use Wapuugotchi\Mission\Api;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit();
@@ -40,9 +38,7 @@ class Manager {
 	}
 
 	/**
-	 * Initialization Manager
-	 *
-	 * @return void
+	 * Load Scripts
 	 */
 	public function load_scripts() {
 		$user_data = MissionHandler::get_user_data();
@@ -56,8 +52,8 @@ class Manager {
 		}
 
 		$progress = max( $user_data['progress'], 0 );
-		$action = $user_data['actions'][ $progress ] ?? '';
-		$svg = MapHandler::get_map_svg_by_id( $mission->id );
+		$action   = $user_data['actions'][ $progress ] ?? '';
+		$svg      = MapHandler::get_map_svg_by_id( $mission->id );
 
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/mission.asset.php';
 		\wp_enqueue_style( 'wapuugotchi-missions', WAPUUGOTCHI_URL . 'build/mission.css', array(), $assets['version'] );
@@ -86,13 +82,16 @@ class Manager {
 
 		// set an entrypoint to load the script of the selected action (for example minigames).
 		do_action( 'wapuugotchi_mission__enqueue_scripts', $action );
-
 	}
 
+	/**
+	 * Get Nonces
+	 *
+	 * @return array
+	 */
 	private function get_nonces() {
 		return array(
 			'wapuugotchi_mission' => \wp_create_nonce( 'wapuugotchi_mission' ),
 		);
-
 	}
 }

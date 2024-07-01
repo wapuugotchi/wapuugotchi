@@ -60,8 +60,8 @@ class Manager {
 				"wp.data.dispatch('wapuugotchi/quiz').__initialize(%s)",
 				\wp_json_encode(
 					array(
-						'avatar' => AvatarHandler::get_avatar(),
-						'data'   => QuizHandler::get_quiz_array(),
+						'avatar'     => AvatarHandler::get_avatar(),
+						'data'       => QuizHandler::get_quiz_array(),
 						'nonce_list' => $this->get_nonce_list(),
 					)
 				)

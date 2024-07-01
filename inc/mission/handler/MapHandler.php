@@ -44,6 +44,13 @@ class MapHandler {
 		return $map;
 	}
 
+	/**
+	 * Retrieves the SVG of a map by its ID.
+	 *
+	 * @param string $id The ID of the map to retrieve.
+	 *
+	 * @return string|null The SVG of the map with the given ID, or null if no such map is found.
+	 */
 	public static function get_map_svg_by_id( $id ) {
 		$map = self::get_map_by_id( $id );
 		if ( ! isset( $map ) ) {
@@ -61,7 +68,6 @@ class MapHandler {
 		}
 
 		return $body;
-
 	}
 	/**
 	 * Validates a map by its URL.

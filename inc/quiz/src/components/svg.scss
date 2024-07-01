@@ -1,4 +1,4 @@
-#wapuugotchi_mission__action {
+.wapuugotchi_mission__action {
 	svg {
 		-webkit-user-select: none;
 		-moz-user-select: none;
@@ -24,5 +24,8 @@
 				}
 			}
 		}
+	}
+	&.permeable {
+		pointer-events: none;
 	}
 }

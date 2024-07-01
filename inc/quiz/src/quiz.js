@@ -1,21 +1,44 @@
 import { createRoot, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
-import Main from './components/main';
+import Svg from "./components/svg";
 
-const getDomElement = () => {
-	let domElement = document.getElementById( 'wapuugotchi_mission__action' );
-	if ( ! domElement ) {
-		domElement = document.createElement( 'DIV' );
-		domElement.id = 'wapuugotchi_mission__action';
-		document.querySelector('#wpcontent').appendChild( domElement );
-	}
-	return domElement;
-};
 
-domReady( () =>
-	createRoot( getDomElement() ).render(
-		<StrictMode>
-			<Main />
-		</StrictMode>
-	)
-);
+
+domReady( () => {
+	const waitForElement = ( selector ) => {
+		const initialElement = document.querySelector( selector );
+		if ( initialElement ) {
+			return Promise.resolve( initialElement );
+		}
+
+		return new Promise( ( resolve ) => {
+			const observer = new MutationObserver(
+				( mutations, observerInstance ) => {
+					mutations.forEach( () => {
+						const observedElement =
+							document.querySelector( selector );
+						if ( observedElement ) {
+							observerInstance.disconnect();
+							resolve( observedElement );
+						}
+					} );
+				}
+			);
+
+			observer.observe( document.getElementById( 'wpbody-content' ), {
+				childList: true,
+				subtree: true,
+			} );
+		} );
+	};
+
+	waitForElement( '.wapuugotchi_mission__overlay' )
+		.then( ( element ) => {
+			console.log( element );
+			createRoot( element ).render(
+				<StrictMode>
+					<Svg />
+				</StrictMode>
+			);
+		} );
+});

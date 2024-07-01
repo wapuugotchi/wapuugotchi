@@ -69,10 +69,11 @@ const getAnswers = ( quiz ) => {
  * @constructor
  */
 export default function Svg() {
-	const { avatar, quiz } = useSelect((select) => {
+	const { avatar, quiz, nonceList } = useSelect((select) => {
 		return {
 			avatar: select(STORE_NAME).getAvatar(),
 			quiz: select(STORE_NAME).getQuiz(),
+			nonceList: select(STORE_NAME).getNonceList(),
 		};
 	});
 
@@ -149,7 +150,6 @@ export default function Svg() {
 	};
 
 	useEffect(() => {
-		const clouds = document.querySelector('#wapuugotchi_mission__action')?.querySelector('svg')?.querySelectorAll('.cloud');
 		const handleCloudClick = (event) => {
 			let notice = getTags(quiz.incorrect_notice, 25);
 			let color = '#900';
@@ -159,8 +159,8 @@ export default function Svg() {
 				color = '#090';
 				success = true;
 			}
-			const messageTag = document.querySelector('#wapuugotchi_mission__action')?.querySelector('#TextBox--group')?.querySelector('text');
-			const cloudGroup = document.querySelector('#wapuugotchi_mission__action')?.querySelector('#Cloud--group');
+			const messageTag = document.querySelector('.wapuugotchi_mission__action')?.querySelector('#TextBox--group')?.querySelector('text');
+			const cloudGroup = document.querySelector('.wapuugotchi_mission__action')?.querySelector('#Cloud--group');
 			cloudGroup.classList.add('fade-out');
 			//lösche alle tags die in massageTag sind
 			while (messageTag.firstChild) {
@@ -170,18 +170,28 @@ export default function Svg() {
 			messageTag.setAttribute('fill', color);
 			appendTagsToElement(messageTag, notice, 155, 250);
 
+			let completed = false;
 			if (success) {
 				apiFetch( {
 					path: `wapuugotchi/v1/mission/set_completed`,
 					method: 'POST',
 					data: {
-						success: 'rubbeldiekatz',
+						nonce: nonceList?.['wapuugotchi_quiz'],
 					},
 				} );
 			}
 
-		}
+			const clouds = cloudGroup?.querySelectorAll('.cloud');
+			clouds?.forEach((cloud) => {
+				const path = cloud.querySelector('path');
+				path.removeEventListener('click', handleCloudClick);
+			});
 
+			//make wapuugotchi_mission__action permeable
+			const action = document.querySelector('.wapuugotchi_mission__action');
+			action.classList.add('permeable');
+		}
+		const clouds = document.querySelector('.wapuugotchi_mission__action')?.querySelector('svg')?.querySelectorAll('.cloud');
 		clouds?.forEach((cloud) => {
 			const path = cloud.querySelector('path');
 			path.addEventListener('click', handleCloudClick);
@@ -224,14 +234,16 @@ export default function Svg() {
 	}, [quiz]);
 
 	return (
-		<svg
-			id="wapuugotchi_quiz__svg"
-			xmlns="http://www.w3.org/2000/svg"
-			height="100%"
-			width="700px"
-			version="1.1"
-			viewBox="0 0 1000 1000"
-			dangerouslySetInnerHTML={ { __html: prepareAvatar( avatar ) } }
-		></svg>
+		<div className="wapuugotchi_mission__action">
+			<svg
+				id="wapuugotchi_quiz__svg"
+				xmlns="http://www.w3.org/2000/svg"
+				height="100vh"
+				width="100%"
+				version="1.1"
+				viewBox="0 0 1000 1000"
+				dangerouslySetInnerHTML={ { __html: prepareAvatar( avatar ) } }
+			></svg>
+		</div>
 	);
 }

@@ -1,0 +1,36 @@
+body {
+	.wapuugotchi_mission__overlay {
+		top: 0;
+		left: -20px;
+		bottom: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		z-index: 100000;
+		background-color: rgba(0, 0, 0, 0.5);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: nowrap;
+
+		&.hidden {
+			display: none;
+			opacity: 0;
+		}
+
+		&.unlocked {
+			pointer-events: none;
+		}
+
+		@media (max-width: 782px) {
+			//top: 46px; // Setzen Sie top auf 100px, wenn die Bildschirmbreite 700px oder weniger beträgt
+		}
+
+	}
+
+	#wapuugotchi__avatar {
+		display: none;
+	}
+}

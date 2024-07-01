@@ -26,33 +26,30 @@ class MissionHandler {
 	 */
 	const MISSION_KEY = 'wapuugotchi_mission';
 
-
-	public static function get_mission() {
-		// The user data of the current mission!
-		$mission_data = self::get_mission_user_data();
-		if ( empty( $mission_data ) || empty( $mission_data['id'] ) ) {
-			$mission_data = self::init_new_mission();
-			if ( empty( $mission_data ) ) {
-				return false;
-			}
+	public static function validate_user_data( $user_data ) {
+		if ( empty( $user_data ) || empty( $user_data['id'] ) ) {
+			return false;
 		}
 
-		// The mission data!
-		$mission = self::get_mission_by_id( $mission_data['id'] );
+		$mission = self::get_mission_by_id( $user_data['id'] );
 		if ( empty( $mission ) ) {
 			return false;
 		}
 
-		// Check if the mission is completed!
-		if( (int)$mission_data['progress'] >= $mission->markers ) {
-			$timezone = new \DateTimeZone( \wp_timezone_string() );
-			$now = new \DateTime( 'now', $timezone );
-			if ( $now->getTimestamp() > (int) $mission_data['date'] ) {
-				return self::init_new_mission();
-			}
+		if ( ! \is_array( $user_data['actions'] ) ) {
+			return false;
 		}
 
-		return $mission_data;
+		if ( \count( $user_data['actions'] ) !== $mission->markers ) {
+			return false;
+		}
+
+		if ( (int) $user_data['progress'] >= $mission->markers ) {
+			return false;
+		}
+
+
+		return true;
 	}
 
 	/**
@@ -60,14 +57,9 @@ class MissionHandler {
 	 *
 	 * @return array|null The mission data for the current user, or null if no mission data is found.
 	 */
-	public static function get_mission_user_data() {
+	public static function get_user_data() {
 		$mission = \get_user_meta( \get_current_user_id(), self::MISSION_KEY, true );
-
-		if ( isset( $mission ) ) {
-			return $mission;
-		}
-
-		return null;
+		return ! empty( $mission ) ? $mission : null;
 	}
 
 	/**
@@ -75,14 +67,13 @@ class MissionHandler {
 	 *
 	 * @return array|null The data for the new mission, or null if no missions are available.
 	 */
-	public static function init_new_mission() {
-		$missions = self::get_missions();
-		if ( isset( $missions ) ) {
+	public static function init_mission() {
+		$missions = self::get_all_missions();
+		if ( ! empty( $missions ) ) {
 			$mission = $missions[ \array_rand( $missions ) ];
-
 			$actions = array();
 			for ( $i = 0; $i < $mission->markers; $i++ ) {
-				$action    = ActionHandler::get_random_action();
+				$action = ActionHandler::get_random_action();
 				if ( empty( $action ) ) {
 					continue;
 				}
@@ -93,7 +84,7 @@ class MissionHandler {
 				'id'       => $mission->id,
 				'progress' => 0,
 				'actions'  => $actions,
-				'date'     => 0
+				'date'     => 0,
 			);
 
 			\update_user_meta( \get_current_user_id(), self::MISSION_KEY, $current );
@@ -109,7 +100,7 @@ class MissionHandler {
 	 *
 	 * @return array|null An array of all available missions, or null if no missions are found.
 	 */
-	private static function get_missions() {
+	private static function get_all_missions() {
 		$missions = \wp_cache_get( 'wapuugotchi_mission__missions' );
 		if ( ! empty( $missions ) ) {
 			return $missions;
@@ -140,7 +131,7 @@ class MissionHandler {
 	 * @return Mission|null The mission with the given ID, or null if no such mission is found.
 	 */
 	public static function get_mission_by_id( $id ) {
-		$missions = self::get_missions();
+		$missions = self::get_all_missions();
 		if ( \is_array( $missions ) ) {
 			foreach ( $missions as $mission ) {
 				if ( $mission->id === $id ) {
@@ -178,22 +169,42 @@ class MissionHandler {
 	}
 
 	public static function raise_mission_step() {
-		$mission_data = self::get_mission_user_data();
+		$mission_data = self::get_user_data();
 		if ( empty( $mission_data ) || empty( $mission_data['id'] ) ) {
-			$mission_data = self::init_new_mission();
+			$mission_data = self::init_mission();
 		}
 
 		if ( ! isset( $mission_data['progress'] ) ) {
 			return;
 		}
 
-		$timezone = new \DateTimeZone( \wp_timezone_string() );
+		$timezone      = new \DateTimeZone( \wp_timezone_string() );
+		$now_date_time = new \DateTime( 'now', $timezone );
 
-		$midnight_date_time = new \DateTime( 'tomorrow midnight', $timezone );
-
-		$mission_data['date'] = (int) $midnight_date_time->getTimestamp();
+		if ( $now_date_time->getTimestamp() < $mission_data['date'] ) {
+			return false;
+		}
+		$midnight_date_time       = new \DateTime( 'tomorrow midnight', $timezone );
+		$mission_data['date']     = (int) $midnight_date_time->getTimestamp();
 		$mission_data['progress'] = (int) $mission_data['progress'] + 1;
 
 		\update_user_meta( \get_current_user_id(), self::MISSION_KEY, $mission_data );
+
+		return true;
+	}
+
+	/**
+	 * Checks if the current mission is locked.
+	 *
+	 * @param array $user_data The user data for the current mission.
+	 *
+	 * @return bool True if the mission is locked, false otherwise.
+	 * @throws \Exception
+	 */
+	public static function is_mission_locked( $user_data ) {
+		$timezone = new \DateTimeZone( \wp_timezone_string() );
+		$now      = new \DateTime( 'now', $timezone );
+		$locked   = $now->getTimestamp() < (int) $user_data['date'];
+		return empty( $user_data['actions'] ) ? true : $locked;
 	}
 }

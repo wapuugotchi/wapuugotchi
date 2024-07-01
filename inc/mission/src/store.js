@@ -8,11 +8,15 @@ const STORE_NAME = 'wapuugotchi/mission';
  * @param {string} svg - The SVG string.
  * @return {Object} The SVG DOM.
  */
-function __buildSvg( string, progress ) {
+function __buildSvg( string, progress, locked ) {
 	const parser = new DOMParser();
 	let svg = parser.parseFromString( string, 'image/svg+xml' );
-	svg = setTrack( svg, ( progress + 1 ) );
-	svg = setMission( svg, progress + 1 );
+	if ( !locked ) {
+		svg = setMission( svg, ( progress + 1 ) );
+		svg = setTrack( svg, ( progress + 1 ) );
+	} else {
+		svg = setTrack( svg, ( progress ) );
+	}
 	return svg.querySelector( 'svg' ).innerHTML;
 }
 
@@ -30,6 +34,7 @@ function setMission( svg, progress ) {
 	mission?.classList.add( 'active' );
 	return svg;
 }
+
 function create() {
 	const store = createReduxStore( STORE_NAME, {
 		reducer( state = {}, { type, payload } ) {
@@ -90,7 +95,7 @@ function create() {
 			},
 			setMap: ( payload ) =>
 				async function ( { dispatch, select } ) {
-					const svg = await __buildSvg( payload, select.getProgress() );
+					const svg = await __buildSvg( payload, select.getProgress(), select.getLocked() );
 
 					return dispatch.__setMap( svg );
 				},
@@ -127,6 +132,9 @@ function create() {
 			getProgress( state ) {
 				return state.progress;
 			},
+			getLocked( state ) {
+				return state.locked;
+			},
 			getMarkers( state ) {
 				return state.markers;
 			},
@@ -142,11 +150,8 @@ function create() {
 			getAction( state ) {
 				return state.action;
 			},
-			getNonce( state ) {
-				return state.nonce;
-			},
-			getAjaxUrl( state ) {
-				return state.ajaxurl;
+			getNonceList( state ) {
+				return state.nonce_list;
 			},
 		},
 		resolvers: {},

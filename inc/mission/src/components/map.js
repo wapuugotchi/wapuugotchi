@@ -21,19 +21,20 @@ export default function Map() {
 		const missionSection = svgElement.querySelector('#mission_section');
 		if (!missionSection) return;
 
-		const showAcion = (event) => {
+		const showAction = (event) => {
 			if (event.target.parentNode === missionSection) {
-				const action = document.querySelector('#wapuugotchi_mission__action');
-				action.style.display = 'block';
-				action.classList.add('zoomIn');
+				const action = document.querySelector('.wapuugotchi_mission__overlay');
+				console.log(action);
+				action.classList.remove('hidden');
+
 			}
 		};
 
-		svgElement?.addEventListener('click', showAcion);
+		svgElement?.addEventListener('click', showAction);
 
 		// Clean up on unmount
 		return () => {
-			svgElement?.removeEventListener('click', showAcion);
+			svgElement?.removeEventListener('click', showAction);
 		};
 	}, [svgRef]);
 

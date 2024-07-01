@@ -6,8 +6,8 @@
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
-		"build": "wp-scripts build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js inc/mission/src/mission.js inc/quiz/src/quiz.js",
-		"watch": "wp-scripts build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js inc/mission/src/mission.js inc/quiz/src/quiz.js --watch",
+		"build": "wp-scripts $npm_package_config_js_sources",
+		"watch": "wp-scripts $npm_package_config_js_sources --watch",
 		"format": "wp-scripts format",
 		"lint": "concurrently \"npm run lint:lockfile\" \"npm run lint:tsconfig\" \"npm run lint:js\" \"npm run lint:pkg-json\" \"npm run lint:css\"",
 		"lint:css": "wp-scripts lint-style \"inc/**/*.scss\"",
@@ -18,10 +18,14 @@
 		"lint:php": "wp-env run composer run-script lint",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js inc/mission/src/mission.js inc/quiz/src/quiz.js",
-		"env": "wp-env",
-		"cli": "wp-env run cli",
+		"start": "npm run wp-env -- start && npm run watch",
+		"stop": "npm run wp-env -- stop",
+		"cli": "npm run wp-env -- run cli bash",
+		"wp-env": "WP_ENV_HOME=wp-env-home wp-env",
 		"test": "npx playwright test --config playwright.config.js tests"
+	},
+	"config": {
+		"js_sources": "build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js inc/mission/src/mission.js inc/quiz/src/quiz.js"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.44.1",

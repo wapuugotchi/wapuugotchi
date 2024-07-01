@@ -193,6 +193,9 @@ function create() {
 			getData( state ) {
 				return state.data;
 			},
+			getNonceList( state ) {
+				return state.nonce_list;
+			},
 			getQuiz( state ) {
 				return state.quiz;
 			},

@@ -50,14 +50,29 @@ class Api {
 		return \is_user_logged_in();
 	}
 
-	public static function set_completed() {
-		MissionHandler::raise_mission_step();
-		return rest_ensure_response(
-			new \WP_REST_Response(
-				array(),
-				200
-			)
-		);
+	public static function set_completed( $req ) {
+		$body = \json_decode( $req->get_body() );
 
+		if ( ! isset( $body->nonce ) ) {
+			return rest_ensure_response(
+				new \WP_REST_Response( array('error' => 'nonce not set'), 400 )
+			);
+		}
+
+		if ( ! \wp_verify_nonce( $body->nonce, 'wapuugotchi_quiz' ) ) {
+			return rest_ensure_response(
+				new \WP_REST_Response( array('error' => 'nonce not valid'), 400 )
+			);
+		}
+
+		$result = MissionHandler::raise_mission_step();
+		if ( ! $result ) {
+			return rest_ensure_response(
+				new \WP_REST_Response( array('error' => 'could not raise mission step'), 400 )
+			);
+		}
+		return rest_ensure_response(
+			new \WP_REST_Response( array('status' => '200'), 200 )
+		);
 	}
 }

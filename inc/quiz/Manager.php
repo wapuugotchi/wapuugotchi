@@ -37,7 +37,6 @@ class Manager {
 	public function init() {
 		\add_filter( 'wapuugotchi_register_action__filter', array( $this, 'register_game' ) );
 		\add_filter( 'wapuugotchi_quiz__filter', array( QuizWordPress::class, 'add_wp_quiz' ) );
-		// This action is triggered by Wapuugotchi\Mission\Manager.php to load the scripts for the selected game by its game ID.
 		\add_action( 'wapuugotchi_mission__enqueue_scripts', array( $this, 'load_scripts' ) );
 	}
 
@@ -63,6 +62,7 @@ class Manager {
 					array(
 						'avatar' => AvatarHandler::get_avatar(),
 						'data'   => QuizHandler::get_quiz_array(),
+						'nonce_list' => $this->get_nonce_list(),
 					)
 				)
 			),
@@ -87,5 +87,17 @@ class Manager {
 		);
 
 		return $games;
+	}
+
+	/**
+	 * Get the Nonce List
+	 *
+	 * @return array
+	 */
+	private function get_nonce_list() {
+		return array(
+			'wapuugotchi_quiz'    => \wp_create_nonce( 'wapuugotchi_quiz' ),
+			'wapuugotchi_balance' => \wp_create_nonce( 'wapuugotchi_balance' ),
+		);
 	}
 }

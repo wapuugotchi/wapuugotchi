@@ -45,20 +45,19 @@ class Manager {
 	 * @return void
 	 */
 	public function load_scripts() {
-		$mission_data = MissionHandler::get_mission();
-
-		$mission = MissionHandler::get_mission_by_id( $mission_data['id'] );
-		if ( empty( $mission ) ) {
-			return;
+		$user_data = MissionHandler::get_user_data();
+		if ( ! MissionHandler::validate_user_data( $user_data ) ) {
+			$user_data = MissionHandler::init_mission();
 		}
 
-		$progress = ( (int) $mission_data['progress'] - 1 ) || 0;
-		$action   = $mission_data['actions'][ $progress ];
+		$mission = MissionHandler::get_mission_by_id( $user_data['id'] );
+		if ( empty( $mission ) ) {
+			return null;
+		}
 
+		$progress = max( $user_data['progress'], 0 );
+		$action = $user_data['actions'][ $progress ] ?? '';
 		$svg = MapHandler::get_map_svg_by_id( $mission->id );
-
-		// set an entrypoint to load the script of the selected action (for example minigames).
-		do_action( 'wapuugotchi_mission__enqueue_scripts', $action );
 
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/mission.asset.php';
 		\wp_enqueue_style( 'wapuugotchi-missions', WAPUUGOTCHI_URL . 'build/mission.css', array(), $assets['version'] );
@@ -69,20 +68,31 @@ class Manager {
 				"wp.data.dispatch('wapuugotchi/mission').__initialize(%s)",
 				\wp_json_encode(
 					array(
-						'progress'    => $mission_data['progress'],
+						'progress'    => $user_data['progress'],
+						'locked'      => MissionHandler::is_mission_locked( $user_data ),
 						'markers'     => $mission->markers,
 						'reward'      => $mission->reward,
 						'description' => $mission->description,
 						'map'         => MapHandler::get_map_svg_by_id( $mission->id ),
 						'action'      => $action,
-
-						'nonce'       => \wp_create_nonce( 'wapuugotchi' ),
-						'ajaxurl'     => \admin_url( 'admin-ajax.php' ),
+						'nonce_list'  => $this->get_nonces(),
 					)
 				)
-			)
+			),
+			'after'
 		);
 
 		\wp_set_script_translations( 'wapuugotchi-missions', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
+
+		// set an entrypoint to load the script of the selected action (for example minigames).
+		do_action( 'wapuugotchi_mission__enqueue_scripts', $action );
+
+	}
+
+	private function get_nonces() {
+		return array(
+			'wapuugotchi_mission' => \wp_create_nonce( 'wapuugotchi_mission' ),
+		);
+
 	}
 }

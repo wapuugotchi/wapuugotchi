@@ -1,6 +1,6 @@
 import { createReduxStore, register } from '@wordpress/data';
-import clouds from "./components/assets/clouds.json";
-import textBox from "./components/assets/text-box.json";
+import clouds from './components/assets/clouds.json';
+import textBox from './components/assets/text-box.json';
 
 const STORE_NAME = 'wapuugotchi/quiz';
 
@@ -51,28 +51,15 @@ function __getClouds() {
 /**
  * Insert the onboarding tag into the SVG DOM.
  *
- * @param {Object} avatar - The SVG DOM.
+ * @param {Object} avatar  - The SVG DOM.
+ * @param {Object} element - The onboarding tag.
+ * @param {string} tag     - The tag to insert the onboarding tag before.
  */
 function insertElement( avatar, element, tag ) {
 	const selectedElement = avatar.querySelector(
 		'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear'
 	);
-	selectedElement?.insertBefore(
-		element,
-		avatar.querySelector( tag )
-	);
-}
-
-/**
- * Get the onboarding tag.
- *
- * @return {Object} The onboarding tag.
- */
-function __getOnboardingTag() {
-	const onboarding = document.createElement( 'g' );
-	onboarding.id = 'Onboarding--group';
-	onboarding.innerHTML = textBox.element;
-	return onboarding;
+	selectedElement?.insertBefore( element, avatar.querySelector( tag ) );
 }
 
 /**
@@ -86,7 +73,6 @@ function parseSvg( svg ) {
 	const doc = parser.parseFromString( svg, 'image/svg+xml' );
 	return doc.querySelector( 'svg' );
 }
-
 
 /**
  * Remove ignored elements from the SVG DOM.

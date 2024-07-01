@@ -1,8 +1,7 @@
 import './description.scss';
-import Map from "./map";
-import Pearls from "./pearls";
-import {useSelect} from "@wordpress/data";
-import {STORE_NAME} from "../store";
+import Pearls from './pearls';
+import { useSelect } from '@wordpress/data';
+import { STORE_NAME } from '../store';
 
 export default function Description() {
 	const { description } = useSelect( ( select ) => {
@@ -17,7 +16,7 @@ export default function Description() {
 					<h1>Adventure</h1>
 					<Pearls />
 				</div>
-				<p>{description}</p>
+				<p>{ description }</p>
 			</div>
 		</>
 	);

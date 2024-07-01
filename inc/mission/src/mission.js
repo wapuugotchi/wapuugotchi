@@ -1,6 +1,6 @@
 import { createRoot, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
-import Page from "./components/page";
+import Page from './components/page';
 
 const getDomElement = () => {
 	let domElement = document.getElementById( 'wapuugotchi-submenu__mission' );

@@ -1,8 +1,6 @@
 import { createRoot, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
-import Svg from "./components/svg";
-
-
+import Svg from './components/svg';
 
 domReady( () => {
 	const waitForElement = ( selector ) => {
@@ -32,13 +30,11 @@ domReady( () => {
 		} );
 	};
 
-	waitForElement( '.wapuugotchi_mission__overlay' )
-		.then( ( element ) => {
-			console.log( element );
-			createRoot( element ).render(
-				<StrictMode>
-					<Svg />
-				</StrictMode>
-			);
-		} );
-});
+	waitForElement( '.wapuugotchi_mission__overlay' ).then( ( element ) => {
+		createRoot( element ).render(
+			<StrictMode>
+				<Svg />
+			</StrictMode>
+		);
+	} );
+} );

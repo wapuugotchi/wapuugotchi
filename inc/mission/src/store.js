@@ -5,32 +5,34 @@ const STORE_NAME = 'wapuugotchi/mission';
 /**
  * Parse the SVG string into a DOM.
  *
- * @param {string} svg - The SVG string.
+ * @param {string}  string
+ * @param {number}  progress - The progress of the mission.
+ * @param {boolean} locked   - The mission is locked.
  * @return {Object} The SVG DOM.
  */
 function __buildSvg( string, progress, locked ) {
 	const parser = new DOMParser();
 	let svg = parser.parseFromString( string, 'image/svg+xml' );
-	if ( !locked ) {
-		svg = setMission( svg, ( progress + 1 ) );
-		svg = setTrack( svg, ( progress + 1 ) );
+	if ( ! locked ) {
+		svg = setMission( svg, progress + 1 );
+		svg = setTrack( svg, progress + 1 );
 	} else {
-		svg = setTrack( svg, ( progress ) );
+		svg = setTrack( svg, progress );
 	}
 	return svg.querySelector( 'svg' ).innerHTML;
 }
 
 function setTrack( svg, progress ) {
 	for ( let i = 1; i <= progress; i++ ) {
-		const track = svg.querySelector( '#track_' + i )
-		track?.setAttribute('opacity', '1')
+		const track = svg.querySelector( '#track_' + i );
+		track?.setAttribute( 'opacity', '1' );
 	}
 
 	return svg;
 }
 
 function setMission( svg, progress ) {
-	const mission = svg.querySelector( '#mission_' + progress )
+	const mission = svg.querySelector( '#mission_' + progress );
 	mission?.classList.add( 'active' );
 	return svg;
 }
@@ -85,7 +87,6 @@ function create() {
 				async function ( { dispatch, select } ) {
 					dispatch.__setState( initialState );
 					dispatch.setMap( select.getMap() );
-
 				},
 			__setState( payload ) {
 				return {
@@ -95,7 +96,11 @@ function create() {
 			},
 			setMap: ( payload ) =>
 				async function ( { dispatch, select } ) {
-					const svg = await __buildSvg( payload, select.getProgress(), select.getLocked() );
+					const svg = await __buildSvg(
+						payload,
+						select.getProgress(),
+						select.getLocked()
+					);
 
 					return dispatch.__setMap( svg );
 				},

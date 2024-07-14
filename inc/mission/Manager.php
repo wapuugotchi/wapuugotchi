@@ -24,6 +24,8 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
+		//\update_user_meta( \get_current_user_id(), 'wapuugotchi_mission', [] );
+
 		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 30 );
 		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
 		\add_action( 'load-wapuugotchi_page_wapuugotchi__mission', array( $this, 'init' ), 100 );
@@ -72,6 +74,7 @@ class Manager {
 						'map'         => MapHandler::get_map_svg_by_id( $mission->id ),
 						'action'      => $action,
 						'nonce_list'  => $this->get_nonces(),
+						'completed'   => false,
 					)
 				)
 			),

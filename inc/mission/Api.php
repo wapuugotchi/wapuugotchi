@@ -67,7 +67,7 @@ class Api {
 			);
 		}
 
-		if ( ! \wp_verify_nonce( $body->nonce, 'wapuugotchi_quiz' ) ) {
+		if ( ! \wp_verify_nonce( $body->nonce, 'wapuugotchi_mission' ) ) {
 			return rest_ensure_response(
 				new \WP_REST_Response( array( 'error' => 'nonce not valid' ), 400 )
 			);

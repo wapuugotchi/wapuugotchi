@@ -1,16 +1,26 @@
 import './steps.scss';
 import Step from './step';
-import { useSelect } from '@wordpress/data';
+import { useSelect, useDispatch } from '@wordpress/data';
 import { __, sprintf } from '@wordpress/i18n';
 import { STORE_NAME } from '../store';
+import { useEffect } from '@wordpress/element';
 
 export default function Steps() {
-	const { progress, markers } = useSelect( ( select ) => {
+	const { setProgress } = useDispatch( STORE_NAME );
+
+	const { progress, markers, completed } = useSelect( ( select ) => {
 		return {
 			progress: select( STORE_NAME ).getProgress(),
 			markers: select( STORE_NAME ).getMarkers(),
+			completed: select( STORE_NAME ).getCompleted(),
 		};
 	} );
+
+	useEffect( () => {
+		if ( completed === true ) {
+			setProgress( progress + 1 );
+		}
+	}, [ completed ] );
 
 	function getOrdinal( number ) {
 		const suffix = [ 'th', 'st', 'nd', 'rd' ];

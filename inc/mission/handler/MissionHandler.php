@@ -197,7 +197,7 @@ class MissionHandler {
 			return false;
 		}
 		$midnight_date_time       = new \DateTime( 'tomorrow midnight', $timezone );
-		$mission_data['date']     = (int) $midnight_date_time->getTimestamp();
+		$mission_data['date']     = 0;
 		$mission_data['progress'] = (int) $mission_data['progress'] + 1;
 
 		\update_user_meta( \get_current_user_id(), self::MISSION_KEY, $mission_data );

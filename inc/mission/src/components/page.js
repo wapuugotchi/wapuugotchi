@@ -4,6 +4,10 @@ import Description from './description';
 import Steps from './steps';
 import Overlay from './overlay';
 
+/**
+ * Page component that assembles the mission page.
+ * It includes the map, mission description, steps, and overlay components.
+ */
 export default function Page() {
 	return (
 		<>

@@ -5,9 +5,10 @@ import { STORE_NAME } from '../store';
 import { SVG } from '@wordpress/primitives';
 
 export default function Map() {
-	const { map } = useSelect( ( select ) => {
+	const { map, completed } = useSelect( ( select ) => {
 		return {
 			map: select( STORE_NAME ).getMap(),
+			completed: select( STORE_NAME ).getCompleted(),
 		};
 	} );
 
@@ -40,6 +41,24 @@ export default function Map() {
 			svgElement?.removeEventListener( 'click', showAction );
 		};
 	}, [ svgRef ] );
+
+	useEffect( () => {
+		const svgElement = svgRef.current;
+		if ( ! svgElement ) {
+			return;
+		}
+		const missionSection = svgElement.querySelector(
+			'#mission_section text.active'
+		);
+		if ( ! missionSection ) {
+			return;
+		}
+		if ( completed === true ) {
+			missionSection.textContent = '✔';
+		} else {
+			missionSection.textContent = '?';
+		}
+	}, [ completed ] );
 
 	return (
 		<>

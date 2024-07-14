@@ -128,7 +128,7 @@ class QuizWordPress {
 		$quiz[] = new Quiz(
 			'wp_question_12',
 			'What does the acronym SEO stand for?',
-			array( 'Super Easy Optimization', 'Space Exploration Organization', 'Secret Engine Operation' ),
+			array( 'Super Easy Optimization', 'Space Exploration Organization' ),
 			'Search Engine Optimization',
 			'That\'s correct! SEO stands for Search Engine Optimization and is the process of improving the visibility of a website in search engines.',
 			'That is unfortunately incorrect. The correct answer is Search Engine Optimization.'
@@ -237,7 +237,7 @@ class QuizWordPress {
 			'wp_question_24',
 			'Why should you make a small donation for the Wapuugotchi plugin?',
 			array( 'To make the plugin author rich', 'To increase your website traffic' ),
-			'To support the development and maintenance of the plugin',
+			'To support the development of the plugin',
 			'Correct! With a small donation, you can support the further development of Wapuugotchi. There are many exciting plans ahead. Visit us at www.wapuugotchi.com!',
 			'That is unfortunately incorrect. The correct answer is To support the development and maintenance of the plugin.'
 		);

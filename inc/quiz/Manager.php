@@ -62,7 +62,6 @@ class Manager {
 					array(
 						'avatar'     => AvatarHandler::get_avatar(),
 						'data'       => QuizHandler::get_quiz_array(),
-						'nonce_list' => $this->get_nonce_list(),
 					)
 				)
 			),
@@ -87,17 +86,5 @@ class Manager {
 		);
 
 		return $games;
-	}
-
-	/**
-	 * Get the Nonce List
-	 *
-	 * @return array
-	 */
-	private function get_nonce_list() {
-		return array(
-			'wapuugotchi_quiz'    => \wp_create_nonce( 'wapuugotchi_quiz' ),
-			'wapuugotchi_balance' => \wp_create_nonce( 'wapuugotchi_balance' ),
-		);
 	}
 }

@@ -1,4 +1,6 @@
 {
+	"port": 9998,
+	"testsPort": 9999,
 	"core": "WordPress/WordPress#6.5",
 	"plugins": [
 		".",

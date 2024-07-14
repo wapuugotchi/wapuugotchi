@@ -1,8 +1,7 @@
-import { useSelect, useRegistry } from '@wordpress/data';
+import { useSelect, useRegistry, useDispatch } from '@wordpress/data';
 import './svg.scss';
 import { STORE_NAME } from '../store';
 import { useCallback, useEffect, useState } from '@wordpress/element';
-import apiFetch from '@wordpress/api-fetch';
 
 /**
  * Parse the SVG string into a DOM.
@@ -69,11 +68,11 @@ const getAnswers = ( quiz ) => {
  * @return {Object} The rendered component.
  */
 export default function Svg() {
-	const { avatar, quiz, nonceList } = useSelect( ( select ) => {
+	const { setCompleted } = useDispatch( STORE_NAME );
+	const { avatar, quiz } = useSelect( ( select ) => {
 		return {
 			avatar: select( STORE_NAME ).getAvatar(),
 			quiz: select( STORE_NAME ).getQuiz(),
-			nonceList: select( STORE_NAME ).getNonceList(),
 		};
 	} );
 
@@ -201,13 +200,7 @@ export default function Svg() {
 			appendTagsToElement( messageTag, notice, 155, 250 );
 
 			if ( success ) {
-				apiFetch( {
-					path: `wapuugotchi/v1/mission/set_completed`,
-					method: 'POST',
-					data: {
-						nonce: nonceList?.wapuugotchi_quiz,
-					},
-				} );
+				setCompleted();
 			}
 
 			const clouds = cloudGroup?.querySelectorAll( '.cloud' );

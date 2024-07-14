@@ -1,99 +1,75 @@
-import { createReduxStore, register } from '@wordpress/data';
+import { createReduxStore, register, dispatch } from '@wordpress/data';
 import clouds from './components/assets/clouds.json';
 import textBox from './components/assets/text-box.json';
 
+// Store-Namen für die Quiz- und Missionskomponenten
 const STORE_NAME = 'wapuugotchi/quiz';
-
-async function __getRandomQuizItem( list ) {
-	const index = Math.floor( Math.random() * list.length );
-	return list[ index ];
-}
+const MISSION_STORE_NAME = 'wapuugotchi/mission';
 
 /**
- * Parse the SVG string into a DOM and modify it.
- *
- * @param {string} svg - The SVG string.
- * @return {string} The modified SVG string.
+ * Wählt ein zufälliges Quiz-Element aus einer Liste aus.
+ * @param {Array} list - Die Liste der Quiz-Elemente.
+ * @return {Array} Ein zufälliges Element aus der Liste.
  */
-async function __buildSvg( svg ) {
-	const avatar = parseSvg( svg );
-	removeIgnoredElements( avatar );
-	insertElement( avatar, __getClouds(), 'g#Front--group' );
-	insertElement( avatar, __getTextBox(), 'g#LeftArm--group' );
-
-	return avatar.outerHTML;
-}
+const getRandomQuizItem = ( list ) =>
+	list[ Math.floor( Math.random() * list.length ) ];
 
 /**
- * Get the onboarding tag.
- *
- * @return {Object} The onboarding tag.
+ * Erstellt ein SVG-Element basierend auf einem SVG-String.
+ * @param {string} svgString - Der SVG-String.
+ * @return {string} Das bearbeitete SVG als String.
  */
-function __getTextBox() {
+const buildSvg = async ( svgString ) => {
+	const parser = new DOMParser();
+	const doc = parser.parseFromString( svgString, 'image/svg+xml' );
+	const svg = doc.querySelector( 'svg' );
+	removeIgnoredElements( svg );
+	insertElement( svg, getClouds(), 'g#Front--group' );
+	insertElement( svg, getTextBox(), 'g#LeftArm--group' );
+	return svg.outerHTML;
+};
+
+/**
+ * Erstellt ein Textbox-Element für das SVG.
+ * @return {Element} Das Textbox-Element.
+ */
+const getTextBox = () => {
 	const onboarding = document.createElement( 'g' );
 	onboarding.id = 'TextBox--group';
 	onboarding.innerHTML = textBox.element;
 	return onboarding;
-}
+};
 
 /**
- * Get the onboarding tag.
- *
- * @return {Object} The onboarding tag.
+ * Erstellt ein Wolken-Element für das SVG.
+ * @return {Element} Das Wolken-Element.
  */
-function __getClouds() {
+const getClouds = () => {
 	const onboarding = document.createElement( 'g' );
 	onboarding.id = 'Cloud--group';
 	onboarding.innerHTML = clouds.element;
 	return onboarding;
-}
+};
 
 /**
- * Insert the onboarding tag into the SVG DOM.
- *
- * @param {Object} avatar  - The SVG DOM.
- * @param {Object} element - The onboarding tag.
- * @param {string} tag     - The tag to insert the onboarding tag before.
+ * Fügt ein Element in ein SVG ein.
+ * @param {Element} svg     - Das SVG-Element.
+ * @param {Element} element - Das einzufügende Element.
+ * @param {string}  tag     - Der Tag, vor dem das Element eingefügt werden soll.
  */
-function insertElement( avatar, element, tag ) {
-	const selectedElement = avatar.querySelector(
+const insertElement = ( svg, element, tag ) => {
+	const selectedElement = svg.querySelector(
 		'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear'
 	);
-	selectedElement?.insertBefore( element, avatar.querySelector( tag ) );
-}
+	selectedElement?.insertBefore( element, svg.querySelector( tag ) );
+};
 
 /**
- * Parse the SVG string into a DOM.
- *
- * @param {string} svg - The SVG string.
- * @return {Object} The SVG DOM.
+ * Entfernt nicht benötigte Elemente aus einem SVG.
+ * @param {Element} svg - Das SVG-Element.
  */
-function parseSvg( svg ) {
-	const parser = new DOMParser();
-	const doc = parser.parseFromString( svg, 'image/svg+xml' );
-	return doc.querySelector( 'svg' );
-}
-
-/**
- * Remove ignored elements from the SVG DOM.
- *
- * @param {Object} avatar - The SVG DOM.
- */
-function removeIgnoredElements( avatar ) {
-	__getRemoveList()?.forEach( ( ignore ) => {
-		avatar.querySelectorAll( ignore )?.forEach( ( item ) => {
-			item?.remove();
-		} );
-	} );
-}
-
-/**
- * Get the list of elements to be removed from the SVG DOM.
- *
- * @return {Array} The list of elements to be removed.
- */
-function __getRemoveList() {
-	return [
+const removeIgnoredElements = ( svg ) => {
+	const removeList = [
 		'style',
 		'g#Front--group g',
 		'g#RightHand--group g',
@@ -101,98 +77,51 @@ function __getRemoveList() {
 		'g#BeforeLeftArm--part g',
 		'g#Ball--group',
 	];
-}
-
-function create() {
-	const store = createReduxStore( STORE_NAME, {
-		reducer( state = {}, { type, payload } ) {
-			switch ( type ) {
-				case '__SET_STATE': {
-					return {
-						state,
-						...payload,
-					};
-				}
-				case '__SET_AVATAR': {
-					return {
-						...state,
-						avatar: payload,
-					};
-				}
-				case '__SET_QUIZ': {
-					return {
-						...state,
-						quiz: { ...payload },
-					};
-				}
-			}
-
-			return state;
-		},
-		actions: {
-			// this is just once used to initialize the store with the initial data
-			__initialize: ( initialState ) =>
-				async function ( { dispatch, select } ) {
-					dispatch.__setState( initialState );
-					dispatch.setQuiz( select.getData() );
-					dispatch.setAvatar( select.getAvatar() );
-				},
-			__setState( payload ) {
-				return {
-					type: '__SET_STATE',
-					payload,
-				};
-			},
-
-			setAvatar: ( payload ) =>
-				async function ( { dispatch } ) {
-					const svg = await __buildSvg( payload );
-
-					return dispatch.__setAvatar( svg );
-				},
-			__setAvatar( payload ) {
-				return {
-					type: '__SET_AVATAR',
-					payload,
-				};
-			},
-			setQuiz: ( payload ) =>
-				async function ( { dispatch } ) {
-					const quiz = await __getRandomQuizItem( payload );
-					return dispatch.__setQuiz( quiz );
-				},
-			__setQuiz( payload ) {
-				return {
-					type: '__SET_QUIZ',
-					payload,
-				};
-			},
-		},
-		selectors: {
-			// should not be used except for js console debug purposes
-			__getState( state ) {
-				return state;
-			},
-			getAvatar( state ) {
-				return state.avatar;
-			},
-			getData( state ) {
-				return state.data;
-			},
-			getNonceList( state ) {
-				return state.nonce_list;
-			},
-			getQuiz( state ) {
-				return state.quiz;
-			},
-		},
-		resolvers: {},
+	removeList.forEach( ( selector ) => {
+		svg.querySelectorAll( selector ).forEach( ( elem ) => elem.remove() );
 	} );
+};
 
-	register( store );
-}
+// Definition des Redux Stores
+const store = createReduxStore( STORE_NAME, {
+	reducer( state = {}, action ) {
+		switch ( action.type ) {
+			case '__SET_STATE':
+				return { ...state, ...action.payload };
+			case '__SET_AVATAR':
+				return { ...state, avatar: action.payload };
+			case '__SET_QUIZ':
+				return { ...state, quiz: action.payload };
+			default:
+				return state;
+		}
+	},
+	actions: {
+		__initialize:
+			( initialState ) =>
+			// eslint-disable-next-line no-shadow
+			async ( { dispatch } ) => {
+				dispatch.__setState( initialState );
+				const quiz = await getRandomQuizItem( initialState.data );
+				const svg = await buildSvg( initialState.avatar );
+				dispatch.__setQuiz( quiz );
+				dispatch.__setAvatar( svg );
+			},
+		__setState: ( payload ) => ( { type: '__SET_STATE', payload } ),
+		__setAvatar: ( payload ) => ( { type: '__SET_AVATAR', payload } ),
+		__setQuiz: ( payload ) => ( { type: '__SET_QUIZ', payload } ),
+		setCompleted: () => () => {
+			dispatch( MISSION_STORE_NAME )?.setCompleted();
+		},
+	},
+	selectors: {
+		__getState: ( state ) => state,
+		getAvatar: ( state ) => state.avatar,
+		getData: ( state ) => state.data,
+		getQuiz: ( state ) => state.quiz,
+	},
+} );
 
-// register the store now (lazy registration is not needed)
-create();
+register( store );
 
 export { STORE_NAME };

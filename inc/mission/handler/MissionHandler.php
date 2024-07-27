@@ -187,7 +187,7 @@ class MissionHandler {
 		}
 
 		if ( ! isset( $mission_data['progress'] ) ) {
-			return;
+			return false;
 		}
 
 		$timezone      = new \DateTimeZone( \wp_timezone_string() );

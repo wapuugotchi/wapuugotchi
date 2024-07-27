@@ -7,7 +7,13 @@ import { useEffect } from '@wordpress/element';
 export default function Overlay() {
 	useEffect( () => {
 		const hideAction = ( event ) => {
-			event.target.classList.add( 'hidden' );
+			if (
+				event.target.classList.contains(
+					'wapuugotchi_mission__overlay'
+				)
+			) {
+				event.target.classList.add( 'hidden' );
+			}
 		};
 
 		const overlay = document.querySelector(

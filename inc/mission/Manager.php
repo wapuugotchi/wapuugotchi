@@ -24,7 +24,7 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		//\update_user_meta( \get_current_user_id(), 'wapuugotchi_mission', [] );
+		// \update_user_meta( \get_current_user_id(), 'wapuugotchi_mission', [] );
 
 		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 30 );
 		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
@@ -95,6 +95,7 @@ class Manager {
 	private function get_nonces() {
 		return array(
 			'wapuugotchi_mission' => \wp_create_nonce( 'wapuugotchi_mission' ),
+			'wapuugotchi_balance' => \wp_create_nonce( 'wapuugotchi_balance' ),
 		);
 	}
 }

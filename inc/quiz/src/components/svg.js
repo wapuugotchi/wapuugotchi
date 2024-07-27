@@ -272,7 +272,7 @@ export default function Svg() {
 			<svg
 				id="wapuugotchi_quiz__svg"
 				xmlns="http://www.w3.org/2000/svg"
-				height="100vh"
+				height="100%"
 				width="100%"
 				version="1.1"
 				viewBox="0 0 1000 1000"

@@ -4,6 +4,22 @@ import apiFetch from '@wordpress/api-fetch';
 const STORE_NAME = 'wapuugotchi/mission';
 
 /**
+ * This function ensures that after the end of the entire mission, the user receives the reward.
+ * @param {number} reward - The reward for completing the mission.
+ * @param {string} nonce  - The nonce for the billing.
+ */
+function __completeMission( reward, nonce ) {
+	apiFetch( {
+		path: 'wapuugotchi/v1/wapuugotchi/balance/raise_balance',
+		method: 'POST',
+		data: {
+			nonce,
+			reward,
+		},
+	} );
+}
+
+/**
  * Parse the SVG string into a DOM.
  *
  * @param {string}  string   - The SVG string to be parsed.
@@ -15,10 +31,10 @@ function __buildSvg( string, progress, locked ) {
 	const parser = new DOMParser();
 	let svg = parser.parseFromString( string, 'image/svg+xml' );
 	if ( ! locked ) {
-		svg = setMission( svg, progress + 1 );
-		svg = setTrack( svg, progress + 1 );
+		svg = __setMission( svg, progress + 1 );
+		svg = __setTrack( svg, progress + 1 );
 	} else {
-		svg = setTrack( svg, progress );
+		svg = __setTrack( svg, progress );
 	}
 	return svg.querySelector( 'svg' ).innerHTML;
 }
@@ -30,7 +46,7 @@ function __buildSvg( string, progress, locked ) {
  * @param {number}   progress - The current progress of the mission.
  * @return {Document} The modified SVG DOM.
  */
-function setTrack( svg, progress ) {
+function __setTrack( svg, progress ) {
 	for ( let i = 1; i <= progress; i++ ) {
 		const track = svg.querySelector( `#track_${ i }` );
 		track?.setAttribute( 'opacity', '1' );
@@ -45,7 +61,7 @@ function setTrack( svg, progress ) {
  * @param {number}   progress - The current progress of the mission.
  * @return {Document} The modified SVG DOM.
  */
-function setMission( svg, progress ) {
+function __setMission( svg, progress ) {
 	const mission = svg.querySelector( `#mission_${ progress }` );
 	mission?.classList.add( 'active' );
 	return svg;
@@ -107,6 +123,17 @@ function create() {
 					} ).then( ( response ) => {
 						if ( response.status === '200' ) {
 							dispatch.__setCompleted( true );
+							dispatch.setProgress( select.getProgress() + 1 );
+
+							// try to complete the hole mission
+							if (
+								select.getProgress() === select.getMarkers()
+							) {
+								__completeMission(
+									select.getReward(),
+									select.getNonceList().wapuugotchi_balance
+								);
+							}
 						}
 					} );
 				},

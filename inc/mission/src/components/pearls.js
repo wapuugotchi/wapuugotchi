@@ -9,13 +9,22 @@ import { STORE_NAME } from '../store';
  */
 export default function Pearls() {
 	// Fetching reward details from the store
-	const { reward } = useSelect( ( select ) => ( {
+	const { reward, progress, markers } = useSelect( ( select ) => ( {
 		reward: select( STORE_NAME ).getReward(),
+		progress: select( STORE_NAME ).getProgress(),
+		markers: select( STORE_NAME ).getMarkers(),
 	} ) );
+
+	// Determine if the reward has been transferred
+	const rewardTransferred = progress === markers;
 
 	// Render the reward information with an accompanying pearl image
 	return (
-		<div className="wapuugotchi_missions__pearls">
+		<div
+			className={ `wapuugotchi_missions__pearls ${
+				rewardTransferred ? 'reward-transferred' : ''
+			}` }
+		>
 			You will receive:
 			<span>
 				{ reward }

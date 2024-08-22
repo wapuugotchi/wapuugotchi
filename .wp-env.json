@@ -1,7 +1,7 @@
 {
-	"port": 9998,
-	"testsPort": 9999,
-	"core": "WordPress/WordPress#6.5",
+	"port": 80,
+	"testsPort": 443,
+	"core": "",
 	"plugins": [
 		".",
 		"https://downloads.wordpress.org/plugin/transients-manager.2.0.5.zip"

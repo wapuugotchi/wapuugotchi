@@ -47,11 +47,10 @@ const getTags = ( sentence, length ) => {
  * @return {Object} The mixed answers and the index of the correct answer.
  */
 const getAnswers = ( quiz ) => {
-	let answers = [];
-	answers.push( ...quiz.wrongAnswers );
+	let answers = quiz.wrongAnswers
+		.sort( () => Math.random() - 0.5 )
+		.slice( 0, 2 );
 	answers.push( quiz.correctAnswer );
-
-	// mix the answers
 	answers = answers.sort( () => Math.random() - 0.5 );
 
 	// find the correct answer index in the mixed answers for later use
@@ -154,6 +153,7 @@ export default function Svg() {
 	 * @param {Function} getTagsData      - The function to get tags from a sentence.
 	 */
 	const prepareClouds = ( avatarData, mixedAnswersData, getTagsData ) => {
+		const cloudPosition = 56;
 		const clouds = avatarData
 			.querySelector( '#Cloud--group' )
 			?.querySelectorAll( '.cloud' );
@@ -164,6 +164,8 @@ export default function Svg() {
 
 				const text = cloud.querySelector( 'text' );
 				const cloudTags = getTagsData( mixedAnswersData[ index ], 20 );
+
+				text.setAttribute( 'y', cloudPosition - cloudTags.length * 8 );
 				const x = parseInt( text.getAttribute( 'x' ) ) || 0;
 
 				appendTagsToElement( text, cloudTags, x );

@@ -5,10 +5,11 @@ import { STORE_NAME } from '../store';
 import { SVG } from '@wordpress/primitives';
 
 export default function Map() {
-	const { map, completed } = useSelect( ( select ) => {
+	const { map, completed, progress } = useSelect( ( select ) => {
 		return {
 			map: select( STORE_NAME ).getMap(),
 			completed: select( STORE_NAME ).getCompleted(),
+			progress: select( STORE_NAME ).getProgress(),
 		};
 	} );
 
@@ -47,9 +48,20 @@ export default function Map() {
 		if ( ! svgElement ) {
 			return;
 		}
+
+		const allMissions = svgElement.querySelectorAll(
+			'#mission_section text'
+		);
+
 		const missionSection = svgElement.querySelector(
 			'#mission_section text.active'
 		);
+
+		for ( let x = 0; x < progress; x++ ) {
+			allMissions[ x ].textContent = '✔';
+			allMissions[ x ].style.opacity = 0.5;
+		}
+
 		if ( ! missionSection ) {
 			return;
 		}
@@ -58,7 +70,7 @@ export default function Map() {
 		} else {
 			missionSection.textContent = '?';
 		}
-	}, [ completed ] );
+	}, [ completed, progress ] );
 
 	return (
 		<>

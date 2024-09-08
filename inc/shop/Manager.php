@@ -37,10 +37,7 @@ class Manager {
 	/**
 	 * Init the shop, load the scripts.
 	 *
-	 * @param string $hook_suffix The internal page name.
-	 *
 	 * @return void
-	 * @throws \Exception If the asset file is not found.
 	 */
 	public function init() {
 		\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );

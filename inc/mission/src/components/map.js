@@ -59,16 +59,31 @@ export default function Map() {
 
 		for ( let x = 0; x < progress; x++ ) {
 			allMissions[ x ].textContent = '✔';
-			allMissions[ x ].style.opacity = 0.5;
+			allMissions[ x ].style.fill = '#A9A9A9';
+			allMissions[ x ].style.opacity = 0.6;
+			allMissions[ x ].style.fontSize = '35px';
 		}
 
 		if ( ! missionSection ) {
-			return;
-		}
-		if ( completed === true ) {
-			missionSection.textContent = '✔';
+			if ( allMissions[ progress - 1 ] ) {
+				allMissions[ progress - 1 ].textContent = '✔';
+				allMissions[ progress - 1 ].style.fill = '#009900';
+				allMissions[ progress - 1 ].style.opacity = 1;
+				allMissions[ progress - 1 ].style.fontSize = '50px';
+			}
 		} else {
-			missionSection.textContent = '?';
+			if (completed === true) {
+				missionSection.textContent = '✔';
+				missionSection.style.fill = '#009900';
+				missionSection.style.opacity = 1;
+				missionSection.style.fontSize = '50px';
+				missionSection.classList.add( 'completed' );
+			} else {
+				missionSection.textContent = '';
+				missionSection.style.fill = '#009900';
+				missionSection.style.opacity = 1;
+				missionSection.style.fontSize = '50px';
+			}
 		}
 	}, [ completed, progress ] );
 

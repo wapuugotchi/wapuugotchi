@@ -24,13 +24,13 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 30 );
+		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 5 );
 		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
-		\add_action( 'load-wapuugotchi_page_wapuugotchi__mission', array( $this, 'init' ), 100 );
+		\add_action( 'load-toplevel_page_wapuugotchi', array( $this, 'init' ), 100 );
 	}
 
 	/**
-	 * Initialization Log
+	 * Initialization log
 	 */
 	public function init() {
 		\add_filter( 'wapuugotchi_mission_filter', array( Missions::class, 'add_wapuugotchi_filter' ), 10, 1 );
@@ -41,6 +41,8 @@ class Manager {
 	 * Load Scripts
 	 */
 	public function load_scripts() {
+		MissionHandler::init_mission();
+		// Get the user data.
 		$user_data = MissionHandler::get_user_data();
 
 		// If the user data is not valid or the mission is locked, initialize a new mission.

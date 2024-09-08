@@ -35,7 +35,7 @@ class Menu {
 	public static function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(
 			'title'    => \__( 'Missions', 'wapuugotchi' ),
-			'slug'     => 'wapuugotchi__mission',
+			'slug'     => 'wapuugotchi',
 			'callback' => 'Wapuugotchi\Mission\Menu::missions_page_template',
 		);
 

@@ -28,7 +28,7 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		\add_action( 'load-wapuugotchi_page_wapuugotchi__mission', array( $this, 'init' ) );
+		\add_action( 'load-toplevel_page_wapuugotchi', array( $this, 'init' ) );
 	}
 
 	/**
@@ -61,7 +61,7 @@ class Manager {
 				\wp_json_encode(
 					array(
 						'avatar' => AvatarHandler::get_avatar(),
-						'data'   => QuizHandler::get_quiz_array(),
+						'data'   => QuizHandler::get_shuffled_quiz_array()
 					)
 				)
 			),

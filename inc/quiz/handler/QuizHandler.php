@@ -77,4 +77,17 @@ class QuizHandler {
 
 		return $quiz_array;
 	}
+
+	/**
+	 *
+	 * Get shuffled the quiz data as array.
+	 *
+	 * @return array
+	 */
+	public static function get_shuffled_quiz_array() {
+		$quiz_array = self::get_quiz_array();
+		shuffle( $quiz_array );
+
+		return $quiz_array;
+	}
 }

@@ -242,6 +242,96 @@ class QuizWordPress {
 			__( 'That is unfortunately incorrect. The correct answer is To support the development and maintenance of the plugin.', 'wapuugotchi' )
 		);
 
+		$quiz[] = new Quiz(
+			'wp_question_25',
+			__( 'Which WordPress plugin is commonly used for search engine optimization (SEO)?', 'wapuugotchi' ),
+			array( __( 'Akismet', 'wapuugotchi' ), __( 'Jetpack', 'wapuugotchi' ), __( 'WooCommerce', 'wapuugotchi' ), __( 'Contact Form 7', 'wapuugotchi' ) ),
+			__( 'Yoast SEO', 'wapuugotchi' ),
+			__( 'That\'s correct! Yoast SEO is one of the most popular plugins for search engine optimization in WordPress.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. The correct answer is Yoast SEO.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_26',
+			__( 'Which of the following is NOT a default post type in WordPress?', 'wapuugotchi' ),
+			array( __( 'Post', 'wapuugotchi' ), __( 'Page', 'wapuugotchi' ), __( 'Attachment', 'wapuugotchi' ), __( 'Revision', 'wapuugotchi' ) ),
+			__( 'Product', 'wapuugotchi' ),
+			__( 'That\'s correct! Product is not a default post type in WordPress; it is usually added by plugins like WooCommerce.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. The correct answer is Product.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_27',
+			__( 'Which WordPress feature helps in managing multiple websites from a single installation?', 'wapuugotchi' ),
+			array( __( 'Multiuser', 'wapuugotchi' ), __( 'Multilingual', 'wapuugotchi' ), __( 'Multi-domain', 'wapuugotchi' ), __( 'Multi-admin', 'wapuugotchi' ) ),
+			__( 'Multisite', 'wapuugotchi' ),
+			__( 'That\'s correct! The Multisite feature allows you to manage multiple WordPress sites from a single installation.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. The correct answer is Multisite.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_28',
+			__( 'Which of the following is NOT a recommended way to back up a WordPress site?', 'wapuugotchi' ),
+			array( __( 'Using a backup plugin', 'wapuugotchi' ), __( 'Copying files via FTP', 'wapuugotchi' ), __( 'Exporting the database using phpMyAdmin', 'wapuugotchi' ), __( 'Creating a full server snapshot', 'wapuugotchi' ) ),
+			__( 'Backing up only the wp-content folder', 'wapuugotchi' ),
+			__( 'That\'s correct! Backing up only the wp-content folder is not sufficient, as it misses the database and configuration files.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. The correct answer is backing up only the wp-content folder.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_29',
+			__( 'Which plugin is typically used to build contact forms in WordPress?', 'wapuugotchi' ),
+			array( __( 'WooCommerce', 'wapuugotchi' ), __( 'Yoast SEO', 'wapuugotchi' ), __( 'Jetpack', 'wapuugotchi' ), __( 'Akismet', 'wapuugotchi' ) ),
+			__( 'Contact Form 7', 'wapuugotchi' ),
+			__( 'That\'s correct! Contact Form 7 is a popular plugin for creating contact forms in WordPress.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. The correct answer is Contact Form 7.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_30',
+			__( 'Which plugin is typically used to add e-commerce functionality to a WordPress site?', 'wapuugotchi' ),
+			array( __( 'WPForms', 'wapuugotchi' ), __( 'Smush', 'wapuugotchi' ), __( 'All in One SEO Pack', 'wapuugotchi' ), __( 'Disqus', 'wapuugotchi' ) ),
+			__( 'WooCommerce', 'wapuugotchi' ),
+			__( 'That\'s correct! WooCommerce is the most popular e-commerce plugin for WordPress, enabling online store functionality.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. The correct answer is WooCommerce.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_31',
+			__( 'What are WordPress major versions named after?', 'wapuugotchi' ),
+			array( __( 'Famous scientists', 'wapuugotchi' ), __( 'Space missions', 'wapuugotchi' ), __( 'Hollywood actors', 'wapuugotchi' ), __( 'Marvel characters', 'wapuugotchi' ) ),
+			__( 'Jazz musicians', 'wapuugotchi' ),
+			__( 'That\'s correct! Matt Mullenweg, the co-founder of WordPress, is a big jazz fan and wanted to bring a personal touch to the project.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. The correct answer is Jazz musicians.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_32',
+			__( 'When was the first WordCamp organized?', 'wapuugotchi' ),
+			array( __( '2001', 'wapuugotchi' ), __( '2012', 'wapuugotchi' ), __( '🤔', 'wapuugotchi' ) ),
+			__( '2006', 'wapuugotchi' ),
+			__( 'That\'s correct! The first WordCamp was organized in 2006 by Matt Mullenweg in San Francisco.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. The correct answer is 2006.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_33',
+			__( 'How many themes are currently hosted on WordPress.org?', 'wapuugotchi' ),
+			array( __( 'Over 1,000', 'wapuugotchi' ), __( 'Over 5,000', 'wapuugotchi' ), __( 'Over 100', 'wapuugotchi' ), __( 'Over 2,500', 'wapuugotchi' ) ),
+			__( 'Over 12,000', 'wapuugotchi' ),
+			__( 'That\'s correct! There are currently over 12,000 themes hosted on WordPress.org.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. The correct answer is Over 10,000.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_34',
+			__( 'How many plugins are currently hosted on WordPress.org?', 'wapuugotchi' ),
+			array( __( 'Over 10,000', 'wapuugotchi' ), __( 'Over 25,000', 'wapuugotchi' ), __( 'Over 40,000', 'wapuugotchi' ), __( 'Over 1,000', 'wapuugotchi' ), __( 'Over 5,000', 'wapuugotchi' ) ),
+			__( 'Over 55,000', 'wapuugotchi' ),
+			__( 'That\'s correct! There are currently over 55,000 plugins hosted on WordPress.org.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. The correct answer is Over 60,000.', 'wapuugotchi' )
+		);
+
 		return $quiz;
 	}
 }

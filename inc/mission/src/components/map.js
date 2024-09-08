@@ -71,19 +71,17 @@ export default function Map() {
 				allMissions[ progress - 1 ].style.opacity = 1;
 				allMissions[ progress - 1 ].style.fontSize = '50px';
 			}
+		} else if ( completed === true ) {
+			missionSection.textContent = '✔';
+			missionSection.style.fill = '#009900';
+			missionSection.style.opacity = 1;
+			missionSection.style.fontSize = '50px';
+			missionSection.classList.add( 'completed' );
 		} else {
-			if (completed === true) {
-				missionSection.textContent = '✔';
-				missionSection.style.fill = '#009900';
-				missionSection.style.opacity = 1;
-				missionSection.style.fontSize = '50px';
-				missionSection.classList.add( 'completed' );
-			} else {
-				missionSection.textContent = '';
-				missionSection.style.fill = '#009900';
-				missionSection.style.opacity = 1;
-				missionSection.style.fontSize = '50px';
-			}
+			missionSection.textContent = '';
+			missionSection.style.fill = '#009900';
+			missionSection.style.opacity = 1;
+			missionSection.style.fontSize = '50px';
 		}
 	}, [ completed, progress ] );
 

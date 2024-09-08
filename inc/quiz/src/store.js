@@ -1,5 +1,5 @@
 import { createReduxStore, register, dispatch } from '@wordpress/data';
-import { buildSvg } from './utils/avatarUtils'
+import { buildSvg } from './utils/avatarUtils';
 import { getQuizElement } from './utils/quizUtils';
 
 // Store-Namen für die Quiz- und Missionskomponenten
@@ -17,7 +17,7 @@ const store = createReduxStore( STORE_NAME, {
 			case '__SET_QUIZ':
 				return { ...state, quiz: action.payload };
 			case '__SET_DATA':
-				return { ...state, data: [...action.payload] };
+				return { ...state, data: [ ...action.payload ] };
 			default:
 				return state;
 		}

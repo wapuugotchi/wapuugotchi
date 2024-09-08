@@ -1,16 +1,15 @@
-import {useEffect} from "@wordpress/element";
+import { useEffect } from '@wordpress/element';
 
-
-const logClickEvent = (event) => {
-	console.log('Element clicked:', event.target);
+const logClickEvent = ( event ) => {
+	console.log( 'Element clicked:', event.target );
 };
 
-useEffect(() => {
+useEffect( () => {
 	// Attach the click event listener to the document
-	document.addEventListener('click', logClickEvent);
+	document.addEventListener( 'click', logClickEvent );
 
 	// Cleanup the event listener on component unmount
 	return () => {
-		document.removeEventListener('click', logClickEvent);
+		document.removeEventListener( 'click', logClickEvent );
 	};
-}, []);
+}, [] );

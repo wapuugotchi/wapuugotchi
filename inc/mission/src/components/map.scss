@@ -1,11 +1,13 @@
 .wapuugotchi_missions__map {
 	padding: 16px;
+
 	#mission_section {
 		cursor: default;
 		pointer-events: none;
 		// die nächsten zeilen sollen nur ausgführt werden wenn der die klasse completed nicht gesetzt ist ansonsten aber doch!
-		text.active  {
+		text.active {
 			pointer-events: none;
+
 			&:not(.completed) {
 				opacity: 1;
 				cursor: pointer;

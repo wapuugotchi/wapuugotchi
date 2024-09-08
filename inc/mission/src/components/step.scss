@@ -1,6 +1,7 @@
 .wapuugotchi_missions__step {
-	color: #0063A1;
+	color: #0063a1;
 	width: 100%;
+
 	.wapuugotchi_missions__step_bar {
 		height: 12px;
 		background-color: #cce3eb;
@@ -8,6 +9,7 @@
 		display: block;
 		margin: 0 2px;
 	}
+
 	.wapuugotchi_missions__step_name {
 		font-size: 16px;
 		line-height: 24px;
@@ -16,6 +18,7 @@
 	}
 
 	&.completed {
+
 		.wapuugotchi_missions__step_name {
 			font-weight: 700;
 			font-size: 16px;

@@ -7,16 +7,22 @@ import { useEffect } from '@wordpress/element';
 export default function Overlay() {
 	useEffect( () => {
 		const hideAction = ( event ) => {
-			if (event.target.classList.contains('wapuugotchi_mission__overlay')) {
+			if (
+				event.target.classList.contains(
+					'wapuugotchi_mission__overlay'
+				)
+			) {
 				event.target.classList.add( 'hidden' );
 			}
 		};
 
-		const hideOnEscape = (event) => {
-			if (event.key === 'Escape') {
-				const overlay = document.querySelector('.wapuugotchi_mission__overlay');
-				if (overlay) {
-					overlay.classList.add('hidden');
+		const hideOnEscape = ( event ) => {
+			if ( event.key === 'Escape' ) {
+				const overlay = document.querySelector(
+					'.wapuugotchi_mission__overlay'
+				);
+				if ( overlay ) {
+					overlay.classList.add( 'hidden' );
 				}
 			}
 		};
@@ -25,12 +31,12 @@ export default function Overlay() {
 			'.wapuugotchi_mission__overlay'
 		);
 		overlay.addEventListener( 'click', hideAction );
-		document.addEventListener('keydown', hideOnEscape);
+		document.addEventListener( 'keydown', hideOnEscape );
 
 		// Cleanup the event listener on component unmount
 		return () => {
-			overlay.removeEventListener('click', hideAction);
-			document.removeEventListener('keydown', hideOnEscape);
+			overlay.removeEventListener( 'click', hideAction );
+			document.removeEventListener( 'keydown', hideOnEscape );
 		};
 	}, [] );
 

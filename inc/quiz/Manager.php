@@ -61,7 +61,7 @@ class Manager {
 				\wp_json_encode(
 					array(
 						'avatar' => AvatarHandler::get_avatar(),
-						'data'   => QuizHandler::get_shuffled_quiz_array()
+						'data'   => QuizHandler::get_shuffled_quiz_array(),
 					)
 				)
 			),

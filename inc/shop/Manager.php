@@ -30,7 +30,7 @@ class Manager {
 
 		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 10 );
 		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
-		\add_action( 'admin_enqueue_scripts', array( $this, 'init' ) );
+		\add_action( 'load-wapuugotchi_page_wapuugotchi__shop', array( $this, 'init' ), 100 );
 		\add_filter( 'wapuugotchi_avatar', array( $this, 'modify_avatar' ), 10, 1 );
 	}
 
@@ -42,10 +42,8 @@ class Manager {
 	 * @return void
 	 * @throws \Exception If the asset file is not found.
 	 */
-	public function init( $hook_suffix ) {
-		if ( 'toplevel_page_wapuugotchi' === $hook_suffix ) {
-			$this->load_scripts();
-		}
+	public function init() {
+		\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
 	}
 
 	/**

@@ -56,8 +56,10 @@ class Manager {
 			'admin_enqueue_scripts',
 			function () use ( $animations ) {
 				$assets = include_once WAPUUGOTCHI_PATH . 'build/alive.asset.php';
-				\wp_enqueue_script( self::ANIMATION_HANDLE, WAPUUGOTCHI_URL . 'build/alive.js', $assets['dependencies'], $assets['version'], true );
-				\wp_add_inline_script( self::ANIMATION_HANDLE, 'var wapuugotchiAnimations = ' . wp_json_encode( $animations ) . ';', 'before' );
+				if ( \is_array( $assets ) ) {
+					\wp_enqueue_script( self::ANIMATION_HANDLE, WAPUUGOTCHI_URL . 'build/alive.js', $assets['dependencies'], $assets['version'], true );
+					\wp_add_inline_script( self::ANIMATION_HANDLE, 'var wapuugotchiAnimations = ' . wp_json_encode( $animations ) . ';', 'before' );
+				}
 			},
 			20
 		);

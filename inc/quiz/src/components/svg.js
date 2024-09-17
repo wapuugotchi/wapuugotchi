@@ -1,5 +1,5 @@
 import { useDispatch, useSelect, useRegistry } from '@wordpress/data';
-import { useState, useEffect } from '@wordpress/element';
+import { useState, useEffect, useCallback } from '@wordpress/element';
 import { appendTagsToElement } from '../utils/textUtils';
 import './svg.scss';
 import { STORE_NAME } from '../store';
@@ -27,67 +27,92 @@ export default function Svg() {
 	 * @param {string} svgString - The SVG string to be parsed.
 	 * @return {string} The inner HTML of the parsed SVG element.
 	 */
-	const prepareSvg = ( svgString ) => {
+	const prepareSvg = useCallback( ( svgString ) => {
 		const parser = new DOMParser();
 		const doc = parser.parseFromString( svgString, 'image/svg+xml' );
 		return doc.querySelector( 'svg' ).innerHTML;
-	};
+	}, [] );
 
 	/**
 	 * Event handler for overlay click. Removes specific groups from the SVG and updates the state.
 	 *
 	 * @param {Event} event - The click event.
 	 */
-	const handleOverlayClick = ( event ) => {
-		if (
-			event.target.classList.contains( 'wapuugotchi_mission__overlay' )
-		) {
-			const avatarElement = document.querySelector(
-				'#wapuugotchi_quiz__svg'
-			);
-			avatarElement.querySelector( 'g#Cloud--group' )?.remove();
-			avatarElement.querySelector( 'g#TextBox--group' )?.remove();
+	const handleOverlayClick = useCallback(
+		( event ) => {
+			if (
+				event.target.classList.contains(
+					'wapuugotchi_mission__overlay'
+				)
+			) {
+				const avatarElement = document.querySelector(
+					'#wapuugotchi_quiz__svg'
+				);
+				avatarElement.querySelector( 'g#Cloud--group' )?.remove();
+				avatarElement.querySelector( 'g#TextBox--group' )?.remove();
 
-			if ( wrong ) {
-				data.shift();
+				if ( wrong ) {
+					data.shift();
+				}
+
+				registry.batch( () => {
+					setAvatar( avatarElement.outerHTML );
+					setData( data );
+					setWrong( false );
+				} );
 			}
-
-			registry.batch( () => {
-				setAvatar( avatarElement.outerHTML );
-				setData( data );
-				setWrong( false );
-			} );
-		}
-	};
+		},
+		[ data, wrong, registry, setAvatar, setData ]
+	);
 
 	/**
 	 * Event handler for cloud click. Updates the text box based on the clicked cloud's index.
 	 *
 	 * @param {number} index - The index of the clicked cloud.
 	 */
-	const handleCloudClick = ( index ) => {
-		const clouds = document.querySelector(
-			'#wapuugotchi_quiz__svg g#Cloud--group'
-		);
-		const textBox = document.querySelector(
-			'#wapuugotchi_quiz__svg g#TextBox--group text'
-		);
+	const handleCloudClick = useCallback(
+		( index ) => {
+			const clouds = document.querySelector(
+				'#wapuugotchi_quiz__svg g#Cloud--group'
+			);
+			const textBox = document.querySelector(
+				'#wapuugotchi_quiz__svg g#TextBox--group text'
+			);
 
-		clouds?.remove();
-		textBox
-			.querySelectorAll( 'tspan' )
-			.forEach( ( tspan ) => tspan.remove() );
+			clouds?.remove();
+			textBox
+				.querySelectorAll( 'tspan' )
+				.forEach( ( tspan ) => tspan.remove() );
 
-		if ( index === quiz.position ) {
-			textBox.setAttribute( 'fill', '#090' );
-			appendTagsToElement( textBox, quiz.agreement, 155 );
-			setCompletedState( true );
-		} else {
-			textBox.setAttribute( 'fill', '#900' );
-			appendTagsToElement( textBox, quiz.disagreement, 155 );
-			setWrong( true );
+			if ( index === quiz.position ) {
+				textBox.setAttribute( 'fill', '#090' );
+				appendTagsToElement( textBox, quiz.agreement, 155 );
+				setCompletedState( true );
+			} else {
+				textBox.setAttribute( 'fill', '#900' );
+				appendTagsToElement( textBox, quiz.disagreement, 155 );
+				setWrong( true );
+			}
+		},
+		[ quiz ]
+	);
+
+	/**
+	 * Event handler for SVG click. Forwards the click event to the overlay.
+	 *
+	 * @param {Event} event - The click event.
+	 */
+	const handleSvgClick = useCallback( ( event ) => {
+		if ( event.target.id !== 'wapuugotchi_quiz__svg' ) {
+			return;
 		}
-	};
+		const overlay = document.querySelector(
+			'.wapuugotchi_mission__overlay'
+		);
+		if ( overlay ) {
+			overlay.click();
+		}
+	}, [] );
 
 	/**
 	 * Effect hook to add and remove the overlay click event listener.
@@ -101,7 +126,7 @@ export default function Svg() {
 		return () => {
 			overlay.removeEventListener( 'click', handleOverlayClick );
 		};
-	}, [ data, wrong ] );
+	}, [ handleOverlayClick ] );
 
 	/**
 	 * Effect hook to add and remove the cloud click event listeners.
@@ -115,7 +140,19 @@ export default function Svg() {
 		} );
 
 		setCompletedState( false );
-	}, [ quiz ] );
+	}, [ quiz, handleCloudClick ] );
+
+	/**
+	 * Effect hook to add and remove the SVG click event listener.
+	 */
+	useEffect( () => {
+		const svgElement = document.querySelector( '#wapuugotchi_quiz__svg' );
+		svgElement.addEventListener( 'click', handleSvgClick );
+
+		return () => {
+			svgElement.removeEventListener( 'click', handleSvgClick );
+		};
+	}, [ handleSvgClick ] );
 
 	/**
 	 * Effect hook to set the completed state.
@@ -124,7 +161,7 @@ export default function Svg() {
 		if ( completed ) {
 			setCompleted();
 		}
-	}, [ completed ] );
+	}, [ completed, setCompleted ] );
 
 	return (
 		<div className="wapuugotchi_mission__action">

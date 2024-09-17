@@ -4,7 +4,7 @@ import { getClouds } from './cloudUtils';
 /**
  * Erstellt ein SVG-Element basierend auf einem SVG-String.
  * @param {string} svgString - Der SVG-String.
- * @param          quiz
+ * @param {Object} quiz      - Das Quiz-Objekt.
  * @return {string} Das bearbeitete SVG als String.
  */
 export const buildSvg = async ( svgString, quiz ) => {
@@ -14,9 +14,6 @@ export const buildSvg = async ( svgString, quiz ) => {
 	removeIgnoredElements( avatar );
 	insertElement( avatar, getClouds( quiz.answers ), 'g#Front--group' );
 	insertElement( avatar, getTextBox( quiz.question ), 'g#LeftArm--group' );
-
-	//gib mir aus dem store getQuiz zurück
-	//const quiz = getQuiz();
 
 	return avatar.outerHTML;
 };

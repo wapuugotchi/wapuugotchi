@@ -1,4 +1,4 @@
-import { getTags, appendTagsToElement } from './textUtils';
+import { appendTagsToElement } from './textUtils';
 
 const x = 155;
 const y = 250;

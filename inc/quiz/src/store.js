@@ -1,4 +1,8 @@
-import { createReduxStore, register, dispatch } from '@wordpress/data';
+import {
+	createReduxStore,
+	register,
+	dispatch as globalDispatch,
+} from '@wordpress/data';
 import { buildSvg } from './utils/avatarUtils';
 import { getQuizElement } from './utils/quizUtils';
 
@@ -36,18 +40,18 @@ const store = createReduxStore( STORE_NAME, {
 		__setState: ( payload ) => ( { type: '__SET_STATE', payload } ),
 		setAvatar: ( payload ) => ( { type: '__SET_AVATAR', payload } ),
 		setQuiz: ( payload ) => ( { type: '__SET_QUIZ', payload } ),
-		setData: ( payload ) =>
-			async function ( { dispatch, select } ) {
+		setData:
+			( payload ) =>
+			async ( { dispatch, select } ) => {
 				const quiz = await getQuizElement( select.getData() );
 				const svg = await buildSvg( select.getAvatar(), quiz );
 				dispatch.setQuiz( quiz );
 				dispatch.setAvatar( svg );
-
-				return dispatch.__setData( payload );
+				dispatch.__setData( payload );
 			},
 		__setData: ( payload ) => ( { type: '__SET_DATA', payload } ),
 		setCompleted: () => () => {
-			dispatch( MISSION_STORE_NAME )?.setCompleted();
+			globalDispatch( MISSION_STORE_NAME )?.setCompleted();
 		},
 	},
 	selectors: {

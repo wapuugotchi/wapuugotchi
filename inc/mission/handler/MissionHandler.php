@@ -76,9 +76,10 @@ class MissionHandler {
 	public static function init_mission() {
 		$missions = self::get_all_missions();
 		if ( ! empty( $missions ) ) {
-			$mission = $missions[ \array_rand( $missions ) ];
-			$actions = array();
-			for ( $i = 0; $i < \count( $mission->markers ); $i++ ) {
+			$mission       = $missions[ \array_rand( $missions ) ];
+			$actions       = array();
+			$markers_count = \count( $mission->markers );
+			for ( $i = 0; $i < $markers_count; $i++ ) {
 				$action = ActionHandler::get_random_action();
 				if ( empty( $action ) ) {
 					continue;

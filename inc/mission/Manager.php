@@ -41,7 +41,6 @@ class Manager {
 	 * Load Scripts
 	 */
 	public function load_scripts() {
-		MissionHandler::init_mission();
 		// Get the user data.
 		$user_data = MissionHandler::get_user_data();
 
@@ -71,9 +70,9 @@ class Manager {
 					array(
 						'progress'    => $user_data['progress'],
 						'locked'      => MissionHandler::is_mission_locked( $user_data ),
-						'markers'     => $mission->markers,
+						'markers'     => \count( $mission->markers ),
 						'reward'      => $mission->reward,
-						'description' => $mission->description,
+						'description' => $mission->markers[ $user_data['progress'] ],
 						'map'         => MapHandler::get_map_svg_by_id( $mission->id ),
 						'action'      => $action,
 						'nonce_list'  => $this->get_nonces(),

@@ -47,11 +47,11 @@ class MissionHandler {
 			return false;
 		}
 
-		if ( \count( $user_data['actions'] ) !== $mission->markers ) {
+		if ( \count( $user_data['actions'] ) !== \count( $mission->markers ) ) {
 			return false;
 		}
 
-		if ( (int) $user_data['progress'] >= $mission->markers ) {
+		if ( (int) $user_data['progress'] >= \count( $mission->markers ) ) {
 			return false;
 		}
 
@@ -78,7 +78,7 @@ class MissionHandler {
 		if ( ! empty( $missions ) ) {
 			$mission = $missions[ \array_rand( $missions ) ];
 			$actions = array();
-			for ( $i = 0; $i < $mission->markers; $i++ ) {
+			for ( $i = 0; $i < \count( $mission->markers ); $i++ ) {
 				$action = ActionHandler::get_random_action();
 				if ( empty( $action ) ) {
 					continue;
@@ -165,7 +165,7 @@ class MissionHandler {
 			|| empty( $mission->name )
 			|| empty( $mission->description )
 			|| empty( $mission->url )
-			|| $mission->markers < 1
+			|| \count( $mission->markers ) < 1
 			|| $mission->reward < 1
 		) {
 			return false;

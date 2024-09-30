@@ -72,7 +72,7 @@ class Manager {
 						'locked'      => MissionHandler::is_mission_locked( $user_data ),
 						'markers'     => \count( $mission->markers ),
 						'reward'      => $mission->reward,
-						'description' => $mission->markers[ $user_data['progress'] ],
+						'description' => $mission->markers[ $user_data['progress'] ] ?? '',
 						'map'         => MapHandler::get_map_svg_by_id( $mission->id ),
 						'action'      => $action,
 						'nonce_list'  => $this->get_nonces(),

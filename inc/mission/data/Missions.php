@@ -36,9 +36,9 @@ class Missions {
 			->set_url( 'https://wapuugotchi.com/wp-content/uploads/2024/08/endless_steppes_9.svg' )
 			->set_markers(
 				array(
-					__( 'Wapuu embarks on an adventure through the vast, endless steppes. Soon, he comes across a dense forest where the trees block his way. Carved into the bark of an old tree is a riddle. Only by solving it will the hidden path reveal itself.', 'wapuugotchi' ),
+					__( 'Wapuu embarks on an adventure through the vast, endless steppes. Soon, he comes across a dense forest where the trees block his way. Carved into the bark of an old tree is a riddle. Only by solving it the hidden path will reveal itself.', 'wapuugotchi' ),
 					__( 'After solving the riddle in the forest, Wapuu reaches a massive mountain range. A large monolith blocks the path between the peaks. On its surface is another riddle, and only the correct answer will clear the way.', 'wapuugotchi' ),
-					__( 'With the monolith moved aside, Wapuu continues his journey. Suddenly, he comes across a cave, but the entrance is blocked by a giant spider’s web. A spider emerges from the shadows and presents him with a new challenge. Only by solving her riddle will Wapuu gain access to the cave.', 'wapuugotchi' ),
+					__( 'With the monolith moved aside, Wapuu continues his journey. Suddenly, he comes across a cave, but the entrance is blocked by a giant spider’s web. A spider emerges from the shadows and presents him a new challenge. Only by solving her riddle Wapuu will gain access to the cave.', 'wapuugotchi' ),
 					__( 'After passing the spider’s test, Wapuu reaches a peaceful oasis. In the clear water, a glowing fish swims. It promises to show Wapuu the way to the treasure if he can answer the next question correctly.', 'wapuugotchi' ),
 					__( 'Wapuu finally finds the treasure. However, a mysterious inscription on the chest says that it will only open if he can solve the final riddle engraved on the lid.', 'wapuugotchi' ),
 				)

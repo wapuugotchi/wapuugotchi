@@ -1,6 +1,6 @@
 // @ts-check
 const { devices } = require( '@playwright/test' );
-const TEST_URL = process.env.TEST_URL || 'http://localhost:8888';
+const TEST_URL = process.env.TEST_URL || 'http://localhost';
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -9,13 +9,13 @@ const TEST_URL = process.env.TEST_URL || 'http://localhost:8888';
 const config = {
 	testDir: './tests',
 	/* Maximum time one test can run for. */
-	timeout: 30 * 1000,
+	timeout: 10 * 1000,
 	expect: {
 		/**
 		 * Maximum time expect() should wait for the condition to be met.
 		 * For example in `await expect(locator).toHaveText();`
 		 */
-		timeout: 30 * 1000,
+		timeout: 10 * 1000,
 	},
 	/* Run tests in files in parallel */
 	fullyParallel: false,

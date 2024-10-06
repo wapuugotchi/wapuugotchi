@@ -1,4 +1,6 @@
 {
+	"port": 80,
+	"testsPort": 443,
 	"core": "",
 	"plugins": [
 		".",

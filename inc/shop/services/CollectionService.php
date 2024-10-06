@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class CollectionService
  */
 class CollectionService {
-	const COLLECTION_API_URL  = 'https://api.wapuugotchi.com/collection';
+	const COLLECTION_API_URL  = 'https://api.wapuugotchi.com/shop';
 	const ITEM_LIST_TRANSIENT = 'wapuugotchi_collection';
 
 	/**

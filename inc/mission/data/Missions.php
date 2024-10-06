@@ -33,7 +33,7 @@ class Missions {
 			->set_id( 'endless_steppes' )
 			->set_name( __( 'The Endless Steppes', 'wapuugotchi' ) )
 			->set_description( __( 'Embark with your brave Wapuu on an adventure through the endless steppes in search of a hidden treasure. But the journey is fraught with dangers and tricky puzzles! Only with your help can your Wapuu overcome these challenges. Support your courageous companion on their journey and together, become the heroes of this adventure!', 'wapuugotchi' ) )
-			->set_url( 'https://wapuugotchi.com/wp-content/uploads/2024/08/endless_steppes_9.svg' )
+			->set_url( 'https://api.wapuugotchi.com/missions/endless_steppes_1/image.svg' )
 			->set_markers(
 				array(
 					__( 'Wapuu embarks on an adventure through the vast, endless steppes. Soon, he comes across a dense forest where the trees block his way. Carved into the bark of an old tree is a riddle. Only by solving it the hidden path will reveal itself.', 'wapuugotchi' ),

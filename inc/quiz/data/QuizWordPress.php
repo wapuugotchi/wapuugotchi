@@ -270,15 +270,6 @@ class QuizWordPress {
 		);
 
 		$quiz[] = new Quiz(
-			'wp_question_28',
-			__( 'Which of the following is NOT a recommended way to back up a WordPress site?', 'wapuugotchi' ),
-			array( __( 'Using a backup plugin', 'wapuugotchi' ), __( 'Copying files via FTP', 'wapuugotchi' ), __( 'Exporting the database using phpMyAdmin', 'wapuugotchi' ), __( 'Creating a full server snapshot', 'wapuugotchi' ) ),
-			__( 'Backing up only the wp-content folder', 'wapuugotchi' ),
-			__( 'That\'s correct! Backing up only the wp-content folder is not sufficient, as it misses the database and configuration files.', 'wapuugotchi' ),
-			__( 'That is unfortunately incorrect. The correct answer is backing up only the wp-content folder.', 'wapuugotchi' )
-		);
-
-		$quiz[] = new Quiz(
 			'wp_question_29',
 			__( 'Which plugin is typically used to build contact forms in WordPress?', 'wapuugotchi' ),
 			array( __( 'WooCommerce', 'wapuugotchi' ), __( 'Yoast SEO', 'wapuugotchi' ), __( 'Jetpack', 'wapuugotchi' ), __( 'Akismet', 'wapuugotchi' ) ),

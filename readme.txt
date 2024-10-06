@@ -1,7 +1,7 @@
 === WapuuGotchi ===
 Contributors:      wapuugotchi, herrfeldmann, ancocodet, acali, coachbirgit, pfefferle, lgersman, tobibode, sabrinaw, fettnei, dionysous, thchoperpilot
 Tags:              assistant, wapuu, gamification
-Stable tag:        1.0.1
+Stable tag:        1.1.0
 Requires at least: 6.2
 Tested up to:      6.5
 Requires PHP:      8.0
@@ -19,13 +19,16 @@ Complete tasks within your WordPress instance to earn points, unlock new items, 
 
 == Changelog ==
 
+= 1.1.0 =
+- Implement Mission feature
+- Implement Mission mini-game Quiz
+
 = 1.0.0 =
 - first stable version
 - restructure code
 - implement onboarding feature
 - implement alive feature
 - implement buddy feature
-
 
 = 0.1.6 =
 - Tests for WordPress 6.5

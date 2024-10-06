@@ -215,6 +215,9 @@ class MissionHandler {
 	 * @throws \Exception If the current date cannot be retrieved.
 	 */
 	public static function is_mission_locked( $user_data ) {
+		if ( empty( $user_data ) ) {
+			return false;
+		}
 		$timezone = new \DateTimeZone( \wp_timezone_string() );
 		$now      = new \DateTime( 'now', $timezone );
 		$locked   = $now->getTimestamp() < (int) $user_data['date'];

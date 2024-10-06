@@ -1,0 +1,40 @@
+.wapuugotchi_mission__action {
+
+	svg {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+
+		#Cloud--group {
+
+			.cloud {
+				cursor: pointer;
+
+				text {
+					pointer-events: none;
+				}
+			}
+
+			&.fade-out {
+				transition: opacity 0.2s ease-out;
+				opacity: 0;
+			}
+		}
+
+		#TextBox--group {
+
+			.textbox {
+				cursor: default;
+
+				text {
+					pointer-events: none;
+				}
+			}
+		}
+	}
+
+	&.permeable {
+		pointer-events: none;
+	}
+}

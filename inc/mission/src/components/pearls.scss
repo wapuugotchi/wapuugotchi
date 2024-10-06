@@ -1,0 +1,23 @@
+.wapuugotchi_missions__pearls {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+
+	span {
+		background-color: #dba617;
+		border-radius: 5px;
+		color: #fff;
+		font-size: 12px;
+		font-weight: 700;
+		padding: 5px 10px;
+		margin-left: 10px;
+
+		img {
+			margin-left: 5px;
+		}
+	}
+
+	&.reward-transferred span {
+		background-color: #4ab866;
+	}
+}

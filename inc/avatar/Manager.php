@@ -18,8 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class Manager
  */
 class Manager {
-	const PREVENT_AVATAR_DISPLAY = array( 'post.php', 'toplevel_page_wapuugotchi' );
-
 	/**
 	 * "Constructor" of this Class
 	 */
@@ -37,7 +35,7 @@ class Manager {
 	 * @return void
 	 */
 	public function enqueue_scripts( $hook_suffix ) {
-		if ( in_array( $hook_suffix, self::PREVENT_AVATAR_DISPLAY, true ) ) {
+		if ( 'index.php' !== $hook_suffix ) {
 			return;
 		}
 

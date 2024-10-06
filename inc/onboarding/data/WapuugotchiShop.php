@@ -36,8 +36,8 @@ class WapuugotchiShop {
 	 */
 	public function add_wapuugotchi_filter( $tour ) {
 		$page = Guide::create()
-					->set_page( 'toplevel_page_wapuugotchi' )
-					->set_file( 'admin.php?page=wapuugotchi' )
+					->set_page( 'wapuugotchi_page_wapuugotchi__shop' )
+					->set_file( 'admin.php?page=wapuugotchi__shop' )
 					->add_item(
 						Item::create()
 							->set_title( __( 'Wapuugotchi', 'wapuugotchi' ) )

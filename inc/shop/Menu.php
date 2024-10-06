@@ -35,7 +35,7 @@ class Menu {
 	public static function wapuugotchi_add_submenu( $submenus ) {
 		$submenus[] = array(
 			'title'    => \__( 'Shop', 'wapuugotchi' ),
-			'slug'     => 'wapuugotchi',
+			'slug'     => 'wapuugotchi__shop',
 			'callback' => 'Wapuugotchi\Shop\Menu::shop_page_template',
 		);
 

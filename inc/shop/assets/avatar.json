@@ -2,9 +2,7 @@
 	"name": "Wapuu",
 	"char": {
 		"fur": {
-			"key": [
-				"ee777691-d3fa-4506-ae20-d6f7a7266d75"
-			],
+			"key": [ "ee777691-d3fa-4506-ae20-d6f7a7266d75" ],
 			"max": 1,
 			"min": 1
 		},
@@ -19,9 +17,7 @@
 			"min": 0
 		},
 		"balls": {
-			"key": [
-				"ad19fc13-0728-4ad0-98b4-a362ccae5736"
-			],
+			"key": [ "ad19fc13-0728-4ad0-98b4-a362ccae5736" ],
 			"max": 1,
 			"min": 0
 		},

@@ -33,6 +33,16 @@ class Api {
 	public static function create_rest_routes() {
 		register_rest_route(
 			self::REST_BASE,
+			'/wapuugotchi/balance/raise_balance',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( self::class, 'raise_balance' ),
+				'permission_callback' => 'is_user_logged_in',
+			)
+		);
+
+		register_rest_route(
+			self::REST_BASE,
 			'/wapuugotchi/shop/unlock-item',
 			array(
 				'methods'             => 'POST',
@@ -51,7 +61,6 @@ class Api {
 			)
 		);
 	}
-
 
 	/**
 	 * Update the purchases.
@@ -153,6 +162,53 @@ class Api {
 				array(
 					'status'  => '200',
 					'message' => 'Avatar successfully updated',
+				)
+			)
+		);
+	}
+
+	/**
+	 * Raise the Balance.
+	 *
+	 * @param \WP_REST_Request $req The request.
+	 *
+	 * @return \WP_REST_Response
+	 */
+	public static function raise_balance( $req ) {
+		$body = json_decode( $req->get_body() );
+
+		if ( ! isset( $body->nonce ) || ! isset( $body->reward ) ) {
+			return rest_ensure_response(
+				new \WP_REST_Response(
+					array(
+						'status'  => '404',
+						'message' => 'missing parameters',
+					),
+					404
+				)
+			);
+		}
+
+		if ( ! wp_verify_nonce( $body->nonce, 'wapuugotchi_balance' ) ) {
+			return rest_ensure_response(
+				new \WP_REST_Response(
+					array(
+						'status'  => '404',
+						'message' => 'nonce not valid',
+					),
+					404
+				)
+			);
+		}
+
+		BalanceHandler::increase_balance( $body->reward );
+
+		return rest_ensure_response(
+			new \WP_REST_Response(
+				array(
+					'status'  => '200',
+					'message' => 'Balance successfully updated',
+
 				)
 			)
 		);

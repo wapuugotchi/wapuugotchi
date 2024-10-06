@@ -19,6 +19,6 @@ test.beforeEach(async ({page}) => {
 });
 
 
-test.skip('animation loading works', async ({page}) => {
+test('animation loading works', async ({page}) => {
 	await expect(await page.locator('#wapuugotchi__avatar svg style').count()).toBe(1);
 });

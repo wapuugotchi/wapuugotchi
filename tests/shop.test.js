@@ -20,7 +20,7 @@ test.beforeEach( async ( { page } ) => {
 	await expect( page ).toHaveTitle( /Dashboard/ );
 } );
 test( 'categories and items are loaded', async ( { page } ) => {
-	await page.goto( '/wp-admin/admin.php?page=wapuugotchi', {
+	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__shop', {
 		waitUntil: 'networkidle',
 	} );
 	await expect(
@@ -32,7 +32,7 @@ test( 'categories and items are loaded', async ( { page } ) => {
 } );
 
 test( 'categories clickable', async ( { page } ) => {
-	await page.goto( '/wp-admin/admin.php?page=wapuugotchi', {
+	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__shop', {
 		waitUntil: 'networkidle',
 	} );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
@@ -79,7 +79,7 @@ test( 'categories clickable', async ( { page } ) => {
 } );
 
 test( 'items clickable', async ( { page } ) => {
-	await page.goto( '/wp-admin/admin.php?page=wapuugotchi', {
+	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__shop', {
 		waitUntil: 'networkidle',
 	} );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
@@ -118,7 +118,7 @@ test( 'items clickable', async ( { page } ) => {
 } );
 
 test( 'items purchasable', async ( { page } ) => {
-	await page.goto( '/wp-admin/admin.php?page=wapuugotchi', {
+	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__shop', {
 		waitUntil: 'networkidle',
 	} );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );

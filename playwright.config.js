@@ -1,6 +1,6 @@
 // @ts-check
 const { devices } = require( '@playwright/test' );
-const TEST_URL = process.env.TEST_URL || 'http://localhost:8888';
+const TEST_URL = process.env.TEST_URL || 'http://localhost';
 
 /**
  * @see https://playwright.dev/docs/test-configuration

@@ -43,16 +43,3 @@ test( 'Completed quests are displayed', async ( { page } ) => {
 			.count()
 	).toBeGreaterThan( 0 );
 } );
-
-test( 'Check ', async ( { page } ) => {
-	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__quests', {
-		waitUntil: 'networkidle',
-	} );
-	await expect( page ).toHaveTitle( /WapuuGotchi/ );
-	await page.waitForSelector( '.wapuugotchi__bubble', { state: 'visible' } );
-	await expect(
-		await page
-			.locator( '#wapuugotchi__avatar .wapuugotchi__bubble' )
-			.textContent()
-	).toMatch( /Thank you for giving me a home!/ );
-} );

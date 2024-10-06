@@ -20,7 +20,7 @@ test.beforeEach(async ({ page }) => {
 	await expect(page).toHaveTitle(/Dashboard/);
 });
 
-test.skip('tour is executable an complete', async ({ page }) => {
+test('tour is executable an complete', async ({ page }) => {
 	await page.goto('/wp-admin/admin.php?page=wapuugotchi__tour', { waitUntil: 'networkidle' });
 	await expect(page).toHaveTitle(/WapuuGotchi/);
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay #wapuugotchi_onboarding__navigation').count()).toBe(1);
@@ -31,7 +31,7 @@ test.skip('tour is executable an complete', async ({ page }) => {
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay .wapuugotchi_onboarding__focus_overlay').count()).toBe(1);
 });
 
-test.skip('navigation is initiated', async ({ page }) => {
+test('navigation is initiated', async ({ page }) => {
 	await page.goto('/wp-admin/admin.php?page=wapuugotchi__tour', { waitUntil: 'networkidle' });
 	await expect(page).toHaveTitle(/WapuuGotchi/);
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay #wapuugotchi_onboarding__navigation').count()).toBe(1);
@@ -47,7 +47,7 @@ test.skip('navigation is initiated', async ({ page }) => {
 	await expect(await page.locator('#wapuugotchi_onboarding__navigation .wapuugotchi_onboarding__navigation_next span')).not.toHaveClass(/disabled/);
 });
 
-test.skip('tour is closeable', async ({ page }) => {
+test('tour is closeable', async ({ page }) => {
 	await page.goto('/wp-admin/admin.php?page=wapuugotchi__tour', { waitUntil: 'networkidle' });
 	await expect(page).toHaveTitle(/WapuuGotchi/);
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay #wapuugotchi_onboarding__navigation').count()).toBe(1);
@@ -56,7 +56,7 @@ test.skip('tour is closeable', async ({ page }) => {
 	await expect(page).toHaveTitle(/Dashboard/);
 });
 
-test.skip('step forward and backwards works', async ({ page }) => {
+test('step forward and backwards works', async ({ page }) => {
 	await page.goto('/wp-admin/admin.php?page=wapuugotchi__tour', { waitUntil: 'networkidle' });
 	await expect(page).toHaveTitle(/WapuuGotchi/);
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay #wapuugotchi_onboarding__navigation').count()).toBe(1);

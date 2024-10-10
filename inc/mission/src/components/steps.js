@@ -24,9 +24,10 @@ export default function Steps() {
 				<Step
 					key={ 'wgm_count_' + i }
 					completed={ i <= progressData ? 'true' : 'false' }
+					current={ i === progressData + 1 ? 'true' : 'false' }
 					name={ sprintf(
 						// translators: %s: step number
-						__( 'Find %s clue', 'wapuugotchi' ),
+						__( '%s clue', 'wapuugotchi' ),
 						getOrdinal( i )
 					) }
 				/>

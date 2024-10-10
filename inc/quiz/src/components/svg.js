@@ -121,7 +121,17 @@ export default function Svg() {
 		const overlay = document.querySelector(
 			'.wapuugotchi_mission__overlay'
 		);
+		const action = document.querySelector( '.wapuugotchi_mission__action' );
+
 		overlay.addEventListener( 'click', handleOverlayClick );
+		action.addEventListener( 'click', function ( event ) {
+			if (
+				event.target.classList.contains( 'wapuugotchi_mission__action' )
+			) {
+				event.stopPropagation();
+				overlay.click();
+			}
+		} );
 
 		return () => {
 			overlay.removeEventListener( 'click', handleOverlayClick );

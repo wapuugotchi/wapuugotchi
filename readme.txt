@@ -1,7 +1,7 @@
 === WapuuGotchi ===
 Contributors:      wapuugotchi, herrfeldmann, ancocodet, acali, coachbirgit, pfefferle, lgersman, tobibode, sabrinaw, fettnei, dionysous, thchoperpilot
 Tags:              assistant, wapuu, gamification
-Stable tag:        1.1.0
+Stable tag:        1.1.1
 Requires at least: 6.2
 Tested up to:      6.5
 Requires PHP:      8.0
@@ -18,6 +18,9 @@ Receive important messages and updates from your Wapuu, who will keep you inform
 Complete tasks within your WordPress instance to earn points, unlock new items, and personalize your Wapuu even further. Explore an ever-expanding world of customizations and accessories.
 
 == Changelog ==
+
+= 1.1.1 =
+- Fix various bugs from v1.1.0
 
 = 1.1.0 =
 - Implement Mission feature

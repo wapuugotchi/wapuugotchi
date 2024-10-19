@@ -48,7 +48,7 @@ class WapuugotchiTour {
 						Item::create()
 							->set_title( __( 'Navigation', 'wapuugotchi' ) )
 							->set_text( __( 'First, let\'s look at how to navigate the tour. Above this dialog box are the navigation controls, allowing you to move forward or backward, end the tour, or start a demo at key points.', 'wapuugotchi' ) )
-							->add_target( Target::create()->set_focus( '#wpadminbar' )->set_overlay( '#wpadminbar' ) )
+							->add_target( Target::create() )
 					)
 					->add_item(
 						Item::create()

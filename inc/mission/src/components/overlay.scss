@@ -13,6 +13,8 @@ body {
 		}
 
 		.wapuugotchi_mission__action {
+			display: flex;
+			justify-content: center;
 			padding: 0 100px;
 
 			@media (max-width: 782px) {
@@ -20,6 +22,7 @@ body {
 			}
 
 			svg {
+				max-width: 500px;
 				height: 100vh;
 			}
 		}

@@ -14,7 +14,7 @@ export default function Wapuu() {
 			height="100%"
 			width="700px"
 			version="1.1"
-			viewBox="-820 0 1000 770"
+			viewBox="-780 0 1000 770"
 			dangerouslySetInnerHTML={ { __html: avatar } }
 		></svg>
 	);

@@ -20,7 +20,7 @@ export const buildSvg = async ( svgString, quiz ) => {
 
 export const insertElement = ( svg, element, tag ) => {
 	const selectedElement = svg.querySelector(
-		'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear'
+		'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear, g#wapuugotchi_type__squirrel'
 	);
 	selectedElement?.insertBefore( element, svg.querySelector( tag ) );
 };

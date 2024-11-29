@@ -36,7 +36,7 @@ function parseSvg( svg ) {
  */
 function insertOnboardingTag( avatar ) {
 	const selectedElement = avatar.querySelector(
-		'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear'
+		'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear, g#wapuugotchi_type__squirrel'
 	);
 	selectedElement?.insertBefore(
 		__getOnboardingTag(),

@@ -62,6 +62,7 @@ class AnimationHandler {
 		do_action( 'animations_extracted', $animations );
 
 		// Remove all style elements.
+		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 		while ( $style_element = $style_elements->item( 0 ) ) {
 			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			$style_element->parentNode->removeChild( $style_element );

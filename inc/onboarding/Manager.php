@@ -28,8 +28,9 @@ class Manager {
 			return;
 		}
 
-		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 30 );
+		\add_filter( 'wapuugotchi_add_admin_bar_elements', array( Menu::class, 'wapuugotchi_add_admin_bar_item' ), 30 );
 		\add_action( 'current_screen', array( Menu::class, 'force_redirect_to_dashboard' ) );
+		\add_action( 'load-index.php', array( $this, 'force_autostart' ) );
 		\add_action( 'admin_init', array( $this, 'init' ), 100 );
 	}
 
@@ -64,6 +65,7 @@ class Manager {
 						'next_page'   => Helper::get_next_page_path(),
 						'page_config' => Helper::get_current_page_item_list(),
 						'index'       => Helper::get_first_index_of_current_page(),
+						'mode'        => Helper::get_mode(),
 						'avatar'      => AvatarHandler::get_avatar(),
 						'animated'    => false,
 					)
@@ -87,7 +89,7 @@ class Manager {
 		}
 
 		\update_user_meta( \get_current_user_id(), 'wapuugotchi_onboarding_autostart_executed', true );
-		\wp_safe_redirect( \home_url( 'wp-admin/admin.php?page=wapuugotchi__tour' ) );
+		\wp_safe_redirect( 'index.php?onboarding_mode=tour' );
 		exit();
 	}
 

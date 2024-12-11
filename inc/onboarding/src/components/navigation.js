@@ -126,12 +126,10 @@ export default function Navigation() {
 	};
 
 	const stop = () => {
-		const dir = window.location.href.substring(
-			0,
-			window.location.href.lastIndexOf( 'wp-admin' )
-		);
-		const url = new URL( dir + 'wp-admin/' );
+		const url = new URL( window.location.href );
+		url.searchParams.delete( 'onboarding_mode' );
 		window.location = url.toString();
+		return true;
 	};
 
 	const startAnimation = () => {

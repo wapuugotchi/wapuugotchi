@@ -32,6 +32,10 @@ class Helper {
 	 * @return string|null
 	 */
 	public static function get_next_page_path() {
+		if ( self::get_mode() !== 'tour' ) {
+			return null;
+		}
+
 		$next_data = PageHandler::get_next_tour_data();
 		if ( empty( $next_data ) ) {
 			return null;
@@ -89,4 +93,16 @@ class Helper {
 	public static function is_valid_version() {
 		return version_compare( get_bloginfo( 'version' ), self::EXPECTED_WP_VERSION, '>=' );
 	}
+
+	/**
+	 * Get the current onboarding mode.
+	 *
+	 * @return string
+	 */
+	public static function get_mode() {
+		if ( ! isset( $_GET['onboarding_mode'] ) ) {
+			return 'tour';
+		}
+
+		return sanitize_text_field( wp_unslash( $_GET['onboarding_mode'] ) );   }
 }

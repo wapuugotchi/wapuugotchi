@@ -17,29 +17,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Menu {
 
 	/**
-	 * Add html starting point to quest menu page.
+	 * Adds a submenu item to the admin bar. The filter used is 'wapuugotchi_add_submenu'.
 	 *
-	 * @return void
-	 */
-	public static function onboarding_page_template() {
-		echo '<div class="wrap"><div id="wapuugotchi-submenu__onboarding"></div></div>';
-	}
-
-	/**
-	 * Adds a submenu page to the admin menu. The filter used is 'wapuugotchi_add_submenu'.
-	 *
-	 * @param array $submenus Submenu items.
+	 * @param array $items Submenu items.
 	 *
 	 * @return array
 	 */
-	public static function wapuugotchi_add_submenu( $submenus ) {
-		$submenus[] = array(
-			'title'    => \__( 'Tour', 'wapuugotchi' ),
-			'slug'     => 'wapuugotchi__tour',
-			'callback' => 'Wapuugotchi\Onboarding\Menu::onboarding_page_template',
+	public static function wapuugotchi_add_admin_bar_item( $items ) {
+
+		$params  = \array_merge( $_GET, array( 'onboarding_mode' => 'single' ) );
+		$items[] = array(
+			'title' => 'Page Overview',
+			'href'  => add_query_arg( $params, '' ),
+			'meta'  => array(
+				'class' => 'wapuugotchi_onboarding__admin-menu',
+			),
 		);
 
-		return $submenus;
+		$items[] = array(
+			'title' => 'WordPress Journey',
+			'href'  => 'index.php?onboarding_mode=tour',
+			'meta'  => array(
+				'class' => 'wapuugotchi_onboarding__admin-menu',
+			),
+		);
+
+		return $items;
 	}
 
 	/**
@@ -52,7 +55,7 @@ class Menu {
 		if ( isset( $current_screen->id ) && 'wapuugotchi_page_wapuugotchi__tour' === $current_screen->base ) {
 			if ( ! isset( $_GET['onboarding_mode'] ) ) {
 				wp_safe_redirect(
-					admin_url( 'admin.php?page=wapuugotchi__tour&onboarding_mode=true' )
+					admin_url( 'index.php?onboarding_mode=tour' )
 				);
 				exit;
 			}

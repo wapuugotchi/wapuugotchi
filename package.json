@@ -14,7 +14,7 @@
 		"lint:css:fix": "npm run lint:css -- --fix",
 		"lint:js": "wp-scripts lint-js \"inc/**/*.js\"",
 		"lint:js:fix": "npm run lint:js -- --fix",
-		"lint:php": "docker run -it --rm --name my-running-script -v \"$PWD\":/usr/src/myapp -w /usr/src/myapp php:8.2-cli ./vendor/bin/phpcs --runtime-set ignore_warnings_on_exit true --standard=phpcs.xml --extensions=php ./inc wapuugotchi.php",
+		"lint:php": "docker run -it --rm --name my-running-script -v \"$PWD\":/usr/src/myapp -w /usr/src/myapp php:8.2-cli ./vendor/bin/phpcs -s --runtime-set ignore_warnings_on_exit true --standard=phpcs.xml --extensions=php ./inc wapuugotchi.php",
 		"lint:php:fix": "docker run -it --rm --name my-running-script -v \"$PWD\":/usr/src/myapp -w /usr/src/myapp php:8.2-cli ./vendor/bin/phpcbf --runtime-set ignore_warnings_on_exit true --standard=phpcs.xml --extensions=php ./inc wapuugotchi.php",
 		"lint:md:docs": "wp-scripts lint-md-docs \"README.md\"",
 		"packages-update": "wp-scripts packages-update",

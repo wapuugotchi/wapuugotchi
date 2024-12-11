@@ -26,9 +26,16 @@ class AvatarHandler {
 		$avatar = \apply_filters( 'wapuugotchi_avatar', false );
 
 		if ( false === $avatar ) {
-			$default = WAPUUGOTCHI_PATH . 'inc/avatar/assets/avatar.svg';
-			if ( \file_exists( $default ) && \is_readable( $default ) ) {
-				$avatar = \file_get_contents( $default );
+			$default_config_url = \plugin_dir_url( __DIR__ ) . 'assets/avatar.svg';
+			$response           = wp_remote_get( $default_config_url );
+
+			if ( is_wp_error( $response ) ) {
+				return false;
+			}
+
+			$avatar = wp_remote_retrieve_body( $response );
+			if ( empty( $avatar ) ) {
+				return false;
 			}
 		}
 

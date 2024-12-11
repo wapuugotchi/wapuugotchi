@@ -175,6 +175,9 @@ function create() {
 			getAnimated( state ) {
 				return state.animated;
 			},
+			getMode( state ) {
+				return state.mode;
+			},
 		},
 		resolvers: {},
 	} );

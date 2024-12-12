@@ -21,7 +21,7 @@ class AdminBar {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		\add_action( 'admin_bar_menu', array( $this, 'custom_admin_bar_menu' ), 100 );
+		\add_action( 'admin_bar_menu', array( $this, 'custom_admin_bar_menu' ), PHP_INT_MAX );
 	}
 
 	/**
@@ -55,7 +55,7 @@ class AdminBar {
 		$admin_bar->add_menu(
 			array(
 				'id'     => 'wapuugotchi_admin_bar_menu',
-				'parent' => null,
+				'parent' => 'top-secondary',
 				'group'  => null,
 				'title'  => '<img style="width: 50px; margin-top: 8px"src="' . self::WAPUU_ICON . '"></img>',
 				'href'   => $first_element['href'],

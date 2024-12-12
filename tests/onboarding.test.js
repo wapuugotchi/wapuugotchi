@@ -21,8 +21,8 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('tour is executable an complete', async ({ page }) => {
-	await page.goto('/wp-admin/admin.php?page=wapuugotchi__tour', { waitUntil: 'networkidle' });
-	await expect(page).toHaveTitle(/WapuuGotchi/);
+	await page.goto('/wp-admin/index.php?onboarding_mode=tour', { waitUntil: 'networkidle' });
+	await expect(page).toHaveTitle(/Dashboard/);
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay #wapuugotchi_onboarding__navigation').count()).toBe(1);
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay .wapuugotchi_onboarding__guide_text').count()).toBe(1);
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay svg').count()).toBe(1);
@@ -32,8 +32,8 @@ test('tour is executable an complete', async ({ page }) => {
 });
 
 test('navigation is initiated', async ({ page }) => {
-	await page.goto('/wp-admin/admin.php?page=wapuugotchi__tour', { waitUntil: 'networkidle' });
-	await expect(page).toHaveTitle(/WapuuGotchi/);
+	await page.goto('/wp-admin/index.php?onboarding_mode=tour', { waitUntil: 'networkidle' });
+	await expect(page).toHaveTitle(/Dashboard/);
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay #wapuugotchi_onboarding__navigation').count()).toBe(1);
 
 	await page.waitForSelector('#wapuugotchi_onboarding__navigation .wapuugotchi_onboarding__navigation_stop', { state: 'visible' });
@@ -48,8 +48,8 @@ test('navigation is initiated', async ({ page }) => {
 });
 
 test('tour is closeable', async ({ page }) => {
-	await page.goto('/wp-admin/admin.php?page=wapuugotchi__tour', { waitUntil: 'networkidle' });
-	await expect(page).toHaveTitle(/WapuuGotchi/);
+	await page.goto('/wp-admin/index.php?onboarding_mode=tour', { waitUntil: 'networkidle' });
+	await expect(page).toHaveTitle(/Dashboard/);
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay #wapuugotchi_onboarding__navigation').count()).toBe(1);
 	await expect(await page.locator('#wapuugotchi_onboarding__navigation .wapuugotchi_onboarding__navigation_stop').count()).toBe(1);
 	await page.locator('#wapuugotchi_onboarding__navigation .wapuugotchi_onboarding__navigation_stop').click({ waitUntil: 'networkidle' });
@@ -57,8 +57,8 @@ test('tour is closeable', async ({ page }) => {
 });
 
 test('step forward and backwards works', async ({ page }) => {
-	await page.goto('/wp-admin/admin.php?page=wapuugotchi__tour', { waitUntil: 'networkidle' });
-	await expect(page).toHaveTitle(/WapuuGotchi/);
+	await page.goto('/wp-admin/index.php?onboarding_mode=tour', { waitUntil: 'networkidle' });
+	await expect(page).toHaveTitle(/Dashboard/);
 	await expect(await page.locator('#wapuugotchi_onboarding__overlay #wapuugotchi_onboarding__navigation').count()).toBe(1);
 
 	await expect(await page.locator('#wapuugotchi_onboarding__navigation .wapuugotchi_onboarding__navigation_last span')).toHaveClass(/disabled/);

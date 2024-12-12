@@ -121,7 +121,7 @@ class Mission {
 	/**
 	 * Sets the markers of the mission.
 	 *
-	 * @param integer $markers The markers of the mission.
+	 * @param array $markers The markers of the mission.
 	 * @return Mission The instance of the Mission class.
 	 */
 	public function set_markers( $markers ) {

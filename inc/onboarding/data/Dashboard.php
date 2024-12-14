@@ -58,6 +58,12 @@ class Dashboard {
 					)
 					->add_item(
 						Item::create()
+							->set_title( __( 'WapuuGotchi Bar', 'wapuugotchi' ) )
+							->set_text( __( 'I also have a menu item here. Here, you can restart the tour we’re currently on—or just specific parts of it!', 'wapuugotchi' ) )
+							->add_target( Target::create()->set_focus( '#wp-admin-bar-wapuugotchi_admin_bar_menu' )->set_overlay( '#wp-admin-bar-wapuugotchi_admin_bar_menu' ) )
+					)
+					->add_item(
+						Item::create()
 							->set_title( __( 'Navigating the website', 'wapuugotchi' ) )
 							->set_text( __( 'The "Admin Menu" makes switching between different areas of your website a breeze. You can easily access one of these areas by clicking on a main menu item.', 'wapuugotchi' ) )
 							->add_target( Target::create()->set_focus( '#adminmenuwrap' )->set_overlay( '#adminmenuwrap' ) )

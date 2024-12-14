@@ -23,7 +23,7 @@ class QuizWordPress {
 	 *
 	 * @param array $quiz The messages.
 	 *
-	 * @return array|Quest[]
+	 * @return array
 	 */
 	public static function add_wp_quiz( $quiz ) {
 		$quiz[] = new Quiz(
@@ -321,6 +321,33 @@ class QuizWordPress {
 			__( 'Over 55,000', 'wapuugotchi' ),
 			__( 'That\'s correct! There are currently over 55,000 plugins hosted on WordPress.org.', 'wapuugotchi' ),
 			__( 'That is unfortunately incorrect. The correct answer is Over 60,000.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_35',
+			__( 'Why should you use a Two-Factor Authentication plugin?', 'wapuugotchi' ),
+			array( __( 'Wapuu demands it', 'wapuugotchi' ), __( 'For daily brain teasers', 'wapuugotchi' ), __( 'Hackers need challenges', 'wapuugotchi' ), __( 'It sounds super cool', 'wapuugotchi' ) ),
+			__( 'Better security against hackers', 'wapuugotchi' ),
+			__( 'That\'s correct! Two-Factor Authentication greatly enhances your account\'s security.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. Two-Factor Authentication is crucial for protecting your account from hackers.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_36',
+			__( 'Why should you only install plugins and themes from trusted developers?', 'wapuugotchi' ),
+			array( __( 'They grant magic powers', 'wapuugotchi' ), __( 'Trusted devs are cooler', 'wapuugotchi' ), __( 'For bragging rights online', 'wapuugotchi' ), __( 'To unlock hidden levels', 'wapuugotchi' ) ),
+			__( 'To avoid security risks', 'wapuugotchi' ),
+			__( 'That\'s correct! Trusted developers reduce the risk of malware and vulnerabilities.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. Installing untrusted plugins or themes can seriously compromise your website\'s security.', 'wapuugotchi' )
+		);
+
+		$quiz[] = new Quiz(
+			'wp_question_37',
+			__( 'Why should you keep plugins and themes updated?', 'wapuugotchi' ),
+			array( __( 'They get faster Wi-Fi', 'wapuugotchi' ), __( 'Wapuu loves updates', 'wapuugotchi' ), __( 'They start growing plants', 'wapuugotchi' ), __( 'For a fresher look', 'wapuugotchi' ) ),
+			__( 'To fix security issues', 'wapuugotchi' ),
+			__( 'That\'s correct! Updates often include important security fixes and improvements.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. Outdated plugins and themes can make your site vulnerable to attacks.', 'wapuugotchi' )
 		);
 
 		return $quiz;

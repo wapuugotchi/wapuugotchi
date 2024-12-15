@@ -39,7 +39,7 @@ node_modules
 /test-results/
 /playwright-report/
 /playwright/.cache/
-wp-env-home
+/wp-env-home/
 .DS_Store/
 build
 

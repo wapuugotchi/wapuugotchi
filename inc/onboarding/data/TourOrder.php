@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class TourData
+ * Class TourTourData
  */
 class TourOrder {
 
@@ -21,47 +21,46 @@ class TourOrder {
 	 *
 	 * @param array $elements Array of onboarding objects.
 	 *
-	 * @return Guide[]
+	 * @return array
 	 */
 	public static function add_wapuugotchi_filter( $elements ) {
 		$element = array(
-			'\Wapuugotchi\Onboarding\Data\WapuugotchiTour',
-			'\Wapuugotchi\Onboarding\Data\Dashboard',
-			'\Wapuugotchi\Onboarding\Data\UpdateCore',
-			'\Wapuugotchi\Onboarding\Data\EditPost',
-			'\Wapuugotchi\Onboarding\Data\Post',
-			'\Wapuugotchi\Onboarding\Data\EditCategory',
-			'\Wapuugotchi\Onboarding\Data\EditPostTag',
-			'\Wapuugotchi\Onboarding\Data\Upload',
-			'\Wapuugotchi\Onboarding\Data\Media',
-			'\Wapuugotchi\Onboarding\Data\EditPage',
-			'\Wapuugotchi\Onboarding\Data\Page',
-			'\Wapuugotchi\Onboarding\Data\EditComments',
-			'\Wapuugotchi\Onboarding\Data\Themes',
-			'\Wapuugotchi\Onboarding\Data\ThemeInstall',
-			'\Wapuugotchi\Onboarding\Data\SiteEditor',
-			'\Wapuugotchi\Onboarding\Data\Plugins',
-			'\Wapuugotchi\Onboarding\Data\PluginInstall',
-			'\Wapuugotchi\Onboarding\Data\Users',
-			'\Wapuugotchi\Onboarding\Data\User',
-			'\Wapuugotchi\Onboarding\Data\Profile',
-			'\Wapuugotchi\Onboarding\Data\Tools',
-			'\Wapuugotchi\Onboarding\Data\Import',
-			'\Wapuugotchi\Onboarding\Data\Export',
-			'\Wapuugotchi\Onboarding\Data\SiteHealth',
-			'\Wapuugotchi\Onboarding\Data\ExportPersonalData',
-			'\Wapuugotchi\Onboarding\Data\ErasePersonalData',
-			'\Wapuugotchi\Onboarding\Data\ThemeEditor',
-			'\Wapuugotchi\Onboarding\Data\PluginEditor',
-			'\Wapuugotchi\Onboarding\Data\OptionsGeneral',
-			'\Wapuugotchi\Onboarding\Data\OptionsWriting',
-			'\Wapuugotchi\Onboarding\Data\OptionsReading',
-			'\Wapuugotchi\Onboarding\Data\OptionsDiscussion',
-			'\Wapuugotchi\Onboarding\Data\OptionsMedia',
-			'\Wapuugotchi\Onboarding\Data\OptionsPermalink',
-			'\Wapuugotchi\Onboarding\Data\OptionsPrivacy',
-			'\Wapuugotchi\Onboarding\Data\WapuugotchiShop',
-			'\Wapuugotchi\Onboarding\Data\WapuugotchiQuest',
+			'\Wapuugotchi\Onboarding\Data\TourDashboard',
+			'\Wapuugotchi\Onboarding\Data\TourUpdateCore',
+			'\Wapuugotchi\Onboarding\Data\TourEditPost',
+			'\Wapuugotchi\Onboarding\Data\TourPost',
+			'\Wapuugotchi\Onboarding\Data\TourEditCategory',
+			'\Wapuugotchi\Onboarding\Data\TourEditPostTag',
+			'\Wapuugotchi\Onboarding\Data\TourUpload',
+			'\Wapuugotchi\Onboarding\Data\TourMedia',
+			'\Wapuugotchi\Onboarding\Data\TourEditPage',
+			'\Wapuugotchi\Onboarding\Data\TourPage',
+			'\Wapuugotchi\Onboarding\Data\TourEditComments',
+			'\Wapuugotchi\Onboarding\Data\TourThemes',
+			'\Wapuugotchi\Onboarding\Data\TourThemeInstall',
+			'\Wapuugotchi\Onboarding\Data\TourSiteEditor',
+			'\Wapuugotchi\Onboarding\Data\TourPlugins',
+			'\Wapuugotchi\Onboarding\Data\TourPluginInstall',
+			'\Wapuugotchi\Onboarding\Data\TourUsers',
+			'\Wapuugotchi\Onboarding\Data\TourUser',
+			'\Wapuugotchi\Onboarding\Data\TourProfile',
+			'\Wapuugotchi\Onboarding\Data\TourTools',
+			'\Wapuugotchi\Onboarding\Data\TourImport',
+			'\Wapuugotchi\Onboarding\Data\TourExport',
+			'\Wapuugotchi\Onboarding\Data\TourSiteHealth',
+			'\Wapuugotchi\Onboarding\Data\TourExportPersonalData',
+			'\Wapuugotchi\Onboarding\Data\TourErasePersonalData',
+			'\Wapuugotchi\Onboarding\Data\TourThemeEditor',
+			'\Wapuugotchi\Onboarding\Data\TourPluginEditor',
+			'\Wapuugotchi\Onboarding\Data\TourOptionsGeneral',
+			'\Wapuugotchi\Onboarding\Data\TourOptionsWriting',
+			'\Wapuugotchi\Onboarding\Data\TourOptionsReading',
+			'\Wapuugotchi\Onboarding\Data\TourOptionsDiscussion',
+			'\Wapuugotchi\Onboarding\Data\TourOptionsMedia',
+			'\Wapuugotchi\Onboarding\Data\TourOptionsPermalink',
+			'\Wapuugotchi\Onboarding\Data\TourOptionsPrivacy',
+			'\Wapuugotchi\Onboarding\Data\TourWapuugotchiShop',
+			'\Wapuugotchi\Onboarding\Data\TourWapuugotchiQuest',
 		);
 
 		return array_merge( $elements, $element );

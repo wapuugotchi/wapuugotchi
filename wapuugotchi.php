@@ -4,7 +4,7 @@
  * Description:       Meet Your Personalized Wapuu Assistant.
  * Requires at least: 6.7
  * Requires PHP:      8.0
- * Version:           1.2.0
+ * Version:           1.2
  * Author:            wapuugotchi
  * Author URI:        https://wapuugotchi.com/
  * License:           GPL-2.0-or-later

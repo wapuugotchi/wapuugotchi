@@ -1,9 +1,9 @@
 === WapuuGotchi ===
 Contributors:      wapuugotchi, herrfeldmann, ancocodet, acali, coachbirgit, pfefferle, lgersman, tobibode, sabrinaw, fettnei, dionysous, thchoperpilot
 Tags:              assistant, wapuu, gamification
-Stable tag:        1.1.2
-Requires at least: 6.2
-Tested up to:      6.5
+Stable tag:        1.2
+Requires at least: 6.7
+Tested up to:      6.7
 Requires PHP:      8.0
 License:           GPLv2 or later
 

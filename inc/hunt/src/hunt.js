@@ -35,7 +35,7 @@ const waitForElement = async ( selector ) => {
 domReady( async () => {
 	// Warte auf das Overlay-Element, bevor die Anwendung gerendert wird.
 	const element = await waitForElement( '.wapuugotchi_mission__overlay' );
-	console.log( 'Hunt wurde geladen' );
+
 	// Erstelle einen React-Root und rendere die Svg-Komponente im StrictMode.
 	createRoot( element ).render(
 		<StrictMode>

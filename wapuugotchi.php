@@ -43,6 +43,7 @@ function init() {
 	new \Wapuugotchi\Alive\Manager();
 	new \Wapuugotchi\Mission\Manager();
 	new \Wapuugotchi\Quiz\Manager();
+	new \Wapuugotchi\Hunt\Manager();
 }
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

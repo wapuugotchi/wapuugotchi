@@ -36,7 +36,7 @@ class Manager {
 	 */
 	public function init() {
 		\add_filter( 'wapuugotchi_register_action__filter', array( $this, 'register_game' ) );
-		// \add_filter( 'wapuugotchi_quiz__filter', array( HuntData::class, 'add_wp_hunt' ) );
+		\add_filter( 'wapuugotchi_hunt__filter', array( HuntData::class, 'add_wp_hunt' ) );
 		\add_action( 'wapuugotchi_mission__enqueue_scripts', array( $this, 'load_scripts' ) );
 	}
 
@@ -54,6 +54,8 @@ class Manager {
 		\wp_enqueue_style( 'wapuugotchi-hunt', WAPUUGOTCHI_URL . 'build/hunt.css', array(), $assets['version'] );
 		\wp_enqueue_script( 'wapuugotchi-hunt', WAPUUGOTCHI_URL . 'build/hunt.js', $assets['dependencies'], $assets['version'], true );
 
+		var_dump( HuntHandler::get_shuffled_hunt_array() );
+		wp_die();
 		\wp_add_inline_script(
 			'wapuugotchi-hunt',
 			\sprintf(
@@ -61,7 +63,7 @@ class Manager {
 				\wp_json_encode(
 					array(
 						'avatar' => AvatarHandler::get_avatar(),
-						// 'data'   => HuntHandler::get_shuffled_quiz_array(),
+						//'data'   => HuntHandler::get_shuffled_hunt_array(),
 					)
 				)
 			),

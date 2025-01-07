@@ -54,8 +54,6 @@ class Manager {
 		\wp_enqueue_style( 'wapuugotchi-hunt', WAPUUGOTCHI_URL . 'build/hunt.css', array(), $assets['version'] );
 		\wp_enqueue_script( 'wapuugotchi-hunt', WAPUUGOTCHI_URL . 'build/hunt.js', $assets['dependencies'], $assets['version'], true );
 
-		var_dump( HuntHandler::get_shuffled_hunt_array() );
-		wp_die();
 		\wp_add_inline_script(
 			'wapuugotchi-hunt',
 			\sprintf(
@@ -63,7 +61,7 @@ class Manager {
 				\wp_json_encode(
 					array(
 						'avatar' => AvatarHandler::get_avatar(),
-						//'data'   => HuntHandler::get_shuffled_hunt_array(),
+						'data'   => HuntHandler::get_shuffled_hunt_array(),
 					)
 				)
 			),

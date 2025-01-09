@@ -18,6 +18,7 @@ class HuntHandler {
 
 	/**
 	 * Apply filter for the hunt.
+	 *
 	 * @return array The hunt.
 	 */
 	public static function get_hunt() {
@@ -56,8 +57,8 @@ class HuntHandler {
 	 *
 	 * @return array The hunt array.
 	 */
-	public static function get_hunt_array () {
-		$hunt 		= self::get_hunt();
+	public static function get_hunt_array() {
+		$hunt       = self::get_hunt();
 		$hunt_array = array();
 
 		if ( empty( $hunt ) ) {
@@ -66,11 +67,11 @@ class HuntHandler {
 
 		foreach ( $hunt as $hunt_item ) {
 			$hunt_array[] = array(
-				'id'           	=> $hunt_item->get_id(),
-				'quest_text'   	=> $hunt_item->get_quest_text(),
-				'success_text' 	=> $hunt_item->get_success_text(),
-				'failure_text'	=> $hunt_item->get_failure_text(),
-				'page_name'   	=> $hunt_item->get_page_name(),
+				'id'            => $hunt_item->get_id(),
+				'quest_text'    => $hunt_item->get_quest_text(),
+				'success_text'  => $hunt_item->get_success_text(),
+				'failure_text'  => $hunt_item->get_failure_text(),
+				'page_name'     => $hunt_item->get_page_name(),
 				'selector_name' => $hunt_item->get_selector_name(),
 			);
 		}

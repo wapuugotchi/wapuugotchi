@@ -68,16 +68,16 @@ class Hunt {
 	 * @param string $quest_text Initial quest text.
 	 * @param string $success_text Notice if the task is successfull.
 	 * @param string $failure_text Notice if the task fails.
- 	 * @param string $page_name The page name where the quest item is located.
- 	 * @param string $selector_name Concrete selector on the page where the quest item is located.
+	 * @param string $page_name The page name where the quest item is located.
+	 * @param string $selector_name Concrete selector on the page where the quest item is located.
 	 */
 	public function __construct( $id, $quest_text, $success_text, $failure_text, $page_name, $selector_name ) {
-		$this->id 				= $id;
-		$this->quest_text		= $quest_text;
-		$this->success_text 	= $success_text;
-		$this->failure_text 	= $failure_text;
-		$this->page_name 		= $page_name;
-		$this->selector_name 	= $selector_name;
+		$this->id            = $id;
+		$this->quest_text    = $quest_text;
+		$this->success_text  = $success_text;
+		$this->failure_text  = $failure_text;
+		$this->page_name     = $page_name;
+		$this->selector_name = $selector_name;
 	}
 
 	/**

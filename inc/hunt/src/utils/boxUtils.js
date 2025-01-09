@@ -1,16 +1,16 @@
-//import { appendTagsToElement } from './textUtils';
+import { appendTagsToElement } from './textUtils';
 
 const x = 155;
 const y = 250;
 
 // Other SVG-related functions...
-export const getTextBox = ( /* agreement*/ ) => {
-	//const textBoxTags = agreement;
+export const getTextBox = ( agreement ) => {
+	const textBoxTags = agreement;
 	const element = document.createElement( 'g' );
 	element.id = 'TextBox--group';
 	element.innerHTML = boxSvg;
 
-	//appendTagsToElement( element.querySelector( 'text' ), textBoxTags, x );
+	appendTagsToElement( element.querySelector( 'text' ), textBoxTags, x );
 
 	return element;
 };

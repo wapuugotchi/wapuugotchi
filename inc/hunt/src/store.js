@@ -27,8 +27,10 @@ const store = createReduxStore( STORE_NAME, {
 			// eslint-disable-next-line no-shadow
 			async ( { dispatch } ) => {
 				dispatch.__setState( initialState );
-				const hunt = 'Hallo du Lappen';
-				const svg = await buildSvg( initialState.avatar, hunt );
+				const svg = await buildSvg(
+					initialState.avatar,
+					initialState.data[ 0 ]?.quest_text
+				);
 				dispatch.setAvatar( svg );
 			},
 		__setState: ( payload ) => ( { type: '__SET_STATE', payload } ),

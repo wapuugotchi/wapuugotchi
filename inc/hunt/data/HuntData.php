@@ -25,8 +25,8 @@ class HuntData {
 	 *
 	 * @return array
 	 */
-	public static function add_wp_hunt( $quiz ) {
-		$quiz[] = new Hunt(
+	public static function add_wp_hunt( $hunt ) {
+		$hunt[] = new Hunt(
 			'wp_hunt_1',
 			'Where can you find the latest news about WordPress?',
 			'Well done!',
@@ -35,7 +35,7 @@ class HuntData {
 			'.welcome-panel-content'
 		);
 
-		$quiz[] = new Hunt(
+		$hunt[] = new Hunt(
 			'wp_hunt_2',
 			'Where cou you add a new post?',
 			'Great!',
@@ -44,6 +44,6 @@ class HuntData {
 			'.welcome-panel-content'
 		);
 
-		return $quiz;
+		return $hunt;
 	}
 }

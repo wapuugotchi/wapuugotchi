@@ -16,19 +16,20 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class HuntHandler {
 
+	const CURRENT_HUNT_CONFIG = 'wapuugotchi_hunt_current';
 	/**
 	 * Apply filter for the hunt.
 	 *
 	 * @return array The hunt.
 	 */
-	public static function get_hunt() {
-		$hunt = \apply_filters( 'wapuugotchi_hunt__filter', array() );
+	public static function get_all_hunts() {
+		$hunts = \apply_filters( 'wapuugotchi_hunt__filter', array() );
 
-		if ( false === $hunt ) {
-			$hunt = array();
+		if ( false === $hunts ) {
+			$hunts = array();
 		}
 
-		return self::validate_hunt( $hunt );
+		return self::validate_hunts( $hunts );
 	}
 
 	/**
@@ -38,18 +39,18 @@ class HuntHandler {
 	 *
 	 * @return array The validated hunt.
 	 */
-	private static function validate_hunt( $hunt ) {
-		$validated_hunt = array();
+	private static function validate_hunts( $hunts ) {
+		$validated_hunts = array();
 
-		foreach ( $hunt as $hunt_item ) {
+		foreach ( $hunts as $hunt_item ) {
 			if ( ! is_a( $hunt_item, 'Wapuugotchi\Hunt\Models\Hunt' ) ) {
 				continue;
 			}
 
-			$validated_hunt[] = $hunt_item;
+			$validated_hunts[] = $hunt_item;
 		}
 
-		return $validated_hunt;
+		return $validated_hunts;
 	}
 
 	/**
@@ -57,8 +58,8 @@ class HuntHandler {
 	 *
 	 * @return array The hunt array.
 	 */
-	public static function get_hunt_array() {
-		$hunt       = self::get_hunt();
+	public static function get_hunts_array() {
+		$hunt       = self::get_all_hunts();
 		$hunt_array = array();
 
 		if ( empty( $hunt ) ) {
@@ -84,10 +85,28 @@ class HuntHandler {
 	 *
 	 * @return array The shuffled hunt array.
 	 */
-	public static function get_shuffled_hunt_array() {
-		$hunt_array = self::get_hunt_array();
+	public static function get_random_hunt() {
+		$hunt_array = self::get_hunts_array();
 		shuffle( $hunt_array );
 
 		return $hunt_array;
+	}
+
+	/**
+	 * Get current hunt. If there is no current hunt, create a new one.
+	 *
+	 * @return \Wapuugotchi\Hunt\Models\Hunt The current hunt.
+	 */
+	public static function get_current_hunt() {
+		$current_hunt = get_user_meta( \get_current_user_id(), self::CURRENT_HUNT_CONFIG, true );
+		echo '<pre>';
+		var_dump($current_hunt);
+		wp_die();
+		if ( empty( $current_hunt ) ) {
+			$current_hunt = self::get_random_hunt();
+			update_user_meta( \get_current_user_id(), self::CURRENT_HUNT_CONFIG, $current_hunt );
+		}
+
+		return $current_hunt;
 	}
 }

@@ -5,9 +5,10 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\Mission\Data;
+namespace Wapuugotchi\Shop\data;
 
 use Wapuugotchi\Mission\Handler\MissionHandler;
+use Wapuugotchi\Shop\Handler\ItemHandler;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit();
@@ -32,12 +33,8 @@ class Quests {
 	 * @return bool
 	 */
 	public static function completed() {
-		$user_data = MissionHandler::get_user_data();
-		if ( empty( $user_data ) || empty( $user_data['actions'] ) || empty( $user_data['progress'] ) ) {
-			return false;
-		}
-
-		return count( $user_data['actions'] ) === $user_data['progress'];
+		$items = ItemHandler::get_unlocked_items();
+		return ! empty( $items );
 	}
 
 	/**
@@ -49,7 +46,7 @@ class Quests {
 	 */
 	public static function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Quest\Models\Quest( 'complete_first_mission', null, __( 'Finish your first mission', 'wapuugotchi' ), __( 'Congrats on completing your first mission! \U0001F680\U0001F389', 'wapuugotchi' ), 'success', 100, 5, 'Wapuugotchi\Mission\Data\Quests::always_true', 'Wapuugotchi\Mission\Data\Quests::completed' ),
+			new \Wapuugotchi\Quest\Models\Quest( 'unlock_first_item', null, __( 'Unlock your first item', 'wapuugotchi' ), __( 'Victory! You unlocked your first item! \U0001F4AA\U00002728', 'wapuugotchi' ), 'success', 100, 5, 'Wapuugotchi\Shop\Data\Quests::always_true', 'Wapuugotchi\Shop\Data\Quests::completed' ),
 		);
 
 		return array_merge( $default_quest, $quests );

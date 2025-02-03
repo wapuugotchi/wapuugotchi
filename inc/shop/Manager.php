@@ -7,6 +7,7 @@
 
 namespace Wapuugotchi\Shop;
 
+use Wapuugotchi\Shop\data\Quests;
 use Wapuugotchi\Shop\Handler\AvatarHandler;
 use Wapuugotchi\Shop\Handler\BalanceHandler;
 use Wapuugotchi\Shop\Handler\CategoryHandler;
@@ -32,6 +33,8 @@ class Manager {
 		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
 		\add_action( 'load-wapuugotchi_page_wapuugotchi__shop', array( $this, 'init' ), 100 );
 		\add_filter( 'wapuugotchi_avatar', array( $this, 'modify_avatar' ), 10, 1 );
+		\add_filter( 'wapuugotchi_quest_filter', array( Quests::class, 'add_wapuugotchi_filter' ), 10, 1 );
+
 	}
 
 	/**

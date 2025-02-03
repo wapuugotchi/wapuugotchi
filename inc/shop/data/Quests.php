@@ -46,7 +46,7 @@ class Quests {
 	 */
 	public static function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Quest\Models\Quest( 'unlock_first_item', null, __( 'Unlock your first item', 'wapuugotchi' ), __( 'Victory! You unlocked your first item! \U0001F4AA\U00002728', 'wapuugotchi' ), 'success', 100, 5, 'Wapuugotchi\Shop\Data\Quests::always_true', 'Wapuugotchi\Shop\Data\Quests::completed' ),
+			new \Wapuugotchi\Quest\Models\Quest( 'unlock_first_item', null, __( 'Unlock your first item', 'wapuugotchi' ), __( 'Victory! You unlocked your first item! &#128170;', 'wapuugotchi' ), 'success', 100, 5, 'Wapuugotchi\Shop\Data\Quests::always_true', 'Wapuugotchi\Shop\Data\Quests::completed' ),
 		);
 
 		return array_merge( $default_quest, $quests );

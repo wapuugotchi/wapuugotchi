@@ -49,7 +49,7 @@ class Quests {
 	 */
 	public static function add_wapuugotchi_filter( $quests ) {
 		$default_quest = array(
-			new \Wapuugotchi\Quest\Models\Quest( 'complete_first_mission', null, __( 'Finish your first mission', 'wapuugotchi' ), __( 'Congrats on completing your first mission! \U0001F680\U0001F389', 'wapuugotchi' ), 'success', 100, 5, 'Wapuugotchi\Mission\Data\Quests::always_true', 'Wapuugotchi\Mission\Data\Quests::completed' ),
+			new \Wapuugotchi\Quest\Models\Quest( 'complete_first_mission', null, __( 'Finish your first mission', 'wapuugotchi' ), __( 'Congrats on completing your first mission! &#128170;', 'wapuugotchi' ), 'success', 100, 5, 'Wapuugotchi\Mission\Data\Quests::always_true', 'Wapuugotchi\Mission\Data\Quests::completed' ),
 		);
 
 		return array_merge( $default_quest, $quests );

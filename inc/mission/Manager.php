@@ -10,6 +10,7 @@ namespace Wapuugotchi\Mission;
 use Wapuugotchi\Mission\Data\Missions;
 use Wapuugotchi\Mission\Handler\MissionHandler;
 use Wapuugotchi\Mission\Handler\MapHandler;
+use Wapuugotchi\Mission\Data\Quests;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit();
@@ -27,6 +28,8 @@ class Manager {
 		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 5 );
 		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
 		\add_action( 'load-toplevel_page_wapuugotchi', array( $this, 'init' ), 100 );
+		\add_filter( 'wapuugotchi_quest_filter', array( Quests::class, 'add_wapuugotchi_filter' ), 10, 1 );
+
 	}
 
 	/**

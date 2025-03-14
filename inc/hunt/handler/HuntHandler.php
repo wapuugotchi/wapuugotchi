@@ -71,9 +71,10 @@ class HuntHandler {
 				'id'            => $hunt_item->get_id(),
 				'quest_text'    => $hunt_item->get_quest_text(),
 				'success_text'  => $hunt_item->get_success_text(),
-				'failure_text'  => $hunt_item->get_failure_text(),
 				'page_name'     => $hunt_item->get_page_name(),
 				'selector_name' => $hunt_item->get_selector_name(),
+				'started'       => $hunt_item->is_started(),
+				'completed'     => $hunt_item->is_completed(),
 			);
 		}
 
@@ -87,9 +88,9 @@ class HuntHandler {
 	 */
 	public static function get_random_hunt() {
 		$hunt_array = self::get_hunts_array();
-		shuffle( $hunt_array );
+		\shuffle( $hunt_array );
 
-		return $hunt_array;
+		return \reset($hunt_array );
 	}
 
 	/**
@@ -99,9 +100,6 @@ class HuntHandler {
 	 */
 	public static function get_current_hunt() {
 		$current_hunt = get_user_meta( \get_current_user_id(), self::CURRENT_HUNT_CONFIG, true );
-		echo '<pre>';
-		var_dump($current_hunt);
-		wp_die();
 		if ( empty( $current_hunt ) ) {
 			$current_hunt = self::get_random_hunt();
 			update_user_meta( \get_current_user_id(), self::CURRENT_HUNT_CONFIG, $current_hunt );

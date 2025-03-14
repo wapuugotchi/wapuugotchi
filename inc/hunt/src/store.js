@@ -28,7 +28,7 @@ const store = createReduxStore( STORE_NAME, {
 			// eslint-disable-next-line no-shadow
 			async ( { dispatch } ) => {
 				dispatch.__setState( initialState );
-				const quest = initialState.data[ 0 ]?.quest_text;
+				const quest = initialState.data?.quest_text;
 				const svg = await buildSvg(
 					initialState.avatar,
 					getTags( quest, 25 )
@@ -43,7 +43,10 @@ const store = createReduxStore( STORE_NAME, {
 	},
 	selectors: {
 		__getState: ( state ) => state,
+		getData: ( state ) => state.data,
 		getAvatar: ( state ) => state.avatar,
+		getNonces: ( state ) => state.nonces,
+
 	},
 } );
 

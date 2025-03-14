@@ -37,13 +37,6 @@ class Hunt {
 	private $success_text = '';
 
 	/**
-	 * Notice if the task fails.
-	 *
-	 * @var string
-	 */
-	private $failure_text = '';
-
-	/**
 	 * The page name where the quest item is located.
 	 *
 	 * @var string
@@ -57,9 +50,19 @@ class Hunt {
 	 */
 	private $selector_name = '';
 
+	/**
+	 * Indicates if the hunt has started.
+	 *
+	 * @var bool
+	 */
+	private $started = false;
 
-
-
+	/**
+	 * Indicates if the hunt is completed.
+	 *
+	 * @var bool
+	 */
+	private $completed = false;
 
 	/**
 	 * "Constructor" of this Class
@@ -67,15 +70,13 @@ class Hunt {
 	 * @param string $id ID of the quiz.
 	 * @param string $quest_text Initial quest text.
 	 * @param string $success_text Notice if the task is successfull.
-	 * @param string $failure_text Notice if the task fails.
 	 * @param string $page_name The page name where the quest item is located.
 	 * @param string $selector_name Concrete selector on the page where the quest item is located.
 	 */
-	public function __construct( $id, $quest_text, $success_text, $failure_text, $page_name, $selector_name ) {
+	public function __construct( $id, $quest_text, $success_text, $page_name, $selector_name ) {
 		$this->id            = $id;
 		$this->quest_text    = $quest_text;
 		$this->success_text  = $success_text;
-		$this->failure_text  = $failure_text;
 		$this->page_name     = $page_name;
 		$this->selector_name = $selector_name;
 	}
@@ -108,15 +109,6 @@ class Hunt {
 	}
 
 	/**
-	 * Get the notice if the task fails.
-	 *
-	 * @return string
-	 */
-	public function get_failure_text() {
-		return $this->failure_text;
-	}
-
-	/**
 	 * Get the page name where the quest item is located.
 	 *
 	 * @return string
@@ -132,6 +124,42 @@ class Hunt {
 	 */
 	public function get_selector_name() {
 		return $this->selector_name;
+	}
+
+	/**
+	 * Get the started status of the hunt.
+	 *
+	 * @return bool
+	 */
+	public function is_started() {
+		return $this->started;
+	}
+
+	/**
+	 * Set the started status of the hunt.
+	 *
+	 * @param bool $started Indicates if the hunt has started.
+	 */
+	public function set_started( $started ) {
+		$this->started = $started;
+	}
+
+	/**
+	 * Get the completed status of the hunt.
+	 *
+	 * @return bool
+	 */
+	public function is_completed() {
+		return $this->completed;
+	}
+
+	/**
+	 * Set the completed status of the hunt.
+	 *
+	 * @param bool $completed Indicates if the hunt is completed.
+	 */
+	public function set_completed( $completed ) {
+		$this->completed = $completed;
 	}
 
 	/**
@@ -159,15 +187,6 @@ class Hunt {
 	 */
 	public function set_success_text( $success_text ) {
 		$this->success_text = $success_text;
-	}
-
-	/**
-	 * Set the notice if the task fails.
-	 *
-	 * @param string $failure_text Notice if the task fails.
-	 */
-	public function set_failure_text( $failure_text ) {
-		$this->failure_text = $failure_text;
 	}
 
 	/**

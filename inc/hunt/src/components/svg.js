@@ -1,5 +1,6 @@
 import { useSelect } from '@wordpress/data';
 import { useCallback, useEffect } from '@wordpress/element';
+import apiFetch from '@wordpress/api-fetch';
 import './svg.scss';
 import { STORE_NAME } from '../store';
 
@@ -9,8 +10,10 @@ import { STORE_NAME } from '../store';
  * @return {Object} The rendered component.
  */
 export default function Svg() {
-	const { avatar } = useSelect( ( select ) => ( {
+	const { avatar, data, nonces } = useSelect( ( select ) => ( {
 		avatar: select( STORE_NAME ).getAvatar(),
+		data: select( STORE_NAME ).getData(),
+		nonces: select( STORE_NAME ).getNonces(),
 	} ) );
 
 	/**
@@ -23,23 +26,6 @@ export default function Svg() {
 		const parser = new DOMParser();
 		const doc = parser.parseFromString( svgString, 'image/svg+xml' );
 		return doc.querySelector( 'svg' ).innerHTML;
-	}, [] );
-
-	/**
-	 * Event handler for SVG click. Forwards the click event to the overlay.
-	 *
-	 * @param {Event} event - The click event.
-	 */
-	const handleSvgClick = useCallback( ( event ) => {
-		if ( event.target.id !== 'wapuugotchi_hunt__svg' ) {
-			return;
-		}
-		const overlay = document.querySelector(
-			'.wapuugotchi_mission__overlay'
-		);
-		if ( overlay ) {
-			overlay.click();
-		}
 	}, [] );
 
 	/**
@@ -61,17 +47,25 @@ export default function Svg() {
 		} );
 	}, [] );
 
-	/**
-	 * Effect hook to add and remove the SVG click event listener.
-	 */
-	useEffect( () => {
-		const svgElement = document.querySelector( '#wapuugotchi_hunt__svg' );
-		svgElement.addEventListener( 'click', handleSvgClick );
+	useEffect(() => {
+		const mission = document.querySelector('#mission_section');
+		mission.addEventListener('click', async () => {
+			// activate mission!!
+			console.log('Mission activated!');
 
-		return () => {
-			svgElement.removeEventListener( 'click', handleSvgClick );
-		};
-	}, [ handleSvgClick ] );
+			await apiFetch({
+				path: 'wapuugotchi/v1/hunt/start_mission',
+				method: 'POST',
+				data: {
+					id: data.id,
+					nonce: nonces?.wapuugotchi_hunt,
+				},
+			}).then((response) => {
+				console.log(response);
+			});
+
+		});
+	}, []);
 
 	return (
 		<div className="wapuugotchi_mission__action">

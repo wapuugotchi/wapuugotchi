@@ -29,6 +29,11 @@ class Manager {
 	 */
 	public function __construct() {
 		\add_action( 'load-toplevel_page_wapuugotchi', array( $this, 'init' ) );
+		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
+
+		\add_action( 'admin_enqueue_scripts', array( $this, 'load_seek_scripts' ) );
+
+
 	}
 
 	/**
@@ -38,6 +43,7 @@ class Manager {
 		\add_filter( 'wapuugotchi_register_action__filter', array( $this, 'register_game' ) );
 		\add_filter( 'wapuugotchi_hunt__filter', array( HuntData::class, 'add_wp_hunt' ) );
 		\add_action( 'wapuugotchi_mission__enqueue_scripts', array( $this, 'load_scripts' ) );
+
 	}
 
 	/**
@@ -46,11 +52,10 @@ class Manager {
 	 * @param string $action The action to load the scripts for.
 	 */
 	public function load_scripts( $action ) {
+
 		if ( self::GAME_ID !== $action ) {
 			return;
 		}
-
-		HuntHandler::get_current_hunt();
 
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/hunt.asset.php';
 		\wp_enqueue_style( 'wapuugotchi-hunt', WAPUUGOTCHI_URL . 'build/hunt.css', array(), $assets['version'] );
@@ -64,6 +69,39 @@ class Manager {
 					array(
 						'avatar' => AvatarHandler::get_avatar(),
 						'data'   => HuntHandler::get_current_hunt(),
+						'nonces' => $this->get_nonces(),
+					)
+				)
+			),
+			'after'
+		);
+
+		\wp_set_script_translations( 'wapuugotchi-hunt', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
+	}
+
+	public function load_seek_scripts(  ) {
+		global $current_screen;
+		$current_hunt = HuntHandler::get_current_hunt();
+		if ( ! $current_hunt || ! isset( $current_hunt['started'] ) || ! isset( $current_hunt['page_name'] ) ) {
+			return;
+		}
+
+		if ( $current_hunt['page_name'] !== $current_screen->id ) {
+			return;
+		}
+
+		$assets = include_once WAPUUGOTCHI_PATH . 'build/seek.asset.php';
+		\wp_enqueue_script( 'wapuugotchi-seek', WAPUUGOTCHI_URL . 'build/seek.js', $assets['dependencies'], $assets['version'], true );
+
+		\wp_add_inline_script(
+			'wapuugotchi-hunt',
+			\sprintf(
+				"wp.data.dispatch('wapuugotchi/seek').__initialize(%s)",
+				\wp_json_encode(
+					array(
+						'avatar' => AvatarHandler::get_avatar(),
+						'data'   => $current_hunt,
+						'nonces' => $this->get_nonces(),
 					)
 				)
 			),
@@ -89,4 +127,12 @@ class Manager {
 
 		return $games;
 	}
+
+	private function get_nonces() {
+		return array(
+			'wapuugotchi_hunt' => \wp_create_nonce( 'wapuugotchi_hunt' ),
+			'wapuugotchi_seek' => \wp_create_nonce( 'wapuugotchi_seek' ),
+		);
+	}
+
 }

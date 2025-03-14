@@ -30,18 +30,16 @@ class HuntData {
 			'wp_hunt_1',
 			'Where can you find the latest news about WordPress?',
 			'Well done!',
-			'The time is up! Next time you will make it!',
 			'dashboard',
 			'.welcome-panel-content'
 		);
 
 		$hunt[] = new Hunt(
 			'wp_hunt_2',
-			'Where cou you add a new post?',
+			'Find me! I\'m hiding where you can create new posts.',
 			'Great!',
-			'Time is up! You can do it better!',
-			'dashboard',
-			'.welcome-panel-content'
+			'edit-post',
+			'#cat'
 		);
 
 		return $hunt;

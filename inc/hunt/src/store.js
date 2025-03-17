@@ -46,7 +46,6 @@ const store = createReduxStore( STORE_NAME, {
 		getData: ( state ) => state.data,
 		getAvatar: ( state ) => state.avatar,
 		getNonces: ( state ) => state.nonces,
-
 	},
 } );
 

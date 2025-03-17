@@ -68,13 +68,13 @@ class HuntHandler {
 
 		foreach ( $hunt as $hunt_item ) {
 			$hunt_array[] = array(
-				'id'            => $hunt_item->get_id(),
-				'quest_text'    => $hunt_item->get_quest_text(),
-				'success_text'  => $hunt_item->get_success_text(),
-				'page_name'     => $hunt_item->get_page_name(),
-				'selectors' => $hunt_item->get_selectors(),
-				'started'       => $hunt_item->is_started(),
-				'completed'     => $hunt_item->is_completed(),
+				'id'           => $hunt_item->get_id(),
+				'quest_text'   => $hunt_item->get_quest_text(),
+				'success_text' => $hunt_item->get_success_text(),
+				'page_name'    => $hunt_item->get_page_name(),
+				'selectors'    => $hunt_item->get_selectors(),
+				'started'      => $hunt_item->is_started(),
+				'completed'    => $hunt_item->is_completed(),
 			);
 		}
 
@@ -90,7 +90,7 @@ class HuntHandler {
 		$hunt_array = self::get_hunts_array();
 		\shuffle( $hunt_array );
 
-		return \reset($hunt_array );
+		return \reset( $hunt_array );
 	}
 
 	/**

@@ -32,8 +32,6 @@ class Manager {
 		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
 
 		\add_action( 'admin_enqueue_scripts', array( $this, 'load_seek_scripts' ) );
-
-
 	}
 
 	/**
@@ -43,7 +41,6 @@ class Manager {
 		\add_filter( 'wapuugotchi_register_action__filter', array( $this, 'register_game' ) );
 		\add_filter( 'wapuugotchi_hunt__filter', array( HuntData::class, 'add_wp_hunt' ) );
 		\add_action( 'wapuugotchi_mission__enqueue_scripts', array( $this, 'load_scripts' ) );
-
 	}
 
 	/**
@@ -78,7 +75,7 @@ class Manager {
 		\wp_set_script_translations( 'wapuugotchi-hunt', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
-	public function load_seek_scripts(  ) {
+	public function load_seek_scripts() {
 		global $current_screen;
 		$current_hunt = HuntHandler::get_current_hunt();
 
@@ -138,5 +135,4 @@ class Manager {
 			'wapuugotchi_seek' => \wp_create_nonce( 'wapuugotchi_seek' ),
 		);
 	}
-
 }

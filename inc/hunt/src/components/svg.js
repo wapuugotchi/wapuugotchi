@@ -47,25 +47,21 @@ export default function Svg() {
 		} );
 	}, [] );
 
-	useEffect(() => {
-		const mission = document.querySelector('#mission_section');
-		mission.addEventListener('click', async () => {
+	useEffect( () => {
+		const mission = document.querySelector( '#mission_section' );
+		mission.addEventListener( 'click', async () => {
 			// activate mission!!
-			console.log('Mission activated!');
 
-			await apiFetch({
+			await apiFetch( {
 				path: 'wapuugotchi/v1/hunt/start_mission',
 				method: 'POST',
 				data: {
 					id: data.id,
 					nonce: nonces?.wapuugotchi_hunt,
 				},
-			}).then((response) => {
-				console.log(response);
-			});
-
-		});
-	}, []);
+			} );
+		} );
+	}, [] );
 
 	return (
 		<div className="wapuugotchi_mission__action">

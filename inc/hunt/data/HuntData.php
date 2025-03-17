@@ -39,7 +39,7 @@ class HuntData {
 			'Find me! I\'m hiding where you can create new posts.',
 			'Great!',
 			'edit-post',
-			['#cat', '#doaction2', '#post-query-submit', '#doaction', '#doactiondoaction']
+			array( '#cat', '#doaction2', '#post-query-submit', '#doaction', '#doactiondoaction' )
 		);
 
 		return $hunt;

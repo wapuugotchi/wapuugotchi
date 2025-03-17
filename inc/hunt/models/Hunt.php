@@ -46,9 +46,9 @@ class Hunt {
 	/**
 	 * Concrete selector on the page where the quest item is located.
 	 *
-	 * @var string
+	 * @var array
 	 */
-	private $selector_name = '';
+	private $selectors = '';
 
 	/**
 	 * Indicates if the hunt has started.
@@ -71,14 +71,14 @@ class Hunt {
 	 * @param string $quest_text Initial quest text.
 	 * @param string $success_text Notice if the task is successfull.
 	 * @param string $page_name The page name where the quest item is located.
-	 * @param string $selector_name Concrete selector on the page where the quest item is located.
+	 * @param array $selectors Concrete selector on the page where the quest item is located.
 	 */
-	public function __construct( $id, $quest_text, $success_text, $page_name, $selector_name ) {
+	public function __construct( $id, $quest_text, $success_text, $page_name, $selectors ) {
 		$this->id            = $id;
 		$this->quest_text    = $quest_text;
 		$this->success_text  = $success_text;
 		$this->page_name     = $page_name;
-		$this->selector_name = $selector_name;
+		$this->selectors     = $selectors;
 	}
 
 	/**
@@ -120,10 +120,10 @@ class Hunt {
 	/**
 	 * Get the concrete selector on the page where the quest item is located.
 	 *
-	 * @return string
+	 * @return array
 	 */
-	public function get_selector_name() {
-		return $this->selector_name;
+	public function get_selectors() {
+		return $this->selectors;
 	}
 
 	/**
@@ -201,9 +201,9 @@ class Hunt {
 	/**
 	 * Set the concrete selector on the page where the quest item is located.
 	 *
-	 * @param string $selector_name Concrete selector on the page where the quest item is located.
+	 * @param array $selectors Concrete selector on the page where the quest item is located.
 	 */
-	public function set_selector_name( $selector_name ) {
-		$this->selector_name = $selector_name;
+	public function set_selectors( $selectors ) {
+		$this->selectors = $selectors;
 	}
 }

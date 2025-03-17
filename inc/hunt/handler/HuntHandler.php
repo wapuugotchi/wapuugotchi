@@ -72,7 +72,7 @@ class HuntHandler {
 				'quest_text'    => $hunt_item->get_quest_text(),
 				'success_text'  => $hunt_item->get_success_text(),
 				'page_name'     => $hunt_item->get_page_name(),
-				'selector_name' => $hunt_item->get_selector_name(),
+				'selectors' => $hunt_item->get_selectors(),
 				'started'       => $hunt_item->is_started(),
 				'completed'     => $hunt_item->is_completed(),
 			);

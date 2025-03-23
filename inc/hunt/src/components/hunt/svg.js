@@ -2,7 +2,7 @@ import { useSelect } from '@wordpress/data';
 import { useCallback, useEffect } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 import './svg.scss';
-import { STORE_NAME } from '../store';
+import { STORE_NAME } from '../../store';
 
 /**
  * The Svg component. It renders the avatar SVG with the hunt data.
@@ -51,7 +51,10 @@ export default function Svg() {
 		const mission = document.querySelector( '#mission_section' );
 		mission.addEventListener( 'click', async () => {
 			// activate mission!!
-
+			console.log( data )
+			if ( data?.state !== 'none' ) {
+				return;
+			}
 			await apiFetch( {
 				path: 'wapuugotchi/v1/hunt/start_mission',
 				method: 'POST',

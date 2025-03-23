@@ -51,18 +51,11 @@ class Hunt {
 	private $selectors = '';
 
 	/**
-	 * Indicates if the hunt has started.
+	 * Indicates the state of the hunt.
 	 *
-	 * @var bool
+	 * @var string
 	 */
-	private $started = false;
-
-	/**
-	 * Indicates if the hunt is completed.
-	 *
-	 * @var bool
-	 */
-	private $completed = false;
+	private $state = 'none';
 
 	/**
 	 * "Constructor" of this Class
@@ -127,39 +120,21 @@ class Hunt {
 	}
 
 	/**
-	 * Get the started status of the hunt.
+	 * Get the state of the hunt.
 	 *
-	 * @return bool
+	 * @return string
 	 */
-	public function is_started() {
-		return $this->started;
+	public function get_state() {
+		return $this->state;
 	}
 
 	/**
-	 * Set the started status of the hunt.
+	 * Set the state of the hunt.
 	 *
-	 * @param bool $started Indicates if the hunt has started.
+	 * @param string $state The state of the hunt.
 	 */
-	public function set_started( $started ) {
-		$this->started = $started;
-	}
-
-	/**
-	 * Get the completed status of the hunt.
-	 *
-	 * @return bool
-	 */
-	public function is_completed() {
-		return $this->completed;
-	}
-
-	/**
-	 * Set the completed status of the hunt.
-	 *
-	 * @param bool $completed Indicates if the hunt is completed.
-	 */
-	public function set_completed( $completed ) {
-		$this->completed = $completed;
+	public function set_state( $state ) {
+		$this->state = $state;
 	}
 
 	/**

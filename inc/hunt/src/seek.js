@@ -1,6 +1,6 @@
 import { createRoot, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
-import Hidden from './components/hidden';
+import Hidden from './components/seek/main';
 
 const getDomElement = () => {
 	let domElement = document.getElementById( 'wapuugotchi__seek' );

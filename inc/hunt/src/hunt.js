@@ -1,6 +1,6 @@
 import { createRoot, StrictMode } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
-import Svg from './components/svg';
+import Svg from './components/hunt/svg';
 
 /**
  * Wartet auf das Erscheinen eines Elements im DOM und gibt dieses zurück.

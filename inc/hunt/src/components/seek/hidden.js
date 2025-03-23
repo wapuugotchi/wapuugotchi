@@ -1,10 +1,12 @@
-import { useEffect, useRef } from 'react';
-import HideAndSeekSVG from '../../assets/hide-and-seek.svg';
-import { useSelect } from '@wordpress/data';
-import { STORE_NAME } from '../store';
-import './hidden.scss';
+import HideAndSeekSVG from "../../../assets/hide-and-seek.svg";
+import {useEffect, useRef} from "@wordpress/element";
+import {dispatch, useSelect} from "@wordpress/data";
+import {STORE_NAME} from "../../store";
+import apiFetch from "@wordpress/api-fetch";
+
 
 const HEIGHT = 30;
+
 /**
  * Decodes a base64 string.
  *
@@ -13,15 +15,9 @@ const HEIGHT = 30;
  */
 const decodeBase64 = ( base64 ) => {
 	return decodeURIComponent(
-		atob( base64 )
-			.split( '' )
-			.map( ( c ) => {
-				return (
-					'%' +
-					( '00' + c.charCodeAt( 0 ).toString( 16 ) ).slice( -2 )
-				);
-			} )
-			.join( '' )
+		atob( base64 ).split( '' ).map( ( c ) => {
+				return ('%' + ( '00' + c.charCodeAt( 0 ).toString( 16 ) ).slice( -2 ));
+		} ).join( '' )
 	);
 };
 
@@ -66,42 +62,40 @@ const positionSeekElement = ( selectors ) => {
 	return seekElement;
 };
 
-export default function Hidden() {
-	const { data, avatar } = useSelect( ( select ) => ( {
-		data: select( STORE_NAME ).getData(),
-		avatar: select( STORE_NAME ).getAvatar(),
+export default function Hidden( { svg } ) {
+	const { data, nonces } = useSelect( ( select ) => ( {
+		nonces: select( STORE_NAME ).getNonces(),
+		data: select( STORE_NAME ).getData()
 	} ) );
 
 	const hasPositioned = useRef( false );
-
 	useEffect( () => {
 		const executeSeek = ( event ) => {
-			//entferne das svg dass das seek element versteckt und füge staddessen das avatar svg hinzu
-			event.target.querySelector( 'svg' ).remove();
-			event.target.innerHTML = avatar;
-			event.target.style.position = 'absolute';
-			event.target.style.top = '50%';
-			event.target.style.left = '50%';
-			event.target.style.transform = 'translate(-50%, -50%)';
-			event.target.style.width = '400px';
-			event.target.style.height = '400px';
-			event.target.classList.add( 'fade-out' );
-
-			setTimeout( () => {
-				event.target.removeEventListener( 'click', executeSeek );
-				event.target.remove();
-			}, 4000 );
-
-			//entferne den event listener
+			event.target.removeEventListener( 'click', executeSeek );
 		};
 
-		if ( data?.selectors && ! hasPositioned.current ) {
-			positionSeekElement( data.selectors );
-			hasPositioned.current = true;
-
-			const seekElement = document.getElementById( 'wapuugotchi__seek' );
-			seekElement.addEventListener( 'click', executeSeek );
+		if ( !data?.selectors || hasPositioned.current ) {
+			return;
 		}
+
+		positionSeekElement( data.selectors );
+		hasPositioned.current = true;
+
+		const seekElement = document.querySelector( '#wapuugotchi__seek' );
+		seekElement.addEventListener( 'click', async () => {
+			// activate mission!!
+
+			await apiFetch( {
+				path: 'wapuugotchi/v1/hunt/complete_mission',
+				method: 'POST',
+				data: {
+					id: data.id,
+					nonce: nonces?.wapuugotchi_hunt,
+				},
+			} ).then( () => {
+				dispatch( STORE_NAME ).setCompleted( true );
+			} );
+		} );
 	}, [ data ] );
 
 	return (
@@ -113,6 +107,5 @@ export default function Hidden() {
 			version="1.1"
 			viewBox="0 0 26 14"
 			dangerouslySetInnerHTML={ { __html: prepareSvg( HideAndSeekSVG ) } }
-		></svg>
-	);
+		></svg>	);
 }

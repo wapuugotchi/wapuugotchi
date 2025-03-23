@@ -27,7 +27,7 @@
 		"test": "npx playwright test --config playwright.config.js tests"
 	},
 	"config": {
-		"js_sources": "build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js inc/mission/src/mission.js inc/quiz/src/quiz.js inc/hunt/src/hide.js inc/hunt/src/seek.js"
+		"js_sources": "build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js inc/mission/src/mission.js inc/quiz/src/quiz.js inc/hunt/src/hunt.js inc/hunt/src/seek.js"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.49.1",

@@ -33,8 +33,26 @@ class Api {
 			'/hunt/start_mission',
 			array(
 				'methods'             => 'POST',
-				'callback'            => array( self::class, 'start_mission' ),
-				'permission_callback' => array( self::class, 'has_start_mission_permission' ),
+				'callback'            => array( self::class, 'handle_mission' ),
+				'permission_callback' => array( self::class, 'has_permission' ),
+			)
+		);
+		\register_rest_route(
+			self::REST_BASE,
+			'/hunt/complete_mission',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( self::class, 'handle_mission' ),
+				'permission_callback' => array( self::class, 'has_permission' ),
+			)
+		);
+		\register_rest_route(
+			self::REST_BASE,
+			'/hunt/delete_mission',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( self::class, 'handle_mission' ),
+				'permission_callback' => array( self::class, 'has_permission' ),
 			)
 		);
 	}
@@ -44,11 +62,17 @@ class Api {
 	 *
 	 * @return bool
 	 */
-	public static function has_start_mission_permission() {
+	public static function has_permission() {
 		return \is_user_logged_in();
 	}
 
-	public static function start_mission( $req ) {
+	/**
+	 * Handle mission start and completion.
+	 *
+	 * @param \WP_REST_Request $req The request object.
+	 * @return \WP_REST_Response
+	 */
+	public static function handle_mission( $req ) {
 		$body = \json_decode( $req->get_body() );
 
 		if ( ! isset( $body->id ) ) {
@@ -69,8 +93,24 @@ class Api {
 			);
 		}
 
-		$current_hunt            = HuntHandler::get_current_hunt();
-		$current_hunt['started'] = true;
+		$current_hunt = HuntHandler::get_current_hunt();
+
+		switch ( $req->get_route() ) {
+			case '/' . self::REST_BASE . '/hunt/start_mission':
+				$current_hunt['state'] = 'started';
+				break;
+			case '/' . self::REST_BASE . '/hunt/complete_mission':
+				$current_hunt['state'] = 'completed';
+				break;
+			case '/' . self::REST_BASE . '/hunt/bill_mission':
+				$current_hunt['state'] = 'billed';
+				break;
+			default:
+				return rest_ensure_response(
+					new \WP_REST_Response( array( 'error' => 'invalid route', 'route' => $req->get_route() ), 400 )
+				);
+		}
+
 		\update_user_meta( \get_current_user_id(), HuntHandler::CURRENT_HUNT_CONFIG, $current_hunt );
 
 		return rest_ensure_response(

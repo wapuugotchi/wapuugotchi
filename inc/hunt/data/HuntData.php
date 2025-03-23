@@ -27,14 +27,6 @@ class HuntData {
 	 */
 	public static function add_wp_hunt( $hunt ) {
 		$hunt[] = new Hunt(
-			'wp_hunt_1',
-			'Where can you find the latest news about WordPress?',
-			'Well done!',
-			'dashboard',
-			'.welcome-panel-content'
-		);
-
-		$hunt[] = new Hunt(
 			'wp_hunt_2',
 			'Find me! I\'m hiding where you can create new posts.',
 			'Great!',

@@ -53,12 +53,12 @@ class Manager {
 			return;
 		}
 
-		$assets = include_once WAPUUGOTCHI_PATH . 'build/hide.asset.php';
-		\wp_enqueue_style( 'wapuugotchi-hide', WAPUUGOTCHI_URL . 'build/hide.css', array(), $assets['version'] );
-		\wp_enqueue_script( 'wapuugotchi-hide', WAPUUGOTCHI_URL . 'build/hide.js', $assets['dependencies'], $assets['version'], true );
+		$assets = include_once WAPUUGOTCHI_PATH . 'build/hunt.asset.php';
+		\wp_enqueue_style( 'wapuugotchi-hunt', WAPUUGOTCHI_URL . 'build/hunt.css', array(), $assets['version'] );
+		\wp_enqueue_script( 'wapuugotchi-hunt', WAPUUGOTCHI_URL . 'build/hunt.js', $assets['dependencies'], $assets['version'], true );
 
 		\wp_add_inline_script(
-			'wapuugotchi-hide',
+			'wapuugotchi-hunt',
 			\sprintf(
 				"wp.data.dispatch('wapuugotchi/hunt').__initialize(%s)",
 				\wp_json_encode(
@@ -78,8 +78,7 @@ class Manager {
 	public function load_seek_scripts() {
 		global $current_screen;
 		$current_hunt = HuntHandler::get_current_hunt();
-
-		if ( ! $current_hunt || ! isset( $current_hunt['started'] ) || ! isset( $current_hunt['page_name'] ) ) {
+		if ( ! $current_hunt || ! isset( $current_hunt['state'] ) ||  ! isset( $current_hunt['page_name'] ) ) {
 			return;
 		}
 		if ( $current_hunt['page_name'] !== $current_screen->id ) {

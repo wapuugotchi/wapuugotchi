@@ -106,4 +106,11 @@ class HuntHandler {
 
 		return $current_hunt;
 	}
+
+	public static function get_new_hunt() {
+		$current_hunt = self::get_random_hunt();
+		update_user_meta( \get_current_user_id(), self::CURRENT_HUNT_CONFIG, $current_hunt );
+
+		return $current_hunt;
+	}
 }

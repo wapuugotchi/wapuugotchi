@@ -102,8 +102,8 @@ class Api {
 			case '/' . self::REST_BASE . '/hunt/complete_mission':
 				$current_hunt['state'] = 'completed';
 				break;
-			case '/' . self::REST_BASE . '/hunt/bill_mission':
-				$current_hunt['state'] = 'billed';
+			case '/' . self::REST_BASE . '/hunt/delete_mission':
+				$current_hunt['state'] = 'closed';
 				break;
 			default:
 				return rest_ensure_response(

@@ -16,12 +16,20 @@ export default function Sought() {
 	}, [] );
 
 	useEffect( () => {
-		const overlay = document.querySelector('.wapuugotchi_mission__overlay');
+		const overlay = document.querySelector(
+			'.wapuugotchi_mission__overlay'
+		);
 
 		if ( overlay ) {
 			const hideAction = ( event ) => {
-				if ( event.key === 'Escape' || event.target.classList.contains('wapuugotchi_mission__overlay')) {
-					overlay.classList.add('hidden');
+				if (
+					event.key === 'Escape' ||
+					event.target.classList.contains(
+						'wapuugotchi_mission__overlay'
+					)
+				) {
+					window.location.href =
+						'/wp-admin/admin.php?page=wapuugotchi';
 				}
 			};
 

@@ -1,9 +1,8 @@
-import HideAndSeekSVG from "../../../assets/hide-and-seek.svg";
-import {useEffect, useRef} from "@wordpress/element";
-import {dispatch, useSelect} from "@wordpress/data";
-import {STORE_NAME} from "../../store";
-import apiFetch from "@wordpress/api-fetch";
-
+import HideAndSeekSVG from '../../../assets/hide-and-seek.svg';
+import { useEffect, useRef } from '@wordpress/element';
+import { dispatch, useSelect } from '@wordpress/data';
+import { STORE_NAME } from '../../store';
+import apiFetch from '@wordpress/api-fetch';
 
 const HEIGHT = 30;
 
@@ -15,9 +14,15 @@ const HEIGHT = 30;
  */
 const decodeBase64 = ( base64 ) => {
 	return decodeURIComponent(
-		atob( base64 ).split( '' ).map( ( c ) => {
-				return ('%' + ( '00' + c.charCodeAt( 0 ).toString( 16 ) ).slice( -2 ));
-		} ).join( '' )
+		atob( base64 )
+			.split( '' )
+			.map( ( c ) => {
+				return (
+					'%' +
+					( '00' + c.charCodeAt( 0 ).toString( 16 ) ).slice( -2 )
+				);
+			} )
+			.join( '' )
 	);
 };
 
@@ -62,19 +67,15 @@ const positionSeekElement = ( selectors ) => {
 	return seekElement;
 };
 
-export default function Hidden( { svg } ) {
+export default function Hidden() {
 	const { data, nonces } = useSelect( ( select ) => ( {
 		nonces: select( STORE_NAME ).getNonces(),
-		data: select( STORE_NAME ).getData()
+		data: select( STORE_NAME ).getData(),
 	} ) );
 
 	const hasPositioned = useRef( false );
 	useEffect( () => {
-		const executeSeek = ( event ) => {
-			event.target.removeEventListener( 'click', executeSeek );
-		};
-
-		if ( !data?.selectors || hasPositioned.current ) {
+		if ( ! data?.selectors || hasPositioned.current ) {
 			return;
 		}
 
@@ -107,5 +108,6 @@ export default function Hidden( { svg } ) {
 			version="1.1"
 			viewBox="0 0 26 14"
 			dangerouslySetInnerHTML={ { __html: prepareSvg( HideAndSeekSVG ) } }
-		></svg>	);
+		></svg>
+	);
 }

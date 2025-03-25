@@ -30,7 +30,6 @@ class Manager {
 	public function __construct() {
 		\add_action( 'load-toplevel_page_wapuugotchi', array( $this, 'init' ) );
 		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
-
 		\add_action( 'admin_enqueue_scripts', array( $this, 'load_seek_scripts' ) );
 	}
 
@@ -43,6 +42,7 @@ class Manager {
 		\add_action( 'wapuugotchi_mission__enqueue_scripts', array( $this, 'load_scripts' ) );
 	}
 
+
 	/**
 	 * Load the scripts for the Hunt page.
 	 *
@@ -51,6 +51,16 @@ class Manager {
 	public function load_scripts( $action ) {
 		if ( self::GAME_ID !== $action ) {
 			return;
+		}
+
+		$current_hunt = HuntHandler::get_current_hunt();
+		if ( isset( $current_hunt['state'] ) ) {
+			if ( $current_hunt['state'] === 'completed' ) {
+				$current_hunt['state'] = 'payout';
+			} elseif ( $current_hunt['state'] === 'closed' ) {
+				$current_hunt = HuntHandler::get_new_hunt();
+			}
+			// payout is handled by the hunt store and ensures that the mission set is completed and set to the status closed
 		}
 
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/hunt.asset.php';
@@ -64,7 +74,7 @@ class Manager {
 				\wp_json_encode(
 					array(
 						'avatar' => AvatarHandler::get_avatar(),
-						'data'   => HuntHandler::get_current_hunt(),
+						'data'   => $current_hunt,
 						'nonces' => $this->get_nonces(),
 					)
 				)
@@ -78,7 +88,7 @@ class Manager {
 	public function load_seek_scripts() {
 		global $current_screen;
 		$current_hunt = HuntHandler::get_current_hunt();
-		if ( ! $current_hunt || ! isset( $current_hunt['state'] ) || ! isset( $current_hunt['page_name'] ) ) {
+		if ( ! $current_hunt || ! isset( $current_hunt['state'] ) || $current_hunt['state'] !== 'started' || ! isset( $current_hunt['page_name'] ) ) {
 			return;
 		}
 		if ( $current_hunt['page_name'] !== $current_screen->id ) {

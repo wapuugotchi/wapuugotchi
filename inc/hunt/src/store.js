@@ -7,15 +7,14 @@ import { buildSvg } from './utils/avatarUtils';
 import { getTags } from './utils/textUtils';
 import apiFetch from '@wordpress/api-fetch';
 
-
 // Store-Namen für die Hunt- und Missionskomponenten
 const STORE_NAME = 'wapuugotchi/hunt';
 const MISSION_STORE_NAME = 'wapuugotchi/mission';
 
 /**
  * This function deletes the mission.
- * @param {string} id  - The mission ID.
- * @param {string} nonce  - The nonce for the billing.
+ * @param {string} id    - The mission ID.
+ * @param {string} nonce - The nonce for the billing.
  */
 function __deleteMission( id, nonce ) {
 	apiFetch( {
@@ -23,11 +22,10 @@ function __deleteMission( id, nonce ) {
 		method: 'POST',
 		data: {
 			id,
-			nonce
+			nonce,
 		},
 	} );
 }
-
 
 // Definition des Redux Stores
 const store = createReduxStore( STORE_NAME, {
@@ -56,13 +54,12 @@ const store = createReduxStore( STORE_NAME, {
 				);
 				dispatch.setAvatar( svg );
 
-				if (select.getData()?.state === 'completed') {
-					console.log('mops');
-					//globalDispatch( MISSION_STORE_NAME )?.setCompleted();
-					//__deleteMission(
-					//	select.getData()?.id,
-					//	select.getNonces()?.wapuugotchi_hunt
-					//);
+				if ( select.getData()?.state === 'payout' ) {
+					globalDispatch( MISSION_STORE_NAME )?.setCompleted();
+					__deleteMission(
+						select.getData()?.id,
+						select.getNonces()?.wapuugotchi_hunt
+					);
 				}
 			},
 		__setState: ( payload ) => ( { type: '__SET_STATE', payload } ),

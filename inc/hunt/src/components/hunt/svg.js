@@ -50,8 +50,6 @@ export default function Svg() {
 	useEffect( () => {
 		const mission = document.querySelector( '#mission_section' );
 		mission.addEventListener( 'click', async () => {
-			// activate mission!!
-			console.log( data )
 			if ( data?.state !== 'none' ) {
 				return;
 			}

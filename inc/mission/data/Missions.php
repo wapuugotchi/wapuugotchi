@@ -62,20 +62,20 @@ class Missions {
 							->set_reward( 3 );
 
 		$missions[] = Mission::create()
-		                     ->set_id( 'frozen_village' )
-		                     ->set_name( __( 'The Frozen Village', 'wapuugotchi' ) )
-		                     ->set_description( __( 'Join your brave Wapuu on a daring journey through the burning rivers, where the air shimmers with heat and every choice matters. Treacherous currents and challenging puzzles await to test your resolve! Only with your support can your Wapuu overcome the dangers ahead. Stand by your courageous companion and together, craft a heroic tale that begins in the burning rivers!', 'wapuugotchi' ) )
-		                     ->set_url( 'https://api.wapuugotchi.com/missions/frozen_village_1/image.svg' )
-		                     ->set_markers(
-			                     array(
-				                     __( 'Wapuu arrives at the Yeti Village, where he hears about a mysterious treasure. The villagers tell him about a hermit who possesses valuable information. However, before they reveal the hermit\'s location, Wapuu must solve a tricky riddle.', 'wapuugotchi' ),
-				                     __( 'The villagers have told Wapuu that the hermit has set up camp near the great rift. However, when Wapuu arrives, the camp is deserted. Inside an old igloo, he discovers a hidden message. Can he solve the riddle to find out where the hermit has gone?', 'wapuugotchi' ),
-				                     __( 'Wapuu learns that the hermit has gone hunting. When he arrives at the hunting grounds, he finds the hermit injured. The old man has stepped into a thorn trap and urgently needs medicine. However, the location of the remedy is hidden behind another riddle.', 'wapuugotchi' ),
-				                     __( 'Wapuu discovers that the medicine can be found at the Ice Crystal. Together with the hermit, he sets off to retrieve it. When sunlight hits the crystal, it begins to glow in different colors, revealing a mysterious puzzle. Only by solving it can Wapuu obtain the cure.', 'wapuugotchi' ),
-				                     __( 'The medicine works quickly, and the hermit recovers in no time. Grateful for Wapuu’s help, he leads him to the treasure. However, before Wapuu can claim it, the hermit presents him with one final riddle. Can Wapuu solve it and secure the legendary treasure?', 'wapuugotchi' )
-			                     )
-		                     )
-		                     ->set_reward( 3 );
+							->set_id( 'frozen_village' )
+							->set_name( __( 'The Frozen Village', 'wapuugotchi' ) )
+							->set_description( __( 'Join your brave Wapuu on a daring journey through the burning rivers, where the air shimmers with heat and every choice matters. Treacherous currents and challenging puzzles await to test your resolve! Only with your support can your Wapuu overcome the dangers ahead. Stand by your courageous companion and together, craft a heroic tale that begins in the burning rivers!', 'wapuugotchi' ) )
+							->set_url( 'https://api.wapuugotchi.com/missions/frozen_village_1/image.svg' )
+							->set_markers(
+								array(
+									__( 'Wapuu arrives at the Yeti Village, where he hears about a mysterious treasure. The villagers tell him about a hermit who possesses valuable information. However, before they reveal the hermit\'s location, Wapuu must solve a tricky riddle.', 'wapuugotchi' ),
+									__( 'The villagers have told Wapuu that the hermit has set up camp near the great rift. However, when Wapuu arrives, the camp is deserted. Inside an old igloo, he discovers a hidden message. Can he solve the riddle to find out where the hermit has gone?', 'wapuugotchi' ),
+									__( 'Wapuu learns that the hermit has gone hunting. When he arrives at the hunting grounds, he finds the hermit injured. The old man has stepped into a thorn trap and urgently needs medicine. However, the location of the remedy is hidden behind another riddle.', 'wapuugotchi' ),
+									__( 'Wapuu discovers that the medicine can be found at the Ice Crystal. Together with the hermit, he sets off to retrieve it. When sunlight hits the crystal, it begins to glow in different colors, revealing a mysterious puzzle. Only by solving it can Wapuu obtain the cure.', 'wapuugotchi' ),
+									__( 'The medicine works quickly, and the hermit recovers in no time. Grateful for Wapuu’s help, he leads him to the treasure. However, before Wapuu can claim it, the hermit presents him with one final riddle. Can Wapuu solve it and secure the legendary treasure?', 'wapuugotchi' ),
+								)
+							)
+							->set_reward( 3 );
 
 		return $missions;
 	}

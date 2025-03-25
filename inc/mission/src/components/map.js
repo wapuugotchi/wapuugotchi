@@ -30,7 +30,7 @@ export default function Map() {
 		highlights.forEach( ( highlight ) => {
 			if ( highlight.classList.contains( `visible-at-progress_${highlightsTarget}` ) ) {
 				highlight.style.opacity = 'var(--active-oc)';
-				if ( missionSection ) highlight.style.fill = 'var(--highlight)';
+				highlight.style.fill = 'var(--highlight)';
 			} else {
 				highlight.style.opacity = 'var(--inactive-oc)';
 			}

@@ -29,10 +29,10 @@ export default function Map() {
 		const highlights = svgElement.querySelectorAll( '[class*="visible-at-progress_"]' );
 		highlights.forEach( ( highlight ) => {
 			if ( highlight.classList.contains( `visible-at-progress_${highlightsTarget}` ) ) {
-				highlight.style.opacity = 1;
-				if ( ! missionSection ) highlight.style.fill = 'none';
+				highlight.style.opacity = 'var(--active-oc)';
+				if ( missionSection ) highlight.style.fill = 'var(--highlight)';
 			} else {
-				highlight.style.opacity = 0;
+				highlight.style.opacity = 'var(--inactive-oc)';
 			}
 		} );
 	},[] );

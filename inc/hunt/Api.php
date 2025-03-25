@@ -107,7 +107,13 @@ class Api {
 				break;
 			default:
 				return rest_ensure_response(
-					new \WP_REST_Response( array( 'error' => 'invalid route', 'route' => $req->get_route() ), 400 )
+					new \WP_REST_Response(
+						array(
+							'error' => 'invalid route',
+							'route' => $req->get_route(),
+						),
+						400
+					)
 				);
 		}
 

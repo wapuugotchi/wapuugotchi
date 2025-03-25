@@ -78,7 +78,7 @@ class Manager {
 	public function load_seek_scripts() {
 		global $current_screen;
 		$current_hunt = HuntHandler::get_current_hunt();
-		if ( ! $current_hunt || ! isset( $current_hunt['state'] ) ||  ! isset( $current_hunt['page_name'] ) ) {
+		if ( ! $current_hunt || ! isset( $current_hunt['state'] ) || ! isset( $current_hunt['page_name'] ) ) {
 			return;
 		}
 		if ( $current_hunt['page_name'] !== $current_screen->id ) {

@@ -21,6 +21,28 @@ export default function Map() {
 			return;
 		}
 
+		const missionSection = svgElement.querySelector(
+			'#mission_section text.active'
+		);
+
+		const highlightsTarget = ! missionSection ? progress : progress + 1;
+		const highlights = svgElement.querySelectorAll( '[class*="visible-at-progress_"]' );
+		highlights.forEach( ( highlight ) => {
+			if ( highlight.classList.contains( `visible-at-progress_${highlightsTarget}` ) ) {
+				highlight.style.opacity = 'var(--active-oc)';
+				highlight.style.fill = 'var(--highlight)';
+			} else {
+				highlight.style.opacity = 'var(--inactive-oc)';
+			}
+		} );
+	},[] );
+
+	useEffect( () => {
+		const svgElement = svgRef.current;
+		if ( ! svgElement ) {
+			return;
+		}
+
 		const missionSection = svgElement.querySelector( '#mission_section' );
 		if ( ! missionSection ) {
 			return;

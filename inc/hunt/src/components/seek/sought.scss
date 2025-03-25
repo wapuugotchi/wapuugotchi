@@ -1,0 +1,18 @@
+#wapuugotchi__seek .wapuugotchi_mission__overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	z-index: 1;
+	pointer-events: all;
+
+	.wapuugotchi_mission__action {
+		display: flex;
+		justify-content: center;
+		padding: 0 100px;
+		pointer-events: none;
+
+		svg {
+			height: 100vh;
+			max-width: 500px;
+		}
+	}
+}

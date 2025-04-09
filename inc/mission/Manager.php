@@ -46,7 +46,7 @@ class Manager {
 
 		// If the user data is not valid or the mission is locked, initialize a new mission.
 		// If the mission is locked, the mission will be initialized tomorrow.
-		if ( ! MissionHandler::validate_user_data( $user_data ) && false === MissionHandler::is_mission_locked( $user_data ) ) {
+		if ( ( ! MissionHandler::validate_user_data( $user_data ) && false === MissionHandler::is_mission_locked( $user_data ) ) || empty( MissionHandler::get_mission_by_id( $user_data['id'] ) ) ) {
 			$user_data = MissionHandler::init_mission();
 		}
 

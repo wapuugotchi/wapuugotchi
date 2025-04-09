@@ -97,7 +97,7 @@ class HuntHandler {
 	 *
 	 * @return \Wapuugotchi\Hunt\Models\Hunt The current hunt.
 	 */
-	public static function get_current_hunt() {
+	private static function get_users_hunt () {
 		$current_hunt = get_user_meta( \get_current_user_id(), self::CURRENT_HUNT_CONFIG, true );
 		if ( empty( $current_hunt ) ) {
 			$current_hunt = self::get_random_hunt();
@@ -107,6 +107,46 @@ class HuntHandler {
 		return $current_hunt;
 	}
 
+	/**
+	 * Get the hunt id list.
+	 *
+	 * @return array The hunt id list.
+	 */
+	private static function get_hunt_id_list() {
+		$hunt_array = self::get_hunts_array();
+		$hunt_ids   = array();
+
+		foreach ( $hunt_array as $hunt_item ) {
+			$hunt_ids[] = $hunt_item['id'];
+		}
+
+		return $hunt_ids;
+	}
+
+	/**
+	 * Get the current hunt.
+	 *
+	 * @return \Wapuugotchi\Hunt\Models\Hunt The current hunt.
+	 */
+	public static function get_current_hunt() {
+		$all_hunts = self::get_hunt_id_list();
+		$user_hunt = self::get_users_hunt();
+
+		if ( empty( $user_hunt ) || ! isset( $user_hunt['id'] ) ) {
+			return self::get_new_hunt();
+		}
+		if ( ! in_array( $user_hunt['id'], $all_hunts, true ) ) {
+			return self::get_new_hunt();
+		}
+
+		return $user_hunt;
+	}
+
+	/**
+	 * Get a new hunt.
+	 *
+	 * @return \Wapuugotchi\Hunt\Models\Hunt The new hunt.
+	 */
 	public static function get_new_hunt() {
 		$current_hunt = self::get_random_hunt();
 		update_user_meta( \get_current_user_id(), self::CURRENT_HUNT_CONFIG, $current_hunt );

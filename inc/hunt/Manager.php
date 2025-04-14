@@ -57,7 +57,7 @@ class Manager {
 		if ( isset( $current_hunt['state'] ) ) {
 			if ( $current_hunt['state'] === 'completed' ) {
 				$current_hunt['state'] = 'payout';
-			} elseif ( $current_hunt['state'] === 'closed' ) {
+			} elseif ( $current_hunt['state'] === 'closed' || ! HuntHandler::is_existing_hunt( $current_hunt['id'] ) ) {
 				$current_hunt = HuntHandler::get_new_hunt();
 			}
 			// payout is handled by the hunt store and ensures that the mission set is completed and set to the status closed

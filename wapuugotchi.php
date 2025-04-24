@@ -33,7 +33,7 @@ function init() {
 
 	require_once $autoloader;
 
-	// Core features
+	// Core features.
 	new \Wapuugotchi\Core\Menu();
 	new \Wapuugotchi\Core\AdminBar();
 
@@ -44,7 +44,7 @@ function init() {
 	new \Wapuugotchi\Onboarding\Manager();
 	new \Wapuugotchi\Alive\Manager();
 
-	// Mission feature and the associated games
+	// Mission feature and the associated games.
 	new \Wapuugotchi\Mission\Manager();
 	new \Wapuugotchi\Quiz\Manager();
 	new \Wapuugotchi\Hunt\Manager();

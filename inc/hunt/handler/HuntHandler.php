@@ -15,22 +15,24 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class Manager
  */
 class HuntHandler {
-
 	const CURRENT_HUNT_CONFIG = 'wapuugotchi_hunt_current';
 
-
-	// Statische Variable für Hunts
-	private static array $hunts_cache = [];
+	/**
+	 * The key used to store hunt data in user meta.
+	 *
+	 * @var array
+	 */
+	private static $hunts_cache = array();
 
 	/**
 	 * Holt alle verfügbaren Hunts und validiert sie.
 	 *
 	 * @return array Die validierten Hunts.
 	 */
-	public static function get_all_hunts(): array {
-		if (empty(self::$hunts_cache)) {
-			$hunts = \apply_filters('wapuugotchi_hunt__filter', array());
-			self::$hunts_cache = self::validate_hunts($hunts ?: array());
+	public static function get_all_hunts() {
+		if ( empty( self::$hunts_cache ) ) {
+			$hunts             = \apply_filters( 'wapuugotchi_hunt__filter', array() );
+			self::$hunts_cache = self::validate_hunts( $hunts ? $hunts : array() );
 		}
 
 		return self::$hunts_cache;
@@ -80,9 +82,9 @@ class HuntHandler {
 	 *
 	 * @return \Wapuugotchi\Hunt\Models\Hunt The current hunt.
 	 */
-	private static function get_users_hunt () {
+	private static function get_users_hunt() {
 		$current_hunt = get_user_meta( \get_current_user_id(), self::CURRENT_HUNT_CONFIG, true );
-		if ( ! self::validate_hunt( $current_hunt) ) {
+		if ( ! self::validate_hunt( $current_hunt ) ) {
 			$current_hunt = self::get_random_hunt();
 			update_user_meta( \get_current_user_id(), self::CURRENT_HUNT_CONFIG, $current_hunt );
 		}
@@ -109,18 +111,25 @@ class HuntHandler {
 	/**
 	 * Get the current hunt.
 	 *
-	 * @return \Wapuugotchi\Hunt\Models\Hunt The current hunt.
+	 * @return array The current hunt.
 	 */
 	public static function get_current_hunt() {
 		$user_hunt = self::get_users_hunt();
 
-		if ( ! self::validate_hunt( $user_hunt) ) {
+		if ( ! self::validate_hunt( $user_hunt ) ) {
 			return self::get_new_hunt();
 		}
 
 		return $user_hunt;
 	}
 
+	/**
+	 * Check if the hunt is existing.
+	 *
+	 * @param int $hunt_id The hunt id.
+	 *
+	 * @return bool True if existing, false otherwise.
+	 */
 	public static function is_existing_hunt( $hunt_id ) {
 		$all_hunts = self::get_hunt_id_list();
 		if ( ! in_array( $hunt_id, $all_hunts, true ) ) {
@@ -130,12 +139,10 @@ class HuntHandler {
 		return true;
 	}
 
-
-
 	/**
 	 * Get a new hunt.
 	 *
-	 * @return \Wapuugotchi\Hunt\Models\Hunt The new hunt.
+	 * @return array The new hunt.
 	 */
 	public static function get_new_hunt() {
 		$current_hunt = self::get_random_hunt();
@@ -155,7 +162,7 @@ class HuntHandler {
 		if ( ! is_array( $hunt ) ) {
 			return false;
 		}
-		$required_keys = [ 'id', 'quest_text', 'success_text', 'page_name', 'selectors', 'state' ];
+		$required_keys = array( 'id', 'quest_text', 'success_text', 'page_name', 'selectors', 'state' );
 
 		foreach ( $required_keys as $key ) {
 			if ( ! array_key_exists( $key, $hunt ) ) {
@@ -167,11 +174,11 @@ class HuntHandler {
 	}
 
 	/**
-	 * Validate the hunt.
+	 * Validate the hunts.
 	 *
-	 * @param array $hunt The hunt.
+	 * @param array $hunts The hunts to validate.
 	 *
-	 * @return array The validated hunt.
+	 * @return array The validated hunts.
 	 */
 	private static function validate_hunts( $hunts ) {
 		$validated_hunts = array();

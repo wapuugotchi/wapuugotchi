@@ -55,12 +55,11 @@ class Manager {
 
 		$current_hunt = HuntHandler::get_current_hunt();
 		if ( isset( $current_hunt['state'] ) ) {
-			if ( $current_hunt['state'] === 'completed' ) {
+			if ( 'completed' === $current_hunt['state'] ) {
 				$current_hunt['state'] = 'payout';
-			} elseif ( $current_hunt['state'] === 'closed' || ! HuntHandler::is_existing_hunt( $current_hunt['id'] ) ) {
+			} elseif ( 'closed' === $current_hunt['state'] || ! HuntHandler::is_existing_hunt( $current_hunt['id'] ) ) {
 				$current_hunt = HuntHandler::get_new_hunt();
 			}
-			// payout is handled by the hunt store and ensures that the mission set is completed and set to the status closed
 		}
 
 		$assets = include_once WAPUUGOTCHI_PATH . 'build/hunt.asset.php';
@@ -85,10 +84,13 @@ class Manager {
 		\wp_set_script_translations( 'wapuugotchi-hunt', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
+	/**
+	 * Load the scripts for the Seek page.
+	 */
 	public function load_seek_scripts() {
 		global $current_screen;
 		$current_hunt = HuntHandler::get_current_hunt();
-		if ( ! $current_hunt || ! isset( $current_hunt['state'] ) || $current_hunt['state'] !== 'started' || ! isset( $current_hunt['page_name'] ) ) {
+		if ( ! $current_hunt || ! isset( $current_hunt['state'] ) || 'started' !== $current_hunt['state'] || ! isset( $current_hunt['page_name'] ) ) {
 			return;
 		}
 		if ( $current_hunt['page_name'] !== $current_screen->id ) {
@@ -117,10 +119,18 @@ class Manager {
 		\wp_set_script_translations( 'wapuugotchi-hunt', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
 	}
 
+	/**
+	 * Manipulate the hunt data.
+	 *
+	 * @param array $data The hunt data.
+	 *
+	 * @return array
+	 */
 	private function manipulate_hunt_data( $data ) {
 		$data['quest_text'] = \__( 'Well done! Mission completed!', 'wapuugotchi' );
 		return $data;
 	}
+
 	/**
 	 * Register the Game
 	 *
@@ -138,6 +148,11 @@ class Manager {
 		return $games;
 	}
 
+	/**
+	 * Get the nonces for the Hunt.
+	 *
+	 * @return array
+	 */
 	private function get_nonces() {
 		return array(
 			'wapuugotchi_hunt' => \wp_create_nonce( 'wapuugotchi_hunt' ),

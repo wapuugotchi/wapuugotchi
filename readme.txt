@@ -1,10 +1,10 @@
 === WapuuGotchi ===
 Contributors:      wapuugotchi, herrfeldmann, ancocodet, acali, coachbirgit, pfefferle, lgersman, tobibode, sabrinaw, fettnei, dionysous, thchoperpilot
 Tags:              assistant, wapuu, gamification
-Stable tag:        1.2.0
+Stable tag:        1.3.0
 Requires at least: 6.7
-Tested up to:      6.7
-Requires PHP:      8.0
+Tested up to:      6.8
+Requires PHP:      7.1
 License:           GPLv2 or later
 
 Gamify Your WordPress Experience with Customizable Wapuu Notifications & Rewards
@@ -44,12 +44,19 @@ Let Wapuu be your companion, enhance your WordPress skills, and customize your W
 
 == Changelog ==
 
+= 1.3.0 =
+- Implement mission mini-game - hunt
+- Implement mission map - The Frozen Village
+
+= 1.2.0 =
+- Implement single page tour
+
 = 1.1.1 =
 - Fix various bugs from v1.1.0
 
 = 1.1.0 =
-- Implement Mission feature
-- Implement Mission mini-game Quiz
+- Implement mission feature
+- Implement mission mini-game - quiz
 
 = 1.0.0 =
 - first stable version

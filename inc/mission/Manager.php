@@ -35,6 +35,8 @@ class Manager {
 	public function init() {
 		\add_filter( 'wapuugotchi_mission_filter', array( Missions::class, 'add_wapuugotchi_filter' ), 10, 1 );
 		\add_action( 'admin_enqueue_scripts', array( $this, 'load_scripts' ) );
+		\add_filter( 'wapuugotchi_add_admin_bar_elements', array( Menu::class, 'wapuugotchi_add_admin_bar_item' ), 30 );
+		self::reset_mission();
 	}
 
 	/**
@@ -99,5 +101,22 @@ class Manager {
 			'wapuugotchi_mission' => \wp_create_nonce( 'wapuugotchi_mission' ),
 			'wapuugotchi_balance' => \wp_create_nonce( 'wapuugotchi_balance' ),
 		);
+	}
+
+	/**
+	 * Reset the complete mission progress.
+	 */
+	public static function reset_mission() {
+		if ( isset( $_GET['wapuugotchi_mission'] ) && 'reset' === $_GET['wapuugotchi_mission'] ) {
+			$user_meta_keys                = \apply_filters( 'wapuugotchi_mission__reset', array() );
+			$user_meta_keys['user_meta'][] = MissionHandler::MISSION_KEY;
+
+			foreach ( $user_meta_keys['user_meta'] as $user_meta_key ) {
+				\delete_user_meta( \get_current_user_id(), $user_meta_key );
+			}
+
+			\wp_safe_redirect( \admin_url( 'admin.php?page=wapuugotchi' ) );
+			exit;
+		}
 	}
 }

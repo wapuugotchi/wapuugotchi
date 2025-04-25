@@ -28,9 +28,15 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
+		// Check if the Wapuugotchi Mission Feature exists. This is necessary because "hunt" is a pure mission extension.
+		if ( ! \class_exists( 'Wapuugotchi\Mission\Menu' ) ) {
+			return;
+		}
+
 		\add_action( 'load-toplevel_page_wapuugotchi', array( $this, 'init' ) );
 		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
 		\add_action( 'admin_enqueue_scripts', array( $this, 'load_seek_scripts' ) );
+		\add_filter( 'wapuugotchi_mission__reset', array( $this, 'reset_mission' ) );
 	}
 
 	/**
@@ -158,5 +164,17 @@ class Manager {
 			'wapuugotchi_hunt' => \wp_create_nonce( 'wapuugotchi_hunt' ),
 			'wapuugotchi_seek' => \wp_create_nonce( 'wapuugotchi_seek' ),
 		);
+	}
+
+	/**
+	 * Reset the hunt user meta by clicking the reset button in the admin bar.
+	 *
+	 * @param array $user_meta_keys The user meta keys.
+	 *
+	 * @return object|null
+	 */
+	public static function reset_mission( $user_meta_keys ) {
+		$user_meta_keys['user_meta'][] = HuntHandler::CURRENT_HUNT_CONFIG;
+		return $user_meta_keys;
 	}
 }

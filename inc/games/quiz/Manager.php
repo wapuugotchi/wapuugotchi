@@ -28,6 +28,11 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
+		// Check if the Wapuugotchi Mission Feature exists. This is necessary because "quiz" is a pure mission extension.
+		if ( ! \class_exists( 'Wapuugotchi\Mission\Menu' ) ) {
+			return;
+		}
+
 		\add_action( 'load-toplevel_page_wapuugotchi', array( $this, 'init' ) );
 	}
 

@@ -1,3 +1,10 @@
 .wapuugotchi_missions__page {
 	background-color: #fff;
 }
+
+li.wapuugotchi_mission__reset > * {
+	color: tomato !important;
+	&:hover {
+		color: lightsalmon !important;
+	}
+}

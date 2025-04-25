@@ -30,7 +30,7 @@ class Missions {
 	 */
 	public static function add_wapuugotchi_filter( array $missions ) {
 		$missions[] = Mission::create()
-							->set_id( 'endless_steppes01' )
+							->set_id( 'endless_steppes' )
 							->set_name( __( 'The Endless Steppes', 'wapuugotchi' ) )
 							->set_description( __( 'Embark with your brave Wapuu on an adventure through the endless steppes in search of a hidden treasure. But the journey is fraught with dangers and tricky puzzles! Only with your help can your Wapuu overcome these challenges. Support your courageous companion on their journey and together, become the heroes of this adventure!', 'wapuugotchi' ) )
 							->set_url( 'https://api.wapuugotchi.com/missions/endless_steppes_1/image.svg' )
@@ -62,7 +62,7 @@ class Missions {
 							->set_reward( 3 );
 
 		$missions[] = Mission::create()
-							->set_id( 'frozen_village0' )
+							->set_id( 'frozen_village' )
 							->set_name( __( 'The Frozen Village', 'wapuugotchi' ) )
 							->set_description( __( 'Join your brave Wapuu on a daring journey through the burning rivers, where the air shimmers with heat and every choice matters. Treacherous currents and challenging puzzles await to test your resolve! Only with your support can your Wapuu overcome the dangers ahead. Stand by your courageous companion and together, craft a heroic tale that begins in the burning rivers!', 'wapuugotchi' ) )
 							->set_url( 'https://api.wapuugotchi.com/missions/frozen_village_1/image.svg' )

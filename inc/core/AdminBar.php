@@ -39,11 +39,15 @@ class AdminBar {
 
 		$first_element = $elements[0];
 		foreach ( $elements as $element ) {
+			$parent = 'wapuugotchi_admin_bar_menu';
+			if ( isset( $element['sub'] ) && true === $element['sub'] ) {
+				$parent = 'wapuugotchi_admin_bar_menu-sub';
+			}
 
 			$admin_bar->add_menu(
 				array(
 					'id'     => 'wapuugotchi_admin_bar_menu_' . \sha1( $element['title'] ),
-					'parent' => 'wapuugotchi_admin_bar_menu',
+					'parent' => $parent,
 					'group'  => null,
 					'title'  => $element['title'],
 					'href'   => $element['href'],
@@ -59,6 +63,13 @@ class AdminBar {
 				'group'  => null,
 				'title'  => '<img style="width: 50px; margin-top: 8px"src="' . self::WAPUU_ICON . '"></img>',
 				'href'   => $first_element['href'],
+			)
+		);
+		$admin_bar->add_menu(
+			array(
+				'id'     => 'wapuugotchi_admin_bar_menu-sub',
+				'parent' => 'wapuugotchi_admin_bar_menu',
+				'group'  => true,
 			)
 		);
 	}

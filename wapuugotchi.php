@@ -33,16 +33,21 @@ function init() {
 
 	require_once $autoloader;
 
+	// Core features.
 	new \Wapuugotchi\Core\Menu();
 	new \Wapuugotchi\Core\AdminBar();
+
 	new \Wapuugotchi\Avatar\Manager();
 	new \Wapuugotchi\Buddy\Manager();
 	new \Wapuugotchi\Shop\Manager();
 	new \Wapuugotchi\Quest\Manager();
 	new \Wapuugotchi\Onboarding\Manager();
 	new \Wapuugotchi\Alive\Manager();
+
+	// Mission feature and the associated games.
 	new \Wapuugotchi\Mission\Manager();
 	new \Wapuugotchi\Quiz\Manager();
+	new \Wapuugotchi\Hunt\Manager();
 }
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

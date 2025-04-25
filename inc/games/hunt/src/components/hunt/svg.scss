@@ -1,0 +1,25 @@
+.wapuugotchi_mission__action {
+	pointer-events: none;
+
+	svg {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+
+		#TextBox--group {
+
+			.textbox {
+				cursor: default;
+
+				text {
+					pointer-events: none;
+				}
+			}
+		}
+	}
+
+	&.permeable {
+		pointer-events: none;
+	}
+}

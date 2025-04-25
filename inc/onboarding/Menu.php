@@ -27,7 +27,7 @@ class Menu {
 
 		$params  = \array_merge( $_GET, array( 'onboarding_mode' => 'single' ) );
 		$items[] = array(
-			'title' => 'Page Overview',
+			'title' => __( 'Page Overview', 'wapuugotchi' ),
 			'href'  => add_query_arg( $params, '' ),
 			'meta'  => array(
 				'class' => 'wapuugotchi_onboarding__admin-menu',
@@ -35,7 +35,7 @@ class Menu {
 		);
 
 		$items[] = array(
-			'title' => 'WordPress Journey',
+			'title' => __( 'WordPress Journey', 'wapuugotchi' ),
 			'href'  => 'index.php?onboarding_mode=tour',
 			'meta'  => array(
 				'class' => 'wapuugotchi_onboarding__admin-menu',

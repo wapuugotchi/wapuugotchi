@@ -27,19 +27,19 @@
 		"test": "npx playwright test --config playwright.config.js tests"
 	},
 	"config": {
-		"js_sources": "build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js inc/mission/src/mission.js inc/quiz/src/quiz.js"
+		"js_sources": "build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js inc/mission/src/mission.js inc/games/quiz/src/quiz.js inc/games/hunt/src/hunt.js inc/games/hunt/src/seek.js"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.49.1",
-		"@wordpress/env": "^10.14.0",
-		"@wordpress/scripts": "^30.7.0"
+		"@wordpress/env": "^10.22.0",
+		"@wordpress/scripts": "^30.15.0"
 	},
 	"dependencies": {
-		"@wordpress/api-fetch": "^7.14.0",
-		"@wordpress/components": "^29.0.0",
-		"@wordpress/dom-ready": "^4.14.0",
-		"@wordpress/element": "^6.14.0",
-		"@wordpress/i18n": "^5.14.0",
+		"@wordpress/api-fetch": "^7.22.0",
+		"@wordpress/components": "^29.8.0",
+		"@wordpress/dom-ready": "^4.22.0",
+		"@wordpress/element": "^6.22.0",
+		"@wordpress/i18n": "^5.22.0",
 		"docker-compose": "^1.1.0",
 		"html-react-parser": "^5.2.1",
 		"react": "^18.3.1",

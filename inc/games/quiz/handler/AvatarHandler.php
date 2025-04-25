@@ -26,7 +26,7 @@ class AvatarHandler {
 		$avatar = \apply_filters( 'wapuugotchi_avatar', false );
 
 		if ( false === $avatar ) {
-			$default = WAPUUGOTCHI_PATH . 'inc/quiz/assets/avatar.svg';
+			$default = \dirname( __DIR__ ) . '/assets/avatar.svg';
 			if ( \file_exists( $default ) && \is_readable( $default ) ) {
 				// phpcs:ignore
 				$avatar = \file_get_contents( $default );

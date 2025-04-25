@@ -41,4 +41,25 @@ class Menu {
 
 		return $submenus;
 	}
+
+	/**
+	 * Add the admin bar item for the mission.
+	 *
+	 * @param array $items The items to add to the admin bar.
+	 *
+	 * @return array
+	 */
+	public static function wapuugotchi_add_admin_bar_item( $items ) {
+		$params  = \array_merge( $_GET, array( 'wapuugotchi_mission' => 'reset' ) );
+		$items[] = array(
+			'title' => \__( 'Reset Mission', 'wapuugotchi' ),
+			'href'  => add_query_arg( $params, '' ),
+			'meta'  => array(
+				'class' => 'wapuugotchi_mission__reset',
+			),
+			'sub'   => true,
+		);
+
+		return $items;
+	}
 }

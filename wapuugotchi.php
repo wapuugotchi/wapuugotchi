@@ -53,16 +53,25 @@ function init() {
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );
 
 /*
-	Use local textdomain only in case that 
+	Use local textdomain only in case that
 	there is no official translation.
 */
-\add_action( 'init', function() {
-	\load_plugin_textdomain( 'wapuugotchi-local', false, \dirname( WAPUUGOTCHI_SLUG ) . '/languages' );
-} );	
-\add_filter( 'gettext', function($translated_text, $text, $domain) {
-	if ($domain === 'wapuugotchi' && $text === $translated_text) {
-		return __($text, 'wapuugotchi-local');
-    }
+\add_action(
+	'init',
+	function () {
+		\load_plugin_textdomain( 'wapuugotchi-local', false, \dirname( WAPUUGOTCHI_SLUG ) . '/languages' );
+	}
+);
+\add_filter(
+	'gettext',
+	function ( $translated_text, $text, $domain ) {
+		if ( 'wapuugotchi' === $domain && $text === $translated_text ) {
+			// phpcs:ignore WordPress.WP
+			return \__( $text, 'wapuugotchi-local' );
+		}
 
-    return $translated_text;
-}, 100, 3 );
+		return $translated_text;
+	},
+	100,
+	3
+);

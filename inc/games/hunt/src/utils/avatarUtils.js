@@ -18,7 +18,7 @@ export const buildSvg = async ( svgString, hunt ) => {
 
 export const insertElement = ( svg, element, tag ) => {
 	const selectedElement = svg.querySelector(
-		'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear, g#wapuugotchi_type__squirrel'
+		'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear, g#wapuugotchi_type__rabbit, g#wapuugotchi_type__squirrel'
 	);
 	selectedElement?.insertBefore( element, svg.querySelector( tag ) );
 };

@@ -1,0 +1,2951 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WapuuGotchi\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-29 22:58+0200\n"
+"PO-Revision-Date: 2025-04-29 23:04+0200\n"
+"Language: ja\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wapuugotchi.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: tests\n"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:88
+#, php-format
+msgid "Hi %s, great to see you!"
+msgstr "こんにちは、%s！"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:90
+#: inc/buddy/data/Greeting.php:98
+#, php-format
+msgid "Hey %s, how are you today?"
+msgstr "やあ%s、調子はどうだい？"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:92
+#, php-format
+msgid "Hey %s, did you sleep well?"
+msgstr "ねぇ%s、よく眠れた?"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:94
+#, php-format
+msgid "Hi %s, how has your day been so far?"
+msgstr "こんにちは%s、今日はどんな一日でしたか？"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:96
+#, php-format
+msgid "Hey %s, ready for a new day?"
+msgstr "やあ%s、新しい日の準備はいいかい？"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:100
+#, php-format
+msgid "Hello %s, what do you have planned today?"
+msgstr "こんにちは%s、今日の予定は？"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:102
+#, php-format
+msgid "Hi %s, fancy a coffee?"
+msgstr "こんにちは%s、コーヒーでもどう？"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:104
+#, php-format
+msgid "Hey %s, it's always a pleasure to see you!"
+msgstr "やあ%s、いつも会えて嬉しいよ！"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:106
+#, php-format
+msgid "Hey %s, you look great today."
+msgstr "やあ%s、今日も元気そうだね。"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:108
+#, php-format
+msgid "Hi %s, good to have you here."
+msgstr "こんにちは%s。"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:110
+#, php-format
+msgid "%s, we are a great team!"
+msgstr "%s、我々は素晴らしいチームだ！"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:112
+#, php-format
+msgid "It's not the same without you, %s."
+msgstr "%s、あなたがいなければ、それは同じではありません。"
+
+#: inc/buddy/data/Greeting.php:117
+msgid "Dude"
+msgstr "デュード"
+
+#. Plugin Name of the plugin/theme
+#: inc/core/Menu.php:84
+#: inc/core/Menu.php:85
+#: inc/core/Menu.php:95
+msgid "WapuuGotchi"
+msgstr "ワプウゴッチ"
+
+#: inc/games/hunt/Manager.php:136
+msgid "Well done! Mission completed!"
+msgstr "よくやったミッション完了"
+
+#: inc/games/hunt/Manager.php:150
+msgid "WordPress Hunt"
+msgstr "ワードプレスハント"
+
+#: inc/games/hunt/Manager.php:151
+msgid "How well do you really know your WordPress?"
+msgstr "あなたは自分のワードプレスのことを本当によく知っているだろうか？"
+
+#: inc/games/quiz/Manager.php:89
+msgid "WordPress Quiz"
+msgstr "ワードプレスクイズ"
+
+#: inc/games/quiz/Manager.php:90
+msgid "Test your knowledge about WordPress."
+msgstr "WordPressについての知識を試してみましょう。"
+
+#: inc/games/quiz/data/QuizWordPress.php:31
+msgid "Who is the founder of WordPress?"
+msgstr "WordPressの創設者は誰ですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Chuck Norris"
+msgstr "チャック・ノリス"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Bill Gates"
+msgstr "ビル・ゲイツ"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Harry Potter"
+msgstr "ハリー・ポッター"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Elon Musk"
+msgstr "イーロン・マスク"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Albert Einstein"
+msgstr "アルバート・アインシュタイン"
+
+#: inc/games/quiz/data/QuizWordPress.php:33
+msgid "Matt Mullenweg"
+msgstr "マット・マレンウェグ"
+
+#: inc/games/quiz/data/QuizWordPress.php:34
+msgid "That's correct! Matt Mullenweg developed the first version of WordPress together with Mike Little in 2003. He is also the founder of Automattic."
+msgstr "その通りだ！マット・マレンウェグは、2003年にマイク・リトルとともにWordPressの最初のバージョンを開発した。彼はAutomatticの創設者でもある。"
+
+#: inc/games/quiz/data/QuizWordPress.php:35
+msgid "That is unfortunately incorrect. The correct answer is Matt Mullenweg."
+msgstr "それは残念ながら間違っている。正解はマット・マレンウェグ。"
+
+#: inc/games/quiz/data/QuizWordPress.php:40
+msgid "What is the name of the first default theme in WordPress?"
+msgstr "WordPressの最初のデフォルトテーマの名前は何ですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "Tinky Winky"
+msgstr "ティンキー・ウィンキー"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "Twenty Twenty"
+msgstr "トゥエンティトゥエンティ"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "Seven of Nine"
+msgstr "セブン・オブ・ナイン"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "C-3PO"
+msgstr "C-3PO"
+
+#: inc/games/quiz/data/QuizWordPress.php:42
+msgid "Twenty Ten"
+msgstr "トゥエンティ・テン"
+
+#: inc/games/quiz/data/QuizWordPress.php:43
+msgid "That's correct! Twenty Ten was the first default theme in WordPress, released with WordPress 3.0 in 2010."
+msgstr "その通りだ！Twenty TenはWordPressの最初のデフォルトテーマで、2010年のWordPress 3.0でリリースされました。"
+
+#: inc/games/quiz/data/QuizWordPress.php:44
+msgid "That is unfortunately incorrect. The correct answer is Twenty Ten."
+msgstr "それは残念ながら間違っている。正解は「Twenty Ten」だ。"
+
+#: inc/games/quiz/data/QuizWordPress.php:49
+msgid "What is the name of the mascot of WordPress?"
+msgstr "WordPressのマスコットの名前は？"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Ronald McDonald"
+msgstr "ロナルド・マクドナルド"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Mickey Mouse"
+msgstr "ミッキーマウス"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Sonic the Hedgehog"
+msgstr "ソニック・ザ・ヘッジホッグ"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Optimus Prime"
+msgstr "オプティマスプライム"
+
+#: inc/games/quiz/data/QuizWordPress.php:51
+msgid "Wapuu"
+msgstr "ワプウ"
+
+#: inc/games/quiz/data/QuizWordPress.php:52
+msgid "That's correct! Wapuu is the mascot of WordPress. It was designed by Kazuko Kaneuchi for the WordPress Japan community."
+msgstr "そうです！WordPressのマスコットキャラクターです。金内一子さんがWordPress Japanのコミュニティのためにデザインしたものです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:53
+msgid "That is unfortunately incorrect. The correct answer is Wapuu."
+msgstr "それは残念ながら正しくない。正解はワプウだ。"
+
+#: inc/games/quiz/data/QuizWordPress.php:58
+msgid "What is the name of the first version of WordPress?"
+msgstr "WordPressの最初のバージョンの名前は何ですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress 1.0"
+msgstr "ワードプレス 1.0"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress XP"
+msgstr "ワードプレスXP"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress Prologue"
+msgstr "WordPressプロローグ"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress 2000"
+msgstr "ワードプレス2000"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress Zero"
+msgstr "ワードプレス・ゼロ"
+
+#: inc/games/quiz/data/QuizWordPress.php:60
+msgid "WordPress 0.7"
+msgstr "ワードプレス 0.7"
+
+#: inc/games/quiz/data/QuizWordPress.php:61
+msgid "That's correct! The first version of WordPress was WordPress 0.7, released on May 27, 2003."
+msgstr "そうです！WordPressの最初のバージョンは、2003年5月27日にリリースされたWordPress 0.7です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:62
+msgid "That is unfortunately incorrect. The correct answer is WordPress 0.7."
+msgstr "それは残念ながら間違っています。正解はWordPress 0.7です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:67
+msgid "What is the name of the first plugin in WordPress?"
+msgstr "WordPressの最初のプラグインの名前は何ですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+#: inc/onboarding/data/TourWapuugotchiShop.php:43
+msgid "Wapuugotchi"
+msgstr "ワプウゴッチ"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:275
+msgid "Akismet"
+msgstr "Akismet"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "Yoast Zero"
+msgstr "ヨースト・ゼロ"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "HackerDefender"
+msgstr "ハッカーディフェンダー"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "Pluginator"
+msgstr "プラグネーター"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "SuperPlugin 1.0"
+msgstr "スーパープラグイン 1.0"
+
+#: inc/games/quiz/data/QuizWordPress.php:69
+msgid "Hello Dolly"
+msgstr "ハロー、ドリー"
+
+#: inc/games/quiz/data/QuizWordPress.php:70
+msgid "That's correct! Hello Dolly was the first plugin in WordPress, written by Matt Mullenweg."
+msgstr "そうです！Hello Dollyは、Matt Mullenwegによって書かれたWordPressの最初のプラグインです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:71
+msgid "That is unfortunately incorrect. The correct answer is Hello Dolly."
+msgstr "それは残念ながら間違っている。正解は『ハロー・ドリー』だ。"
+
+#: inc/games/quiz/data/QuizWordPress.php:76
+msgid "What is the name of the first WordCamp?"
+msgstr "最初のWordCampの名前は何ですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Tokio"
+msgstr "ワードキャンプ・トキオ"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Berlin"
+msgstr "WordCampベルリン"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Springfield"
+msgstr "ワードキャンプ・スプリングフィールド"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Hogwarts"
+msgstr "ワードキャンプ・ホグワーツ"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Gondor"
+msgstr "ワードキャンプ・ゴンドール"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Gotham"
+msgstr "ワードキャンプ・ゴッサム"
+
+#: inc/games/quiz/data/QuizWordPress.php:78
+msgid "WordCamp San Francisco"
+msgstr "ワードキャンプ・サンフランシスコ"
+
+#: inc/games/quiz/data/QuizWordPress.php:79
+msgid "That's correct! WordCamp San Francisco was the first WordCamp, organized by Matt Mullenweg in 2006."
+msgstr "その通りだ！WordCamp San Franciscoは、2006年にMatt Mullenwegが主催した最初のWordCampです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:80
+msgid "That is unfortunately incorrect. The correct answer is WordCamp San Francisco."
+msgstr "残念ながら不正解です。正解はWordCamp San Franciscoである。"
+
+#: inc/games/quiz/data/QuizWordPress.php:85
+msgid "What programming language is WordPress built on?"
+msgstr "WordPressはどのようなプログラミング言語で作られているのですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Java"
+msgstr "Java"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Python"
+msgstr "パイソン"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Klingon"
+msgstr "クリンゴン"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "C++"
+msgstr "C++"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Morse Code"
+msgstr "モールス信号"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Ruby"
+msgstr "ルビ"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Perl"
+msgstr "パール"
+
+#: inc/games/quiz/data/QuizWordPress.php:87
+msgid "PHP"
+msgstr "PHP"
+
+#: inc/games/quiz/data/QuizWordPress.php:88
+msgid "That's correct! WordPress is written in PHP."
+msgstr "その通りです！WordPressはPHPで書かれています。"
+
+#: inc/games/quiz/data/QuizWordPress.php:89
+msgid "That is unfortunately incorrect. The correct answer is PHP."
+msgstr "それは残念ながら正しくない。正解はPHPです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:94
+msgid "What file type is commonly used for themes and plugins in WordPress?"
+msgstr "WordPressのテーマやプラグインによく使われるファイルタイプは何ですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "BRO"
+msgstr "ブロ"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "PNG"
+msgstr "PNG"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "MP3"
+msgstr "MP3"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "EXE"
+msgstr "エグゼ"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "DOC"
+msgstr "DOC"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "TXT"
+msgstr "TXT"
+
+#: inc/games/quiz/data/QuizWordPress.php:96
+msgid "ZIP"
+msgstr "郵便番号"
+
+#: inc/games/quiz/data/QuizWordPress.php:97
+msgid "That's correct! Themes and plugins in WordPress are commonly distributed as ZIP files."
+msgstr "その通りです！WordPressのテーマやプラグインは、一般的にZIPファイルとして配布されています。"
+
+#: inc/games/quiz/data/QuizWordPress.php:98
+msgid "That is unfortunately incorrect. The correct answer is ZIP."
+msgstr "それは残念ながら正しくない。正解はZIPだ。"
+
+#: inc/games/quiz/data/QuizWordPress.php:103
+msgid "What is the name of the marketplace for WordPress plugins and themes?"
+msgstr "WordPressのプラグインとテーマのマーケットプレイスの名前は何ですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:104
+msgid "Plugin Palace"
+msgstr "プラグイン・パレス"
+
+#: inc/games/quiz/data/QuizWordPress.php:104
+msgid "Theme Forest"
+msgstr "テーマの森"
+
+#: inc/games/quiz/data/QuizWordPress.php:105
+msgid "WordPress.org"
+msgstr "Wordpress.org"
+
+#: inc/games/quiz/data/QuizWordPress.php:106
+msgid "That's correct! WordPress.org is the marketplace for WordPress plugins and themes."
+msgstr "その通りです！WordPress.orgはWordPressのプラグインとテーマのマーケットプレイスです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:107
+msgid "That is unfortunately incorrect. The correct answer is WordPress.org."
+msgstr "それは残念ながら正しくない。正解はWordPress.orgです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:112
+msgid "What is the maximum number of tags you can add to a WordPress post?"
+msgstr "WordPressの投稿に追加できるタグの最大数は？"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "5"
+msgstr "5"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "10"
+msgstr "10"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "42"
+msgstr "42"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "Pi"
+msgstr "円周率"
+
+#: inc/games/quiz/data/QuizWordPress.php:114
+msgid "Unlimited"
+msgstr "無制限"
+
+#: inc/games/quiz/data/QuizWordPress.php:115
+msgid "That's correct! You can add an unlimited number of tags to a WordPress post."
+msgstr "その通りです！WordPressの投稿にはタグを無制限に追加することができます。"
+
+#: inc/games/quiz/data/QuizWordPress.php:116
+msgid "That is unfortunately incorrect. The correct answer is Unlimited."
+msgstr "それは残念ながら間違っている。正解は「無制限」だ。"
+
+#: inc/games/quiz/data/QuizWordPress.php:121
+msgid "What is the recommended permalink structure for SEO in WordPress?"
+msgstr "WordPressでSEO対策に推奨されるパーマリンク構造とは？"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Numeric"
+msgstr "数値"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Day and name"
+msgstr "曜日と名前"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Custom"
+msgstr "カスタム"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Random string of characters"
+msgstr "ランダム文字列"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Name and emoji"
+msgstr "名前と絵文字"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "As many slashes as possible"
+msgstr "できるだけ多くのスラッシュ"
+
+#: inc/games/quiz/data/QuizWordPress.php:123
+msgid "Post name"
+msgstr "投稿名"
+
+#: inc/games/quiz/data/QuizWordPress.php:124
+msgid "That's correct! The recommended permalink structure for SEO in WordPress is Post name."
+msgstr "その通りです！WordPressでSEOのために推奨されるパーマリンク構造は、投稿名です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:125
+msgid "That is unfortunately incorrect. The correct answer is Post name."
+msgstr "それは残念ながら正しくない。正解はポストネームである。"
+
+#: inc/games/quiz/data/QuizWordPress.php:130
+msgid "What does the acronym SEO stand for?"
+msgstr "SEOとは何の略語か？"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Super Easy Optimization"
+msgstr "超簡単な最適化"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Space Exploration Organization"
+msgstr "宇宙探査機構"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Search Everything Online"
+msgstr "オンラインですべてを検索"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Sneaky Engagement Orchestrator"
+msgstr "スニーキー・エンゲージメント・オーケストレーター"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Success Every Opportunity"
+msgstr "成功の機会"
+
+#: inc/games/quiz/data/QuizWordPress.php:132
+msgid "Search Engine Optimization"
+msgstr "検索エンジン最適化"
+
+#: inc/games/quiz/data/QuizWordPress.php:133
+msgid "That's correct! SEO stands for Search Engine Optimization and is the process of improving the visibility of a website in search engines."
+msgstr "そうです！SEOとは、Search Engine Optimization（検索エンジン最適化）の略で、検索エンジンにおけるウェブサイトの可視性を向上させるプロセスのことです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:134
+msgid "That is unfortunately incorrect. The correct answer is Search Engine Optimization."
+msgstr "それは残念ながら正しくない。正解は「検索エンジン最適化」です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:139
+msgid "What is the term for additional functionality that can be added to WordPress?"
+msgstr "WordPressに追加できる機能を何というのですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Widget"
+msgstr "ウィジェット"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Gizmo"
+msgstr "ギズモ"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Theme"
+msgstr "テーマ"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Addon"
+msgstr "アドオン"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Feature"
+msgstr "機能"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Upgrade"
+msgstr "アップグレード"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Attachment"
+msgstr "添付ファイル"
+
+#: inc/games/quiz/data/QuizWordPress.php:141
+msgid "Plugin"
+msgstr "プラグイン"
+
+#: inc/games/quiz/data/QuizWordPress.php:142
+msgid "That's correct! Plugins are additional pieces of software that can be added to WordPress to extend its functionality."
+msgstr "その通りです！プラグインとは、WordPressの機能を拡張するために追加できるソフトウェアのことです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:143
+msgid "That is unfortunately incorrect. The correct answer is Plugin."
+msgstr "それは残念ながら正しくない。正解はPluginです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:148
+msgid "What is the main configuration file for a WordPress website?"
+msgstr "WordPressウェブサイトの主な設定ファイルは何ですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "config.sys"
+msgstr "コンフィグ"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "settings.ini"
+msgstr "設定.ini"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "admin.xml"
+msgstr "admin.xml"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "setup.exe"
+msgstr "セットアップ.exe"
+
+#: inc/games/quiz/data/QuizWordPress.php:150
+msgid "wp-config.php"
+msgstr "wp-config.php"
+
+#: inc/games/quiz/data/QuizWordPress.php:151
+msgid "That's correct! wp-config.php is the main configuration file for a WordPress website."
+msgstr "その通りです！wp-config.phpはWordPressウェブサイトのメイン設定ファイルです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:152
+msgid "That is unfortunately incorrect. The correct answer is wp-config.php."
+msgstr "それは残念ながら間違っています。正解はwp-config.phpです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:157
+msgid "Which protocol is used for securing a WordPress site?"
+msgstr "WordPressサイトのセキュリティ保護にはどのプロトコルを使用しますか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "HTTP"
+msgstr "HTTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "FTP"
+msgstr "FTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "POP3"
+msgstr "POP3"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "SMTP"
+msgstr "SMTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "SSH"
+msgstr "SSH"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "SFTP"
+msgstr "SFTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:159
+msgid "HTTPS"
+msgstr "HTTPS"
+
+#: inc/games/quiz/data/QuizWordPress.php:160
+msgid "That's correct! HTTPS is the protocol used for securing a WordPress site."
+msgstr "その通りです！HTTPSは、WordPressサイトを保護するために使用されるプロトコルです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:161
+msgid "That is unfortunately incorrect. The correct answer is HTTPS."
+msgstr "それは残念ながら正しくない。正解はHTTPSです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:166
+msgid "What feature allows you to schedule posts in WordPress?"
+msgstr "WordPressで投稿をスケジュールできる機能は何ですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Future Post"
+msgstr "未来のポスト"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Post Timer"
+msgstr "ポストタイマー"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Time Machine"
+msgstr "タイムマシン"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Post Scheduler"
+msgstr "ポストスケジューラー"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Post Planner"
+msgstr "ポストプランナーの統合が有効になっている場合、割り当てられたユーザーの電子メールにポストプランナーの URL を追加"
+
+#: inc/games/quiz/data/QuizWordPress.php:168
+msgid "Publish"
+msgstr "公開"
+
+#: inc/games/quiz/data/QuizWordPress.php:169
+msgid "That's correct! The Publish feature in WordPress allows you to schedule posts to be published at a future date and time."
+msgstr "その通りです！WordPressのPublish機能では、未来の日時に投稿を公開するようスケジュールすることができます。"
+
+#: inc/games/quiz/data/QuizWordPress.php:170
+msgid "That is unfortunately incorrect. The correct answer is Publish."
+msgstr "それは残念ながら正しくない。正解はPublishです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:175
+msgid "Which role in WordPress has the highest level of access?"
+msgstr "WordPressのどのロールが最高レベルのアクセス権を持っていますか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Editor"
+msgstr "編集者"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+#: inc/onboarding/data/TourEditComments.php:61
+#: inc/onboarding/data/TourEditPage.php:73
+msgid "Author"
+msgstr "投稿者"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Contributor"
+msgstr "投稿者"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Subscriber"
+msgstr "加入者"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Visitor"
+msgstr "ビジター"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "God"
+msgstr "神様"
+
+#: inc/games/quiz/data/QuizWordPress.php:177
+msgid "Administrator"
+msgstr "管理者"
+
+#: inc/games/quiz/data/QuizWordPress.php:178
+msgid "That's correct! The Administrator role in WordPress has the highest level of access and can perform all tasks on the site."
+msgstr "その通りです！WordPressの管理者ロールは最高レベルのアクセス権を持ち、サイト上のすべてのタスクを実行できます。"
+
+#: inc/games/quiz/data/QuizWordPress.php:179
+msgid "That is unfortunately incorrect. The correct answer is Administrator."
+msgstr "残念ながら不正解です。正解はアドミニストレーターだ。"
+
+#: inc/games/quiz/data/QuizWordPress.php:184
+msgid "What is a common security measure to protect a WordPress site?"
+msgstr "WordPressサイトを保護するための一般的なセキュリティ対策とは？"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Installing antivirus software"
+msgstr "ウイルス対策ソフトのインストール"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Disabling JavaScript"
+msgstr "JavaScriptを無効にする"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Using weak passwords"
+msgstr "脆弱なパスワードの使用"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Hiding the site from search engines"
+msgstr "検索エンジンからサイトを隠す"
+
+#: inc/games/quiz/data/QuizWordPress.php:186
+msgid "Using strong passwords"
+msgstr "強力なパスワードの使用"
+
+#: inc/games/quiz/data/QuizWordPress.php:187
+msgid "That's correct! Using strong passwords is a common security measure to protect a WordPress site."
+msgstr "その通りです！強力なパスワードを使用することは、WordPressサイトを保護するための一般的なセキュリティ対策です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:188
+msgid "That is unfortunately incorrect. The correct answer is Using strong passwords."
+msgstr "それは残念ながら正しくない。正解は「強力なパスワードを使う」です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:193
+msgid "How can you add custom functionality to a WordPress site without modifying the core files?"
+msgstr "コアファイルを変更することなく、WordPressサイトにカスタム機能を追加するには？"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Editing the wp-admin folder"
+msgstr "wp-adminフォルダを編集する"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Modifying the index.php file"
+msgstr "index.phpファイルを修正する"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Using a magic wand"
+msgstr "魔法の杖を使う"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Writing a letter to WordPress"
+msgstr "ワードプレスに手紙を書く"
+
+#: inc/games/quiz/data/QuizWordPress.php:195
+msgid "Using plugins"
+msgstr "プラグインの使用"
+
+#: inc/games/quiz/data/QuizWordPress.php:196
+msgid "That's correct! Using plugins is a way to add custom functionality to a WordPress site without modifying the core files."
+msgstr "その通りだ！プラグインは、コアファイルを変更することなくWordPressサイトにカスタム機能を追加する方法です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:197
+msgid "That is unfortunately incorrect. The correct answer is Using plugins."
+msgstr "それは残念ながら間違っています。正解は「プラグインを使う」です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:202
+msgid "How can you improve the loading speed of a WordPress site?"
+msgstr "WordPressサイトの読み込み速度を向上させるには？"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Adding more plugins"
+msgstr "プラグインの追加"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Increasing the number of posts per page"
+msgstr "ページあたりの投稿数を増やす"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Using a dial-up connection"
+msgstr "ダイヤルアップ接続"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Removing all WordPress files"
+msgstr "すべてのWordPressファイルを削除する"
+
+#: inc/games/quiz/data/QuizWordPress.php:204
+msgid "Using a caching plugin"
+msgstr "キャッシュプラグインの使用"
+
+#: inc/games/quiz/data/QuizWordPress.php:205
+msgid "That's correct! Using a caching plugin is a way to improve the loading speed of a WordPress site."
+msgstr "その通りです！キャッシュプラグインを使用することで、WordPressサイトの読み込み速度を向上させることができます。"
+
+#: inc/games/quiz/data/QuizWordPress.php:206
+msgid "That is unfortunately incorrect. The correct answer is Using a caching plugin."
+msgstr "それは残念ながら間違っています。正解は「キャッシュプラグインを使う」です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:211
+msgid "What is the name of the WordPress command line interface?"
+msgstr "WordPressのコマンドラインインターフェイスの名前は何ですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "CommandPress"
+msgstr "コマンドプレス"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "WP-Terminal"
+msgstr "WPターミナル"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "WP-Shell"
+msgstr "WPシェル"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "WP-Commander"
+msgstr "WP-コマンダー"
+
+#: inc/games/quiz/data/QuizWordPress.php:213
+msgid "WP-CLI"
+msgstr "WP-CLI"
+
+#: inc/games/quiz/data/QuizWordPress.php:214
+msgid "That's correct! WP-CLI is the command line interface for WordPress and allows you to manage your WordPress site from the command line."
+msgstr "その通りです！WP-CLIはWordPressのコマンドラインインターフェイスで、コマンドラインからWordPressサイトを管理することができます。"
+
+#: inc/games/quiz/data/QuizWordPress.php:215
+msgid "That is unfortunately incorrect. The correct answer is WP-CLI."
+msgstr "それは残念ながら間違っています。正解はWP-CLIです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:220
+msgid "Which of the following is a common issue when updating WordPress?"
+msgstr "WordPressをアップデートする際によくある問題は次のうちどれですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:221
+msgid "Faster website speed"
+msgstr "ウェブサイトの高速化"
+
+#: inc/games/quiz/data/QuizWordPress.php:221
+msgid "Increased user registrations"
+msgstr "ユーザー登録数の増加"
+
+#: inc/games/quiz/data/QuizWordPress.php:222
+msgid "Plugin compatibility problems"
+msgstr "プラグインの互換性の問題"
+
+#: inc/games/quiz/data/QuizWordPress.php:223
+msgid "That's correct! Plugin compatibility problems are a common issue when updating WordPress."
+msgstr "その通りです！プラグインの互換性の問題は、WordPressを更新する際によくある問題です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:224
+msgid "That is unfortunately incorrect. The correct answer is Plugin compatibility problems."
+msgstr "それは残念ながら間違っています。正解はプラグインの互換性の問題です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:229
+msgid "How do you access the WordPress admin dashboard?"
+msgstr "WordPressの管理ダッシュボードへのアクセス方法は？"
+
+#: inc/games/quiz/data/QuizWordPress.php:230
+msgid "By clicking a button on the homepage"
+msgstr "ホームページのボタンをクリックする"
+
+#: inc/games/quiz/data/QuizWordPress.php:230
+msgid "By entering the secret code"
+msgstr "秘密のコードを入力する"
+
+#: inc/games/quiz/data/QuizWordPress.php:230
+#: inc/games/quiz/data/QuizWordPress.php:231
+msgid "By appending /wp-admin to the site URL"
+msgstr "サイトのURLに/wp-adminを追加することによって"
+
+#: inc/games/quiz/data/QuizWordPress.php:232
+msgid "That's correct! You can access the WordPress admin dashboard by appending /wp-admin to the site URL."
+msgstr "その通りです！サイトのURLに/wp-adminを追加することで、WordPressの管理ダッシュボードにアクセスできます。"
+
+#: inc/games/quiz/data/QuizWordPress.php:233
+msgid "That is unfortunately incorrect. The correct answer is By appending /wp-admin to the site URL."
+msgstr "それは残念ながら間違っています。正解は、サイトのURLに/wp-adminを追加することです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:238
+msgid "Why should you make a small donation for the Wapuugotchi plugin?"
+msgstr "Wapuugotchiプラグインに少額の寄付をする理由は？"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To make the plugin author rich"
+msgstr "プラグインの作者をリッチにするには"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To increase your website traffic"
+msgstr "ウェブサイトのトラフィックを増やす"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To make the Wapuu happy"
+msgstr "ワプウを幸せにするために"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To get a free t-shirt"
+msgstr "無料Tシャツを手に入れるには"
+
+#: inc/games/quiz/data/QuizWordPress.php:240
+msgid "To support the development of the plugin"
+msgstr "プラグインの開発をサポートする"
+
+#: inc/games/quiz/data/QuizWordPress.php:241
+msgid "Correct! With a small donation, you can support the further development of Wapuugotchi. There are many exciting plans ahead. Visit us at www.wapuugotchi.com!"
+msgstr "正しい！少額の寄付で、わぷごっちの更なる発展をサポートすることができます。この先、たくさんのエキサイティングな計画があります。www.wapuugotchi.com！"
+
+#: inc/games/quiz/data/QuizWordPress.php:242
+msgid "That is unfortunately incorrect. The correct answer is To support the development and maintenance of the plugin."
+msgstr "残念ながら不正解です。正解は「プラグインの開発とメンテナンスをサポートする」です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:247
+msgid "Which WordPress plugin is commonly used for search engine optimization (SEO)?"
+msgstr "検索エンジン最適化（SEO）によく使われるWordPressプラグインはどれですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:275
+msgid "Jetpack"
+msgstr "ジェットパック"
+
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:275
+#: inc/games/quiz/data/QuizWordPress.php:285
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:276
+msgid "Contact Form 7"
+msgstr "Contact Form 7"
+
+#: inc/games/quiz/data/QuizWordPress.php:249
+#: inc/games/quiz/data/QuizWordPress.php:275
+msgid "Yoast SEO"
+msgstr "Yoast SEO"
+
+#: inc/games/quiz/data/QuizWordPress.php:250
+msgid "That's correct! Yoast SEO is one of the most popular plugins for search engine optimization in WordPress."
+msgstr "その通りだ！Yoast SEOは、WordPressの検索エンジン最適化のための最も人気のあるプラグインの1つです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:251
+msgid "That is unfortunately incorrect. The correct answer is Yoast SEO."
+msgstr "それは残念ながら間違っている。正解はYoast SEOです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:256
+msgid "Which of the following is NOT a default post type in WordPress?"
+msgstr "次のうち、WordPressのデフォルトの投稿タイプでないものはどれですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Post"
+msgstr "投稿"
+
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Page"
+msgstr "ページ"
+
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Revision"
+msgstr "リビジョン"
+
+#: inc/games/quiz/data/QuizWordPress.php:258
+msgid "Product"
+msgstr "商品"
+
+#: inc/games/quiz/data/QuizWordPress.php:259
+msgid "That's correct! Product is not a default post type in WordPress; it is usually added by plugins like WooCommerce."
+msgstr "その通りです！ProductはWordPressのデフォルトの投稿タイプではなく、通常はWooCommerceのようなプラグインによって追加されます。"
+
+#: inc/games/quiz/data/QuizWordPress.php:260
+msgid "That is unfortunately incorrect. The correct answer is Product."
+msgstr "それは残念ながら正しくない。正解は「製品」です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:265
+msgid "Which WordPress feature helps in managing multiple websites from a single installation?"
+msgstr "単一のインストールから複数のウェブサイトを管理するのに役立つWordPressの機能はどれですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multiuser"
+msgstr "マルチユーザー"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multilingual"
+msgstr "多言語"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multi-domain"
+msgstr "マルチドメイン"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multi-admin"
+msgstr "マルチ管理者"
+
+#: inc/games/quiz/data/QuizWordPress.php:267
+msgid "Multisite"
+msgstr "マルチサイト"
+
+#: inc/games/quiz/data/QuizWordPress.php:268
+msgid "That's correct! The Multisite feature allows you to manage multiple WordPress sites from a single installation."
+msgstr "その通りです！マルチサイト機能は、1つのインストールから複数のWordPressサイトを管理することができます。"
+
+#: inc/games/quiz/data/QuizWordPress.php:269
+msgid "That is unfortunately incorrect. The correct answer is Multisite."
+msgstr "それは残念ながら間違っています。正解はマルチサイトです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:274
+msgid "Which plugin is typically used to build contact forms in WordPress?"
+msgstr "WordPressでコンタクトフォームを作成するために一般的に使用されるプラグインはどれですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:277
+msgid "That's correct! Contact Form 7 is a popular plugin for creating contact forms in WordPress."
+msgstr "その通りです！Contact Form 7 は WordPress でコンタクトフォームを作成するための人気のプラグインです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:278
+msgid "That is unfortunately incorrect. The correct answer is Contact Form 7."
+msgstr "それは残念ながら間違っています。正解は Contact Form 7 です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:283
+msgid "Which plugin is typically used to add e-commerce functionality to a WordPress site?"
+msgstr "WordPressサイトにeコマース機能を追加するために一般的に使用されるプラグインはどれですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "WPForms"
+msgstr "WPForms"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "Smush"
+msgstr "Smush"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "All in One SEO Pack"
+msgstr "オールインワンSEOパック"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "Disqus"
+msgstr "ディスカス"
+
+#: inc/games/quiz/data/QuizWordPress.php:286
+msgid "That's correct! WooCommerce is the most popular e-commerce plugin for WordPress, enabling online store functionality."
+msgstr "その通りです！WooCommerceは、WordPress用の最も人気のあるeコマースプラグインで、オンラインストア機能を実現します。"
+
+#: inc/games/quiz/data/QuizWordPress.php:287
+msgid "That is unfortunately incorrect. The correct answer is WooCommerce."
+msgstr "それは残念ながら間違っています。正解はWooCommerceです。"
+
+#: inc/games/quiz/data/QuizWordPress.php:292
+msgid "What are WordPress major versions named after?"
+msgstr "WordPressのメジャーバージョンにはどのような名前が付けられているのか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Famous scientists"
+msgstr "有名科学者"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Space missions"
+msgstr "宇宙ミッション"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Hollywood actors"
+msgstr "ハリウッド俳優"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Marvel characters"
+msgstr "マーベル・キャラクター"
+
+#: inc/games/quiz/data/QuizWordPress.php:294
+msgid "Jazz musicians"
+msgstr "ジャズ・ミュージシャン"
+
+#: inc/games/quiz/data/QuizWordPress.php:295
+msgid "That's correct! Matt Mullenweg, the co-founder of WordPress, is a big jazz fan and wanted to bring a personal touch to the project."
+msgstr "そうです！WordPressの共同創設者であるマット・マレンウェグは大のジャズファンで、このプロジェクトに個人的なタッチを加えたいと考えていた。"
+
+#: inc/games/quiz/data/QuizWordPress.php:296
+msgid "That is unfortunately incorrect. The correct answer is Jazz musicians."
+msgstr "それは残念ながら正しくない。正解はジャズミュージシャン。"
+
+#: inc/games/quiz/data/QuizWordPress.php:301
+msgid "When was the first WordCamp organized?"
+msgstr "最初のWordCampはいつ開催されたのですか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:302
+msgid "2001"
+msgstr "2001"
+
+#: inc/games/quiz/data/QuizWordPress.php:302
+msgid "2012"
+msgstr "2012年"
+
+#: inc/games/quiz/data/QuizWordPress.php:302
+msgid "🤔"
+msgstr "🤔"
+
+#: inc/games/quiz/data/QuizWordPress.php:303
+msgid "2006"
+msgstr "2006"
+
+#: inc/games/quiz/data/QuizWordPress.php:304
+msgid "That's correct! The first WordCamp was organized in 2006 by Matt Mullenweg in San Francisco."
+msgstr "その通りだ！最初のWordCampは、2006年にサンフランシスコでマット・マレンウェグによって開催された。"
+
+#: inc/games/quiz/data/QuizWordPress.php:305
+msgid "That is unfortunately incorrect. The correct answer is 2006."
+msgstr "それは残念ながら間違っている。正解は2006年である。"
+
+#: inc/games/quiz/data/QuizWordPress.php:310
+msgid "How many themes are currently hosted on WordPress.org?"
+msgstr "現在WordPress.orgでホストされているテーマの数は？"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 1,000"
+msgstr "1,000人以上"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 5,000"
+msgstr "5,000人以上"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+msgid "Over 100"
+msgstr "100以上"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+msgid "Over 2,500"
+msgstr "2,500人以上"
+
+#: inc/games/quiz/data/QuizWordPress.php:312
+msgid "Over 12,000"
+msgstr "12,000人以上"
+
+#: inc/games/quiz/data/QuizWordPress.php:313
+msgid "That's correct! There are currently over 12,000 themes hosted on WordPress.org."
+msgstr "その通りです！WordPress.orgには現在12,000以上のテーマがホストされています。"
+
+#: inc/games/quiz/data/QuizWordPress.php:314
+msgid "That is unfortunately incorrect. The correct answer is Over 10,000."
+msgstr "それは残念ながら間違っている。正解は「Over 10,000」である。"
+
+#: inc/games/quiz/data/QuizWordPress.php:319
+msgid "How many plugins are currently hosted on WordPress.org?"
+msgstr "現在WordPress.orgでホストされているプラグインの数は？"
+
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 10,000"
+msgstr "10,000人以上"
+
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 25,000"
+msgstr "25,000人以上"
+
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 40,000"
+msgstr "40,000人以上"
+
+#: inc/games/quiz/data/QuizWordPress.php:321
+msgid "Over 55,000"
+msgstr "55,000人以上"
+
+#: inc/games/quiz/data/QuizWordPress.php:322
+msgid "That's correct! There are currently over 55,000 plugins hosted on WordPress.org."
+msgstr "その通りだ！現在、WordPress.orgには55,000以上のプラグインがホストされています。"
+
+#: inc/games/quiz/data/QuizWordPress.php:323
+msgid "That is unfortunately incorrect. The correct answer is Over 60,000."
+msgstr "それは残念ながら間違っている。正解は「60,000人以上」である。"
+
+#: inc/games/quiz/data/QuizWordPress.php:328
+msgid "Why should you use a Two-Factor Authentication plugin?"
+msgstr "なぜ二要素認証プラグインを使う必要があるのか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:329
+msgid "Wapuu demands it"
+msgstr "ワプウが要求"
+
+#: inc/games/quiz/data/QuizWordPress.php:329
+msgid "For daily brain teasers"
+msgstr "毎日の頭の体操に"
+
+#: inc/games/quiz/data/QuizWordPress.php:329
+msgid "Hackers need challenges"
+msgstr "ハッカーには挑戦が必要だ"
+
+#: inc/games/quiz/data/QuizWordPress.php:329
+msgid "It sounds super cool"
+msgstr "超クールに聞こえる"
+
+#: inc/games/quiz/data/QuizWordPress.php:330
+msgid "Better security against hackers"
+msgstr "ハッカーに対するセキュリティ強化"
+
+#: inc/games/quiz/data/QuizWordPress.php:331
+msgid "That's correct! Two-Factor Authentication greatly enhances your account's security."
+msgstr "その通りです！二要素認証はアカウントのセキュリティを大幅に強化します。"
+
+#: inc/games/quiz/data/QuizWordPress.php:332
+msgid "That is unfortunately incorrect. Two-Factor Authentication is crucial for protecting your account from hackers."
+msgstr "それは残念ながら間違っています。二要素認証は、あなたのアカウントをハッカーから守るために非常に重要です。"
+
+#: inc/games/quiz/data/QuizWordPress.php:337
+msgid "Why should you only install plugins and themes from trusted developers?"
+msgstr "なぜ信頼できる開発者のプラグインやテーマだけをインストールする必要があるのか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:338
+msgid "They grant magic powers"
+msgstr "魔法の力を与える"
+
+#: inc/games/quiz/data/QuizWordPress.php:338
+msgid "Trusted devs are cooler"
+msgstr "信頼できる開発者はよりクール"
+
+#: inc/games/quiz/data/QuizWordPress.php:338
+msgid "For bragging rights online"
+msgstr "ネットでの自慢のために"
+
+#: inc/games/quiz/data/QuizWordPress.php:338
+msgid "To unlock hidden levels"
+msgstr "隠しレベルをアンロックするには"
+
+#: inc/games/quiz/data/QuizWordPress.php:339
+msgid "To avoid security risks"
+msgstr "セキュリティリスクを避けるために"
+
+#: inc/games/quiz/data/QuizWordPress.php:340
+msgid "That's correct! Trusted developers reduce the risk of malware and vulnerabilities."
+msgstr "その通りだ！信頼できる開発者は、マルウェアや脆弱性のリスクを低減します。"
+
+#: inc/games/quiz/data/QuizWordPress.php:341
+msgid "That is unfortunately incorrect. Installing untrusted plugins or themes can seriously compromise your website's security."
+msgstr "それは残念ながら正しくありません。信頼できないプラグインやテーマをインストールすると、ウェブサイトのセキュリティが著しく損なわれる可能性があります。"
+
+#: inc/games/quiz/data/QuizWordPress.php:346
+msgid "Why should you keep plugins and themes updated?"
+msgstr "なぜプラグインやテーマを更新し続ける必要があるのか？"
+
+#: inc/games/quiz/data/QuizWordPress.php:347
+msgid "They get faster Wi-Fi"
+msgstr "より高速なWi-Fi"
+
+#: inc/games/quiz/data/QuizWordPress.php:347
+msgid "Wapuu loves updates"
+msgstr "ワプウはアップデートが大好き"
+
+#: inc/games/quiz/data/QuizWordPress.php:347
+msgid "They start growing plants"
+msgstr "植物を育て始める"
+
+#: inc/games/quiz/data/QuizWordPress.php:347
+msgid "For a fresher look"
+msgstr "よりフレッシュな印象に"
+
+#: inc/games/quiz/data/QuizWordPress.php:348
+msgid "To fix security issues"
+msgstr "セキュリティ問題を解決する"
+
+#: inc/games/quiz/data/QuizWordPress.php:349
+msgid "That's correct! Updates often include important security fixes and improvements."
+msgstr "その通りだ！多くの場合、アップデートには重要なセキュリティ修正や改良が含まれています。"
+
+#: inc/games/quiz/data/QuizWordPress.php:350
+msgid "That is unfortunately incorrect. Outdated plugins and themes can make your site vulnerable to attacks."
+msgstr "それは残念ながら正しくない。古いプラグインやテーマは、あなたのサイトを攻撃されやすくします。"
+
+#: inc/mission/Menu.php:37
+msgid "Missions"
+msgstr "ミッション"
+
+#: inc/mission/Menu.php:55
+msgid "Reset Mission"
+msgstr "リセット・ミッション"
+
+#: inc/mission/data/Missions.php:34
+msgid "The Endless Steppes"
+msgstr "果てしない草原"
+
+#: inc/mission/data/Missions.php:35
+msgid "Embark with your brave Wapuu on an adventure through the endless steppes in search of a hidden treasure. But the journey is fraught with dangers and tricky puzzles! Only with your help can your Wapuu overcome these challenges. Support your courageous companion on their journey and together, become the heroes of this adventure!"
+msgstr "勇敢なワプウと一緒に、隠された宝物を求めて果てしなく続く草原を冒険しよう。しかし、その旅は危険とトリッキーなパズルに満ちている！あなたの助けがあってこそ、ワプウはこれらの困難を乗り越えることができるのです。勇敢な仲間の旅をサポートし、一緒にこの冒険のヒーローになろう！"
+
+#: inc/mission/data/Missions.php:39
+msgid "Wapuu embarks on an adventure through the vast, endless steppes. Soon, he comes across a dense forest where the trees block his way. Carved into the bark of an old tree is a riddle. Only by solving it the hidden path will reveal itself."
+msgstr "ワプウは広大で果てしない草原を冒険する。やがて彼は、木々が行く手を阻む密林に出くわす。老木の樹皮には謎が刻まれている。それを解くことでしか、隠された道は姿を現さない。"
+
+#: inc/mission/data/Missions.php:40
+msgid "After solving the riddle in the forest, Wapuu reaches a massive mountain range. A large monolith blocks the path between the peaks. On its surface is another riddle, and only the correct answer will clear the way."
+msgstr "森の中で謎を解き、ワプウは巨大な山脈にたどり着く。峰と峰の間に大きな一枚岩が道をふさいでいる。その表面には別の謎が描かれており、正解のみが道を切り開くことができる。"
+
+#: inc/mission/data/Missions.php:41
+msgid "With the monolith moved aside, Wapuu continues his journey. Suddenly, he comes across a cave, but the entrance is blocked by a giant spider’s web. A spider emerges from the shadows and presents him a new challenge. Only by solving her riddle Wapuu will gain access to the cave."
+msgstr "モノリスをどけて、ワプウは旅を続ける。突然、洞窟に出くわすが、入り口は巨大なクモの巣でふさがれていた。影から蜘蛛が現れ、ワプウに新たな試練を与える。彼女の謎を解くことでしか、ワプウは洞窟に入ることができない。"
+
+#: inc/mission/data/Missions.php:42
+msgid "After passing the spider’s test, Wapuu reaches a peaceful oasis. In the clear water, a glowing fish swims. It promises to show Wapuu the way to the treasure if he can answer the next question correctly."
+msgstr "クモのテストに合格したワプウは、平和なオアシスにたどり着く。澄んだ水の中に、光る魚が泳いでいる。その魚は、ワプウが次の質問に正しく答えられたら、宝物への道を教えてくれると約束する。"
+
+#: inc/mission/data/Missions.php:43
+msgid "Wapuu finally finds the treasure. However, a mysterious inscription on the chest says that it will only open if he can solve the final riddle engraved on the lid."
+msgstr "ワプウはついに宝を見つける。しかし、宝箱には謎の碑文が刻まれており、蓋に刻まれた最後の謎を解かなければ宝箱は開かないというのだ。"
+
+#: inc/mission/data/Missions.php:50
+msgid "The Burning Rivers"
+msgstr "燃える川"
+
+#: inc/mission/data/Missions.php:51
+#: inc/mission/data/Missions.php:67
+msgid "Join your brave Wapuu on a daring journey through the burning rivers, where the air shimmers with heat and every choice matters. Treacherous currents and challenging puzzles await to test your resolve! Only with your support can your Wapuu overcome the dangers ahead. Stand by your courageous companion and together, craft a heroic tale that begins in the burning rivers!"
+msgstr "勇敢なワプウと一緒に灼熱の川を大胆に旅しよう。危険な流れや難解なパズルが、あなたの決意を試すために待ち受けています！あなたのサポートがあってこそ、ワプウはこの先の危険を乗り越えることができるのです。勇敢な仲間とともに、燃える川から始まる英雄譚を作り上げよう！"
+
+#: inc/mission/data/Missions.php:55
+msgid "Wapuu ventures deeper into the burning rivers and discovers a dark cave. The entrance is guarded by fiery bats, and inside, a mysterious glow reveals a riddle carved into the stone walls. Solving it is the key to proceeding further."
+msgstr "ワプウは燃え盛る川の奥深くへと分け入り、暗い洞窟を発見する。入り口は炎のようなコウモリに守られており、内部では神秘的な光が石壁に刻まれた謎を浮かび上がらせる。この謎を解くことが、先に進むための鍵となる。"
+
+#: inc/mission/data/Missions.php:56
+msgid "Leaving the cave, Wapuu finds himself at the base of a towering volcano. The ground trembles with every step, and molten rocks block the path. To proceed, he must solve the riddle etched into an ancient, lava-scorched tablet."
+msgstr "洞窟を出ると、ワプウはそびえ立つ火山のふもとにいた。歩くたびに地面が震え、溶けた岩が行く手を阻む。先に進むには、溶岩で焦がされた古代の石版に刻まれた謎を解かなければならない。"
+
+#: inc/mission/data/Missions.php:57
+msgid "The volcano's riddle solved, Wapuu carefully crosses a raging lava flow. A series of stepping stones appear, but only the correct answer to the fiery question will light the way."
+msgstr "火山の謎が解け、ワプウは荒れ狂う溶岩流を慎重に渡る。飛び石がいくつも現れるが、燃えるような質問の正解だけが道を照らしてくれる。"
+
+#: inc/mission/data/Missions.php:58
+msgid "On the other side of the lava flow, a mighty Fire Golem rises from the ground. Its burning eyes pierce through the haze as it poses a challenging riddle to Wapuu. Only by answering it can the Golem be calmed."
+msgstr "溶岩流の反対側では、強大なファイヤーゴーレムが地面から立ち上がっている。その燃える目は靄を突き破り、ワプウに挑戦的な謎を投げかける。それに答えることでしか、ゴーレムを鎮めることはできない。"
+
+#: inc/mission/data/Missions.php:59
+msgid "With the Fire Golem appeased, Wapuu reaches the final destination: a glowing treasure chest made of sparkling diamonds. Yet, an intricate fiery inscription on the chest demands one last riddle to be solved before the treasure can be claimed."
+msgstr "ファイヤーゴーレムを鎮めたワプウは、最後の目的地であるダイヤモンドでできた宝箱にたどり着く。しかし、宝箱には複雑な炎のような文字が刻まれており、宝を手に入れる前に最後の謎を解かなければならない。"
+
+#: inc/mission/data/Missions.php:66
+msgid "The Frozen Village"
+msgstr "凍てつく村"
+
+#: inc/mission/data/Missions.php:71
+msgid "Wapuu arrives at the Yeti Village, where he hears about a mysterious treasure. The villagers tell him about a hermit who possesses valuable information. However, before they reveal the hermit's location, Wapuu must solve a tricky riddle."
+msgstr "ワプウはイエティ村に到着し、そこで謎の宝の話を聞く。村人たちは彼に、貴重な情報を持つ仙人のことを教える。しかし、仙人の居場所を明かす前に、ワプウは厄介な謎を解かなければならない。"
+
+#: inc/mission/data/Missions.php:72
+msgid "The villagers have told Wapuu that the hermit has set up camp near the great rift. However, when Wapuu arrives, the camp is deserted. Inside an old igloo, he discovers a hidden message. Can he solve the riddle to find out where the hermit has gone?"
+msgstr "村人たちはワプウに、仙人が大きな裂け目の近くにキャンプを張ったことを伝えた。しかしワプウが到着すると、キャンプは閑散としていた。古いイグルーの中で、彼は隠されたメッセージを発見する。果たしてワプウは謎を解き、仙人の行方を突き止めることができるのか？"
+
+#: inc/mission/data/Missions.php:73
+msgid "Wapuu learns that the hermit has gone hunting. When he arrives at the hunting grounds, he finds the hermit injured. The old man has stepped into a thorn trap and urgently needs medicine. However, the location of the remedy is hidden behind another riddle."
+msgstr "ワプウは仙人が狩りに出かけたことを知る。狩場に着くと、仙人は怪我をしていた。老人はとげの罠にはまり、緊急に薬が必要だという。しかし、薬のありかは別の謎に隠されていた。"
+
+#: inc/mission/data/Missions.php:74
+msgid "Wapuu discovers that the medicine can be found at the Ice Crystal. Together with the hermit, he sets off to retrieve it. When sunlight hits the crystal, it begins to glow in different colors, revealing a mysterious puzzle. Only by solving it can Wapuu obtain the cure."
+msgstr "ワプウはその薬がアイスクリスタルにあることを知る。ワプウは仙人と一緒にその薬を取りに行く。太陽の光がクリスタルに当たると、さまざまな色に輝き始め、謎のパズルが現れる。それを解くことでしか、ワプウは治療薬を手に入れることができない。"
+
+#: inc/mission/data/Missions.php:75
+msgid "The medicine works quickly, and the hermit recovers in no time. Grateful for Wapuu’s help, he leads him to the treasure. However, before Wapuu can claim it, the hermit presents him with one final riddle. Can Wapuu solve it and secure the legendary treasure?"
+msgstr "薬はすぐに効き、仙人はあっという間に回復した。ワプウの助けに感謝した仙人は、ワプウを宝物まで案内する。しかし、ワプウが宝を手に入れる前に、仙人は最後の謎をワプウに投げかける。果たしてワプウは謎を解き、伝説の財宝を手に入れることができるのか？"
+
+#: inc/onboarding/Menu.php:30
+msgid "Page Overview"
+msgstr "ページ概要"
+
+#: inc/onboarding/Menu.php:38
+msgid "WordPress Journey"
+msgstr "ワードプレスの旅"
+
+#: inc/onboarding/data/TourDashboard.php:43
+msgid "Welcome Aboard!"
+msgstr "乗船を歓迎する"
+
+#: inc/onboarding/data/TourDashboard.php:44
+msgid "Hey there! Welcome to your journey through the WordPress universe! I'm super excited to guide you through your first steps in WordPress. First, we are going to dive into two essentials: the admin bar and the admin menu. Let's go!"
+msgstr "こんにちは！WordPressの世界へようこそ！WordPressの最初のステップをご案内できることをとても楽しみにしています。まずは、管理バーと管理メニューの2つの基本について説明します。さあ、始めましょう！"
+
+#: inc/onboarding/data/TourDashboard.php:49
+#: inc/onboarding/data/TourPluginInstall.php:61
+msgid "Navigation"
+msgstr "ナビゲーション"
+
+#: inc/onboarding/data/TourDashboard.php:50
+msgid "First, let's look at how to navigate the tour. Above this dialog box are the navigation controls, allowing you to move forward or backward, end the tour, or start a demo at key points."
+msgstr "まず、ツアーをナビゲートする方法を見てみましょう。このダイアログボックスの上にはナビゲーションコントロールがあり、前方や後方に移動したり、ツアーを終了したり、要所要所でデモを開始したりすることができます。"
+
+#: inc/onboarding/data/TourDashboard.php:55
+msgid "The Admin-Bar"
+msgstr "アドミンバー"
+
+#: inc/onboarding/data/TourDashboard.php:56
+msgid "First stop, the \"Admin Bar\"! This is your quick access lane to key areas and information. You will also get a snapshot of pending updates and comments here."
+msgstr "最初に立ち寄るのは「アドミンバー」！重要なエリアや情報へのクイックアクセスレーンです。また、保留中のアップデートやコメントのスナップショットもここに表示されます。"
+
+#: inc/onboarding/data/TourDashboard.php:61
+msgid "WapuuGotchi Bar"
+msgstr "わぷわぷごっちバー"
+
+#: inc/onboarding/data/TourDashboard.php:62
+msgid "I also have a menu item here. Here, you can restart the tour we’re currently on—or just specific parts of it!"
+msgstr "ここにはメニューもあります。ここで、現在進行中のツアーを再開したり、特定の部分だけ再開したりすることができます！"
+
+#: inc/onboarding/data/TourDashboard.php:67
+#: inc/onboarding/data/TourDashboard.php:96
+msgid "Navigating the website"
+msgstr "ウェブサイトのナビゲーション"
+
+#: inc/onboarding/data/TourDashboard.php:68
+msgid "The \"Admin Menu\" makes switching between different areas of your website a breeze. You can easily access one of these areas by clicking on a main menu item."
+msgstr "管理者メニュー \"を使えば、ウェブサイトのさまざまなエリアを簡単に切り替えることができます。メインメニューをクリックするだけで、簡単に各エリアにアクセスできます。"
+
+#: inc/onboarding/data/TourDashboard.php:73
+msgid "About submenus"
+msgstr "サブメニューについて"
+
+#: inc/onboarding/data/TourDashboard.php:74
+msgid "After clicking on a main menu item, you’ll see some submenu items pop up underneath. They're like special little tools that let you do things related to the main menu item you clicked on. It's super helpful!"
+msgstr "メインメニューの項目をクリックすると、その下にサブメニューの項目がいくつかポップアップ表示されます。これらは、クリックしたメインメニューに関連することができる特別な小さなツールのようなものです。とても便利だ！"
+
+#: inc/onboarding/data/TourDashboard.php:79
+#: inc/onboarding/data/TourEditComments.php:97
+#: inc/onboarding/data/TourExport.php:61
+#: inc/onboarding/data/TourExportPersonalData.php:55
+#: inc/onboarding/data/TourImport.php:61
+#: inc/onboarding/data/TourOptionsMedia.php:55
+#: inc/onboarding/data/TourOptionsPrivacy.php:55
+#: inc/onboarding/data/TourUser.php:49
+msgid "Tip 1"
+msgstr "ヒント1"
+
+#: inc/onboarding/data/TourDashboard.php:80
+msgid "A small hint: If you want a wider view of your website, you can always collapse the admin menu. Give it a try by clicking the ► button."
+msgstr "ちょっとしたヒント: ウェブサイトをより広く見たい場合は、いつでも管理メニューを折りたたむことができます。ボタンをクリックして試してみてください。"
+
+#: inc/onboarding/data/TourDashboard.php:97
+msgid "Let's take a closer look at each \"Main Menu Item\". We'll uncover the ins and outs, showing you how every part plays its role in the grand WordPress system. Ready to explore?"
+msgstr "それぞれの「メインメニュー」を詳しく見ていきましょう。WordPressの壮大なシステムの中で、各パーツがどのような役割を担っているのかをご紹介します。準備はいいですか？"
+
+#: inc/onboarding/data/TourDashboard.php:104
+msgid "Exploring the Dashboard"
+msgstr "ダッシュボードの探索"
+
+#: inc/onboarding/data/TourDashboard.php:105
+msgid "Let's zoom into our first main menu item: the \"Dashboard\". This is where you'll find all the key info from every corner of your website. Let's peek inside!"
+msgstr "最初のメインメニュー「ダッシュボード」にズームインしてみましょう。ダッシュボード \"には、ウェブサイトの隅々まで重要な情報が表示されます。中を覗いてみましょう！"
+
+#: inc/onboarding/data/TourDashboard.php:110
+msgid "Landing Page"
+msgstr "ランディングページ"
+
+#: inc/onboarding/data/TourDashboard.php:111
+msgid "Our first stop is the \"Home\" page. This pops up when you log into your WordPress backend."
+msgstr "最初のページは \"Home \"ページです。これはWordPressのバックエンドにログインすると表示されます。"
+
+#: inc/onboarding/data/TourDashboard.php:116
+msgid "The Rundown"
+msgstr "概要"
+
+#: inc/onboarding/data/TourDashboard.php:117
+msgid "This page gives you a summary of everything – new posts, recent comments, and stats from across your website."
+msgstr "このページでは、新しい投稿、最近のコメント、ウェブサイト全体の統計情報など、すべての要約を見ることができます。"
+
+#: inc/onboarding/data/TourDashboard.php:122
+msgid "Customize It"
+msgstr "カスタマイズ"
+
+#: inc/onboarding/data/TourDashboard.php:123
+msgid "You've got the power to tweak your \"Home\" page. Turn off elements that don't spark your interest. It's all in your hands! Click the ► button to see how does it work."
+msgstr "あなたには「ホーム」ページを微調整する力がある。興味をそそらない要素は消してしまいましょう。全てはあなたの手の中にあります！►ボタンをクリックして、どのように機能するか見てみましょう。"
+
+#: inc/onboarding/data/TourEditCategory.php:43
+#: inc/onboarding/data/TourEditPost.php:79
+#: inc/onboarding/data/TourWapuugotchiShop.php:61
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: inc/onboarding/data/TourEditCategory.php:44
+msgid "This is the \"Categories\" page! These are super handy for organizing and structuring your content, making it easier for visitors to find relevant info."
+msgstr "これは「カテゴリー」ページです！コンテンツを整理し、構造化するのにとても便利で、訪問者が関連情報を見つけやすくなります。"
+
+#: inc/onboarding/data/TourEditCategory.php:49
+msgid "Creating New Ones"
+msgstr "新しいものを生み出す"
+
+#: inc/onboarding/data/TourEditCategory.php:50
+msgid "You can create new categories to group your posts thematically. This not only makes navigation a breeze but also boosts SEO, helping users find your website when they search."
+msgstr "新しいカテゴリーを作成して、投稿をテーマ別にグループ分けすることができます。これにより、ナビゲーションが簡単になるだけでなく、SEO対策にもなり、ユーザーが検索した際にあなたのウェブサイトを見つけやすくなります。"
+
+#: inc/onboarding/data/TourEditCategory.php:55
+msgid "Hierarchies"
+msgstr "階層"
+
+#: inc/onboarding/data/TourEditCategory.php:56
+msgid "Categories can have a hierarchy. Set up subcategories for even more precise organization of your content."
+msgstr "カテゴリーには階層を持たせることができます。サブカテゴリーを設定することで、コンテンツをさらに細かく分類することができます。"
+
+#: inc/onboarding/data/TourEditCategory.php:61
+#: inc/onboarding/data/TourEditPost.php:55
+msgid "Overview Page"
+msgstr "概要ページ"
+
+#: inc/onboarding/data/TourEditCategory.php:62
+msgid "The overview page not only shows all your categories but also their hierarchical relationships. Check out how often your categories are used in your posts."
+msgstr "概要ページでは、すべてのカテゴリーだけでなく、その階層関係も表示されます。カテゴリーがあなたの投稿でどのくらい頻繁に使用されているかをチェックしてください。"
+
+#: inc/onboarding/data/TourEditCategory.php:67
+msgid "In Summary"
+msgstr "まとめ"
+
+#: inc/onboarding/data/TourEditCategory.php:68
+msgid "Overall, the \"Categories\" page offers an effective way to enhance the organization and findability of content on your website."
+msgstr "全体的に、「カテゴリー」ページは、ウェブサイト上のコンテンツの整理と見つけやすさを向上させる効果的な方法を提供します。"
+
+#: inc/onboarding/data/TourEditComments.php:43
+#: inc/onboarding/data/TourSiteEditor.php:43
+msgid "Comments"
+msgstr "コメント"
+
+#: inc/onboarding/data/TourEditComments.php:44
+msgid "Now, I'm going to tell you everything I know about the \"Comments\" main menu item. This is the place where all the conversations on your website happen."
+msgstr "さて、メインメニューの「コメント」について私が知っていることをすべてお話ししましょう。ここは、あなたのウェブサイト上のすべての会話が行われる場所です。"
+
+#: inc/onboarding/data/TourEditComments.php:49
+msgid "Why Comments?"
+msgstr "なぜコメントなのか？"
+
+#: inc/onboarding/data/TourEditComments.php:50
+msgid "This page is a key tool for engaging with your visitors. Here, you can respond to feedback and moderate discussions."
+msgstr "このページは訪問者と関わるための重要なツールです。このページでは、フィードバックに答えたり、ディスカッションを司会したりすることができます。"
+
+#: inc/onboarding/data/TourEditComments.php:55
+#: inc/onboarding/data/TourEditPage.php:61
+#: inc/onboarding/data/TourEditPostTag.php:61
+#: inc/onboarding/data/TourErasePersonalData.php:49
+#: inc/onboarding/data/TourExport.php:55
+#: inc/onboarding/data/TourExportPersonalData.php:49
+#: inc/onboarding/data/TourImport.php:55
+#: inc/onboarding/data/TourOptionsDiscussion.php:49
+#: inc/onboarding/data/TourOptionsMedia.php:49
+#: inc/onboarding/data/TourOptionsPrivacy.php:49
+#: inc/onboarding/data/TourOptionsReading.php:49
+#: inc/onboarding/data/TourOptionsWriting.php:49
+#: inc/onboarding/data/TourPluginEditor.php:49
+#: inc/onboarding/data/TourPluginInstall.php:49
+#: inc/onboarding/data/TourPlugins.php:43
+#: inc/onboarding/data/TourThemeEditor.php:49
+#: inc/onboarding/data/TourThemes.php:55
+#: inc/onboarding/data/TourTools.php:55
+#: inc/onboarding/data/TourUsers.php:55
+#: inc/onboarding/data/TourWapuugotchiQuest.php:49
+#: inc/onboarding/data/TourWapuugotchiShop.php:55
+msgid "Overview"
+msgstr "概要"
+
+#: inc/onboarding/data/TourEditComments.php:56
+msgid "This is where you'll find a list of all the comments left by visitors on your website, including the comment text, the author's name, the post they commented on, and the date."
+msgstr "ここには、あなたのウェブサイトに訪問者が残したすべてのコメントのリストがあり、コメント文、作者名、コメントした記事、日付が含まれます。"
+
+#: inc/onboarding/data/TourEditComments.php:62
+msgid "This field lets you quickly see who left the comment. For registered visitors, their email address is also shown."
+msgstr "このフィールドを使用すると、誰がコメントを残したかをすぐに確認することができます。登録済みの訪問者の場合は、メールアドレスも表示されます。"
+
+#: inc/onboarding/data/TourEditComments.php:67
+msgid "Comment Status"
+msgstr "コメントステータス"
+
+#: inc/onboarding/data/TourEditComments.php:68
+msgid "The \"Comment\" field displays the actual content of the comment left by a visitor on your website."
+msgstr "コメント \"フィールドは、あなたのウェブサイトに訪問者が残したコメントの実際の内容を表示します。"
+
+#: inc/onboarding/data/TourEditComments.php:73
+msgid "Related Post"
+msgstr "関連記事"
+
+#: inc/onboarding/data/TourEditComments.php:74
+msgid "This shows which post the comment is referring to, helping you understand the context."
+msgstr "これは、コメントがどの投稿を参照しているかを示し、文脈を理解するのに役立ちます。"
+
+#: inc/onboarding/data/TourEditComments.php:79
+msgid "Comment Date"
+msgstr "コメントの日付"
+
+#: inc/onboarding/data/TourEditComments.php:80
+msgid "The \"Date\" field indicates when the comment was left on your website."
+msgstr "日付」フィールドは、あなたのウェブサイトにコメントが残された日時を示します。"
+
+#: inc/onboarding/data/TourEditComments.php:85
+msgid "Changing Comment Status"
+msgstr "コメントステータスの変更"
+
+#: inc/onboarding/data/TourEditComments.php:86
+msgid "A comment can be \"Pending\", \"Approved\", \"Trash\", or \"Spam\". Pending comments won't show on your website until you approve them."
+msgstr "コメントは \"保留\"、\"承認\"、\"ゴミ箱\"、\"スパム \"にすることができます。保留中のコメントは、あなたが承認するまでウェブサイトに表示されません。"
+
+#: inc/onboarding/data/TourEditComments.php:91
+msgid "Using Search"
+msgstr "検索の使用"
+
+#: inc/onboarding/data/TourEditComments.php:92
+msgid "The search function lets you look for specific comments based on keywords, usernames, email addresses, or other relevant info."
+msgstr "検索機能では、キーワード、ユーザー名、メールアドレス、その他の関連情報に基づいて特定のコメントを探すことができます。"
+
+#: inc/onboarding/data/TourEditComments.php:98
+msgid "A quick hint: Want to quickly approve or trash a comment? Hover over it and click the corresponding action."
+msgstr "簡単なヒント：コメントをすばやく承認または削除したいですか？コメントにカーソルを合わせて、対応するアクションをクリックしてください。"
+
+#: inc/onboarding/data/TourEditPage.php:43
+msgid "Pages Overview"
+msgstr "ページ概要"
+
+#: inc/onboarding/data/TourEditPage.php:44
+msgid "We're now exploring the submenu of the \"Pages\" main menu item. This is where you manage all your static content."
+msgstr "メインメニューの \"Pages \"のサブメニューを見てみましょう。ここですべての静的コンテンツを管理します。"
+
+#: inc/onboarding/data/TourEditPage.php:49
+msgid "All Pages"
+msgstr "全てのページ"
+
+#: inc/onboarding/data/TourEditPage.php:50
+msgid "\"All Pages\" lets you view, organize, and manage your pages all in one spot."
+msgstr "「すべてのページ \"は、あなたのページの表示、整理、管理をすべて一箇所で行うことができます。"
+
+#: inc/onboarding/data/TourEditPage.php:55
+msgid "About Pages"
+msgstr "ページについて"
+
+#: inc/onboarding/data/TourEditPage.php:56
+msgid "As mentioned, \"Pages\" are static content. Unlike \"Posts\", they're more permanent, like your \"About Us\" or \"Contact\" pages."
+msgstr "前述の通り、「ページ」は静的なコンテンツです。投稿 \"とは異なり、\"会社概要 \"や \"お問い合わせ \"ページのように、より永続的なものです。"
+
+#: inc/onboarding/data/TourEditPage.php:62
+msgid "This page overview gives you a good look at all the pages you've created. Plus, you can organize and manage them from here."
+msgstr "このページ概要では、あなたが作成したすべてのページを見ることができます。さらに、ここからページを整理・管理することもできます。"
+
+#: inc/onboarding/data/TourEditPage.php:67
+#: inc/onboarding/data/TourEditPost.php:67
+msgid "Titles"
+msgstr "タイトル"
+
+#: inc/onboarding/data/TourEditPage.php:68
+msgid "This column shows the titles of all pages. Click a title to edit the page and change its content."
+msgstr "この欄には全ページのタイトルが表示されます。タイトルをクリックするとページが編集され、内容が変更されます。"
+
+#: inc/onboarding/data/TourEditPage.php:74
+msgid "This column shows who created the page. For multiple authors, it'll display their names."
+msgstr "このカラムは誰がそのページを作成したかを表示します。複数の作者がいる場合は、それぞれの名前が表示されます。"
+
+#: inc/onboarding/data/TourEditPage.php:79
+msgid "Publish Date"
+msgstr "公開日"
+
+#: inc/onboarding/data/TourEditPage.php:80
+msgid "This column shows the date when the page was created or last edited."
+msgstr "このカラムには、ページが作成された日付、または最後に編集された日付が表示されます。"
+
+#: inc/onboarding/data/TourEditPage.php:85
+msgid "Quick Overview"
+msgstr "概要"
+
+#: inc/onboarding/data/TourEditPage.php:86
+msgid "Hover over a page to see a menu for quick actions like editing. Give it a try! Just move your cursor over the menu above!"
+msgstr "ページにカーソルを合わせると、編集などのクイックアクションのためのメニューが表示されます。試してみてください！上のメニューにカーソルを合わせてください！"
+
+#: inc/onboarding/data/TourEditPage.php:91
+#: inc/onboarding/data/TourEditPost.php:103
+msgid "Sorting and Filtering"
+msgstr "ソートとフィルタリング"
+
+#: inc/onboarding/data/TourEditPage.php:92
+msgid "You can sort your pages by different criteria, like date. There are also filtering options to display specific types of pages, like drafts."
+msgstr "ページを日付などの異なる基準で並べ替えることができます。また、下書きのような特定のタイプのページを表示するフィルタリングオプションもあります。"
+
+#: inc/onboarding/data/TourEditPage.php:97
+#: inc/onboarding/data/TourEditPost.php:109
+#: inc/onboarding/data/TourThemes.php:73
+msgid "Search"
+msgstr "検索"
+
+#: inc/onboarding/data/TourEditPage.php:98
+msgid "The search bar lets you look for specific pages, which is super handy if you have lots of them."
+msgstr "検索バーで特定のページを探すことができるので、ページがたくさんある場合は超便利だ。"
+
+#: inc/onboarding/data/TourEditPage.php:103
+#: inc/onboarding/data/TourEditPost.php:115
+msgid "Create"
+msgstr "作成"
+
+#: inc/onboarding/data/TourEditPage.php:104
+#: inc/onboarding/data/TourEditPost.php:116
+msgid "Behind the \"Create\" button, you can start crafting new content for your website. It'll guide you through the process step by step!"
+msgstr "Create \"ボタンをクリックすると、ウェブサイト用の新しいコンテンツを作成できます。ステップ・バイ・ステップで作業を進めることができます！"
+
+#: inc/onboarding/data/TourEditPage.php:109
+msgid "Closing Thoughts"
+msgstr "閉会の考え"
+
+#: inc/onboarding/data/TourEditPage.php:110
+msgid "Did you notice I almost said the same thing as in the \"Posts\" page? Well, that's because these pages are pretty similar!"
+msgstr "投稿」のページとほとんど同じことを言っていることに気づきましたか？それは、これらのページがかなり似ているからだ！"
+
+#: inc/onboarding/data/TourEditPost.php:43
+msgid "Welcome to Posts"
+msgstr "ポストへようこそ"
+
+#: inc/onboarding/data/TourEditPost.php:44
+msgid "Currently, we're in the submenu of the \"Posts\" main menu item. This is where you can create, tweak, and organize all your dynamic content."
+msgstr "現在は、メインメニューの「投稿」のサブメニューにいます。ここで、すべてのダイナミックコンテンツを作成、調整、整理することができます。"
+
+#: inc/onboarding/data/TourEditPost.php:49
+msgid "All Posts"
+msgstr "すべての投稿"
+
+#: inc/onboarding/data/TourEditPost.php:50
+msgid "In \"All Posts\", you can view, organize, and manage all your posts at a glance. Additionally, you can start making new posts right from here!"
+msgstr "すべての投稿」では、すべての投稿を一目で確認、整理、管理することができます。さらに、ここから新しい投稿を始めることもできます！"
+
+#: inc/onboarding/data/TourEditPost.php:56
+msgid "The Overview Page lists all your posts. From here, you can easily create new posts and make quick edits to existing ones."
+msgstr "概要ページにはすべての投稿が表示されます。ここから簡単に新しい投稿を作成したり、既存の投稿を素早く編集することができます。"
+
+#: inc/onboarding/data/TourEditPost.php:61
+msgid "Post List"
+msgstr "投稿リスト"
+
+#: inc/onboarding/data/TourEditPost.php:62
+msgid "The Post List shows you all your posts, along with key details like title, author, and publication date."
+msgstr "投稿リストには、タイトル、著者、公開日などの主要な詳細とともに、すべての投稿が表示されます。"
+
+#: inc/onboarding/data/TourEditPost.php:68
+msgid "The Title column displays the titles of all your posts. Click on any title to edit the post and change its content."
+msgstr "タイトル欄には、すべての投稿のタイトルが表示されます。タイトルをクリックすると、その投稿を編集し、内容を変更することができます。"
+
+#: inc/onboarding/data/TourEditPost.php:73
+msgid "Authors"
+msgstr "投稿者"
+
+#: inc/onboarding/data/TourEditPost.php:74
+msgid "The Author column shows who created the post. If there are multiple authors, it'll display their usernames."
+msgstr "作者欄には、誰がその投稿を作成したかが表示されます。複数の作成者がいる場合は、それぞれのユーザー名が表示されます。"
+
+#: inc/onboarding/data/TourEditPost.php:80
+msgid "This shows the categories assigned to a post. Categories help organize content on your website in a structured way."
+msgstr "これは投稿に割り当てられたカテゴリーを表示します。カテゴリは、ウェブサイトのコンテンツを構造的に整理するのに役立ちます。"
+
+#: inc/onboarding/data/TourEditPost.php:85
+#: inc/onboarding/data/TourEditPostTag.php:43
+msgid "Tags"
+msgstr "タグ"
+
+#: inc/onboarding/data/TourEditPost.php:86
+msgid "The Tags column lists the tags associated with your posts. Tags make it easier to find content on similar topics."
+msgstr "タグ欄には、投稿に関連するタグが一覧表示されます。タグを使うことで、似たようなトピックのコンテンツを見つけやすくなります。"
+
+#: inc/onboarding/data/TourEditPost.php:91
+msgid "Dates"
+msgstr "日付"
+
+#: inc/onboarding/data/TourEditPost.php:92
+msgid "The Date column tells you when a post was or will be published. "
+msgstr "日付欄は、投稿がいつ公開されたか、または公開される予定かを示す。"
+
+#: inc/onboarding/data/TourEditPost.php:97
+msgid "Quick Access"
+msgstr "クイックアクセス"
+
+#: inc/onboarding/data/TourEditPost.php:98
+msgid "Hover over a post to see a quick-access menu for important functions. Give it a try! Just move your cursor over the menu above!"
+msgstr "記事にカーソルを合わせると、重要な機能のクイックアクセスメニューが表示されます。ぜひお試しください！上のメニューにカーソルを合わせてください！"
+
+#: inc/onboarding/data/TourEditPost.php:104
+msgid "Sort your posts by various criteria like date, and use filters to display specific types of posts, like drafts."
+msgstr "投稿を日付などの様々な条件で並べ替えたり、フィルターを使って下書きなどの特定のタイプの投稿を表示することができます。"
+
+#: inc/onboarding/data/TourEditPost.php:110
+msgid "Use the search bar to find specific posts by keywords or titles. Super useful when you have lots of posts."
+msgstr "検索バーを使って、キーワードやタイトルから特定の投稿を見つけることができます。たくさんの投稿がある場合にとても便利です。"
+
+#: inc/onboarding/data/TourEditPostTag.php:44
+msgid "This is the \"Tags\" page! Tags let you enhance your posts with additional keywords or phrases. That way, your content can be found and searched through easier!"
+msgstr "これは「タグ」のページです！タグをつけることで、キーワードやフレーズを追加して投稿を充実させることができます。そうすることで、あなたのコンテンツはより簡単に検索されるようになります！"
+
+#: inc/onboarding/data/TourEditPostTag.php:49
+msgid "Differentiating"
+msgstr "差別化"
+
+#: inc/onboarding/data/TourEditPostTag.php:50
+msgid "Unlike categories, which group posts into broad themes, tags give more specific details. They help you connect particular topics, keywords, or phrases to your posts."
+msgstr "投稿を大まかなテーマにグループ化するカテゴリーとは異なり、タグはより具体的な詳細を示します。特定のトピック、キーワード、フレーズを投稿に結びつけるのに役立ちます。"
+
+#: inc/onboarding/data/TourEditPostTag.php:55
+msgid "Creating Tags"
+msgstr "タグの作成"
+
+#: inc/onboarding/data/TourEditPostTag.php:56
+msgid "You can create tags that match the specific content of your posts. These can be single words or short phrases that reflect the main concepts or themes of the post."
+msgstr "投稿の特定の内容にマッチするタグを作成することができます。タグは、投稿の主なコンセプトやテーマを反映した単一の単語や短いフレーズで構成することができます。"
+
+#: inc/onboarding/data/TourEditPostTag.php:62
+msgid "The overview section shows all your created tags. You'll also see info on how often your tags are used in your posts."
+msgstr "概要セクションには、作成したすべてのタグが表示されます。また、タグが投稿で使用される頻度も表示されます。"
+
+#: inc/onboarding/data/TourEditPostTag.php:67
+msgid "SEO Tip"
+msgstr "SEOのヒント"
+
+#: inc/onboarding/data/TourEditPostTag.php:68
+msgid "Tags are a key part of Search Engine Optimization (SEO). They help search engines better understand and index the content of your posts."
+msgstr "タグは検索エンジン最適化（SEO）の重要な要素です。タグは、検索エンジンがあなたの投稿の内容をよりよく理解し、インデックスするのを助けます。"
+
+#: inc/onboarding/data/TourErasePersonalData.php:43
+msgid "Erase Personal Data"
+msgstr "個人データの消去"
+
+#: inc/onboarding/data/TourErasePersonalData.php:44
+msgid "On the \"Erase Personal Data\" page, you can delete a user's personal data. Let's take a closer look together!"
+msgstr "個人データの消去」ページでは、ユーザーの個人データを消去することができます。一緒に詳しく見てみましょう！"
+
+#: inc/onboarding/data/TourErasePersonalData.php:50
+msgid "This page is pretty much like the personal data export page. Here, you can delete a specific user's personal data."
+msgstr "このページは、個人データのエクスポートページとほぼ同じです。ここでは、特定のユーザーの個人データを削除することができます。"
+
+#: inc/onboarding/data/TourErasePersonalData.php:55
+#: inc/onboarding/data/TourExport.php:49
+#: inc/onboarding/data/TourImport.php:49
+msgid "Usage"
+msgstr "使い方"
+
+#: inc/onboarding/data/TourErasePersonalData.php:56
+msgid "Sometimes, a user might want their data deleted. Maybe they're switching websites or they just don't want their data on your website anymore."
+msgstr "ユーザーがデータの削除を希望することがあります。もしかしたら、ウェブサイトを乗り換えるかもしれませんし、あなたのウェブサイトにデータを残したくないだけかもしれません。"
+
+#: inc/onboarding/data/TourErasePersonalData.php:61
+msgid "Deleting Data"
+msgstr "データの削除"
+
+#: inc/onboarding/data/TourErasePersonalData.php:62
+msgid "Please note, when you erase a user's data, you're also erasing all data associated with them. This includes their comments, posts, and any other personal details. That's pretty important!"
+msgstr "ユーザーのデータを消去すると、そのユーザーに関連するすべてのデータも消去されますのでご注意ください。これには、コメント、投稿、その他の個人情報が含まれます。これはかなり重要です！"
+
+#: inc/onboarding/data/TourErasePersonalData.php:67
+msgid "Data Protection Tip"
+msgstr "データ保護のヒント"
+
+#: inc/onboarding/data/TourErasePersonalData.php:68
+msgid "Remember, less data means less worry! If you don't have it, it can't be stolen. Simple, isn't it?"
+msgstr "データが少ないということは、心配が少ないということだ！データがなければ盗まれることもない。簡単でしょう？"
+
+#: inc/onboarding/data/TourExport.php:43
+msgid "Export"
+msgstr "エクスポート"
+
+#: inc/onboarding/data/TourExport.php:44
+msgid "On the \"Export\" page, you can transfer your website's content to a different location. This is a crucial task, so let's do it with care."
+msgstr "エクスポート」ページでは、ウェブサイトのコンテンツを別の場所に移すことができます。これは非常に重要な作業なので、慎重に行いましょう。"
+
+#: inc/onboarding/data/TourExport.php:50
+msgid "Exporting content is like moving your website's content to a new home. It's also a great way to keep a backup of your website, just in case!"
+msgstr "コンテンツのエクスポートは、ウェブサイトのコンテンツを新しい家に移動するようなものです。また、万が一に備えてウェブサイトのバックアップをとっておくのにも最適です！"
+
+#: inc/onboarding/data/TourExport.php:56
+msgid "Here, you can select what content to transfer. You don't have to move everything, you can choose specific items to transfer!"
+msgstr "ここで、転送するコンテンツを選択できます。すべてを移行する必要はなく、特定の項目を選択して移行することもできます！"
+
+#: inc/onboarding/data/TourExport.php:62
+msgid "Just a little reminder, your content might contain personal data or things that belong to someone else. So, be careful about who you share your content with, okay?"
+msgstr "あなたのコンテンツには、個人情報や他人のものが含まれているかもしれません。だから、コンテンツを共有する相手には気をつけてね。"
+
+#: inc/onboarding/data/TourExport.php:67
+#: inc/onboarding/data/TourImport.php:67
+#: inc/onboarding/data/TourOptionsMedia.php:61
+#: inc/onboarding/data/TourOptionsPermalink.php:55
+#: inc/onboarding/data/TourOptionsPrivacy.php:61
+#: inc/onboarding/data/TourUser.php:55
+msgid "Tip 2"
+msgstr "ヒント2"
+
+#: inc/onboarding/data/TourExport.php:68
+msgid "Also, remember that if you transfer a lot of content, it can take up a lot of space. Make sure you have enough room in your workspace to store it!"
+msgstr "また、多くのコンテンツを転送すると、多くのスペースを占有する可能性があることを覚えておいてください。ワークスペースに十分なスペースがあることを確認してください！"
+
+#: inc/onboarding/data/TourExportPersonalData.php:43
+msgid "Export Personal Data"
+msgstr "個人データのエクスポート"
+
+#: inc/onboarding/data/TourExportPersonalData.php:44
+msgid "On the \"Export Personal Data\" page, you can specifically export the personal data of your users."
+msgstr "個人データのエクスポート」ページでは、ユーザーの個人データを特別にエクスポートすることができます。"
+
+#: inc/onboarding/data/TourExportPersonalData.php:50
+msgid "Here, you have the option to export the personal data of a specific user. This is useful if a user wants to take their data with them, like when they're switching websites."
+msgstr "ここでは、特定のユーザーの個人データをエクスポートするオプションがあります。これは、ユーザーがウェブサイトを切り替えるときなど、自分のデータを持ち出したい場合に便利です。"
+
+#: inc/onboarding/data/TourExportPersonalData.php:56
+msgid "Make sure to only pass the data to the user it belongs to. This is crucial for complying with privacy regulations and to avoid legal issues."
+msgstr "データの受け渡しは、そのデータが属するユーザーにのみ行うようにしてください。これは、プライバシー規制を遵守し、法的問題を回避するために非常に重要です。"
+
+#: inc/onboarding/data/TourImport.php:43
+msgid "Import"
+msgstr "インポート"
+
+#: inc/onboarding/data/TourImport.php:44
+msgid "Welcome to the \"Import\" page. Here, you can import content from other websites or WordPress installations."
+msgstr "インポート」ページへようこそ。ここでは、他のウェブサイトやWordPressインストールからコンテンツをインポートすることができます。"
+
+#: inc/onboarding/data/TourImport.php:50
+msgid "Importing content is handy when you want to transfer content from another website to here or restore a backup of your website."
+msgstr "コンテンツのインポートは、他のウェブサイトからここにコンテンツを転送したり、ウェブサイトのバックアップを復元する場合に便利です。"
+
+#: inc/onboarding/data/TourImport.php:56
+msgid "The overview page shows a list of tools that can assist you in importing content. They vary depending on the plugins you have installed and your WordPress version."
+msgstr "概要ページには、コンテンツのインポートを支援するツールのリストが表示されます。これらは、インストールされているプラグインやWordPressのバージョンによって異なります。"
+
+#: inc/onboarding/data/TourImport.php:62
+msgid "Make sure to only restore your own backups, as unknown sources might contain harmful code."
+msgstr "未知のソースに有害なコードが含まれている可能性があるため、必ず自分のバックアップのみを復元するようにしてください。"
+
+#: inc/onboarding/data/TourImport.php:68
+msgid "Also, backups can contain personal data, and importing backups from unknown origins could violate privacy policies. This could lead to legal issues."
+msgstr "また、バックアップには個人情報が含まれていることがあり、出所不明のバックアップをインポートすると、プライバシーポリシーに違反する可能性がある。これは法的な問題につながる可能性がある。"
+
+#: inc/onboarding/data/TourMedia.php:43
+msgid "Add New"
+msgstr "新規追加"
+
+#: inc/onboarding/data/TourMedia.php:44
+msgid "The \"Add New Media File\" page lets you upload fresh media like images, videos, or audio files to your media library."
+msgstr "新しいメディアファイルを追加 \"ページでは、画像、ビデオ、オーディオファイルなどの新しいメディアをメディアライブラリにアップロードできます。"
+
+#: inc/onboarding/data/TourMedia.php:49
+msgid "Drag-and-Drop"
+msgstr "ドラッグ・アンド・ドロップ"
+
+#: inc/onboarding/data/TourMedia.php:50
+msgid "Adding your media files is a breeze – just drag and drop them into the area, or click the button to select your files. Your new media will be instantly available in your library."
+msgstr "メディアファイルを追加するのは簡単です。エリア内にドラッグ＆ドロップするか、ボタンをクリックしてファイルを選択するだけです。新しいメディアはすぐにライブラリで利用できるようになります。"
+
+#: inc/onboarding/data/TourMedia.php:55
+msgid "File Info"
+msgstr "ファイル情報"
+
+#: inc/onboarding/data/TourMedia.php:56
+msgid "WordPress supports a bunch of file formats, including images (JPEG, PNG, GIF), videos (MP4, MOV, WMV), audio files (MP3, WAV), and even documents (PDF, DOC, PPT, etc.)."
+msgstr "ワードプレスは、画像（JPEG、PNG、GIF）、ビデオ（MP4、MOV、WMV）、オーディオファイル（MP3、WAV）、さらにはドキュメント（PDF、DOC、PPTなど）を含む、多くのファイル形式をサポートしています。"
+
+#: inc/onboarding/data/TourMedia.php:61
+msgid "Upload Tip"
+msgstr "アップロードのヒント"
+
+#: inc/onboarding/data/TourMedia.php:62
+msgid "You can also add media files directly to your posts or pages while you're editing them. Just click the \"Add Media\" button in the editor."
+msgstr "投稿やページの編集中に、メディアファイルを直接追加することもできます。エディターの「メディアを追加」ボタンをクリックするだけです。"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:43
+msgid "Discussion"
+msgstr "ディスカッション"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:44
+msgid "The \"Discussion\" page deals with settings related to comments and discussions on your website."
+msgstr "ディスカッション」ページでは、ウェブサイト上のコメントやディスカッションに関する設定を行います。"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:50
+msgid "The settings you choose here will impact how you interact with your visitors. For example, you can set conditions under which comments are allowed."
+msgstr "ここで選択した設定は、訪問者とのやりとりに影響します。例えば、コメントを許可する条件を設定することができます。"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:55
+msgid "Control"
+msgstr "コントロール"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:56
+msgid "Make sure you maintain control over interactions on your website. This page helps you manage those interactions. Comments, after all, can sometimes lead to legal issues."
+msgstr "ウェブサイト上のインタラクションを確実に管理しましょう。このページはそれらのやりとりを管理するのに役立ちます。コメントは、結局のところ、時には法的問題につながる可能性があります。"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:43
+msgid "Settings"
+msgstr "設定"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:44
+msgid "Right now, we're checking out the submenu of the \"Settings\" main menu item. These pages allow you to set up the general settings for your website."
+msgstr "今、メインメニューの「設定」のサブメニューをチェックしています。これらのページでは、ウェブサイトの一般的な設定を行うことができます。"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:49
+msgid "General"
+msgstr "一般"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:50
+msgid "The \"General\" page is the first page you see when you enter \"Settings\". Here, you can set your website's name, URL, timezone, and date format."
+msgstr "一般」ページは、「設定」に入ると最初に表示されるページです。ここでは、ウェブサイトの名前、URL、タイムゾーン、日付フォーマットを設定できます。"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:55
+msgid "Useful to Know"
+msgstr "知っておくと便利"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:56
+msgid "The settings you establish here are really important as they form the foundation of your website. So, you should carefully review and set these settings."
+msgstr "ここで設定する内容は、ウェブサイトの土台となるため、本当に重要です。ですから、これらの設定を慎重に見直し、設定する必要があります。"
+
+#: inc/onboarding/data/TourOptionsMedia.php:43
+#: inc/onboarding/data/TourUpload.php:43
+msgid "Media"
+msgstr "メディア"
+
+#: inc/onboarding/data/TourOptionsMedia.php:44
+msgid "The \"Media\" page deals with the basic settings for managing media files on your website."
+msgstr "メディア」ページでは、ウェブサイト上のメディアファイルを管理するための基本的な設定を行います。"
+
+#: inc/onboarding/data/TourOptionsMedia.php:50
+msgid "Here, you can set up how your media files are managed. For instance, you can define how media files should be organized and the size of the thumbnails."
+msgstr "ここでは、メディアファイルの管理方法を設定できます。例えば、メディアファイルの整理方法やサムネイルのサイズを定義できます。"
+
+#: inc/onboarding/data/TourOptionsMedia.php:56
+msgid "Be careful not to choose too large a size for your thumbnails, as it can negatively impact your website's loading time."
+msgstr "サムネイルのサイズが大きすぎると、ウェブサイトの読み込み時間に悪影響を及ぼす可能性があるので注意しましょう。"
+
+#: inc/onboarding/data/TourOptionsMedia.php:62
+msgid "Also, make sure to organize your media files sensibly. This is especially useful if you have a lot of media files."
+msgstr "また、メディアファイルを適切に整理してください。メディアファイルがたくさんある場合は特に便利です。"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:43
+msgid "Permalink"
+msgstr "パーマリンク"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:44
+msgid "The \"Permalink\" page deals with settings for the URL structure of your website."
+msgstr "パーマリンク」ページでは、ウェブサイトのURL構造の設定を行います。"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:49
+msgid "Permalink Structure"
+msgstr "パーマリンク構造"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:50
+msgid "It's important to carefully choose your permalink structure, as it affects not just the aesthetics of your URLs but also your website’s search engine optimization (SEO) and user-friendliness."
+msgstr "パーマリンク構造は、URLの美しさだけでなく、ウェブサイトの検索エンジン最適化（SEO）やユーザーの利便性にも影響するため、慎重に選択することが重要です。"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:56
+msgid "To support search engines, it’s advisable to choose a permalink structure that uses ‘speaking URLs’. Ideally, your URLs should contain the keywords of your posts and pages."
+msgstr "検索エンジンをサポートするために、「スピーキングURL」を使用するパーマリンク構造を選択することをお勧めします。URLには投稿やページのキーワードを含めるのが理想的です。"
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:43
+msgid "Privacy"
+msgstr "プライバシー"
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:44
+msgid "The \"Privacy\" page is designed for managing your website's privacy policies."
+msgstr "プライバシー」ページは、ウェブサイトのプライバシー・ポリシーを管理するためのものです。"
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:50
+msgid "This page allows you to ensure that your website complies with privacy policies and legal requirements. There are also plugins available that provide additional support."
+msgstr "このページでは、ウェブサイトがプライバシーポリシーや法的要件に準拠していることを確認できます。また、追加サポートを提供するプラグインもあります。"
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:56
+msgid "Privacy policies are crucial, especially if your website collects personal data from users through comments, forms, etc. This helps protect you from legal issues."
+msgstr "特に、あなたのウェブサイトがコメントやフォームなどを通してユーザーから個人データを収集する場合、プライバシーポリシーは非常に重要です。これは、法的な問題からあなたを守るのに役立ちます。"
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:62
+msgid "If you're having trouble sleeping, consider reading the \"Policy Guide\" on privacy statements. It always puts me to sleep in seconds!"
+msgstr "眠れないときは、プライバシー・ステートメントに関する「ポリシー・ガイド」を読んでみてください。いつも数秒で眠れます！"
+
+#: inc/onboarding/data/TourOptionsReading.php:43
+msgid "Reading"
+msgstr "読む"
+
+#: inc/onboarding/data/TourOptionsReading.php:44
+msgid "The \"Reading\" page allows you to set basic display settings for your website."
+msgstr "リーディング」ページでは、ウェブサイトの基本的な表示設定を行うことができます。"
+
+#: inc/onboarding/data/TourOptionsReading.php:50
+msgid "Here, you can set up the settings for your homepage and posts page. You can also decide how many posts should be displayed on the homepage."
+msgstr "ここでは、トップページと投稿ページの設定を行うことができます。また、トップページに表示する投稿数を決めることもできます。"
+
+#: inc/onboarding/data/TourOptionsReading.php:55
+msgid "Homepage"
+msgstr "ホームページ"
+
+#: inc/onboarding/data/TourOptionsReading.php:56
+msgid "Setting a static homepage allows you to customize the front page of your website. This is particularly useful if you're running a business website or a landing page."
+msgstr "静的ホームページを設定すると、ウェブサイトのフロントページをカスタマイズすることができます。これは、ビジネスウェブサイトやランディングページを運営している場合に特に便利です。"
+
+#: inc/onboarding/data/TourOptionsReading.php:61
+msgid "Search Engines"
+msgstr "検索エンジンを選択します。"
+
+#: inc/onboarding/data/TourOptionsReading.php:62
+msgid "You might notice that despite using SEO plugins, visitors aren't coming through search engines. This could be because you've disabled search engine indexing here."
+msgstr "SEOプラグインを使用しているにもかかわらず、検索エンジン経由で訪問者が来ないことに気づくかもしれません。これは、検索エンジンのインデックスを無効にしているからかもしれません。"
+
+#: inc/onboarding/data/TourOptionsWriting.php:43
+msgid "Writing"
+msgstr "書く"
+
+#: inc/onboarding/data/TourOptionsWriting.php:44
+msgid "The \"Writing\" page helps you with creating posts and articles."
+msgstr "ライティング」ページでは、投稿や記事の作成に役立つ。"
+
+#: inc/onboarding/data/TourOptionsWriting.php:50
+msgid "Setting up these options correctly according to your needs can enhance user-friendliness and efficiency when composing content."
+msgstr "ニーズに応じてこれらのオプションを正しく設定することで、コンテンツを作成する際の使いやすさと効率を高めることができます。"
+
+#: inc/onboarding/data/TourPage.php:43
+msgid "Tutorial"
+msgstr "チュートリアル"
+
+#: inc/onboarding/data/TourPage.php:44
+msgid "We're now on the \"Add New\" page. Just let me know once you're done with the Gutenberg editor tutorial, and I'll show you around some more."
+msgstr "新規追加」ページに入りました。Gutenbergエディターのチュートリアルが終わったら、もう少し案内しますので、お知らせください。"
+
+#: inc/onboarding/data/TourPage.php:49
+msgid "Gutenberg editor Editor"
+msgstr "Gutenbergエディタ エディタ"
+
+#: inc/onboarding/data/TourPage.php:50
+msgid "As you might have learned in the tutorial, this page is where you can manage the content of your pages."
+msgstr "チュートリアルで学んだように、このページではページのコンテンツを管理することができます。"
+
+#: inc/onboarding/data/TourPage.php:55
+#: inc/onboarding/data/TourPost.php:55
+msgid "Top Navigation"
+msgstr "トップナビゲーション"
+
+#: inc/onboarding/data/TourPage.php:56
+msgid "The top navigation gives you quick access to basic controls in the editor. It's split into the toolbar and the settings bar."
+msgstr "上部のナビゲーションは、エディター内の基本的なコントロールに素早くアクセスできます。ツールバーと設定バーに分かれています。"
+
+#: inc/onboarding/data/TourPage.php:61
+#: inc/onboarding/data/TourPost.php:61
+msgid "The Toolbar"
+msgstr "ツールバー"
+
+#: inc/onboarding/data/TourPage.php:62
+msgid "The toolbar provides functions to help you build your page step by step. Here you can add new block elements and undo changes. Want to see how it works? Hit the ► button!"
+msgstr "ツールバーには、ステップ・バイ・ステップでページを構築するのに役立つ機能が用意されています。ここでは、新しいブロック要素を追加したり、変更を取り消すことができます。動作を見たいですか?ボタンをクリックしてください！"
+
+#: inc/onboarding/data/TourPage.php:85
+#: inc/onboarding/data/TourPost.php:85
+msgid "Settings Bar"
+msgstr "設定バー"
+
+#: inc/onboarding/data/TourPage.php:86
+msgid "In the settings bar, you can save and publish your page. Plus, you can switch between different screen modes like desktop, mobile, and tablet."
+msgstr "設定バーでは、ページの保存と公開ができます。さらに、デスクトップ、モバイル、タブレットなど、さまざまな画面モードを切り替えることができます。"
+
+#: inc/onboarding/data/TourPage.php:91
+#: inc/onboarding/data/TourPost.php:91
+msgid "Side Navigation"
+msgstr "サイドナビゲーション"
+
+#: inc/onboarding/data/TourPage.php:92
+msgid "Here you can view additional information about your blog post and make settings on the individual blocks you've added."
+msgstr "ここでは、ブログ記事に関する追加情報を表示したり、追加した各ブロックの設定を行うことができます。"
+
+#: inc/onboarding/data/TourPage.php:97
+msgid "Content"
+msgstr "コンテンツ"
+
+#: inc/onboarding/data/TourPage.php:98
+msgid "In the content area, you can edit your contents... write texts, insert images, edit blocks. The sky's the limit with your creativity!"
+msgstr "コンテンツエリアでは、テキストを書いたり、画像を挿入したり、ブロックを編集したりできます。あなたのクリエイティビティの限界は無限大です！"
+
+#: inc/onboarding/data/TourPage.php:103
+msgid "Wrap Up"
+msgstr "まとめ"
+
+#: inc/onboarding/data/TourPage.php:104
+msgid "The text editor has so many features, and I'm sure I forgot to explain half of them! I hope I at least gave you a good overview. Let's take a look at the next area."
+msgstr "テキストエディタには非常に多くの機能があり、私はその半分を説明し忘れたと確信している！せめて概要だけでも知っていただけたら幸いです。それでは次のエリアを見てみましょう。"
+
+#: inc/onboarding/data/TourPluginEditor.php:43
+msgid "Edit Plugins"
+msgstr "プラグインを編集"
+
+#: inc/onboarding/data/TourPluginEditor.php:44
+msgid "This page allows you to edit the files of your plugins."
+msgstr "このページでは、プラグインのファイルを編集することができます。"
+
+#: inc/onboarding/data/TourPluginEditor.php:50
+msgid "The same principles apply as with editing themes. On this page, you can make direct changes to the files of your plugins. You should have some programming knowledge if you're planning to work here."
+msgstr "テーマの編集と同じ原則が適用されます。このページでは、プラグインのファイルに直接変更を加えることができます。このページで作業する場合は、プログラミングの知識が必要です。"
+
+#: inc/onboarding/data/TourPluginEditor.php:55
+#: inc/onboarding/data/TourThemeEditor.php:55
+msgid "Warning"
+msgstr "警告"
+
+#: inc/onboarding/data/TourPluginEditor.php:56
+msgid "Be careful! Editing files can damage your website. If you're not certain about what you're doing, it's better to avoid tinkering with this."
+msgstr "注意してください！ファイルの編集はウェブサイトにダメージを与える可能性があります。自分のしていることに確信が持てない場合は、これをいじるのは避けた方がよいでしょう。"
+
+#: inc/onboarding/data/TourPluginInstall.php:43
+#: inc/onboarding/data/TourPlugins.php:55
+#: inc/onboarding/data/TourProfile.php:43
+#: inc/onboarding/data/TourUser.php:43
+#: inc/onboarding/data/TourUsers.php:43
+msgid "Introduction"
+msgstr "はじめに"
+
+#: inc/onboarding/data/TourPluginInstall.php:44
+msgid "Welcome to the \"Add New Plugin\" page. Here, you can search for, install, and activate new plugins."
+msgstr "プラグインの新規追加」ページへようこそ。ここでは、新しいプラグインを検索、インストール、有効化することができます。"
+
+#: inc/onboarding/data/TourPluginInstall.php:50
+msgid "Plugins significantly expand the functionality of your WordPress website. Choosing the right plugins can be crucial for your website's success. You'll find many articles online that can help you find the best plugins for your needs."
+msgstr "プラグインはWordPressウェブサイトの機能を大幅に拡張します。適切なプラグインを選ぶことは、ウェブサイトの成功にとって非常に重要です。あなたのニーズに最適なプラグインを見つけるのに役立つ記事がオンライン上にたくさんあります。"
+
+#: inc/onboarding/data/TourPluginInstall.php:55
+msgid "Plugin Selection"
+msgstr "プラグインの選択"
+
+#: inc/onboarding/data/TourPluginInstall.php:56
+msgid "As soon as you enter this page, you're presented with a selection of plugins. This is really handy since there are more than 60,000 plugins available. This can also help you in finding the right plugins for your website."
+msgstr "このページに入るとすぐに、プラグインのセレクションが表示される。60,000以上のプラグインが利用可能なので、これは本当に便利です。これは、あなたのウェブサイトに適したプラグインを見つけるのにも役立ちます。"
+
+#: inc/onboarding/data/TourPluginInstall.php:62
+msgid "You can filter by the most popular, latest, and recommended plugins here. This way, you can, for example, follow the favorites of other WordPress users."
+msgstr "ここでは、最も人気のあるプラグイン、最新のプラグイン、おすすめのプラグインでフィルタリングすることができます。これにより、例えば他のWordPressユーザーのお気に入りをフォローすることができます。"
+
+#: inc/onboarding/data/TourPlugins.php:44
+msgid "We are currently in the submenu of the \"Plugins\" main menu item. Here, you can search for, install, and activate new plugins."
+msgstr "現在、メインメニューの「プラグイン」のサブメニューにいます。ここでは、新しいプラグインを検索、インストール、有効化することができます。"
+
+#: inc/onboarding/data/TourPlugins.php:49
+msgid "Installed Plugins"
+msgstr "インストール済みのプラグイン"
+
+#: inc/onboarding/data/TourPlugins.php:50
+msgid "The \"Installed Plugins\" page lets you manage the plugins you've already installed."
+msgstr "インストール済みプラグイン」ページでは、インストール済みのプラグインを管理できます。"
+
+#: inc/onboarding/data/TourPlugins.php:56
+msgid "Plugins extend the functionality of your WordPress website. That can be things like contact forms, galleries, slideshows, SEO tools, security features, and much more."
+msgstr "プラグインはWordPressウェブサイトの機能を拡張します。コンタクトフォーム、ギャラリー、スライドショー、SEOツール、セキュリティ機能など、さまざまなものがあります。"
+
+#: inc/onboarding/data/TourPlugins.php:61
+msgid "Plugin Overview"
+msgstr "プラグインの概要"
+
+#: inc/onboarding/data/TourPlugins.php:62
+msgid "In the Plugin Overview, you can see and manage all your installed plugins. Here, you can also easily activate or deactivate the plugins you're using."
+msgstr "プラグインの概要では、インストールされているすべてのプラグインを確認・管理することができます。ここでは、使用しているプラグインを簡単に有効化または無効化することもできます。"
+
+#: inc/onboarding/data/TourPlugins.php:67
+msgid "Search for Specific Plugins"
+msgstr "特定のプラグインを検索する"
+
+#: inc/onboarding/data/TourPlugins.php:68
+msgid "You also have the option to search for specific plugins. This is handy when you have many plugins installed."
+msgstr "また、特定のプラグインを検索するオプションもある。多くのプラグインをインストールしている場合に便利です。"
+
+#: inc/onboarding/data/TourPlugins.php:73
+msgid "Installing Plugins"
+msgstr "プラグインをインストール中"
+
+#: inc/onboarding/data/TourPlugins.php:74
+msgid "It's best to install plugins only from the official WordPress Plugin Library. Not only is it a trustworthy source, but you also get benefits like automatic updates, community support, and much more."
+msgstr "プラグインはWordPress公式プラグインライブラリーからのみインストールするのがベストです。信頼できる情報源であるだけでなく、自動アップデートやコミュニティサポートなどのメリットもあります。"
+
+#: inc/onboarding/data/TourPlugins.php:79
+msgid "Updating Plugins"
+msgstr "プラグインの更新"
+
+#: inc/onboarding/data/TourPlugins.php:80
+msgid "Developers regularly release updates for their plugins to fix bugs, close security gaps, or add new features. It's important to keep your plugins up-to-date."
+msgstr "開発者は定期的にプラグインのアップデートをリリースし、バグの修正、セキュリティギャップの解消、新機能の追加を行っています。プラグインを最新の状態に保つことは重要です。"
+
+#: inc/onboarding/data/TourPlugins.php:85
+msgid "Summary"
+msgstr "概要"
+
+#: inc/onboarding/data/TourPlugins.php:86
+msgid "There are incredibly many plugins, and you'll find that there's a plugin solution for almost every problem!"
+msgstr "信じられないほど多くのプラグインがあり、ほとんどすべての問題に対するプラグインの解決策があることがわかるだろう！"
+
+#: inc/onboarding/data/TourPost.php:43
+msgid "Just a Moment"
+msgstr "ほんのひととき"
+
+#: inc/onboarding/data/TourPost.php:44
+msgid "Hang tight, we're almost through the Gutenberg editor tutorial. I'll give you a bit more of a tour afterward."
+msgstr "もう少しでGutenbergエディタのチュートリアルが終わります。この後、もう少し案内しよう。"
+
+#: inc/onboarding/data/TourPost.php:49
+msgid "Tutorial Time"
+msgstr "チュートリアルの時間"
+
+#: inc/onboarding/data/TourPost.php:50
+msgid "Now we're on the \"Add New\" page. As you learnt in the tutorial, you can add all your posts for your website from here."
+msgstr "新規追加 \"ページに入りました。チュートリアルで学んだように、ここからウェブサイトのすべての投稿を追加することができます。"
+
+#: inc/onboarding/data/TourPost.php:56
+msgid "The top navigation gives you quick access to essential controls in the editor. It's split into the toolbar and the settings bar."
+msgstr "上部のナビゲーションは、エディター内の重要なコントロールに素早くアクセスできます。ツールバーと設定バーに分かれています。"
+
+#: inc/onboarding/data/TourPost.php:62
+msgid "The toolbar offers features to build your post step by step. Add new block elements and undo changes. Wanna see how it works? Hit the ► button!"
+msgstr "ツールバーには、投稿をステップ・バイ・ステップで構築するための機能が用意されています。新しいブロック要素を追加したり、変更を元に戻したりできます。動作を見たいですか？ボタンをクリックしてください！"
+
+#: inc/onboarding/data/TourPost.php:86
+msgid "In the settings bar, you can save and publish your post. Plus, you can switch between different screen modes like desktop, mobile, and tablet."
+msgstr "設定バーでは、投稿の保存と公開ができます。さらに、デスクトップ、モバイル、タブレットなど、さまざまな画面モードを切り替えることができます。"
+
+#: inc/onboarding/data/TourPost.php:92
+msgid "Here you'll find additional information about your blog post and can make settings on individual blocks."
+msgstr "ここでは、ブログ記事に関する追加情報が表示され、個々のブロックの設定を行うことができます。"
+
+#: inc/onboarding/data/TourPost.php:97
+msgid "Content Part"
+msgstr "コンテンツ・パート"
+
+#: inc/onboarding/data/TourPost.php:98
+msgid "In the content part, you can edit your contents, write texts, insert images, and edit blocks. Unleash your creativity!"
+msgstr "コンテンツパートでは、コンテンツを編集したり、テキストを書いたり、画像を挿入したり、ブロックを編集したりすることができます。あなたの創造性を発揮してください！"
+
+#: inc/onboarding/data/TourPost.php:103
+msgid "Wrapping Up"
+msgstr "まとめ"
+
+#: inc/onboarding/data/TourPost.php:104
+msgid "The text editor has loads of features, and I'm sure I forgot to explain half of them! Hope I at least gave you a good start."
+msgstr "テキストエディタにはたくさんの機能があるが、その半分も説明し忘れただろう！少なくとも、良いきっかけになれば幸いです。"
+
+#: inc/onboarding/data/TourProfile.php:44
+msgid "Welcome to the \"Profile\" page. Let's keep it brief: here, you can edit your profile. And on we go!"
+msgstr "プロフィール」ページへようこそ。ここではプロフィールを編集することができます。さあ、始めましょう！"
+
+#: inc/onboarding/data/TourProfile.php:49
+msgid "Wrap-Up"
+msgstr "まとめ"
+
+#: inc/onboarding/data/TourProfile.php:50
+msgid "And just like that, we're done with another page. Users bring life to your website but also pose certain risks. So be careful about who you give what rights to."
+msgstr "こうして、また新たなページが完成する。ユーザーはウェブサイトに活気を与えますが、同時にある種のリスクももたらします。そのため、誰にどのような権利を与えるかについては注意が必要です。"
+
+#: inc/onboarding/data/TourProfile.php:55
+msgid "Tip"
+msgstr "ヒント"
+
+#: inc/onboarding/data/TourProfile.php:56
+msgid "One last tip: there are plugins that enable two-factor authentication. It's an extra layer of security I highly recommend."
+msgstr "最後のヒント：二要素認証を可能にするプラグインがある。これは私が強くお勧めするセキュリティの追加レイヤーだ。"
+
+#: inc/onboarding/data/TourSiteEditor.php:44
+msgid "To be totally honest? I can't tell you more about this issue at the moment. There will be more information soon. Hang on!"
+msgstr "正直に言うと？今のところ、この問題についてこれ以上話すことはできない。近いうちにもっと情報が出るでしょう。待ってて！"
+
+#: inc/onboarding/data/TourSiteHealth.php:43
+msgid "Site Health"
+msgstr "サイトの正常性"
+
+#: inc/onboarding/data/TourSiteHealth.php:44
+msgid "In the \"Site Health\" page, you can check out the overall health of your website."
+msgstr "サイトの健全性」ページでは、ウェブサイトの全体的な健全性をチェックできます。"
+
+#: inc/onboarding/data/TourSiteHealth.php:49
+msgid "Status"
+msgstr "ステータス"
+
+#: inc/onboarding/data/TourSiteHealth.php:50
+msgid "Right off the bat, you can see how your website's performance and security are doing. Here, you can also spot any issues that need to be fixed."
+msgstr "すぐに、ウェブサイトのパフォーマンスとセキュリティの状態を確認できます。また、修正すべき問題を見つけることもできます。"
+
+#: inc/onboarding/data/TourSiteHealth.php:55
+msgid "Report"
+msgstr "レポート"
+
+#: inc/onboarding/data/TourSiteHealth.php:56
+msgid "If you click on the \"Report\" tab, you'll get a detailed breakdown of the technical aspects of your website. Take a look if you're in the mood to be completely baffled!"
+msgstr "レポート」タブをクリックすると、ウェブサイトの技術的な側面の詳細な内訳が表示されます。完全に困惑している気分なら、ご覧ください！"
+
+#: inc/onboarding/data/TourThemeEditor.php:43
+msgid "Edit Themes"
+msgstr "テーマを編集"
+
+#: inc/onboarding/data/TourThemeEditor.php:44
+msgid "The \"Edit Themes\" page allows you to modify the files of your theme."
+msgstr "テーマの編集」ページでは、テーマのファイルを変更することができます。"
+
+#: inc/onboarding/data/TourThemeEditor.php:50
+msgid "Here, you can make direct changes to the files of your theme. You should have some programming knowledge if you're going to hang out on this page."
+msgstr "ここでは、テーマのファイルに直接変更を加えることができます。このページを見るには、プログラミングの知識が必要です。"
+
+#: inc/onboarding/data/TourThemeEditor.php:56
+msgid "Be careful! Editing files can damage your website. If you're not sure what you're doing, it's better to avoid this."
+msgstr "注意してください！ファイルの編集はウェブサイトにダメージを与える可能性があります。何をやっているのかよくわからない場合は、避けた方が無難です。"
+
+#: inc/onboarding/data/TourThemeInstall.php:43
+msgid "Add"
+msgstr "追加"
+
+#: inc/onboarding/data/TourThemeInstall.php:44
+msgid "It might sound crazy, but on the \"Add Themes\" page, you can... well, add new themes!"
+msgstr "クレイジーに聞こえるかもしれないが、\"テーマの追加 \"ページでは、新しいテーマを追加することができる！"
+
+#: inc/onboarding/data/TourThemeInstall.php:49
+msgid "Info"
+msgstr "情報"
+
+#: inc/onboarding/data/TourThemeInstall.php:50
+msgid "When you enter this page, you'll see a selection of the most popular themes. This is super handy since there are more than 10,000 themes to choose from."
+msgstr "このページに入ると、最も人気のあるテーマのセレクションが表示されます。10,000以上のテーマから選べるので超便利です。"
+
+#: inc/onboarding/data/TourThemeInstall.php:55
+msgid "Filters"
+msgstr "フィルター"
+
+#: inc/onboarding/data/TourThemeInstall.php:56
+msgid "Of course, you can also filter by different categories or search for a specific theme."
+msgstr "もちろん、さまざまなカテゴリーでフィルターをかけたり、特定のテーマを検索することもできる。"
+
+#: inc/onboarding/data/TourThemeInstall.php:61
+#: inc/onboarding/data/TourThemes.php:67
+msgid "Inactive Themes"
+msgstr "非アクティブなテーマ"
+
+#: inc/onboarding/data/TourThemeInstall.php:62
+msgid "Hover over a theme that catches your eye to switch to its detailed view. In the detailed view, you can find a lot more info, like user reviews."
+msgstr "気になるテーマにカーソルを合わせると、詳細表示に切り替わります。詳細ビューでは、ユーザーレビューなど、より多くの情報を見つけることができます。"
+
+#: inc/onboarding/data/TourThemes.php:43
+msgid "Design"
+msgstr "デザイン"
+
+#: inc/onboarding/data/TourThemes.php:44
+msgid "Welcome to the submenu of the \"Appearance\" main menu item. This is where you can manage the appearance and visual presentation of your website."
+msgstr "外観」メインメニューのサブメニューへようこそ。ここではウェブサイトの外観とビジュアルプレゼンテーションを管理することができます。"
+
+#: inc/onboarding/data/TourThemes.php:49
+msgid "Themes"
+msgstr "テーマ"
+
+#: inc/onboarding/data/TourThemes.php:50
+msgid "The \"Themes\" page lets you change the design of your website."
+msgstr "テーマ」ページでは、ウェブサイトのデザインを変更することができます。"
+
+#: inc/onboarding/data/TourThemes.php:56
+msgid "On the overview page, you'll find a list of all installed themes. Here, you can also see the active theme currently used on your website."
+msgstr "概要ページには、インストールされているすべてのテーマのリストがあります。ここでは、あなたのウェブサイトで現在使用されているアクティブなテーマも確認できます。"
+
+#: inc/onboarding/data/TourThemes.php:61
+msgid "Active Themes"
+msgstr "有効なテーマ"
+
+#: inc/onboarding/data/TourThemes.php:62
+msgid "Here, you see the active theme. This theme determines the design of your website. This is what your visitors are seeing when they visit your website right now."
+msgstr "ここでは、アクティブなテーマが表示されます。このテーマがあなたのウェブサイトのデザインを決定します。あなたのウェブサイトを訪問した人が今見ているのがこのテーマです。"
+
+#: inc/onboarding/data/TourThemes.php:68
+msgid "There are also themes that are installed but not active. You can switch between them by activating an inactive theme, which would then change the design of your website accordingly."
+msgstr "また、インストールされているがアクティブではないテーマもある。アクティブでないテーマをアクティブにすることで、テーマを切り替えることができ、それに応じてウェブサイトのデザインも変わります。"
+
+#: inc/onboarding/data/TourThemes.php:74
+msgid "Use this search feature to look for a specific theme that you've already installed."
+msgstr "インストール済みの特定のテーマを探すには、この検索機能を使います。"
+
+#: inc/onboarding/data/TourThemes.php:79
+msgid "Install"
+msgstr "インストール"
+
+#: inc/onboarding/data/TourThemes.php:80
+msgid "You can also install new themes. Let's take a look at how to do that."
+msgstr "新しいテーマをインストールすることもできます。その方法を見てみましょう。"
+
+#: inc/onboarding/data/TourTools.php:43
+msgid "Tools"
+msgstr "ツール"
+
+#: inc/onboarding/data/TourTools.php:44
+msgid "We've just moved into the submenu of the \"Tools\" main menu item. This page provides additional functions and resources, especially for administrators. Let's take a quick look."
+msgstr "メインメニュー「ツール」のサブメニューに移動しました。このページでは、特に管理者向けの追加機能やリソースを提供しています。早速見てみましょう。"
+
+#: inc/onboarding/data/TourTools.php:49
+msgid "Available Tools"
+msgstr "利用可能なツール"
+
+#: inc/onboarding/data/TourTools.php:50
+msgid "This is the \"Available Tools\" page. Here you'll find a list of tools that can help you manage your website."
+msgstr "これは「利用可能なツール」のページです。ウェブサイトの管理に役立つツールの一覧がご覧いただけます。"
+
+#: inc/onboarding/data/TourTools.php:56
+msgid "This is the overview page for available tools. Here, you can see and manage the tools available to you. They vary depending on the plugins you have installed and your WordPress version."
+msgstr "利用可能なツールの概要ページです。ここでは、利用可能なツールを確認し、管理することができます。インストールされているプラグインやWordPressのバージョンによって異なります。"
+
+#: inc/onboarding/data/TourUpdateCore.php:43
+msgid "Alright, we're now on the \"Updates\" page of the Dashboard. This is where you'll get to keep your website looking sharp and up-to-date."
+msgstr "さて、ダッシュボードの \"更新 \"ページに入りました。ここであなたのウェブサイトを常に最新の状態に保つことができます。"
+
+#: inc/onboarding/data/TourUpdateCore.php:44
+msgid "Updates"
+msgstr "更新"
+
+#: inc/onboarding/data/TourUpdateCore.php:49
+msgid "Explanation"
+msgstr "解説"
+
+#: inc/onboarding/data/TourUpdateCore.php:50
+msgid "So, this is where you can spot any new updates waiting for your website. That includes stuff like themes, plugins you've installed and even the WordPress core itself."
+msgstr "ここで、あなたのウェブサイトに待っている新しいアップデートを見つけることができます。これには、テーマ、インストールしたプラグイン、そしてWordPressのコア自体が含まれます。"
+
+#: inc/onboarding/data/TourUpdateCore.php:55
+msgid "Security Risk"
+msgstr "セキュリティ・リスク"
+
+#: inc/onboarding/data/TourUpdateCore.php:56
+msgid "Just a little reminder – staying updated is super important! Old software can be a bit risky, security-wise. These updates aren't just about keeping things safe, though; they also bring in cool new features."
+msgstr "最新の状態に保つことは非常に重要です！古いソフトウェアは、セキュリティの面で少し危険です。しかし、これらのアップデートは単に安全を保つためだけでなく、クールな新機能をもたらすものでもあります。"
+
+#: inc/onboarding/data/TourUpdateCore.php:61
+msgid "Automatic Updates"
+msgstr "自動更新"
+
+#: inc/onboarding/data/TourUpdateCore.php:62
+msgid "One last tip – you might want to turn on automatic updates. It's a real time-saver and keeps your website on the cutting edge, not to mention secure."
+msgstr "最後のヒント - 自動アップデートをオンにしておくとよいでしょう。時間の節約になるし、ウェブサイトを常に最新の状態に保つことができる。"
+
+#: inc/onboarding/data/TourUpload.php:44
+msgid "We're now in the submenu of the \"Media\" main menu item. This is where you manage all the media files you add to your posts or pages."
+msgstr "メディア」メインメニューのサブメニューに入りました。ここでは、投稿やページに追加するすべてのメディアファイルを管理します。"
+
+#: inc/onboarding/data/TourUpload.php:49
+msgid "Media Overview"
+msgstr "メディア概要"
+
+#: inc/onboarding/data/TourUpload.php:50
+msgid "First up, let's check out your \"Library\". Here, you'll see a summary of all the media you've uploaded so far."
+msgstr "まず最初に、あなたの \"ライブラリ \"をチェックしてみましょう。ここには、これまでにアップロードしたメディアの概要が表示されます。"
+
+#: inc/onboarding/data/TourUpload.php:55
+msgid "Media Library"
+msgstr "メディアライブラリー"
+
+#: inc/onboarding/data/TourUpload.php:56
+msgid "All uploaded media is stored here. You'll get a visual of all these files with thumbnails, file info, and metadata like titles, descriptions, and alt texts for images."
+msgstr "アップロードされたメディアはすべてここに保存されます。サムネイル、ファイル情報、画像のタイトル、説明、altテキストなどのメタデータを含むすべてのファイルを視覚的に見ることができます。"
+
+#: inc/onboarding/data/TourUpload.php:61
+msgid "Details"
+msgstr "詳細"
+
+#: inc/onboarding/data/TourUpload.php:62
+msgid "You can also edit the details of your media here. Change file names, add extra information, or tweak the metadata."
+msgstr "ここでメディアの詳細を編集することもできます。ファイル名を変更したり、追加情報を追加したり、メタデータを微調整したりできます。"
+
+#: inc/onboarding/data/TourUpload.php:67
+msgid "Filtering and Search"
+msgstr "フィルタリングと検索"
+
+#: inc/onboarding/data/TourUpload.php:68
+msgid "Use filter and search features to quickly find specific media items."
+msgstr "フィルターや検索機能を使って、特定のメディアアイテムをすばやく見つけることができます。"
+
+#: inc/onboarding/data/TourUpload.php:73
+msgid "Uploading"
+msgstr "アップロード中"
+
+#: inc/onboarding/data/TourUpload.php:74
+msgid "Here's where you can upload new media to your library. Just click the button and drag-and-drop your files in with ease."
+msgstr "ここで新しいメディアをライブラリにアップロードできます。ボタンをクリックし、ファイルをドラッグ＆ドロップするだけで、簡単にアップロードできます。"
+
+#: inc/onboarding/data/TourUser.php:44
+msgid "Welcome to the \"Add New User\" page. Here, you can add users and manage their roles."
+msgstr "新規ユーザーの追加」ページへようこそ。ここでは、ユーザーを追加し、その役割を管理することができます。"
+
+#: inc/onboarding/data/TourUser.php:50
+msgid "This page is pretty self-explanatory. But be extra careful with assigning roles, as they determine the permissions a user has!"
+msgstr "このページはとても分かりやすい。しかし、ロールの割り当てには特に注意してください。ロールはユーザーのパーミッションを決定するからです！"
+
+#: inc/onboarding/data/TourUser.php:56
+msgid "Even the \"Author\" role, in the wrong hands, can cause significant damage to your website, as users with this role can write and publish posts."
+msgstr "Author \"ロールが悪用されれば、このロールを持つユーザーが記事を書いたり公開したりできるため、ウェブサイトに大きなダメージを与える可能性があります。"
+
+#: inc/onboarding/data/TourUser.php:61
+msgid "Tip 3"
+msgstr "ヒント3"
+
+#: inc/onboarding/data/TourUser.php:62
+msgid "An Administrator can revoke rights from all users... including you! So, be cautious about whom you assign the \"Administrator\" role."
+msgstr "管理者は、あなたを含むすべてのユーザーから権限を剥奪することができます！ですから、誰に \"Administrator \"ロールを割り当てるかについては慎重にしてください。"
+
+#: inc/onboarding/data/TourUsers.php:44
+msgid "We're in the submenu that falls under the \"Users\" main menu item. Here, you can manage the users of your website."
+msgstr "メインメニューの「ユーザー」の下にあるサブメニューにいます。ここでは、ウェブサイトのユーザーを管理することができます。"
+
+#: inc/onboarding/data/TourUsers.php:49
+msgid "All Users"
+msgstr "全てのユーザー"
+
+#: inc/onboarding/data/TourUsers.php:50
+msgid "In the \"All Users\" page, you can see and manage all the users of your website."
+msgstr "All Users \"ページでは、ウェブサイトの全ユーザーを確認・管理することができます。"
+
+#: inc/onboarding/data/TourUsers.php:56
+msgid "On the overview page, you'll find a list of all users who are registered on your website."
+msgstr "概要ページでは、あなたのウェブサイトに登録されているすべてのユーザーのリストを見つけることができます。"
+
+#: inc/onboarding/data/TourUsers.php:61
+msgid "User Details"
+msgstr "ユーザー詳細"
+
+#: inc/onboarding/data/TourUsers.php:62
+msgid "Each user is displayed in a table. Apart from their username, you can also see their email address and user role."
+msgstr "各ユーザーはテーブルで表示されます。ユーザ名の他に、メールアドレスとユーザの役割も見ることができます。"
+
+#: inc/onboarding/data/TourUsers.php:67
+msgid "User Actions"
+msgstr "ユーザーアクション"
+
+#: inc/onboarding/data/TourUsers.php:68
+msgid "When you hover over a user, a menu appears. Here, you can edit or delete a user. Give it a try!"
+msgstr "ユーザーにカーソルを合わせると、メニューが表示されます。ここで、ユーザーを編集したり、削除したりすることができます。試してみてください！"
+
+#: inc/onboarding/data/TourUsers.php:73
+msgid "Filter User Groups"
+msgstr "ユーザーグループのフィルタリング"
+
+#: inc/onboarding/data/TourUsers.php:74
+msgid "Here, you can filter by user groups. This is especially useful if you have many users. The filter is dynamic and shows only the user groups that actually exist."
+msgstr "ここでは、ユーザーグループでフィルタリングすることができます。これは、ユーザ数が多い場合に特に便利です。フィルタは動的に行われ、実際に存在するユーザグループのみを表示します。"
+
+#: inc/onboarding/data/TourUsers.php:79
+msgid "Search for Users"
+msgstr "利用者を検索"
+
+#: inc/onboarding/data/TourUsers.php:80
+msgid "Of course, you also have the option to search for specific users and roles. This is handy when you have many users."
+msgstr "もちろん、特定のユーザーやロールを検索するオプションもあります。これは多くのユーザがいる場合に便利です。"
+
+#: inc/onboarding/data/TourUsers.php:85
+msgid "Add New User"
+msgstr "新しいユーザーを追加"
+
+#: inc/onboarding/data/TourUsers.php:86
+msgid "Here's where you can add new users. Let's check it out!"
+msgstr "ここで新しいユーザーを追加できます。確認してみよう！"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:43
+msgid "Task Overview"
+msgstr "タスクの概要"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:44
+msgid "This page, \"Tasks\", provides an overview of the tasks you've completed and those still awaiting your attention."
+msgstr "この「タスク」ページでは、完了したタスクと、まだ完了していないタスクの概要が表示されます。"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:50
+msgid "On the overview page, you can see all tasks. It shows which tasks you've completed and which ones remain. Additionally, you can see how many pearls you'll earn for completing each task."
+msgstr "概要ページでは、すべてのタスクを見ることができます。完了したタスクと残っているタスクが表示されます。さらに、各タスクを完了することで獲得できるパールの数も表示されます。"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:55
+msgid "Conclusion!!!"
+msgstr "結論だ!"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:56
+msgid "Guess what? We're done! I've shared everything I know with you. I hope you had some fun and learned a bit along the way. I'm glad you stuck with me until the end!"
+msgstr "何だと思う？もう終わったんだ！知っていることはすべてお話ししました。楽しんでいただけただろうか？最後までお付き合いいただき、ありがとうございました！"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:61
+msgid "Feedback"
+msgstr "フィードバック"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:62
+msgid "I would be thrilled if you could leave some feedback for my developers. It helps them improve me and better assist you in the future."
+msgstr "私の開発者にフィードバックを残していただけると嬉しいです。そうすることで、開発者が私を改善し、より良いサポートを提供できるようになります。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:44
+msgid "Welcome to the most entertaining page of all... My page! 😄 Well, it's not exactly essential, but it's fun! Let's take a look."
+msgstr "最高に面白いページへようこそ...私のページ！まあ、必要不可欠ってわけじゃないけど、楽しいよ！見てみよう。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:49
+msgid "Customize"
+msgstr "カスタマイズ"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:50
+msgid "On this page, you can customize the appearance. You also have the opportunity to give me a name."
+msgstr "このページでは、外観をカスタマイズすることができます。また、名前を付けることもできます。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:56
+msgid "Here, you can adjust my appearance. You can change my hairstyle, make me wear glasses, or dress me in a new t-shirt. I'm curious to see what you'll do!"
+msgstr "ここでは、私の外見を調整することができる。髪型を変えたり、メガネをかけたり、新しいTシャツを着せたり。あなたが何をするのか楽しみだわ！"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:62
+msgid "The items you can equip me with are divided into categories. Check back often, as new items are continuously added!"
+msgstr "私に装備できるアイテムはカテゴリーに分かれています。新しいアイテムは随時追加されていくので、こまめにチェックしよう！"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:67
+msgid "Items"
+msgstr "アイテム"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:68
+msgid "Here, you can view all items in a category. Clicking an item will equip it on me. Some items are already unlocked, while others need to be unlocked."
+msgstr "ここでは、カテゴリー内のすべてのアイテムを見ることができる。アイテムをクリックすると、そのアイテムを装備することができる。すでにアンロックされているアイテムもあれば、アンロックが必要なアイテムもある。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:73
+msgid "Pearls"
+msgstr "真珠"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:74
+msgid "Here, you can see how many pearls you have. Pearls are the currency used to unlock new items. You earn pearls by completing tasks."
+msgstr "ここでは、パールの数を確認することができます。パールは新しいアイテムをアンロックするための通貨です。パールはタスクを完了することで獲得できます。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:79
+msgid "Community Items"
+msgstr "コミュニティ・アイテム"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:80
+msgid "Many of the items were created by the WordPress community. You can see the creator's name when you want to unlock an item."
+msgstr "アイテムの多くはWordPressコミュニティによって作成されました。アイテムのロックを解除したいときは、作成者の名前を見ることができます。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:85
+msgid "How does it work?"
+msgstr "どのように使うのですか ?"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:86
+msgid "Press ► to see how does it work!"
+msgstr "►を押して、動作を確認してください！"
+
+#: inc/quest/Menu.php:37
+msgid "Quest Log"
+msgstr "クエストログ"
+
+#: inc/quest/data/QuestContent.php:120
+msgid "Create 3 posts"
+msgstr "3つのポストを作成する"
+
+#: inc/quest/data/QuestContent.php:120
+msgid "You created 3 posts!!"
+msgstr "あなたは3つのポストを作成しました"
+
+#: inc/quest/data/QuestContent.php:121
+msgid "Create 5 posts"
+msgstr "5つの記事を作成する"
+
+#: inc/quest/data/QuestContent.php:121
+msgid "You created 5 posts!!"
+msgstr "あなたは5つのポストを作成しました"
+
+#: inc/quest/data/QuestContent.php:122
+msgid "Create 7 posts"
+msgstr "7つの記事を作成"
+
+#: inc/quest/data/QuestContent.php:122
+msgid "You created 7 posts!!"
+msgstr "あなたは7つのポストを作成しました"
+
+#: inc/quest/data/QuestContent.php:123
+msgid "Create 10 posts"
+msgstr "10件の記事を作成"
+
+#: inc/quest/data/QuestContent.php:123
+msgid "You created 10 posts!!"
+msgstr "あなたは10個のポストを作成しました"
+
+#: inc/quest/data/QuestContent.php:124
+msgid "Create 3 pages"
+msgstr "3ページ作成"
+
+#: inc/quest/data/QuestContent.php:124
+msgid "You created 3 pages!!"
+msgstr "あなたは3つのページを作った"
+
+#: inc/quest/data/QuestContent.php:125
+msgid "Create 5 pages"
+msgstr "5ページ作成"
+
+#: inc/quest/data/QuestContent.php:125
+msgid "You created 5 pages!!"
+msgstr "5ページも作ったのか！？"
+
+#: inc/quest/data/QuestContent.php:126
+msgid "Create 7 pages"
+msgstr "7ページ作成"
+
+#: inc/quest/data/QuestContent.php:126
+msgid "You created 7 pages!!"
+msgstr "7ページも作ったのか！？"
+
+#: inc/quest/data/QuestContent.php:127
+msgid "Get 2 comment"
+msgstr "2件のコメント"
+
+#: inc/quest/data/QuestContent.php:127
+msgid "Cool, we get some attention. &#10024;"
+msgstr "クール、注目される✨"
+
+#: inc/quest/data/QuestContent.php:128
+msgid "Get 5 comments"
+msgstr "5件のコメントを得る"
+
+#: inc/quest/data/QuestContent.php:128
+msgid "We get more and more attention. &#10024;"
+msgstr "ますます注目される。✨"
+
+#: inc/quest/data/QuestContent.php:129
+msgid "Get 10 comments"
+msgstr "10件のコメントを得る"
+
+#: inc/quest/data/QuestContent.php:129
+msgid "Oh my god!"
+msgstr "なんてことだ！"
+
+#: inc/quest/data/QuestContent.php:129
+msgid "We are starting to become famous. &#127775;"
+msgstr "私たちは有名になり始めている。🌟"
+
+#: inc/quest/data/QuestDate.php:146
+msgid "Log in on 10 different days"
+msgstr "10日間ログイン"
+
+#: inc/quest/data/QuestDate.php:146
+msgid "Nice, you logged in for 10 consecutive days!"
+msgstr "ナイス、10日間連続ログイン！"
+
+#: inc/quest/data/QuestDate.php:147
+msgid "Log in on 20 different days"
+msgstr "20日間ログイン"
+
+#: inc/quest/data/QuestDate.php:147
+msgid "Nice, you logged in for 20 consecutive days!"
+msgstr "ナイス、20日間連続ログイン！"
+
+#: inc/quest/data/QuestDate.php:148
+msgid "Log in on 30 different days"
+msgstr "30日間ログイン"
+
+#: inc/quest/data/QuestDate.php:148
+msgid "Nice, you logged in for 30 consecutive days!"
+msgstr "ナイス、30日間連続ログイン！"
+
+#: inc/quest/data/QuestDate.php:149
+msgid "Log in on 40 different days"
+msgstr "40日間ログイン"
+
+#: inc/quest/data/QuestDate.php:149
+msgid "Nice, you logged in for 40 consecutive days!"
+msgstr "ナイス、40日間連続ログイン！"
+
+#: inc/quest/data/QuestDate.php:150
+msgid "Log in on 50 different days"
+msgstr "50日間ログイン"
+
+#: inc/quest/data/QuestDate.php:150
+msgid "Nice, you logged in for 50 consecutive days!"
+msgstr "ナイス、50日間連続ログイン！"
+
+#: inc/quest/data/QuestPlugin.php:119
+msgid "Activate a SEO plugin"
+msgstr "SEOプラグインを有効にする"
+
+#: inc/quest/data/QuestPlugin.php:119
+msgid "Awesome! &#128261;"
+msgstr "素晴らしい！🔅"
+
+#: inc/quest/data/QuestPlugin.php:119
+msgid "You've installed a SEO plugin. Let's add some keywords so that search engines can find us better."
+msgstr "SEOプラグインをインストールしました。検索エンジンに見つけてもらえるように、キーワードを追加しましょう。"
+
+#: inc/quest/data/QuestPlugin.php:120
+msgid "Activate a caching plugin"
+msgstr "キャッシュプラグインを有効にする"
+
+#: inc/quest/data/QuestPlugin.php:120
+msgid "Fantastic! &#128171;"
+msgstr "ファンタスティック💫"
+
+#: inc/quest/data/QuestPlugin.php:120
+msgid "You've installed a caching plugin. This way we can increase the speed of our website."
+msgstr "キャッシュプラグインをインストールしましたね。この方法でウェブサイトの速度を上げることができます。"
+
+#: inc/quest/data/QuestPlugin.php:121
+msgid "Activate a security plugin"
+msgstr "セキュリティ・プラグインを有効にする"
+
+#: inc/quest/data/QuestPlugin.php:121
+msgid "Great!"
+msgstr "すばらしい！"
+
+#: inc/quest/data/QuestPlugin.php:121
+msgid "You've installed a security plugin! This will help protecting me from villains. &#128170;"
+msgstr "セキュリティ・プラグインをインストールしましたね！これで悪党から身を守れる💪"
+
+#: inc/quest/data/QuestStart.php:39
+msgid "Welcome to Wapuugotchi"
+msgstr "ワプゴッチへようこそ"
+
+#: inc/quest/data/QuestStart.php:39
+msgid "Thank you for giving me a home! &#10084;&#65039;"
+msgstr "家を与えてくれてありがとう❤️"
+
+#: inc/quest/data/QuestTheme.php:48
+msgid "Remove all unused themes"
+msgstr "未使用のテーマをすべて削除する"
+
+#: inc/quest/data/QuestTheme.php:48
+msgid "You cleaned up! &#129529;"
+msgstr "掃除したね！🧹"
+
+#: inc/shop/Menu.php:37
+msgid "Shop"
+msgstr "ショップ"
+
+#. Description of the plugin/theme
+msgid "Meet Your Personalized Wapuu Assistant."
+msgstr "あなただけのワプウ・アシスタントをご紹介します。"
+
+#. Author of the plugin/theme
+msgid "wapuugotchi"
+msgstr "ワプウゴッチ"
+
+#. Author URI of the plugin/theme
+msgid "https://wapuugotchi.com/"
+msgstr "https://wapuugotchi.com/"

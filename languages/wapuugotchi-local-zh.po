@@ -1,0 +1,2559 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - WapuuGotchi - Stable (latest release)\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-04-29 22:30+0200\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.6\n"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "10"
+msgstr "10"
+
+#: inc/games/quiz/data/QuizWordPress.php:302
+msgid "2001"
+msgstr "2001"
+
+#: inc/games/quiz/data/QuizWordPress.php:303
+msgid "2006"
+msgstr "2006"
+
+#: inc/games/quiz/data/QuizWordPress.php:302
+msgid "2012"
+msgstr "2012"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "42"
+msgstr "四十二倍"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "5"
+msgstr "5"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Adding more plugins"
+msgstr "新增更多外掛程式"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Addon"
+msgstr "掛載"
+
+#: inc/games/quiz/data/QuizWordPress.php:177
+msgid "Administrator"
+msgstr "管理員"
+
+#: inc/mission/data/Missions.php:42
+msgid "After passing the spider’s test, Wapuu reaches a peaceful oasis. In the clear water, a glowing fish swims. It promises to show Wapuu the way to the treasure if he can answer the next question correctly."
+msgstr "通過蜘蛛的考驗後，Wapuu 到達了一片寧靜的綠洲。在清澈的水中，有一條發光的魚在游動。如果 Wapuu 能正確回答下一個問題，它就會告訴他通往寶藏的路。"
+
+#: inc/mission/data/Missions.php:40
+msgid "After solving the riddle in the forest, Wapuu reaches a massive mountain range. A large monolith blocks the path between the peaks. On its surface is another riddle, and only the correct answer will clear the way."
+msgstr "解開森林裡的謎語之後，Wapuu 到達一座巨大的山脈。一塊巨大的石碑阻擋了山峰之間的道路。在它的表面有另一個謎語，只有正確的答案才能讓路通過。"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:275
+msgid "Akismet"
+msgstr "Akismet"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Albert Einstein"
+msgstr "愛因斯坦"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "All in One SEO Pack"
+msgstr "多合一 SEO 套件"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "As many slashes as possible"
+msgstr "盡可能多的斜線"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Attachment"
+msgstr "附件"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "BRO"
+msgstr "BRO"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Bill Gates"
+msgstr "比爾蓋茲"
+
+#: inc/games/quiz/data/QuizWordPress.php:230
+#: inc/games/quiz/data/QuizWordPress.php:231
+msgid "By appending /wp-admin to the site URL"
+msgstr "將 /wp-admin 附加至網站 URL"
+
+#: inc/games/quiz/data/QuizWordPress.php:230
+msgid "By clicking a button on the homepage"
+msgstr "按一下首頁上的按鈕"
+
+#: inc/games/quiz/data/QuizWordPress.php:230
+msgid "By entering the secret code"
+msgstr "輸入密碼"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "C++"
+msgstr "C++"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "C-3PO"
+msgstr "C-3PO"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Chuck Norris"
+msgstr "Chuck Norris"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "CommandPress"
+msgstr "命令按鈕"
+
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:276
+msgid "Contact Form 7"
+msgstr "Contact Form 7"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Contributor"
+msgstr "貢獻者"
+
+#: inc/games/quiz/data/QuizWordPress.php:241
+msgid "Correct! With a small donation, you can support the further development of Wapuugotchi. There are many exciting plans ahead. Visit us at www.wapuugotchi.com!"
+msgstr "正確！只要您捐一點錢，就能支持 Wapuugotchi 的進一步發展。未來還有許多令人振奮的計劃。請造訪我們的網站 www.wapuugotchi.com！"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Custom"
+msgstr "自訂"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "DOC"
+msgstr "DOC"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Day and name"
+msgstr "日期與文章名稱"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Disabling JavaScript"
+msgstr "停用 JavaScript"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "Disqus"
+msgstr "Disqus"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "EXE"
+msgstr "EXE"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Editing the wp-admin folder"
+msgstr "編輯 wp-admin 資料夾"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Editor"
+msgstr "編輯"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Elon Musk"
+msgstr "Elon Musk"
+
+#: inc/mission/data/Missions.php:35
+msgid "Embark with your brave Wapuu on an adventure through the endless steppes in search of a hidden treasure. But the journey is fraught with dangers and tricky puzzles! Only with your help can your Wapuu overcome these challenges. Support your courageous companion on their journey and together, become the heroes of this adventure!"
+msgstr "與您勇敢的 Wapuu 一起踏上冒險旅程，穿越一望無際的大草原，尋找隱藏的寶藏。但是旅途中充滿了危險和棘手的謎題！只有在您的幫助下，您的 Wapuu 才能克服這些挑戰。在旅途中支持您勇敢的同伴，一起成為這次冒險的英雄！"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "FTP"
+msgstr "FTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Famous scientists"
+msgstr "著名科學家"
+
+#: inc/games/quiz/data/QuizWordPress.php:221
+msgid "Faster website speed"
+msgstr "更快的網站速度"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Feature"
+msgstr "特點"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Future Post"
+msgstr "未來職位"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Gizmo"
+msgstr "Gizmo"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "God"
+msgstr "神"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "HTTP"
+msgstr "HTTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:159
+msgid "HTTPS"
+msgstr "HTTPS"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "HackerDefender"
+msgstr "駭客防衛"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Harry Potter"
+msgstr "哈利波特"
+
+#: inc/games/quiz/data/QuizWordPress.php:69
+msgid "Hello Dolly"
+msgstr "你好，多莉"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Hiding the site from search engines"
+msgstr "從搜尋引擎隱藏網站"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Hollywood actors"
+msgstr "好萊塢演員"
+
+#: inc/games/quiz/data/QuizWordPress.php:193
+msgid "How can you add custom functionality to a WordPress site without modifying the core files?"
+msgstr "如何在不修改核心檔案的情況下，為 WordPress 網站新增自訂功能？"
+
+#: inc/games/quiz/data/QuizWordPress.php:202
+msgid "How can you improve the loading speed of a WordPress site?"
+msgstr "如何改善 WordPress 網站的載入速度？"
+
+#: inc/games/quiz/data/QuizWordPress.php:229
+msgid "How do you access the WordPress admin dashboard?"
+msgstr "如何存取 WordPress 管理儀表板？"
+
+#: inc/games/quiz/data/QuizWordPress.php:319
+msgid "How many plugins are currently hosted on WordPress.org?"
+msgstr "WordPress.org 目前託管了多少外掛程式？"
+
+#: inc/games/quiz/data/QuizWordPress.php:310
+msgid "How many themes are currently hosted on WordPress.org?"
+msgstr "WordPress.org 目前託管了多少個主題？"
+
+#: inc/games/quiz/data/QuizWordPress.php:221
+msgid "Increased user registrations"
+msgstr "增加使用者註冊"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Increasing the number of posts per page"
+msgstr "增加每頁的文章數量"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Installing antivirus software"
+msgstr "安裝防毒軟體"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Java"
+msgstr "Java"
+
+#: inc/games/quiz/data/QuizWordPress.php:294
+msgid "Jazz musicians"
+msgstr "爵士音樂家"
+
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:275
+msgid "Jetpack"
+msgstr "Jetpack"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Klingon"
+msgstr "克林貢語"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "MP3"
+msgstr "MP3"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Marvel characters"
+msgstr "漫畫人物"
+
+#: inc/games/quiz/data/QuizWordPress.php:33
+msgid "Matt Mullenweg"
+msgstr "Matt Mullenweg"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Mickey Mouse"
+msgstr "米奇老鼠"
+
+#: inc/mission/Menu.php:37
+msgid "Missions"
+msgstr "任務"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Modifying the index.php file"
+msgstr "修改 index.php 檔案"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Morse Code"
+msgstr "摩斯電碼"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multi-admin"
+msgstr "多重管理"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multi-domain"
+msgstr "多領域"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multilingual"
+msgstr "多語言"
+
+#: inc/games/quiz/data/QuizWordPress.php:267
+msgid "Multisite"
+msgstr "多站點"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multiuser"
+msgstr "多使用者"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Name and emoji"
+msgstr "姓名和表情符號"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Numeric"
+msgstr "數字"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Optimus Prime"
+msgstr "擎天柱"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 1,000"
+msgstr "超過 1,000"
+
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 10,000"
+msgstr "超過 10,000"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+msgid "Over 100"
+msgstr "超過 100"
+
+#: inc/games/quiz/data/QuizWordPress.php:312
+msgid "Over 12,000"
+msgstr "超過 12,000"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+msgid "Over 2,500"
+msgstr "超過 2,500"
+
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 25,000"
+msgstr "超過 25,000"
+
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 40,000"
+msgstr "超過 40,000"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 5,000"
+msgstr "超過 5,000"
+
+#: inc/games/quiz/data/QuizWordPress.php:321
+msgid "Over 55,000"
+msgstr "超過 55,000"
+
+#: inc/games/quiz/data/QuizWordPress.php:87
+msgid "PHP"
+msgstr "PHP"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "PNG"
+msgstr "PNG"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "POP3"
+msgstr "POP3"
+
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Page"
+msgstr "頁面"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Perl"
+msgstr "Perl"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "Pi"
+msgstr "Pi"
+
+#: inc/games/quiz/data/QuizWordPress.php:141
+msgid "Plugin"
+msgstr "外掛"
+
+#: inc/games/quiz/data/QuizWordPress.php:104
+msgid "Plugin Palace"
+msgstr "外掛宮殿"
+
+#: inc/games/quiz/data/QuizWordPress.php:222
+msgid "Plugin compatibility problems"
+msgstr "外掛程式相容性問題"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "Pluginator"
+msgstr "插頭"
+
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Post"
+msgstr "文章"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Post Planner"
+msgstr "職位規劃師"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Post Scheduler"
+msgstr "發佈排程"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Post Timer"
+msgstr "發佈計時器"
+
+#: inc/games/quiz/data/QuizWordPress.php:123
+msgid "Post name"
+msgstr "職位名稱"
+
+#: inc/games/quiz/data/QuizWordPress.php:258
+msgid "Product"
+msgstr "產品"
+
+#: inc/games/quiz/data/QuizWordPress.php:168
+msgid "Publish"
+msgstr "發佈"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Python"
+msgstr "Python"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Random string of characters"
+msgstr "隨機字串"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Removing all WordPress files"
+msgstr "移除所有 WordPress 檔案"
+
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Revision"
+msgstr "修訂版本"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Ronald McDonald"
+msgstr "麥當勞叔叔"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Ruby"
+msgstr "Ruby"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "SFTP"
+msgstr "SFTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "SMTP"
+msgstr "SMTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "SSH"
+msgstr "SSH"
+
+#: inc/games/quiz/data/QuizWordPress.php:132
+msgid "Search Engine Optimization"
+msgstr "搜尋引擎最佳化"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Search Everything Online"
+msgstr "線上搜尋一切"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "Seven of Nine"
+msgstr "九之七"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "Smush"
+msgstr "Smush"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Sneaky Engagement Orchestrator"
+msgstr "鬼鬼祟祟的訂婚統籌者"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Sonic the Hedgehog"
+msgstr "刺猬索尼克"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Space Exploration Organization"
+msgstr "太空探索組織"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Space missions"
+msgstr "太空任務"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Subscriber"
+msgstr "購読者"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Success Every Opportunity"
+msgstr "成功的每個機會"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Super Easy Optimization"
+msgstr "超輕鬆優化"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "SuperPlugin 1.0"
+msgstr "超級外掛程式 1.0"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "TXT"
+msgstr "TXT"
+
+#: inc/games/quiz/Manager.php:90
+msgid "Test your knowledge about WordPress."
+msgstr "測試您對 WordPress 的認識。"
+
+#: inc/games/quiz/data/QuizWordPress.php:305
+msgid "That is unfortunately incorrect. The correct answer is 2006."
+msgstr "很遺憾，這是不正確的。正確答案是 2006 年。"
+
+#: inc/games/quiz/data/QuizWordPress.php:179
+msgid "That is unfortunately incorrect. The correct answer is Administrator."
+msgstr "很遺憾，這是不正確的。正確的答案是管理員。"
+
+#: inc/games/quiz/data/QuizWordPress.php:233
+msgid "That is unfortunately incorrect. The correct answer is By appending /wp-admin to the site URL."
+msgstr "很不幸，這是不正確的。正確的答案是將 /wp-admin 附加到網站 URL。"
+
+#: inc/games/quiz/data/QuizWordPress.php:278
+msgid "That is unfortunately incorrect. The correct answer is Contact Form 7."
+msgstr "很遺憾，這是不正確的。正確答案是 Contact Form 7。"
+
+#: inc/games/quiz/data/QuizWordPress.php:161
+msgid "That is unfortunately incorrect. The correct answer is HTTPS."
+msgstr "很遺憾，這是不正確的。正確答案是 HTTPS。"
+
+#: inc/games/quiz/data/QuizWordPress.php:71
+msgid "That is unfortunately incorrect. The correct answer is Hello Dolly."
+msgstr "很不幸，這是不正確的。正確答案是 Hello Dolly。"
+
+#: inc/games/quiz/data/QuizWordPress.php:296
+msgid "That is unfortunately incorrect. The correct answer is Jazz musicians."
+msgstr "很遺憾，這是不正確的。正確答案是爵士樂手。"
+
+#: inc/games/quiz/data/QuizWordPress.php:35
+msgid "That is unfortunately incorrect. The correct answer is Matt Mullenweg."
+msgstr "很遺憾，這是不正確的。正確答案是 Matt Mullenweg。"
+
+#: inc/games/quiz/data/QuizWordPress.php:269
+msgid "That is unfortunately incorrect. The correct answer is Multisite."
+msgstr "很遺憾，這是不正確的。正確答案是 Multisite。"
+
+#: inc/games/quiz/data/QuizWordPress.php:314
+msgid "That is unfortunately incorrect. The correct answer is Over 10,000."
+msgstr "很遺憾，這是不正確的。正確答案是 10,000 以上。"
+
+#: inc/games/quiz/data/QuizWordPress.php:323
+msgid "That is unfortunately incorrect. The correct answer is Over 60,000."
+msgstr "很遺憾，這是不正確的。正確答案是 60,000 以上。"
+
+#: inc/games/quiz/data/QuizWordPress.php:89
+msgid "That is unfortunately incorrect. The correct answer is PHP."
+msgstr "很不幸，這是不正確的。正確的答案是 PHP。"
+
+#: inc/games/quiz/data/QuizWordPress.php:224
+msgid "That is unfortunately incorrect. The correct answer is Plugin compatibility problems."
+msgstr "很遺憾，這是不正確的。正確答案是外掛程式相容性問題。"
+
+#: inc/games/quiz/data/QuizWordPress.php:143
+msgid "That is unfortunately incorrect. The correct answer is Plugin."
+msgstr "很遺憾，這是不正確的。正確答案是 Plugin。"
+
+#: inc/games/quiz/data/QuizWordPress.php:125
+msgid "That is unfortunately incorrect. The correct answer is Post name."
+msgstr "很遺憾，這是不正確的。正確答案是 Post name。"
+
+#: inc/games/quiz/data/QuizWordPress.php:260
+msgid "That is unfortunately incorrect. The correct answer is Product."
+msgstr "很遺憾，這是不正確的。正確答案是產品。"
+
+#: inc/games/quiz/data/QuizWordPress.php:170
+msgid "That is unfortunately incorrect. The correct answer is Publish."
+msgstr "很遺憾，這是不正確的。正確答案是 Publish。"
+
+#: inc/games/quiz/data/QuizWordPress.php:134
+msgid "That is unfortunately incorrect. The correct answer is Search Engine Optimization."
+msgstr "很遺憾，這是不正確的。正確的答案是搜尋引擎最佳化。"
+
+#: inc/games/quiz/data/QuizWordPress.php:242
+msgid "That is unfortunately incorrect. The correct answer is To support the development and maintenance of the plugin."
+msgstr "很遺憾，這是不正確的。正確答案是 To support the development and maintenance of the plugin."
+
+#: inc/games/quiz/data/QuizWordPress.php:44
+msgid "That is unfortunately incorrect. The correct answer is Twenty Ten."
+msgstr "很遺憾，這是不正確的。正確答案是 Twenty Ten。"
+
+#: inc/games/quiz/data/QuizWordPress.php:116
+msgid "That is unfortunately incorrect. The correct answer is Unlimited."
+msgstr "很遺憾，這是不正確的。正確答案是無限制。"
+
+#: inc/games/quiz/data/QuizWordPress.php:206
+msgid "That is unfortunately incorrect. The correct answer is Using a caching plugin."
+msgstr "很遺憾，這是不正確的。正確的答案是使用快取外掛程式。"
+
+#: inc/games/quiz/data/QuizWordPress.php:197
+msgid "That is unfortunately incorrect. The correct answer is Using plugins."
+msgstr "很遺憾，這是不正確的。正確的答案是使用外掛程式。"
+
+#: inc/games/quiz/data/QuizWordPress.php:188
+msgid "That is unfortunately incorrect. The correct answer is Using strong passwords."
+msgstr "很不幸，這是不正確的。正確的答案是使用強大的密碼。"
+
+#: inc/games/quiz/data/QuizWordPress.php:215
+msgid "That is unfortunately incorrect. The correct answer is WP-CLI."
+msgstr "很不幸，這是不正確的。正確答案是 WP-CLI。"
+
+#: inc/games/quiz/data/QuizWordPress.php:53
+msgid "That is unfortunately incorrect. The correct answer is Wapuu."
+msgstr "很遺憾，這是不正確的。正確答案是 Wapuu。"
+
+#: inc/games/quiz/data/QuizWordPress.php:287
+msgid "That is unfortunately incorrect. The correct answer is WooCommerce."
+msgstr "很遺憾，這是不正確的。正確答案是 WooCommerce。"
+
+#: inc/games/quiz/data/QuizWordPress.php:80
+msgid "That is unfortunately incorrect. The correct answer is WordCamp San Francisco."
+msgstr "很遺憾，這是不正確的。正確答案是 WordCamp San Francisco。"
+
+#: inc/games/quiz/data/QuizWordPress.php:62
+msgid "That is unfortunately incorrect. The correct answer is WordPress 0.7."
+msgstr "很不幸，這是不正確的。正確答案是 WordPress 0.7。"
+
+#: inc/games/quiz/data/QuizWordPress.php:107
+msgid "That is unfortunately incorrect. The correct answer is WordPress.org."
+msgstr "很不幸，這是不正確的。正確答案是 WordPress.org。"
+
+#: inc/games/quiz/data/QuizWordPress.php:251
+msgid "That is unfortunately incorrect. The correct answer is Yoast SEO."
+msgstr "很不幸，這是不正確的。正確答案是 Yoast SEO。"
+
+#: inc/games/quiz/data/QuizWordPress.php:98
+msgid "That is unfortunately incorrect. The correct answer is ZIP."
+msgstr "很遺憾，這是不正確的。正確答案是 ZIP。"
+
+#: inc/games/quiz/data/QuizWordPress.php:152
+msgid "That is unfortunately incorrect. The correct answer is wp-config.php."
+msgstr "很不幸，這是不正確的。正確答案是 wp-config.php。"
+
+#: inc/games/quiz/data/QuizWordPress.php:277
+msgid "That's correct! Contact Form 7 is a popular plugin for creating contact forms in WordPress."
+msgstr "沒錯！Contact Form 7 是在 WordPress 中建立聯絡表單的常用外掛程式。"
+
+#: inc/games/quiz/data/QuizWordPress.php:160
+msgid "That's correct! HTTPS is the protocol used for securing a WordPress site."
+msgstr "沒錯！HTTPS 是用於保護 WordPress 網站的通訊協定。"
+
+#: inc/games/quiz/data/QuizWordPress.php:70
+msgid "That's correct! Hello Dolly was the first plugin in WordPress, written by Matt Mullenweg."
+msgstr "沒錯！Hello Dolly 是 WordPress 的第一個外掛程式，由 Matt Mullenweg 撰寫。"
+
+#: inc/games/quiz/data/QuizWordPress.php:34
+msgid "That's correct! Matt Mullenweg developed the first version of WordPress together with Mike Little in 2003. He is also the founder of Automattic."
+msgstr "沒錯！Matt Mullenweg 在 2003 年與 Mike Little 一起開發了 WordPress 的第一個版本。他也是 Automattic 的創辦人。"
+
+#: inc/games/quiz/data/QuizWordPress.php:295
+msgid "That's correct! Matt Mullenweg, the co-founder of WordPress, is a big jazz fan and wanted to bring a personal touch to the project."
+msgstr "沒錯！WordPress 的共同創辦人 Matt Mullenweg 是一位爵士樂迷，他希望為這項計畫注入個人風格。"
+
+#: inc/games/quiz/data/QuizWordPress.php:223
+msgid "That's correct! Plugin compatibility problems are a common issue when updating WordPress."
+msgstr "沒錯！外掛程式相容性問題是更新 WordPress 時常發生的問題。"
+
+#: inc/games/quiz/data/QuizWordPress.php:142
+msgid "That's correct! Plugins are additional pieces of software that can be added to WordPress to extend its functionality."
+msgstr "沒錯！外掛是可以新增到 WordPress 以擴充其功能的附加軟體。"
+
+#: inc/games/quiz/data/QuizWordPress.php:259
+msgid "That's correct! Product is not a default post type in WordPress; it is usually added by plugins like WooCommerce."
+msgstr "沒錯！在 WordPress 中，產品不是預設的文章類型；它通常是由 WooCommerce 等外掛程式新增的。"
+
+#: inc/games/quiz/data/QuizWordPress.php:133
+msgid "That's correct! SEO stands for Search Engine Optimization and is the process of improving the visibility of a website in search engines."
+msgstr "沒錯！SEO 是 Search Engine Optimization (搜尋引擎最佳化) 的縮寫，也就是提高網站在搜尋引擎中能見度的過程。"
+
+#: inc/games/quiz/data/QuizWordPress.php:178
+msgid "That's correct! The Administrator role in WordPress has the highest level of access and can perform all tasks on the site."
+msgstr "沒錯！WordPress 中的管理員角色擁有最高等級的存取權，可以執行網站的所有工作。"
+
+#: inc/games/quiz/data/QuizWordPress.php:268
+msgid "That's correct! The Multisite feature allows you to manage multiple WordPress sites from a single installation."
+msgstr "沒錯！Multisite 功能可讓您從單一安裝管理多個 WordPress 網站。"
+
+#: inc/games/quiz/data/QuizWordPress.php:169
+msgid "That's correct! The Publish feature in WordPress allows you to schedule posts to be published at a future date and time."
+msgstr "沒錯！WordPress 的發佈功能允許您排定文章在未來的日期和時間發佈。"
+
+#: inc/games/quiz/data/QuizWordPress.php:304
+msgid "That's correct! The first WordCamp was organized in 2006 by Matt Mullenweg in San Francisco."
+msgstr "沒錯！第一屆 WordCamp 由 Matt Mullenweg 於 2006 年在舊金山舉辦。"
+
+#: inc/games/quiz/data/QuizWordPress.php:61
+msgid "That's correct! The first version of WordPress was WordPress 0.7, released on May 27, 2003."
+msgstr "沒錯！WordPress 的第一個版本是 WordPress 0.7，於 2003 年 5 月 27 日發行。"
+
+#: inc/games/quiz/data/QuizWordPress.php:124
+msgid "That's correct! The recommended permalink structure for SEO in WordPress is Post name."
+msgstr "這是正確的！在 WordPress 中，針對 SEO 推薦的永久連結結構是 Post name。"
+
+#: inc/games/quiz/data/QuizWordPress.php:97
+msgid "That's correct! Themes and plugins in WordPress are commonly distributed as ZIP files."
+msgstr "沒錯！WordPress 中的主題和外掛通常以 ZIP 檔案的形式散佈。"
+
+#: inc/games/quiz/data/QuizWordPress.php:313
+msgid "That's correct! There are currently over 12,000 themes hosted on WordPress.org."
+msgstr "沒錯！目前有超過 12,000 個主題寄存在 WordPress.org。"
+
+#: inc/games/quiz/data/QuizWordPress.php:322
+msgid "That's correct! There are currently over 55,000 plugins hosted on WordPress.org."
+msgstr "沒錯！目前有超過 55,000 個外掛寄存在 WordPress.org。"
+
+#: inc/games/quiz/data/QuizWordPress.php:43
+msgid "That's correct! Twenty Ten was the first default theme in WordPress, released with WordPress 3.0 in 2010."
+msgstr "沒錯！Twenty Ten 是 WordPress 的第一個預設主題，於 2010 年隨 WordPress 3.0 發布。"
+
+#: inc/games/quiz/data/QuizWordPress.php:205
+msgid "That's correct! Using a caching plugin is a way to improve the loading speed of a WordPress site."
+msgstr "沒錯！使用快取外掛程式是一種改善 WordPress 網站載入速度的方法。"
+
+#: inc/games/quiz/data/QuizWordPress.php:196
+msgid "That's correct! Using plugins is a way to add custom functionality to a WordPress site without modifying the core files."
+msgstr "沒錯！使用外掛是一種在 WordPress 網站中加入自訂功能的方式，而無需修改核心檔案。"
+
+#: inc/games/quiz/data/QuizWordPress.php:187
+msgid "That's correct! Using strong passwords is a common security measure to protect a WordPress site."
+msgstr "沒錯！使用強大的密碼是保護 WordPress 網站的常用安全措施。"
+
+#: inc/games/quiz/data/QuizWordPress.php:214
+msgid "That's correct! WP-CLI is the command line interface for WordPress and allows you to manage your WordPress site from the command line."
+msgstr "沒錯！WP-CLI 是 WordPress 的命令列介面，可讓您從命令列管理 WordPress 網站。"
+
+#: inc/games/quiz/data/QuizWordPress.php:52
+msgid "That's correct! Wapuu is the mascot of WordPress. It was designed by Kazuko Kaneuchi for the WordPress Japan community."
+msgstr "沒錯！Wapuu 是 WordPress 的吉祥物。它是由 Kazuko Kaneuchi 為 WordPress 日本社群設計的。"
+
+#: inc/games/quiz/data/QuizWordPress.php:286
+msgid "That's correct! WooCommerce is the most popular e-commerce plugin for WordPress, enabling online store functionality."
+msgstr "沒錯！WooCommerce 是 WordPress 最流行的電子商務外掛程式，可實現網路商店功能。"
+
+#: inc/games/quiz/data/QuizWordPress.php:79
+msgid "That's correct! WordCamp San Francisco was the first WordCamp, organized by Matt Mullenweg in 2006."
+msgstr "沒錯！WordCamp San Francisco 是第一屆 WordCamp，由 Matt Mullenweg 於 2006 年舉辦。"
+
+#: inc/games/quiz/data/QuizWordPress.php:88
+msgid "That's correct! WordPress is written in PHP."
+msgstr "沒錯！WordPress 是用 PHP 寫成的。"
+
+#: inc/games/quiz/data/QuizWordPress.php:106
+msgid "That's correct! WordPress.org is the marketplace for WordPress plugins and themes."
+msgstr "沒錯！WordPress.org 是 WordPress 外掛和主題的市場。"
+
+#: inc/games/quiz/data/QuizWordPress.php:250
+msgid "That's correct! Yoast SEO is one of the most popular plugins for search engine optimization in WordPress."
+msgstr "沒錯！Yoast SEO 是 WordPress 中最受歡迎的搜尋引擎最佳化外掛之一。"
+
+#: inc/games/quiz/data/QuizWordPress.php:232
+msgid "That's correct! You can access the WordPress admin dashboard by appending /wp-admin to the site URL."
+msgstr "這是正確的！您可以在網站 URL 中附加 /wp-admin 來存取 WordPress 管理儀表板。"
+
+#: inc/games/quiz/data/QuizWordPress.php:115
+msgid "That's correct! You can add an unlimited number of tags to a WordPress post."
+msgstr "沒錯！您可以在 WordPress 帖子中加入數量不限的標籤。"
+
+#: inc/games/quiz/data/QuizWordPress.php:151
+msgid "That's correct! wp-config.php is the main configuration file for a WordPress website."
+msgstr "沒錯！wp-config.php 是 WordPress 網站的主要設定檔案。"
+
+#: inc/mission/data/Missions.php:34
+msgid "The Endless Steppes"
+msgstr "無盡的草原"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Theme"
+msgstr "佈景主題"
+
+#: inc/games/quiz/data/QuizWordPress.php:104
+msgid "Theme Forest"
+msgstr "主題森林"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Time Machine"
+msgstr "時間機器"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "Tinky Winky"
+msgstr "Tinky Winky"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To get a free t-shirt"
+msgstr "獲取免費 T 恤"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To increase your website traffic"
+msgstr "增加您的網站流量"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To make the Wapuu happy"
+msgstr "讓 Wapuu 人快樂"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To make the plugin author rich"
+msgstr "要使外掛程式的作者豐富"
+
+#: inc/games/quiz/data/QuizWordPress.php:240
+msgid "To support the development of the plugin"
+msgstr "支援外掛程式的開發"
+
+#: inc/games/quiz/data/QuizWordPress.php:42
+msgid "Twenty Ten"
+msgstr "二十一"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "Twenty Twenty"
+msgstr "二十二"
+
+#: inc/games/quiz/data/QuizWordPress.php:114
+msgid "Unlimited"
+msgstr "無制限"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Upgrade"
+msgstr "升級"
+
+#: inc/games/quiz/data/QuizWordPress.php:204
+msgid "Using a caching plugin"
+msgstr "使用快取外掛程式"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Using a dial-up connection"
+msgstr "使用撥號連線"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Using a magic wand"
+msgstr "使用魔術棒"
+
+#: inc/games/quiz/data/QuizWordPress.php:195
+msgid "Using plugins"
+msgstr "使用外掛程式"
+
+#: inc/games/quiz/data/QuizWordPress.php:186
+msgid "Using strong passwords"
+msgstr "使用強大的密碼"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Using weak passwords"
+msgstr "使用弱密碼"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Visitor"
+msgstr "訪客"
+
+#: inc/games/quiz/data/QuizWordPress.php:213
+msgid "WP-CLI"
+msgstr "WP-CLI"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "WP-Commander"
+msgstr "WP 指揮官"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "WP-Shell"
+msgstr "WP-Shell"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "WP-Terminal"
+msgstr "WP-終端"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "WPForms"
+msgstr "WPForms"
+
+#: inc/games/quiz/data/QuizWordPress.php:51
+msgid "Wapuu"
+msgstr "Wapuu"
+
+#: inc/mission/data/Missions.php:39
+msgid "Wapuu embarks on an adventure through the vast, endless steppes. Soon, he comes across a dense forest where the trees block his way. Carved into the bark of an old tree is a riddle. Only by solving it the hidden path will reveal itself."
+msgstr "Wapuu 在遼闊無際的大草原上展開了冒險之旅。不久，他遇到了一片茂密的森林，樹木阻礙了他的去路。一棵老樹的樹皮上刻著一個謎語。只有解開這個謎語，隱藏的道路才會顯現出來。"
+
+#: inc/mission/data/Missions.php:43
+msgid "Wapuu finally finds the treasure. However, a mysterious inscription on the chest says that it will only open if he can solve the final riddle engraved on the lid."
+msgstr "Wapuu 終於找到寶藏。然而，箱子上的神秘銘文說，只有他能解出刻在蓋子上的最後一個謎語，箱子才會打開。"
+
+#: inc/games/quiz/data/QuizWordPress.php:292
+msgid "What are WordPress major versions named after?"
+msgstr "WordPress 的主要版本以何命名？"
+
+#: inc/games/quiz/data/QuizWordPress.php:130
+msgid "What does the acronym SEO stand for?"
+msgstr "縮寫 SEO 代表什麼？"
+
+#: inc/games/quiz/data/QuizWordPress.php:166
+msgid "What feature allows you to schedule posts in WordPress?"
+msgstr "什麼功能可以讓您在 WordPress 中排定發表文章的時間？"
+
+#: inc/games/quiz/data/QuizWordPress.php:94
+msgid "What file type is commonly used for themes and plugins in WordPress?"
+msgstr "WordPress 中的主題和外掛常用哪種檔案類型？"
+
+#: inc/games/quiz/data/QuizWordPress.php:184
+msgid "What is a common security measure to protect a WordPress site?"
+msgstr "保護 WordPress 網站的常見安全措施是什麼？"
+
+#: inc/games/quiz/data/QuizWordPress.php:148
+msgid "What is the main configuration file for a WordPress website?"
+msgstr "WordPress 網站的主要設定檔案是什麼？"
+
+#: inc/games/quiz/data/QuizWordPress.php:112
+msgid "What is the maximum number of tags you can add to a WordPress post?"
+msgstr "WordPress 帖子最多可以添加多少個標籤？"
+
+#: inc/games/quiz/data/QuizWordPress.php:211
+msgid "What is the name of the WordPress command line interface?"
+msgstr "WordPress 命令列介面的名稱是什麼？"
+
+#: inc/games/quiz/data/QuizWordPress.php:76
+msgid "What is the name of the first WordCamp?"
+msgstr "第一屆 WordCamp 的名稱是什麼？"
+
+#: inc/games/quiz/data/QuizWordPress.php:40
+msgid "What is the name of the first default theme in WordPress?"
+msgstr "WordPress 第一個預設主題的名稱是什麼？"
+
+#: inc/games/quiz/data/QuizWordPress.php:67
+msgid "What is the name of the first plugin in WordPress?"
+msgstr "WordPress 中第一個外掛程式的名稱是什麼？"
+
+#: inc/games/quiz/data/QuizWordPress.php:58
+msgid "What is the name of the first version of WordPress?"
+msgstr "WordPress 第一個版本的名稱是什麼？"
+
+#: inc/games/quiz/data/QuizWordPress.php:103
+msgid "What is the name of the marketplace for WordPress plugins and themes?"
+msgstr "WordPress 外掛程式和主題市場的名稱是什麼？"
+
+#: inc/games/quiz/data/QuizWordPress.php:49
+msgid "What is the name of the mascot of WordPress?"
+msgstr "WordPress 的吉祥物名稱是什麼？"
+
+#: inc/games/quiz/data/QuizWordPress.php:121
+msgid "What is the recommended permalink structure for SEO in WordPress?"
+msgstr "在 WordPress 中，針對 SEO 推薦使用哪種頁首結構呢？"
+
+#: inc/games/quiz/data/QuizWordPress.php:139
+msgid "What is the term for additional functionality that can be added to WordPress?"
+msgstr "可以添加到 WordPress 的附加功能的術語是什麼？"
+
+#: inc/games/quiz/data/QuizWordPress.php:85
+msgid "What programming language is WordPress built on?"
+msgstr "WordPress 是以什麼程式語言建立的？"
+
+#: inc/games/quiz/data/QuizWordPress.php:301
+msgid "When was the first WordCamp organized?"
+msgstr "第一次 WordCamp 是什麼時候舉辦的？"
+
+#: inc/games/quiz/data/QuizWordPress.php:265
+msgid "Which WordPress feature helps in managing multiple websites from a single installation?"
+msgstr "WordPress 的哪項功能有助於從單一安裝管理多個網站？"
+
+#: inc/games/quiz/data/QuizWordPress.php:247
+msgid "Which WordPress plugin is commonly used for search engine optimization (SEO)?"
+msgstr "哪個 WordPress 外掛常用於搜尋引擎最佳化 (SEO)？"
+
+#: inc/games/quiz/data/QuizWordPress.php:256
+msgid "Which of the following is NOT a default post type in WordPress?"
+msgstr "以下哪項不是 WordPress 的預設文章類型？"
+
+#: inc/games/quiz/data/QuizWordPress.php:220
+msgid "Which of the following is a common issue when updating WordPress?"
+msgstr "更新 WordPress 時，以下哪項是常見問題？"
+
+#: inc/games/quiz/data/QuizWordPress.php:283
+msgid "Which plugin is typically used to add e-commerce functionality to a WordPress site?"
+msgstr "哪個外掛程式通常用來為 WordPress 網站新增電子商務功能？"
+
+#: inc/games/quiz/data/QuizWordPress.php:274
+msgid "Which plugin is typically used to build contact forms in WordPress?"
+msgstr "在 WordPress 中，哪個外掛程式通常用來建立聯絡表單？"
+
+#: inc/games/quiz/data/QuizWordPress.php:157
+msgid "Which protocol is used for securing a WordPress site?"
+msgstr "哪個通訊協定用於保護 WordPress 網站？"
+
+#: inc/games/quiz/data/QuizWordPress.php:175
+msgid "Which role in WordPress has the highest level of access?"
+msgstr "WordPress 中哪個角色的存取權限最高？"
+
+#: inc/games/quiz/data/QuizWordPress.php:31
+msgid "Who is the founder of WordPress?"
+msgstr "誰是 WordPress 的創辦人？"
+
+#: inc/games/quiz/data/QuizWordPress.php:238
+msgid "Why should you make a small donation for the Wapuugotchi plugin?"
+msgstr "為什麼要為 Wapuugotchi 外掛程式做一點小小的捐款？"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Widget"
+msgstr "小工具"
+
+#: inc/mission/data/Missions.php:41
+msgid "With the monolith moved aside, Wapuu continues his journey. Suddenly, he comes across a cave, but the entrance is blocked by a giant spider’s web. A spider emerges from the shadows and presents him a new challenge. Only by solving her riddle Wapuu will gain access to the cave."
+msgstr "把石碑移到一旁後，Wapuu 繼續他的旅程。突然，他遇到了一個山洞，但入口卻被巨大的蜘蛛網封住了。一隻蜘蛛從陰影中出現，向他提出新的挑戰。只有解開她的謎語，Wapuu 才能進入洞穴。"
+
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:275
+#: inc/games/quiz/data/QuizWordPress.php:285
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Berlin"
+msgstr "柏林 WordCamp"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Gondor"
+msgstr "WordCamp Gondor"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Gotham"
+msgstr "WordCamp Gotham"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Hogwarts"
+msgstr "霍格華茲 WordCamp"
+
+#: inc/games/quiz/data/QuizWordPress.php:78
+msgid "WordCamp San Francisco"
+msgstr "舊金山 WordCamp"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Springfield"
+msgstr "WordCamp Springfield"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Tokio"
+msgstr "WordCamp Tokio"
+
+#: inc/games/quiz/data/QuizWordPress.php:60
+msgid "WordPress 0.7"
+msgstr "WordPress 0.7"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress 1.0"
+msgstr "WordPress 1.0"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress 2000"
+msgstr "WordPress 2000"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress Prologue"
+msgstr "WordPress 序幕"
+
+#: inc/games/quiz/Manager.php:89
+msgid "WordPress Quiz"
+msgstr "WordPress 測驗"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress XP"
+msgstr "WordPress XP"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress Zero"
+msgstr "WordPress Zero"
+
+#: inc/games/quiz/data/QuizWordPress.php:105
+msgid "WordPress.org"
+msgstr "WordPress.org"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Writing a letter to WordPress"
+msgstr "寫一封信給 WordPress"
+
+#: inc/games/quiz/data/QuizWordPress.php:249
+#: inc/games/quiz/data/QuizWordPress.php:275
+msgid "Yoast SEO"
+msgstr "Yoast SEO"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "Yoast Zero"
+msgstr "Yoast Zero"
+
+#: inc/games/quiz/data/QuizWordPress.php:96
+msgid "ZIP"
+msgstr "郵遞區號"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "admin.xml"
+msgstr "admin.xml"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "config.sys"
+msgstr "config.sys"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "settings.ini"
+msgstr "設定.ini"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "setup.exe"
+msgstr "setup.exe"
+
+#: inc/games/quiz/data/QuizWordPress.php:150
+msgid "wp-config.php"
+msgstr "wp-config.php"
+
+#: inc/games/quiz/data/QuizWordPress.php:302
+msgid "🤔"
+msgstr "🤔"
+
+#: inc/onboarding/data/TourEditPage.php:50
+msgid "\"All Pages\" lets you view, organize, and manage your pages all in one spot."
+msgstr "\"所有頁面」可讓您在一個位置檢視、整理和管理所有頁面。"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:110
+msgid "%s, we are a great team!"
+msgstr "%s，我們是一個很棒的團隊！"
+
+#: inc/onboarding/data/TourEditComments.php:86
+msgid "A comment can be \"Pending\", \"Approved\", \"Trash\", or \"Spam\". Pending comments won't show on your website until you approve them."
+msgstr "評論可以是「Pending」、「Approved」、「Trash」或「Spam」。在您批准之前，待處理的評論不會顯示在您的網站上。"
+
+#: inc/onboarding/data/TourEditComments.php:98
+msgid "A quick hint: Want to quickly approve or trash a comment? Hover over it and click the corresponding action."
+msgstr "快速提示：想要快速批准或刪除評論？將滑鼠移至其上，然後按一下相應的動作。"
+
+#: inc/onboarding/data/TourDashboard.php:80
+msgid "A small hint: If you want a wider view of your website, you can always collapse the admin menu. Give it a try by clicking the ► button."
+msgstr "一個小提示：如果您想要更寬廣的網站檢視，您可以隨時折疊管理功能表。按一下 ► 按鈕試試看。"
+
+#: inc/onboarding/data/TourEditPage.php:55
+msgid "About Pages"
+msgstr "關於頁面"
+
+#: inc/onboarding/data/TourDashboard.php:73
+msgid "About submenus"
+msgstr "關於子功能表"
+
+#: inc/onboarding/data/TourThemes.php:61
+msgid "Active Themes"
+msgstr "活躍主題"
+
+#: inc/onboarding/data/TourThemeInstall.php:43
+msgid "Add"
+msgstr "新增"
+
+#: inc/onboarding/data/TourUsers.php:85
+msgid "Add New User"
+msgstr "新增使用者"
+
+#: inc/onboarding/data/TourMedia.php:50
+msgid "Adding your media files is a breeze – just drag and drop them into the area, or click the button to select your files. Your new media will be instantly available in your library."
+msgstr "新增媒體檔案輕而易舉 - 只需將檔案拖放至該區域，或按一下按鈕選取檔案。您的新媒體就會立即出現在資料庫中。"
+
+#: inc/onboarding/data/TourDashboard.php:74
+msgid "After clicking on a main menu item, you’ll see some submenu items pop up underneath. They're like special little tools that let you do things related to the main menu item you clicked on. It's super helpful!"
+msgstr "按一下主功能表項目後，您會看到下方彈出一些子功能表項目。它們就像是特殊的小工具，讓您可以做與您點選的主選單項目相關的事情。超有用的！"
+
+#: inc/onboarding/data/TourEditPage.php:49
+msgid "All Pages"
+msgstr "全部頁面"
+
+#: inc/onboarding/data/TourEditPost.php:49
+msgid "All Posts"
+msgstr "所有文章"
+
+#: inc/onboarding/data/TourUsers.php:49
+msgid "All Users"
+msgstr "所有用戶"
+
+#: inc/onboarding/data/TourUpload.php:56
+msgid "All uploaded media is stored here. You'll get a visual of all these files with thumbnails, file info, and metadata like titles, descriptions, and alt texts for images."
+msgstr "所有上傳的媒體都儲存在這裡。您可以看到所有這些檔案的縮圖、檔案資訊，以及標題、描述和圖片的 alt 文本等元資料。"
+
+#: inc/onboarding/data/TourUpdateCore.php:43
+msgid "Alright, we're now on the \"Updates\" page of the Dashboard. This is where you'll get to keep your website looking sharp and up-to-date."
+msgstr "好了，我們現在進入控制台的「更新」頁面。在這裡您可以讓您的網站保持最新狀態。"
+
+#: inc/onboarding/data/TourImport.php:68
+msgid "Also, backups can contain personal data, and importing backups from unknown origins could violate privacy policies. This could lead to legal issues."
+msgstr "此外，備份可能包含個人資料，匯入來歷不明的備份可能違反隱私權政策。這可能會導致法律問題。"
+
+#: inc/onboarding/data/TourOptionsMedia.php:62
+msgid "Also, make sure to organize your media files sensibly. This is especially useful if you have a lot of media files."
+msgstr "此外，請務必合理地組織您的媒體檔案。如果您有很多媒體檔案，這一點尤其有用。"
+
+#: inc/onboarding/data/TourExport.php:68
+msgid "Also, remember that if you transfer a lot of content, it can take up a lot of space. Make sure you have enough room in your workspace to store it!"
+msgstr "此外，請記住，如果您傳輸大量內容，可能會佔用很多空間。請確保您的工作區有足夠的空間來存放！"
+
+#: inc/onboarding/data/TourUser.php:62
+msgid "An Administrator can revoke rights from all users... including you! So, be cautious about whom you assign the \"Administrator\" role."
+msgstr "管理員可以撤銷所有使用者的權限...包括您！因此，請謹慎指定「管理員」角色的使用者。"
+
+#: inc/onboarding/data/TourProfile.php:50
+msgid "And just like that, we're done with another page. Users bring life to your website but also pose certain risks. So be careful about who you give what rights to."
+msgstr "就這樣，我們又完成了一個頁面。使用者為您的網站帶來了活力，但也帶來了一定的風險。因此，在賦予哪些人哪些權利時一定要謹慎。"
+
+#: inc/onboarding/data/TourEditPage.php:56
+msgid "As mentioned, \"Pages\" are static content. Unlike \"Posts\", they're more permanent, like your \"About Us\" or \"Contact\" pages."
+msgstr "如前所述，「頁面」是靜態內容。與「文章」不同，它們比較永久，就像您的「關於我們」或「聯絡我們」頁面。"
+
+#: inc/onboarding/data/TourPluginInstall.php:56
+msgid "As soon as you enter this page, you're presented with a selection of plugins. This is really handy since there are more than 60,000 plugins available. This can also help you in finding the right plugins for your website."
+msgstr "一進入這個頁面，您就會看到各種外掛程式的選擇。這真的很方便，因為有超過 60,000 個外掛程式可供使用。這也可以幫助您找到適合您網站的外掛程式。"
+
+#: inc/onboarding/data/TourPage.php:50
+msgid "As you might have learned in the tutorial, this page is where you can manage the content of your pages."
+msgstr "正如您在教學中所學到的，此頁面是您管理頁面內容的地方。"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+#: inc/onboarding/data/TourEditComments.php:61
+#: inc/onboarding/data/TourEditPage.php:73
+msgid "Author"
+msgstr "作者"
+
+#: inc/onboarding/data/TourEditPost.php:73
+msgid "Authors"
+msgstr "作者"
+
+#: inc/onboarding/data/TourUpdateCore.php:61
+msgid "Automatic Updates"
+msgstr "自動更新"
+
+#: inc/onboarding/data/TourTools.php:49
+msgid "Available Tools"
+msgstr "可用工具"
+
+#: inc/onboarding/data/TourOptionsMedia.php:56
+msgid "Be careful not to choose too large a size for your thumbnails, as it can negatively impact your website's loading time."
+msgstr "請小心不要為縮圖選擇太大的尺寸，因為這會對網站的載入時間造成負面影響。"
+
+#: inc/onboarding/data/TourPluginEditor.php:56
+msgid "Be careful! Editing files can damage your website. If you're not certain about what you're doing, it's better to avoid tinkering with this."
+msgstr "請小心！編輯檔案可能會損壞您的網站。如果您不確定自己在做什麼，最好避免在這裡修修補補。"
+
+#: inc/onboarding/data/TourThemeEditor.php:56
+msgid "Be careful! Editing files can damage your website. If you're not sure what you're doing, it's better to avoid this."
+msgstr "請小心！編輯檔案可能會損壞您的網站。如果您不確定自己在做什麼，最好避免這樣做。"
+
+#: inc/onboarding/data/TourEditPage.php:104
+#: inc/onboarding/data/TourEditPost.php:116
+msgid "Behind the \"Create\" button, you can start crafting new content for your website. It'll guide you through the process step by step!"
+msgstr "在「建立」按鈕後面，您就可以開始為您的網站製作新內容。它會一步一步引導您完成整個過程！"
+
+#: inc/onboarding/data/TourEditCategory.php:43
+#: inc/onboarding/data/TourEditPost.php:79
+#: inc/onboarding/data/TourWapuugotchiShop.php:61
+msgid "Categories"
+msgstr "類別"
+
+#: inc/onboarding/data/TourEditCategory.php:56
+msgid "Categories can have a hierarchy. Set up subcategories for even more precise organization of your content."
+msgstr "分類可以有階層。設定子類別可更精確地組織內容。"
+
+#: inc/onboarding/data/TourEditComments.php:85
+msgid "Changing Comment Status"
+msgstr "變更評論狀態"
+
+#: inc/onboarding/data/TourEditPage.php:109
+msgid "Closing Thoughts"
+msgstr "結語"
+
+#: inc/onboarding/data/TourEditComments.php:79
+msgid "Comment Date"
+msgstr "評論日期"
+
+#: inc/onboarding/data/TourEditComments.php:67
+msgid "Comment Status"
+msgstr "評論狀態"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:79
+msgid "Community Items"
+msgstr "社區項目"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:55
+msgid "Conclusion!!!"
+msgstr "結論!"
+
+#: inc/onboarding/data/TourPage.php:97
+msgid "Content"
+msgstr "內容"
+
+#: inc/onboarding/data/TourPost.php:97
+msgid "Content Part"
+msgstr "內容部分"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:55
+msgid "Control"
+msgstr "控制"
+
+#: inc/onboarding/data/TourEditPage.php:103
+#: inc/onboarding/data/TourEditPost.php:115
+msgid "Create"
+msgstr "建立"
+
+#: inc/quest/data/QuestContent.php:123
+msgid "Create 10 posts"
+msgstr "建立 10 個職位"
+
+#: inc/onboarding/data/TourEditCategory.php:49
+msgid "Creating New Ones"
+msgstr "創造新的"
+
+#: inc/onboarding/data/TourEditPostTag.php:55
+msgid "Creating Tags"
+msgstr "建立標籤"
+
+#: inc/onboarding/data/TourEditPost.php:44
+msgid "Currently, we're in the submenu of the \"Posts\" main menu item. This is where you can create, tweak, and organize all your dynamic content."
+msgstr "目前，我們在「文章」主選單項目的子選單中。您可以在這裡建立、調整和整理所有動態內容。"
+
+#: inc/onboarding/data/TourDashboard.php:122
+msgid "Customize It"
+msgstr "自訂"
+
+#: inc/onboarding/data/TourErasePersonalData.php:67
+msgid "Data Protection Tip"
+msgstr "資料保護提示"
+
+#: inc/onboarding/data/TourEditPost.php:91
+msgid "Dates"
+msgstr "日期"
+
+#: inc/onboarding/data/TourErasePersonalData.php:61
+msgid "Deleting Data"
+msgstr "刪除資料"
+
+#: inc/onboarding/data/TourThemes.php:43
+msgid "Design"
+msgstr "設計"
+
+#: inc/onboarding/data/TourUpload.php:61
+msgid "Details"
+msgstr "詳細資料"
+
+#: inc/onboarding/data/TourPlugins.php:80
+msgid "Developers regularly release updates for their plugins to fix bugs, close security gaps, or add new features. It's important to keep your plugins up-to-date."
+msgstr "開發人員會定期釋出外掛程式的更新，以修正錯誤、修補安全漏洞或新增新功能。保持您的外掛程式為最新狀態是很重要的。"
+
+#: inc/onboarding/data/TourEditPage.php:110
+msgid "Did you notice I almost said the same thing as in the \"Posts\" page? Well, that's because these pages are pretty similar!"
+msgstr "您有沒有注意到我幾乎說了跟 \"Posts \"頁面一樣的話？嗯，那是因為這些頁面很相似！"
+
+#: inc/onboarding/data/TourEditPostTag.php:49
+msgid "Differentiating"
+msgstr "差異化"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:43
+msgid "Discussion"
+msgstr "討論"
+
+#: inc/onboarding/data/TourMedia.php:49
+msgid "Drag-and-Drop"
+msgstr "拖放功能"
+
+#: inc/buddy/data/Greeting.php:117
+msgid "Dude"
+msgstr "老兄"
+
+#: inc/onboarding/data/TourUsers.php:62
+msgid "Each user is displayed in a table. Apart from their username, you can also see their email address and user role."
+msgstr "每個使用者都顯示在一個表格中。除了使用者名稱外，您還可以看到他們的電子郵件地址和使用者角色。"
+
+#: inc/onboarding/data/TourPluginEditor.php:43
+msgid "Edit Plugins"
+msgstr "編輯外掛程式"
+
+#: inc/onboarding/data/TourThemeEditor.php:43
+msgid "Edit Themes"
+msgstr "編輯主題"
+
+#: inc/onboarding/data/TourErasePersonalData.php:43
+msgid "Erase Personal Data"
+msgstr "清除個人資料"
+
+#: inc/onboarding/data/TourUser.php:56
+msgid "Even the \"Author\" role, in the wrong hands, can cause significant damage to your website, as users with this role can write and publish posts."
+msgstr "即使是「作者」角色，如果落入不法分子手中，也會對您的網站造成重大損害，因為擁有此角色的使用者可以撰寫和發表文章。"
+
+#: inc/onboarding/data/TourUpdateCore.php:49
+msgid "Explanation"
+msgstr "說明"
+
+#: inc/onboarding/data/TourDashboard.php:104
+msgid "Exploring the Dashboard"
+msgstr "探索儀表板"
+
+#: inc/onboarding/data/TourExport.php:43
+msgid "Export"
+msgstr "匯出"
+
+#: inc/onboarding/data/TourExportPersonalData.php:43
+msgid "Export Personal Data"
+msgstr "匯出個人資料"
+
+#: inc/onboarding/data/TourExport.php:50
+msgid "Exporting content is like moving your website's content to a new home. It's also a great way to keep a backup of your website, just in case!"
+msgstr "匯出內容就像是將您網站的內容搬到新家。這也是保留網站備份的好方法，以防萬一！"
+
+#: inc/onboarding/data/TourMedia.php:55
+msgid "File Info"
+msgstr "檔案信息"
+
+#: inc/onboarding/data/TourUsers.php:73
+msgid "Filter User Groups"
+msgstr "篩選使用者群組"
+
+#: inc/onboarding/data/TourUpload.php:67
+msgid "Filtering and Search"
+msgstr "篩選與搜尋"
+
+#: inc/onboarding/data/TourThemeInstall.php:55
+msgid "Filters"
+msgstr "篩選"
+
+#: inc/onboarding/data/TourDashboard.php:56
+msgid "First stop, the \"Admin Bar\"! This is your quick access lane to key areas and information. You will also get a snapshot of pending updates and comments here."
+msgstr "第一站，「管理列」！這是您快速存取主要區域和資訊的通道。您也可以在這裡取得待定更新和意見的快照。"
+
+#: inc/onboarding/data/TourUpload.php:50
+msgid "First up, let's check out your \"Library\". Here, you'll see a summary of all the media you've uploaded so far."
+msgstr "首先，讓我們看看您的「資料庫」。在這裡，您會看到您目前上傳的所有媒體的摘要。"
+
+#: inc/onboarding/data/TourDashboard.php:50
+msgid "First, let's look at how to navigate the tour. Above this dialog box are the navigation controls, allowing you to move forward or backward, end the tour, or start a demo at key points."
+msgstr "首先，讓我們來看看如何導覽。對話方塊上方是導覽控制項，可讓您向前或向後移動、結束導覽或在關鍵點開始演示。"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:49
+msgid "General"
+msgstr "一般"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:56
+msgid "Guess what? We're done! I've shared everything I know with you. I hope you had some fun and learned a bit along the way. I'm glad you stuck with me until the end!"
+msgstr "你猜怎麼著？我們完成了！我已經和您分享了我所知道的一切。我希望您在過程中得到了一些樂趣，也學到了一些東西。我很高興您和我一起堅持到最後！"
+
+#: inc/onboarding/data/TourPage.php:49
+msgid "Gutenberg editor Editor"
+msgstr "Gutenberg 編輯器 編輯器"
+
+#: inc/onboarding/data/TourPost.php:44
+msgid "Hang tight, we're almost through the Gutenberg editor tutorial. I'll give you a bit more of a tour afterward."
+msgstr "抓緊時間，我們快完成 Gutenberg 編輯器教學了。之後我再帶您參觀一下。"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:100
+msgid "Hello %s, what do you have planned today?"
+msgstr "您好 %s，今天有什麼安排？"
+
+#: inc/onboarding/data/TourPage.php:92
+msgid "Here you can view additional information about your blog post and make settings on the individual blocks you've added."
+msgstr "在這裡，您可以檢視有關您部落格文章的其他資訊，並對您新增的個別區塊進行設定。"
+
+#: inc/onboarding/data/TourPost.php:92
+msgid "Here you'll find additional information about your blog post and can make settings on individual blocks."
+msgstr "在這裡，您可以找到有關您部落格文章的其他資訊，並可以對個別區塊進行設定。"
+
+#: inc/onboarding/data/TourUsers.php:86
+msgid "Here's where you can add new users. Let's check it out!"
+msgstr "在這裡您可以新增使用者。讓我們來看看！"
+
+#: inc/onboarding/data/TourUpload.php:74
+msgid "Here's where you can upload new media to your library. Just click the button and drag-and-drop your files in with ease."
+msgstr "在這裡您可以上傳新媒體到您的資料庫。只要按一下按鈕，然後輕鬆地拖放檔案即可。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:56
+msgid "Here, you can adjust my appearance. You can change my hairstyle, make me wear glasses, or dress me in a new t-shirt. I'm curious to see what you'll do!"
+msgstr "在這裡，您可以調整我的外貌。您可以改變我的髮型，讓我戴上眼鏡，或是為我穿上新的 T 恤。我很好奇你會怎麼做！"
+
+#: inc/onboarding/data/TourUsers.php:74
+msgid "Here, you can filter by user groups. This is especially useful if you have many users. The filter is dynamic and shows only the user groups that actually exist."
+msgstr "在這裡，您可以依使用者群組篩選。如果您有許多使用者，此功能尤其有用。篩選器是動態的，只顯示實際存在的使用者群組。"
+
+#: inc/onboarding/data/TourThemeEditor.php:50
+msgid "Here, you can make direct changes to the files of your theme. You should have some programming knowledge if you're going to hang out on this page."
+msgstr "在這裡，您可以直接變更主題的檔案。如果您要在此頁面閒晃，您應該具備一些程式設計的知識。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:74
+msgid "Here, you can see how many pearls you have. Pearls are the currency used to unlock new items. You earn pearls by completing tasks."
+msgstr "在這裡，您可以看到您有多少珍珠。珍珠是用來解鎖新物品的貨幣。您可以透過完成任務獲得珍珠。"
+
+#: inc/onboarding/data/TourExport.php:56
+msgid "Here, you can select what content to transfer. You don't have to move everything, you can choose specific items to transfer!"
+msgstr "在這裡，您可以選擇要傳輸的內容。您不一定要移動所有內容，您可以選擇要傳輸的特定項目！"
+
+#: inc/onboarding/data/TourOptionsMedia.php:50
+msgid "Here, you can set up how your media files are managed. For instance, you can define how media files should be organized and the size of the thumbnails."
+msgstr "在這裡，您可以設定媒體檔案的管理方式。例如，您可以定義媒體檔案的組織方式和縮圖的大小。"
+
+#: inc/onboarding/data/TourOptionsReading.php:50
+msgid "Here, you can set up the settings for your homepage and posts page. You can also decide how many posts should be displayed on the homepage."
+msgstr "在這裡，您可以設定首頁和文章頁面的設定。您也可以決定首頁應該顯示多少篇文章。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:68
+msgid "Here, you can view all items in a category. Clicking an item will equip it on me. Some items are already unlocked, while others need to be unlocked."
+msgstr "在這裡，您可以檢視類別中的所有物品。按一下物品就會裝備在我身上。有些物品已經解鎖，有些則需要解鎖。"
+
+#: inc/onboarding/data/TourExportPersonalData.php:50
+msgid "Here, you have the option to export the personal data of a specific user. This is useful if a user wants to take their data with them, like when they're switching websites."
+msgstr "在這裡，您可以選擇匯出特定使用者的個人資料。如果使用者想要隨身攜帶資料，例如在轉換網站時，這將非常有用。"
+
+#: inc/onboarding/data/TourThemes.php:62
+msgid "Here, you see the active theme. This theme determines the design of your website. This is what your visitors are seeing when they visit your website right now."
+msgstr "在這裡，您會看到活動主題。此主題決定您網站的設計。這就是您的訪客目前造訪您的網站時所看到的內容。"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:92
+msgid "Hey %s, did you sleep well?"
+msgstr "嘿 %s，睡得好嗎？"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:90
+#: inc/buddy/data/Greeting.php:98
+msgid "Hey %s, how are you today?"
+msgstr "嘿 %s，你今天好嗎？"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:104
+msgid "Hey %s, it's always a pleasure to see you!"
+msgstr "嘿 %s，見到你總是很高興！"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:96
+msgid "Hey %s, ready for a new day?"
+msgstr "嘿 %s，準備好迎接新的一天了嗎？"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:106
+msgid "Hey %s, you look great today."
+msgstr "嘿 %s，你今天氣色不錯。"
+
+#: inc/onboarding/data/TourDashboard.php:44
+msgid "Hey there! Welcome to your journey through the WordPress universe! I'm super excited to guide you through your first steps in WordPress. First, we are going to dive into two essentials: the admin bar and the admin menu. Let's go!"
+msgstr "您好歡迎來到您的 WordPress 之旅！我很高興能引導您完成 WordPress 的第一步。首先，我們要深入了解兩個基本要素：管理列和管理選單。開始吧"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:102
+msgid "Hi %s, fancy a coffee?"
+msgstr "嗨 %s，想喝杯咖啡嗎？"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:108
+msgid "Hi %s, good to have you here."
+msgstr "嗨 %s，很高興您能來到這裡。"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:88
+msgid "Hi %s, great to see you!"
+msgstr "嗨 %s，很高興見到您！"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:94
+msgid "Hi %s, how has your day been so far?"
+msgstr "嗨 %s，到目前為止，您今天過得如何？"
+
+#: inc/onboarding/data/TourEditCategory.php:55
+msgid "Hierarchies"
+msgstr "層級"
+
+#: inc/onboarding/data/TourOptionsReading.php:55
+msgid "Homepage"
+msgstr "首頁"
+
+#: inc/onboarding/data/TourEditPage.php:86
+msgid "Hover over a page to see a menu for quick actions like editing. Give it a try! Just move your cursor over the menu above!"
+msgstr "將滑鼠移至頁面上，即可看到快速動作 (如編輯) 的選單。試試看只要將游標移至上方的選單！"
+
+#: inc/onboarding/data/TourEditPost.php:98
+msgid "Hover over a post to see a quick-access menu for important functions. Give it a try! Just move your cursor over the menu above!"
+msgstr "將滑鼠移至文章上，即可看到重要功能的快速選單。試試看！只要將游標移至上方的選單！"
+
+#: inc/onboarding/data/TourThemeInstall.php:62
+msgid "Hover over a theme that catches your eye to switch to its detailed view. In the detailed view, you can find a lot more info, like user reviews."
+msgstr "將滑鼠移至吸引您目光的主題，即可切換至其詳細檢視。在詳細檢視中，您可以找到更多資訊，例如使用者評論。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:85
+msgid "How does it work?"
+msgstr "它是如何工作的？"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:62
+msgid "I would be thrilled if you could leave some feedback for my developers. It helps them improve me and better assist you in the future."
+msgstr "如果您能為我的開發人員留下一些回饋意見，我會感到非常高興。這有助於他們改善我，並在未來更好地協助您。"
+
+#: inc/onboarding/data/TourSiteHealth.php:56
+msgid "If you click on the \"Report\" tab, you'll get a detailed breakdown of the technical aspects of your website. Take a look if you're in the mood to be completely baffled!"
+msgstr "如果您點選「報告」標籤，您就會得到網站技術方面的詳細分解。如果您有心情完全摸不著頭腦，請看一看！"
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:62
+msgid "If you're having trouble sleeping, consider reading the \"Policy Guide\" on privacy statements. It always puts me to sleep in seconds!"
+msgstr "如果您失眠，請考慮閱讀隱私權聲明的 「政策指南」。它總是能讓我在幾秒鐘內入睡！"
+
+#: inc/onboarding/data/TourImport.php:43
+msgid "Import"
+msgstr "匯入"
+
+#: inc/onboarding/data/TourImport.php:50
+msgid "Importing content is handy when you want to transfer content from another website to here or restore a backup of your website."
+msgstr "當您要將網站內容從其他網站轉移到這裡，或是還原網站備份時，匯入內容就非常方便。"
+
+#: inc/onboarding/data/TourEditPost.php:50
+msgid "In \"All Posts\", you can view, organize, and manage all your posts at a glance. Additionally, you can start making new posts right from here!"
+msgstr "在「所有文章」中，您可以一目了然地檢視、整理和管理所有文章。此外，您也可以從這裡開始發表新文章！"
+
+#: inc/onboarding/data/TourEditCategory.php:67
+msgid "In Summary"
+msgstr "總結"
+
+#: inc/onboarding/data/TourUsers.php:50
+msgid "In the \"All Users\" page, you can see and manage all the users of your website."
+msgstr "在「所有使用者」頁面中，您可以看到並管理網站的所有使用者。"
+
+#: inc/onboarding/data/TourSiteHealth.php:44
+msgid "In the \"Site Health\" page, you can check out the overall health of your website."
+msgstr "在「網站健康狀況」頁面中，您可以檢查網站的整體健康狀況。"
+
+#: inc/onboarding/data/TourPlugins.php:62
+msgid "In the Plugin Overview, you can see and manage all your installed plugins. Here, you can also easily activate or deactivate the plugins you're using."
+msgstr "在「外掛程式總覽」中，您可以看到並管理所有已安裝的外掛程式。在這裡，您也可以輕鬆啟用或停用您正在使用的外掛程式。"
+
+#: inc/onboarding/data/TourPage.php:98
+msgid "In the content area, you can edit your contents... write texts, insert images, edit blocks. The sky's the limit with your creativity!"
+msgstr "在內容區域，您可以編輯內容...撰寫文字、插入圖片、編輯區塊。您的創意無限！"
+
+#: inc/onboarding/data/TourPost.php:98
+msgid "In the content part, you can edit your contents, write texts, insert images, and edit blocks. Unleash your creativity!"
+msgstr "在內容部分，您可以編輯內容、撰寫文字、插入圖片和編輯區塊。釋放您的創意！"
+
+#: inc/onboarding/data/TourPage.php:86
+msgid "In the settings bar, you can save and publish your page. Plus, you can switch between different screen modes like desktop, mobile, and tablet."
+msgstr "在設定列中，您可以儲存和發佈您的頁面。此外，您還可以在桌面、手機和平板電腦等不同的螢幕模式之間切換。"
+
+#: inc/onboarding/data/TourPost.php:86
+msgid "In the settings bar, you can save and publish your post. Plus, you can switch between different screen modes like desktop, mobile, and tablet."
+msgstr "在設定列中，您可以儲存和發表您的文章。此外，您還可以切換不同的螢幕模式，例如桌上型電腦、手機和平板電腦。"
+
+#: inc/onboarding/data/TourThemeInstall.php:61
+#: inc/onboarding/data/TourThemes.php:67
+msgid "Inactive Themes"
+msgstr "非活躍主題"
+
+#: inc/onboarding/data/TourThemeInstall.php:49
+msgid "Info"
+msgstr "資訊"
+
+#: inc/onboarding/data/TourThemes.php:79
+msgid "Install"
+msgstr "安裝"
+
+#: inc/onboarding/data/TourPlugins.php:49
+msgid "Installed Plugins"
+msgstr "已安裝的外掛"
+
+#: inc/onboarding/data/TourPlugins.php:73
+msgid "Installing Plugins"
+msgstr "安裝外掛程式"
+
+#: inc/onboarding/data/TourPluginInstall.php:43
+#: inc/onboarding/data/TourPlugins.php:55
+#: inc/onboarding/data/TourProfile.php:43
+#: inc/onboarding/data/TourUser.php:43
+#: inc/onboarding/data/TourUsers.php:43
+msgid "Introduction"
+msgstr "介紹"
+
+#: inc/onboarding/data/TourThemeInstall.php:44
+msgid "It might sound crazy, but on the \"Add Themes\" page, you can... well, add new themes!"
+msgstr "這聽起來可能很瘋狂，但在「新增主題」頁面上，您可以......嗯，新增新主題！"
+
+#: inc/onboarding/data/TourPlugins.php:74
+msgid "It's best to install plugins only from the official WordPress Plugin Library. Not only is it a trustworthy source, but you also get benefits like automatic updates, community support, and much more."
+msgstr "最好只從官方 WordPress 外掛程式庫安裝外掛程式。這不僅是值得信賴的來源，您還可以獲得自動更新、社群支援等好處。"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:50
+msgid "It's important to carefully choose your permalink structure, as it affects not just the aesthetics of your URLs but also your website’s search engine optimization (SEO) and user-friendliness."
+msgstr "謹慎選擇永久連結結構非常重要，因為它不僅會影響 URL 的美觀，還會影響網站的搜尋引擎最佳化 (SEO) 和使用者友善度。"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:112
+msgid "It's not the same without you, %s."
+msgstr "沒有你，一切都不一樣了，%s。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:67
+msgid "Items"
+msgstr "項目"
+
+#: inc/onboarding/data/TourPost.php:43
+msgid "Just a Moment"
+msgstr "只需一瞬間"
+
+#: inc/onboarding/data/TourUpdateCore.php:56
+msgid "Just a little reminder – staying updated is super important! Old software can be a bit risky, security-wise. These updates aren't just about keeping things safe, though; they also bring in cool new features."
+msgstr "提醒一下 - 保持更新是非常重要的！從安全的角度來看，舊軟體可能會有一點風險。不過，這些更新不僅能確保安全，還能帶來很酷的新功能。"
+
+#: inc/onboarding/data/TourExport.php:62
+msgid "Just a little reminder, your content might contain personal data or things that belong to someone else. So, be careful about who you share your content with, okay?"
+msgstr "提醒您一點，您的內容可能包含個人資料或屬於他人的東西。因此，請小心處理與誰分享您的內容，好嗎？"
+
+#: inc/onboarding/data/TourDashboard.php:110
+msgid "Landing Page"
+msgstr "登陸頁面"
+
+#: inc/onboarding/data/TourDashboard.php:97
+msgid "Let's take a closer look at each \"Main Menu Item\". We'll uncover the ins and outs, showing you how every part plays its role in the grand WordPress system. Ready to explore?"
+msgstr "讓我們仔細看看每個「主選單項目」。我們將為您揭開其中的奧秘，向您展示每個部分在 WordPress 的宏大系統中是如何發揮作用的。準備好探索了嗎？"
+
+#: inc/onboarding/data/TourDashboard.php:105
+msgid "Let's zoom into our first main menu item: the \"Dashboard\". This is where you'll find all the key info from every corner of your website. Let's peek inside!"
+msgstr "讓我們放大到第一個主功能表項目：「儀表板」。在這裡您可以找到您網站每個角落的所有關鍵資訊。讓我們進去看看！"
+
+#: inc/onboarding/data/TourExportPersonalData.php:56
+msgid "Make sure to only pass the data to the user it belongs to. This is crucial for complying with privacy regulations and to avoid legal issues."
+msgstr "確保只將資料傳送給其所屬的使用者。這對於遵守隱私權法規及避免法律問題至關重要。"
+
+#: inc/onboarding/data/TourImport.php:62
+msgid "Make sure to only restore your own backups, as unknown sources might contain harmful code."
+msgstr "確保只還原您自己的備份，因為未知來源可能包含有害程式碼。"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:56
+msgid "Make sure you maintain control over interactions on your website. This page helps you manage those interactions. Comments, after all, can sometimes lead to legal issues."
+msgstr "確保您能控制您網站上的互動。本頁可協助您管理這些互動。畢竟，評論有時可能會導致法律問題。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:80
+msgid "Many of the items were created by the WordPress community. You can see the creator's name when you want to unlock an item."
+msgstr "許多項目都是由 WordPress 社群創建的。當您想要解鎖某個項目時，您可以看到創造者的名字。"
+
+#: inc/onboarding/data/TourOptionsMedia.php:43
+#: inc/onboarding/data/TourUpload.php:43
+msgid "Media"
+msgstr "媒體"
+
+#: inc/onboarding/data/TourUpload.php:55
+msgid "Media Library"
+msgstr "媒體庫"
+
+#: inc/onboarding/data/TourUpload.php:49
+msgid "Media Overview"
+msgstr "媒體概覽"
+
+#: inc/onboarding/data/TourDashboard.php:67
+#: inc/onboarding/data/TourDashboard.php:96
+msgid "Navigating the website"
+msgstr "瀏覽網站"
+
+#: inc/onboarding/data/TourDashboard.php:49
+#: inc/onboarding/data/TourPluginInstall.php:61
+msgid "Navigation"
+msgstr "導航"
+
+#: inc/onboarding/data/TourPost.php:50
+msgid "Now we're on the \"Add New\" page. As you learnt in the tutorial, you can add all your posts for your website from here."
+msgstr "現在我們進入「新增」頁面。正如您在教學中所學到的，您可以在這裡新增網站的所有文章。"
+
+#: inc/onboarding/data/TourEditComments.php:44
+msgid "Now, I'm going to tell you everything I know about the \"Comments\" main menu item. This is the place where all the conversations on your website happen."
+msgstr "現在，我要告訴您我所知道的關於「評論」主選單項目的一切。這是您網站上所有對話發生的地方。"
+
+#: inc/onboarding/data/TourUsers.php:80
+msgid "Of course, you also have the option to search for specific users and roles. This is handy when you have many users."
+msgstr "當然，您也可以選擇搜尋特定使用者和角色。當您有許多使用者時，這會很方便。"
+
+#: inc/onboarding/data/TourThemeInstall.php:56
+msgid "Of course, you can also filter by different categories or search for a specific theme."
+msgstr "當然，您也可以依不同類別過濾或搜尋特定主題。"
+
+#: inc/onboarding/data/TourErasePersonalData.php:44
+msgid "On the \"Erase Personal Data\" page, you can delete a user's personal data. Let's take a closer look together!"
+msgstr "在「刪除個人資料」頁面，您可以刪除使用者的個人資料。讓我們一起仔細看看！"
+
+#: inc/onboarding/data/TourExportPersonalData.php:44
+msgid "On the \"Export Personal Data\" page, you can specifically export the personal data of your users."
+msgstr "在「匯出個人資料」頁面，您可以特別匯出使用者的個人資料。"
+
+#: inc/onboarding/data/TourExport.php:44
+msgid "On the \"Export\" page, you can transfer your website's content to a different location. This is a crucial task, so let's do it with care."
+msgstr "在「匯出」頁面上，您可以將網站內容轉移到不同的位置。這是一項關鍵任務，所以讓我們小心行事。"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:50
+msgid "On the overview page, you can see all tasks. It shows which tasks you've completed and which ones remain. Additionally, you can see how many pearls you'll earn for completing each task."
+msgstr "在總覽頁面中，您可以看到所有任務。它會顯示您完成了哪些任務，還剩下哪些任務。此外，您可以看到完成每個任務可獲得多少珍珠。"
+
+#: inc/onboarding/data/TourThemes.php:56
+msgid "On the overview page, you'll find a list of all installed themes. Here, you can also see the active theme currently used on your website."
+msgstr "在總覽頁面中，您可以找到所有已安裝主題的清單。在這裡，您也可以看到您網站上目前使用的活動主題。"
+
+#: inc/onboarding/data/TourUsers.php:56
+msgid "On the overview page, you'll find a list of all users who are registered on your website."
+msgstr "在總覽頁面中，您會看到在您網站上註冊的所有使用者清單。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:50
+msgid "On this page, you can customize the appearance. You also have the opportunity to give me a name."
+msgstr "在此頁面中，您可以自訂外觀。您也有機會為我命名。"
+
+#: inc/onboarding/data/TourUpdateCore.php:62
+msgid "One last tip – you might want to turn on automatic updates. It's a real time-saver and keeps your website on the cutting edge, not to mention secure."
+msgstr "最後一個提示 - 您可能需要開啟自動更新。這真的很省時，而且能讓您的網站保持在最前沿，更不用說安全性了。"
+
+#: inc/onboarding/data/TourProfile.php:56
+msgid "One last tip: there are plugins that enable two-factor authentication. It's an extra layer of security I highly recommend."
+msgstr "最後一個提示：有一些外掛程式可以啟用雙重認證。這是我強烈推薦的額外安全層級。"
+
+#: inc/onboarding/data/TourDashboard.php:111
+msgid "Our first stop is the \"Home\" page. This pops up when you log into your WordPress backend."
+msgstr "我們的第一站是「首頁」。當您登入 WordPress 後台時會彈出此頁面。"
+
+#: inc/onboarding/data/TourEditCategory.php:68
+msgid "Overall, the \"Categories\" page offers an effective way to enhance the organization and findability of content on your website."
+msgstr "總的來說，「類別」頁面提供了一種有效的方式來強化網站內容的組織與可尋找性。"
+
+#: inc/onboarding/data/TourEditComments.php:55
+#: inc/onboarding/data/TourEditPage.php:61
+#: inc/onboarding/data/TourEditPostTag.php:61
+#: inc/onboarding/data/TourErasePersonalData.php:49
+#: inc/onboarding/data/TourExport.php:55
+#: inc/onboarding/data/TourExportPersonalData.php:49
+#: inc/onboarding/data/TourImport.php:55
+#: inc/onboarding/data/TourOptionsDiscussion.php:49
+#: inc/onboarding/data/TourOptionsMedia.php:49
+#: inc/onboarding/data/TourOptionsPrivacy.php:49
+#: inc/onboarding/data/TourOptionsReading.php:49
+#: inc/onboarding/data/TourOptionsWriting.php:49
+#: inc/onboarding/data/TourPluginEditor.php:49
+#: inc/onboarding/data/TourPluginInstall.php:49
+#: inc/onboarding/data/TourPlugins.php:43
+#: inc/onboarding/data/TourThemeEditor.php:49
+#: inc/onboarding/data/TourThemes.php:55
+#: inc/onboarding/data/TourTools.php:55
+#: inc/onboarding/data/TourUsers.php:55
+#: inc/onboarding/data/TourWapuugotchiQuest.php:49
+#: inc/onboarding/data/TourWapuugotchiShop.php:55
+msgid "Overview"
+msgstr "總覽"
+
+#: inc/onboarding/data/TourEditCategory.php:61
+#: inc/onboarding/data/TourEditPost.php:55
+msgid "Overview Page"
+msgstr "概覽頁面"
+
+#: inc/onboarding/data/TourEditPage.php:43
+msgid "Pages Overview"
+msgstr "頁面總覽"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:73
+msgid "Pearls"
+msgstr "珍珠"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:43
+msgid "Permalink"
+msgstr "永久連結"
+
+#: inc/onboarding/data/TourErasePersonalData.php:62
+msgid "Please note, when you erase a user's data, you're also erasing all data associated with them. This includes their comments, posts, and any other personal details. That's pretty important!"
+msgstr "請注意，當您刪除使用者的資料時，您也會刪除與該使用者相關的所有資料。這包括他們的評論、文章和任何其他個人詳細資料。這點相當重要！"
+
+#: inc/onboarding/data/TourPlugins.php:61
+msgid "Plugin Overview"
+msgstr "外掛概述"
+
+#: inc/onboarding/data/TourPluginInstall.php:55
+msgid "Plugin Selection"
+msgstr "外掛程式選擇"
+
+#: inc/onboarding/data/TourPlugins.php:56
+msgid "Plugins extend the functionality of your WordPress website. That can be things like contact forms, galleries, slideshows, SEO tools, security features, and much more."
+msgstr "外掛程式可擴充 WordPress 網站的功能。這包括聯絡表單、藝廊、幻燈片、SEO 工具、安全功能等等。"
+
+#: inc/onboarding/data/TourPluginInstall.php:50
+msgid "Plugins significantly expand the functionality of your WordPress website. Choosing the right plugins can be crucial for your website's success. You'll find many articles online that can help you find the best plugins for your needs."
+msgstr "外掛可大幅擴充 WordPress 網站的功能。選擇正確的外掛程式對網站的成功至關重要。您可以在網路上找到許多文章，幫助您找到最適合您需求的外掛程式。"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:86
+msgid "Press ► to see how does it work!"
+msgstr "按 ► 看看它如何運作！"
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:43
+msgid "Privacy"
+msgstr "隱私權"
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:56
+msgid "Privacy policies are crucial, especially if your website collects personal data from users through comments, forms, etc. This helps protect you from legal issues."
+msgstr "隱私權政策非常重要，尤其是當您的網站透過意見、表單等方式收集使用者的個人資料時。這有助於保護您免於法律問題。"
+
+#: inc/onboarding/data/TourEditPage.php:79
+msgid "Publish Date"
+msgstr "發佈日期"
+
+#: inc/onboarding/data/TourEditPost.php:97
+msgid "Quick Access"
+msgstr "快速訪問"
+
+#: inc/onboarding/data/TourEditPage.php:85
+msgid "Quick Overview"
+msgstr "快速概覽"
+
+#: inc/onboarding/data/TourOptionsReading.php:43
+msgid "Reading"
+msgstr "閱讀"
+
+#: inc/onboarding/data/TourEditComments.php:73
+msgid "Related Post"
+msgstr "相關文章"
+
+#: inc/onboarding/data/TourErasePersonalData.php:68
+msgid "Remember, less data means less worry! If you don't have it, it can't be stolen. Simple, isn't it?"
+msgstr "請記住，資料越少就越不用擔心！如果您沒有資料，就不會被竊取。很簡單，不是嗎？"
+
+#: inc/onboarding/data/TourSiteHealth.php:55
+msgid "Report"
+msgstr "報告"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:44
+msgid "Right now, we're checking out the submenu of the \"Settings\" main menu item. These pages allow you to set up the general settings for your website."
+msgstr "現在，我們要查看「設定」主功能表項的子功能表。這些頁面可讓您設定網站的一般設定。"
+
+#: inc/onboarding/data/TourSiteHealth.php:50
+msgid "Right off the bat, you can see how your website's performance and security are doing. Here, you can also spot any issues that need to be fixed."
+msgstr "一開始，您就可以看到網站的效能和安全性如何。在這裡，您也可以發現任何需要修復的問題。"
+
+#: inc/onboarding/data/TourEditPostTag.php:67
+msgid "SEO Tip"
+msgstr "SEO 提示"
+
+#: inc/onboarding/data/TourEditPage.php:97
+#: inc/onboarding/data/TourEditPost.php:109
+#: inc/onboarding/data/TourThemes.php:73
+msgid "Search"
+msgstr "搜尋"
+
+#: inc/onboarding/data/TourOptionsReading.php:61
+msgid "Search Engines"
+msgstr "搜尋引擎"
+
+#: inc/onboarding/data/TourPlugins.php:67
+msgid "Search for Specific Plugins"
+msgstr "搜尋特定外掛程式"
+
+#: inc/onboarding/data/TourUsers.php:79
+msgid "Search for Users"
+msgstr "搜尋使用者"
+
+#: inc/onboarding/data/TourUpdateCore.php:55
+msgid "Security Risk"
+msgstr "安全風險"
+
+#: inc/onboarding/data/TourOptionsReading.php:56
+msgid "Setting a static homepage allows you to customize the front page of your website. This is particularly useful if you're running a business website or a landing page."
+msgstr "設定靜態首頁可讓您自訂網站的首頁。如果您經營的是商業網站或登陸頁面，這一點尤其有用。"
+
+#: inc/onboarding/data/TourOptionsWriting.php:50
+msgid "Setting up these options correctly according to your needs can enhance user-friendliness and efficiency when composing content."
+msgstr "根據您的需求正確設定這些選項，可以提高撰寫內容時的使用者友善度和效率。"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:43
+msgid "Settings"
+msgstr "設定"
+
+#: inc/onboarding/data/TourPage.php:85
+#: inc/onboarding/data/TourPost.php:85
+msgid "Settings Bar"
+msgstr "設定列"
+
+#: inc/shop/Menu.php:37
+msgid "Shop"
+msgstr "商店"
+
+#: inc/onboarding/data/TourPage.php:91
+#: inc/onboarding/data/TourPost.php:91
+msgid "Side Navigation"
+msgstr "側邊導航"
+
+#: inc/onboarding/data/TourUpdateCore.php:50
+msgid "So, this is where you can spot any new updates waiting for your website. That includes stuff like themes, plugins you've installed and even the WordPress core itself."
+msgstr "因此，在這裡您可以發現任何等待您網站的新更新。這包括主題、您安裝的外掛程式，甚至 WordPress 核心本身。"
+
+#: inc/onboarding/data/TourErasePersonalData.php:56
+msgid "Sometimes, a user might want their data deleted. Maybe they're switching websites or they just don't want their data on your website anymore."
+msgstr "有時候，使用者可能希望刪除他們的資料。也許他們正在轉換網站，或者他們只是不希望自己的資料再出現在您的網站上。"
+
+#: inc/onboarding/data/TourEditPost.php:104
+msgid "Sort your posts by various criteria like date, and use filters to display specific types of posts, like drafts."
+msgstr "依日期等各種條件排序您的文章，並使用篩選條件顯示特定類型的文章，例如草稿。"
+
+#: inc/onboarding/data/TourEditPage.php:91
+#: inc/onboarding/data/TourEditPost.php:103
+msgid "Sorting and Filtering"
+msgstr "排序和篩選"
+
+#: inc/onboarding/data/TourSiteHealth.php:49
+msgid "Status"
+msgstr "狀態"
+
+#: inc/onboarding/data/TourPlugins.php:85
+msgid "Summary"
+msgstr "概要"
+
+#: inc/onboarding/data/TourEditPost.php:85
+#: inc/onboarding/data/TourEditPostTag.php:43
+msgid "Tags"
+msgstr "標籤"
+
+#: inc/onboarding/data/TourEditPostTag.php:68
+msgid "Tags are a key part of Search Engine Optimization (SEO). They help search engines better understand and index the content of your posts."
+msgstr "標籤是搜尋引擎最佳化 (SEO) 的關鍵部分。它們有助於搜尋引擎更好地理解和索引您的文章內容。"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:43
+msgid "Task Overview"
+msgstr "任務概述"
+
+#: inc/onboarding/data/TourMedia.php:44
+msgid "The \"Add New Media File\" page lets you upload fresh media like images, videos, or audio files to your media library."
+msgstr "新增媒體檔案」頁面可讓您將圖片、視訊或音訊檔案等新媒體上傳至媒體素材庫。"
+
+#: inc/onboarding/data/TourDashboard.php:68
+msgid "The \"Admin Menu\" makes switching between different areas of your website a breeze. You can easily access one of these areas by clicking on a main menu item."
+msgstr "管理選單」讓您輕鬆切換網站的不同區域。按一下主選單項，即可輕鬆存取其中一個區域。"
+
+#: inc/onboarding/data/TourEditComments.php:68
+msgid "The \"Comment\" field displays the actual content of the comment left by a visitor on your website."
+msgstr "評論」欄位會顯示訪客在您網站上留下的實際評論內容。"
+
+#: inc/onboarding/data/TourEditComments.php:80
+msgid "The \"Date\" field indicates when the comment was left on your website."
+msgstr "日期」欄位會顯示評論是何時在您的網站上留下的。"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:44
+msgid "The \"Discussion\" page deals with settings related to comments and discussions on your website."
+msgstr "討論」頁面處理與網站上的評論和討論相關的設定。"
+
+#: inc/onboarding/data/TourThemeEditor.php:44
+msgid "The \"Edit Themes\" page allows you to modify the files of your theme."
+msgstr "編輯主題」頁面可讓您修改主題的檔案。"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:50
+msgid "The \"General\" page is the first page you see when you enter \"Settings\". Here, you can set your website's name, URL, timezone, and date format."
+msgstr "一般」頁面是您進入「設定」後看到的第一個頁面。在這裡，您可以設定網站的名稱、URL、時區和日期格式。"
+
+#: inc/onboarding/data/TourPlugins.php:50
+msgid "The \"Installed Plugins\" page lets you manage the plugins you've already installed."
+msgstr "已安裝外掛程式」頁面可讓您管理已安裝的外掛程式。"
+
+#: inc/onboarding/data/TourOptionsMedia.php:44
+msgid "The \"Media\" page deals with the basic settings for managing media files on your website."
+msgstr "媒體」頁面處理網站上管理媒體檔案的基本設定。"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:44
+msgid "The \"Permalink\" page deals with settings for the URL structure of your website."
+msgstr "Permalink」頁面處理網站 URL 結構的設定。"
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:44
+msgid "The \"Privacy\" page is designed for managing your website's privacy policies."
+msgstr "隱私權」頁面專為管理網站的隱私權政策而設計。"
+
+#: inc/onboarding/data/TourOptionsReading.php:44
+msgid "The \"Reading\" page allows you to set basic display settings for your website."
+msgstr "閱讀」頁面可讓您設定網站的基本顯示設定。"
+
+#: inc/onboarding/data/TourThemes.php:50
+msgid "The \"Themes\" page lets you change the design of your website."
+msgstr "主題」頁面可讓您變更網站的設計。"
+
+#: inc/onboarding/data/TourOptionsWriting.php:44
+msgid "The \"Writing\" page helps you with creating posts and articles."
+msgstr "撰寫」頁面可協助您撰寫文章。"
+
+#: inc/onboarding/data/TourDashboard.php:55
+msgid "The Admin-Bar"
+msgstr "管理列"
+
+#: inc/onboarding/data/TourEditPost.php:74
+msgid "The Author column shows who created the post. If there are multiple authors, it'll display their usernames."
+msgstr "Author (作者) 欄會顯示誰建立了這篇文章。如果有多位作者，則會顯示他們的使用者名稱。"
+
+#: inc/onboarding/data/TourEditPost.php:56
+msgid "The Overview Page lists all your posts. From here, you can easily create new posts and make quick edits to existing ones."
+msgstr "總覽頁面會列出您所有的文章。在這裡，您可以輕鬆建立新文章，並快速編輯現有文章。"
+
+#: inc/onboarding/data/TourEditPost.php:62
+msgid "The Post List shows you all your posts, along with key details like title, author, and publication date."
+msgstr "貼文清單會顯示您所有的貼文，以及關鍵的詳細資訊，例如標題、作者和發表日期。"
+
+#: inc/onboarding/data/TourDashboard.php:116
+msgid "The Rundown"
+msgstr "簡介"
+
+#: inc/onboarding/data/TourEditPost.php:86
+msgid "The Tags column lists the tags associated with your posts. Tags make it easier to find content on similar topics."
+msgstr "標籤列會列出與您的文章相關的標籤。標籤可讓您更容易找到類似主題的內容。"
+
+#: inc/onboarding/data/TourEditPost.php:68
+msgid "The Title column displays the titles of all your posts. Click on any title to edit the post and change its content."
+msgstr "標題列會顯示您所有文章的標題。按一下任何標題可編輯文章並變更其內容。"
+
+#: inc/onboarding/data/TourPage.php:61
+#: inc/onboarding/data/TourPost.php:61
+msgid "The Toolbar"
+msgstr "工具列"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:62
+msgid "The items you can equip me with are divided into categories. Check back often, as new items are continuously added!"
+msgstr "您可以為我裝備的物品分為多個類別。請經常回來查看，因為新物品會不斷加入！"
+
+#: inc/onboarding/data/TourEditCategory.php:62
+msgid "The overview page not only shows all your categories but also their hierarchical relationships. Check out how often your categories are used in your posts."
+msgstr "總覽頁面不僅會顯示您所有的類別，還會顯示它們的層級關係。查看您的分類在文章中的使用頻率。"
+
+#: inc/onboarding/data/TourImport.php:56
+msgid "The overview page shows a list of tools that can assist you in importing content. They vary depending on the plugins you have installed and your WordPress version."
+msgstr "總覽頁面會顯示可協助您匯入內容的工具清單。它們會因您安裝的外掛程式和 WordPress 版本而異。"
+
+#: inc/onboarding/data/TourEditPostTag.php:62
+msgid "The overview section shows all your created tags. You'll also see info on how often your tags are used in your posts."
+msgstr "總覽部分顯示您建立的所有標籤。您也會看到您的標籤在文章中使用頻率的資訊。"
+
+#: inc/onboarding/data/TourPluginEditor.php:50
+msgid "The same principles apply as with editing themes. On this page, you can make direct changes to the files of your plugins. You should have some programming knowledge if you're planning to work here."
+msgstr "原則與編輯主題相同。在此頁面中，您可以直接變更外掛程式的檔案。如果您打算在此工作，您應該具備一些程式設計的知識。"
+
+#: inc/onboarding/data/TourEditPage.php:98
+msgid "The search bar lets you look for specific pages, which is super handy if you have lots of them."
+msgstr "搜尋列可讓您尋找特定的頁面，如果您有很多頁面，搜尋列會非常方便。"
+
+#: inc/onboarding/data/TourEditComments.php:92
+msgid "The search function lets you look for specific comments based on keywords, usernames, email addresses, or other relevant info."
+msgstr "搜尋功能可讓您根據關鍵字、使用者名稱、電子郵件地址或其他相關資訊來尋找特定的評論。"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:50
+msgid "The settings you choose here will impact how you interact with your visitors. For example, you can set conditions under which comments are allowed."
+msgstr "您在此選擇的設定會影響您與訪客互動的方式。例如，您可以設定允許發表意見的條件。"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:56
+msgid "The settings you establish here are really important as they form the foundation of your website. So, you should carefully review and set these settings."
+msgstr "您在此建立的設定非常重要，因為它們構成您網站的基礎。因此，您應該仔細檢閱和設定這些設定。"
+
+#: inc/onboarding/data/TourPost.php:104
+msgid "The text editor has loads of features, and I'm sure I forgot to explain half of them! Hope I at least gave you a good start."
+msgstr "文字編輯器有許多功能，我肯定忘了解釋其中一半的功能！希望我至少能給你一個好的開始。"
+
+#: inc/onboarding/data/TourPage.php:104
+msgid "The text editor has so many features, and I'm sure I forgot to explain half of them! I hope I at least gave you a good overview. Let's take a look at the next area."
+msgstr "文字編輯器有許多功能，我肯定忘了解釋其中一半的功能！我希望我至少給了您一個很好的概述。讓我們來看看下一個區域。"
+
+#: inc/onboarding/data/TourPost.php:62
+msgid "The toolbar offers features to build your post step by step. Add new block elements and undo changes. Wanna see how it works? Hit the ► button!"
+msgstr "工具列提供逐步建立文章的功能。新增區塊元素並撤銷變更。想看看它是如何運作的嗎？按一下 ► 按鈕！"
+
+#: inc/onboarding/data/TourPage.php:62
+msgid "The toolbar provides functions to help you build your page step by step. Here you can add new block elements and undo changes. Want to see how it works? Hit the ► button!"
+msgstr "工具列提供的功能可協助您逐步建立頁面。您可以在此新增區塊元素，並撤銷變更。想看看它是如何運作的嗎？按一下 ► 按鈕！"
+
+#: inc/onboarding/data/TourPage.php:56
+msgid "The top navigation gives you quick access to basic controls in the editor. It's split into the toolbar and the settings bar."
+msgstr "頂部導覽可讓您快速存取編輯器中的基本控制。它分成工具列和設定列。"
+
+#: inc/onboarding/data/TourPost.php:56
+msgid "The top navigation gives you quick access to essential controls in the editor. It's split into the toolbar and the settings bar."
+msgstr "頂部導覽可讓您快速存取編輯器中的重要控制項。它分成工具列和設定列。"
+
+#: inc/onboarding/data/TourThemes.php:49
+msgid "Themes"
+msgstr "佈景主題"
+
+#: inc/onboarding/data/TourThemes.php:68
+msgid "There are also themes that are installed but not active. You can switch between them by activating an inactive theme, which would then change the design of your website accordingly."
+msgstr "還有一些已安裝但未激活的主題。您可以透過啟動未啟用的主題在它們之間切換，這樣就可以相應地改變網站的設計。"
+
+#: inc/onboarding/data/TourPlugins.php:86
+msgid "There are incredibly many plugins, and you'll find that there's a plugin solution for almost every problem!"
+msgstr "外掛的數量多得令人難以置信，而且您會發現幾乎所有問題都有外掛解決方案！"
+
+#: inc/onboarding/data/TourEditPage.php:80
+msgid "This column shows the date when the page was created or last edited."
+msgstr "此列顯示頁面建立或最後一次編輯的日期。"
+
+#: inc/onboarding/data/TourEditPage.php:68
+msgid "This column shows the titles of all pages. Click a title to edit the page and change its content."
+msgstr "此欄顯示所有頁面的標題。按一下標題可編輯頁面並變更其內容。"
+
+#: inc/onboarding/data/TourEditPage.php:74
+msgid "This column shows who created the page. For multiple authors, it'll display their names."
+msgstr "此欄顯示誰建立了該頁面。對於多位作者，會顯示他們的姓名。"
+
+#: inc/onboarding/data/TourEditComments.php:62
+msgid "This field lets you quickly see who left the comment. For registered visitors, their email address is also shown."
+msgstr "此欄位可讓您快速查看誰留下了評論。對於註冊的訪客，他們的電子郵件地址也會顯示出來。"
+
+#: inc/onboarding/data/TourTools.php:50
+msgid "This is the \"Available Tools\" page. Here you'll find a list of tools that can help you manage your website."
+msgstr "這是「可用工具」頁面。在這裡您可以找到可以幫助您管理網站的工具清單。"
+
+#: inc/onboarding/data/TourEditCategory.php:44
+msgid "This is the \"Categories\" page! These are super handy for organizing and structuring your content, making it easier for visitors to find relevant info."
+msgstr "這是「類別」頁面！這些類別對於組織和結構化您的內容非常方便，讓訪客更容易找到相關資訊。"
+
+#: inc/onboarding/data/TourEditPostTag.php:44
+msgid "This is the \"Tags\" page! Tags let you enhance your posts with additional keywords or phrases. That way, your content can be found and searched through easier!"
+msgstr "這是「標籤」頁面！標籤可讓您使用額外的關鍵字或詞組強化您的文章。如此一來，您的內容就能更容易被搜尋到！"
+
+#: inc/onboarding/data/TourTools.php:56
+msgid "This is the overview page for available tools. Here, you can see and manage the tools available to you. They vary depending on the plugins you have installed and your WordPress version."
+msgstr "這是可用工具的總覽頁面。在這裡，您可以查看和管理可用的工具。它們會因您安裝的外掛程式和 WordPress 版本而異。"
+
+#: inc/onboarding/data/TourEditComments.php:56
+msgid "This is where you'll find a list of all the comments left by visitors on your website, including the comment text, the author's name, the post they commented on, and the date."
+msgstr "在這裡您可以找到訪客在您網站上留下的所有評論清單，包括評論文字、作者姓名、所評論的文章以及日期。"
+
+#: inc/onboarding/data/TourPluginEditor.php:44
+msgid "This page allows you to edit the files of your plugins."
+msgstr "此頁面允許您編輯外掛程式的檔案。"
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:50
+msgid "This page allows you to ensure that your website complies with privacy policies and legal requirements. There are also plugins available that provide additional support."
+msgstr "此頁面可讓您確保網站符合隱私權政策和法律規定。也有提供額外支援的外掛程式。"
+
+#: inc/onboarding/data/TourDashboard.php:117
+msgid "This page gives you a summary of everything – new posts, recent comments, and stats from across your website."
+msgstr "此頁面提供您所有內容的摘要 - 新文章、最近的評論，以及整個網站的統計資料。"
+
+#: inc/onboarding/data/TourEditComments.php:50
+msgid "This page is a key tool for engaging with your visitors. Here, you can respond to feedback and moderate discussions."
+msgstr "此頁面是與訪客互動的重要工具。在這裡，您可以回應回饋和主持討論。"
+
+#: inc/onboarding/data/TourErasePersonalData.php:50
+msgid "This page is pretty much like the personal data export page. Here, you can delete a specific user's personal data."
+msgstr "這個頁面跟個人資料匯出頁面差不多。在這裡，您可以刪除特定使用者的個人資料。"
+
+#: inc/onboarding/data/TourUser.php:50
+msgid "This page is pretty self-explanatory. But be extra careful with assigning roles, as they determine the permissions a user has!"
+msgstr "這個頁面很容易說明。但在指派角色時要格外小心，因為角色會決定使用者擁有的權限！"
+
+#: inc/onboarding/data/TourEditPage.php:62
+msgid "This page overview gives you a good look at all the pages you've created. Plus, you can organize and manage them from here."
+msgstr "此頁面總覽可讓您清楚瞭解您所建立的所有頁面。此外，您還可以從這裡整理和管理它們。"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:44
+msgid "This page, \"Tasks\", provides an overview of the tasks you've completed and those still awaiting your attention."
+msgstr "任務」這一頁提供您已完成和仍在等待您處理的任務總覽。"
+
+#: inc/onboarding/data/TourEditPost.php:80
+msgid "This shows the categories assigned to a post. Categories help organize content on your website in a structured way."
+msgstr "這會顯示指定給文章的類別。類別有助於有條理地組織您網站上的內容。"
+
+#: inc/onboarding/data/TourEditComments.php:74
+msgid "This shows which post the comment is referring to, helping you understand the context."
+msgstr "這會顯示評論所指的文章，有助於您瞭解上下文。"
+
+#: inc/onboarding/data/TourProfile.php:55
+msgid "Tip"
+msgstr "提示"
+
+#: inc/onboarding/data/TourDashboard.php:79
+#: inc/onboarding/data/TourEditComments.php:97
+#: inc/onboarding/data/TourExport.php:61
+#: inc/onboarding/data/TourExportPersonalData.php:55
+#: inc/onboarding/data/TourImport.php:61
+#: inc/onboarding/data/TourOptionsMedia.php:55
+#: inc/onboarding/data/TourOptionsPrivacy.php:55
+#: inc/onboarding/data/TourUser.php:49
+msgid "Tip 1"
+msgstr "提示 1"
+
+#: inc/onboarding/data/TourExport.php:67
+#: inc/onboarding/data/TourImport.php:67
+#: inc/onboarding/data/TourOptionsMedia.php:61
+#: inc/onboarding/data/TourOptionsPermalink.php:55
+#: inc/onboarding/data/TourOptionsPrivacy.php:61
+#: inc/onboarding/data/TourUser.php:55
+msgid "Tip 2"
+msgstr "提示 2"
+
+#: inc/onboarding/data/TourUser.php:61
+msgid "Tip 3"
+msgstr "提示 3"
+
+#: inc/onboarding/data/TourEditPage.php:67
+#: inc/onboarding/data/TourEditPost.php:67
+msgid "Titles"
+msgstr "標題"
+
+#: inc/onboarding/data/TourSiteEditor.php:44
+msgid "To be totally honest? I can't tell you more about this issue at the moment. There will be more information soon. Hang on!"
+msgstr "說實話嗎？目前我還不能告訴您更多關於這個問題的資訊。很快就會有更多資訊。稍等！"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:56
+msgid "To support search engines, it’s advisable to choose a permalink structure that uses ‘speaking URLs’. Ideally, your URLs should contain the keywords of your posts and pages."
+msgstr "為了支援搜尋引擎，建議您選擇使用「說明 URL」的 URL 結構。理想情況下，您的 URL 應該包含文章和網頁的關鍵字。"
+
+#: inc/onboarding/data/TourTools.php:43
+msgid "Tools"
+msgstr "工具"
+
+#: inc/onboarding/data/TourPage.php:55
+#: inc/onboarding/data/TourPost.php:55
+msgid "Top Navigation"
+msgstr "頂部導航"
+
+#: inc/onboarding/data/TourPage.php:43
+msgid "Tutorial"
+msgstr "教程"
+
+#: inc/onboarding/data/TourPost.php:49
+msgid "Tutorial Time"
+msgstr "教學時間"
+
+#: inc/onboarding/data/TourEditPostTag.php:50
+msgid "Unlike categories, which group posts into broad themes, tags give more specific details. They help you connect particular topics, keywords, or phrases to your posts."
+msgstr "標籤與分類不同，分類可將文章歸類為廣泛的主題，而標籤則可提供更明確的細節。它們可以幫助您將特定主題、關鍵字或短語與您的文章連接起來。"
+
+#: inc/onboarding/data/TourUpdateCore.php:44
+msgid "Updates"
+msgstr "更新"
+
+#: inc/onboarding/data/TourPlugins.php:79
+msgid "Updating Plugins"
+msgstr "更新外掛程式"
+
+#: inc/onboarding/data/TourMedia.php:61
+msgid "Upload Tip"
+msgstr "上傳提示"
+
+#: inc/onboarding/data/TourUpload.php:73
+msgid "Uploading"
+msgstr "上傳中"
+
+#: inc/onboarding/data/TourErasePersonalData.php:55
+#: inc/onboarding/data/TourExport.php:49
+#: inc/onboarding/data/TourImport.php:49
+msgid "Usage"
+msgstr "使用方式"
+
+#: inc/onboarding/data/TourUpload.php:68
+msgid "Use filter and search features to quickly find specific media items."
+msgstr "使用篩選和搜尋功能快速找到特定的媒體項目。"
+
+#: inc/onboarding/data/TourEditPost.php:110
+msgid "Use the search bar to find specific posts by keywords or titles. Super useful when you have lots of posts."
+msgstr "使用搜尋列依關鍵字或標題尋找特定文章。當您有大量文章時，這功能會非常有用。"
+
+#: inc/onboarding/data/TourThemes.php:74
+msgid "Use this search feature to look for a specific theme that you've already installed."
+msgstr "使用此搜尋功能可尋找您已安裝的特定主題。"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:55
+msgid "Useful to Know"
+msgstr "有用的知識"
+
+#: inc/onboarding/data/TourUsers.php:67
+msgid "User Actions"
+msgstr "使用者動作"
+
+#: inc/onboarding/data/TourEditComments.php:91
+msgid "Using Search"
+msgstr "使用搜尋"
+
+#: inc/onboarding/data/TourPluginEditor.php:55
+#: inc/onboarding/data/TourThemeEditor.php:55
+msgid "Warning"
+msgstr "警告"
+
+#: inc/onboarding/data/TourPlugins.php:44
+msgid "We are currently in the submenu of the \"Plugins\" main menu item. Here, you can search for, install, and activate new plugins."
+msgstr "我們目前在「外掛程式」主功能表項的子功能表中。在此，您可以搜尋、安裝及啟動新外掛程式。"
+
+#: inc/onboarding/data/TourUsers.php:44
+msgid "We're in the submenu that falls under the \"Users\" main menu item. Here, you can manage the users of your website."
+msgstr "我們現在處於「使用者」主功能表項下的子功能表。在這裡，您可以管理網站的使用者。"
+
+#: inc/onboarding/data/TourEditPage.php:44
+msgid "We're now exploring the submenu of the \"Pages\" main menu item. This is where you manage all your static content."
+msgstr "我們現在要探索「頁面」主選單項目的子選單。這是您管理所有靜態內容的地方。"
+
+#: inc/onboarding/data/TourUpload.php:44
+msgid "We're now in the submenu of the \"Media\" main menu item. This is where you manage all the media files you add to your posts or pages."
+msgstr "我們現在進入「媒體」主功能表項的子功能表。在這裡您可以管理添加到文章或頁面的所有媒體檔案。"
+
+#: inc/onboarding/data/TourPage.php:44
+msgid "We're now on the \"Add New\" page. Just let me know once you're done with the Gutenberg editor tutorial, and I'll show you around some more."
+msgstr "我們現在在 「新增 」頁面。完成 Gutenberg 編輯器教學後，請告訴我，我會再帶您參觀一些地方。"
+
+#: inc/onboarding/data/TourTools.php:44
+msgid "We've just moved into the submenu of the \"Tools\" main menu item. This page provides additional functions and resources, especially for administrators. Let's take a quick look."
+msgstr "我們剛進入「工具」主功能表項的子功能表。此頁面提供額外的功能和資源，特別是針對管理員。讓我們快速瞭解一下。"
+
+#: inc/onboarding/data/TourDashboard.php:43
+msgid "Welcome Aboard!"
+msgstr "歡迎登船！"
+
+#: inc/onboarding/data/TourEditPost.php:43
+msgid "Welcome to Posts"
+msgstr "歡迎來到職位"
+
+#: inc/onboarding/data/TourPluginInstall.php:44
+msgid "Welcome to the \"Add New Plugin\" page. Here, you can search for, install, and activate new plugins."
+msgstr "歡迎來到「新增外掛程式」頁面。在此，您可以搜尋、安裝和啟動新外掛程式。"
+
+#: inc/onboarding/data/TourUser.php:44
+msgid "Welcome to the \"Add New User\" page. Here, you can add users and manage their roles."
+msgstr "歡迎來到「新增使用者」頁面。在此，您可以新增使用者並管理他們的角色。"
+
+#: inc/onboarding/data/TourImport.php:44
+msgid "Welcome to the \"Import\" page. Here, you can import content from other websites or WordPress installations."
+msgstr "歡迎來到「匯入」頁面。在這裡，您可以從其他網站或 WordPress 安裝匯入內容。"
+
+#: inc/onboarding/data/TourProfile.php:44
+msgid "Welcome to the \"Profile\" page. Let's keep it brief: here, you can edit your profile. And on we go!"
+msgstr "歡迎來到「個人資料」頁面。讓我們簡單介紹一下：在這裡，您可以編輯您的個人檔案。我們繼續！"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:44
+msgid "Welcome to the most entertaining page of all... My page! 😄 Well, it's not exactly essential, but it's fun! Let's take a look."
+msgstr "歡迎來到最有趣的頁面...我的頁面😄 好吧，這並不完全是必要的，但它很有趣！讓我們來看看。"
+
+#: inc/onboarding/data/TourThemes.php:44
+msgid "Welcome to the submenu of the \"Appearance\" main menu item. This is where you can manage the appearance and visual presentation of your website."
+msgstr "歡迎來到「外觀」主功能表項的子功能表。在這裡您可以管理網站的外觀和視覺呈現。"
+
+#: inc/onboarding/data/TourThemeInstall.php:50
+msgid "When you enter this page, you'll see a selection of the most popular themes. This is super handy since there are more than 10,000 themes to choose from."
+msgstr "當您進入這個頁面時，您會看到最熱門的主題選擇。由於有超過 10,000 種主題可供選擇，因此這超級方便。"
+
+#: inc/onboarding/data/TourUsers.php:68
+msgid "When you hover over a user, a menu appears. Here, you can edit or delete a user. Give it a try!"
+msgstr "將滑鼠移至使用者上方時，會出現一個功能表。在這裡，您可以編輯或刪除使用者。試試看"
+
+#: inc/onboarding/data/TourEditComments.php:49
+msgid "Why Comments?"
+msgstr "為什麼要評論？"
+
+#: inc/onboarding/data/TourMedia.php:56
+msgid "WordPress supports a bunch of file formats, including images (JPEG, PNG, GIF), videos (MP4, MOV, WMV), audio files (MP3, WAV), and even documents (PDF, DOC, PPT, etc.)."
+msgstr "WordPress 支援多種檔案格式，包括圖片 (JPEG、PNG、GIF)、視訊 (MP4、MOV、WMV)、音訊檔案 (MP3、WAV)，甚至是文件 (PDF、DOC、PPT 等)。"
+
+#: inc/onboarding/data/TourPage.php:103
+msgid "Wrap Up"
+msgstr "總結"
+
+#: inc/onboarding/data/TourProfile.php:49
+msgid "Wrap-Up"
+msgstr "總結"
+
+#: inc/onboarding/data/TourPost.php:103
+msgid "Wrapping Up"
+msgstr "總結"
+
+#: inc/onboarding/data/TourOptionsWriting.php:43
+msgid "Writing"
+msgstr "寫作設定"
+
+#: inc/onboarding/data/TourPlugins.php:68
+msgid "You also have the option to search for specific plugins. This is handy when you have many plugins installed."
+msgstr "您也可以選擇搜尋特定的外掛程式。當您安裝了許多外掛程式時，這會非常方便。"
+
+#: inc/onboarding/data/TourMedia.php:62
+msgid "You can also add media files directly to your posts or pages while you're editing them. Just click the \"Add Media\" button in the editor."
+msgstr "您也可以在編輯文章或頁面時，直接將媒體檔案加入文章或頁面。只要按一下編輯器中的「新增媒體」按鈕即可。"
+
+#: inc/onboarding/data/TourUpload.php:62
+msgid "You can also edit the details of your media here. Change file names, add extra information, or tweak the metadata."
+msgstr "您也可以在此編輯媒體的詳細資料。變更檔案名稱、新增額外資訊或調整 metadata。"
+
+#: inc/onboarding/data/TourThemes.php:80
+msgid "You can also install new themes. Let's take a look at how to do that."
+msgstr "您也可以安裝新的主題。讓我們來看看如何安裝。"
+
+#: inc/onboarding/data/TourEditCategory.php:50
+msgid "You can create new categories to group your posts thematically. This not only makes navigation a breeze but also boosts SEO, helping users find your website when they search."
+msgstr "您可以建立新類別，以主題方式將文章分類。這不僅可以輕鬆導覽，還可以提升 SEO，幫助使用者在搜尋時找到您的網站。"
+
+#: inc/onboarding/data/TourEditPostTag.php:56
+msgid "You can create tags that match the specific content of your posts. These can be single words or short phrases that reflect the main concepts or themes of the post."
+msgstr "您可以建立符合文章特定內容的標籤。這些標籤可以是反映文章主要概念或主題的單字或短語。"
+
+#: inc/onboarding/data/TourPluginInstall.php:62
+msgid "You can filter by the most popular, latest, and recommended plugins here. This way, you can, for example, follow the favorites of other WordPress users."
+msgstr "您可以在此按最流行、最新和推薦的外掛程式進行篩選。舉例來說，這樣您就可以追蹤其他 WordPress 使用者的最愛。"
+
+#: inc/onboarding/data/TourEditPage.php:92
+msgid "You can sort your pages by different criteria, like date. There are also filtering options to display specific types of pages, like drafts."
+msgstr "您可以依日期等不同條件排序頁面。還有篩選選項可顯示特定類型的頁面，例如草稿。"
+
+#: inc/quest/data/QuestContent.php:123
+msgid "You created 10 posts!!"
+msgstr "您創建了 10 個職位！！"
+
+#: inc/onboarding/data/TourOptionsReading.php:62
+msgid "You might notice that despite using SEO plugins, visitors aren't coming through search engines. This could be because you've disabled search engine indexing here."
+msgstr "您可能會注意到，儘管使用了 SEO 外掛程式，訪客卻不是透過搜尋引擎來的。這可能是因為您在這裡停用了搜尋引擎索引。"
+
+#: inc/onboarding/data/TourDashboard.php:123
+msgid "You've got the power to tweak your \"Home\" page. Turn off elements that don't spark your interest. It's all in your hands! Click the ► button to see how does it work."
+msgstr "您有能力調整「首頁」。關閉無法引起您興趣的元素。一切都在您的掌握之中！按一下 ► 按鈕，看看它是如何運作的。"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:61
+msgid "Feedback"
+msgstr "回覆"
+
+#: inc/onboarding/data/TourUsers.php:61
+msgid "User Details"
+msgstr "用戶詳情"
+
+#: inc/onboarding/data/TourSiteHealth.php:43
+msgid "Site Health"
+msgstr "網站健康度"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:49
+msgid "Permalink Structure"
+msgstr "永久連結結構"
+
+#: inc/onboarding/data/TourMedia.php:43
+msgid "Add New"
+msgstr "新增"
+
+#: inc/onboarding/data/TourEditPost.php:61
+msgid "Post List"
+msgstr "文章清單"
+
+#: inc/onboarding/data/TourEditComments.php:43
+#: inc/onboarding/data/TourSiteEditor.php:43
+msgid "Comments"
+msgstr "回應"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:49
+msgid "Customize"
+msgstr "自訂"
+
+#: inc/quest/data/QuestContent.php:127
+msgid "Get 2 comment"
+msgstr "取得 2 個評論"
+
+#. Author of the plugin
+#: wapuugotchi.php
+msgid "wapuugotchi"
+msgstr "wapuugotchi"

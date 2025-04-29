@@ -1,0 +1,2946 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - WapuuGotchi - Stable (latest release)\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-29 22:56+0200\n"
+"PO-Revision-Date: 2025-04-29 23:10+0200\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.6\n"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:88
+#, php-format
+msgid "Hi %s, great to see you!"
+msgstr "Hallo %s, schön, dich zu sehen!"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:90
+#: inc/buddy/data/Greeting.php:98
+#, php-format
+msgid "Hey %s, how are you today?"
+msgstr "Hey %s, wie geht es dir heute?"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:92
+#, php-format
+msgid "Hey %s, did you sleep well?"
+msgstr "Hey %s, hast du gut geschlafen?"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:94
+#, php-format
+msgid "Hi %s, how has your day been so far?"
+msgstr "Hallo %s, wie war dein Tag bis jetzt?"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:96
+#, php-format
+msgid "Hey %s, ready for a new day?"
+msgstr "Hey %s, bereit für einen neuen Tag?"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:100
+#, php-format
+msgid "Hello %s, what do you have planned today?"
+msgstr "Hallo %s, was hast du heute vor?"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:102
+#, php-format
+msgid "Hi %s, fancy a coffee?"
+msgstr "Hi %s, Lust auf einen Kaffee?"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:104
+#, php-format
+msgid "Hey %s, it's always a pleasure to see you!"
+msgstr "Hey %s, es ist immer eine Freude, dich zu sehen!"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:106
+#, php-format
+msgid "Hey %s, you look great today."
+msgstr "Hey %s, du siehst heute toll aus."
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:108
+#, php-format
+msgid "Hi %s, good to have you here."
+msgstr "Hallo %s, schön, dass du hier bist."
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:110
+#, php-format
+msgid "%s, we are a great team!"
+msgstr "%s, wir sind ein tolles Team!"
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:112
+#, php-format
+msgid "It's not the same without you, %s."
+msgstr "Es ist nicht dasselbe ohne dich, %s."
+
+#: inc/buddy/data/Greeting.php:117
+msgid "Dude"
+msgstr "Dude"
+
+#. Plugin Name of the plugin/theme
+#: inc/core/Menu.php:84
+#: inc/core/Menu.php:85
+#: inc/core/Menu.php:95
+msgid "WapuuGotchi"
+msgstr "WapuuGotchi"
+
+#: inc/games/hunt/Manager.php:136
+msgid "Well done! Mission completed!"
+msgstr "Gut gemacht! Auftrag erfüllt!"
+
+#: inc/games/hunt/Manager.php:150
+msgid "WordPress Hunt"
+msgstr "WordPress-Jagd"
+
+#: inc/games/hunt/Manager.php:151
+msgid "How well do you really know your WordPress?"
+msgstr "Wie gut kennen Sie Ihr WordPress wirklich?"
+
+#: inc/games/quiz/Manager.php:89
+msgid "WordPress Quiz"
+msgstr "WordPress-Quiz"
+
+#: inc/games/quiz/Manager.php:90
+msgid "Test your knowledge about WordPress."
+msgstr "Teste dein Wissen über WordPress."
+
+#: inc/games/quiz/data/QuizWordPress.php:31
+msgid "Who is the founder of WordPress?"
+msgstr "Wer ist der Gründer von WordPress?"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Chuck Norris"
+msgstr "Chuck Norris"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Bill Gates"
+msgstr "Bill Gates"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Harry Potter"
+msgstr "Harry Potter"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Elon Musk"
+msgstr "Elon Musk"
+
+#: inc/games/quiz/data/QuizWordPress.php:32
+msgid "Albert Einstein"
+msgstr "Albert Einstein"
+
+#: inc/games/quiz/data/QuizWordPress.php:33
+msgid "Matt Mullenweg"
+msgstr "Matt Mullenweg"
+
+#: inc/games/quiz/data/QuizWordPress.php:34
+msgid "That's correct! Matt Mullenweg developed the first version of WordPress together with Mike Little in 2003. He is also the founder of Automattic."
+msgstr "Das ist richtig! Matt Mullenweg entwickelte die erste Version von WordPress zusammen mit Mike Little im Jahr 2003. Er ist auch der Gründer von Automattic."
+
+#: inc/games/quiz/data/QuizWordPress.php:35
+msgid "That is unfortunately incorrect. The correct answer is Matt Mullenweg."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: Matt Mullenweg."
+
+#: inc/games/quiz/data/QuizWordPress.php:40
+msgid "What is the name of the first default theme in WordPress?"
+msgstr "Wie heißt das erste Standard-Theme von WordPress?"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "Tinky Winky"
+msgstr "Tinky Winky"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "Twenty Twenty"
+msgstr "Twenty Twenty"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "Seven of Nine"
+msgstr "Seven of Nine"
+
+#: inc/games/quiz/data/QuizWordPress.php:41
+msgid "C-3PO"
+msgstr "C-3PO"
+
+#: inc/games/quiz/data/QuizWordPress.php:42
+msgid "Twenty Ten"
+msgstr "Twenty Ten"
+
+#: inc/games/quiz/data/QuizWordPress.php:43
+msgid "That's correct! Twenty Ten was the first default theme in WordPress, released with WordPress 3.0 in 2010."
+msgstr "Das ist richtig! Twenty Ten war das erste Standard-Theme von WordPress, das mit WordPress 3.0 im Jahr 2010 veröffentlicht wurde."
+
+#: inc/games/quiz/data/QuizWordPress.php:44
+msgid "That is unfortunately incorrect. The correct answer is Twenty Ten."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: Twenty Ten."
+
+#: inc/games/quiz/data/QuizWordPress.php:49
+msgid "What is the name of the mascot of WordPress?"
+msgstr "Wie lautet der Name des Maskottchens von WordPress?"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Ronald McDonald"
+msgstr "Ronald McDonald"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Mickey Mouse"
+msgstr "Micky Maus"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Sonic the Hedgehog"
+msgstr "Sonic der Igel"
+
+#: inc/games/quiz/data/QuizWordPress.php:50
+msgid "Optimus Prime"
+msgstr "Optimus Prime"
+
+#: inc/games/quiz/data/QuizWordPress.php:51
+msgid "Wapuu"
+msgstr "Wapuu"
+
+#: inc/games/quiz/data/QuizWordPress.php:52
+msgid "That's correct! Wapuu is the mascot of WordPress. It was designed by Kazuko Kaneuchi for the WordPress Japan community."
+msgstr "Das ist richtig! Wapuu ist das Maskottchen von WordPress. Es wurde von Kazuko Kaneuchi für die japanische WordPress-Community entworfen."
+
+#: inc/games/quiz/data/QuizWordPress.php:53
+msgid "That is unfortunately incorrect. The correct answer is Wapuu."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: Wapuu."
+
+#: inc/games/quiz/data/QuizWordPress.php:58
+msgid "What is the name of the first version of WordPress?"
+msgstr "Wie lautet der Name der ersten Version von WordPress?"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress 1.0"
+msgstr "WordPress 1.0"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress XP"
+msgstr "WordPress XP"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress Prologue"
+msgstr "WordPress Prolog"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress 2000"
+msgstr "WordPress 2000"
+
+#: inc/games/quiz/data/QuizWordPress.php:59
+msgid "WordPress Zero"
+msgstr "WordPress Null"
+
+#: inc/games/quiz/data/QuizWordPress.php:60
+msgid "WordPress 0.7"
+msgstr "WordPress 0.7"
+
+#: inc/games/quiz/data/QuizWordPress.php:61
+msgid "That's correct! The first version of WordPress was WordPress 0.7, released on May 27, 2003."
+msgstr "Das ist richtig! Die erste Version von WordPress war WordPress 0.7, die am 27. Mai 2003 veröffentlicht wurde."
+
+#: inc/games/quiz/data/QuizWordPress.php:62
+msgid "That is unfortunately incorrect. The correct answer is WordPress 0.7."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: WordPress 0.7."
+
+#: inc/games/quiz/data/QuizWordPress.php:67
+msgid "What is the name of the first plugin in WordPress?"
+msgstr "Wie lautet der Name des ersten Plugins in WordPress?"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+#: inc/onboarding/data/TourWapuugotchiShop.php:43
+msgid "Wapuugotchi"
+msgstr "WapuuGotchi"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:275
+msgid "Akismet"
+msgstr "Akismet"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "Yoast Zero"
+msgstr "Yoast Zero"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "HackerDefender"
+msgstr "HackerDefender"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "Pluginator"
+msgstr "Pluginator"
+
+#: inc/games/quiz/data/QuizWordPress.php:68
+msgid "SuperPlugin 1.0"
+msgstr "SuperPlugin 1.0"
+
+#: inc/games/quiz/data/QuizWordPress.php:69
+msgid "Hello Dolly"
+msgstr "Hallo Dolly"
+
+#: inc/games/quiz/data/QuizWordPress.php:70
+msgid "That's correct! Hello Dolly was the first plugin in WordPress, written by Matt Mullenweg."
+msgstr "Das ist richtig! Hello Dolly war das erste Plugin in WordPress, geschrieben von Matt Mullenweg."
+
+#: inc/games/quiz/data/QuizWordPress.php:71
+msgid "That is unfortunately incorrect. The correct answer is Hello Dolly."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Hello Dolly."
+
+#: inc/games/quiz/data/QuizWordPress.php:76
+msgid "What is the name of the first WordCamp?"
+msgstr "Wie lautet der Name des ersten WordCamps?"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Tokio"
+msgstr "WordCamp Tokio"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Berlin"
+msgstr "WordCamp Berlin"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Springfield"
+msgstr "WordCamp Springfield"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Hogwarts"
+msgstr "WordCamp Hogwarts"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Gondor"
+msgstr "WordCamp Gondor"
+
+#: inc/games/quiz/data/QuizWordPress.php:77
+msgid "WordCamp Gotham"
+msgstr "WordCamp Gotham"
+
+#: inc/games/quiz/data/QuizWordPress.php:78
+msgid "WordCamp San Francisco"
+msgstr "WordCamp San Francisco"
+
+#: inc/games/quiz/data/QuizWordPress.php:79
+msgid "That's correct! WordCamp San Francisco was the first WordCamp, organized by Matt Mullenweg in 2006."
+msgstr "Das ist richtig! Das WordCamp San Francisco war das erste WordCamp und wurde 2006 von Matt Mullenweg organisiert."
+
+#: inc/games/quiz/data/QuizWordPress.php:80
+msgid "That is unfortunately incorrect. The correct answer is WordCamp San Francisco."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: WordCamp San Francisco."
+
+#: inc/games/quiz/data/QuizWordPress.php:85
+msgid "What programming language is WordPress built on?"
+msgstr "Auf welcher Programmiersprache basiert WordPress?"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Java"
+msgstr "Java"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Python"
+msgstr "Python"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Klingon"
+msgstr "Klingonisch"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "C++"
+msgstr "C++"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Morse Code"
+msgstr "Morsealphabet"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Ruby"
+msgstr "Rubin"
+
+#: inc/games/quiz/data/QuizWordPress.php:86
+msgid "Perl"
+msgstr "Perl"
+
+#: inc/games/quiz/data/QuizWordPress.php:87
+msgid "PHP"
+msgstr "PHP"
+
+#: inc/games/quiz/data/QuizWordPress.php:88
+msgid "That's correct! WordPress is written in PHP."
+msgstr "Das ist richtig! WordPress ist in PHP geschrieben."
+
+#: inc/games/quiz/data/QuizWordPress.php:89
+msgid "That is unfortunately incorrect. The correct answer is PHP."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: PHP."
+
+#: inc/games/quiz/data/QuizWordPress.php:94
+msgid "What file type is commonly used for themes and plugins in WordPress?"
+msgstr "Welcher Dateityp wird üblicherweise für Themes und Plugins in WordPress verwendet?"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "BRO"
+msgstr "BRO"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "PNG"
+msgstr "PNG"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "MP3"
+msgstr "MP3"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "EXE"
+msgstr "EXE"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "DOC"
+msgstr "DOC"
+
+#: inc/games/quiz/data/QuizWordPress.php:95
+msgid "TXT"
+msgstr "TXT"
+
+#: inc/games/quiz/data/QuizWordPress.php:96
+msgid "ZIP"
+msgstr "PLZ"
+
+#: inc/games/quiz/data/QuizWordPress.php:97
+msgid "That's correct! Themes and plugins in WordPress are commonly distributed as ZIP files."
+msgstr "Das ist richtig! Themes und Plugins in WordPress werden in der Regel als ZIP-Dateien verteilt."
+
+#: inc/games/quiz/data/QuizWordPress.php:98
+msgid "That is unfortunately incorrect. The correct answer is ZIP."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: ZIP."
+
+#: inc/games/quiz/data/QuizWordPress.php:103
+msgid "What is the name of the marketplace for WordPress plugins and themes?"
+msgstr "Wie heißt der Marktplatz für WordPress Plugins und Themes?"
+
+#: inc/games/quiz/data/QuizWordPress.php:104
+msgid "Plugin Palace"
+msgstr "Plugin Palace"
+
+#: inc/games/quiz/data/QuizWordPress.php:104
+msgid "Theme Forest"
+msgstr "Theme Forest"
+
+#: inc/games/quiz/data/QuizWordPress.php:105
+msgid "WordPress.org"
+msgstr "WordPress.org"
+
+#: inc/games/quiz/data/QuizWordPress.php:106
+msgid "That's correct! WordPress.org is the marketplace for WordPress plugins and themes."
+msgstr "Das ist richtig! WordPress.org ist der Marktplatz für WordPress Plugins und Themes."
+
+#: inc/games/quiz/data/QuizWordPress.php:107
+msgid "That is unfortunately incorrect. The correct answer is WordPress.org."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: WordPress.org."
+
+#: inc/games/quiz/data/QuizWordPress.php:112
+msgid "What is the maximum number of tags you can add to a WordPress post?"
+msgstr "Wie viele Tags kannst du maximal zu einem WordPress-Beitrag hinzufügen?"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "5"
+msgstr "5"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "10"
+msgstr "10"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "42"
+msgstr "42"
+
+#: inc/games/quiz/data/QuizWordPress.php:113
+msgid "Pi"
+msgstr "Pi"
+
+#: inc/games/quiz/data/QuizWordPress.php:114
+msgid "Unlimited"
+msgstr "Unbegrenzt"
+
+#: inc/games/quiz/data/QuizWordPress.php:115
+msgid "That's correct! You can add an unlimited number of tags to a WordPress post."
+msgstr "Das ist richtig! Du kannst eine unbegrenzte Anzahl von Tags zu einem WordPress-Beitrag hinzufügen."
+
+#: inc/games/quiz/data/QuizWordPress.php:116
+msgid "That is unfortunately incorrect. The correct answer is Unlimited."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Unbegrenzt."
+
+#: inc/games/quiz/data/QuizWordPress.php:121
+msgid "What is the recommended permalink structure for SEO in WordPress?"
+msgstr "Was ist die empfohlene Permalink-Struktur für SEO in WordPress?"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Numeric"
+msgstr "Numerisch"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Day and name"
+msgstr "Tag und Name"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Random string of characters"
+msgstr "Zufällige Zeichenkette"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "Name and emoji"
+msgstr "Name und Emoji"
+
+#: inc/games/quiz/data/QuizWordPress.php:122
+msgid "As many slashes as possible"
+msgstr "So viele Schrägstriche wie möglich"
+
+#: inc/games/quiz/data/QuizWordPress.php:123
+msgid "Post name"
+msgstr "Postname"
+
+#: inc/games/quiz/data/QuizWordPress.php:124
+msgid "That's correct! The recommended permalink structure for SEO in WordPress is Post name."
+msgstr "Das ist richtig! Die empfohlene Permalink-Struktur für SEO in WordPress ist Post name."
+
+#: inc/games/quiz/data/QuizWordPress.php:125
+msgid "That is unfortunately incorrect. The correct answer is Post name."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: Postname."
+
+#: inc/games/quiz/data/QuizWordPress.php:130
+msgid "What does the acronym SEO stand for?"
+msgstr "Wofür steht das Akronym SEO?"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Super Easy Optimization"
+msgstr "Super Easy Optimization"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Space Exploration Organization"
+msgstr "Space Exploration Organization"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Search Everything Online"
+msgstr "Search Everything Online"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Sneaky Engagement Orchestrator"
+msgstr "Sneaky Engagement Orchestrator"
+
+#: inc/games/quiz/data/QuizWordPress.php:131
+msgid "Success Every Opportunity"
+msgstr "Success Every Opportunity"
+
+#: inc/games/quiz/data/QuizWordPress.php:132
+msgid "Search Engine Optimization"
+msgstr "Search Engine Optimization"
+
+#: inc/games/quiz/data/QuizWordPress.php:133
+msgid "That's correct! SEO stands for Search Engine Optimization and is the process of improving the visibility of a website in search engines."
+msgstr "Das ist richtig! SEO steht für Search Engine Optimization (Suchmaschinenoptimierung) und ist der Prozess zur Verbesserung der Sichtbarkeit einer Website in Suchmaschinen."
+
+#: inc/games/quiz/data/QuizWordPress.php:134
+msgid "That is unfortunately incorrect. The correct answer is Search Engine Optimization."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Suchmaschinenoptimierung."
+
+#: inc/games/quiz/data/QuizWordPress.php:139
+msgid "What is the term for additional functionality that can be added to WordPress?"
+msgstr "Was ist der Begriff für zusätzliche Funktionen, die zu WordPress hinzugefügt werden können?"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Widget"
+msgstr "Widget"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Gizmo"
+msgstr "Gizmo"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Theme"
+msgstr "Theme"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Addon"
+msgstr "Erweiterung"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Feature"
+msgstr "Feature"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+msgid "Upgrade"
+msgstr "Upgrade"
+
+#: inc/games/quiz/data/QuizWordPress.php:140
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Attachment"
+msgstr "Anhang"
+
+#: inc/games/quiz/data/QuizWordPress.php:141
+msgid "Plugin"
+msgstr "Plugin"
+
+#: inc/games/quiz/data/QuizWordPress.php:142
+msgid "That's correct! Plugins are additional pieces of software that can be added to WordPress to extend its functionality."
+msgstr "Das ist richtig! Plugins sind zusätzliche Software, die zu WordPress hinzugefügt werden können, um seine Funktionen zu erweitern."
+
+#: inc/games/quiz/data/QuizWordPress.php:143
+msgid "That is unfortunately incorrect. The correct answer is Plugin."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: Plugin."
+
+#: inc/games/quiz/data/QuizWordPress.php:148
+msgid "What is the main configuration file for a WordPress website?"
+msgstr "Was ist die wichtigste Konfigurationsdatei für eine WordPress-Website?"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "config.sys"
+msgstr "config.sys"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "settings.ini"
+msgstr "settings.ini"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "admin.xml"
+msgstr "admin.xml"
+
+#: inc/games/quiz/data/QuizWordPress.php:149
+msgid "setup.exe"
+msgstr "setup.exe"
+
+#: inc/games/quiz/data/QuizWordPress.php:150
+msgid "wp-config.php"
+msgstr "wp-config.php"
+
+#: inc/games/quiz/data/QuizWordPress.php:151
+msgid "That's correct! wp-config.php is the main configuration file for a WordPress website."
+msgstr "Das ist richtig! wp-config.php ist die wichtigste Konfigurationsdatei für eine WordPress-Website."
+
+#: inc/games/quiz/data/QuizWordPress.php:152
+msgid "That is unfortunately incorrect. The correct answer is wp-config.php."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: wp-config.php."
+
+#: inc/games/quiz/data/QuizWordPress.php:157
+msgid "Which protocol is used for securing a WordPress site?"
+msgstr "Welches Protokoll wird für die Sicherung einer WordPress-Website verwendet?"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "HTTP"
+msgstr "HTTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "FTP"
+msgstr "FTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "POP3"
+msgstr "POP3"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "SMTP"
+msgstr "SMTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "SSH"
+msgstr "SSH"
+
+#: inc/games/quiz/data/QuizWordPress.php:158
+msgid "SFTP"
+msgstr "SFTP"
+
+#: inc/games/quiz/data/QuizWordPress.php:159
+msgid "HTTPS"
+msgstr "HTTPS"
+
+#: inc/games/quiz/data/QuizWordPress.php:160
+msgid "That's correct! HTTPS is the protocol used for securing a WordPress site."
+msgstr "Das ist richtig! HTTPS ist das Protokoll, das zur Sicherung einer WordPress-Website verwendet wird."
+
+#: inc/games/quiz/data/QuizWordPress.php:161
+msgid "That is unfortunately incorrect. The correct answer is HTTPS."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: HTTPS."
+
+#: inc/games/quiz/data/QuizWordPress.php:166
+msgid "What feature allows you to schedule posts in WordPress?"
+msgstr "Welche Funktion ermöglicht es dir, Beiträge in WordPress zu planen?"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Future Post"
+msgstr "Future Post"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Post Timer"
+msgstr "Post-Timer"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Time Machine"
+msgstr "Zeitmaschine"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Post Scheduler"
+msgstr "Post Scheduler"
+
+#: inc/games/quiz/data/QuizWordPress.php:167
+msgid "Post Planner"
+msgstr "Post Planer"
+
+#: inc/games/quiz/data/QuizWordPress.php:168
+msgid "Publish"
+msgstr "Veröffentlichen"
+
+#: inc/games/quiz/data/QuizWordPress.php:169
+msgid "That's correct! The Publish feature in WordPress allows you to schedule posts to be published at a future date and time."
+msgstr "Das ist richtig! Die Veröffentlichungsfunktion in WordPress ermöglicht es dir, die Veröffentlichung von Beiträgen für ein zukünftiges Datum und eine zukünftige Uhrzeit zu planen."
+
+#: inc/games/quiz/data/QuizWordPress.php:170
+msgid "That is unfortunately incorrect. The correct answer is Publish."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: Veröffentlichen."
+
+#: inc/games/quiz/data/QuizWordPress.php:175
+msgid "Which role in WordPress has the highest level of access?"
+msgstr "Welche Rolle in WordPress hat die höchste Zugriffsstufe?"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Editor"
+msgstr "Editor"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+#: inc/onboarding/data/TourEditComments.php:61
+#: inc/onboarding/data/TourEditPage.php:73
+msgid "Author"
+msgstr "Autor"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Contributor"
+msgstr "Mitarbeiter"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Subscriber"
+msgstr "Abonnent"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "Visitor"
+msgstr "Besucher"
+
+#: inc/games/quiz/data/QuizWordPress.php:176
+msgid "God"
+msgstr "Gott"
+
+#: inc/games/quiz/data/QuizWordPress.php:177
+msgid "Administrator"
+msgstr "Administrator"
+
+#: inc/games/quiz/data/QuizWordPress.php:178
+msgid "That's correct! The Administrator role in WordPress has the highest level of access and can perform all tasks on the site."
+msgstr "Das ist richtig! Die Rolle des Administrators in WordPress hat die höchste Zugriffsebene und kann alle Aufgaben auf der Website ausführen."
+
+#: inc/games/quiz/data/QuizWordPress.php:179
+msgid "That is unfortunately incorrect. The correct answer is Administrator."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: Administrator."
+
+#: inc/games/quiz/data/QuizWordPress.php:184
+msgid "What is a common security measure to protect a WordPress site?"
+msgstr "Was ist eine gängige Sicherheitsmaßnahme zum Schutz einer WordPress-Website?"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Installing antivirus software"
+msgstr "Installation von Antiviren-Software"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Disabling JavaScript"
+msgstr "JavaScript deaktivieren"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Using weak passwords"
+msgstr "Schwache Passwörter verwenden"
+
+#: inc/games/quiz/data/QuizWordPress.php:185
+msgid "Hiding the site from search engines"
+msgstr "Verstecken der Website vor Suchmaschinen"
+
+#: inc/games/quiz/data/QuizWordPress.php:186
+msgid "Using strong passwords"
+msgstr "Sichere Passwörter verwenden"
+
+#: inc/games/quiz/data/QuizWordPress.php:187
+msgid "That's correct! Using strong passwords is a common security measure to protect a WordPress site."
+msgstr "Das ist richtig! Die Verwendung starker Passwörter ist eine gängige Sicherheitsmaßnahme zum Schutz einer WordPress-Website."
+
+#: inc/games/quiz/data/QuizWordPress.php:188
+msgid "That is unfortunately incorrect. The correct answer is Using strong passwords."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Starke Passwörter verwenden."
+
+#: inc/games/quiz/data/QuizWordPress.php:193
+msgid "How can you add custom functionality to a WordPress site without modifying the core files?"
+msgstr "Wie kannst du benutzerdefinierte Funktionen zu einer WordPress-Website hinzufügen, ohne die Kerndateien zu verändern?"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Editing the wp-admin folder"
+msgstr "Bearbeiten des Ordners wp-admin"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Modifying the index.php file"
+msgstr "Ändern der Datei index.php"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Using a magic wand"
+msgstr "Einen Zauberstab benutzen"
+
+#: inc/games/quiz/data/QuizWordPress.php:194
+msgid "Writing a letter to WordPress"
+msgstr "Einen Brief an WordPress schreiben"
+
+#: inc/games/quiz/data/QuizWordPress.php:195
+msgid "Using plugins"
+msgstr "Plugins verwenden"
+
+#: inc/games/quiz/data/QuizWordPress.php:196
+msgid "That's correct! Using plugins is a way to add custom functionality to a WordPress site without modifying the core files."
+msgstr "Das ist richtig! Die Verwendung von Plugins ist eine Möglichkeit, einer WordPress-Website benutzerdefinierte Funktionen hinzuzufügen, ohne die Kerndateien zu verändern."
+
+#: inc/games/quiz/data/QuizWordPress.php:197
+msgid "That is unfortunately incorrect. The correct answer is Using plugins."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Plugins verwenden."
+
+#: inc/games/quiz/data/QuizWordPress.php:202
+msgid "How can you improve the loading speed of a WordPress site?"
+msgstr "Wie kannst du die Ladegeschwindigkeit einer WordPress-Seite verbessern?"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Adding more plugins"
+msgstr "Hinzufügen weiterer Plugins"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Increasing the number of posts per page"
+msgstr "Erhöhung der Anzahl von Beiträgen pro Seite"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Using a dial-up connection"
+msgstr "Eine Einwahlverbindung verwenden"
+
+#: inc/games/quiz/data/QuizWordPress.php:203
+msgid "Removing all WordPress files"
+msgstr "Entfernen aller WordPress-Dateien"
+
+#: inc/games/quiz/data/QuizWordPress.php:204
+msgid "Using a caching plugin"
+msgstr "Ein Caching-Plugin verwenden"
+
+#: inc/games/quiz/data/QuizWordPress.php:205
+msgid "That's correct! Using a caching plugin is a way to improve the loading speed of a WordPress site."
+msgstr "Das ist richtig! Die Verwendung eines Caching-Plugins ist eine Möglichkeit, die Ladegeschwindigkeit einer WordPress-Seite zu verbessern."
+
+#: inc/games/quiz/data/QuizWordPress.php:206
+msgid "That is unfortunately incorrect. The correct answer is Using a caching plugin."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Ein Caching-Plugin verwenden."
+
+#: inc/games/quiz/data/QuizWordPress.php:211
+msgid "What is the name of the WordPress command line interface?"
+msgstr "Wie lautet des Name der WordPress-Befehlszeilen-Interfaces?"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "CommandPress"
+msgstr "CommandPress"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "WP-Terminal"
+msgstr "WP-Terminal"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "WP-Shell"
+msgstr "WP-Shell"
+
+#: inc/games/quiz/data/QuizWordPress.php:212
+msgid "WP-Commander"
+msgstr "WP-Commander"
+
+#: inc/games/quiz/data/QuizWordPress.php:213
+msgid "WP-CLI"
+msgstr "WP CLI"
+
+#: inc/games/quiz/data/QuizWordPress.php:214
+msgid "That's correct! WP-CLI is the command line interface for WordPress and allows you to manage your WordPress site from the command line."
+msgstr "Das ist richtig! WP-CLI ist das Kommandozeilen-Interface für WordPress und ermöglicht es dir, deine WordPress-Website über die Kommandozeile zu verwalten."
+
+#: inc/games/quiz/data/QuizWordPress.php:215
+msgid "That is unfortunately incorrect. The correct answer is WP-CLI."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: WP-CLI."
+
+#: inc/games/quiz/data/QuizWordPress.php:220
+msgid "Which of the following is a common issue when updating WordPress?"
+msgstr "Welcher der folgenden Punkte ist ein häufiges Problem bei der Aktualisierung von WordPress?"
+
+#: inc/games/quiz/data/QuizWordPress.php:221
+msgid "Faster website speed"
+msgstr "Schnellere Website-Geschwindigkeit"
+
+#: inc/games/quiz/data/QuizWordPress.php:221
+msgid "Increased user registrations"
+msgstr "Erhöhte Benutzerregistrierungen"
+
+#: inc/games/quiz/data/QuizWordPress.php:222
+msgid "Plugin compatibility problems"
+msgstr "Plugin-Kompatibilitätsprobleme"
+
+#: inc/games/quiz/data/QuizWordPress.php:223
+msgid "That's correct! Plugin compatibility problems are a common issue when updating WordPress."
+msgstr "Das ist richtig! Plugin-Kompatibilitätsprobleme sind ein häufiges Problem bei der Aktualisierung von WordPress."
+
+#: inc/games/quiz/data/QuizWordPress.php:224
+msgid "That is unfortunately incorrect. The correct answer is Plugin compatibility problems."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Plugin-Kompatibilitätsprobleme."
+
+#: inc/games/quiz/data/QuizWordPress.php:229
+msgid "How do you access the WordPress admin dashboard?"
+msgstr "Wie greifst du auf das WordPress Admin-Dashboard zu?"
+
+#: inc/games/quiz/data/QuizWordPress.php:230
+msgid "By clicking a button on the homepage"
+msgstr "Durch Anklicken einer Schaltfläche auf der Homepage"
+
+#: inc/games/quiz/data/QuizWordPress.php:230
+msgid "By entering the secret code"
+msgstr "Durch Eingabe des Geheimcodes"
+
+#: inc/games/quiz/data/QuizWordPress.php:230
+#: inc/games/quiz/data/QuizWordPress.php:231
+msgid "By appending /wp-admin to the site URL"
+msgstr "Indem du /wp-admin an die URL der Website anhängst"
+
+#: inc/games/quiz/data/QuizWordPress.php:232
+msgid "That's correct! You can access the WordPress admin dashboard by appending /wp-admin to the site URL."
+msgstr "Das ist richtig! Sie können auf das WordPress-Admin-Dashboard zugreifen, indem Sie /wp-admin an die URL der Website anhängen."
+
+#: inc/games/quiz/data/QuizWordPress.php:233
+msgid "That is unfortunately incorrect. The correct answer is By appending /wp-admin to the site URL."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Indem du /wp-admin an die URL der Website anhängst."
+
+#: inc/games/quiz/data/QuizWordPress.php:238
+msgid "Why should you make a small donation for the Wapuugotchi plugin?"
+msgstr "Warum solltest du eine kleine Spende für das WapuuGotchi-Plugin machen?"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To make the plugin author rich"
+msgstr "Um das Plugin-Autoren-Team reich zu machen"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To increase your website traffic"
+msgstr "So steigerst du den Traffic deiner Website"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To make the Wapuu happy"
+msgstr "Um die Wapuu glücklich zu machen"
+
+#: inc/games/quiz/data/QuizWordPress.php:239
+msgid "To get a free t-shirt"
+msgstr "Um ein kostenloses T-Shirt zu erhalten"
+
+#: inc/games/quiz/data/QuizWordPress.php:240
+msgid "To support the development of the plugin"
+msgstr "Zur Unterstützung der Entwicklung des Plugins"
+
+#: inc/games/quiz/data/QuizWordPress.php:241
+msgid "Correct! With a small donation, you can support the further development of Wapuugotchi. There are many exciting plans ahead. Visit us at www.wapuugotchi.com!"
+msgstr "Richtig! Mit einer kleinen Spende können Sie die weitere Entwicklung von Wapuugotchi unterstützen. Es gibt noch viele spannende Pläne. Besuchen Sie uns auf www.wapuugotchi.com!"
+
+#: inc/games/quiz/data/QuizWordPress.php:242
+msgid "That is unfortunately incorrect. The correct answer is To support the development and maintenance of the plugin."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Um die Entwicklung und Wartung des Plugins zu unterstützen."
+
+#: inc/games/quiz/data/QuizWordPress.php:247
+msgid "Which WordPress plugin is commonly used for search engine optimization (SEO)?"
+msgstr "Welches WordPress-Plugin wird üblicherweise für die Suchmaschinenoptimierung (SEO) verwendet?"
+
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:275
+msgid "Jetpack"
+msgstr "Jetpack"
+
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:275
+#: inc/games/quiz/data/QuizWordPress.php:285
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: inc/games/quiz/data/QuizWordPress.php:248
+#: inc/games/quiz/data/QuizWordPress.php:276
+msgid "Contact Form 7"
+msgstr "Contact Form 7"
+
+#: inc/games/quiz/data/QuizWordPress.php:249
+#: inc/games/quiz/data/QuizWordPress.php:275
+msgid "Yoast SEO"
+msgstr "Yoast SEO"
+
+#: inc/games/quiz/data/QuizWordPress.php:250
+msgid "That's correct! Yoast SEO is one of the most popular plugins for search engine optimization in WordPress."
+msgstr "Das ist richtig! Yoast SEO ist eines der beliebtesten Plugins für die Suchmaschinenoptimierung in WordPress."
+
+#: inc/games/quiz/data/QuizWordPress.php:251
+msgid "That is unfortunately incorrect. The correct answer is Yoast SEO."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: Yoast SEO."
+
+#: inc/games/quiz/data/QuizWordPress.php:256
+msgid "Which of the following is NOT a default post type in WordPress?"
+msgstr "Welches der folgenden Elemente ist KEIN Standard-Post-Typ in WordPress?"
+
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Post"
+msgstr "Post"
+
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Page"
+msgstr "Page"
+
+#: inc/games/quiz/data/QuizWordPress.php:257
+msgid "Revision"
+msgstr "Revision"
+
+#: inc/games/quiz/data/QuizWordPress.php:258
+msgid "Product"
+msgstr "Product"
+
+#: inc/games/quiz/data/QuizWordPress.php:259
+msgid "That's correct! Product is not a default post type in WordPress; it is usually added by plugins like WooCommerce."
+msgstr "Das ist richtig! \"Produkt\" ist kein Standard-Post-Typ in WordPress; es ist in der Regel durch Plugins wie WooCommerce hinzugefügt."
+
+#: inc/games/quiz/data/QuizWordPress.php:260
+msgid "That is unfortunately incorrect. The correct answer is Product."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Produkt"
+
+#: inc/games/quiz/data/QuizWordPress.php:265
+msgid "Which WordPress feature helps in managing multiple websites from a single installation?"
+msgstr "Welche WordPress-Funktion hilft bei der Verwaltung mehrerer Websites von einer einzigen Installation aus?"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multiuser"
+msgstr "Multiuser"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multilingual"
+msgstr "Multilingual"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multi-domain"
+msgstr "Multi-domain"
+
+#: inc/games/quiz/data/QuizWordPress.php:266
+msgid "Multi-admin"
+msgstr "Multi-admin"
+
+#: inc/games/quiz/data/QuizWordPress.php:267
+msgid "Multisite"
+msgstr "Multisite"
+
+#: inc/games/quiz/data/QuizWordPress.php:268
+msgid "That's correct! The Multisite feature allows you to manage multiple WordPress sites from a single installation."
+msgstr "Das ist richtig! Die Funktion Multisite ermöglicht es dir, mehrere WordPress-Sites von einer einzigen Installation aus zu verwalten."
+
+#: inc/games/quiz/data/QuizWordPress.php:269
+msgid "That is unfortunately incorrect. The correct answer is Multisite."
+msgstr "Das ist leider falsch. Die richtige Antwort ist: Multisite."
+
+#: inc/games/quiz/data/QuizWordPress.php:274
+msgid "Which plugin is typically used to build contact forms in WordPress?"
+msgstr "Welches Plugin wird typischerweise verwendet, um Kontaktformulare in WordPress zu erstellen?"
+
+#: inc/games/quiz/data/QuizWordPress.php:277
+msgid "That's correct! Contact Form 7 is a popular plugin for creating contact forms in WordPress."
+msgstr "Das ist richtig! Contact Form 7 ist ein beliebtes Plugin für die Erstellung von Kontaktformularen in WordPress."
+
+#: inc/games/quiz/data/QuizWordPress.php:278
+msgid "That is unfortunately incorrect. The correct answer is Contact Form 7."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Contact Form 7"
+
+#: inc/games/quiz/data/QuizWordPress.php:283
+msgid "Which plugin is typically used to add e-commerce functionality to a WordPress site?"
+msgstr "Welches Plugin wird üblicherweise verwendet, um einer WordPress-Website E-Commerce-Funktionen hinzuzufügen?"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "WPForms"
+msgstr "WPForms"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "Smush"
+msgstr "Smush"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "All in One SEO Pack"
+msgstr "All in One SEO Pack"
+
+#: inc/games/quiz/data/QuizWordPress.php:284
+msgid "Disqus"
+msgstr "Disqus"
+
+#: inc/games/quiz/data/QuizWordPress.php:286
+msgid "That's correct! WooCommerce is the most popular e-commerce plugin for WordPress, enabling online store functionality."
+msgstr "Das ist richtig! WooCommerce ist das beliebteste E-Commerce-Plugin für WordPress, das die Funktionalität eines Online-Shops ermöglicht."
+
+#: inc/games/quiz/data/QuizWordPress.php:287
+msgid "That is unfortunately incorrect. The correct answer is WooCommerce."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: WooCommerce."
+
+#: inc/games/quiz/data/QuizWordPress.php:292
+msgid "What are WordPress major versions named after?"
+msgstr "Wonach sind die Major-Versionen von WordPress benannt?"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Famous scientists"
+msgstr "Berühmte Wissenschaftler"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Space missions"
+msgstr "Weltraummissionen"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Hollywood actors"
+msgstr "Hollywood-Schauspieler"
+
+#: inc/games/quiz/data/QuizWordPress.php:293
+msgid "Marvel characters"
+msgstr "Marvel Charaktere"
+
+#: inc/games/quiz/data/QuizWordPress.php:294
+msgid "Jazz musicians"
+msgstr "Jazz-Musiker"
+
+#: inc/games/quiz/data/QuizWordPress.php:295
+msgid "That's correct! Matt Mullenweg, the co-founder of WordPress, is a big jazz fan and wanted to bring a personal touch to the project."
+msgstr "Das ist richtig! Matt Mullenweg, der Mitbegründer von WordPress, ist ein großer Jazz-Fan und wollte dem Projekt eine persönliche Note verleihen."
+
+#: inc/games/quiz/data/QuizWordPress.php:296
+msgid "That is unfortunately incorrect. The correct answer is Jazz musicians."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Jazzmusiker."
+
+#: inc/games/quiz/data/QuizWordPress.php:301
+msgid "When was the first WordCamp organized?"
+msgstr "Wann wurde das erste WordCamp organisiert?"
+
+#: inc/games/quiz/data/QuizWordPress.php:302
+msgid "2001"
+msgstr "2001"
+
+#: inc/games/quiz/data/QuizWordPress.php:302
+msgid "2012"
+msgstr "2012"
+
+#: inc/games/quiz/data/QuizWordPress.php:302
+msgid "🤔"
+msgstr "🤔"
+
+#: inc/games/quiz/data/QuizWordPress.php:303
+msgid "2006"
+msgstr "2006"
+
+#: inc/games/quiz/data/QuizWordPress.php:304
+msgid "That's correct! The first WordCamp was organized in 2006 by Matt Mullenweg in San Francisco."
+msgstr "Das ist richtig! Das erste WordCamp wurde 2006 von Matt Mullenweg in San Francisco organisiert."
+
+#: inc/games/quiz/data/QuizWordPress.php:305
+msgid "That is unfortunately incorrect. The correct answer is 2006."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet 2006."
+
+#: inc/games/quiz/data/QuizWordPress.php:310
+msgid "How many themes are currently hosted on WordPress.org?"
+msgstr "Wie viele Themes werden derzeit auf WordPress.org gehostet?"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 1,000"
+msgstr "Über 1.000"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 5,000"
+msgstr "Über 5.000"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+msgid "Over 100"
+msgstr "Über 100"
+
+#: inc/games/quiz/data/QuizWordPress.php:311
+msgid "Over 2,500"
+msgstr "Über 2.500"
+
+#: inc/games/quiz/data/QuizWordPress.php:312
+msgid "Over 12,000"
+msgstr "Über 12.000"
+
+#: inc/games/quiz/data/QuizWordPress.php:313
+msgid "That's correct! There are currently over 12,000 themes hosted on WordPress.org."
+msgstr "Das ist richtig! Derzeit gibt es über 12.000 Themes, die auf WordPress.org gehostet werden."
+
+#: inc/games/quiz/data/QuizWordPress.php:314
+msgid "That is unfortunately incorrect. The correct answer is Over 10,000."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Über 10.000"
+
+#: inc/games/quiz/data/QuizWordPress.php:319
+msgid "How many plugins are currently hosted on WordPress.org?"
+msgstr "Wie viele Plugins werden derzeit auf WordPress.org gehostet?"
+
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 10,000"
+msgstr "Über 10.000"
+
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 25,000"
+msgstr "Über 25.000"
+
+#: inc/games/quiz/data/QuizWordPress.php:320
+msgid "Over 40,000"
+msgstr "Über 40.000"
+
+#: inc/games/quiz/data/QuizWordPress.php:321
+msgid "Over 55,000"
+msgstr "Über 55.000"
+
+#: inc/games/quiz/data/QuizWordPress.php:322
+msgid "That's correct! There are currently over 55,000 plugins hosted on WordPress.org."
+msgstr "Das ist richtig! Derzeit gibt es über 55.000 Plugins, die auf WordPress.org gehostet werden."
+
+#: inc/games/quiz/data/QuizWordPress.php:323
+msgid "That is unfortunately incorrect. The correct answer is Over 60,000."
+msgstr "Das ist leider falsch. Die richtige Antwort lautet: Über 60,000"
+
+#: inc/games/quiz/data/QuizWordPress.php:328
+msgid "Why should you use a Two-Factor Authentication plugin?"
+msgstr "Warum sollten Sie ein Plugin für die Zwei-Faktor-Authentifizierung verwenden?"
+
+#: inc/games/quiz/data/QuizWordPress.php:329
+msgid "Wapuu demands it"
+msgstr "Wapuu verlangt es"
+
+#: inc/games/quiz/data/QuizWordPress.php:329
+msgid "For daily brain teasers"
+msgstr "Für das tägliche Rätselraten"
+
+#: inc/games/quiz/data/QuizWordPress.php:329
+msgid "Hackers need challenges"
+msgstr "Hacker brauchen Herausforderungen"
+
+#: inc/games/quiz/data/QuizWordPress.php:329
+msgid "It sounds super cool"
+msgstr "Das klingt super cool"
+
+#: inc/games/quiz/data/QuizWordPress.php:330
+msgid "Better security against hackers"
+msgstr "Mehr Sicherheit gegen Hacker"
+
+#: inc/games/quiz/data/QuizWordPress.php:331
+msgid "That's correct! Two-Factor Authentication greatly enhances your account's security."
+msgstr "Das ist richtig! Die Zwei-Faktor-Authentifizierung erhöht die Sicherheit Ihres Kontos erheblich."
+
+#: inc/games/quiz/data/QuizWordPress.php:332
+msgid "That is unfortunately incorrect. Two-Factor Authentication is crucial for protecting your account from hackers."
+msgstr "Das ist leider falsch. Die Zwei-Faktor-Authentifizierung ist entscheidend für den Schutz Ihres Kontos vor Hackern."
+
+#: inc/games/quiz/data/QuizWordPress.php:337
+msgid "Why should you only install plugins and themes from trusted developers?"
+msgstr "Warum sollten Sie nur Plugins und Themes von vertrauenswürdigen Entwicklern installieren?"
+
+#: inc/games/quiz/data/QuizWordPress.php:338
+msgid "They grant magic powers"
+msgstr "Sie verleihen magische Kräfte"
+
+#: inc/games/quiz/data/QuizWordPress.php:338
+msgid "Trusted devs are cooler"
+msgstr "Vertrauenswürdige Entwickler sind cooler"
+
+#: inc/games/quiz/data/QuizWordPress.php:338
+msgid "For bragging rights online"
+msgstr "Für das Recht zu prahlen online"
+
+#: inc/games/quiz/data/QuizWordPress.php:338
+msgid "To unlock hidden levels"
+msgstr "Versteckte Levels freischalten"
+
+#: inc/games/quiz/data/QuizWordPress.php:339
+msgid "To avoid security risks"
+msgstr "Um Sicherheitsrisiken zu vermeiden"
+
+#: inc/games/quiz/data/QuizWordPress.php:340
+msgid "That's correct! Trusted developers reduce the risk of malware and vulnerabilities."
+msgstr "Das ist richtig! Vertrauenswürdige Entwickler verringern das Risiko von Malware und Sicherheitslücken."
+
+#: inc/games/quiz/data/QuizWordPress.php:341
+msgid "That is unfortunately incorrect. Installing untrusted plugins or themes can seriously compromise your website's security."
+msgstr "Das ist leider falsch. Die Installation von nicht vertrauenswürdigen Plugins oder Themes kann die Sicherheit Ihrer Website ernsthaft gefährden."
+
+#: inc/games/quiz/data/QuizWordPress.php:346
+msgid "Why should you keep plugins and themes updated?"
+msgstr "Warum sollten Sie Plugins und Themes auf dem neuesten Stand halten?"
+
+#: inc/games/quiz/data/QuizWordPress.php:347
+msgid "They get faster Wi-Fi"
+msgstr "Sie erhalten schnelleres Wi-Fi"
+
+#: inc/games/quiz/data/QuizWordPress.php:347
+msgid "Wapuu loves updates"
+msgstr "Wapuu liebt Updates"
+
+#: inc/games/quiz/data/QuizWordPress.php:347
+msgid "They start growing plants"
+msgstr "Sie beginnen mit dem Anbau von Pflanzen"
+
+#: inc/games/quiz/data/QuizWordPress.php:347
+msgid "For a fresher look"
+msgstr "Für ein frischeres Aussehen"
+
+#: inc/games/quiz/data/QuizWordPress.php:348
+msgid "To fix security issues"
+msgstr "Behebung von Sicherheitsproblemen"
+
+#: inc/games/quiz/data/QuizWordPress.php:349
+msgid "That's correct! Updates often include important security fixes and improvements."
+msgstr "Das ist richtig! Updates enthalten oft wichtige Sicherheitsbehebungen und Verbesserungen."
+
+#: inc/games/quiz/data/QuizWordPress.php:350
+msgid "That is unfortunately incorrect. Outdated plugins and themes can make your site vulnerable to attacks."
+msgstr "Das ist leider falsch. Veraltete Plugins und Themes können Ihre Website anfällig für Angriffe machen."
+
+#: inc/mission/Menu.php:37
+msgid "Missions"
+msgstr "Missionen"
+
+#: inc/mission/Menu.php:55
+msgid "Reset Mission"
+msgstr "Mission zurücksetzen"
+
+#: inc/mission/data/Missions.php:34
+msgid "The Endless Steppes"
+msgstr "Die endlosen Steppen"
+
+#: inc/mission/data/Missions.php:35
+msgid "Embark with your brave Wapuu on an adventure through the endless steppes in search of a hidden treasure. But the journey is fraught with dangers and tricky puzzles! Only with your help can your Wapuu overcome these challenges. Support your courageous companion on their journey and together, become the heroes of this adventure!"
+msgstr "Begib dich mit deinem tapferen Wapuu auf ein Abenteuer durch die endlosen Steppen auf der Suche nach einem verborgenen Schatz. Doch die Reise ist voller Gefahren und kniffliger Rätsel! Nur mit deiner Hilfe kann dein Wapuu diese Herausforderungen meistern. Unterstütze deinen mutigen Begleiter auf seiner Reise und werdet gemeinsam die Helden dieses Abenteuers!"
+
+#: inc/mission/data/Missions.php:39
+msgid "Wapuu embarks on an adventure through the vast, endless steppes. Soon, he comes across a dense forest where the trees block his way. Carved into the bark of an old tree is a riddle. Only by solving it the hidden path will reveal itself."
+msgstr "Wapuu begibt sich auf ein Abenteuer durch die weiten, endlosen Steppen. Bald stößt er auf einen dichten Wald, in dem ihm die Bäume den Weg versperren. In die Rinde eines alten Baumes ist ein Rätsel geritzt. Nur wenn du es löst, wird sich der verborgene Weg offenbaren."
+
+#: inc/mission/data/Missions.php:40
+msgid "After solving the riddle in the forest, Wapuu reaches a massive mountain range. A large monolith blocks the path between the peaks. On its surface is another riddle, and only the correct answer will clear the way."
+msgstr "Nachdem du das Rätsel im Wald gelöst hast, erreicht Wapuu eine gewaltige Bergkette. Ein großer Monolith versperrt den Weg zwischen den Gipfeln. Auf seiner Oberfläche befindet sich ein weiteres Rätsel, und nur die richtige Antwort wird den Weg frei machen."
+
+#: inc/mission/data/Missions.php:41
+msgid "With the monolith moved aside, Wapuu continues his journey. Suddenly, he comes across a cave, but the entrance is blocked by a giant spider’s web. A spider emerges from the shadows and presents him a new challenge. Only by solving her riddle Wapuu will gain access to the cave."
+msgstr "Nachdem der Monolith zur Seite geschoben wurde, setzt Wapuu seine Reise fort. Plötzlich stößt er auf eine Höhle, aber der Eingang ist durch ein riesiges Spinnennetz versperrt. Eine Spinne taucht aus den Schatten auf und stellt ihn vor eine neue Herausforderung. Nur wenn er ihr Rätsel löst, erhält Wapuu Zugang zur Höhle."
+
+#: inc/mission/data/Missions.php:42
+msgid "After passing the spider’s test, Wapuu reaches a peaceful oasis. In the clear water, a glowing fish swims. It promises to show Wapuu the way to the treasure if he can answer the next question correctly."
+msgstr "Nachdem er den Test der Spinne bestanden hat, erreicht Wapuu eine friedliche Oase. In dem klaren Wasser schwimmt ein leuchtender Fisch. Er verspricht, Wapuu den Weg zum Schatz zu zeigen, wenn er die nächste Frage richtig beantworten kann."
+
+#: inc/mission/data/Missions.php:43
+msgid "Wapuu finally finds the treasure. However, a mysterious inscription on the chest says that it will only open if he can solve the final riddle engraved on the lid."
+msgstr "Wapuu findet schließlich den Schatz. Eine geheimnisvolle Inschrift auf der Truhe besagt jedoch, dass sie sich nur öffnen lässt, wenn er das letzte Rätsel auf dem Deckel lösen kann."
+
+#: inc/mission/data/Missions.php:50
+msgid "The Burning Rivers"
+msgstr "Die brennenden Flüsse"
+
+#: inc/mission/data/Missions.php:51
+#: inc/mission/data/Missions.php:67
+msgid "Join your brave Wapuu on a daring journey through the burning rivers, where the air shimmers with heat and every choice matters. Treacherous currents and challenging puzzles await to test your resolve! Only with your support can your Wapuu overcome the dangers ahead. Stand by your courageous companion and together, craft a heroic tale that begins in the burning rivers!"
+msgstr "Begleite deinen tapferen Wapuu auf eine waghalsige Reise durch die brennenden Flüsse, wo die Luft vor Hitze flimmert und jede Entscheidung zählt. Tückische Ströme und herausfordernde Rätsel warten darauf, deine Entschlossenheit zu testen! Nur mit deiner Unterstützung kann dein Wapuu die bevorstehenden Gefahren meistern. Stehe deinem mutigen Gefährten zur Seite und schreibe gemeinsam eine Heldengeschichte, die in den brennenden Flüssen beginnt!"
+
+#: inc/mission/data/Missions.php:55
+msgid "Wapuu ventures deeper into the burning rivers and discovers a dark cave. The entrance is guarded by fiery bats, and inside, a mysterious glow reveals a riddle carved into the stone walls. Solving it is the key to proceeding further."
+msgstr "Wapuu wagt sich tiefer in die brennenden Flüsse und entdeckt eine dunkle Höhle. Der Eingang wird von feurigen Fledermäusen bewacht, und im Inneren enthüllt ein geheimnisvolles Leuchten ein in die Steinwände geritztes Rätsel. Die Lösung des Rätsels ist der Schlüssel zum Weiterkommen."
+
+#: inc/mission/data/Missions.php:56
+msgid "Leaving the cave, Wapuu finds himself at the base of a towering volcano. The ground trembles with every step, and molten rocks block the path. To proceed, he must solve the riddle etched into an ancient, lava-scorched tablet."
+msgstr "Als Wapuu die Höhle verlässt, befindet er sich am Fuße eines gewaltigen Vulkans. Der Boden zittert bei jedem Schritt, und geschmolzene Felsen versperren den Weg. Um weiterzukommen, muss er das Rätsel lösen, das auf einer uralten, von Lava verbrannten Tafel eingraviert ist."
+
+#: inc/mission/data/Missions.php:57
+msgid "The volcano's riddle solved, Wapuu carefully crosses a raging lava flow. A series of stepping stones appear, but only the correct answer to the fiery question will light the way."
+msgstr "Das Rätsel des Vulkans ist gelöst, und Wapuu durchquert vorsichtig einen tosenden Lavastrom. Eine Reihe von Trittsteinen erscheint, aber nur die richtige Antwort auf die feurige Frage wird den Weg erhellen."
+
+#: inc/mission/data/Missions.php:58
+msgid "On the other side of the lava flow, a mighty Fire Golem rises from the ground. Its burning eyes pierce through the haze as it poses a challenging riddle to Wapuu. Only by answering it can the Golem be calmed."
+msgstr "Auf der anderen Seite des Lavastroms erhebt sich ein mächtiger Feuer-Golem aus dem Boden. Seine brennenden Augen durchdringen den Dunst, während er Wapuu ein herausforderndes Rätsel stellt. Nur durch die Beantwortung des Rätsels kann der Golem besänftigt werden."
+
+#: inc/mission/data/Missions.php:59
+msgid "With the Fire Golem appeased, Wapuu reaches the final destination: a glowing treasure chest made of sparkling diamonds. Yet, an intricate fiery inscription on the chest demands one last riddle to be solved before the treasure can be claimed."
+msgstr "Nachdem der Feuer-Golem besänftigt ist, erreicht Wapuu sein Ziel: eine glühende Schatztruhe aus funkelnden Diamanten. Doch eine verschlungene feurige Inschrift auf der Truhe verlangt ein letztes Rätsel, das gelöst werden muss, bevor der Schatz gehoben werden kann."
+
+#: inc/mission/data/Missions.php:66
+msgid "The Frozen Village"
+msgstr "Das gefrorene Dorf"
+
+#: inc/mission/data/Missions.php:71
+msgid "Wapuu arrives at the Yeti Village, where he hears about a mysterious treasure. The villagers tell him about a hermit who possesses valuable information. However, before they reveal the hermit's location, Wapuu must solve a tricky riddle."
+msgstr "Wapuu kommt im Yeti-Dorf an, wo er von einem geheimnisvollen Schatz erfährt. Die Dorfbewohner erzählen ihm von einem Einsiedler, der über wertvolle Informationen verfügt. Doch bevor sie ihm den Aufenthaltsort des Einsiedlers verraten, muss Wapuu ein kniffliges Rätsel lösen."
+
+#: inc/mission/data/Missions.php:72
+msgid "The villagers have told Wapuu that the hermit has set up camp near the great rift. However, when Wapuu arrives, the camp is deserted. Inside an old igloo, he discovers a hidden message. Can he solve the riddle to find out where the hermit has gone?"
+msgstr "Die Dorfbewohner haben Wapuu erzählt, dass der Einsiedler sein Lager in der Nähe des großen Grabens aufgeschlagen hat. Doch als Wapuu ankommt, ist das Lager verlassen. In einem alten Iglu entdeckt er eine versteckte Nachricht. Kann er das Rätsel lösen und herausfinden, wohin der Einsiedler gegangen ist?"
+
+#: inc/mission/data/Missions.php:73
+msgid "Wapuu learns that the hermit has gone hunting. When he arrives at the hunting grounds, he finds the hermit injured. The old man has stepped into a thorn trap and urgently needs medicine. However, the location of the remedy is hidden behind another riddle."
+msgstr "Wapuu erfährt, dass der Einsiedler auf die Jagd gegangen ist. Als er in den Jagdgründen ankommt, findet er den Einsiedler verletzt vor. Der alte Mann ist in eine Dornenfalle getreten und braucht dringend Medizin. Der Ort, an dem sich das Heilmittel befindet, ist jedoch hinter einem anderen Rätsel verborgen."
+
+#: inc/mission/data/Missions.php:74
+msgid "Wapuu discovers that the medicine can be found at the Ice Crystal. Together with the hermit, he sets off to retrieve it. When sunlight hits the crystal, it begins to glow in different colors, revealing a mysterious puzzle. Only by solving it can Wapuu obtain the cure."
+msgstr "Wapuu findet heraus, dass die Medizin im Eiskristall zu finden ist. Zusammen mit dem Einsiedler macht er sich auf den Weg, um ihn zu holen. Wenn das Sonnenlicht auf den Kristall trifft, beginnt er in verschiedenen Farben zu leuchten und enthüllt ein geheimnisvolles Rätsel. Nur wenn er es löst, kann Wapuu das Heilmittel erhalten."
+
+#: inc/mission/data/Missions.php:75
+msgid "The medicine works quickly, and the hermit recovers in no time. Grateful for Wapuu’s help, he leads him to the treasure. However, before Wapuu can claim it, the hermit presents him with one final riddle. Can Wapuu solve it and secure the legendary treasure?"
+msgstr "Die Medizin wirkt schnell, und der Einsiedler erholt sich in kürzester Zeit. Dankbar für Wapuus Hilfe, führt er ihn zum Schatz. Doch bevor Wapuu ihn abholen kann, stellt ihm der Einsiedler ein letztes Rätsel. Kann Wapuu es lösen und sich den legendären Schatz sichern?"
+
+#: inc/onboarding/Menu.php:30
+msgid "Page Overview"
+msgstr "Seite Übersicht"
+
+#: inc/onboarding/Menu.php:38
+msgid "WordPress Journey"
+msgstr "WordPress-Reise"
+
+#: inc/onboarding/data/TourDashboard.php:43
+msgid "Welcome Aboard!"
+msgstr "Willkommen an Bord!"
+
+#: inc/onboarding/data/TourDashboard.php:44
+msgid "Hey there! Welcome to your journey through the WordPress universe! I'm super excited to guide you through your first steps in WordPress. First, we are going to dive into two essentials: the admin bar and the admin menu. Let's go!"
+msgstr "Hallo zusammen! Willkommen auf deiner Reise durch das WordPress-Universum! Ich freue mich sehr darauf, dich durch deine ersten Schritte in WordPress zu führen. Zuerst werden wir uns mit zwei wichtigen Dingen beschäftigen: der Admin-Leiste und dem Admin-Menü. Los geht's!"
+
+#: inc/onboarding/data/TourDashboard.php:49
+#: inc/onboarding/data/TourPluginInstall.php:61
+msgid "Navigation"
+msgstr "Navigation"
+
+#: inc/onboarding/data/TourDashboard.php:50
+msgid "First, let's look at how to navigate the tour. Above this dialog box are the navigation controls, allowing you to move forward or backward, end the tour, or start a demo at key points."
+msgstr "Schauen wir uns zunächst an, wie du durch die Tour navigierst. Über diesem Dialogfeld befinden sich die Navigationssteuerungen, mit denen du vorwärts oder rückwärts gehen, die Tour beenden oder eine Demo an wichtigen Punkten starten kannst."
+
+#: inc/onboarding/data/TourDashboard.php:55
+msgid "The Admin-Bar"
+msgstr "Die Admin-Leiste"
+
+#: inc/onboarding/data/TourDashboard.php:56
+msgid "First stop, the \"Admin Bar\"! This is your quick access lane to key areas and information. You will also get a snapshot of pending updates and comments here."
+msgstr "Erster Halt: die \"Admin Bar\"! Das ist dein schneller Zugang zu den wichtigsten Bereichen und Informationen. Hier bekommst du auch einen Überblick über anstehende Aktualisierungen und Kommentare."
+
+#: inc/onboarding/data/TourDashboard.php:61
+msgid "WapuuGotchi Bar"
+msgstr "WapuuGotchi Bar"
+
+#: inc/onboarding/data/TourDashboard.php:62
+msgid "I also have a menu item here. Here, you can restart the tour we’re currently on—or just specific parts of it!"
+msgstr "Ich habe hier auch einen Menüpunkt. Hier können Sie die Tour, auf der wir gerade sind, neu starten - oder nur bestimmte Teile davon!"
+
+#: inc/onboarding/data/TourDashboard.php:67
+#: inc/onboarding/data/TourDashboard.php:96
+msgid "Navigating the website"
+msgstr "Navigieren auf der Website"
+
+#: inc/onboarding/data/TourDashboard.php:68
+msgid "The \"Admin Menu\" makes switching between different areas of your website a breeze. You can easily access one of these areas by clicking on a main menu item."
+msgstr "Das \"Admin Menu\" macht das Wechseln zwischen verschiedenen Bereichen deiner Website zum Kinderspiel. Du kannst einen dieser Bereiche ganz einfach aufrufen, indem du auf einen Hauptmenüpunkt klickst."
+
+#: inc/onboarding/data/TourDashboard.php:73
+msgid "About submenus"
+msgstr "Über Untermenüs"
+
+#: inc/onboarding/data/TourDashboard.php:74
+msgid "After clicking on a main menu item, you’ll see some submenu items pop up underneath. They're like special little tools that let you do things related to the main menu item you clicked on. It's super helpful!"
+msgstr "Wenn du auf einen Hauptmenüpunkt klickst, werden darunter einige Untermenüpunkte angezeigt. Das sind spezielle kleine Werkzeuge, mit denen du Dinge tun kannst, die mit dem Hauptmenüpunkt zu tun haben, auf den du geklickt hast. Das ist super hilfreich!"
+
+#: inc/onboarding/data/TourDashboard.php:79
+#: inc/onboarding/data/TourEditComments.php:97
+#: inc/onboarding/data/TourExport.php:61
+#: inc/onboarding/data/TourExportPersonalData.php:55
+#: inc/onboarding/data/TourImport.php:61
+#: inc/onboarding/data/TourOptionsMedia.php:55
+#: inc/onboarding/data/TourOptionsPrivacy.php:55
+#: inc/onboarding/data/TourUser.php:49
+msgid "Tip 1"
+msgstr "Tipp 1."
+
+#: inc/onboarding/data/TourDashboard.php:80
+msgid "A small hint: If you want a wider view of your website, you can always collapse the admin menu. Give it a try by clicking the ► button."
+msgstr "Ein kleiner Tipp: Wenn du einen größeren Überblick über deine Website haben möchtest, kannst du das Admin-Menü jederzeit ausklappen. Probiere es aus, indem du auf die Schaltfläche ► klickst."
+
+#: inc/onboarding/data/TourDashboard.php:97
+msgid "Let's take a closer look at each \"Main Menu Item\". We'll uncover the ins and outs, showing you how every part plays its role in the grand WordPress system. Ready to explore?"
+msgstr "Schauen wir uns die einzelnen \"Hauptmenüpunkte\" genauer an. Wir werden dir zeigen, wie jeder Teil im großen WordPress-System eine Rolle spielt. Bereit zum Erforschen?"
+
+#: inc/onboarding/data/TourDashboard.php:104
+msgid "Exploring the Dashboard"
+msgstr "Erkundung des Dashboards"
+
+#: inc/onboarding/data/TourDashboard.php:105
+msgid "Let's zoom into our first main menu item: the \"Dashboard\". This is where you'll find all the key info from every corner of your website. Let's peek inside!"
+msgstr "Sehen wir uns unseren ersten Hauptmenüpunkt an: das \"Dashboard\". Hier findest du alle wichtigen Informationen aus allen Bereichen deiner Website. Werfen wir einen Blick hinein!"
+
+#: inc/onboarding/data/TourDashboard.php:110
+msgid "Landing Page"
+msgstr "Landingpage"
+
+#: inc/onboarding/data/TourDashboard.php:111
+msgid "Our first stop is the \"Home\" page. This pops up when you log into your WordPress backend."
+msgstr "Unser erster Halt ist die \"Home\"-Seite. Sie wird angezeigt, wenn du dich in dein WordPress-Backend einloggst."
+
+#: inc/onboarding/data/TourDashboard.php:116
+msgid "The Rundown"
+msgstr "Der Rundown"
+
+#: inc/onboarding/data/TourDashboard.php:117
+msgid "This page gives you a summary of everything – new posts, recent comments, and stats from across your website."
+msgstr "Diese Seite gibt dir einen Überblick über alles - neue Beiträge, letzte Kommentare und Statistiken deiner gesamten Website."
+
+#: inc/onboarding/data/TourDashboard.php:122
+msgid "Customize It"
+msgstr "Anpassen"
+
+#: inc/onboarding/data/TourDashboard.php:123
+msgid "You've got the power to tweak your \"Home\" page. Turn off elements that don't spark your interest. It's all in your hands! Click the ► button to see how does it work."
+msgstr "Du hast es in der Hand, deine \"Home\"-Seite zu optimieren. Schalte Elemente aus, die dein Interesse nicht wecken. Es liegt alles in deiner Hand! Klicke auf den ► Button, um zu sehen, wie es funktioniert."
+
+#: inc/onboarding/data/TourEditCategory.php:43
+#: inc/onboarding/data/TourEditPost.php:79
+#: inc/onboarding/data/TourWapuugotchiShop.php:61
+msgid "Categories"
+msgstr "Kategorien"
+
+#: inc/onboarding/data/TourEditCategory.php:44
+msgid "This is the \"Categories\" page! These are super handy for organizing and structuring your content, making it easier for visitors to find relevant info."
+msgstr "Dies ist die Seite \"Kategorien\"! Diese sind sehr praktisch, um deine Inhalte zu organisieren und zu strukturieren, damit die Besucher die relevanten Informationen leichter finden."
+
+#: inc/onboarding/data/TourEditCategory.php:49
+msgid "Creating New Ones"
+msgstr "Neue schaffen"
+
+#: inc/onboarding/data/TourEditCategory.php:50
+msgid "You can create new categories to group your posts thematically. This not only makes navigation a breeze but also boosts SEO, helping users find your website when they search."
+msgstr "Du kannst neue Kategorien erstellen, um deine Beiträge thematisch zu gruppieren. Das erleichtert nicht nur die Navigation, sondern fördert auch die Suchmaschinenoptimierung, da die Nutzer deine Website bei der Suche besser finden."
+
+#: inc/onboarding/data/TourEditCategory.php:55
+msgid "Hierarchies"
+msgstr "Hierarchien"
+
+#: inc/onboarding/data/TourEditCategory.php:56
+msgid "Categories can have a hierarchy. Set up subcategories for even more precise organization of your content."
+msgstr "Kategorien können eine Hierarchie haben. Richte Unterkategorien ein, um deine Inhalte noch genauer zu organisieren."
+
+#: inc/onboarding/data/TourEditCategory.php:61
+#: inc/onboarding/data/TourEditPost.php:55
+msgid "Overview Page"
+msgstr "Übersichtsseite"
+
+#: inc/onboarding/data/TourEditCategory.php:62
+msgid "The overview page not only shows all your categories but also their hierarchical relationships. Check out how often your categories are used in your posts."
+msgstr "Die Übersichtsseite zeigt nicht nur alle deine Kategorien, sondern auch ihre hierarchischen Beziehungen. Sieh dir an, wie oft deine Kategorien in deinen Beiträgen verwendet werden."
+
+#: inc/onboarding/data/TourEditCategory.php:67
+msgid "In Summary"
+msgstr "In der Zusammenfassung"
+
+#: inc/onboarding/data/TourEditCategory.php:68
+msgid "Overall, the \"Categories\" page offers an effective way to enhance the organization and findability of content on your website."
+msgstr "Insgesamt bietet die Seite \"Kategorien\" eine effektive Möglichkeit, die Organisation und Auffindbarkeit von Inhalten auf deiner Website zu verbessern."
+
+#: inc/onboarding/data/TourEditComments.php:43
+#: inc/onboarding/data/TourSiteEditor.php:43
+msgid "Comments"
+msgstr "Kommentare"
+
+#: inc/onboarding/data/TourEditComments.php:44
+msgid "Now, I'm going to tell you everything I know about the \"Comments\" main menu item. This is the place where all the conversations on your website happen."
+msgstr "Jetzt erzähle ich dir alles, was ich über den Hauptmenüpunkt \"Kommentare\" weiß. Das ist der Ort, an dem alle Unterhaltungen auf deiner Website stattfinden."
+
+#: inc/onboarding/data/TourEditComments.php:49
+msgid "Why Comments?"
+msgstr "Warum Kommentare?"
+
+#: inc/onboarding/data/TourEditComments.php:50
+msgid "This page is a key tool for engaging with your visitors. Here, you can respond to feedback and moderate discussions."
+msgstr "Diese Seite ist ein wichtiges Instrument, um mit deinen Besuchern in Kontakt zu treten. Hier kannst du auf Feedback reagieren und Diskussionen moderieren."
+
+#: inc/onboarding/data/TourEditComments.php:55
+#: inc/onboarding/data/TourEditPage.php:61
+#: inc/onboarding/data/TourEditPostTag.php:61
+#: inc/onboarding/data/TourErasePersonalData.php:49
+#: inc/onboarding/data/TourExport.php:55
+#: inc/onboarding/data/TourExportPersonalData.php:49
+#: inc/onboarding/data/TourImport.php:55
+#: inc/onboarding/data/TourOptionsDiscussion.php:49
+#: inc/onboarding/data/TourOptionsMedia.php:49
+#: inc/onboarding/data/TourOptionsPrivacy.php:49
+#: inc/onboarding/data/TourOptionsReading.php:49
+#: inc/onboarding/data/TourOptionsWriting.php:49
+#: inc/onboarding/data/TourPluginEditor.php:49
+#: inc/onboarding/data/TourPluginInstall.php:49
+#: inc/onboarding/data/TourPlugins.php:43
+#: inc/onboarding/data/TourThemeEditor.php:49
+#: inc/onboarding/data/TourThemes.php:55
+#: inc/onboarding/data/TourTools.php:55
+#: inc/onboarding/data/TourUsers.php:55
+#: inc/onboarding/data/TourWapuugotchiQuest.php:49
+#: inc/onboarding/data/TourWapuugotchiShop.php:55
+msgid "Overview"
+msgstr "Übersicht"
+
+#: inc/onboarding/data/TourEditComments.php:56
+msgid "This is where you'll find a list of all the comments left by visitors on your website, including the comment text, the author's name, the post they commented on, and the date."
+msgstr "Hier findest du eine Liste aller Kommentare, die Besucher auf deiner Website hinterlassen haben, einschließlich des Kommentartextes, des Namens des Verfassers, des Beitrags, den er kommentiert hat, und des Datums."
+
+#: inc/onboarding/data/TourEditComments.php:62
+msgid "This field lets you quickly see who left the comment. For registered visitors, their email address is also shown."
+msgstr "In diesem Feld kannst du schnell sehen, wer den Kommentar hinterlassen hat. Bei registrierten Besuchern wird auch ihre E-Mail-Adresse angezeigt."
+
+#: inc/onboarding/data/TourEditComments.php:67
+msgid "Comment Status"
+msgstr "Kommentarstatus"
+
+#: inc/onboarding/data/TourEditComments.php:68
+msgid "The \"Comment\" field displays the actual content of the comment left by a visitor on your website."
+msgstr "Das Feld \"Kommentar\" zeigt den tatsächlichen Inhalt des Kommentars an, den ein Besucher auf deiner Website hinterlassen hat."
+
+#: inc/onboarding/data/TourEditComments.php:73
+msgid "Related Post"
+msgstr "Ähnliche Beiträge"
+
+#: inc/onboarding/data/TourEditComments.php:74
+msgid "This shows which post the comment is referring to, helping you understand the context."
+msgstr "Das zeigt dir, auf welchen Beitrag sich der Kommentar bezieht und hilft dir, den Kontext zu verstehen."
+
+#: inc/onboarding/data/TourEditComments.php:79
+msgid "Comment Date"
+msgstr "Kommentar-Datum"
+
+#: inc/onboarding/data/TourEditComments.php:80
+msgid "The \"Date\" field indicates when the comment was left on your website."
+msgstr "Das Feld \"Datum\" zeigt an, wann der Kommentar auf deiner Website hinterlassen wurde."
+
+#: inc/onboarding/data/TourEditComments.php:85
+msgid "Changing Comment Status"
+msgstr "Ändern des Kommentarstatus"
+
+#: inc/onboarding/data/TourEditComments.php:86
+msgid "A comment can be \"Pending\", \"Approved\", \"Trash\", or \"Spam\". Pending comments won't show on your website until you approve them."
+msgstr "Ein Kommentar kann \"Ausstehend\", \"Genehmigt\", \"Papierkorb\" oder \"Spam\" sein. Ausstehende Kommentare werden auf deiner Website nicht angezeigt, bis du sie genehmigst."
+
+#: inc/onboarding/data/TourEditComments.php:91
+msgid "Using Search"
+msgstr "Suche verwenden"
+
+#: inc/onboarding/data/TourEditComments.php:92
+msgid "The search function lets you look for specific comments based on keywords, usernames, email addresses, or other relevant info."
+msgstr "Mit der Suchfunktion kannst du anhand von Schlüsselwörtern, Benutzernamen, E-Mail-Adressen oder anderen relevanten Informationen nach bestimmten Kommentaren suchen."
+
+#: inc/onboarding/data/TourEditComments.php:98
+msgid "A quick hint: Want to quickly approve or trash a comment? Hover over it and click the corresponding action."
+msgstr "Ein kleiner Tipp: Willst du einen Kommentar schnell genehmigen oder verwerfen? Bewege den Mauszeiger über den Kommentar und klicke auf die entsprechende Aktion."
+
+#: inc/onboarding/data/TourEditPage.php:43
+msgid "Pages Overview"
+msgstr "Seiten Übersicht"
+
+#: inc/onboarding/data/TourEditPage.php:44
+msgid "We're now exploring the submenu of the \"Pages\" main menu item. This is where you manage all your static content."
+msgstr "Wir erforschen jetzt das Untermenü des Hauptmenüpunkts \"Seiten\". Hier verwaltest du alle deine statischen Inhalte."
+
+#: inc/onboarding/data/TourEditPage.php:49
+msgid "All Pages"
+msgstr "Alle Seiten"
+
+#: inc/onboarding/data/TourEditPage.php:50
+msgid "\"All Pages\" lets you view, organize, and manage your pages all in one spot."
+msgstr "mit \"Alle Seiten\" kannst du deine Seiten an einem Ort anzeigen, organisieren und verwalten."
+
+#: inc/onboarding/data/TourEditPage.php:55
+msgid "About Pages"
+msgstr "Über Seiten"
+
+#: inc/onboarding/data/TourEditPage.php:56
+msgid "As mentioned, \"Pages\" are static content. Unlike \"Posts\", they're more permanent, like your \"About Us\" or \"Contact\" pages."
+msgstr "Wie bereits erwähnt, sind \"Seiten\" statische Inhalte. Im Gegensatz zu \"Beiträgen\" sind sie dauerhafter, wie deine \"Über uns\"- oder \"Kontakt\"-Seiten."
+
+#: inc/onboarding/data/TourEditPage.php:62
+msgid "This page overview gives you a good look at all the pages you've created. Plus, you can organize and manage them from here."
+msgstr "Diese Seitenübersicht gibt dir einen guten Überblick über alle Seiten, die du erstellt hast. Außerdem kannst du sie von hier aus organisieren und verwalten."
+
+#: inc/onboarding/data/TourEditPage.php:67
+#: inc/onboarding/data/TourEditPost.php:67
+msgid "Titles"
+msgstr "Titel"
+
+#: inc/onboarding/data/TourEditPage.php:68
+msgid "This column shows the titles of all pages. Click a title to edit the page and change its content."
+msgstr "In dieser Spalte werden die Titel aller Seiten angezeigt. Klicke auf einen Titel, um die Seite zu bearbeiten und ihren Inhalt zu ändern."
+
+#: inc/onboarding/data/TourEditPage.php:74
+msgid "This column shows who created the page. For multiple authors, it'll display their names."
+msgstr "Diese Spalte zeigt an, wer die Seite erstellt hat. Bei mehreren Autoren werden ihre Namen angezeigt."
+
+#: inc/onboarding/data/TourEditPage.php:79
+msgid "Publish Date"
+msgstr "Veröffentlichungsdatum"
+
+#: inc/onboarding/data/TourEditPage.php:80
+msgid "This column shows the date when the page was created or last edited."
+msgstr "In dieser Spalte steht das Datum, an dem die Seite erstellt oder zuletzt bearbeitet wurde."
+
+#: inc/onboarding/data/TourEditPage.php:85
+msgid "Quick Overview"
+msgstr "Produktbeschreibung"
+
+#: inc/onboarding/data/TourEditPage.php:86
+msgid "Hover over a page to see a menu for quick actions like editing. Give it a try! Just move your cursor over the menu above!"
+msgstr "Bewege den Mauszeiger über eine Seite, um ein Menü für schnelle Aktionen wie das Bearbeiten anzuzeigen. Probiere es aus! Bewege deinen Mauszeiger einfach über das Menü oben!"
+
+#: inc/onboarding/data/TourEditPage.php:91
+#: inc/onboarding/data/TourEditPost.php:103
+msgid "Sorting and Filtering"
+msgstr "Sortieren und Filtern"
+
+#: inc/onboarding/data/TourEditPage.php:92
+msgid "You can sort your pages by different criteria, like date. There are also filtering options to display specific types of pages, like drafts."
+msgstr "Du kannst deine Seiten nach verschiedenen Kriterien sortieren, zum Beispiel nach dem Datum. Es gibt auch Filteroptionen, um bestimmte Seitentypen wie Entwürfe anzuzeigen."
+
+#: inc/onboarding/data/TourEditPage.php:97
+#: inc/onboarding/data/TourEditPost.php:109
+#: inc/onboarding/data/TourThemes.php:73
+msgid "Search"
+msgstr "Suche"
+
+#: inc/onboarding/data/TourEditPage.php:98
+msgid "The search bar lets you look for specific pages, which is super handy if you have lots of them."
+msgstr "Mit der Suchleiste kannst du nach bestimmten Seiten suchen, was sehr praktisch ist, wenn du viele davon hast."
+
+#: inc/onboarding/data/TourEditPage.php:103
+#: inc/onboarding/data/TourEditPost.php:115
+msgid "Create"
+msgstr "Erstellen"
+
+#: inc/onboarding/data/TourEditPage.php:104
+#: inc/onboarding/data/TourEditPost.php:116
+msgid "Behind the \"Create\" button, you can start crafting new content for your website. It'll guide you through the process step by step!"
+msgstr "Hinter der Schaltfläche \"Erstellen\" kannst du damit beginnen, neue Inhalte für deine Website zu erstellen. Er führt dich Schritt für Schritt durch den Prozess!"
+
+#: inc/onboarding/data/TourEditPage.php:109
+msgid "Closing Thoughts"
+msgstr "Gedanken schließen"
+
+#: inc/onboarding/data/TourEditPage.php:110
+msgid "Did you notice I almost said the same thing as in the \"Posts\" page? Well, that's because these pages are pretty similar!"
+msgstr "Hast du bemerkt, dass ich fast das Gleiche gesagt habe wie auf der Seite \"Beiträge\"? Nun, das liegt daran, dass diese Seiten ziemlich ähnlich sind!"
+
+#: inc/onboarding/data/TourEditPost.php:43
+msgid "Welcome to Posts"
+msgstr "Willkommen bei Posts"
+
+#: inc/onboarding/data/TourEditPost.php:44
+msgid "Currently, we're in the submenu of the \"Posts\" main menu item. This is where you can create, tweak, and organize all your dynamic content."
+msgstr "Derzeit befinden wir uns im Untermenü des Hauptmenüpunkts \"Beiträge\". Hier kannst du alle dynamischen Inhalte erstellen, bearbeiten und organisieren."
+
+#: inc/onboarding/data/TourEditPost.php:49
+msgid "All Posts"
+msgstr "Alle Beiträge"
+
+#: inc/onboarding/data/TourEditPost.php:50
+msgid "In \"All Posts\", you can view, organize, and manage all your posts at a glance. Additionally, you can start making new posts right from here!"
+msgstr "Unter \"Alle Beiträge\" kannst du alle deine Beiträge auf einen Blick sehen, organisieren und verwalten. Außerdem kannst du von hier aus direkt neue Beiträge erstellen!"
+
+#: inc/onboarding/data/TourEditPost.php:56
+msgid "The Overview Page lists all your posts. From here, you can easily create new posts and make quick edits to existing ones."
+msgstr "Auf der Übersichtsseite sind alle deine Beiträge aufgelistet. Von hier aus kannst du ganz einfach neue Beiträge erstellen und bestehende Beiträge schnell bearbeiten."
+
+#: inc/onboarding/data/TourEditPost.php:61
+msgid "Post List"
+msgstr "Beitragsliste"
+
+#: inc/onboarding/data/TourEditPost.php:62
+msgid "The Post List shows you all your posts, along with key details like title, author, and publication date."
+msgstr "Die Beitragsliste zeigt dir alle deine Beiträge mit den wichtigsten Details wie Titel, Autor und Veröffentlichungsdatum."
+
+#: inc/onboarding/data/TourEditPost.php:68
+msgid "The Title column displays the titles of all your posts. Click on any title to edit the post and change its content."
+msgstr "In der Spalte Titel werden die Titel aller deiner Beiträge angezeigt. Klicke auf einen Titel, um den Beitrag zu bearbeiten und seinen Inhalt zu ändern."
+
+#: inc/onboarding/data/TourEditPost.php:73
+msgid "Authors"
+msgstr "Autoren"
+
+#: inc/onboarding/data/TourEditPost.php:74
+msgid "The Author column shows who created the post. If there are multiple authors, it'll display their usernames."
+msgstr "In der Spalte Autor wird angezeigt, wer den Beitrag erstellt hat. Wenn es mehrere Autoren gibt, werden ihre Benutzernamen angezeigt."
+
+#: inc/onboarding/data/TourEditPost.php:80
+msgid "This shows the categories assigned to a post. Categories help organize content on your website in a structured way."
+msgstr "Hier werden die Kategorien angezeigt, die einem Beitrag zugeordnet sind. Kategorien helfen dabei, die Inhalte auf deiner Website zu strukturieren."
+
+#: inc/onboarding/data/TourEditPost.php:85
+#: inc/onboarding/data/TourEditPostTag.php:43
+msgid "Tags"
+msgstr "Schlagwörter"
+
+#: inc/onboarding/data/TourEditPost.php:86
+msgid "The Tags column lists the tags associated with your posts. Tags make it easier to find content on similar topics."
+msgstr "Die Spalte Tags listet die Tags auf, die mit deinen Beiträgen verknüpft sind. Tags machen es einfacher, Inhalte zu ähnlichen Themen zu finden."
+
+#: inc/onboarding/data/TourEditPost.php:91
+msgid "Dates"
+msgstr "Termine"
+
+#: inc/onboarding/data/TourEditPost.php:92
+msgid "The Date column tells you when a post was or will be published. "
+msgstr "Die Spalte Datum zeigt dir, wann ein Beitrag veröffentlicht wurde oder wird. "
+
+#: inc/onboarding/data/TourEditPost.php:97
+msgid "Quick Access"
+msgstr "Schnellzugriff"
+
+#: inc/onboarding/data/TourEditPost.php:98
+msgid "Hover over a post to see a quick-access menu for important functions. Give it a try! Just move your cursor over the menu above!"
+msgstr "Fahre mit der Maus über einen Beitrag, um ein Schnellzugriffsmenü für wichtige Funktionen zu sehen. Probiere es aus! Bewege deinen Mauszeiger einfach über das Menü oben!"
+
+#: inc/onboarding/data/TourEditPost.php:104
+msgid "Sort your posts by various criteria like date, and use filters to display specific types of posts, like drafts."
+msgstr "Sortiere deine Beiträge nach verschiedenen Kriterien wie dem Datum und verwende Filter, um bestimmte Arten von Beiträgen wie Entwürfe anzuzeigen."
+
+#: inc/onboarding/data/TourEditPost.php:110
+msgid "Use the search bar to find specific posts by keywords or titles. Super useful when you have lots of posts."
+msgstr "Verwende die Suchleiste, um bestimmte Beiträge nach Stichworten oder Titeln zu suchen. Sehr nützlich, wenn du viele Beiträge hast."
+
+#: inc/onboarding/data/TourEditPostTag.php:44
+msgid "This is the \"Tags\" page! Tags let you enhance your posts with additional keywords or phrases. That way, your content can be found and searched through easier!"
+msgstr "Dies ist die Seite \"Tags\"! Mit Tags kannst du deine Beiträge mit zusätzlichen Schlüsselwörtern oder Phrasen ergänzen. Auf diese Weise können deine Inhalte leichter gefunden und durchsucht werden!"
+
+#: inc/onboarding/data/TourEditPostTag.php:49
+msgid "Differentiating"
+msgstr "Differenzieren"
+
+#: inc/onboarding/data/TourEditPostTag.php:50
+msgid "Unlike categories, which group posts into broad themes, tags give more specific details. They help you connect particular topics, keywords, or phrases to your posts."
+msgstr "Im Gegensatz zu Kategorien, die Beiträge zu allgemeinen Themen zusammenfassen, enthalten Tags spezifischere Details. Sie helfen dir, bestimmte Themen, Schlüsselwörter oder Phrasen mit deinen Beiträgen zu verbinden."
+
+#: inc/onboarding/data/TourEditPostTag.php:55
+msgid "Creating Tags"
+msgstr "Tags erstellen"
+
+#: inc/onboarding/data/TourEditPostTag.php:56
+msgid "You can create tags that match the specific content of your posts. These can be single words or short phrases that reflect the main concepts or themes of the post."
+msgstr "Du kannst Tags erstellen, die zum spezifischen Inhalt deiner Beiträge passen. Das können einzelne Wörter oder kurze Sätze sein, die die wichtigsten Konzepte oder Themen des Beitrags widerspiegeln."
+
+#: inc/onboarding/data/TourEditPostTag.php:62
+msgid "The overview section shows all your created tags. You'll also see info on how often your tags are used in your posts."
+msgstr "Der Übersichtsbereich zeigt alle von dir erstellten Tags an. Du siehst auch, wie oft deine Tags in deinen Beiträgen verwendet werden."
+
+#: inc/onboarding/data/TourEditPostTag.php:67
+msgid "SEO Tip"
+msgstr "SEO-Tipp"
+
+#: inc/onboarding/data/TourEditPostTag.php:68
+msgid "Tags are a key part of Search Engine Optimization (SEO). They help search engines better understand and index the content of your posts."
+msgstr "Tags sind ein wichtiger Bestandteil der Suchmaschinenoptimierung (SEO). Sie helfen den Suchmaschinen, den Inhalt deiner Beiträge besser zu verstehen und zu indexieren."
+
+#: inc/onboarding/data/TourErasePersonalData.php:43
+msgid "Erase Personal Data"
+msgstr "Personenbezogene Daten löschen"
+
+#: inc/onboarding/data/TourErasePersonalData.php:44
+msgid "On the \"Erase Personal Data\" page, you can delete a user's personal data. Let's take a closer look together!"
+msgstr "Auf der Seite \"Persönliche Daten löschen\" kannst du die persönlichen Daten eines Nutzers löschen. Schauen wir uns das gemeinsam genauer an!"
+
+#: inc/onboarding/data/TourErasePersonalData.php:50
+msgid "This page is pretty much like the personal data export page. Here, you can delete a specific user's personal data."
+msgstr "Diese Seite ist ähnlich wie die Seite zum Exportieren persönlicher Daten. Hier kannst du die persönlichen Daten eines bestimmten Nutzers löschen."
+
+#: inc/onboarding/data/TourErasePersonalData.php:55
+#: inc/onboarding/data/TourExport.php:49
+#: inc/onboarding/data/TourImport.php:49
+msgid "Usage"
+msgstr "Verwendung"
+
+#: inc/onboarding/data/TourErasePersonalData.php:56
+msgid "Sometimes, a user might want their data deleted. Maybe they're switching websites or they just don't want their data on your website anymore."
+msgstr "Manchmal möchte ein Nutzer seine Daten löschen. Vielleicht wechseln sie die Website oder wollen ihre Daten einfach nicht mehr auf deiner Website haben."
+
+#: inc/onboarding/data/TourErasePersonalData.php:61
+msgid "Deleting Data"
+msgstr "Daten löschen"
+
+#: inc/onboarding/data/TourErasePersonalData.php:62
+msgid "Please note, when you erase a user's data, you're also erasing all data associated with them. This includes their comments, posts, and any other personal details. That's pretty important!"
+msgstr "Bitte beachte, dass du mit dem Löschen der Daten einer Nutzerin/eines Nutzers auch alle mit ihr/ihm verbundenen Daten löschst. Dazu gehören ihre Kommentare, Beiträge und alle anderen persönlichen Daten. Das ist ziemlich wichtig!"
+
+#: inc/onboarding/data/TourErasePersonalData.php:67
+msgid "Data Protection Tip"
+msgstr "Datenschutz-Tipp"
+
+#: inc/onboarding/data/TourErasePersonalData.php:68
+msgid "Remember, less data means less worry! If you don't have it, it can't be stolen. Simple, isn't it?"
+msgstr "Denk daran: Weniger Daten bedeuten weniger Sorgen! Wenn du sie nicht hast, können sie auch nicht gestohlen werden. Einfach, nicht wahr?"
+
+#: inc/onboarding/data/TourExport.php:43
+msgid "Export"
+msgstr "Export"
+
+#: inc/onboarding/data/TourExport.php:44
+msgid "On the \"Export\" page, you can transfer your website's content to a different location. This is a crucial task, so let's do it with care."
+msgstr "Auf der Seite \"Exportieren\" kannst du die Inhalte deiner Website an einen anderen Ort übertragen. Das ist eine wichtige Aufgabe, also lass uns das mit Bedacht tun."
+
+#: inc/onboarding/data/TourExport.php:50
+msgid "Exporting content is like moving your website's content to a new home. It's also a great way to keep a backup of your website, just in case!"
+msgstr "Das Exportieren von Inhalten ist wie das Verschieben der Inhalte deiner Website in ein neues Zuhause. Außerdem ist es eine gute Möglichkeit, eine Sicherungskopie deiner Website zu erstellen, nur für den Fall der Fälle!"
+
+#: inc/onboarding/data/TourExport.php:56
+msgid "Here, you can select what content to transfer. You don't have to move everything, you can choose specific items to transfer!"
+msgstr "Hier kannst du auswählen, welche Inhalte übertragen werden sollen. Du musst nicht alles übertragen, sondern kannst auch bestimmte Inhalte auswählen!"
+
+#: inc/onboarding/data/TourExport.php:62
+msgid "Just a little reminder, your content might contain personal data or things that belong to someone else. So, be careful about who you share your content with, okay?"
+msgstr "Nur zur Erinnerung: Deine Inhalte könnten persönliche Daten oder Dinge enthalten, die jemand anderem gehören. Sei also vorsichtig, mit wem du deine Inhalte teilst, okay?"
+
+#: inc/onboarding/data/TourExport.php:67
+#: inc/onboarding/data/TourImport.php:67
+#: inc/onboarding/data/TourOptionsMedia.php:61
+#: inc/onboarding/data/TourOptionsPermalink.php:55
+#: inc/onboarding/data/TourOptionsPrivacy.php:61
+#: inc/onboarding/data/TourUser.php:55
+msgid "Tip 2"
+msgstr "Tipp 2"
+
+#: inc/onboarding/data/TourExport.php:68
+msgid "Also, remember that if you transfer a lot of content, it can take up a lot of space. Make sure you have enough room in your workspace to store it!"
+msgstr "Denke auch daran, dass viele Inhalte, die du überträgst, eine Menge Platz brauchen. Stelle sicher, dass du in deinem Arbeitsbereich genug Platz hast, um sie zu speichern!"
+
+#: inc/onboarding/data/TourExportPersonalData.php:43
+msgid "Export Personal Data"
+msgstr "Personenbezogene Daten exportieren"
+
+#: inc/onboarding/data/TourExportPersonalData.php:44
+msgid "On the \"Export Personal Data\" page, you can specifically export the personal data of your users."
+msgstr "Auf der Seite \"Persönliche Daten exportieren\" kannst du gezielt die persönlichen Daten deiner Nutzer/innen exportieren."
+
+#: inc/onboarding/data/TourExportPersonalData.php:50
+msgid "Here, you have the option to export the personal data of a specific user. This is useful if a user wants to take their data with them, like when they're switching websites."
+msgstr "Hier hast du die Möglichkeit, die persönlichen Daten eines bestimmten Nutzers zu exportieren. Das ist nützlich, wenn ein Nutzer seine Daten mitnehmen möchte, z. B. wenn er die Website wechselt."
+
+#: inc/onboarding/data/TourExportPersonalData.php:56
+msgid "Make sure to only pass the data to the user it belongs to. This is crucial for complying with privacy regulations and to avoid legal issues."
+msgstr "Achte darauf, dass du die Daten nur an den Nutzer weitergibst, zu dem sie gehören. Das ist wichtig, um die Datenschutzbestimmungen einzuhalten und um rechtliche Probleme zu vermeiden."
+
+#: inc/onboarding/data/TourImport.php:43
+msgid "Import"
+msgstr "Importieren"
+
+#: inc/onboarding/data/TourImport.php:44
+msgid "Welcome to the \"Import\" page. Here, you can import content from other websites or WordPress installations."
+msgstr "Willkommen auf der Seite \"Importieren\". Hier kannst du Inhalte von anderen Websites oder WordPress-Installationen importieren."
+
+#: inc/onboarding/data/TourImport.php:50
+msgid "Importing content is handy when you want to transfer content from another website to here or restore a backup of your website."
+msgstr "Das Importieren von Inhalten ist praktisch, wenn du Inhalte von einer anderen Website zu uns übertragen oder ein Backup deiner Website wiederherstellen willst."
+
+#: inc/onboarding/data/TourImport.php:56
+msgid "The overview page shows a list of tools that can assist you in importing content. They vary depending on the plugins you have installed and your WordPress version."
+msgstr "Auf der Übersichtsseite findest du eine Liste von Tools, die dich beim Importieren von Inhalten unterstützen können. Sie variieren je nach den installierten Plugins und deiner WordPress-Version."
+
+#: inc/onboarding/data/TourImport.php:62
+msgid "Make sure to only restore your own backups, as unknown sources might contain harmful code."
+msgstr "Achte darauf, dass du nur deine eigenen Backups wiederherstellst, da unbekannte Quellen schädlichen Code enthalten könnten."
+
+#: inc/onboarding/data/TourImport.php:68
+msgid "Also, backups can contain personal data, and importing backups from unknown origins could violate privacy policies. This could lead to legal issues."
+msgstr "Außerdem können Backups persönliche Daten enthalten, und der Import von Backups unbekannter Herkunft könnte gegen Datenschutzrichtlinien verstoßen. Das kann zu rechtlichen Problemen führen."
+
+#: inc/onboarding/data/TourMedia.php:43
+msgid "Add New"
+msgstr "Neu hinzufügen"
+
+#: inc/onboarding/data/TourMedia.php:44
+msgid "The \"Add New Media File\" page lets you upload fresh media like images, videos, or audio files to your media library."
+msgstr "Auf der Seite \"Neue Mediendatei hinzufügen\" kannst du neue Medien wie Bilder, Videos oder Audiodateien in deine Mediathek hochladen."
+
+#: inc/onboarding/data/TourMedia.php:49
+msgid "Drag-and-Drop"
+msgstr "Drag-and-Drop"
+
+#: inc/onboarding/data/TourMedia.php:50
+msgid "Adding your media files is a breeze – just drag and drop them into the area, or click the button to select your files. Your new media will be instantly available in your library."
+msgstr "Das Hinzufügen deiner Mediendateien ist ein Kinderspiel - ziehe sie einfach per Drag & Drop in den Bereich oder klicke auf die Schaltfläche, um deine Dateien auszuwählen. Deine neuen Medien werden sofort in deiner Bibliothek verfügbar sein."
+
+#: inc/onboarding/data/TourMedia.php:55
+msgid "File Info"
+msgstr "Datei Info"
+
+#: inc/onboarding/data/TourMedia.php:56
+msgid "WordPress supports a bunch of file formats, including images (JPEG, PNG, GIF), videos (MP4, MOV, WMV), audio files (MP3, WAV), and even documents (PDF, DOC, PPT, etc.)."
+msgstr "WordPress unterstützt eine Vielzahl von Dateiformaten, darunter Bilder (JPEG, PNG, GIF), Videos (MP4, MOV, WMV), Audiodateien (MP3, WAV) und sogar Dokumente (PDF, DOC, PPT, etc.)."
+
+#: inc/onboarding/data/TourMedia.php:61
+msgid "Upload Tip"
+msgstr "Tipp zum Hochladen"
+
+#: inc/onboarding/data/TourMedia.php:62
+msgid "You can also add media files directly to your posts or pages while you're editing them. Just click the \"Add Media\" button in the editor."
+msgstr "Du kannst Mediendateien auch direkt zu deinen Beiträgen oder Seiten hinzufügen, während du sie bearbeitest. Klicke einfach auf die Schaltfläche \"Medien hinzufügen\" im Editor."
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:43
+msgid "Discussion"
+msgstr "Diskussion"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:44
+msgid "The \"Discussion\" page deals with settings related to comments and discussions on your website."
+msgstr "Die Seite \"Diskussion\" befasst sich mit den Einstellungen für Kommentare und Diskussionen auf deiner Website."
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:50
+msgid "The settings you choose here will impact how you interact with your visitors. For example, you can set conditions under which comments are allowed."
+msgstr "Die Einstellungen, die du hier wählst, beeinflussen, wie du mit deinen Besuchern interagierst. Du kannst zum Beispiel festlegen, unter welchen Bedingungen Kommentare erlaubt sind."
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:55
+msgid "Control"
+msgstr "Steuerung"
+
+#: inc/onboarding/data/TourOptionsDiscussion.php:56
+msgid "Make sure you maintain control over interactions on your website. This page helps you manage those interactions. Comments, after all, can sometimes lead to legal issues."
+msgstr "Stelle sicher, dass du die Kontrolle über die Interaktionen auf deiner Website behältst. Diese Seite hilft dir, diese Interaktionen zu verwalten. Schließlich können Kommentare manchmal zu rechtlichen Problemen führen."
+
+#: inc/onboarding/data/TourOptionsGeneral.php:43
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:44
+msgid "Right now, we're checking out the submenu of the \"Settings\" main menu item. These pages allow you to set up the general settings for your website."
+msgstr "Im Moment sehen wir uns das Untermenü des Hauptmenüpunkts \"Einstellungen\" an. Auf diesen Seiten kannst du die allgemeinen Einstellungen für deine Website vornehmen."
+
+#: inc/onboarding/data/TourOptionsGeneral.php:49
+msgid "General"
+msgstr "Allgemein"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:50
+msgid "The \"General\" page is the first page you see when you enter \"Settings\". Here, you can set your website's name, URL, timezone, and date format."
+msgstr "Die Seite \"Allgemein\" ist die erste Seite, die du siehst, wenn du \"Einstellungen\" aufrufst. Hier kannst du den Namen deiner Website, die URL, die Zeitzone und das Datumsformat festlegen."
+
+#: inc/onboarding/data/TourOptionsGeneral.php:55
+msgid "Useful to Know"
+msgstr "Nützlich zu wissen"
+
+#: inc/onboarding/data/TourOptionsGeneral.php:56
+msgid "The settings you establish here are really important as they form the foundation of your website. So, you should carefully review and set these settings."
+msgstr "Die Einstellungen, die du hier vornimmst, sind sehr wichtig, denn sie bilden die Grundlage für deine Website. Deshalb solltest du diese Einstellungen sorgfältig überprüfen und festlegen."
+
+#: inc/onboarding/data/TourOptionsMedia.php:43
+#: inc/onboarding/data/TourUpload.php:43
+msgid "Media"
+msgstr "Medien"
+
+#: inc/onboarding/data/TourOptionsMedia.php:44
+msgid "The \"Media\" page deals with the basic settings for managing media files on your website."
+msgstr "Die Seite \"Medien\" befasst sich mit den Grundeinstellungen für die Verwaltung von Mediendateien auf deiner Website."
+
+#: inc/onboarding/data/TourOptionsMedia.php:50
+msgid "Here, you can set up how your media files are managed. For instance, you can define how media files should be organized and the size of the thumbnails."
+msgstr "Hier kannst du festlegen, wie deine Mediendateien verwaltet werden. Du kannst zum Beispiel festlegen, wie die Mediendateien organisiert werden sollen und wie groß die Miniaturansichten sein sollen."
+
+#: inc/onboarding/data/TourOptionsMedia.php:56
+msgid "Be careful not to choose too large a size for your thumbnails, as it can negatively impact your website's loading time."
+msgstr "Achte darauf, dass du die Größe deiner Vorschaubilder nicht zu groß wählst, da sich dies negativ auf die Ladezeit deiner Website auswirken kann."
+
+#: inc/onboarding/data/TourOptionsMedia.php:62
+msgid "Also, make sure to organize your media files sensibly. This is especially useful if you have a lot of media files."
+msgstr "Achte außerdem darauf, dass du deine Mediendateien sinnvoll organisierst. Das ist besonders nützlich, wenn du viele Mediendateien hast."
+
+#: inc/onboarding/data/TourOptionsPermalink.php:43
+msgid "Permalink"
+msgstr "Permalink"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:44
+msgid "The \"Permalink\" page deals with settings for the URL structure of your website."
+msgstr "Die Seite \"Permalink\" befasst sich mit den Einstellungen für die URL-Struktur deiner Website."
+
+#: inc/onboarding/data/TourOptionsPermalink.php:49
+msgid "Permalink Structure"
+msgstr "Permalink Struktur"
+
+#: inc/onboarding/data/TourOptionsPermalink.php:50
+msgid "It's important to carefully choose your permalink structure, as it affects not just the aesthetics of your URLs but also your website’s search engine optimization (SEO) and user-friendliness."
+msgstr "Es ist wichtig, dass du deine Permalinkstruktur sorgfältig auswählst, denn sie beeinflusst nicht nur die Ästhetik deiner URLs, sondern auch die Suchmaschinenoptimierung (SEO) und die Benutzerfreundlichkeit deiner Website."
+
+#: inc/onboarding/data/TourOptionsPermalink.php:56
+msgid "To support search engines, it’s advisable to choose a permalink structure that uses ‘speaking URLs’. Ideally, your URLs should contain the keywords of your posts and pages."
+msgstr "Um Suchmaschinen zu unterstützen, ist es ratsam, eine Permalink-Struktur zu wählen, die \"sprechende URLs\" verwendet. Idealerweise sollten deine URLs die Schlüsselwörter deiner Beiträge und Seiten enthalten."
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:43
+msgid "Privacy"
+msgstr "Datenschutz"
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:44
+msgid "The \"Privacy\" page is designed for managing your website's privacy policies."
+msgstr "Die Seite \"Datenschutz\" ist für die Verwaltung der Datenschutzrichtlinien deiner Website gedacht."
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:50
+msgid "This page allows you to ensure that your website complies with privacy policies and legal requirements. There are also plugins available that provide additional support."
+msgstr "Auf dieser Seite kannst du sicherstellen, dass deine Website den Datenschutzrichtlinien und rechtlichen Anforderungen entspricht. Es gibt auch Plugins, die zusätzliche Unterstützung bieten."
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:56
+msgid "Privacy policies are crucial, especially if your website collects personal data from users through comments, forms, etc. This helps protect you from legal issues."
+msgstr "Datenschutzrichtlinien sind wichtig, vor allem wenn deine Website persönliche Daten von Nutzern über Kommentare, Formulare usw. sammelt. So kannst du dich vor rechtlichen Problemen schützen."
+
+#: inc/onboarding/data/TourOptionsPrivacy.php:62
+msgid "If you're having trouble sleeping, consider reading the \"Policy Guide\" on privacy statements. It always puts me to sleep in seconds!"
+msgstr "Wenn du Probleme mit dem Schlafen hast, solltest du den \"Policy Guide\" über Datenschutzerklärungen lesen. Damit schlafe ich immer innerhalb von Sekunden ein!"
+
+#: inc/onboarding/data/TourOptionsReading.php:43
+msgid "Reading"
+msgstr "Lesen"
+
+#: inc/onboarding/data/TourOptionsReading.php:44
+msgid "The \"Reading\" page allows you to set basic display settings for your website."
+msgstr "Auf der Seite \"Lesen\" kannst du grundlegende Anzeigeeinstellungen für deine Website festlegen."
+
+#: inc/onboarding/data/TourOptionsReading.php:50
+msgid "Here, you can set up the settings for your homepage and posts page. You can also decide how many posts should be displayed on the homepage."
+msgstr "Hier kannst du die Einstellungen für deine Homepage und deine Beitragsseite vornehmen. Du kannst auch festlegen, wie viele Beiträge auf der Startseite angezeigt werden sollen."
+
+#: inc/onboarding/data/TourOptionsReading.php:55
+msgid "Homepage"
+msgstr "Startseite"
+
+#: inc/onboarding/data/TourOptionsReading.php:56
+msgid "Setting a static homepage allows you to customize the front page of your website. This is particularly useful if you're running a business website or a landing page."
+msgstr "Wenn du eine statische Homepage einrichtest, kannst du die Startseite deiner Website individuell gestalten. Das ist besonders nützlich, wenn du eine geschäftliche Website oder eine Landing Page betreibst."
+
+#: inc/onboarding/data/TourOptionsReading.php:61
+msgid "Search Engines"
+msgstr "Suchmaschinen"
+
+#: inc/onboarding/data/TourOptionsReading.php:62
+msgid "You might notice that despite using SEO plugins, visitors aren't coming through search engines. This could be because you've disabled search engine indexing here."
+msgstr "Vielleicht stellst du fest, dass trotz der Verwendung von SEO-Plugins keine Besucher über Suchmaschinen kommen. Das könnte daran liegen, dass du die Suchmaschinenindizierung hier deaktiviert hast."
+
+#: inc/onboarding/data/TourOptionsWriting.php:43
+msgid "Writing"
+msgstr "Schreiben"
+
+#: inc/onboarding/data/TourOptionsWriting.php:44
+msgid "The \"Writing\" page helps you with creating posts and articles."
+msgstr "Die Seite \"Schreiben\" hilft dir beim Erstellen von Beiträgen und Artikeln."
+
+#: inc/onboarding/data/TourOptionsWriting.php:50
+msgid "Setting up these options correctly according to your needs can enhance user-friendliness and efficiency when composing content."
+msgstr "Wenn du diese Optionen entsprechend deinen Bedürfnissen richtig einstellst, kannst du die Benutzerfreundlichkeit und Effizienz beim Verfassen von Inhalten erhöhen."
+
+#: inc/onboarding/data/TourPage.php:43
+msgid "Tutorial"
+msgstr "Tutorial"
+
+#: inc/onboarding/data/TourPage.php:44
+msgid "We're now on the \"Add New\" page. Just let me know once you're done with the Gutenberg editor tutorial, and I'll show you around some more."
+msgstr "Wir sind jetzt auf der Seite \"Neu hinzufügen\". Sag mir einfach Bescheid, wenn du mit dem Gutenberg-Editor-Tutorial fertig bist, dann zeige ich dir noch ein bisschen mehr."
+
+#: inc/onboarding/data/TourPage.php:49
+msgid "Gutenberg editor Editor"
+msgstr "Gutenberg Editor Editor"
+
+#: inc/onboarding/data/TourPage.php:50
+msgid "As you might have learned in the tutorial, this page is where you can manage the content of your pages."
+msgstr "Wie du vielleicht schon im Tutorial gelernt hast, kannst du auf dieser Seite den Inhalt deiner Seiten verwalten."
+
+#: inc/onboarding/data/TourPage.php:55
+#: inc/onboarding/data/TourPost.php:55
+msgid "Top Navigation"
+msgstr "Top Navigation"
+
+#: inc/onboarding/data/TourPage.php:56
+msgid "The top navigation gives you quick access to basic controls in the editor. It's split into the toolbar and the settings bar."
+msgstr "Über die obere Navigation hast du schnellen Zugriff auf die grundlegenden Steuerelemente des Editors. Sie ist unterteilt in die Symbolleiste und die Einstellungsleiste."
+
+#: inc/onboarding/data/TourPage.php:61
+#: inc/onboarding/data/TourPost.php:61
+msgid "The Toolbar"
+msgstr "Die Symbolleiste"
+
+#: inc/onboarding/data/TourPage.php:62
+msgid "The toolbar provides functions to help you build your page step by step. Here you can add new block elements and undo changes. Want to see how it works? Hit the ► button!"
+msgstr "Die Werkzeugleiste bietet Funktionen, die dir helfen, deine Seite Schritt für Schritt aufzubauen. Hier kannst du neue Blockelemente hinzufügen und Änderungen rückgängig machen. Willst du sehen, wie es funktioniert? Drücke den ► Button!"
+
+#: inc/onboarding/data/TourPage.php:85
+#: inc/onboarding/data/TourPost.php:85
+msgid "Settings Bar"
+msgstr "Einstellungen Bar"
+
+#: inc/onboarding/data/TourPage.php:86
+msgid "In the settings bar, you can save and publish your page. Plus, you can switch between different screen modes like desktop, mobile, and tablet."
+msgstr "In der Einstellungsleiste kannst du deine Seite speichern und veröffentlichen. Außerdem kannst du zwischen verschiedenen Bildschirmmodi wie Desktop, Handy und Tablet wechseln."
+
+#: inc/onboarding/data/TourPage.php:91
+#: inc/onboarding/data/TourPost.php:91
+msgid "Side Navigation"
+msgstr "Seitennavigation"
+
+#: inc/onboarding/data/TourPage.php:92
+msgid "Here you can view additional information about your blog post and make settings on the individual blocks you've added."
+msgstr "Hier kannst du zusätzliche Informationen zu deinem Blogbeitrag anzeigen und Einstellungen zu den einzelnen Blöcken vornehmen, die du hinzugefügt hast."
+
+#: inc/onboarding/data/TourPage.php:97
+msgid "Content"
+msgstr "Inhalt"
+
+#: inc/onboarding/data/TourPage.php:98
+msgid "In the content area, you can edit your contents... write texts, insert images, edit blocks. The sky's the limit with your creativity!"
+msgstr "Im Inhaltsbereich kannst du deine Inhalte bearbeiten... Texte schreiben, Bilder einfügen, Blöcke bearbeiten. Deiner Kreativität sind keine Grenzen gesetzt!"
+
+#: inc/onboarding/data/TourPage.php:103
+msgid "Wrap Up"
+msgstr "Einpacken"
+
+#: inc/onboarding/data/TourPage.php:104
+msgid "The text editor has so many features, and I'm sure I forgot to explain half of them! I hope I at least gave you a good overview. Let's take a look at the next area."
+msgstr "Der Texteditor hat so viele Funktionen und ich bin mir sicher, dass ich die Hälfte davon vergessen habe zu erklären! Ich hoffe, ich habe dir wenigstens einen guten Überblick gegeben. Lass uns einen Blick auf den nächsten Bereich werfen."
+
+#: inc/onboarding/data/TourPluginEditor.php:43
+msgid "Edit Plugins"
+msgstr "Plugin Bearbeiten"
+
+#: inc/onboarding/data/TourPluginEditor.php:44
+msgid "This page allows you to edit the files of your plugins."
+msgstr "Auf dieser Seite kannst du die Dateien deiner Plugins bearbeiten."
+
+#: inc/onboarding/data/TourPluginEditor.php:50
+msgid "The same principles apply as with editing themes. On this page, you can make direct changes to the files of your plugins. You should have some programming knowledge if you're planning to work here."
+msgstr "Es gelten die gleichen Grundsätze wie bei der Bearbeitung von Themes. Auf dieser Seite kannst du direkte Änderungen an den Dateien deiner Plugins vornehmen. Du solltest einige Programmierkenntnisse haben, wenn du hier arbeiten willst."
+
+#: inc/onboarding/data/TourPluginEditor.php:55
+#: inc/onboarding/data/TourThemeEditor.php:55
+msgid "Warning"
+msgstr "Warnung"
+
+#: inc/onboarding/data/TourPluginEditor.php:56
+msgid "Be careful! Editing files can damage your website. If you're not certain about what you're doing, it's better to avoid tinkering with this."
+msgstr "Sei vorsichtig! Das Bearbeiten von Dateien kann deine Website beschädigen. Wenn du dir nicht sicher bist, was du tust, solltest du es besser vermeiden, daran herumzubasteln."
+
+#: inc/onboarding/data/TourPluginInstall.php:43
+#: inc/onboarding/data/TourPlugins.php:55
+#: inc/onboarding/data/TourProfile.php:43
+#: inc/onboarding/data/TourUser.php:43
+#: inc/onboarding/data/TourUsers.php:43
+msgid "Introduction"
+msgstr "Einführung"
+
+#: inc/onboarding/data/TourPluginInstall.php:44
+msgid "Welcome to the \"Add New Plugin\" page. Here, you can search for, install, and activate new plugins."
+msgstr "Willkommen auf der Seite \"Neues Plugin hinzufügen\". Hier kannst du nach neuen Plugins suchen, sie installieren und aktivieren."
+
+#: inc/onboarding/data/TourPluginInstall.php:50
+msgid "Plugins significantly expand the functionality of your WordPress website. Choosing the right plugins can be crucial for your website's success. You'll find many articles online that can help you find the best plugins for your needs."
+msgstr "Plugins erweitern die Funktionalität deiner WordPress-Website erheblich. Die Wahl der richtigen Plugins kann entscheidend für den Erfolg deiner Website sein. Im Internet findest du viele Artikel, die dir helfen, die besten Plugins für deine Bedürfnisse zu finden."
+
+#: inc/onboarding/data/TourPluginInstall.php:55
+msgid "Plugin Selection"
+msgstr "Plugin-Auswahl"
+
+#: inc/onboarding/data/TourPluginInstall.php:56
+msgid "As soon as you enter this page, you're presented with a selection of plugins. This is really handy since there are more than 60,000 plugins available. This can also help you in finding the right plugins for your website."
+msgstr "Sobald du diese Seite aufrufst, wird dir eine Auswahl an Plugins präsentiert. Das ist wirklich praktisch, denn es gibt mehr als 60.000 Plugins. Das kann dir auch dabei helfen, die richtigen Plugins für deine Website zu finden."
+
+#: inc/onboarding/data/TourPluginInstall.php:62
+msgid "You can filter by the most popular, latest, and recommended plugins here. This way, you can, for example, follow the favorites of other WordPress users."
+msgstr "Du kannst hier nach den beliebtesten, neuesten und empfohlenen Plugins filtern. Auf diese Weise kannst du zum Beispiel den Favoriten anderer WordPress-Nutzer folgen."
+
+#: inc/onboarding/data/TourPlugins.php:44
+msgid "We are currently in the submenu of the \"Plugins\" main menu item. Here, you can search for, install, and activate new plugins."
+msgstr "Wir befinden uns gerade im Untermenü des Hauptmenüpunkts \"Plugins\". Hier kannst du nach neuen Plugins suchen, sie installieren und aktivieren."
+
+#: inc/onboarding/data/TourPlugins.php:49
+msgid "Installed Plugins"
+msgstr "Installierte Plugins"
+
+#: inc/onboarding/data/TourPlugins.php:50
+msgid "The \"Installed Plugins\" page lets you manage the plugins you've already installed."
+msgstr "Auf der Seite \"Installierte Plugins\" kannst du die Plugins verwalten, die du bereits installiert hast."
+
+#: inc/onboarding/data/TourPlugins.php:56
+msgid "Plugins extend the functionality of your WordPress website. That can be things like contact forms, galleries, slideshows, SEO tools, security features, and much more."
+msgstr "Plugins erweitern die Funktionalität deiner WordPress-Website. Das können Dinge wie Kontaktformulare, Galerien, Diashows, SEO-Tools, Sicherheitsfunktionen und vieles mehr sein."
+
+#: inc/onboarding/data/TourPlugins.php:61
+msgid "Plugin Overview"
+msgstr "Plugin Übersicht"
+
+#: inc/onboarding/data/TourPlugins.php:62
+msgid "In the Plugin Overview, you can see and manage all your installed plugins. Here, you can also easily activate or deactivate the plugins you're using."
+msgstr "In der Plugin-Übersicht kannst du alle deine installierten Plugins sehen und verwalten. Hier kannst du auch ganz einfach die Plugins, die du verwendest, aktivieren oder deaktivieren."
+
+#: inc/onboarding/data/TourPlugins.php:67
+msgid "Search for Specific Plugins"
+msgstr "Suche nach bestimmten Plugins"
+
+#: inc/onboarding/data/TourPlugins.php:68
+msgid "You also have the option to search for specific plugins. This is handy when you have many plugins installed."
+msgstr "Du hast auch die Möglichkeit, nach bestimmten Plugins zu suchen. Das ist praktisch, wenn du viele Plugins installiert hast."
+
+#: inc/onboarding/data/TourPlugins.php:73
+msgid "Installing Plugins"
+msgstr "Installieren von Plugins"
+
+#: inc/onboarding/data/TourPlugins.php:74
+msgid "It's best to install plugins only from the official WordPress Plugin Library. Not only is it a trustworthy source, but you also get benefits like automatic updates, community support, and much more."
+msgstr "Es ist am besten, Plugins nur aus der offiziellen WordPress Plugin Library zu installieren. Sie ist nicht nur eine vertrauenswürdige Quelle, sondern du bekommst auch Vorteile wie automatische Updates, Community-Support und vieles mehr."
+
+#: inc/onboarding/data/TourPlugins.php:79
+msgid "Updating Plugins"
+msgstr "Aktualisiere Plugins"
+
+#: inc/onboarding/data/TourPlugins.php:80
+msgid "Developers regularly release updates for their plugins to fix bugs, close security gaps, or add new features. It's important to keep your plugins up-to-date."
+msgstr "Die Entwickler veröffentlichen regelmäßig Updates für ihre Plugins, um Fehler zu beheben, Sicherheitslücken zu schließen oder neue Funktionen hinzuzufügen. Es ist wichtig, dass du deine Plugins auf dem neuesten Stand hältst."
+
+#: inc/onboarding/data/TourPlugins.php:85
+msgid "Summary"
+msgstr "Zusammenfassung"
+
+#: inc/onboarding/data/TourPlugins.php:86
+msgid "There are incredibly many plugins, and you'll find that there's a plugin solution for almost every problem!"
+msgstr "Es gibt unglaublich viele Plugins, und du wirst feststellen, dass es für fast jedes Problem eine Plugin-Lösung gibt!"
+
+#: inc/onboarding/data/TourPost.php:43
+msgid "Just a Moment"
+msgstr "Nur ein Moment"
+
+#: inc/onboarding/data/TourPost.php:44
+msgid "Hang tight, we're almost through the Gutenberg editor tutorial. I'll give you a bit more of a tour afterward."
+msgstr "Bleib dran, wir sind fast fertig mit dem Gutenberg-Editor-Tutorial. Nachher gebe ich dir noch eine kleine Führung."
+
+#: inc/onboarding/data/TourPost.php:49
+msgid "Tutorial Time"
+msgstr "Tutorial Zeit"
+
+#: inc/onboarding/data/TourPost.php:50
+msgid "Now we're on the \"Add New\" page. As you learnt in the tutorial, you can add all your posts for your website from here."
+msgstr "Jetzt sind wir auf der Seite \"Neu hinzufügen\". Wie du im Lernprogramm gelernt hast, kannst du hier alle Beiträge für deine Website hinzufügen."
+
+#: inc/onboarding/data/TourPost.php:56
+msgid "The top navigation gives you quick access to essential controls in the editor. It's split into the toolbar and the settings bar."
+msgstr "Über die obere Navigation hast du schnellen Zugriff auf die wichtigsten Steuerelemente im Editor. Sie ist unterteilt in die Symbolleiste und die Einstellungsleiste."
+
+#: inc/onboarding/data/TourPost.php:62
+msgid "The toolbar offers features to build your post step by step. Add new block elements and undo changes. Wanna see how it works? Hit the ► button!"
+msgstr "Die Symbolleiste bietet Funktionen, um deinen Beitrag Schritt für Schritt aufzubauen. Füge neue Blockelemente hinzu und mache Änderungen rückgängig. Willst du sehen, wie es funktioniert? Drücke den ► Button!"
+
+#: inc/onboarding/data/TourPost.php:86
+msgid "In the settings bar, you can save and publish your post. Plus, you can switch between different screen modes like desktop, mobile, and tablet."
+msgstr "In der Einstellungsleiste kannst du deinen Beitrag speichern und veröffentlichen. Außerdem kannst du zwischen verschiedenen Bildschirmmodi wie Desktop, Handy und Tablet wechseln."
+
+#: inc/onboarding/data/TourPost.php:92
+msgid "Here you'll find additional information about your blog post and can make settings on individual blocks."
+msgstr "Hier findest du zusätzliche Informationen zu deinem Blogbeitrag und kannst Einstellungen zu einzelnen Blöcken vornehmen."
+
+#: inc/onboarding/data/TourPost.php:97
+msgid "Content Part"
+msgstr "Inhalt Teil"
+
+#: inc/onboarding/data/TourPost.php:98
+msgid "In the content part, you can edit your contents, write texts, insert images, and edit blocks. Unleash your creativity!"
+msgstr "Im Inhaltsteil kannst du deine Inhalte bearbeiten, Texte schreiben, Bilder einfügen und Blöcke bearbeiten. Entfessle deine Kreativität!"
+
+#: inc/onboarding/data/TourPost.php:103
+msgid "Wrapping Up"
+msgstr "Einpacken"
+
+#: inc/onboarding/data/TourPost.php:104
+msgid "The text editor has loads of features, and I'm sure I forgot to explain half of them! Hope I at least gave you a good start."
+msgstr "Der Texteditor hat eine Menge Funktionen und ich bin mir sicher, dass ich die Hälfte davon vergessen habe zu erklären! Ich hoffe, ich habe dir wenigstens einen guten Anfang gegeben."
+
+#: inc/onboarding/data/TourProfile.php:44
+msgid "Welcome to the \"Profile\" page. Let's keep it brief: here, you can edit your profile. And on we go!"
+msgstr "Willkommen auf der Seite \"Profil\". Machen wir es kurz: Hier kannst du dein Profil bearbeiten. Und weiter geht's!"
+
+#: inc/onboarding/data/TourProfile.php:49
+msgid "Wrap-Up"
+msgstr "Nachbereitung"
+
+#: inc/onboarding/data/TourProfile.php:50
+msgid "And just like that, we're done with another page. Users bring life to your website but also pose certain risks. So be careful about who you give what rights to."
+msgstr "Und schon sind wir mit einer weiteren Seite fertig. Nutzer/innen bringen Leben auf deine Website, bergen aber auch gewisse Risiken. Sei also vorsichtig, wem du welche Rechte gibst."
+
+#: inc/onboarding/data/TourProfile.php:55
+msgid "Tip"
+msgstr "Tipp"
+
+#: inc/onboarding/data/TourProfile.php:56
+msgid "One last tip: there are plugins that enable two-factor authentication. It's an extra layer of security I highly recommend."
+msgstr "Ein letzter Tipp: Es gibt Plugins, die eine Zwei-Faktor-Authentifizierung ermöglichen. Das ist eine zusätzliche Sicherheitsebene, die ich sehr empfehle."
+
+#: inc/onboarding/data/TourSiteEditor.php:44
+msgid "To be totally honest? I can't tell you more about this issue at the moment. There will be more information soon. Hang on!"
+msgstr "Um ganz ehrlich zu sein? Mehr kann ich dir zu diesem Thema im Moment nicht sagen. Es wird bald mehr Informationen geben. Bleib dran!"
+
+#: inc/onboarding/data/TourSiteHealth.php:43
+msgid "Site Health"
+msgstr "Website-Zustand"
+
+#: inc/onboarding/data/TourSiteHealth.php:44
+msgid "In the \"Site Health\" page, you can check out the overall health of your website."
+msgstr "Auf der Seite \"Site Health\" kannst du den allgemeinen Zustand deiner Website überprüfen."
+
+#: inc/onboarding/data/TourSiteHealth.php:49
+msgid "Status"
+msgstr "Status"
+
+#: inc/onboarding/data/TourSiteHealth.php:50
+msgid "Right off the bat, you can see how your website's performance and security are doing. Here, you can also spot any issues that need to be fixed."
+msgstr "Du kannst sofort sehen, wie es um die Leistung und Sicherheit deiner Website bestellt ist. Hier kannst du auch alle Probleme erkennen, die behoben werden müssen."
+
+#: inc/onboarding/data/TourSiteHealth.php:55
+msgid "Report"
+msgstr "Melden"
+
+#: inc/onboarding/data/TourSiteHealth.php:56
+msgid "If you click on the \"Report\" tab, you'll get a detailed breakdown of the technical aspects of your website. Take a look if you're in the mood to be completely baffled!"
+msgstr "Wenn du auf den Reiter \"Bericht\" klickst, erhältst du eine detaillierte Aufschlüsselung der technischen Aspekte deiner Website. Sieh es dir an, wenn du in der Stimmung bist, völlig verblüfft zu sein!"
+
+#: inc/onboarding/data/TourThemeEditor.php:43
+msgid "Edit Themes"
+msgstr "Themen bearbeiten"
+
+#: inc/onboarding/data/TourThemeEditor.php:44
+msgid "The \"Edit Themes\" page allows you to modify the files of your theme."
+msgstr "Auf der Seite \"Themes bearbeiten\" kannst du die Dateien deines Themes ändern."
+
+#: inc/onboarding/data/TourThemeEditor.php:50
+msgid "Here, you can make direct changes to the files of your theme. You should have some programming knowledge if you're going to hang out on this page."
+msgstr "Hier kannst du direkt Änderungen an den Dateien deines Themes vornehmen. Du solltest einige Programmierkenntnisse haben, wenn du dich auf dieser Seite aufhältst."
+
+#: inc/onboarding/data/TourThemeEditor.php:56
+msgid "Be careful! Editing files can damage your website. If you're not sure what you're doing, it's better to avoid this."
+msgstr "Sei vorsichtig! Das Bearbeiten von Dateien kann deine Website beschädigen. Wenn du dir nicht sicher bist, was du tust, ist es besser, dies zu vermeiden."
+
+#: inc/onboarding/data/TourThemeInstall.php:43
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: inc/onboarding/data/TourThemeInstall.php:44
+msgid "It might sound crazy, but on the \"Add Themes\" page, you can... well, add new themes!"
+msgstr "Es mag verrückt klingen, aber auf der Seite \"Themen hinzufügen\" kannst du... nun ja, neue Themen hinzufügen!"
+
+#: inc/onboarding/data/TourThemeInstall.php:49
+msgid "Info"
+msgstr "Info"
+
+#: inc/onboarding/data/TourThemeInstall.php:50
+msgid "When you enter this page, you'll see a selection of the most popular themes. This is super handy since there are more than 10,000 themes to choose from."
+msgstr "Wenn du diese Seite aufrufst, siehst du eine Auswahl der beliebtesten Themen. Das ist sehr praktisch, denn es gibt mehr als 10.000 Themen, aus denen du wählen kannst."
+
+#: inc/onboarding/data/TourThemeInstall.php:55
+msgid "Filters"
+msgstr "Filter"
+
+#: inc/onboarding/data/TourThemeInstall.php:56
+msgid "Of course, you can also filter by different categories or search for a specific theme."
+msgstr "Natürlich kannst du auch nach verschiedenen Kategorien filtern oder nach einem bestimmten Thema suchen."
+
+#: inc/onboarding/data/TourThemeInstall.php:61
+#: inc/onboarding/data/TourThemes.php:67
+msgid "Inactive Themes"
+msgstr "Inaktive Themen"
+
+#: inc/onboarding/data/TourThemeInstall.php:62
+msgid "Hover over a theme that catches your eye to switch to its detailed view. In the detailed view, you can find a lot more info, like user reviews."
+msgstr "Bewege den Mauszeiger über ein Thema, das dir ins Auge sticht, um zur Detailansicht zu wechseln. In der Detailansicht findest du viele weitere Informationen, wie zum Beispiel Nutzerbewertungen."
+
+#: inc/onboarding/data/TourThemes.php:43
+msgid "Design"
+msgstr "Design"
+
+#: inc/onboarding/data/TourThemes.php:44
+msgid "Welcome to the submenu of the \"Appearance\" main menu item. This is where you can manage the appearance and visual presentation of your website."
+msgstr "Willkommen im Untermenü des Hauptmenüpunkts \"Erscheinungsbild\". Hier kannst du das Aussehen und die visuelle Präsentation deiner Website verwalten."
+
+#: inc/onboarding/data/TourThemes.php:49
+msgid "Themes"
+msgstr "Themes"
+
+#: inc/onboarding/data/TourThemes.php:50
+msgid "The \"Themes\" page lets you change the design of your website."
+msgstr "Auf der Seite \"Themes\" kannst du das Design deiner Website ändern."
+
+#: inc/onboarding/data/TourThemes.php:56
+msgid "On the overview page, you'll find a list of all installed themes. Here, you can also see the active theme currently used on your website."
+msgstr "Auf der Übersichtsseite findest du eine Liste mit allen installierten Themes. Hier kannst du auch sehen, welches Theme gerade auf deiner Website verwendet wird."
+
+#: inc/onboarding/data/TourThemes.php:61
+msgid "Active Themes"
+msgstr "Aktive Themen"
+
+#: inc/onboarding/data/TourThemes.php:62
+msgid "Here, you see the active theme. This theme determines the design of your website. This is what your visitors are seeing when they visit your website right now."
+msgstr "Hier siehst du das aktive Thema. Dieses Thema bestimmt das Design deiner Website. Das ist das, was deine Besucher sehen, wenn sie deine Website gerade besuchen."
+
+#: inc/onboarding/data/TourThemes.php:68
+msgid "There are also themes that are installed but not active. You can switch between them by activating an inactive theme, which would then change the design of your website accordingly."
+msgstr "Es gibt auch Themen, die zwar installiert, aber nicht aktiv sind. Du kannst zwischen ihnen wechseln, indem du ein inaktives Theme aktivierst, das dann das Design deiner Website entsprechend verändert."
+
+#: inc/onboarding/data/TourThemes.php:74
+msgid "Use this search feature to look for a specific theme that you've already installed."
+msgstr "Verwende diese Suchfunktion, um nach einem bestimmten Thema zu suchen, das du bereits installiert hast."
+
+#: inc/onboarding/data/TourThemes.php:79
+msgid "Install"
+msgstr "Installieren"
+
+#: inc/onboarding/data/TourThemes.php:80
+msgid "You can also install new themes. Let's take a look at how to do that."
+msgstr "Du kannst auch neue Themen installieren. Schauen wir uns an, wie das geht."
+
+#: inc/onboarding/data/TourTools.php:43
+msgid "Tools"
+msgstr "Werkzeuge"
+
+#: inc/onboarding/data/TourTools.php:44
+msgid "We've just moved into the submenu of the \"Tools\" main menu item. This page provides additional functions and resources, especially for administrators. Let's take a quick look."
+msgstr "Wir sind gerade in das Untermenü des Hauptmenüpunkts \"Extras\" umgezogen. Diese Seite bietet zusätzliche Funktionen und Ressourcen, vor allem für Administratoren. Werfen wir einen kurzen Blick darauf."
+
+#: inc/onboarding/data/TourTools.php:49
+msgid "Available Tools"
+msgstr "Verfügbar"
+
+#: inc/onboarding/data/TourTools.php:50
+msgid "This is the \"Available Tools\" page. Here you'll find a list of tools that can help you manage your website."
+msgstr "Dies ist die Seite \"Verfügbare Tools\". Hier findest du eine Liste von Tools, die dir bei der Verwaltung deiner Website helfen können."
+
+#: inc/onboarding/data/TourTools.php:56
+msgid "This is the overview page for available tools. Here, you can see and manage the tools available to you. They vary depending on the plugins you have installed and your WordPress version."
+msgstr "Dies ist die Übersichtsseite für verfügbare Werkzeuge. Hier kannst du die Tools sehen und verwalten, die dir zur Verfügung stehen. Sie variieren je nach den Plugins, die du installiert hast, und deiner WordPress-Version."
+
+#: inc/onboarding/data/TourUpdateCore.php:43
+msgid "Alright, we're now on the \"Updates\" page of the Dashboard. This is where you'll get to keep your website looking sharp and up-to-date."
+msgstr "Gut, wir sind jetzt auf der Seite \"Updates\" des Dashboards. Hier kannst du dafür sorgen, dass deine Website immer auf dem neuesten Stand ist."
+
+#: inc/onboarding/data/TourUpdateCore.php:44
+msgid "Updates"
+msgstr "Aktualisierungen"
+
+#: inc/onboarding/data/TourUpdateCore.php:49
+msgid "Explanation"
+msgstr "Erklärung"
+
+#: inc/onboarding/data/TourUpdateCore.php:50
+msgid "So, this is where you can spot any new updates waiting for your website. That includes stuff like themes, plugins you've installed and even the WordPress core itself."
+msgstr "Hier kannst du alle neuen Updates für deine Website entdecken. Dazu gehören Dinge wie Themes, Plugins, die du installiert hast, und sogar der WordPress-Kern selbst."
+
+#: inc/onboarding/data/TourUpdateCore.php:55
+msgid "Security Risk"
+msgstr "Sicherheitsrisiko"
+
+#: inc/onboarding/data/TourUpdateCore.php:56
+msgid "Just a little reminder – staying updated is super important! Old software can be a bit risky, security-wise. These updates aren't just about keeping things safe, though; they also bring in cool new features."
+msgstr "Nur eine kleine Erinnerung: Es ist sehr wichtig, auf dem neuesten Stand zu bleiben! Alte Software kann aus Sicherheitsgründen ein gewisses Risiko darstellen. Diese Updates dienen aber nicht nur der Sicherheit, sondern bringen auch coole neue Funktionen mit sich."
+
+#: inc/onboarding/data/TourUpdateCore.php:61
+msgid "Automatic Updates"
+msgstr "Automatische Aktualisierung"
+
+#: inc/onboarding/data/TourUpdateCore.php:62
+msgid "One last tip – you might want to turn on automatic updates. It's a real time-saver and keeps your website on the cutting edge, not to mention secure."
+msgstr "Ein letzter Tipp: Du solltest die automatischen Updates einschalten. Das spart viel Zeit und hält deine Website auf dem neuesten Stand, ganz zu schweigen von der Sicherheit."
+
+#: inc/onboarding/data/TourUpload.php:44
+msgid "We're now in the submenu of the \"Media\" main menu item. This is where you manage all the media files you add to your posts or pages."
+msgstr "Wir befinden uns jetzt im Untermenü des Hauptmenüpunkts \"Medien\". Hier verwaltest du alle Mediendateien, die du zu deinen Beiträgen oder Seiten hinzufügst."
+
+#: inc/onboarding/data/TourUpload.php:49
+msgid "Media Overview"
+msgstr "Medienübersicht"
+
+#: inc/onboarding/data/TourUpload.php:50
+msgid "First up, let's check out your \"Library\". Here, you'll see a summary of all the media you've uploaded so far."
+msgstr "Als Erstes sehen wir uns deine \"Bibliothek\" an. Hier siehst du eine Übersicht über alle Medien, die du bisher hochgeladen hast."
+
+#: inc/onboarding/data/TourUpload.php:55
+msgid "Media Library"
+msgstr "Medienbibliothek"
+
+#: inc/onboarding/data/TourUpload.php:56
+msgid "All uploaded media is stored here. You'll get a visual of all these files with thumbnails, file info, and metadata like titles, descriptions, and alt texts for images."
+msgstr "Alle hochgeladenen Medien werden hier gespeichert. Du erhältst eine Übersicht über all diese Dateien mit Miniaturansichten, Dateiinformationen und Metadaten wie Titel, Beschreibung und Alt-Texte für Bilder."
+
+#: inc/onboarding/data/TourUpload.php:61
+msgid "Details"
+msgstr "Details"
+
+#: inc/onboarding/data/TourUpload.php:62
+msgid "You can also edit the details of your media here. Change file names, add extra information, or tweak the metadata."
+msgstr "Hier kannst du auch die Details deiner Medien bearbeiten. Ändere Dateinamen, füge zusätzliche Informationen hinzu oder passe die Metadaten an."
+
+#: inc/onboarding/data/TourUpload.php:67
+msgid "Filtering and Search"
+msgstr "Filtern und Suchen"
+
+#: inc/onboarding/data/TourUpload.php:68
+msgid "Use filter and search features to quickly find specific media items."
+msgstr "Nutze die Filter- und Suchfunktionen, um schnell bestimmte Medien zu finden."
+
+#: inc/onboarding/data/TourUpload.php:73
+msgid "Uploading"
+msgstr "Wird hochgeladen"
+
+#: inc/onboarding/data/TourUpload.php:74
+msgid "Here's where you can upload new media to your library. Just click the button and drag-and-drop your files in with ease."
+msgstr "Hier kannst du neue Medien in deine Bibliothek hochladen. Klicke einfach auf die Schaltfläche und ziehe deine Dateien ganz einfach per Drag-and-Drop hinein."
+
+#: inc/onboarding/data/TourUser.php:44
+msgid "Welcome to the \"Add New User\" page. Here, you can add users and manage their roles."
+msgstr "Willkommen auf der Seite \"Neuen Benutzer hinzufügen\". Hier kannst du Benutzer hinzufügen und ihre Rollen verwalten."
+
+#: inc/onboarding/data/TourUser.php:50
+msgid "This page is pretty self-explanatory. But be extra careful with assigning roles, as they determine the permissions a user has!"
+msgstr "Diese Seite ist ziemlich selbsterklärend. Aber sei besonders vorsichtig bei der Zuweisung von Rollen, denn sie bestimmen die Berechtigungen, die ein Nutzer hat!"
+
+#: inc/onboarding/data/TourUser.php:56
+msgid "Even the \"Author\" role, in the wrong hands, can cause significant damage to your website, as users with this role can write and publish posts."
+msgstr "Auch die Rolle \"Autor\" kann in den falschen Händen erheblichen Schaden auf deiner Website anrichten, da Nutzer mit dieser Rolle Beiträge schreiben und veröffentlichen können."
+
+#: inc/onboarding/data/TourUser.php:61
+msgid "Tip 3"
+msgstr "Tipp 3"
+
+#: inc/onboarding/data/TourUser.php:62
+msgid "An Administrator can revoke rights from all users... including you! So, be cautious about whom you assign the \"Administrator\" role."
+msgstr "Ein Administrator kann allen Benutzern die Rechte entziehen... auch dir! Sei also vorsichtig, wem du die Rolle \"Administrator\" zuweist."
+
+#: inc/onboarding/data/TourUsers.php:44
+msgid "We're in the submenu that falls under the \"Users\" main menu item. Here, you can manage the users of your website."
+msgstr "Wir befinden uns im Untermenü, das unter dem Hauptmenüpunkt \"Benutzer\" liegt. Hier kannst du die Benutzer deiner Website verwalten."
+
+#: inc/onboarding/data/TourUsers.php:49
+msgid "All Users"
+msgstr "Alle Benutzer"
+
+#: inc/onboarding/data/TourUsers.php:50
+msgid "In the \"All Users\" page, you can see and manage all the users of your website."
+msgstr "Auf der Seite \"Alle Nutzer\" kannst du alle Nutzer deiner Website sehen und verwalten."
+
+#: inc/onboarding/data/TourUsers.php:56
+msgid "On the overview page, you'll find a list of all users who are registered on your website."
+msgstr "Auf der Übersichtsseite findest du eine Liste mit allen Nutzern, die auf deiner Website registriert sind."
+
+#: inc/onboarding/data/TourUsers.php:61
+msgid "User Details"
+msgstr "Benutzerdetails"
+
+#: inc/onboarding/data/TourUsers.php:62
+msgid "Each user is displayed in a table. Apart from their username, you can also see their email address and user role."
+msgstr "Jeder Nutzer wird in einer Tabelle angezeigt. Neben dem Benutzernamen kannst du auch die E-Mail-Adresse und die Benutzerrolle sehen."
+
+#: inc/onboarding/data/TourUsers.php:67
+msgid "User Actions"
+msgstr "Benutzer-Aktionen"
+
+#: inc/onboarding/data/TourUsers.php:68
+msgid "When you hover over a user, a menu appears. Here, you can edit or delete a user. Give it a try!"
+msgstr "Wenn du den Mauszeiger über einen Benutzer bewegst, erscheint ein Menü. Hier kannst du einen Benutzer bearbeiten oder löschen. Probier's mal aus!"
+
+#: inc/onboarding/data/TourUsers.php:73
+msgid "Filter User Groups"
+msgstr "Benutzergruppen filtern"
+
+#: inc/onboarding/data/TourUsers.php:74
+msgid "Here, you can filter by user groups. This is especially useful if you have many users. The filter is dynamic and shows only the user groups that actually exist."
+msgstr "Hier kannst du nach Benutzergruppen filtern. Das ist besonders nützlich, wenn du viele Nutzer hast. Der Filter ist dynamisch und zeigt nur die Benutzergruppen an, die tatsächlich existieren."
+
+#: inc/onboarding/data/TourUsers.php:79
+msgid "Search for Users"
+msgstr "Nach Nutzern suchen"
+
+#: inc/onboarding/data/TourUsers.php:80
+msgid "Of course, you also have the option to search for specific users and roles. This is handy when you have many users."
+msgstr "Natürlich hast du auch die Möglichkeit, nach bestimmten Nutzern und Rollen zu suchen. Das ist praktisch, wenn du viele Nutzer hast."
+
+#: inc/onboarding/data/TourUsers.php:85
+msgid "Add New User"
+msgstr "Neuen Benutzer hinzufügen"
+
+#: inc/onboarding/data/TourUsers.php:86
+msgid "Here's where you can add new users. Let's check it out!"
+msgstr "Hier kannst du neue Benutzer hinzufügen. Probieren wir es aus!"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:43
+msgid "Task Overview"
+msgstr "Aufgabenübersicht"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:44
+msgid "This page, \"Tasks\", provides an overview of the tasks you've completed and those still awaiting your attention."
+msgstr "Auf der Seite \"Aufgaben\" findest du einen Überblick über die Aufgaben, die du erledigt hast und die, die noch auf deine Aufmerksamkeit warten."
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:50
+msgid "On the overview page, you can see all tasks. It shows which tasks you've completed and which ones remain. Additionally, you can see how many pearls you'll earn for completing each task."
+msgstr "Auf der Übersichtsseite kannst du alle Aufgaben sehen. Sie zeigt dir, welche Aufgaben du bereits erledigt hast und welche noch ausstehen. Außerdem kannst du sehen, wie viele Perlen du für jede Aufgabe erhältst."
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:55
+msgid "Conclusion!!!"
+msgstr "Fazit!!!"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:56
+msgid "Guess what? We're done! I've shared everything I know with you. I hope you had some fun and learned a bit along the way. I'm glad you stuck with me until the end!"
+msgstr "Weißt du was? Wir sind fertig! Ich habe alles, was ich weiß, mit dir geteilt. Ich hoffe, du hattest Spaß und hast ein bisschen was dabei gelernt. Ich bin froh, dass du bis zum Ende durchgehalten hast!"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:61
+msgid "Feedback"
+msgstr "Feedback"
+
+#: inc/onboarding/data/TourWapuugotchiQuest.php:62
+msgid "I would be thrilled if you could leave some feedback for my developers. It helps them improve me and better assist you in the future."
+msgstr "Ich würde mich sehr freuen, wenn du meinen Entwicklern ein Feedback geben könntest. Es hilft ihnen, mich zu verbessern und dich in Zukunft besser zu unterstützen."
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:44
+msgid "Welcome to the most entertaining page of all... My page! 😄 Well, it's not exactly essential, but it's fun! Let's take a look."
+msgstr "Willkommen auf der unterhaltsamsten Seite von allen... Meiner Seite! 😄 Na ja, sie ist nicht unbedingt notwendig, aber sie macht Spaß! Schauen wir uns das mal an."
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:49
+msgid "Customize"
+msgstr "Individuell anpassen"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:50
+msgid "On this page, you can customize the appearance. You also have the opportunity to give me a name."
+msgstr "Auf dieser Seite kannst du das Aussehen anpassen. Du hast auch die Möglichkeit, mir einen Namen zu geben."
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:56
+msgid "Here, you can adjust my appearance. You can change my hairstyle, make me wear glasses, or dress me in a new t-shirt. I'm curious to see what you'll do!"
+msgstr "Hier kannst du mein Aussehen anpassen. Du kannst meine Frisur ändern, mir eine Brille aufsetzen oder mir ein neues T-Shirt anziehen. Ich bin gespannt, was du tun wirst!"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:62
+msgid "The items you can equip me with are divided into categories. Check back often, as new items are continuously added!"
+msgstr "Die Gegenstände, mit denen du mich ausstatten kannst, sind in Kategorien unterteilt. Schau regelmäßig vorbei, denn es kommen ständig neue Gegenstände hinzu!"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:67
+msgid "Items"
+msgstr "Artikel"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:68
+msgid "Here, you can view all items in a category. Clicking an item will equip it on me. Some items are already unlocked, while others need to be unlocked."
+msgstr "Hier kannst du alle Gegenstände in einer Kategorie sehen. Wenn du auf einen Gegenstand klickst, rüstest du ihn auf. Einige Gegenstände sind bereits freigeschaltet, während andere erst freigeschaltet werden müssen."
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:73
+msgid "Pearls"
+msgstr "Perlen"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:74
+msgid "Here, you can see how many pearls you have. Pearls are the currency used to unlock new items. You earn pearls by completing tasks."
+msgstr "Hier kannst du sehen, wie viele Perlen du hast. Perlen sind die Währung, mit der du neue Gegenstände freischalten kannst. Du verdienst Perlen, indem du Aufgaben erfüllst."
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:79
+msgid "Community Items"
+msgstr "Gemeinschaftsartikel"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:80
+msgid "Many of the items were created by the WordPress community. You can see the creator's name when you want to unlock an item."
+msgstr "Viele der Artikel wurden von der WordPress-Community erstellt. Du kannst den Namen des Erstellers sehen, wenn du einen Artikel freischalten willst."
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:85
+msgid "How does it work?"
+msgstr "Wie funktioniert das?"
+
+#: inc/onboarding/data/TourWapuugotchiShop.php:86
+msgid "Press ► to see how does it work!"
+msgstr "Drücke ► um zu sehen, wie es funktioniert!"
+
+#: inc/quest/Menu.php:37
+msgid "Quest Log"
+msgstr "Quest Log"
+
+#: inc/quest/data/QuestContent.php:120
+msgid "Create 3 posts"
+msgstr "3 Beiträge erstellen"
+
+#: inc/quest/data/QuestContent.php:120
+msgid "You created 3 posts!!"
+msgstr "Du hast 3 Beiträge erstellt!!"
+
+#: inc/quest/data/QuestContent.php:121
+msgid "Create 5 posts"
+msgstr "5 Beiträge erstellen"
+
+#: inc/quest/data/QuestContent.php:121
+msgid "You created 5 posts!!"
+msgstr "Du hast 5 Beiträge erstellt!!"
+
+#: inc/quest/data/QuestContent.php:122
+msgid "Create 7 posts"
+msgstr "7 Beiträge erstellen"
+
+#: inc/quest/data/QuestContent.php:122
+msgid "You created 7 posts!!"
+msgstr "Du hast 7 Beiträge erstellt!!"
+
+#: inc/quest/data/QuestContent.php:123
+msgid "Create 10 posts"
+msgstr "10 Beiträge erstellen"
+
+#: inc/quest/data/QuestContent.php:123
+msgid "You created 10 posts!!"
+msgstr "Du hast 10 Beiträge erstellt!!"
+
+#: inc/quest/data/QuestContent.php:124
+msgid "Create 3 pages"
+msgstr "3 Seiten erstellen"
+
+#: inc/quest/data/QuestContent.php:124
+msgid "You created 3 pages!!"
+msgstr "Du hast 3 Seiten erstellt!!"
+
+#: inc/quest/data/QuestContent.php:125
+msgid "Create 5 pages"
+msgstr "5 Seiten erstellen"
+
+#: inc/quest/data/QuestContent.php:125
+msgid "You created 5 pages!!"
+msgstr "Du hast 5 Seiten erstellt!!"
+
+#: inc/quest/data/QuestContent.php:126
+msgid "Create 7 pages"
+msgstr "7 Seiten erstellen"
+
+#: inc/quest/data/QuestContent.php:126
+msgid "You created 7 pages!!"
+msgstr "Du hast 7 Seiten erstellt!!"
+
+#: inc/quest/data/QuestContent.php:127
+msgid "Get 2 comment"
+msgstr "2 Kommentare erhalten"
+
+#: inc/quest/data/QuestContent.php:127
+msgid "Cool, we get some attention. &#10024;"
+msgstr "Cool, wir bekommen etwas Aufmerksamkeit. ✨"
+
+#: inc/quest/data/QuestContent.php:128
+msgid "Get 5 comments"
+msgstr "5 Kommentare erhalten"
+
+#: inc/quest/data/QuestContent.php:128
+msgid "We get more and more attention. &#10024;"
+msgstr "Wir bekommen mehr und mehr Aufmerksamkeit. ✨"
+
+#: inc/quest/data/QuestContent.php:129
+msgid "Get 10 comments"
+msgstr "10 Kommentare erhalten"
+
+#: inc/quest/data/QuestContent.php:129
+msgid "Oh my god!"
+msgstr "Oh mein Gott!"
+
+#: inc/quest/data/QuestContent.php:129
+msgid "We are starting to become famous. &#127775;"
+msgstr "Wir sind dabei, berühmt zu werden. 🌟"
+
+#: inc/quest/data/QuestDate.php:146
+msgid "Log in on 10 different days"
+msgstr "An 10 verschiedenen Tagen anmelden"
+
+#: inc/quest/data/QuestDate.php:146
+msgid "Nice, you logged in for 10 consecutive days!"
+msgstr "Schön, du hast dich 10 Tage hintereinander angemeldet!"
+
+#: inc/quest/data/QuestDate.php:147
+msgid "Log in on 20 different days"
+msgstr "An 20 verschiedenen Tagen anmelden"
+
+#: inc/quest/data/QuestDate.php:147
+msgid "Nice, you logged in for 20 consecutive days!"
+msgstr "Schön, du hast dich 20 Tage hintereinander angemeldet!"
+
+#: inc/quest/data/QuestDate.php:148
+msgid "Log in on 30 different days"
+msgstr "An 30 verschiedenen Tagen anmelden"
+
+#: inc/quest/data/QuestDate.php:148
+msgid "Nice, you logged in for 30 consecutive days!"
+msgstr "Schön, du hast dich 30 Tage lang ununterbrochen angemeldet!"
+
+#: inc/quest/data/QuestDate.php:149
+msgid "Log in on 40 different days"
+msgstr "An 40 verschiedenen Tagen anmelden"
+
+#: inc/quest/data/QuestDate.php:149
+msgid "Nice, you logged in for 40 consecutive days!"
+msgstr "Schön, du hast dich 40 Tage in Folge angemeldet!"
+
+#: inc/quest/data/QuestDate.php:150
+msgid "Log in on 50 different days"
+msgstr "An 50 verschiedenen Tagen anmelden"
+
+#: inc/quest/data/QuestDate.php:150
+msgid "Nice, you logged in for 50 consecutive days!"
+msgstr "Schön, du hast dich 50 Tage hintereinander eingeloggt!"
+
+#: inc/quest/data/QuestPlugin.php:119
+msgid "Activate a SEO plugin"
+msgstr "Aktiviere ein SEO-Plugin"
+
+#: inc/quest/data/QuestPlugin.php:119
+msgid "Awesome! &#128261;"
+msgstr "Fantastisch! 🔅"
+
+#: inc/quest/data/QuestPlugin.php:119
+msgid "You've installed a SEO plugin. Let's add some keywords so that search engines can find us better."
+msgstr "Du hast ein SEO-Plugin installiert. Lass uns ein paar Schlüsselwörter hinzufügen, damit die Suchmaschinen uns besser finden können."
+
+#: inc/quest/data/QuestPlugin.php:120
+msgid "Activate a caching plugin"
+msgstr "Aktiviere ein Caching-Plugin"
+
+#: inc/quest/data/QuestPlugin.php:120
+msgid "Fantastic! &#128171;"
+msgstr "Fantastisch! &#128171;"
+
+#: inc/quest/data/QuestPlugin.php:120
+msgid "You've installed a caching plugin. This way we can increase the speed of our website."
+msgstr "Du hast ein Caching-Plugin installiert. So steigern wir die Geschwindigkeit unserer Website."
+
+#: inc/quest/data/QuestPlugin.php:121
+msgid "Activate a security plugin"
+msgstr "Aktiviere ein Security-Plugin"
+
+#: inc/quest/data/QuestPlugin.php:121
+msgid "Great!"
+msgstr "Super!"
+
+#: inc/quest/data/QuestPlugin.php:121
+msgid "You've installed a security plugin! This will help protecting me from villains. &#128170;"
+msgstr "Du hast ein Security-Plugin installiert! Das wird mir helfen, mich vor Bösewichten zu schützen. &#128170;"
+
+#: inc/quest/data/QuestStart.php:39
+msgid "Welcome to Wapuugotchi"
+msgstr "Willkommen bei WapuuGotchi"
+
+#: inc/quest/data/QuestStart.php:39
+msgid "Thank you for giving me a home! &#10084;&#65039;"
+msgstr "Danke, dass du mir ein Zuhause gibst! &#10084;&#65039;"
+
+#: inc/quest/data/QuestTheme.php:48
+msgid "Remove all unused themes"
+msgstr "Entferne alle nicht genutzten Themes"
+
+#: inc/quest/data/QuestTheme.php:48
+msgid "You cleaned up! &#129529;"
+msgstr "Du hast aufgeräumt! &#129529;"
+
+#: inc/shop/Menu.php:37
+msgid "Shop"
+msgstr "Shop"
+
+#. Description of the plugin/theme
+msgid "Meet Your Personalized Wapuu Assistant."
+msgstr "Triff deinen personalisierten Wapuu-Assistenten."
+
+#. Author of the plugin/theme
+msgid "wapuugotchi"
+msgstr "wapuugotchi"
+
+#. Author URI of the plugin/theme
+msgid "https://wapuugotchi.com/"
+msgstr "https://wapuugotchi.com/"
+
+#~ msgid "Completed"
+#~ msgstr "Abgeschlossen"

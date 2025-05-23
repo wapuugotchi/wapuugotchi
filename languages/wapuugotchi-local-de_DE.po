@@ -4201,7 +4201,7 @@ msgstr "Willkommen bei Wapuugotchi"
 
 #: inc/quest/data/QuestStart.php:39
 msgid "Thank you for giving me a home! &#10084;&#65039;"
-msgstr "Danke, dass Sie mir ein Zuhause geben! &#10084;&#65039;"
+msgstr "Danke, dass du mir ein Zuhause gibst! &#10084;&#65039;"
 
 #: inc/quest/data/QuestTheme.php:48
 msgid "Remove all unused themes"

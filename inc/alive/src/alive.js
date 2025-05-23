@@ -25,7 +25,7 @@ export default class Alive {
 	 * Starts the animation of the avatar.
 	 */
 	animateAvatar = () => {
-		this.waitForElement( '#wapuugotchi_type__wapuu' ).then( ( element ) => {
+		this.waitForElement( 'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear, g#wapuugotchi_type__rabbit, g#wapuugotchi_type__squirrel' ).then( ( element ) => {
 			if ( ! element ) {
 				return;
 			}

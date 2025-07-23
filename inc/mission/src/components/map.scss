@@ -1,11 +1,61 @@
+:root {
+	--marker-color: #009900;
+	--marker-attention-color: #00dd00;
+}
+
+@keyframes markerAttention {
+	0%, 100% {
+		fill: var(--marker-color);
+		transform: translateY(0);
+	}
+	20% {
+		fill: var(--marker-attention-color);
+		transform: translateY(-8px);
+	}
+	40% {
+		fill: var(--marker-color);
+		transform: translateY(0);
+	}
+	60% {
+		fill: var(--marker-attention-color);
+		transform: translateY(-6px);
+	}
+	80% {
+		fill: var(--marker-color);
+		transform: translateY(0);
+	}
+}
+
 .wapuugotchi_missions__map {
 	padding: 16px;
+	position: relative;
+
+	.cooldownTimer {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 150px;
+		background-color: rgba(0, 0, 0, 0.6);
+		color: white;
+		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 20px;
+		padding: 15px 0;
+
+		img {
+			margin-top: 10px;
+		}
+	}
 
 	#mission_section {
 		cursor: default;
 		pointer-events: none;
 
 		text.active {
+			fill: var(--marker-color);
+			animation: markerAttention 2s 2s 4;
 			pointer-events: none;
 
 			&:not(.completed) {

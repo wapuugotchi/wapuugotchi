@@ -76,6 +76,7 @@ class Manager {
 						'reward'      => $mission->reward,
 						'description' => $mission->markers[ $user_data['progress'] ] ?? '',
 						'map'         => MapHandler::get_map_svg_by_id( $mission->id ),
+						'cooldown'    => $this->get_time_left(),
 						'action'      => $action,
 						'nonce_list'  => $this->get_nonces(),
 						'completed'   => false,
@@ -89,6 +90,26 @@ class Manager {
 
 		// set an entrypoint to load the script of the selected action (for example minigames).
 		do_action( 'wapuugotchi_mission__enqueue_scripts', $action );
+	}
+
+	/**
+	 * Get the time left until the next mission can be started.
+	 *
+	 * @return int The number of hours left until the next mission can be started.
+	 */
+	private function get_time_left() {
+		$timezone = new \DateTimeZone( \wp_timezone_string() );
+		$now = new \DateTime( 'now', $timezone );
+
+		// Annahme: get_unlock_time() gibt einen Timestamp (int) zurück
+		$unlock = MissionHandler::get_unlock_time();
+		$diff_seconds = $unlock->getTimestamp() - $now->getTimestamp();
+
+		if ( $diff_seconds <= 0 ) {
+			return 0;
+		}
+
+		return (int) ceil( $diff_seconds / 3600 );
 	}
 
 	/**

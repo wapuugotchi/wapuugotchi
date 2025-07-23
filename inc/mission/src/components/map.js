@@ -3,13 +3,44 @@ import { useEffect, useRef } from '@wordpress/element';
 import { useSelect } from '@wordpress/data';
 import { STORE_NAME } from '../store';
 import { SVG } from '@wordpress/primitives';
+import Schloss from './assets/schloss.svg';
+import { _n } from '@wordpress/i18n';
+
+function createCooldown(hours, className) {
+	const cooldown = document.createElement('div');
+	cooldown.classList.add(className);
+
+	const img = document.createElement('img');
+	img.src = Schloss;
+	img.alt = 'Schloss';
+	img.style.width = '24px';
+	img.style.verticalAlign = 'middle';
+
+	const text = document.createElement('p');
+	text.textContent = sprintf(
+		// translators: %d: Anzahl der Stunden
+		_n(
+			'%d hour left',
+			'%d hours left',
+			hours,
+			'wapuugotchi'
+		),
+		hours
+	);
+
+	cooldown.appendChild(img);
+	cooldown.appendChild(text);
+
+	return cooldown;
+}
 
 export default function Map() {
-	const { map, completed, progress } = useSelect( ( select ) => {
+	const { map, completed, progress, cooldown } = useSelect( ( select ) => {
 		return {
 			map: select( STORE_NAME ).getMap(),
 			completed: select( STORE_NAME ).getCompleted(),
 			progress: select( STORE_NAME ).getProgress(),
+			cooldown: select( STORE_NAME ).getCooldown(),
 		};
 	} );
 
@@ -77,6 +108,7 @@ export default function Map() {
 			return;
 		}
 
+		const cooldownClass = 'cooldownTimer';
 		const allMissions = svgElement.querySelectorAll(
 			'#mission_section text'
 		);
@@ -92,12 +124,15 @@ export default function Map() {
 			allMissions[ x ].style.fontSize = '35px';
 		}
 
-		if ( ! missionSection ) {
-			if ( allMissions[ progress - 1 ] ) {
-				allMissions[ progress - 1 ].textContent = '✔';
-				allMissions[ progress - 1 ].style.fill = '#009900';
-				allMissions[ progress - 1 ].style.opacity = 1;
-				allMissions[ progress - 1 ].style.fontSize = '50px';
+		if ( ! missionSection && allMissions[ progress - 1 ] ) {
+			allMissions[ progress - 1 ].textContent = '✔';
+			allMissions[ progress - 1 ].style.fill = '#009900';
+			allMissions[ progress - 1 ].style.opacity = 1;
+			allMissions[ progress - 1 ].style.fontSize = '50px';
+
+			const parent = svgElement.parentElement;
+			if (!parent.querySelector('.' + cooldownClass)) {
+				parent.appendChild(createCooldown(cooldown, cooldownClass));
 			}
 		} else if ( completed === true ) {
 			missionSection.textContent = '✔';
@@ -105,9 +140,14 @@ export default function Map() {
 			missionSection.style.opacity = 1;
 			missionSection.style.fontSize = '50px';
 			missionSection.classList.add( 'completed' );
+			missionSection.classList.remove( 'active' );
+			const parent = svgElement.parentElement;
+			if (!parent.querySelector('.' + cooldownClass)) {
+				parent.appendChild(createCooldown(cooldown, cooldownClass));
+			}
 		} else {
 			missionSection.textContent = '';
-			missionSection.style.fill = '#009900';
+			missionSection.style.fill = 'var(--marker-start-color)';
 			missionSection.style.opacity = 1;
 			missionSection.style.fontSize = '50px';
 		}

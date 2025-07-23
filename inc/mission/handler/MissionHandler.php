@@ -197,13 +197,25 @@ class MissionHandler {
 		if ( $now_date_time->getTimestamp() < $mission_data['date'] ) {
 			return false;
 		}
-		$midnight_date_time       = new \DateTime( 'tomorrow midnight', $timezone );
+		$midnight_date_time       = self::get_unlock_time();
 		$mission_data['date']     = $midnight_date_time->getTimestamp();
 		$mission_data['progress'] = (int) $mission_data['progress'] + 1;
 
 		\update_user_meta( \get_current_user_id(), self::MISSION_KEY, $mission_data );
 
 		return true;
+	}
+
+	/**
+	 * Gets the unlock time for the next mission.
+	 *
+	 * @return \DateTime The unlock time for the next mission.
+	 * @throws \Exception If the current date cannot be retrieved.
+	 */
+	public static function get_unlock_time() {
+		$timezone      = new \DateTimeZone( \wp_timezone_string() );
+		return new \DateTime( 'tomorrow midnight', $timezone );
+
 	}
 
 	/**

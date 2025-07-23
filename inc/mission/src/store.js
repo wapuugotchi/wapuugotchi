@@ -151,6 +151,7 @@ function create() {
 			getMap: ( state ) => state.map,
 			getNonceList: ( state ) => state.nonce_list,
 			getCompleted: ( state ) => state.completed,
+			getCooldown: ( state ) => state.cooldown,
 		},
 	} );
 

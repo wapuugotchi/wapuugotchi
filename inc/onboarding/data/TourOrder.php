@@ -61,6 +61,7 @@ class TourOrder {
 			'\Wapuugotchi\Onboarding\Data\TourOptionsPrivacy',
 			'\Wapuugotchi\Onboarding\Data\TourWapuugotchiShop',
 			'\Wapuugotchi\Onboarding\Data\TourWapuugotchiQuest',
+			'\Wapuugotchi\Onboarding\Data\TourWapuugotchiMission',
 		);
 
 		return array_merge( $elements, $element );

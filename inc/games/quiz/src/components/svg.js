@@ -86,11 +86,11 @@ export default function Svg() {
 
 			if ( index === quiz.position ) {
 				textBox.setAttribute( 'fill', '#090' );
-				appendTagsToElement( textBox, quiz.agreement, 155 );
+				appendTagsToElement( textBox, quiz.agreement, 165 );
 				setCompletedState( true );
 			} else {
 				textBox.setAttribute( 'fill', '#900' );
-				appendTagsToElement( textBox, quiz.disagreement, 155 );
+				appendTagsToElement( textBox, quiz.disagreement, 165 );
 				setWrong( true );
 			}
 		},

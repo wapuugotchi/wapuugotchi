@@ -1,6 +1,6 @@
 import { appendTagsToElement } from './textUtils';
 
-const x = 155;
+const x = 165;
 const y = 250;
 
 // Other SVG-related functions...

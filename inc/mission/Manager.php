@@ -27,6 +27,17 @@ class Manager {
 		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 5 );
 		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
 		\add_action( 'load-toplevel_page_wapuugotchi', array( $this, 'init' ), 100 );
+
+		\add_action( 'current_screen', array( $this, 'start_tour_once' ) );
+	}
+
+	public function start_tour_once( $screen ) {
+
+		if ( 'toplevel_page_wapuugotchi' === $screen->id && ! \get_user_meta( \get_current_user_id(), 'wapuugotchi_mission_tour_once', true ) ) {
+			\update_user_meta( \get_current_user_id(), 'wapuugotchi_mission_tour_once', true );
+			\wp_safe_redirect( \admin_url( 'admin.php?page=wapuugotchi&onboarding_mode=single' ));
+			exit;
+		}
 	}
 
 	/**

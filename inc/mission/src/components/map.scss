@@ -55,7 +55,7 @@
 
 		text.active {
 			fill: var(--marker-color);
-			animation: markerAttention 2s 2s 4;
+			animation: markerAttention 2s 2s infinite;
 			pointer-events: none;
 
 			&:not(.completed) {

@@ -109,7 +109,157 @@ class AvatarHandler {
 	 * @return void
 	 */
 	public static function update_avatar_svg( $svg ) {
-		self::update( self::AVATAR_SVG_KEY, $svg );
+		$sanitized_svg = self::sanitize_svg( $svg );
+		self::update( self::AVATAR_SVG_KEY, $sanitized_svg );
+	}
+
+	/**
+	 * Sanitize SVG content to prevent XSS attacks.
+	 *
+	 * @param string $svg The SVG content to sanitize.
+	 *
+	 * @return string The sanitized SVG content.
+	 */
+	private static function sanitize_svg( $svg ) {
+		// Define allowed SVG tags and attributes.
+		$allowed_tags = array(
+			'svg'        => array(
+				'xmlns'       => true,
+				'viewbox'     => true,
+				'width'       => true,
+				'height'      => true,
+				'fill'        => true,
+				'class'       => true,
+				'id'          => true,
+				'x'           => true,
+				'y'           => true,
+				'version'     => true,
+				'xmlns:xlink' => true,
+			),
+			'g'          => array(
+				'id'        => true,
+				'class'     => true,
+				'transform' => true,
+				'fill'      => true,
+				'stroke'    => true,
+				'opacity'   => true,
+			),
+			'path'       => array(
+				'd'         => true,
+				'fill'      => true,
+				'stroke'    => true,
+				'class'     => true,
+				'id'        => true,
+				'transform' => true,
+				'opacity'   => true,
+			),
+			'circle'     => array(
+				'cx'        => true,
+				'cy'        => true,
+				'r'         => true,
+				'fill'      => true,
+				'stroke'    => true,
+				'class'     => true,
+				'id'        => true,
+				'transform' => true,
+			),
+			'ellipse'    => array(
+				'cx'        => true,
+				'cy'        => true,
+				'rx'        => true,
+				'ry'        => true,
+				'fill'      => true,
+				'stroke'    => true,
+				'class'     => true,
+				'id'        => true,
+				'transform' => true,
+			),
+			'rect'       => array(
+				'x'         => true,
+				'y'         => true,
+				'width'     => true,
+				'height'    => true,
+				'fill'      => true,
+				'stroke'    => true,
+				'class'     => true,
+				'id'        => true,
+				'rx'        => true,
+				'ry'        => true,
+				'transform' => true,
+			),
+			'line'       => array(
+				'x1'     => true,
+				'y1'     => true,
+				'x2'     => true,
+				'y2'     => true,
+				'stroke' => true,
+				'class'  => true,
+				'id'     => true,
+			),
+			'polyline'   => array(
+				'points' => true,
+				'fill'   => true,
+				'stroke' => true,
+				'class'  => true,
+				'id'     => true,
+			),
+			'polygon'    => array(
+				'points' => true,
+				'fill'   => true,
+				'stroke' => true,
+				'class'  => true,
+				'id'     => true,
+			),
+			'text'       => array(
+				'x'         => true,
+				'y'         => true,
+				'fill'      => true,
+				'class'     => true,
+				'id'        => true,
+				'transform' => true,
+			),
+			'tspan'      => array(
+				'x'     => true,
+				'y'     => true,
+				'fill'  => true,
+				'class' => true,
+				'id'    => true,
+			),
+			'defs'       => array(),
+			'use'        => array(
+				'href'       => true,
+				'xlink:href' => true,
+				'x'          => true,
+				'y'          => true,
+				'transform'  => true,
+			),
+			'clipPath'   => array(
+				'id' => true,
+			),
+			'linearGradient' => array(
+				'id' => true,
+			),
+			'radialGradient' => array(
+				'id' => true,
+			),
+			'stop'       => array(
+				'offset'     => true,
+				'stop-color' => true,
+				'stop-opacity' => true,
+			),
+		);
+
+		// Sanitize using wp_kses with allowed SVG tags.
+		$sanitized = \wp_kses( $svg, $allowed_tags );
+
+		// Additional security: Remove any javascript: or data: protocols.
+		$sanitized = preg_replace( '/javascript:/i', '', $sanitized );
+		$sanitized = preg_replace( '/data:text\/html/i', '', $sanitized );
+
+		// Remove event handlers that might have slipped through.
+		$sanitized = preg_replace( '/\s*on\w+\s*=\s*["\'][^"\']*["\']/i', '', $sanitized );
+
+		return $sanitized;
 	}
 
 	/**

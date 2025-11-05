@@ -33,6 +33,9 @@ function init() {
 
 	require_once $autoloader;
 
+	// Initialize security features.
+	\Wapuugotchi\Core\Security::init();
+
 	// Core features.
 	new \Wapuugotchi\Core\Menu();
 	new \Wapuugotchi\Core\AdminBar();

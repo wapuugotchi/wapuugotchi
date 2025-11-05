@@ -7,6 +7,7 @@
 
 namespace Wapuugotchi\Avatar;
 
+use Wapuugotchi\Core\Capabilities;
 use Wapuugotchi\Avatar\Handler\BubbleHandler;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -46,7 +47,7 @@ class Api {
 	 * @return bool
 	 */
 	public static function has_dismiss_message_permission() {
-		return \is_user_logged_in();
+		return Capabilities::can_use_wapuugotchi();
 	}
 
 	/**

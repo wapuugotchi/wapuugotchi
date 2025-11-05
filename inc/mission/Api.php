@@ -7,6 +7,7 @@
 
 namespace Wapuugotchi\Mission;
 
+use Wapuugotchi\Core\Capabilities;
 use Wapuugotchi\Mission\Handler\ActionHandler;
 use Wapuugotchi\Mission\Handler\MissionHandler;
 
@@ -47,7 +48,7 @@ class Api {
 	 * @return bool
 	 */
 	public static function set_completed_permissions() {
-		return \is_user_logged_in();
+		return Capabilities::can_use_missions();
 	}
 
 	/**

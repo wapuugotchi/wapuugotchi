@@ -71,14 +71,39 @@ class Api {
 	 */
 	public static function update_purchases( $req ) {
 
+		// Verify nonce for CSRF protection.
+		if ( ! isset( $req['nonce'] ) ) {
+			return rest_ensure_response(
+				new \WP_REST_Response(
+					array(
+						'status'  => '400',
+						'message' => 'nonce not set',
+					),
+					400
+				)
+			);
+		}
+
+		if ( ! wp_verify_nonce( $req['nonce'], 'wapuugotchi_shop' ) ) {
+			return rest_ensure_response(
+				new \WP_REST_Response(
+					array(
+						'status'  => '403',
+						'message' => 'nonce not valid',
+					),
+					403
+				)
+			);
+		}
+
 		if ( ! isset( $req['item'] ) || ! isset( $req['item']['key'], $req['item']['category'] ) ) {
 			return rest_ensure_response(
 				new \WP_REST_Response(
 					array(
-						'status'  => '404',
+						'status'  => '400',
 						'message' => 'missing parameters',
 					),
-					404
+					400
 				)
 			);
 		}
@@ -154,6 +179,44 @@ class Api {
 	 * @return \WP_REST_Response
 	 */
 	public static function update_avatar( $req ) {
+		// Verify nonce for CSRF protection.
+		if ( ! isset( $req['nonce'] ) ) {
+			return rest_ensure_response(
+				new \WP_REST_Response(
+					array(
+						'status'  => '400',
+						'message' => 'nonce not set',
+					),
+					400
+				)
+			);
+		}
+
+		if ( ! wp_verify_nonce( $req['nonce'], 'wapuugotchi_shop' ) ) {
+			return rest_ensure_response(
+				new \WP_REST_Response(
+					array(
+						'status'  => '403',
+						'message' => 'nonce not valid',
+					),
+					403
+				)
+			);
+		}
+
+		// Validate required parameters.
+		if ( ! isset( $req['avatar'] ) || ! isset( $req['svg'] ) ) {
+			return rest_ensure_response(
+				new \WP_REST_Response(
+					array(
+						'status'  => '400',
+						'message' => 'missing parameters',
+					),
+					400
+				)
+			);
+		}
+
 		AvatarHandler::update_avatar_config( $req['avatar'] );
 		AvatarHandler::update_avatar_svg( $req['svg'] );
 

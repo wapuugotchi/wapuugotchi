@@ -79,7 +79,7 @@ function create() {
 			switch ( type ) {
 				case '__SET_STATE': {
 					return {
-						state,
+						...state,
 						...payload,
 					};
 				}
@@ -151,6 +151,7 @@ function create() {
 						path: `wapuugotchi/v1/wapuugotchi/shop/unlock-item`,
 						method: 'POST',
 						data: {
+							nonce: select.getNonce(),
 							item: {
 								key: item.meta.key,
 								category: select.getSelectedCategory(),
@@ -217,6 +218,9 @@ function create() {
 			},
 			getSelectedCategory( state ) {
 				return state.selectedCategory;
+			},
+			getNonce( state ) {
+				return state.nonce;
 			},
 		},
 	} );

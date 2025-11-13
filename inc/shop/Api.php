@@ -7,6 +7,7 @@
 
 namespace Wapuugotchi\Shop;
 
+use Wapuugotchi\Core\Capabilities;
 use Wapuugotchi\Shop\Handler\AvatarHandler;
 use Wapuugotchi\Shop\Handler\BalanceHandler;
 use Wapuugotchi\Shop\Handler\ItemHandler;
@@ -37,7 +38,7 @@ class Api {
 			array(
 				'methods'             => 'POST',
 				'callback'            => array( self::class, 'raise_balance' ),
-				'permission_callback' => 'is_user_logged_in',
+				'permission_callback' => array( Capabilities::class, 'can_earn_balance' ),
 			)
 		);
 
@@ -47,7 +48,7 @@ class Api {
 			array(
 				'methods'             => 'POST',
 				'callback'            => array( self::class, 'update_purchases' ),
-				'permission_callback' => 'is_user_logged_in',
+				'permission_callback' => array( Capabilities::class, 'can_use_shop' ),
 			)
 		);
 
@@ -57,7 +58,7 @@ class Api {
 			array(
 				'methods'             => 'POST',
 				'callback'            => array( self::class, 'update_avatar' ),
-				'permission_callback' => 'is_user_logged_in',
+				'permission_callback' => array( Capabilities::class, 'can_use_shop' ),
 			)
 		);
 	}

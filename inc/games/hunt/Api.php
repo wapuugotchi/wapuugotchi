@@ -7,6 +7,7 @@
 
 namespace Wapuugotchi\Hunt;
 
+use Wapuugotchi\Core\Capabilities;
 use Wapuugotchi\Hunt\Handler\HuntHandler;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -63,7 +64,7 @@ class Api {
 	 * @return bool
 	 */
 	public static function has_permission() {
-		return \is_user_logged_in();
+		return Capabilities::can_use_wapuugotchi();
 	}
 
 	/**

@@ -30,7 +30,9 @@ export default function Bubble() {
 
 	const updatePosition = useCallback( () => {
 		const container = document.getElementById( 'wapuugotchi__avatar' );
-		const target = container?.querySelector( 'div.wapuugotchi__svg > svg > g' );
+		const target = container?.querySelector(
+			'div.wapuugotchi__svg > svg > g'
+		);
 		const bubble = container?.querySelector( '.wapuugotchi__bubble' );
 
 		if ( ! container || ! target || ! bubble ) {
@@ -61,7 +63,11 @@ export default function Bubble() {
 		<div
 			className={ `wapuugotchi__bubble fade_in_lazy ${ messages[ 0 ].type }_bubble` }
 			onClick={ handleClickMessage }
-			style={ topOffset !== null ? { top: `${ topOffset - 10 }px` } : undefined }
+			style={
+				topOffset !== null
+					? { top: `${ topOffset - 10 }px` }
+					: undefined
+			}
 		>
 			{ parse( messages[ 0 ].message ) }
 		</div>

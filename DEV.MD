@@ -1,0 +1,9 @@
+\delete_user_meta( 1, 'wapuugotchi_shop_svg');
+\delete_user_meta( 1, 'wapuugotchi_mission_tour_once');
+\delete_user_meta( 1, 'wapuugotchi_onboarding_autostart_executed');
+\delete_user_meta( 1, 'wapuugotchi_quest_completed');
+\delete_user_meta( 1, 'wapuugotchi_quest_meta');
+\delete_user_meta( 1, 'wapuugotchi_balance');
+\delete_user_meta( 1, 'wapuugotchi_hunt_current');
+\delete_user_meta( 1, 'wapuugotchi_mission');
+\delete_user_meta( 1, 'wapuugotchi_shop_avatar_config');

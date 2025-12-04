@@ -25,6 +25,7 @@ class Helper {
 	 * @var string
 	 */
 	const EXPECTED_WP_VERSION = '6.5';
+	const NONCE_ACTION        = 'wapuugotchi_onboarding_mode';
 
 	/**
 	 * Get the next page path.
@@ -95,14 +96,42 @@ class Helper {
 	}
 
 	/**
-	 * Get the current onboarding mode.
+	 * Create nonce for onboarding actions.
 	 *
 	 * @return string
 	 */
+	public static function get_nonce() {
+		return wp_create_nonce( self::NONCE_ACTION );
+	}
+
+	/**
+	 * Verify the onboarding nonce.
+	 *
+	 * @param string $nonce Nonce to verify.
+	 *
+	 * @return bool
+	 */
+	public static function is_valid_nonce( $nonce ) {
+		return (bool) wp_verify_nonce( $nonce, self::NONCE_ACTION );
+	}
+
+	/**
+	 * Get the current onboarding mode.
+	 *
+	 * @return string|null
+	 */
 	public static function get_mode() {
-		if ( ! isset( $_GET['onboarding_mode'] ) ) {
-			return 'tour';
+		$mode  = filter_input( INPUT_GET, 'onboarding_mode', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+		$nonce = filter_input( INPUT_GET, 'onboarding_nonce', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+
+		if ( empty( $mode ) ) {
+			return null;
 		}
 
-		return sanitize_text_field( wp_unslash( $_GET['onboarding_mode'] ) );   }
+		if ( empty( $nonce ) || ! self::is_valid_nonce( $nonce ) ) {
+			return null;
+		}
+
+		return $mode;
+	}
 }

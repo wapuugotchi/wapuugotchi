@@ -25,7 +25,18 @@ class Menu {
 	 */
 	public static function wapuugotchi_add_admin_bar_item( $items ) {
 
-		$params  = \array_merge( $_GET, array( 'onboarding_mode' => 'single' ) );
+		$params = \filter_input_array( INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+		if ( ! \is_array( $params ) ) {
+			$params = array();
+		}
+
+		$params  = \array_merge(
+			$params,
+			array(
+				'onboarding_mode'  => 'single',
+				'onboarding_nonce' => Helper::get_nonce(),
+			)
+		);
 		$items[] = array(
 			'title' => __( 'Page Overview', 'wapuugotchi' ),
 			'href'  => add_query_arg( $params, '' ),
@@ -36,7 +47,13 @@ class Menu {
 
 		$items[] = array(
 			'title' => __( 'WordPress Journey', 'wapuugotchi' ),
-			'href'  => 'index.php?onboarding_mode=tour',
+			'href'  => add_query_arg(
+				array(
+					'onboarding_mode'  => 'tour',
+					'onboarding_nonce' => Helper::get_nonce(),
+				),
+				'index.php'
+			),
 			'meta'  => array(
 				'class' => 'wapuugotchi_onboarding__admin-menu',
 			),
@@ -53,9 +70,17 @@ class Menu {
 	public static function force_redirect_to_dashboard() {
 		global $current_screen;
 		if ( isset( $current_screen->id ) && 'wapuugotchi_page_wapuugotchi__tour' === $current_screen->base ) {
-			if ( ! isset( $_GET['onboarding_mode'] ) ) {
+			if ( ! filter_input( INPUT_GET, 'onboarding_mode', FILTER_SANITIZE_FULL_SPECIAL_CHARS ) ) {
 				wp_safe_redirect(
-					admin_url( 'index.php?onboarding_mode=tour' )
+					admin_url(
+						add_query_arg(
+							array(
+								'onboarding_mode'  => 'tour',
+								'onboarding_nonce' => Helper::get_nonce(),
+							),
+							'index.php'
+						)
+					)
 				);
 				exit;
 			}

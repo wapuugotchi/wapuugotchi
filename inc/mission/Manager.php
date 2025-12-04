@@ -40,7 +40,18 @@ class Manager {
 
 		if ( 'toplevel_page_wapuugotchi' === $screen->id && ! \get_user_meta( \get_current_user_id(), 'wapuugotchi_mission_tour_once', true ) ) {
 			\update_user_meta( \get_current_user_id(), 'wapuugotchi_mission_tour_once', true );
-			\wp_safe_redirect( \admin_url( 'admin.php?page=wapuugotchi&onboarding_mode=single' ) );
+			\wp_safe_redirect(
+				\admin_url(
+					\add_query_arg(
+						array(
+							'page'             => 'wapuugotchi',
+							'onboarding_mode'  => 'single',
+							'onboarding_nonce' => \wp_create_nonce( 'wapuugotchi_onboarding_mode' ),
+						),
+						'admin.php'
+					)
+				)
+			);
 			exit;
 		}
 	}
@@ -144,7 +155,10 @@ class Manager {
 	 * Reset the complete mission progress.
 	 */
 	public static function reset_mission() {
-		if ( isset( $_GET['wapuugotchi_mission'] ) && 'reset' === $_GET['wapuugotchi_mission'] ) {
+		$mission_action = \filter_input( INPUT_GET, 'wapuugotchi_mission', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+		$nonce          = \filter_input( INPUT_GET, '_wpnonce', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+
+		if ( 'reset' === $mission_action && $nonce && \wp_verify_nonce( $nonce, 'wapuugotchi_mission_reset' ) ) {
 			$user_meta_keys                = \apply_filters( 'wapuugotchi_mission__reset', array() );
 			$user_meta_keys['user_meta'][] = MissionHandler::MISSION_KEY;
 

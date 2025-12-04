@@ -38,7 +38,21 @@ class Manager {
 	 * Initialization Log
 	 */
 	public function init() {
-		if ( ! isset( $_GET['onboarding_mode'] ) ) {
+		$mode = Helper::get_mode();
+		if ( null === $mode ) {
+			$raw_mode = \filter_input( INPUT_GET, 'onboarding_mode', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+			if ( $raw_mode ) {
+				$params = \filter_input_array( INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+				if ( ! \is_array( $params ) ) {
+					$params = array();
+				}
+
+				$params['onboarding_mode']  = $raw_mode;
+				$params['onboarding_nonce'] = Helper::get_nonce();
+
+				\wp_safe_redirect( \add_query_arg( $params, '' ) );
+				exit;
+			}
 			return;
 		}
 
@@ -65,7 +79,7 @@ class Manager {
 						'next_page'   => Helper::get_next_page_path(),
 						'page_config' => Helper::get_current_page_item_list(),
 						'index'       => Helper::get_first_index_of_current_page(),
-						'mode'        => Helper::get_mode(),
+						'mode'        => Helper::get_mode() ?? 'tour',
 						'avatar'      => AvatarHandler::get_avatar(),
 						'animated'    => false,
 					)
@@ -89,7 +103,15 @@ class Manager {
 		}
 
 		\update_user_meta( \get_current_user_id(), 'wapuugotchi_onboarding_autostart_executed', true );
-		\wp_safe_redirect( 'index.php?onboarding_mode=tour' );
+		\wp_safe_redirect(
+			\add_query_arg(
+				array(
+					'onboarding_mode'  => 'tour',
+					'onboarding_nonce' => Helper::get_nonce(),
+				),
+				'index.php'
+			)
+		);
 		exit();
 	}
 

@@ -115,12 +115,17 @@ export default function Navigation() {
 			return false;
 		}
 
+		const currentUrl = new URL( window.location.href );
+		const nonce = currentUrl.searchParams.get( 'onboarding_nonce' );
 		const dir = window.location.href.substring(
 			0,
 			window.location.href.lastIndexOf( 'wp-admin' )
 		);
 		const url = new URL( dir + 'wp-admin/' + file );
 		url.searchParams.append( 'onboarding_mode', 'tour' );
+		if ( nonce ) {
+			url.searchParams.append( 'onboarding_nonce', nonce );
+		}
 		window.location = url.toString();
 		return true;
 	};
@@ -128,6 +133,7 @@ export default function Navigation() {
 	const stop = () => {
 		const url = new URL( window.location.href );
 		url.searchParams.delete( 'onboarding_mode' );
+		url.searchParams.delete( 'onboarding_nonce' );
 		window.location = url.toString();
 		return true;
 	};

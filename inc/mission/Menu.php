@@ -50,7 +50,18 @@ class Menu {
 	 * @return array
 	 */
 	public static function wapuugotchi_add_admin_bar_item( $items ) {
-		$params  = \array_merge( $_GET, array( 'wapuugotchi_mission' => 'reset' ) );
+		$params = \filter_input_array( INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+		if ( ! \is_array( $params ) ) {
+			$params = array();
+		}
+
+		$params  = \array_merge(
+			$params,
+			array(
+				'wapuugotchi_mission' => 'reset',
+				'_wpnonce'            => \wp_create_nonce( 'wapuugotchi_mission_reset' ),
+			)
+		);
 		$items[] = array(
 			'title' => \__( 'Reset Mission', 'wapuugotchi' ),
 			'href'  => add_query_arg( $params, '' ),

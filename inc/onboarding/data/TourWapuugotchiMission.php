@@ -52,15 +52,15 @@ class TourWapuugotchiMission {
 					)
 					->add_item(
 						Item::create()
-						    ->set_title( __( 'Refresh', 'wapuugotchi' ) )
-						    ->set_text( __( 'Need a fresh start? In the top WapuuGotchi menu, you’ll find a special button — only visible on this Mission page. Use it to reset your current Mission if something gets stuck or if you want to explore a brand-new map right away!', 'wapuugotchi' ) )
-						    ->add_target( Target::create()->set_active( true )->set_focus( '#wp-admin-bar-wapuugotchi_admin_bar_menu' )->set_overlay( '#wp-admin-bar-wapuugotchi_admin_bar_menu' ) )
+							->set_title( __( 'Refresh', 'wapuugotchi' ) )
+							->set_text( __( 'Need a fresh start? In the top WapuuGotchi menu, you’ll find a special button — only visible on this Mission page. Use it to reset your current Mission if something gets stuck or if you want to explore a brand-new map right away!', 'wapuugotchi' ) )
+							->add_target( Target::create()->set_active( true )->set_focus( '#wp-admin-bar-wapuugotchi_admin_bar_menu' )->set_overlay( '#wp-admin-bar-wapuugotchi_admin_bar_menu' ) )
 					)
 					->add_item(
 						Item::create()
-						    ->set_title( __( 'Last Word', 'wapuugotchi' ) )
-						    ->set_text( __( 'Your turn now: Dive into your WordPress world, take on fun missions, and enjoy the journey!', 'wapuugotchi' ) )
-						    ->add_target( Target::create()->set_active( true ) )
+							->set_title( __( 'Last Word', 'wapuugotchi' ) )
+							->set_text( __( 'Your turn now: Dive into your WordPress world, take on fun missions, and enjoy the journey!', 'wapuugotchi' ) )
+							->add_target( Target::create()->set_active( true ) )
 					);
 
 		return array_merge( $tour, array( $page ) );

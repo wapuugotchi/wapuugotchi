@@ -1,25 +1,30 @@
 :root {
-	--marker-color: #009900;
-	--marker-attention-color: #00dd00;
+	--marker-color: #090;
+	--marker-attention-color: #0d0;
 }
 
 @keyframes markerAttention {
+
 	0%, 100% {
 		fill: var(--marker-color);
 		transform: translateY(0);
 	}
+
 	20% {
 		fill: var(--marker-attention-color);
 		transform: translateY(-8px);
 	}
+
 	40% {
 		fill: var(--marker-color);
 		transform: translateY(0);
 	}
+
 	60% {
 		fill: var(--marker-attention-color);
 		transform: translateY(-6px);
 	}
+
 	80% {
 		fill: var(--marker-color);
 		transform: translateY(0);
@@ -36,7 +41,7 @@
 		left: 50%;
 		width: 150px;
 		background-color: rgba(0, 0, 0, 0.6);
-		color: white;
+		color: #FFF;
 		transform: translate(-50%, -50%);
 		display: flex;
 		flex-direction: column;

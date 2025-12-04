@@ -30,7 +30,7 @@ class BalanceHandler {
 	 */
 	public static function init() {
 		// Check if the user has a balance and set it to 0 if not.
-		if ( empty( \get_user_meta( \get_current_user_id(), self::BALANCE_KEY ) ) ) {
+		if ( empty( \get_user_meta( \get_current_user_id(), self::BALANCE_KEY, true ) ) ) {
 			\update_user_meta( \get_current_user_id(), self::BALANCE_KEY, 0 );
 		}
 	}

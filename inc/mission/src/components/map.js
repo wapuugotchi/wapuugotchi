@@ -4,32 +4,27 @@ import { useSelect } from '@wordpress/data';
 import { STORE_NAME } from '../store';
 import { SVG } from '@wordpress/primitives';
 import Schloss from './assets/schloss.svg';
-import { _n } from '@wordpress/i18n';
+import { _n, sprintf } from '@wordpress/i18n';
 
-function createCooldown(hours, className) {
-	const cooldown = document.createElement('div');
-	cooldown.classList.add(className);
+function createCooldown( hours, className ) {
+	const cooldown = document.createElement( 'div' );
+	cooldown.classList.add( className );
 
-	const img = document.createElement('img');
+	const img = document.createElement( 'img' );
 	img.src = Schloss;
 	img.alt = 'Schloss';
 	img.style.width = '24px';
 	img.style.verticalAlign = 'middle';
 
-	const text = document.createElement('p');
+	const text = document.createElement( 'p' );
 	text.textContent = sprintf(
 		// translators: %d: Anzahl der Stunden
-		_n(
-			'%d hour left',
-			'%d hours left',
-			hours,
-			'wapuugotchi'
-		),
+		_n( '%d hour left', '%d hours left', hours, 'wapuugotchi' ),
 		hours
 	);
 
-	cooldown.appendChild(img);
-	cooldown.appendChild(text);
+	cooldown.appendChild( img );
+	cooldown.appendChild( text );
 
 	return cooldown;
 }
@@ -131,8 +126,8 @@ export default function Map() {
 			allMissions[ progress - 1 ].style.fontSize = '50px';
 
 			const parent = svgElement.parentElement;
-			if (!parent.querySelector('.' + cooldownClass)) {
-				parent.appendChild(createCooldown(cooldown, cooldownClass));
+			if ( ! parent.querySelector( '.' + cooldownClass ) ) {
+				parent.appendChild( createCooldown( cooldown, cooldownClass ) );
 			}
 		} else if ( completed === true ) {
 			missionSection.textContent = '✔';
@@ -142,8 +137,8 @@ export default function Map() {
 			missionSection.classList.add( 'completed' );
 			missionSection.classList.remove( 'active' );
 			const parent = svgElement.parentElement;
-			if (!parent.querySelector('.' + cooldownClass)) {
-				parent.appendChild(createCooldown(cooldown, cooldownClass));
+			if ( ! parent.querySelector( '.' + cooldownClass ) ) {
+				parent.appendChild( createCooldown( cooldown, cooldownClass ) );
 			}
 		} else {
 			missionSection.textContent = '';

@@ -213,9 +213,8 @@ class MissionHandler {
 	 * @throws \Exception If the current date cannot be retrieved.
 	 */
 	public static function get_unlock_time() {
-		$timezone      = new \DateTimeZone( \wp_timezone_string() );
+		$timezone = new \DateTimeZone( \wp_timezone_string() );
 		return new \DateTime( 'tomorrow midnight', $timezone );
-
 	}
 
 	/**

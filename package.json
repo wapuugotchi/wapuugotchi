@@ -22,6 +22,7 @@
 		"start": "npm run wp-env -- start",
 		"dev:start": "npm run wp-env -- start && npm run watch",
 		"stop": "npm run wp-env -- stop",
+		"destroy": "npm run wp-env destroy --all",
 		"cli": "npm run wp-env -- run cli bash",
 		"wp-env": "WP_ENV_HOME=wp-env-home wp-env",
 		"test": "npx playwright test --config playwright.config.js tests"
@@ -31,18 +32,19 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.49.1",
-		"@wordpress/env": "^10.25.0",
-		"@wordpress/scripts": "^30.18.0"
+		"@wordpress/env": "^10.36.0",
+		"@wordpress/scripts": "^31.1.0"
 	},
 	"dependencies": {
-		"@wordpress/api-fetch": "^7.25.0",
-		"@wordpress/components": "^29.11.0",
-		"@wordpress/dom-ready": "^4.25.0",
-		"@wordpress/element": "^6.25.0",
-		"@wordpress/i18n": "^5.25.0",
+		"@wordpress/api-fetch": "^7.36.0",
+		"@wordpress/components": "^30.9.0",
+		"@wordpress/dom-ready": "^4.36.0",
+		"@wordpress/element": "^6.36.0",
+		"@wordpress/i18n": "^6.9.0",
 		"docker-compose": "^1.1.0",
 		"html-react-parser": "^5.2.1",
 		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
 		"react-svg": "^16.2.0"
 	},
 	"files": [

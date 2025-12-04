@@ -31,11 +31,16 @@ class Manager {
 		\add_action( 'current_screen', array( $this, 'start_tour_once' ) );
 	}
 
+	/**
+	 * Start the onboarding tour once
+	 *
+	 * @param \WP_Screen $screen The current screen object.
+	 */
 	public function start_tour_once( $screen ) {
 
 		if ( 'toplevel_page_wapuugotchi' === $screen->id && ! \get_user_meta( \get_current_user_id(), 'wapuugotchi_mission_tour_once', true ) ) {
 			\update_user_meta( \get_current_user_id(), 'wapuugotchi_mission_tour_once', true );
-			\wp_safe_redirect( \admin_url( 'admin.php?page=wapuugotchi&onboarding_mode=single' ));
+			\wp_safe_redirect( \admin_url( 'admin.php?page=wapuugotchi&onboarding_mode=single' ) );
 			exit;
 		}
 	}
@@ -110,10 +115,10 @@ class Manager {
 	 */
 	private function get_time_left() {
 		$timezone = new \DateTimeZone( \wp_timezone_string() );
-		$now = new \DateTime( 'now', $timezone );
+		$now      = new \DateTime( 'now', $timezone );
 
-		// Annahme: get_unlock_time() gibt einen Timestamp (int) zurück
-		$unlock = MissionHandler::get_unlock_time();
+		// Annahme: get_unlock_time() gibt einen Timestamp (int) zurück.
+		$unlock       = MissionHandler::get_unlock_time();
 		$diff_seconds = $unlock->getTimestamp() - $now->getTimestamp();
 
 		if ( $diff_seconds <= 0 ) {

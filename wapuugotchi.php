@@ -43,6 +43,7 @@ function init() {
 	new \Wapuugotchi\Quest\Manager();
 	new \Wapuugotchi\Onboarding\Manager();
 	new \Wapuugotchi\Alive\Manager();
+	new \Wapuugotchi\Support\Manager();
 
 	// Mission feature and the associated games.
 	new \Wapuugotchi\Mission\Manager();

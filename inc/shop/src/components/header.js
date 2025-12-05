@@ -13,11 +13,17 @@ export default function Header() {
 
 	return (
 		<div className="wapuugotchi_shop__header">
-			<h1 className="wapuugotchi_shop__title">
-				{ __( 'Customize Your Wapuu with WapuuGotchi', 'wapuugotchi' ) }
-			</h1>
-			<span className="wapuugotchi_shop__pearls">
-				{ __( 'Your Pearl Balance:', 'wapuugotchi' ) }
+			<div className="wapuugotchi_shop__title">
+				<h1>{ __( '🐾 WapuuGotchi – Shop', 'wapuugotchi' ) }</h1>
+				<p className="subtitle">
+					{ __(
+						'Style your Wapuu, unlock fresh looks, and spend pearls on new gear.',
+						'wapuugotchi'
+					) }
+				</p>
+			</div>
+			<span className="wapuugotchi_shop__pill">
+				{ __( 'Pearl balance', 'wapuugotchi' ) }
 				<img alt="" src={ Pearl } />
 				{ balance }
 			</span>

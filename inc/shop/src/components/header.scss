@@ -1,45 +1,43 @@
 .wapuugotchi_shop__header {
-	top: 0;
 	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
 	flex-wrap: wrap;
+	margin-bottom: 24px;
+}
+
+.wapuugotchi_shop__title h1 {
+	margin: 0;
+}
+
+.wapuugotchi_shop__header .subtitle {
+	margin-top: 8px;
+	margin-bottom: 0;
+	max-width: 640px;
+	opacity: 0.8;
+	color: #50575e;
+}
+
+.wapuugotchi_shop__pill {
+	background: #fff;
+	border: 1px solid #e2e2e2;
+	border-radius: 999px;
+	padding: 8px 14px;
+	font-size: 12px;
+	color: #2c3338;
+	white-space: nowrap;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	align-self: center;
+	display: inline-flex;
 	align-items: center;
-	padding: 0;
-	gap: 12px;
-	min-width: 100%;
-	min-height: 28px;
-	margin-bottom: 20px;
+	gap: 6px;
+}
 
-	h1.wapuugotchi_shop__title {
-		display: flex;
-		flex: 1;
-		height: 28px;
-		min-width: 396px;
-		color: #1e1e1e;
-		font-style: normal;
-		font-weight: 400;
-		font-size: 20px;
-		line-height: 28px;
-		align-items: center;
-	}
+@media (max-width: 900px) {
 
-	span.wapuugotchi_shop__pearls {
-		display: flex;
-		flex: 1;
-		flex-direction: row;
-		justify-content: center;
-		gap: 6px;
-		width: 188px;
-		min-width: 150px;
-		height: 22px;
-		max-width: 240px;
-		padding: 3px 6px;
-		color: #fff;
-		background: #4ab866;
-		font-style: normal;
-		font-weight: 600;
-		font-size: 13px;
-		line-height: 16px;
-		align-items: center;
-		border-radius: 2px;
+	.wapuugotchi_shop__header {
+		flex-direction: column;
+		align-items: flex-start;
 	}
 }

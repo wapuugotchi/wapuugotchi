@@ -4,14 +4,15 @@ import './step.scss';
  * Step-Komponente, die einen Schritt in der Missionsliste anzeigt.
  * @param {Object} props           - Die Eigenschaften der Komponente.
  * @param {string} props.completed - Der Abschlussstatus des Schritts.
+ * @param {string} props.current   - Ob es sich um den aktuellen Schritt handelt.
  * @param {string} props.name      - Der Name des Schritts.
  * @return {Object} Die Step-Komponente.
  */
-export default function Step( { completed, name } ) {
+export default function Step( { completed, current, name } ) {
 	// Dynamische Klassenname-Zuweisung basierend auf dem Abschlussstatus
 	const stepClassName = `wapuugotchi_missions__step ${
 		completed === 'true' ? 'completed' : ''
-	}`;
+	} ${ current === 'true' ? 'current' : '' }`;
 
 	return (
 		<>

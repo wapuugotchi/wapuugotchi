@@ -33,6 +33,13 @@
 
 .wapuugotchi_missions__map {
 	position: relative;
+	width: 100%;
+
+	svg {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
 
 	.cooldownTimer {
 		position: absolute;

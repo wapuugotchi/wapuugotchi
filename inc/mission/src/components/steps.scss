@@ -1,13 +1,37 @@
-.wapuugotchi_missions__steps {
+.wapuugotchi_missions__progress {
 	display: flex;
-	padding: 0 32px;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.wapuugotchi_missions__progress_header {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.wapuugotchi_missions__progress h2 {
+	margin: 0;
+	color: #2c3338;
+}
+
+.wapuugotchi_missions__status {
+	margin: 0;
+	color: #50575e;
+	font-size: 13px;
+}
+
+.wapuugotchi_missions__steps {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 12px;
+	padding: 4px 0;
 }
 
 .wapuugotchi_missions__footer {
 	display: block;
-	font-weight: 700;
-	font-size: 18px;
-	line-height: 24px;
-
-	padding: 32px;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 20px;
+	color: #50575e;
 }

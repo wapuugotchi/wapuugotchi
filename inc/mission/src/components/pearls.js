@@ -1,6 +1,7 @@
 import './pearls.scss';
 import Pearl from './assets/pearl.svg';
 import { useSelect } from '@wordpress/data';
+import { __ } from '@wordpress/i18n';
 import { STORE_NAME } from '../store';
 
 /**
@@ -25,11 +26,8 @@ export default function Pearls() {
 				rewardTransferred ? 'reward-transferred' : ''
 			}` }
 		>
-			You will receive:
-			<span>
-				{ reward }
-				<img alt="Pearl" src={ Pearl } />
-			</span>
+			<img alt="Pearl" src={ Pearl } />+{ reward }{ ' ' }
+			{ __( 'pearls', 'wapuugotchi' ) }
 		</div>
 	);
 }

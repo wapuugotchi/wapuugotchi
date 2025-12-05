@@ -1,36 +1,49 @@
 .wapuugotchi_missions__step {
-	color: #0063a1;
+	color: #2c3338;
 	width: 100%;
+	background: #fff;
+	border: 1px solid #e2e2e2;
+	border-radius: 10px;
+	padding: 12px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 
 	.wapuugotchi_missions__step_bar {
-		height: 12px;
-		background-color: #cce3eb;
+		height: 10px;
+		background-color: #e7edf1;
 		border-radius: 100px/75px;
 		display: block;
-		margin: 0 2px;
+		margin: 0 4px;
 	}
 
 	.wapuugotchi_missions__step_name {
 		cursor: default;
-		font-size: 16px;
-		line-height: 24px;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 600;
 		text-align: center;
-		margin-bottom: 16px;
+		margin: 0;
 	}
 
 	&.completed {
 
 		.wapuugotchi_missions__step_name {
-			font-weight: 700;
-			font-size: 16px;
-			line-height: 24px;
-			text-align: center;
-			margin-bottom: 16px;
-			text-decoration: line-through;
+			color: #145214;
 		}
 
 		.wapuugotchi_missions__step_bar {
-			background-color: #0063a1;
+			background-color: #00a32a;
+		}
+	}
+
+	&.current {
+		border-color: #c7d2dc;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+
+		.wapuugotchi_missions__step_bar {
+			background-color: #dbe8f3;
 		}
 	}
 }

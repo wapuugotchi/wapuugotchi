@@ -2,6 +2,7 @@
 import './description.scss';
 import Pearls from './pearls';
 import { useSelect } from '@wordpress/data';
+import { __ } from '@wordpress/i18n';
 import { STORE_NAME } from '../store';
 
 /**
@@ -19,7 +20,7 @@ export default function Description() {
 		<>
 			<div className="wapuugotchi_missions__description">
 				<div className="wapuugotchi_missions__headline">
-					<h1>Adventure</h1>
+					<h2>{ __( 'Current adventure', 'wapuugotchi' ) }</h2>
 					<Pearls />
 				</div>
 				<p>{ description }</p>

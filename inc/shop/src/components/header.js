@@ -23,9 +23,8 @@ export default function Header() {
 				</p>
 			</div>
 			<span className="wapuugotchi_shop__pill">
-				{ __( 'Pearl balance', 'wapuugotchi' ) }
 				<img alt="" src={ Pearl } />
-				{ balance }
+				{ balance } { __( 'pearls', 'wapuugotchi' ) }
 			</span>
 		</div>
 	);

@@ -2,6 +2,7 @@
 import './description.scss';
 import Pearls from './pearls';
 import { useSelect } from '@wordpress/data';
+import { __ } from '@wordpress/i18n';
 import { STORE_NAME } from '../store';
 
 /**
@@ -10,8 +11,9 @@ import { STORE_NAME } from '../store';
  */
 export default function Description() {
 	// Verwendung des useSelect-Hooks, um die Beschreibung aus dem Store zu extrahieren
-	const { description } = useSelect( ( select ) => ( {
+	const { description, missionName } = useSelect( ( select ) => ( {
 		description: select( STORE_NAME ).getDescription(),
+		missionName: select( STORE_NAME ).getMissionName(),
 	} ) );
 
 	// Render-Funktion, die die Beschreibung und zusätzliche Komponenten anzeigt
@@ -19,7 +21,10 @@ export default function Description() {
 		<>
 			<div className="wapuugotchi_missions__description">
 				<div className="wapuugotchi_missions__headline">
-					<h1>Adventure</h1>
+					<h2>
+						{ missionName ||
+							__( 'Current adventure', 'wapuugotchi' ) }
+					</h2>
 					<Pearls />
 				</div>
 				<p>{ description }</p>

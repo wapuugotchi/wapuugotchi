@@ -37,20 +37,31 @@ export default function Steps() {
 	};
 	return (
 		<>
-			<div className="wapuugotchi_missions__steps">
-				{ getSteps( progress, markers ) }
+			<div className="wapuugotchi_missions__progress">
+				<div className="wapuugotchi_missions__progress_header">
+					<h2>{ __( 'Checkpoints', 'wapuugotchi' ) }</h2>
+					<p className="wapuugotchi_missions__status">
+						{ __(
+							'Finish each clue to move forward on the map.',
+							'wapuugotchi'
+						) }
+					</p>
+				</div>
+				<div className="wapuugotchi_missions__steps">
+					{ getSteps( progress, markers ) }
+				</div>
+				<span className="wapuugotchi_missions__footer">
+					{ sprintf(
+						// translators: %1$s: current step, %2$s: total steps.
+						__(
+							'Step %1$s of %2$s done, keep on going!',
+							'wapuugotchi'
+						),
+						progress,
+						markers
+					) }
+				</span>
 			</div>
-			<span className="wapuugotchi_missions__footer">
-				{ sprintf(
-					// translators: %1$s: current step, %2$s: total steps.
-					__(
-						'Step %1$s of %2$s done, keep on going!',
-						'wapuugotchi'
-					),
-					progress,
-					markers
-				) }
-			</span>
 		</>
 	);
 }

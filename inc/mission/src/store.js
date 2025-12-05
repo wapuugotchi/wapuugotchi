@@ -152,6 +152,7 @@ function create() {
 			getNonceList: ( state ) => state.nonce_list,
 			getCompleted: ( state ) => state.completed,
 			getCooldown: ( state ) => state.cooldown,
+			getMissionName: ( state ) => state.mission_name,
 		},
 	} );
 

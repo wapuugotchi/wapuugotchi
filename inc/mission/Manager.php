@@ -97,16 +97,17 @@ class Manager {
 				"wp.data.dispatch('wapuugotchi/mission').__initialize(%s)",
 				\wp_json_encode(
 					array(
-						'progress'    => $user_data['progress'],
-						'locked'      => MissionHandler::is_mission_locked( $user_data ),
-						'markers'     => \count( $mission->markers ),
-						'reward'      => $mission->reward,
-						'description' => $mission->markers[ $user_data['progress'] ] ?? '',
-						'map'         => MapHandler::get_map_svg_by_id( $mission->id ),
-						'cooldown'    => $this->get_time_left(),
-						'action'      => $action,
-						'nonce_list'  => $this->get_nonces(),
-						'completed'   => false,
+						'progress'     => $user_data['progress'],
+						'locked'       => MissionHandler::is_mission_locked( $user_data ),
+						'markers'      => \count( $mission->markers ),
+						'reward'       => $mission->reward,
+						'description'  => $mission->markers[ $user_data['progress'] ] ?? '',
+						'map'          => MapHandler::get_map_svg_by_id( $mission->id ),
+						'cooldown'     => $this->get_time_left(),
+						'mission_name' => $mission->name,
+						'action'       => $action,
+						'nonce_list'   => $this->get_nonces(),
+						'completed'    => false,
 					)
 				)
 			),

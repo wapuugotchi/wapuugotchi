@@ -1,9 +1,9 @@
 === WapuuGotchi ===
 Contributors:      wapuugotchi, herrfeldmann, ancocodet, acali, coachbirgit, pfefferle, lgersman, tobibode, sabrinaw, fettnei, dionysous, thchoperpilot
 Tags:              assistant, wapuu, gamification
-Stable tag:        1.3.1
+Stable tag:        1.4.0
 Requires at least: 6.7
-Tested up to:      6.8
+Tested up to:      6.9
 Requires PHP:      7.2
 License:           GPLv2 or later
 
@@ -43,6 +43,13 @@ WapuuGotchi is free and constantly being developed further. It’s always exciti
 Let Wapuu be your companion, enhance your WordPress skills, and customize your Wapuu into a unique sidekick. Whether you’re new to WordPress or already an experienced user – WapuuGotchi is the perfect way to discover WordPress in a playful manner!
 
 == Changelog ==
+
+= 1.4.0 =
+- Implement support page
+- redesign shop page
+- redesign mission page
+- redesign quest page
+
 
 = 1.3.1 =
 - Implement local translation fallback mechanism

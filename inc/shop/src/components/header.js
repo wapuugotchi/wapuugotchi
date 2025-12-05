@@ -2,7 +2,7 @@ import { useSelect } from '@wordpress/data';
 import { STORE_NAME } from '../store';
 import { __ } from '@wordpress/i18n';
 import './header.scss';
-import Pearl from './assets/pearl.svg';
+import Pearl from './assets/pearl_white.svg';
 
 export default function Header() {
 	const { balance } = useSelect( ( select ) => {

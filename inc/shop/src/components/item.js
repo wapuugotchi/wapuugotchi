@@ -1,5 +1,5 @@
 import './item.scss';
-import Pearl from './assets/pearl.svg';
+import Pearl from './assets/pearl_black.svg';
 
 import { useCallback } from '@wordpress/element';
 import { dispatch, useSelect } from '@wordpress/data';

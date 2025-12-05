@@ -49,7 +49,7 @@ class BubbleHandler {
 			function ( $message ) {
 				return array(
 					'id'      => $message->get_id(),
-					'message' => $message->get_message(),
+					'message' => self::sanitize_message( $message->get_message() ),
 					'type'    => $message->get_type(),
 				);
 			},
@@ -94,5 +94,21 @@ class BubbleHandler {
 		}
 
 		return null;
+	}
+
+	/**
+	 * Sanitize message content to prevent XSS attacks.
+	 *
+	 * Allows safe HTML tags while stripping potentially dangerous content.
+	 *
+	 * @param string $message The message content to sanitize.
+	 *
+	 * @return string The sanitized message content.
+	 */
+	private static function sanitize_message( $message ) {
+		// Use wp_kses_post to allow safe HTML tags only.
+		// This allows: a, abbr, b, blockquote, br, code, del, em, i, img, p, pre, strong, etc.
+		// but strips script tags, event handlers, and other dangerous content.
+		return \wp_kses_post( $message );
 	}
 }

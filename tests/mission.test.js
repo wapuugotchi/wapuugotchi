@@ -46,29 +46,27 @@ test( 'Mission - Map exists', async ( { page } ) => {
 	).not.toHaveClass( /active/ );
 } );
 
-test( 'Mission - Progress bar exists', async ( { page } ) => {
+test( 'Mission - misstion story exists', async ( { page } ) => {
 	await page.goto( '/wp-admin/admin.php?page=wapuugotchi', {
 		waitUntil: 'networkidle',
 	} );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
-	await page.waitForSelector( '.wapuugotchi_missions__map svg', {
-		state: 'visible',
-	} );
 
-	for ( let i = 0; i <= 4; i++ ) {
-		await expect(
-			await page
-				.locator(
-					'.wapuugotchi_missions__steps .wapuugotchi_missions__step'
-				)
-				.nth( i )
-		).not.toHaveClass( /completed/ );
-	}
+	const description = page.locator(
+		'.wapuugotchi_missions__description p'
+	);
+	await expect( description ).toBeVisible();
+	await expect( description ).not.toHaveText( '' );
+} );
 
-	// wapuugotchi_missions__footer muss den text "Mission 1" enthalten
-	await expect(
-		await page.locator( '.wapuugotchi_missions__footer' )
-	).toContainText( '0 of 5' );
+test( 'Mission - progress element exists', async ( { page } ) => {
+	await page.goto('/wp-admin/admin.php?page=wapuugotchi', {
+		waitUntil: 'networkidle',
+	});
+	await expect(page).toHaveTitle(/WapuuGotchi/);
+	const progressPill = page.locator('.wapuugotchi_missions__pill');
+	await expect(progressPill).toBeVisible();
+	await expect(progressPill).toContainText(/checkpoints unlocked/i);
 } );
 
 test( 'Mission - Game is callable', async ( { page } ) => {

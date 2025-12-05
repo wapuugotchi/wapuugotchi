@@ -11,8 +11,9 @@ import { STORE_NAME } from '../store';
  */
 export default function Description() {
 	// Verwendung des useSelect-Hooks, um die Beschreibung aus dem Store zu extrahieren
-	const { description } = useSelect( ( select ) => ( {
+	const { description, missionName } = useSelect( ( select ) => ( {
 		description: select( STORE_NAME ).getDescription(),
+		missionName: select( STORE_NAME ).getMissionName(),
 	} ) );
 
 	// Render-Funktion, die die Beschreibung und zusätzliche Komponenten anzeigt
@@ -20,7 +21,10 @@ export default function Description() {
 		<>
 			<div className="wapuugotchi_missions__description">
 				<div className="wapuugotchi_missions__headline">
-					<h2>{ __( 'Current adventure', 'wapuugotchi' ) }</h2>
+					<h2>
+						{ missionName ||
+							__( 'Current adventure', 'wapuugotchi' ) }
+					</h2>
 					<Pearls />
 				</div>
 				<p>{ description }</p>

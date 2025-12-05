@@ -104,6 +104,7 @@ class Manager {
 						'description' => $mission->markers[ $user_data['progress'] ] ?? '',
 						'map'         => MapHandler::get_map_svg_by_id( $mission->id ),
 						'cooldown'    => $this->get_time_left(),
+						'mission_name' => $mission->name,
 						'action'      => $action,
 						'nonce_list'  => $this->get_nonces(),
 						'completed'   => false,

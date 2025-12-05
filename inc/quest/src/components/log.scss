@@ -1,21 +1,148 @@
-.wrap {
+#wapuugotchi-submenu__quests {
+	background-color: #fff;
+	border: 1px solid #c3c4c7;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+	padding: 24px;
+}
 
-	#wapuugotchi-app {
+.wapuugotchi-quests__page {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
 
-		.wapuugotchi_log {
-			border: 1px solid #c3c4c7;
-			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
-			padding: 24px;
-			background: #fff;
+.wapuugotchi-quests__header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+}
 
-			display: flex;
-			align-content: flex-start;
-			flex-wrap: wrap;
+.wapuugotchi-quests__header h1 {
+	margin: 0;
+}
 
-			h1 {
-				margin-bottom: 20px;
-				margin-left: 10px;
-			}
-		}
+.wapuugotchi-quests__header .subtitle {
+	margin-top: 8px;
+	margin-bottom: 0;
+	max-width: 640px;
+	opacity: 0.8;
+	color: #50575e;
+}
+
+.wapuugotchi-quests__pill {
+	background: #fff;
+	border: 1px solid #e2e2e2;
+	border-radius: 999px;
+	padding: 8px 14px;
+	font-size: 12px;
+	color: #2c3338;
+	white-space: nowrap;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	align-self: center;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.wapuugotchi-quests__pill--success {
+	border-color: #00a32a;
+	color: #145214;
+	background: #f4fff7;
+}
+
+.wapuugotchi-quests__pill--muted {
+	color: #50575e;
+}
+
+.wapuugotchi-quests__grid {
+	display: grid;
+	grid-template-columns: 2fr 1.5fr;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+.wapuugotchi-quests__column {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.wapuugotchi-quests__column h2 {
+	margin: 0 0 8px;
+}
+
+.wapuugotchi-quests__list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.wapuugotchi-quests__card {
+	background: #fafafa;
+	border-radius: 10px;
+	padding: 16px 18px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	border: 1px solid #e2e2e2;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.wapuugotchi-quests__card h3 {
+	margin: 0;
+}
+
+.wapuugotchi-quests__meta {
+	margin: 4px 0 0;
+	color: #50575e;
+}
+
+.wapuugotchi-quests__card.is-active {
+	border-left: 4px solid #00a32a;
+}
+
+.wapuugotchi-quests__card.is-completed {
+	border-left: 4px solid #888;
+}
+
+.wapuugotchi-quests__card.is-empty {
+	border-style: dashed;
+	background: #f7f7f7;
+}
+
+.wapuugotchi-quests__card-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.wapuugotchi-quests__status {
+	margin: 0;
+	color: #50575e;
+	font-size: 12px;
+	opacity: 0.85;
+}
+
+.wapuugotchi-quests__pearl-icon {
+	width: 17px;
+	height: 12px;
+}
+
+.wapuugotchi-quests__pill--muted .wapuugotchi-quests__pearl-icon {
+	filter: invert(58%) sepia(6%) saturate(8%) hue-rotate(331deg) brightness(91%) contrast(92%);
+}
+
+@media (max-width: 900px) {
+
+	.wapuugotchi-quests__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.wapuugotchi-quests__header {
+		flex-direction: column;
+		align-items: flex-start;
 	}
 }

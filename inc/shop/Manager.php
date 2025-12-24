@@ -65,6 +65,7 @@ class Manager {
 						'balance'          => BalanceHandler::get_balance(),
 						'wapuu'            => AvatarHandler::get_avatar_config(),
 						'itemDetail'       => null,
+						'nonce'            => \wp_create_nonce( 'wapuugotchi_shop' ),
 					)
 				)
 			)

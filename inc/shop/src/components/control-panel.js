@@ -6,10 +6,11 @@ import apiFetch from '@wordpress/api-fetch';
 import './control-panel.scss';
 
 export default function ControlPanel() {
-	const { wapuu, svg } = useSelect( ( select ) => {
+	const { wapuu, svg, nonce } = useSelect( ( select ) => {
 		return {
 			wapuu: select( STORE_NAME ).getWapuu(),
 			svg: select( STORE_NAME ).getSvg(),
+			nonce: select( STORE_NAME ).getNonce(),
 		};
 	} );
 
@@ -32,6 +33,7 @@ export default function ControlPanel() {
 			path: `wapuugotchi/v1/wapuugotchi/shop/update-avatar`,
 			method: 'POST',
 			data: {
+				nonce,
 				avatar: wapuu,
 				svg: buildSvg( svg ),
 			},

@@ -57,7 +57,7 @@ class Manager {
 				"wp.data.dispatch('wapuugotchi/support').__initialize(%s)",
 				\wp_json_encode(
 					array(
-						'cards' => $this->get_cards(),
+						'cards' => Cards::get_cards(),
 					)
 				)
 			),
@@ -65,14 +65,5 @@ class Manager {
 		);
 
 		\wp_set_script_translations( 'wapuugotchi-support', 'wapuugotchi', WAPUUGOTCHI_PATH . 'languages/' );
-	}
-
-	/**
-	 * Provide card data for the support page.
-	 *
-	 * @return array
-	 */
-	private function get_cards() {
-		return Cards::get_cards();
 	}
 }

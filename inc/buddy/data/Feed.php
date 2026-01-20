@@ -16,10 +16,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Feed {
 	const WAPUUGOTCHI_FEED_URL = 'https://wapuugotchi.github.io/feed/feed.xml';
-	const FEED_ITEMS = 'wapuugotchi_feed_items';
-	const DISMISSED_ITEMS = 'wapuugotchi_feed_dismissed';
-	const CACHE_TTL = 12 * HOUR_IN_SECONDS;
-	const DISMISSED_TTL = 30 * DAY_IN_SECONDS;
+	const FEED_ITEMS           = 'wapuugotchi_feed_items';
+	const DISMISSED_ITEMS      = 'wapuugotchi_feed_dismissed';
+	const CACHE_TTL            = 12 * HOUR_IN_SECONDS;
+	const DISMISSED_TTL        = 30 * DAY_IN_SECONDS;
 
 	/**
 	 * Add feed items to the message list.
@@ -63,7 +63,7 @@ class Feed {
 	 * @return array|null
 	 */
 	public static function get_data() {
-		\delete_transient( self::FEED_ITEMS ); // For testing purposes only.
+		//\delete_transient( self::FEED_ITEMS ); // For testing purposes only.
 		$items = get_transient( self::FEED_ITEMS );
 		if ( false === $items ) {
 			$data  = self::fetch_data();
@@ -178,7 +178,7 @@ class Feed {
 			return '';
 		}
 
-		$placeholder_url = plugin_dir_url( dirname( __FILE__ ) ) . 'assets/two_click.jpg';
+		$placeholder_url = plugin_dir_url( __DIR__ ) . 'assets/two_click.jpg';
 
 		return sprintf(
 			'<div class="wapuugotchi-iframe-placeholder" data-iframe-src="%s">
@@ -198,7 +198,7 @@ class Feed {
 	 */
 	public static function is_active( $message_id ) {
 		$user_id = get_current_user_id();
-		delete_user_meta( $user_id, self::DISMISSED_ITEMS );
+		//\delete_user_meta( $user_id, self::DISMISSED_ITEMS );
 		if ( ! $user_id ) {
 			return true;
 		}

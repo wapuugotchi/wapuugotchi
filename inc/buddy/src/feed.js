@@ -6,7 +6,7 @@
  *
  * @package
  */
-import "./feed.scss";
+import './feed.scss';
 
 export default class Feed {
 	init = () => {
@@ -14,46 +14,50 @@ export default class Feed {
 	};
 
 	bindDelegatedClick = () => {
-		document.addEventListener( "click", ( e ) => {
-			const placeholder = e.target.closest(
-				".wapuugotchi-iframe-placeholder"
-			);
-			if ( ! placeholder ) {
-				return;
-			}
+		document.addEventListener(
+			'click',
+			( e ) => {
+				const placeholder = e.target.closest(
+					'.wapuugotchi-iframe-placeholder'
+				);
+				if ( ! placeholder ) {
+					return;
+				}
 
-			e.preventDefault();
-			e.stopPropagation();
-			e.stopImmediatePropagation();
+				e.preventDefault();
+				e.stopPropagation();
+				e.stopImmediatePropagation();
 
-			if ( placeholder.querySelector( "iframe" ) ) {
-				return;
-			}
+				if ( placeholder.querySelector( 'iframe' ) ) {
+					return;
+				}
 
-			const iframeSrc = placeholder.dataset.iframeSrc;
-			if ( ! iframeSrc ) {
-				return;
-			}
+				const iframeSrc = placeholder.dataset.iframeSrc;
+				if ( ! iframeSrc ) {
+					return;
+				}
 
-			const iframe = document.createElement( "iframe" );
-			iframe.src = this.addAutoplayParam( iframeSrc );
-			iframe.loading = "lazy";
-			iframe.allow = "autoplay; fullscreen";
-			iframe.allowFullscreen = true;
-			placeholder.appendChild( iframe );
-		}, true );
+				const iframe = document.createElement( 'iframe' );
+				iframe.src = this.addAutoplayParam( iframeSrc );
+				iframe.loading = 'lazy';
+				iframe.allow = 'autoplay; fullscreen';
+				iframe.allowFullscreen = true;
+				placeholder.appendChild( iframe );
+			},
+			true
+		);
 	};
 
 	addAutoplayParam = ( src ) => {
 		try {
 			const url = new URL( src, window.location.href );
-			url.searchParams.set( "autoplay", "1" );
+			url.searchParams.set( 'autoplay', '1' );
 			return url.toString();
 		} catch ( error ) {
-			const hashIndex = src.indexOf( "#" );
+			const hashIndex = src.indexOf( '#' );
 			const base = hashIndex === -1 ? src : src.slice( 0, hashIndex );
-			const hash = hashIndex === -1 ? "" : src.slice( hashIndex );
-			const separator = base.includes( "?" ) ? "&" : "?";
+			const hash = hashIndex === -1 ? '' : src.slice( hashIndex );
+			const separator = base.includes( '?' ) ? '&' : '?';
 			return `${ base }${ separator }autoplay=1${ hash }`;
 		}
 	};

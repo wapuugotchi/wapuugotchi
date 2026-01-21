@@ -63,7 +63,6 @@ class Feed {
 	 * @return array|null
 	 */
 	public static function get_data() {
-		//\delete_transient( self::FEED_ITEMS ); // For testing purposes only.
 		$items = get_transient( self::FEED_ITEMS );
 		if ( false === $items ) {
 			$data  = self::fetch_data();
@@ -198,7 +197,6 @@ class Feed {
 	 */
 	public static function is_active( $message_id ) {
 		$user_id = get_current_user_id();
-		//\delete_user_meta( $user_id, self::DISMISSED_ITEMS );
 		if ( ! $user_id ) {
 			return true;
 		}

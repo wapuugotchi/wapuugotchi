@@ -28,7 +28,7 @@ class Manager {
 	 * "Constructor" of this Class
 	 */
 	public function __construct() {
-		\add_filter( 'wapuugotchi_bubble_messages', array( AutoMessage::class, 'add_wapuugotchi_messages' ), PHP_INT_MAX, 1 );
+		\add_filter( 'wapuugotchi_bubble_messages', array( AutoMessage::class, 'add_wapuugotchi_messages' ), 100, 1 );
 
 		$this->load_quests();
 		\add_action( 'admin_init', array( QuestHandler::class, 'manage_quest_progress' ), 1000, 0 );

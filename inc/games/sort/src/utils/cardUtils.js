@@ -30,9 +30,15 @@ export const getCards = ( items ) => {
 			`translate(${ CARD_POSITIONS[ index ].x }, ${ CARD_POSITIONS[ index ].y })`
 		);
 		card.setAttribute( 'style', 'cursor: grab;' );
-		card.innerHTML = cardSvg;
 
-		const text = card.querySelector( 'text' );
+		const inner = document.createElement( 'g' );
+		inner.classList.add( 'card-inner' );
+		inner.style.animationDelay = `${ index * 0.12 }s`;
+		inner.style.animationDuration = '1.5s';
+
+		inner.innerHTML = cardSvg;
+
+		const text = inner.querySelector( 'text' );
 		const tags = getTags( item, 16 );
 		// Shift start so all lines are vertically centred in the card.
 		// font-size=28, dy=1.2em=33.6 SVG units → half-spacing = 16.8 ≈ 17.
@@ -40,6 +46,7 @@ export const getCards = ( items ) => {
 		text.setAttribute( 'y', Math.round( CARD_CENTER_Y - ( tags.length + 1 ) * 17 ) );
 		appendTagsToElement( text, tags, CARD_W / 2 );
 
+		card.append( inner );
 		cards.append( card );
 	} );
 

@@ -50,7 +50,8 @@ function init() {
 
 	// Mission feature and the associated games.
 	new \Wapuugotchi\Mission\Manager();
-
+	new \Wapuugotchi\Quiz\Manager();
+	new \Wapuugotchi\Hunt\Manager();
 	new \Wapuugotchi\Sort\Manager();
 }
 

@@ -1,3 +1,20 @@
+@keyframes sort-card-bounce {
+
+	0%   { transform: translateY( 0 ); }
+
+	20%  { transform: translateY( -14px ); }
+
+	40%  { transform: translateY( 0 ); }
+
+	60%  { transform: translateY( -7px ); }
+
+	75%  { transform: translateY( 0 ); }
+
+	90%  { transform: translateY( -3px ); }
+
+	100% { transform: translateY( 0 ); }
+}
+
 .wapuugotchi_mission__action {
 
 	svg {
@@ -17,6 +34,10 @@
 
 				.badge {
 					pointer-events: none;
+				}
+
+				.card-inner {
+					animation: sort-card-bounce 0.55s ease-out both;
 				}
 			}
 		}

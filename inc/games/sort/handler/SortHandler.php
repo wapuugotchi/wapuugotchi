@@ -56,7 +56,7 @@ class SortHandler {
 	 * @return array
 	 */
 	public static function get_shuffled_sort_array() {
-		$sort      = self::get_sort();
+		$sort       = self::get_sort();
 		$sort_array = array();
 
 		if ( empty( $sort ) ) {

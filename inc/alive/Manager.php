@@ -33,7 +33,14 @@ class Manager {
 	 * This method initializes the Manager class by adding the necessary filters and actions.
 	 */
 	public function __construct() {
+		\add_filter( 'wapuugotchi_register_settings', array( $this, 'register_setting' ) );
 		\add_filter( 'wapuugotchi_avatar', array( AnimationHandler::class, 'extract_animations' ), PHP_INT_MAX, 1 );
+
+		$settings = \get_option( 'wapuugotchi_settings', array() );
+		if ( ( $settings['alive'] ?? true ) === false ) {
+			return;
+		}
+
 		\add_action( 'animations_extracted', array( $this, 'add_animations' ) );
 	}
 
@@ -63,5 +70,23 @@ class Manager {
 			},
 			20
 		);
+	}
+
+	/**
+	 * Register this feature in the settings page.
+	 *
+	 * @param array $features Registered features.
+	 *
+	 * @return array
+	 */
+	public function register_setting( $features ) {
+		$features[] = array(
+			'key'         => 'alive',
+			'label'       => \__( 'Alive Animations', 'wapuugotchi' ),
+			'description' => \__( 'Wapuu animates on the dashboard with idle animations. Disable to reduce visual noise.', 'wapuugotchi' ),
+			'default'     => true,
+		);
+
+		return $features;
 	}
 }

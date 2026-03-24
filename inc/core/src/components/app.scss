@@ -1,0 +1,79 @@
+#wapuugotchi-submenu__settings {
+	background-color: #fff;
+	border: 1px solid #c3c4c7;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+	padding: 24px;
+}
+
+.wapuugotchi-settings__header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.wapuugotchi-settings__header h1 {
+	margin: 0;
+}
+
+.wapuugotchi-settings__header .subtitle {
+	margin-top: 8px;
+	margin-bottom: 0;
+	max-width: 640px;
+	opacity: 0.8;
+	color: #50575e;
+}
+
+.wapuugotchi-settings__pill {
+	background: #fff;
+	border: 1px solid #e2e2e2;
+	border-radius: 999px;
+	padding: 10px 16px;
+	font-size: 12px;
+	color: #2c3338;
+	white-space: nowrap;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	align-self: center;
+}
+
+.wapuugotchi-settings__grid {
+	display: grid;
+	grid-template-columns: 2fr 1.5fr;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+.wapuugotchi-settings__card {
+	background: #fafafa;
+	border-radius: 10px;
+	padding: 16px 18px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	border: 1px solid #e2e2e2;
+	cursor: pointer;
+	user-select: none;
+}
+
+.wapuugotchi-settings__card h2 {
+	margin: 0 0 8px;
+}
+
+.wapuugotchi-settings__card p {
+	margin: 0 0 12px;
+	color: #50575e;
+}
+
+.wapuugotchi-settings__card.is-disabled {
+	border-left: 4px solid #888;
+}
+
+.wapuugotchi-settings__card.is-enabled {
+	border-left: 4px solid #00a32a;
+}
+
+@media (max-width: 900px) {
+
+	.wapuugotchi-settings__grid {
+		grid-template-columns: 1fr;
+	}
+}

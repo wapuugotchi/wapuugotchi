@@ -28,12 +28,11 @@ class Api {
 	 * @return array
 	 */
 	public static function fetch_security_data( $plugins ) {
-		$response = \wp_remote_post(
-			self::API_URL,
+		$url      = \add_query_arg( array( 'plugins' => \wp_json_encode( $plugins ) ), self::API_URL );
+		$response = \wp_remote_get(
+			$url,
 			array(
 				'timeout' => 20,
-				'headers' => array( 'Content-Type' => 'application/json' ),
-				'body'    => \wp_json_encode( $plugins ),
 			)
 		);
 

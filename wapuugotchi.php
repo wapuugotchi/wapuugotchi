@@ -35,6 +35,7 @@ function init() {
 
 	// Core features.
 	new \Wapuugotchi\Core\Menu();
+	new \Wapuugotchi\Core\Settings();
 	new \Wapuugotchi\Core\AdminBar();
 	if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		new \Wapuugotchi\Core\Cli();

@@ -87,6 +87,8 @@ class Cli {
 			)
 		);
 
+		\delete_option( Settings::OPTION_KEY );
+
 		\WP_CLI::success(
 			sprintf(
 				'Reset complete. Deleted %d user meta rows and %d transients.',

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(composer dump-autoload:*)",
+      "Bash(npm run:*)",
+      "Bash(npx wp-scripts:*)",
+      "Bash(php:*)",
+      "WebSearch",
+      "WebFetch(domain:developers.buymeacoffee.com)",
+      "Bash(python3:*)",
+      "Bash(git:*)",
+      "Bash(gh pr:*)",
+      "Bash(composer run:*)",
+      "Bash(./vendor/bin/phpcs:*)",
+      "Bash(./vendor/bin/phpcbf:*)"
+    ]
+  }
+}

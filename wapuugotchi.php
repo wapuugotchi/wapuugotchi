@@ -47,6 +47,7 @@ function init() {
 	new \Wapuugotchi\Onboarding\Manager();
 	new \Wapuugotchi\Alive\Manager();
 	new \Wapuugotchi\Support\Manager();
+	new \Wapuugotchi\Security\Manager();
 
 	// Mission feature and the associated games.
 	new \Wapuugotchi\Mission\Manager();

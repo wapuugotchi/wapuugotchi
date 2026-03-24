@@ -72,6 +72,48 @@
 	border-top-color: #dba617;
 }
 
+.security-low_bubble.wapuugotchi__bubble,
+.security-unknown_bubble.wapuugotchi__bubble {
+	border-color: #f0c419;
+}
+
+.security-low_bubble.wapuugotchi__bubble::before,
+.security-unknown_bubble.wapuugotchi__bubble::before {
+	border-top-color: #f0c419;
+}
+
+.security-medium_bubble.wapuugotchi__bubble {
+	border-color: #f18f01;
+}
+
+.security-medium_bubble.wapuugotchi__bubble::before {
+	border-top-color: #f18f01;
+}
+
+.security-high_bubble.wapuugotchi__bubble {
+	border-color: #d94f21;
+}
+
+.security-high_bubble.wapuugotchi__bubble::before {
+	border-top-color: #d94f21;
+}
+
+.security-critical_bubble.wapuugotchi__bubble {
+	border-color: #8f1d1d;
+}
+
+.security-critical_bubble.wapuugotchi__bubble::before {
+	border-top-color: #8f1d1d;
+}
+
+.security-none_bubble.wapuugotchi__bubble {
+	border-color: #2f9e44;
+}
+
+.security-none_bubble.wapuugotchi__bubble::before {
+	border-top-color: #2f9e44;
+}
+
 
 @keyframes "wapuugotchi-svg__fade_in_lazy" {
 

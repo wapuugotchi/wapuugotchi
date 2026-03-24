@@ -66,6 +66,7 @@ class Sort {
 	 * @param array  $items Items in correct order.
 	 * @param string $correct_notice Notice of the correct answer.
 	 * @param string $incorrect_notice Notice of the wrong answer.
+	 * @param string $distractor Distractor item that does not belong in the correct order.
 	 */
 	public function __construct( $id, $question, $items, $correct_notice, $incorrect_notice, $distractor ) {
 		$this->id               = $id;

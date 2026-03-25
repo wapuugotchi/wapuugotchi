@@ -51,21 +51,4 @@ class Manager {
 		return $features;
 	}
 
-	/**
-	 * Register this feature in the settings page.
-	 *
-	 * @param array $features Registered features.
-	 *
-	 * @return array
-	 */
-	public function register_setting( $features ) {
-		$features[] = array(
-			'key'         => 'security',
-			'label'       => \__( 'Security Messages', 'wapuugotchi' ),
-			'description' => \__( 'Wapuu performs a daily security check and displays security tips. Disable to suppress these messages.', 'wapuugotchi' ),
-			'default'     => true,
-		);
-
-		return $features;
-	}
 }

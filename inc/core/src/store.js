@@ -34,7 +34,11 @@ function create() {
 					const nonce = select.getNonce();
 
 					const newSettings = { ...currentSettings, [ key ]: value };
-					dispatch.__setState( { settings: newSettings, saving: true, saved: false } );
+					dispatch.__setState( {
+						settings: newSettings,
+						saving: true,
+						saved: false,
+					} );
 
 					try {
 						await apiFetch( {
@@ -44,7 +48,11 @@ function create() {
 						} );
 						dispatch.__setState( { saving: false, saved: true } );
 					} catch ( e ) {
-						dispatch.__setState( { settings: currentSettings, saving: false, saved: false } );
+						dispatch.__setState( {
+							settings: currentSettings,
+							saving: false,
+							saved: false,
+						} );
 					}
 				},
 		},

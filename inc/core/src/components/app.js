@@ -16,7 +16,9 @@ export default function App() {
 		<div className="wapuugotchi-settings wapuugotchi-settings__page">
 			<div className="wapuugotchi-settings__header">
 				<div>
-					<h1>{ __( '🐾 WapuuGotchi – Settings', 'wapuugotchi' ) }</h1>
+					<h1>
+						{ __( '🐾 WapuuGotchi – Settings', 'wapuugotchi' ) }
+					</h1>
 					<p className="subtitle">
 						{ __(
 							'Enable or disable optional features of the WapuuGotchi plugin.',
@@ -39,7 +41,9 @@ export default function App() {
 							className={ `wapuugotchi-settings__card${
 								! isEnabled ? ' is-disabled' : ' is-enabled'
 							}` }
-							onClick={ () => saveSetting( feature.key, ! isEnabled ) }
+							onClick={ () =>
+								saveSetting( feature.key, ! isEnabled )
+							}
 							role="button"
 							tabIndex={ 0 }
 							onKeyDown={ ( e ) => {

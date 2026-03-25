@@ -83,7 +83,7 @@ class Manager {
 		$features[] = array(
 			'key'         => 'alive',
 			'label'       => \__( 'Alive Animations', 'wapuugotchi' ),
-			'description' => \__( 'Wapuu animates on the dashboard with idle animations. Disable to reduce visual noise.', 'wapuugotchi' ),
+			'description' => \__( 'Your Wapuu brings the dashboard to life with random animations based on the items it is currently wearing.', 'wapuugotchi' ),
 			'default'     => true,
 		);
 

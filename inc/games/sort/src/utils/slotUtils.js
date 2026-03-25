@@ -39,4 +39,6 @@ export const getSlots = () => {
 const getSlotSvg = ( num ) =>
 	`<rect width="${ SLOT_W }" height="${ SLOT_H }" rx="8" fill="#f0f0f0" stroke="#aaa" stroke-width="3" stroke-dasharray="8,4"></rect>` +
 	`<circle cx="${ SLOT_W - 20 }" cy="15" r="13" fill="#555"></circle>` +
-	`<text x="${ SLOT_W - 20 }" y="15" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="15" font-family="sans-serif">${ num }</text>`;
+	`<text x="${
+		SLOT_W - 20
+	}" y="15" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="15" font-family="sans-serif">${ num }</text>`;

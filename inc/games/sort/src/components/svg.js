@@ -71,7 +71,8 @@ export default function Svg() {
 	 */
 	const evaluateAnswer = useCallback( () => {
 		const isCorrect = slottedRef.current.every(
-			( cardIdx, pos ) => sort.items[ cardIdx ] === sort.correct_order[ pos ]
+			( cardIdx, pos ) =>
+				sort.items[ cardIdx ] === sort.correct_order[ pos ]
 		);
 
 		document.querySelector( `${ SVG_ID } g#Card--group` )?.remove();
@@ -108,7 +109,10 @@ export default function Svg() {
 		const svgEl = document.querySelector( SVG_ID );
 		svgEl.setPointerCapture( event.pointerId );
 
-		const cardIndex = parseInt( card.getAttribute( 'data-card-index' ), 10 );
+		const cardIndex = parseInt(
+			card.getAttribute( 'data-card-index' ),
+			10
+		);
 		const svgPt = clientToSvg( svgEl, event.clientX, event.clientY );
 		const [ , ox, oy ] = card
 			.getAttribute( 'transform' )
@@ -135,7 +139,8 @@ export default function Svg() {
 	 * @param {PointerEvent} event - The pointer event.
 	 */
 	const handlePointerMove = useCallback( ( event ) => {
-		const { active, cardEl, origX, origY, startX, startY } = dragRef.current;
+		const { active, cardEl, origX, origY, startX, startY } =
+			dragRef.current;
 		if ( ! active ) {
 			return;
 		}
@@ -225,7 +230,9 @@ export default function Svg() {
 	const handleOverlayClick = useCallback(
 		( event ) => {
 			if (
-				! event.target.classList.contains( 'wapuugotchi_mission__overlay' )
+				! event.target.classList.contains(
+					'wapuugotchi_mission__overlay'
+				)
 			) {
 				return;
 			}
@@ -266,12 +273,16 @@ export default function Svg() {
 	 * Effect: registers overlay and action button click handlers.
 	 */
 	useEffect( () => {
-		const overlay = document.querySelector( '.wapuugotchi_mission__overlay' );
+		const overlay = document.querySelector(
+			'.wapuugotchi_mission__overlay'
+		);
 		const action = document.querySelector( '.wapuugotchi_mission__action' );
 
 		overlay.addEventListener( 'click', handleOverlayClick );
 		action.addEventListener( 'click', ( e ) => {
-			if ( e.target.classList.contains( 'wapuugotchi_mission__action' ) ) {
+			if (
+				e.target.classList.contains( 'wapuugotchi_mission__action' )
+			) {
 				e.stopPropagation();
 				overlay.click();
 			}

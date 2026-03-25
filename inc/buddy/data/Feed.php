@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class Feed
  */
 class Feed {
-	const WAPUUGOTCHI_FEED_URL = 'https://wapuugotchi.github.io/feed/feed.xml';
+	const WAPUUGOTCHI_FEED_URL = 'https://feed.wapuugotchi.com/feed.xml';
 	const FEED_ITEMS           = 'wapuugotchi_feed_items';
 	const DISMISSED_ITEMS      = 'wapuugotchi_feed_dismissed';
 	const CACHE_TTL            = 12 * HOUR_IN_SECONDS;

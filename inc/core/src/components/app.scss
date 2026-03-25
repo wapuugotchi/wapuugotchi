@@ -39,9 +39,9 @@
 
 .wapuugotchi-settings__grid {
 	display: grid;
-	grid-template-columns: 2fr 1.5fr;
+	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
-	align-items: flex-start;
+	align-items: stretch;
 }
 
 .wapuugotchi-settings__card {
@@ -52,6 +52,8 @@
 	border: 1px solid #e2e2e2;
 	cursor: pointer;
 	user-select: none;
+	display: flex;
+	flex-direction: column;
 }
 
 .wapuugotchi-settings__card h2 {
@@ -61,6 +63,8 @@
 .wapuugotchi-settings__card p {
 	margin: 0 0 12px;
 	color: #50575e;
+	flex: 1;
+	white-space: pre-line;
 }
 
 .wapuugotchi-settings__card.is-disabled {

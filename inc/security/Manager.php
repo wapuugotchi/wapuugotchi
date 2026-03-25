@@ -44,8 +44,8 @@ class Manager {
 		$features[] = array(
 			'key'         => 'security',
 			'label'       => \__( 'Security Messages', 'wapuugotchi' ),
-			'description' => \__( 'Wapuu performs a daily security check and displays security tips. Disable to suppress these messages.', 'wapuugotchi' ),
-			'default'     => true,
+			'description' => \__( "Your Wapuu performs daily security checks and notifies you if any issues are found. It also shares helpful security tips.\nTo run vulnerability checks, it securely connects to our service (vulnerability.wapuugotchi.com).\nYour data stays yours — we don't access or store your personal content.", 'wapuugotchi' ),
+			'default'     => false,
 		);
 
 		return $features;

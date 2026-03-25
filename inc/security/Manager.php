@@ -30,7 +30,7 @@ class Manager {
 		}
 
 		\add_action( 'load-index.php', array( CheckHandler::class, 'maybe_run_daily_security_check' ) );
-		\add_filter( 'wapuugotchi_bubble_messages', array( AutoMessage::class, 'add_security_messages_filter' ) );
+		\add_filter( 'wapuugotchi_bubble_messages', array( AutoMessage::class, 'add_security_messages_filter' ), 100, 1 );
 	}
 
 	/**

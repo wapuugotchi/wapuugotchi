@@ -130,7 +130,7 @@ class Publisher {
 		}
 
 		$mission_data = \get_user_meta( $user_id, 'wapuugotchi_mission', true );
-		if ( empty( $mission_data ) ) {
+		if ( empty( $mission_data ) || ! isset( $mission_data['id'], $mission_data['progress'] ) ) {
 			return;
 		}
 
@@ -169,6 +169,7 @@ class Publisher {
 			return;
 		}
 
+		$amount      = (int) $amount;
 		$balance     = (int) \get_user_meta( $user_id, 'wapuugotchi_balance', true );
 		$old_balance = $balance - $amount;
 

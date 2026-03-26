@@ -77,14 +77,11 @@ class AvatarEndpoint {
 			);
 		}
 
-		$response = new \WP_REST_Response( null, 200 );
+		$response = new \WP_REST_Response( $svg, 200 );
+		$response->header( 'Content-Type', 'image/svg+xml; charset=utf-8' );
+		$response->header( 'Cache-Control', 'public, max-age=3600' );
 
-		// Send the SVG directly with proper headers.
-		header( 'Content-Type: image/svg+xml; charset=utf-8' );
-		header( 'Cache-Control: public, max-age=3600' );
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo $svg;
-		exit;
+		return $response;
 	}
 
 	/**

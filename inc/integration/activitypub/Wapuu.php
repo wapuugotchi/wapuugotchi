@@ -75,7 +75,7 @@ class Wapuu extends Actor {
 	 * @return int The WordPress user ID.
 	 */
 	public static function wapuu_id_to_user_id( $wapuu_id ) {
-		return abs( (int) $wapuu_id + self::ID_OFFSET );
+		return self::ID_OFFSET - (int) $wapuu_id;
 	}
 
 	/**

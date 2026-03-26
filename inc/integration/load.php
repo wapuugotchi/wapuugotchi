@@ -7,6 +7,10 @@
 
 namespace Wapuugotchi\Integration;
 
+if ( ! \defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Initialize the WapuuGotchi integrations.
  */

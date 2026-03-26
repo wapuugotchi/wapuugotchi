@@ -157,6 +157,13 @@ class Api {
 		AvatarHandler::update_avatar_config( $req['avatar'] );
 		AvatarHandler::update_avatar_svg( $req['svg'] );
 
+		/**
+		 * Fires when a Wapuu avatar is updated.
+		 *
+		 * @param int $user_id The user ID.
+		 */
+		\do_action( 'wapuugotchi_avatar_updated', \get_current_user_id() );
+
 		return rest_ensure_response(
 			new \WP_REST_Response(
 				array(

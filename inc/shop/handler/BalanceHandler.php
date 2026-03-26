@@ -74,5 +74,13 @@ class BalanceHandler {
 		$balance  = self::get_balance();
 		$balance += $amount;
 		\update_user_meta( \get_current_user_id(), self::BALANCE_KEY, $balance );
+
+		/**
+		 * Fires when the user's pearl balance increases.
+		 *
+		 * @param int $amount  The amount added.
+		 * @param int $user_id The user ID.
+		 */
+		\do_action( 'wapuugotchi_balance_changed', $amount, \get_current_user_id() );
 	}
 }

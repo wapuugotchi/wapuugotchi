@@ -133,4 +133,17 @@ class ItemHandler {
 
 		return true;
 	}
+
+	/**
+	 * Lock (remove) an item by id. Used to roll back a failed purchase.
+	 *
+	 * @param string $id The id of the item.
+	 *
+	 * @return void
+	 */
+	public static function lock_item( $id ) {
+		$unlocked_items = self::get_unlocked_items();
+		$unlocked_items = \array_values( \array_diff( $unlocked_items, array( $id ) ) );
+		\update_user_meta( \get_current_user_id(), 'wapuugotchi_unlocked_items', $unlocked_items );
+	}
 }

@@ -13,7 +13,7 @@ export default function Categories() {
 
 	return (
 		<div className="wapuugotchi_shop__categories">
-			{ Object.keys( categories ).map( ( index ) => (
+			{ Object.keys( categories ?? {} ).map( ( index ) => (
 				<Category
 					key={ index }
 					slug={ index }

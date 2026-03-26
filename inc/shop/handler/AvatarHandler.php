@@ -48,23 +48,16 @@ class AvatarHandler {
 			return;
 		}
 
-		$default_config_url = \plugin_dir_url( __DIR__ ) . 'assets/avatar.json';
-		$response           = wp_remote_get( $default_config_url );
-
-		if ( is_wp_error( $response ) ) {
-			// Handle error.
-			return;
-		}
-
-		$body = wp_remote_retrieve_body( $response );
+		$default_config_path = \dirname( __DIR__ ) . '/assets/avatar.json';
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		$body = file_get_contents( $default_config_path );
 
 		if ( empty( $body ) ) {
-			// Could not retrieve the body.
 			return;
 		}
 
 		$config = \json_decode( $body, true );
-		if ( false === $config ) {
+		if ( null === $config ) {
 			// Could not decode default avatar config file.
 			return;
 		}

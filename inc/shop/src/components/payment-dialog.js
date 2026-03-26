@@ -2,7 +2,7 @@ import { STORE_NAME } from '../store';
 import { useDispatch, useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 import { __experimentalConfirmDialog as ConfirmDialog } from '@wordpress/components';
-import { useCallback } from '@wordpress/element';
+import { useCallback, useState } from '@wordpress/element';
 
 import './payment-dialog.scss';
 
@@ -17,13 +17,20 @@ export default function PaymentDialog() {
 
 	const { showItemDetail, purchaseItem } = useDispatch( STORE_NAME );
 	const item = items?.[ selectedCategory ]?.[ itemDetail ];
+	const [ purchaseError, setPurchaseError ] = useState( false );
 
-	const handleConfirm = useCallback( () => {
-		purchaseItem( item );
-		showItemDetail( null );
+	const handleConfirm = useCallback( async () => {
+		setPurchaseError( false );
+		const success = await purchaseItem( item );
+		if ( success ) {
+			showItemDetail( null );
+		} else {
+			setPurchaseError( true );
+		}
 	}, [ purchaseItem, showItemDetail, item ] );
 
 	const handleCancel = useCallback( () => {
+		setPurchaseError( false );
 		showItemDetail( null );
 	}, [ showItemDetail ] );
 
@@ -58,6 +65,14 @@ export default function PaymentDialog() {
 								'wapuugotchi'
 							) }
 						</p>
+						{ purchaseError && (
+							<p className="wapuu_payment__error">
+								{ __(
+									'Purchase failed. Please try again.',
+									'wapuugotchi'
+								) }
+							</p>
+						) }
 					</ConfirmDialog>
 				</div>
 			) }

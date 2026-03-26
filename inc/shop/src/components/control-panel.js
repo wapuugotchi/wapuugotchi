@@ -1,6 +1,6 @@
 import { useSelect } from '@wordpress/data';
 import { STORE_NAME } from '../store';
-import { useState } from '@wordpress/element';
+import { useState, useEffect } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 import apiFetch from '@wordpress/api-fetch';
 import './control-panel.scss';
@@ -12,24 +12,29 @@ export default function ControlPanel() {
 		};
 	} );
 
-	const [ name, setName ] = useState( wapuu?.name );
-	const [ loader, setLoader ] = useState( __( 'Ausrüsten!', 'wapuugotchi' ) );
+	const [ name, setName ] = useState( wapuu?.name ?? '' );
+	const [ loader, setLoader ] = useState( __( 'Equip!', 'wapuugotchi' ) );
 
+	useEffect( () => {
+		setName( wapuu?.name ?? '' );
+	}, [ wapuu?.name ] );
 
 	const submitHandler = async ( event ) => {
 		event.preventDefault();
-		setLoader( __( 'Speichere…', 'wapuugotchi' ) );
-		wapuu.name = name;
-		const svgEl = document.querySelector( '#wapuugotchi_svg__wapuu' );
-		await apiFetch( {
-			path: `wapuugotchi/v1/wapuugotchi/shop/update-avatar`,
-			method: 'POST',
-			data: {
-				avatar: wapuu,
-				svg: svgEl ? svgEl.outerHTML : '',
-			},
-		} );
-		setLoader( __( 'Ausrüsten!', 'wapuugotchi' ) );
+		setLoader( __( 'Saving…', 'wapuugotchi' ) );
+		try {
+			const svgEl = document.querySelector( '#wapuugotchi_svg__wapuu' );
+			await apiFetch( {
+				path: `wapuugotchi/v1/wapuugotchi/shop/update-avatar`,
+				method: 'POST',
+				data: {
+					avatar: { ...wapuu, name },
+					svg: svgEl ? svgEl.outerHTML : '',
+				},
+			} );
+		} finally {
+			setLoader( __( 'Equip!', 'wapuugotchi' ) );
+		}
 	};
 
 	return (

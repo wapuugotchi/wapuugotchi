@@ -20,20 +20,25 @@ export default function Item( { uuid, item } ) {
 		const avatarConfig = wapuu?.char?.[ selectedCategory ];
 		if ( item.meta.price === 0 ) {
 			const isItemSelected = avatarConfig?.key?.includes( uuid );
-			const canDeselect = avatarConfig.key.length > avatarConfig.min;
-			const canSelect = avatarConfig.key.length < avatarConfig.max;
+			const canDeselect = ( avatarConfig?.key?.length ?? 0 ) > avatarConfig?.min;
+			const canSelect = ( avatarConfig?.key?.length ?? 0 ) < avatarConfig?.max;
+
+			const updateKeys = ( newKeys ) => {
+				dispatch( STORE_NAME ).setWapuu( {
+					...wapuu,
+					char: {
+						...wapuu.char,
+						[ selectedCategory ]: { ...avatarConfig, key: newKeys },
+					},
+				} );
+			};
 
 			if ( isItemSelected && canDeselect ) {
-				const index = avatarConfig.key.indexOf( uuid );
-				avatarConfig.key.splice( index, 1 );
-				dispatch( STORE_NAME ).setWapuu( wapuu );
+				updateKeys( avatarConfig.key.filter( ( k ) => k !== uuid ) );
 			} else if ( ! isItemSelected && canSelect ) {
-				avatarConfig.key.push( uuid );
-				dispatch( STORE_NAME ).setWapuu( wapuu );
+				updateKeys( [ ...avatarConfig.key, uuid ] );
 			} else if ( ! isItemSelected && ! canSelect ) {
-				avatarConfig.key.pop();
-				avatarConfig.key.push( uuid );
-				dispatch( STORE_NAME ).setWapuu( wapuu );
+				updateKeys( [ ...avatarConfig.key.slice( 0, -1 ), uuid ] );
 			}
 		} else if ( item.meta.price <= balance ) {
 			dispatch( STORE_NAME ).showItemDetail( uuid );
@@ -55,13 +60,24 @@ export default function Item( { uuid, item } ) {
 			<img src={ item.preview } alt="" />
 			{ isSelected && (
 				<div className="wapuugotchi_shop__owned_badge">
-					{ __( 'Ausgewählt', 'wapuugotchi' ) }
+					{ __( 'Selected', 'wapuugotchi' ) }
 				</div>
 			) }
 			{ item?.meta?.colored === 1 && (
 				<span className="wapuugotchi_shop__colored_hint">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-						<path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10c.89 0 1.75-.13 2.59-.37.58-.17.94-.76.77-1.34-.18-.59-.78-.94-1.38-.77-.63.18-1.29.27-1.98.27-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8c0 1.1-.89 2-2 2s-2-.9-2-2c0-1.1-.9-2-2-2s-2 .9-2 2c0 2.21 1.79 4 4 4 .73 0 1.41-.21 2-.57C19.41 19.27 22 15.97 22 12c0-5.51-4.49-10-10-10zM7 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2-4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2 4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -150 300 300" aria-hidden="true" focusable="false">
+						<path d="M0,0 L0,-140 A140,140 0 0,1 70,-121 Z" fill="#FF0000"/>
+						<path d="M0,0 L70,-121 A140,140 0 0,1 121,-70 Z" fill="#FF7F00"/>
+						<path d="M0,0 L121,-70 A140,140 0 0,1 140,0 Z" fill="#FFFF00"/>
+						<path d="M0,0 L140,0 A140,140 0 0,1 121,70 Z" fill="#7FFF00"/>
+						<path d="M0,0 L121,70 A140,140 0 0,1 70,121 Z" fill="#00FF00"/>
+						<path d="M0,0 L70,121 A140,140 0 0,1 0,140 Z" fill="#00FF7F"/>
+						<path d="M0,0 L0,140 A140,140 0 0,1 -70,121 Z" fill="#00FFFF"/>
+						<path d="M0,0 L-70,121 A140,140 0 0,1 -121,70 Z" fill="#007FFF"/>
+						<path d="M0,0 L-121,70 A140,140 0 0,1 -140,0 Z" fill="#0000FF"/>
+						<path d="M0,0 L-140,0 A140,140 0 0,1 -121,-70 Z" fill="#7F00FF"/>
+						<path d="M0,0 L-121,-70 A140,140 0 0,1 -70,-121 Z" fill="#FF00FF"/>
+						<path d="M0,0 L-70,-121 A140,140 0 0,1 0,-140 Z" fill="#FF007F"/>
 					</svg>
 				</span>
 			) }

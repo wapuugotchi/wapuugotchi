@@ -18,7 +18,7 @@ const STORE_NAME = 'wapuugotchi/shop';
 const __getItemData = ( wapuu, items, category ) => {
 	if ( wapuu.char?.[ category ]?.key?.[ 0 ] ) {
 		return wapuu.char[ category ].key
-			.filter( ( uuid ) => items[ category ][ uuid ] )
+			.filter( ( uuid ) => items?.[ category ]?.[ uuid ] )
 			.map( ( uuid ) => ( {
 				url: items[ category ][ uuid ].image,
 				itemKey: items[ category ][ uuid ].meta.key,
@@ -48,15 +48,26 @@ function __applyItemColors( srcEl, destEl, itemKey ) {
 }
 
 async function __buildSvg( wapuu, items ) {
+	if ( ! wapuu?.char ) return;
 	const itemData = Object.keys( wapuu.char ).flatMap( ( category ) =>
 		__getItemData( wapuu, items, category )
 	);
 
 	if ( ! itemData.length ) return;
 
-	const texts = await Promise.all(
-		itemData.map( ( { url } ) => fetch( url ).then( ( r ) => r.text() ) )
-	);
+	let texts;
+	try {
+		texts = await Promise.all(
+			itemData.map( ( { url } ) =>
+				fetch( url ).then( ( r ) => {
+					if ( ! r.ok ) throw new Error( r.status );
+					return r.text();
+				} )
+			)
+		);
+	} catch {
+		return;
+	}
 
 	const svgsWithKey = texts.map( ( text, i ) => ( {
 		itemKey: itemData[ i ].itemKey,
@@ -96,10 +107,10 @@ async function __buildSvg( wapuu, items ) {
 		__applyItemColors( svg.documentElement, result, itemKey );
 
 		Array.from( svg.querySelectorAll( 'g' ) )
-			.filter( ( itemGroup ) => itemGroup.classList.value )
+			.filter( ( itemGroup ) => itemGroup.classList.length === 1 )
 			.forEach( ( itemGroup ) => {
 				const wapuuSvgGroup = result.querySelector(
-					'g#' + itemGroup.classList.value
+					'g#' + CSS.escape( itemGroup.classList[ 0 ] )
 				);
 				if ( wapuuSvgGroup ) {
 					const removePart =
@@ -125,13 +136,15 @@ async function __buildSvg( wapuu, items ) {
 	return result.outerHTML;
 }
 
+let _svgGeneration = 0;
+
 function create() {
 	const store = createReduxStore( STORE_NAME, {
 		reducer( state = {}, { type, payload } ) {
 			switch ( type ) {
 				case '__SET_STATE': {
 					return {
-						state,
+						...state,
 						...payload,
 					};
 				}
@@ -166,12 +179,6 @@ function create() {
 						selectedCategory: payload,
 					};
 				}
-				case '__SET_COLOR_PICKER_OPEN': {
-					return {
-						...state,
-						colorPickerOpen: payload,
-					};
-				}
 			}
 
 			return state;
@@ -191,8 +198,11 @@ function create() {
 			},
 			setWapuu: ( payload ) =>
 				async function ( { dispatch, select } ) {
+					const generation = ++_svgGeneration;
 					const svg = await __buildSvg( payload, select.getItems() );
-					return dispatch.__setWapuu( payload, svg );
+					if ( generation === _svgGeneration ) {
+						return dispatch.__setWapuu( payload, svg );
+					}
 				},
 			__setWapuu( wapuu, svg ) {
 				return {
@@ -205,24 +215,41 @@ function create() {
 			},
 			purchaseItem: ( item ) =>
 				async function ( { dispatch, select } ) {
-					await apiFetch( {
-						path: `wapuugotchi/v1/wapuugotchi/shop/unlock-item`,
-						method: 'POST',
-						data: {
-							item: {
-								key: item.meta.key,
-								category: select.getSelectedCategory(),
+					const price = item.meta.price;
+					const category = select.getSelectedCategory();
+					try {
+						const response = await apiFetch( {
+							path: `wapuugotchi/v1/wapuugotchi/shop/unlock-item`,
+							method: 'POST',
+							data: {
+								item: {
+									key: item.meta.key,
+									category,
+								},
 							},
-						},
-					} ).then( ( response ) => {
+						} );
 						if ( response.status === '200' ) {
-							dispatch.setBalance(
-								select.getBalance() - item.meta.price
-							);
-							item.meta.price = 0;
-							dispatch.setItems( select.getItems() );
+							dispatch.setBalance( select.getBalance() - price );
+							const currentItems = select.getItems();
+							dispatch.setItems( {
+								...currentItems,
+								[ category ]: {
+									...currentItems[ category ],
+									[ item.meta.key ]: {
+										...currentItems[ category ][ item.meta.key ],
+										meta: {
+											...currentItems[ category ][ item.meta.key ].meta,
+											price: 0,
+										},
+									},
+								},
+							} );
+							return true;
 						}
-					} );
+					} catch {
+						// network error
+					}
+					return false;
 				},
 			setBalance( payload ) {
 				return {
@@ -249,12 +276,6 @@ function create() {
 					payload,
 				};
 			},
-			setColorPickerOpen( payload ) {
-				return {
-					type: '__SET_COLOR_PICKER_OPEN',
-					payload,
-				};
-			},
 			updateWapuuColor: ( variable, value ) =>
 				function ( { dispatch, select } ) {
 					const wapuu = select.getWapuu();
@@ -266,9 +287,12 @@ function create() {
 				},
 			resetWapuuColors: () =>
 				async function ( { dispatch, select } ) {
+					const generation = ++_svgGeneration;
 					const wapuu = { ...select.getWapuu(), colors: {} };
 					const svg = await __buildSvg( wapuu, select.getItems() );
-					return dispatch.__setWapuu( wapuu, svg );
+					if ( generation === _svgGeneration ) {
+						return dispatch.__setWapuu( wapuu, svg );
+					}
 				},
 		},
 		selectors: {
@@ -296,9 +320,6 @@ function create() {
 			},
 			getSelectedCategory( state ) {
 				return state.selectedCategory;
-			},
-			getColorPickerOpen( state ) {
-				return state.colorPickerOpen;
 			},
 		},
 	} );

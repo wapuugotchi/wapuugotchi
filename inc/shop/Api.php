@@ -75,10 +75,10 @@ class Api {
 			return rest_ensure_response(
 				new \WP_REST_Response(
 					array(
-						'status'  => '404',
+						'status'  => '400',
 						'message' => 'missing parameters',
 					),
-					404
+					400
 				)
 			);
 		}
@@ -101,23 +101,10 @@ class Api {
 			return rest_ensure_response(
 				new \WP_REST_Response(
 					array(
-						'status'  => '404',
+						'status'  => '409',
 						'message' => 'Item already unlocked',
 					),
-					404
-				)
-			);
-		}
-
-		$payed = BalanceHandler::decrease_balance( $item );
-		if ( ! $payed ) {
-			return rest_ensure_response(
-				new \WP_REST_Response(
-					array(
-						'status'  => '404',
-						'message' => 'Not enough balance',
-					),
-					404
+					409
 				)
 			);
 		}
@@ -127,10 +114,24 @@ class Api {
 			return rest_ensure_response(
 				new \WP_REST_Response(
 					array(
-						'status'  => '404',
+						'status'  => '500',
 						'message' => 'Item could not be unlocked',
 					),
-					404
+					500
+				)
+			);
+		}
+
+		$payed = BalanceHandler::decrease_balance( $item );
+		if ( ! $payed ) {
+			ItemHandler::lock_item( $req['item']['key'] );
+			return rest_ensure_response(
+				new \WP_REST_Response(
+					array(
+						'status'  => '402',
+						'message' => 'Not enough balance',
+					),
+					402
 				)
 			);
 		}
@@ -181,10 +182,10 @@ class Api {
 			return rest_ensure_response(
 				new \WP_REST_Response(
 					array(
-						'status'  => '404',
+						'status'  => '400',
 						'message' => 'missing parameters',
 					),
-					404
+					400
 				)
 			);
 		}
@@ -193,10 +194,10 @@ class Api {
 			return rest_ensure_response(
 				new \WP_REST_Response(
 					array(
-						'status'  => '404',
+						'status'  => '403',
 						'message' => 'nonce not valid',
 					),
-					404
+					403
 				)
 			);
 		}

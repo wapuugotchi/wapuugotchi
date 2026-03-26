@@ -1,6 +1,6 @@
 import { STORE_NAME } from '../store';
 import { useSelect } from '@wordpress/data';
-import { useMemo, useRef, useState, useEffect } from '@wordpress/element';
+import { useRef, useState, useEffect, useMemo } from '@wordpress/element';
 import ColorPicker from './color-picker';
 import './show-room.scss';
 
@@ -12,7 +12,7 @@ export default function ShowRoom() {
 		};
 	} );
 
-	const memorizedAvatar = useMemo( () => svg, [ svg ] );
+	const memorizedAvatar = svg;
 
 	const containerRef = useRef( null );
 	const [ svgEl, setSvgEl ] = useState( null );

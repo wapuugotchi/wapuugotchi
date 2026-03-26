@@ -12,9 +12,10 @@ export default function Category( { slug, meta } ) {
 	const handleSelectedCategory = async () => {
 		dispatch( STORE_NAME ).setSelectedCategory( slug );
 	};
+
 	return (
 		meta && (
-			<div
+			<button
 				onClick={ () => handleSelectedCategory() }
 				id={ 'category_' + slug }
 				className={
@@ -23,11 +24,8 @@ export default function Category( { slug, meta } ) {
 						: 'wapuugotchi_shop__category'
 				}
 			>
-				<img
-					className="wapuugotchi_shop__category_icon"
-					src={ meta.image }
-				/>
-			</div>
+				{ meta.caption }
+			</button>
 		)
 	);
 }

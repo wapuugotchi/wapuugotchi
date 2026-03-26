@@ -1,33 +1,44 @@
-import Menu from './menu';
-import ShowRoom from './show-room';
+import { useSelect } from '@wordpress/data';
+import { __ } from '@wordpress/i18n';
+import { STORE_NAME } from '../store';
 import PaymentDialog from './payment-dialog';
-import Header from './header';
-import ControlPanel from './control-panel';
-import Customizer from './customizer';
-import Categories from './categories';
-import Items from './items';
+import LeftSide from './left-side';
+import RightSide from './right-side';
+import Pearl from './assets/pearl_black.svg';
 
 import './container.scss';
-import RightSide from './right-side';
-import LeftSide from './left-side';
 
 export default function Container() {
+	const { balance } = useSelect( ( select ) => {
+		return {
+			balance: select( STORE_NAME ).getBalance(),
+		};
+	} );
+
 	return (
-		<div className="wapuugotchi_shop">
-			<Header key="header" />
-			<PaymentDialog key="payment-dialog" />
-			<Customizer key="customizer">
-				<LeftSide key="left-side">
-					<Menu key="menu">
-						<Categories key="categories" />
-						<Items key="items" />
-					</Menu>
-				</LeftSide>
-				<RightSide key="right-side">
-					<ControlPanel key="control-panel" />
-					<ShowRoom key="show-room" />
-				</RightSide>
-			</Customizer>
+		<div className="wapuugotchi_shop__page">
+			<div className="wapuugotchi_shop__page_header">
+				<div className="wapuugotchi_shop__page_title">
+					<h1>{ __( '🐾 WapuuGotchi – Shop', 'wapuugotchi' ) }</h1>
+					<p className="subtitle">
+						{ __(
+							'Style your Wapuu, unlock fresh looks, and spend pearls on new gear.',
+							'wapuugotchi'
+						) }
+					</p>
+				</div>
+				<div className="wapuugotchi_shop__page_pill">
+					<img alt="" src={ Pearl } />
+					{ balance } { __( 'Pearls', 'wapuugotchi' ) }
+				</div>
+			</div>
+			<div className="wapuugotchi_shop">
+				<PaymentDialog />
+				<div className="wapuugotchi_shop__customizer">
+					<LeftSide />
+					<RightSide />
+				</div>
+			</div>
 		</div>
 	);
 }

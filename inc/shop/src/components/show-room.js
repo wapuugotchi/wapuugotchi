@@ -1,28 +1,48 @@
 import { STORE_NAME } from '../store';
 import { useSelect } from '@wordpress/data';
-import { useMemo } from '@wordpress/element';
+import { useMemo, useRef, useState, useEffect } from '@wordpress/element';
+import ColorPicker from './color-picker';
 import './show-room.scss';
 
 export default function ShowRoom() {
-	const { svg } = useSelect( ( select ) => {
+	const { svg, wapuu } = useSelect( ( select ) => {
 		return {
 			svg: select( STORE_NAME ).getSvg(),
+			wapuu: select( STORE_NAME ).getWapuu(),
 		};
 	} );
 
 	const memorizedAvatar = useMemo( () => svg, [ svg ] );
+
+	const containerRef = useRef( null );
+	const [ svgEl, setSvgEl ] = useState( null );
+
+	const colorableItemKeys = useMemo( () => {
+		if ( ! svgEl ) return [];
+		return Object.values( wapuu?.char || {} ).flatMap( ( charEntry ) =>
+			( charEntry?.key || [] ).filter( ( key ) =>
+				svgEl
+					.getAttributeNames()
+					.some( ( attr ) => attr.startsWith( `data-color-${ key }-` ) )
+			)
+		);
+	}, [ svgEl, wapuu ] );
+
+	useEffect( () => {
+		const el = containerRef.current?.querySelector( 'svg.color_pick_able' );
+		setSvgEl( el ?? null );
+	}, [ memorizedAvatar ] );
+
 	return (
 		<div className="wapuugotchi_shop__image">
-			<div className="wapuu_show_room">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					x="0"
-					y="0"
-					version="1.1"
-					viewBox="0 0 1000 1000"
-					dangerouslySetInnerHTML={ { __html: memorizedAvatar } }
-				></svg>
-			</div>
+			<div
+				ref={ containerRef }
+				className="wapuu_show_room"
+				dangerouslySetInnerHTML={ { __html: memorizedAvatar } }
+			/>
+			{ svgEl && colorableItemKeys.length > 0 && (
+				<ColorPicker svgEl={ svgEl } itemKeys={ colorableItemKeys } />
+			) }
 		</div>
 	);
 }

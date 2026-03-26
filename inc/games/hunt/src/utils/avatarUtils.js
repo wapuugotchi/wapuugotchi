@@ -10,6 +10,22 @@ export const buildSvg = async ( svgString, hunt ) => {
 	const parser = new DOMParser();
 	const doc = parser.parseFromString( svgString, 'image/svg+xml' );
 	const avatar = doc.querySelector( 'svg' );
+
+	if ( ! avatar.querySelector( 'style[data-color-vars]' ) ) {
+		const inlineStyle = avatar.getAttribute( 'style' ) || '';
+		const colorVars = inlineStyle
+			.split( ';' )
+			.map( ( s ) => s.trim() )
+			.filter( ( s ) => s.startsWith( '--' ) )
+			.join( '; ' );
+		if ( colorVars ) {
+			const styleEl = doc.createElement( 'style' );
+			styleEl.setAttribute( 'data-color-vars', '' );
+			styleEl.textContent = `:root, svg { ${ colorVars }; }`;
+			avatar.prepend( styleEl );
+		}
+	}
+
 	removeIgnoredElements( avatar );
 	insertElement( avatar, getTextBox( hunt ), 'g#LeftArm--group' );
 
@@ -25,7 +41,7 @@ export const insertElement = ( svg, element, tag ) => {
 
 export const removeIgnoredElements = ( svg ) => {
 	const removeList = [
-		'style',
+		'style:not([data-color-vars])',
 		'g#Front--group g',
 		'g#RightHand--group g',
 		'g#BeforeRightHand--part g',

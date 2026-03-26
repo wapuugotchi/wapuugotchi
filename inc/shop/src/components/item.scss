@@ -5,7 +5,6 @@
 		border-radius: 8px;
 		border: 1px solid #e2e2e2;
 		position: relative;
-		overflow: hidden;
 		cursor: pointer;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 		transition: transform 0.1s, box-shadow 0.1s;
@@ -23,6 +22,41 @@
 		img {
 			width: 100%;
 			display: block;
+		}
+
+		.wapuugotchi_shop__colored_hint {
+			position: absolute;
+			top: 6px;
+			right: 6px;
+			width: 14px;
+			height: 14px;
+			color: #50575e;
+
+			svg {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+
+			&::after {
+				content: 'Farbe frei wählbar';
+				position: absolute;
+				bottom: calc(100% + 6px);
+				right: 0;
+				background: #2c3338;
+				color: #fff;
+				font-size: 11px;
+				white-space: nowrap;
+				padding: 4px 8px;
+				border-radius: 4px;
+				pointer-events: none;
+				opacity: 0;
+				transition: opacity 0.1s;
+			}
+
+			&:hover::after {
+				opacity: 1;
+			}
 		}
 
 		.wapuugotchi_shop__owned_badge {

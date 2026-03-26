@@ -55,19 +55,17 @@ class Manager {
 		\wp_enqueue_script( 'wapuugotchi-shop', WAPUUGOTCHI_URL . 'build/shop.js', $assets['dependencies'], $assets['version'], true );
 		\wp_add_inline_script(
 			'wapuugotchi-shop',
-			\sprintf(
-				"wp.data.dispatch('wapuugotchi/shop').__initialize(%s)",
-				\wp_json_encode(
-					array(
-						'categories'       => CategoryHandler::get_categories(),
-						'selectedCategory' => CategoryHandler::MAIN_CATEGORY,
-						'items'            => ItemHandler::get_items(),
-						'balance'          => BalanceHandler::get_balance(),
-						'wapuu'            => AvatarHandler::get_avatar_config(),
-						'itemDetail'       => null,
-					)
+			'var wapuugotchiShopData = ' . \wp_json_encode(
+				array(
+					'categories'       => CategoryHandler::get_categories(),
+					'selectedCategory' => CategoryHandler::MAIN_CATEGORY,
+					'items'            => ItemHandler::get_items(),
+					'balance'          => BalanceHandler::get_balance(),
+					'wapuu'            => AvatarHandler::get_avatar_config(),
+					'itemDetail'       => null,
 				)
-			)
+			) . ';',
+			'before'
 		);
 	}
 

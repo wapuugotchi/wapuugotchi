@@ -11,6 +11,22 @@ const STORE_NAME = 'wapuugotchi/onboarding';
  */
 async function __buildSvg( svg ) {
 	const avatar = parseSvg( svg );
+
+	if ( ! avatar.querySelector( 'style[data-color-vars]' ) ) {
+		const inlineStyle = avatar.getAttribute( 'style' ) || '';
+		const colorVars = inlineStyle
+			.split( ';' )
+			.map( ( s ) => s.trim() )
+			.filter( ( s ) => s.startsWith( '--' ) )
+			.join( '; ' );
+		if ( colorVars ) {
+			const styleEl = avatar.ownerDocument.createElement( 'style' );
+			styleEl.setAttribute( 'data-color-vars', '' );
+			styleEl.textContent = `:root, svg { ${ colorVars }; }`;
+			avatar.prepend( styleEl );
+		}
+	}
+
 	insertOnboardingTag( avatar );
 	removeIgnoredElements( avatar );
 
@@ -64,7 +80,7 @@ function removeIgnoredElements( avatar ) {
  */
 function __getRemoveList() {
 	return [
-		'style',
+		'style:not([data-color-vars])',
 		'g#Front--group g',
 		'g#RightHand--group g',
 		'g#BeforeRightHand--part g',

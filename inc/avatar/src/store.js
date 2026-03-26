@@ -15,8 +15,19 @@ const STORE_NAME = 'wapuugotchi/avatar';
  */
 
 async function __getInnerSvg( avatar ) {
-	const svg = new DOMParser().parseFromString( avatar, 'image/svg+xml' );
-	return svg?.querySelector( 'svg' )?.innerHTML;
+	const doc = new DOMParser().parseFromString( avatar, 'image/svg+xml' );
+	const svgEl = doc?.querySelector( 'svg' );
+	if ( ! svgEl ) return '';
+	const inlineStyle = svgEl.getAttribute( 'style' ) || '';
+	const colorVars = inlineStyle
+		.split( ';' )
+		.map( ( s ) => s.trim() )
+		.filter( ( s ) => s.startsWith( '--' ) )
+		.join( '; ' );
+	const styleBlock = colorVars
+		? `<style>:root, svg { ${ colorVars }; }</style>`
+		: '';
+	return styleBlock + svgEl.innerHTML;
 }
 
 function create() {

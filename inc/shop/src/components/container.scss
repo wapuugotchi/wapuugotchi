@@ -1,8 +1,81 @@
-.wapuugotchi_shop {
-	padding: 24px;
+/* Outer WP-native page wrapper */
+#wapuugotchi-submenu__shop {
 	background-color: #fff;
 	border: 1px solid #c3c4c7;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+	padding: 24px;
+}
+
+.wapuugotchi_shop__page {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.wapuugotchi_shop__page_header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.wapuugotchi_shop__page_header h1 {
+	margin: 0;
+}
+
+.wapuugotchi_shop__page_header .subtitle {
+	margin-top: 8px;
+	margin-bottom: 0;
+	max-width: 640px;
+	opacity: 0.8;
+	color: #50575e;
+}
+
+.wapuugotchi_shop__page_pill {
+	background: #fff;
+	border: 1px solid #e2e2e2;
+	border-radius: 999px;
+	padding: 8px 14px;
+	font-size: 12px;
+	color: #2c3338;
+	white-space: nowrap;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	align-self: center;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+
+	img {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+#wapuugotchi-submenu__shop {
+
+	.wapuugotchi_shop__customizer {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: flex-start;
+		gap: 16px;
+
+		.wapuugotchi_shop__customizer_left {
+			flex: 0 0 calc(35% - 8px);
+		}
+
+		.wapuugotchi_shop__customizer_right {
+			flex: 1;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+
+	.wapuugotchi_shop__page_header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 }
 
 @media (max-width: 782px) {

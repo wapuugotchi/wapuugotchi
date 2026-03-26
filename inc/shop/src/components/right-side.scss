@@ -1,8 +1,11 @@
 #wapuugotchi-submenu__shop {
 
 	.wapuugotchi_shop__customizer_right {
-		position: sticky;
-		height: 100%;
-		top: 35px;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		padding: 16px;
+		gap: 12px;
+		box-sizing: border-box;
 	}
 }

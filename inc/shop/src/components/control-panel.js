@@ -14,7 +14,7 @@ export default function ControlPanel() {
 	} );
 
 	const [ name, setName ] = useState( wapuu?.name );
-	const [ loader, setLoader ] = useState( __( 'Save', 'wapuugotchi' ) );
+	const [ loader, setLoader ] = useState( __( 'Ausrüsten!', 'wapuugotchi' ) );
 
 	const buildSvg = ( svgString ) => {
 		return (
@@ -26,7 +26,7 @@ export default function ControlPanel() {
 
 	const submitHandler = async ( event ) => {
 		event.preventDefault();
-		setLoader( __( 'Saving…', 'wapuugotchi' ) );
+		setLoader( __( 'Speichere…', 'wapuugotchi' ) );
 		wapuu.name = name;
 		await apiFetch( {
 			path: `wapuugotchi/v1/wapuugotchi/shop/update-avatar`,
@@ -36,7 +36,7 @@ export default function ControlPanel() {
 				svg: buildSvg( svg ),
 			},
 		} );
-		setLoader( __( 'Save', 'wapuugotchi' ) );
+		setLoader( __( 'Ausrüsten!', 'wapuugotchi' ) );
 	};
 
 	return (
@@ -48,7 +48,7 @@ export default function ControlPanel() {
 				onChange={ ( e ) => setName( e.target.value ) }
 			/>
 			<button
-				className="button button-primary wapuugotchi_shop__submit"
+				className="wapuugotchi_shop__submit"
 				onClick={ submitHandler }
 			>
 				{ loader }

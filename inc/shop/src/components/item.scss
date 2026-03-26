@@ -1,34 +1,80 @@
-$item_unselected: #fafafa;
-$item_selected: #cce3eb;
-$price_background: #4ab866;
-$price_color: #fff;
-
 #wapuugotchi-submenu__shop {
 
 	.wapuugotchi_shop__item {
-		height: 100%;
-		width: 100%;
-		background-color: $item_unselected;
+		background: #fafafa;
+		border-radius: 8px;
+		border: 1px solid #e2e2e2;
 		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+		transition: transform 0.1s, box-shadow 0.1s;
 
-		&.selected {
-			background-color: $item_selected;
+		&:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 		}
 
-		.wapuugotchi_shop__price {
-			position: absolute;
-			bottom: 5px;
-			right: 5px;
-			background-color: $price_background;
-			padding: 5px;
-			border-radius: 5px;
-			font-size: 12px;
-			font-weight: 700;
-			color: $price_color;
+		&.selected {
+			border-color: #00a32a;
+			box-shadow: 0 0 0 1px #00a32a;
+		}
 
-			svg {
-				padding-right: 5px;
+		img {
+			width: 100%;
+			display: block;
+		}
+
+		.wapuugotchi_shop__owned_badge {
+			position: absolute;
+			top: 6px;
+			left: 6px;
+			background: #00a32a;
+			color: #fff;
+			font-size: 11px;
+			font-weight: 600;
+			padding: 3px 8px;
+			border-radius: 3px;
+		}
+
+		.wapuugotchi_shop__pill {
+			position: absolute;
+			bottom: 6px;
+			right: 6px;
+			border-radius: 999px;
+			padding: 4px 10px;
+			font-size: 12px;
+			font-weight: 400;
+			white-space: nowrap;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+			display: inline-flex;
+			align-items: center;
+			gap: 4px;
+
+			// base (fallback)
+			background: #fff;
+			border: 1px solid #e2e2e2;
+			color: #2c3338;
+
+			&--success {
+				background: #f4fff7;
+				border-color: #00a32a;
+				color: #145214;
 			}
+
+			&--muted {
+				color: #50575e;
+			}
+
+			img {
+				width: 14px;
+				height: 14px;
+				display: inline;
+			}
+		}
+
+		.wapuugotchi_shop__pill--muted .wapuugotchi_shop__pearl-icon {
+			filter: invert(58%) sepia(6%) saturate(8%) hue-rotate(331deg) brightness(91%) contrast(92%);
 		}
 	}
 }

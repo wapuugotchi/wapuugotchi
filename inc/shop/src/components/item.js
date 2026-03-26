@@ -3,6 +3,7 @@ import Pearl from './assets/pearl_black.svg';
 
 import { useCallback } from '@wordpress/element';
 import { dispatch, useSelect } from '@wordpress/data';
+import { __ } from '@wordpress/i18n';
 
 import { STORE_NAME } from '../store';
 
@@ -39,19 +40,37 @@ export default function Item( { uuid, item } ) {
 		}
 	}, [ balance, item, selectedCategory, uuid, wapuu ] );
 
+	const isSelected = wapuu?.char?.[ selectedCategory ]?.key?.includes( uuid );
+	const canAfford = item?.meta?.price <= balance;
+
 	return (
 		<div
 			onClick={ handleItemClick }
 			className={ `${
-				wapuu?.char?.[ selectedCategory ]?.key?.includes( uuid )
+				isSelected
 					? 'wapuugotchi_shop__item selected'
 					: 'wapuugotchi_shop__item'
 			}${ item?.meta?.price === 0 ? ' free' : '' }` }
 		>
-			<img src={ item.preview } alt="Placeholder" />
+			<img src={ item.preview } alt="" />
+			{ isSelected && (
+				<div className="wapuugotchi_shop__owned_badge">
+					{ __( 'Ausgewählt', 'wapuugotchi' ) }
+				</div>
+			) }
 			{ item?.meta?.price > 0 && (
-				<div className="wapuugotchi_shop__price">
-					<img src={ Pearl } />
+				<div
+					className={ `wapuugotchi_shop__pill ${
+						canAfford
+							? 'wapuugotchi_shop__pill--success'
+							: 'wapuugotchi_shop__pill--muted'
+					}` }
+				>
+					<img
+						className="wapuugotchi_shop__pearl-icon"
+						src={ Pearl }
+						alt=""
+					/>
 					<span>{ item.meta.price }</span>
 				</div>
 			) }

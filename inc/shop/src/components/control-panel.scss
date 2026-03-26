@@ -1,11 +1,46 @@
 #wapuugotchi-submenu__shop {
 
 	.wapuugotchi_shop__control_panel {
-		text-align: right;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
 
-		button {
-			min-width: 80px;
-			text-align: center;
+		.wapuugotchi_shop__name {
+			width: 100%;
+			border: 1px solid #c3c4c7;
+			border-radius: 3px;
+			padding: 6px 10px;
+			background: #fff;
+			font-size: 13px;
+			color: #2c3338;
+			box-sizing: border-box;
+			line-height: 1.4;
+
+			&:focus {
+				outline: none;
+				border-color: #2271b1;
+				box-shadow: 0 0 0 1px #2271b1;
+			}
+		}
+
+		.wapuugotchi_shop__submit {
+			width: 100%;
+			background-color: #00a32a;
+			border: 1px solid #00a32a;
+			border-radius: 3px;
+			color: #fff;
+			font-size: 13px;
+			font-weight: 600;
+			padding: 6px 10px;
+			cursor: pointer;
+			line-height: 1.4;
+			transition: background 0.1s;
+
+			&:hover {
+				background-color: #008a20;
+				border-color: #008a20;
+			}
 		}
 	}
 }

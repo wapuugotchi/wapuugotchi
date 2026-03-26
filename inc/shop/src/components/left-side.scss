@@ -1,1 +1,17 @@
+#wapuugotchi-submenu__shop {
 
+	.wapuugotchi_shop__customizer_left {
+		background-color: #fafafa;
+		border: 1px solid #e2e2e2;
+		border-radius: 8px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 16px;
+		gap: 12px;
+		box-sizing: border-box;
+		position: sticky;
+		top: 32px;
+	}
+}

@@ -5,7 +5,7 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\ActivityPub;
+namespace Wapuugotchi\Integration\ActivityPub;
 
 use Activitypub\Activity\Actor;
 use Activitypub\Collection\Actors;

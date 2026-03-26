@@ -54,10 +54,8 @@ function init() {
 	new \Wapuugotchi\Hunt\Manager();
 	new \Wapuugotchi\Sort\Manager();
 
-	// ActivityPub integration (only when the AP plugin is active).
-	if ( \class_exists( '\Activitypub\Activity\Actor' ) ) {
-		new \Wapuugotchi\ActivityPub\Manager();
-	}
+	// Load integrations.
+	require_once WAPUUGOTCHI_PATH . 'inc/integration/load.php';
 }
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

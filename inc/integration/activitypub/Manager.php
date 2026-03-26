@@ -5,7 +5,7 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\ActivityPub;
+namespace Wapuugotchi\Integration\ActivityPub;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit();
@@ -19,9 +19,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Manager {
 
 	/**
-	 * Constructor.
+	 * Initialize the integration.
+	 *
+	 * @return void
 	 */
-	public function __construct() {
+	public static function init() {
 		// Resolve Wapuu actors by username (e.g. wapuu-admin).
 		\add_filter( 'activitypub_pre_get_by_username', array( self::class, 'get_by_username' ), 10, 2 );
 

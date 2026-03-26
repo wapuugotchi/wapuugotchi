@@ -5,7 +5,7 @@
  * @package WapuuGotchi
  */
 
-namespace Wapuugotchi\ActivityPub;
+namespace Wapuugotchi\Integration\ActivityPub;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit();

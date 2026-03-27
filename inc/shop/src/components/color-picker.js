@@ -43,7 +43,9 @@ export default function ColorPicker( { svgEl, itemKeys } ) {
 	}, [ svgEl, itemKeys ] );
 
 	useEffect( () => {
-		if ( ! isOpen ) return;
+		if ( ! isOpen ) {
+			return;
+		}
 		const handleOutside = ( e ) => {
 			if ( ! pickerRef.current?.contains( e.target ) ) {
 				setIsOpen( false );
@@ -53,7 +55,9 @@ export default function ColorPicker( { svgEl, itemKeys } ) {
 		return () => document.removeEventListener( 'mousedown', handleOutside );
 	}, [ isOpen ] );
 
-	if ( ! slots.length ) return null;
+	if ( ! slots.length ) {
+		return null;
+	}
 
 	const handleColorChange = ( slot, value ) => {
 		svgEl.style.setProperty( slot.variable, value );

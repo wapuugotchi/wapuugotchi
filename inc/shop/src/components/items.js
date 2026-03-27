@@ -13,13 +13,15 @@ export default function Items() {
 
 	return (
 		<div className="wapuugotchi_shop__items">
-			{ Object.keys( items?.[ selectedCategory ] ?? {} ).map( ( uuid ) => (
-				<Item
-					key={ uuid }
-					uuid={ uuid }
-					item={ items?.[ selectedCategory ]?.[ uuid ] }
-				/>
-			) ) }
+			{ Object.keys( items?.[ selectedCategory ] ?? {} ).map(
+				( uuid ) => (
+					<Item
+						key={ uuid }
+						uuid={ uuid }
+						item={ items?.[ selectedCategory ]?.[ uuid ] }
+					/>
+				)
+			) }
 		</div>
 	);
 }

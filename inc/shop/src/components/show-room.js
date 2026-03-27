@@ -18,12 +18,16 @@ export default function ShowRoom() {
 	const [ svgEl, setSvgEl ] = useState( null );
 
 	const colorableItemKeys = useMemo( () => {
-		if ( ! svgEl ) return [];
+		if ( ! svgEl ) {
+			return [];
+		}
 		return Object.values( wapuu?.char || {} ).flatMap( ( charEntry ) =>
 			( charEntry?.key || [] ).filter( ( key ) =>
 				svgEl
 					.getAttributeNames()
-					.some( ( attr ) => attr.startsWith( `data-color-${ key }-` ) )
+					.some( ( attr ) =>
+						attr.startsWith( `data-color-${ key }-` )
+					)
 			)
 		);
 	}, [ svgEl, wapuu ] );

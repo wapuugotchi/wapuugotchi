@@ -40,7 +40,9 @@ function __applyItemColors( srcEl, destEl, itemKey ) {
 			);
 			if ( srcEl !== destEl ) {
 				const value = srcEl.style.getPropertyValue( cssVar ).trim();
-				if ( value ) destEl.style.setProperty( cssVar, value );
+				if ( value ) {
+					destEl.style.setProperty( cssVar, value );
+				}
 			} else {
 				srcEl.removeAttribute( attr );
 			}
@@ -48,19 +50,25 @@ function __applyItemColors( srcEl, destEl, itemKey ) {
 }
 
 async function __buildSvg( wapuu, items ) {
-	if ( ! wapuu?.char ) return;
+	if ( ! wapuu?.char ) {
+		return;
+	}
 	const itemData = Object.keys( wapuu.char ).flatMap( ( category ) =>
 		__getItemData( wapuu, items, category )
 	);
 
-	if ( ! itemData.length ) return;
+	if ( ! itemData.length ) {
+		return;
+	}
 
 	let texts;
 	try {
 		texts = await Promise.all(
 			itemData.map( ( { url } ) =>
 				fetch( url ).then( ( r ) => {
-					if ( ! r.ok ) throw new Error( r.status );
+					if ( ! r.ok ) {
+						throw new Error( r.status );
+					}
 					return r.text();
 				} )
 			)
@@ -88,7 +96,9 @@ async function __buildSvg( wapuu, items ) {
 			svg.querySelector( '#wapuugotchi_svg__item' )
 		);
 	}
-	if ( baseIndex === -1 ) return;
+	if ( baseIndex === -1 ) {
+		return;
+	}
 
 	const [ { itemKey: baseKey, svg: baseSvgDoc } ] = svgsWithKey.splice(
 		baseIndex,
@@ -236,9 +246,13 @@ function create() {
 								[ category ]: {
 									...currentItems[ category ],
 									[ item.meta.key ]: {
-										...currentItems[ category ][ item.meta.key ],
+										...currentItems[ category ][
+											item.meta.key
+										],
 										meta: {
-											...currentItems[ category ][ item.meta.key ].meta,
+											...currentItems[ category ][
+												item.meta.key
+											].meta,
 											price: 0,
 										},
 									},

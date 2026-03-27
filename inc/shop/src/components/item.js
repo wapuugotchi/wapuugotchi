@@ -20,8 +20,10 @@ export default function Item( { uuid, item } ) {
 		const avatarConfig = wapuu?.char?.[ selectedCategory ];
 		if ( item.meta.price === 0 ) {
 			const isItemSelected = avatarConfig?.key?.includes( uuid );
-			const canDeselect = ( avatarConfig?.key?.length ?? 0 ) > avatarConfig?.min;
-			const canSelect = ( avatarConfig?.key?.length ?? 0 ) < avatarConfig?.max;
+			const canDeselect =
+				( avatarConfig?.key?.length ?? 0 ) > avatarConfig?.min;
+			const canSelect =
+				( avatarConfig?.key?.length ?? 0 ) < avatarConfig?.max;
 
 			const updateKeys = ( newKeys ) => {
 				dispatch( STORE_NAME ).setWapuu( {
@@ -81,7 +83,7 @@ export default function Item( { uuid, item } ) {
 					</svg>
 				</span>
 			) }
-				{ item?.meta?.price > 0 && (
+			{ item?.meta?.price > 0 && (
 				<div
 					className={ `wapuugotchi_shop__pill ${
 						canAfford

@@ -28,3 +28,13 @@ phpcs.xml
 .wp-env.json
 
 wapuugotchi.zip
+
+ANALYSIS.md
+DEV.MD
+docker-compose.yaml
+
+/.claude
+/.idea
+/playwright-report
+/test-results
+/wp-env-home

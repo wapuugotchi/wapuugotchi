@@ -290,13 +290,13 @@ function create() {
 					payload,
 				};
 			},
-			updateWapuuColor: ( variable, value ) =>
+			updateWapuuColor: ( variable, value, svgHtml ) =>
 				function ( { dispatch, select } ) {
 					const wapuu = select.getWapuu();
 					const colors = { ...wapuu?.colors, [ variable ]: value };
 					dispatch.__setWapuu(
 						{ ...wapuu, colors },
-						select.getSvg()
+						svgHtml ?? select.getSvg()
 					);
 				},
 			resetWapuuColors: () =>

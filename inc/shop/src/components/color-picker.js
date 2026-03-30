@@ -23,10 +23,11 @@ function getSlots( svgEl, itemKeys ) {
 
 function getInitialColors( svgEl, slots ) {
 	return Object.fromEntries(
-		slots.map( ( slot ) => [
-			slot.key,
-			svgEl.style.getPropertyValue( slot.variable ).trim() || '#cccccc',
-		] )
+		slots.map( ( slot ) => {
+			const raw = svgEl.style.getPropertyValue( slot.variable ).trim();
+			const value = /^#[0-9a-f]{6}$/i.test( raw ) ? raw : '#cccccc';
+			return [ slot.key, value ];
+		} )
 	);
 }
 
@@ -62,7 +63,7 @@ export default function ColorPicker( { svgEl, itemKeys } ) {
 	const handleColorChange = ( slot, value ) => {
 		svgEl.style.setProperty( slot.variable, value );
 		setColors( ( prev ) => ( { ...prev, [ slot.key ]: value } ) );
-		dispatch( STORE_NAME ).updateWapuuColor( slot.variable, value );
+		dispatch( STORE_NAME ).updateWapuuColor( slot.variable, value, svgEl.outerHTML );
 	};
 
 	const handleReset = () => {

@@ -25,7 +25,7 @@ class Manager {
 		\add_filter( 'wapuugotchi_register_settings', array( $this, 'register_setting' ) );
 
 		$settings = \get_option( 'wapuugotchi_settings', array() );
-		if ( ( $settings['security'] ?? true ) === false ) {
+		if ( ( $settings['security'] ?? false ) === false ) {
 			return;
 		}
 

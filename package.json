@@ -9,7 +9,7 @@
 		"build": "wp-scripts $npm_package_config_js_sources",
 		"watch": "wp-scripts $npm_package_config_js_sources --watch",
 		"format": "wp-scripts format",
-		"lint": "concurrently \"npm run lint:lockfile\" \"npm run lint:tsconfig\" \"npm run lint:js\" \"npm run lint:pkg-json\" \"npm run lint:css\"",
+		"lint": "concurrently \"npm run lint:lockfile\" \"npm run lint:tsconfig\" \"npm run lint:js\" \"npm run lint:pkg-json\" \"npm run lint:css\" \"npm run lint:svg\"",
 		"lint:css": "wp-scripts lint-style \"inc/**/*.scss\"",
 		"lint:css:fix": "npm run lint:css -- --fix",
 		"lint:js": "wp-scripts lint-js \"inc/**/*.js\"",
@@ -25,22 +25,25 @@
 		"destroy": "npm run wp-env destroy --all",
 		"cli": "npm run wp-env -- run cli bash",
 		"wp-env": "WP_ENV_HOME=wp-env-home wp-env",
-		"test": "npx playwright test --config playwright.config.js tests"
+		"test": "npx playwright test --config playwright.config.js tests",
+		"format:svg": "prettier --parser html --print-width 100000 --write \"../collection/**/*.svg\"",
+		"lint:svg": "find ../collection -name '*.svg' | xargs awk 'FNR==2{print \"Not a one-liner: \" FILENAME; err=1} END{exit err+0}'",
+		"minify:svg": "find ../collection -name '*.svg' -exec sh -c 'tr -s \"[:space:]\" \" \" < \"$1\" > /tmp/_svg_tmp && mv /tmp/_svg_tmp \"$1\"' _ {} \\;"
 	},
 	"config": {
 		"js_sources": "build inc/avatar/src/avatar.js inc/shop/src/shop.js inc/quest/src/quest.js inc/onboarding/src/onboarding.js inc/alive/src/alive.js inc/mission/src/mission.js inc/games/quiz/src/quiz.js inc/games/hunt/src/hunt.js inc/games/hunt/src/seek.js inc/support/src/support.js inc/buddy/src/feed.js inc/games/sort/src/sort.js inc/core/src/settings.js"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.49.1",
-		"@wordpress/env": "^10.36.0",
-		"@wordpress/scripts": "^31.1.0"
+		"@wordpress/env": "^11.2.0",
+		"@wordpress/scripts": "^31.7.0"
 	},
 	"dependencies": {
-		"@wordpress/api-fetch": "^7.36.0",
-		"@wordpress/components": "^30.9.0",
-		"@wordpress/dom-ready": "^4.36.0",
-		"@wordpress/element": "^6.36.0",
-		"@wordpress/i18n": "^6.9.0",
+		"@wordpress/api-fetch": "^7.42.0",
+		"@wordpress/components": "^32.4.0",
+		"@wordpress/dom-ready": "^4.42.0",
+		"@wordpress/element": "^6.42.0",
+		"@wordpress/i18n": "^6.15.0",
 		"docker-compose": "^1.1.0",
 		"html-react-parser": "^5.2.1",
 		"react": "^18.3.1",

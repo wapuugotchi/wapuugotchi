@@ -14,7 +14,8 @@
       "Bash(composer run:*)",
       "Bash(./vendor/bin/phpcs:*)",
       "Bash(./vendor/bin/phpcbf:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(npx playwright:*)"
     ]
   }
 }

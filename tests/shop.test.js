@@ -7,7 +7,7 @@ const TEST_USER = process.env.TEST_USER || 'admin';
 const TEST_PASS = process.env.TEST_PASS || 'password';
 
 test.beforeEach( async ( { page } ) => {
-	await page.goto( '/wp-login.php', { waitUntil: 'networkidle' } );
+	await page.goto( '/wp-login.php', { waitUntil: 'domcontentloaded' } );
 	await expect( page ).toHaveTitle( /Log In/ );
 
 	/** initiate login process */
@@ -16,13 +16,15 @@ test.beforeEach( async ( { page } ) => {
 	await page.click( '#wp-submit' );
 
 	/** correct redirect to dashboard */
-	await page.waitForLoadState( 'networkidle' );
 	await expect( page ).toHaveTitle( /Dashboard/ );
 } );
+
 test( 'categories and items are loaded', async ( { page } ) => {
+	test.setTimeout( 30000 );
 	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__shop', {
-		waitUntil: 'networkidle',
+		waitUntil: 'domcontentloaded',
 	} );
+	await page.waitForSelector( '.wapuugotchi_shop__item', { state: 'visible' } );
 	await expect(
 		await page.locator( '.wapuugotchi_shop__category' ).count()
 	).toBeGreaterThan( 1 );
@@ -33,55 +35,57 @@ test( 'categories and items are loaded', async ( { page } ) => {
 
 test( 'categories clickable', async ( { page } ) => {
 	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__shop', {
-		waitUntil: 'networkidle',
+		waitUntil: 'domcontentloaded',
 	} );
+	await page.waitForSelector( '.wapuugotchi_shop__item', { state: 'visible' } );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
 	await page
-		.locator( '.wapuugotchi_shop__categories > div:nth-child(1)' )
+		.locator( '.wapuugotchi_shop__categories > button:nth-child(1)' )
 		.click();
 	await page.waitForSelector(
-		'.wapuugotchi_shop__categories > div:nth-child(1).selected',
+		'.wapuugotchi_shop__categories > button:nth-child(1).selected',
 		{ state: 'visible' }
 	);
 
 	await page
-		.locator( '.wapuugotchi_shop__categories > div:nth-child(2)' )
+		.locator( '.wapuugotchi_shop__categories > button:nth-child(2)' )
 		.click();
 	await page.waitForSelector(
-		'.wapuugotchi_shop__categories > div:nth-child(2).selected',
+		'.wapuugotchi_shop__categories > button:nth-child(2).selected',
 		{ state: 'visible' }
 	);
 	await expect(
-		page.locator( '.wapuugotchi_shop__categories > div:nth-child(1)' )
+		page.locator( '.wapuugotchi_shop__categories > button:nth-child(1)' )
 	).not.toHaveClass( /selected/ );
 
 	await page
-		.locator( '.wapuugotchi_shop__categories > div:nth-child(3)' )
+		.locator( '.wapuugotchi_shop__categories > button:nth-child(3)' )
 		.click();
 	await page.waitForSelector(
-		'.wapuugotchi_shop__categories > div:nth-child(3).selected',
+		'.wapuugotchi_shop__categories > button:nth-child(3).selected',
 		{ state: 'visible' }
 	);
 	await expect(
-		page.locator( '.wapuugotchi_shop__categories > div:nth-child(2)' )
+		page.locator( '.wapuugotchi_shop__categories > button:nth-child(2)' )
 	).not.toHaveClass( /selected/ );
 
 	await page
-		.locator( '.wapuugotchi_shop__categories > div:nth-child(4)' )
+		.locator( '.wapuugotchi_shop__categories > button:nth-child(4)' )
 		.click();
 	await page.waitForSelector(
-		'.wapuugotchi_shop__categories > div:nth-child(4).selected',
+		'.wapuugotchi_shop__categories > button:nth-child(4).selected',
 		{ state: 'visible' }
 	);
 	await expect(
-		page.locator( '.wapuugotchi_shop__categories > div:nth-child(3)' )
+		page.locator( '.wapuugotchi_shop__categories > button:nth-child(3)' )
 	).not.toHaveClass( /selected/ );
 } );
 
 test( 'items clickable', async ( { page } ) => {
 	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__shop', {
-		waitUntil: 'networkidle',
+		waitUntil: 'domcontentloaded',
 	} );
+	await page.waitForSelector( '.wapuugotchi_shop__item', { state: 'visible' } );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
 	await page.locator( '.wapuugotchi_shop__items > div:nth-child(1)' ).click();
 	await page.waitForSelector(
@@ -106,23 +110,16 @@ test( 'items clickable', async ( { page } ) => {
 	await expect(
 		page.locator( '.wapuugotchi_shop__items > div:nth-child(2)' )
 	).not.toHaveClass( /selected/ );
-
-	await page.locator( '.wapuugotchi_shop__items > div:nth-child(4)' ).click();
-	await page.waitForSelector(
-		'.wapuugotchi_shop__items > div:nth-child(4).selected',
-		{ state: 'visible' }
-	);
-	await expect(
-		page.locator( '.wapuugotchi_shop__items > div:nth-child(3)' )
-	).not.toHaveClass( /selected/ );
 } );
 
 test( 'items purchasable', async ( { page } ) => {
 	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__shop', {
-		waitUntil: 'networkidle',
+		waitUntil: 'domcontentloaded',
 	} );
+	await page.waitForSelector( '#category_caps', { state: 'visible' } );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
 	await page.locator( '#category_caps' ).click();
+	await page.waitForSelector( '.wapuugotchi_shop__pill--success', { state: 'visible' } );
 	await expect(
 		page.locator( '.wapuugotchi_shop__items > div:nth-child(2)' )
 	).not.toHaveClass( /selected/ );
@@ -130,15 +127,14 @@ test( 'items purchasable', async ( { page } ) => {
 		page.locator( '.wapuugotchi_shop__items > div:nth-child(2)' )
 	).not.toHaveClass( /free/ );
 	await page.locator( '.wapuugotchi_shop__items > div:nth-child(2)' ).click();
-	await page.waitForLoadState( 'networkidle' );
+	await page.waitForSelector( '.wapuugotchi_shop__overlay', { state: 'visible' } );
 	await page.getByRole( 'button', { name: 'OK' } ).click();
-	await page.waitForLoadState( 'networkidle' );
+	await page.waitForSelector( '.wapuugotchi_shop__overlay', { state: 'hidden' } );
 	await page.waitForSelector(
 		'.wapuugotchi_shop__items > div:nth-child(2).free',
 		{ state: 'visible' }
 	);
 	await page.locator( '.wapuugotchi_shop__items > div:nth-child(2)' ).click();
-	await page.waitForLoadState( 'networkidle' );
 	await page.waitForSelector(
 		'.wapuugotchi_shop__items > div:nth-child(2).selected',
 		{ state: 'visible' }

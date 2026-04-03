@@ -7,7 +7,12 @@
 		position: relative;
 		cursor: pointer;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-		transition: transform 0.1s, box-shadow 0.1s;
+		opacity: 0;
+		transition: opacity 0.25s ease, transform 0.1s, box-shadow 0.1s;
+
+		&.is-loaded {
+			opacity: 1;
+		}
 
 		&:hover {
 			transform: translateY(-2px);

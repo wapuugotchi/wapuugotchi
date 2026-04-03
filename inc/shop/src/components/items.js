@@ -11,17 +11,18 @@ export default function Items() {
 		};
 	} );
 
+	const categoryItems = items?.[ selectedCategory ] ?? {};
+
 	return (
 		<div className="wapuugotchi_shop__items">
-			{ Object.keys( items?.[ selectedCategory ] ?? {} ).map(
-				( uuid ) => (
-					<Item
-						key={ uuid }
-						uuid={ uuid }
-						item={ items?.[ selectedCategory ]?.[ uuid ] }
-					/>
-				)
-			) }
+			{ Object.keys( categoryItems ).map( ( uuid, index ) => (
+				<Item
+					key={ uuid }
+					uuid={ uuid }
+					item={ categoryItems[ uuid ] }
+					index={ index }
+				/>
+			) ) }
 		</div>
 	);
 }

@@ -1,13 +1,14 @@
 import './item.scss';
 import Pearl from './assets/pearl_black.svg';
 
-import { useCallback } from '@wordpress/element';
+import { useCallback, useState } from '@wordpress/element';
 import { dispatch, useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
 import { STORE_NAME } from '../store';
 
-export default function Item( { uuid, item } ) {
+export default function Item( { uuid, item, index } ) {
+	const [ loaded, setLoaded ] = useState( false );
 	const { wapuu, balance, selectedCategory } = useSelect( ( select ) => {
 		return {
 			wapuu: select( STORE_NAME ).getWapuu(),
@@ -57,9 +58,15 @@ export default function Item( { uuid, item } ) {
 				isSelected
 					? 'wapuugotchi_shop__item selected'
 					: 'wapuugotchi_shop__item'
-			}${ item?.meta?.price === 0 ? ' free' : '' }` }
+			}${ item?.meta?.price === 0 ? ' free' : '' }${ loaded ? ' is-loaded' : '' }` }
+			style={ { transitionDelay: loaded ? '0ms' : `${ index * 40 }ms` } }
 		>
-			<img src={ item.preview } alt="" />
+			<img
+				src={ item.preview }
+				alt=""
+				onLoad={ () => setLoaded( true ) }
+				onError={ () => setLoaded( true ) }
+			/>
 			{ isSelected && (
 				<div className="wapuugotchi_shop__owned_badge">
 					{ __( 'Selected', 'wapuugotchi' ) }

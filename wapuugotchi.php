@@ -55,6 +55,9 @@ function init() {
 	new \Wapuugotchi\Quiz\Manager();
 	new \Wapuugotchi\Hunt\Manager();
 	new \Wapuugotchi\Sort\Manager();
+
+	// Load integrations.
+	require_once WAPUUGOTCHI_PATH . 'inc/integration/load.php';
 }
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );

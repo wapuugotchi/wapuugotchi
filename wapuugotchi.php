@@ -36,7 +36,7 @@ function init() {
 		new \Wapuugotchi\Core\Cli();
 	}
 
-	// Feature Manager
+	// Feature Manager.
 	new \Wapuugotchi\Avatar\Manager();
 	new \Wapuugotchi\Buddy\Manager();
 	new \Wapuugotchi\Shop\Manager();
@@ -80,17 +80,17 @@ function init() {
 /**
  * Autoloader for WapuuGotchi classes.
  *
- * @param string $class The fully-qualified class name.
+ * @param string $class_name The fully-qualified class name.
  *
  * @return void
  */
-function autoload( $class ) {
+function autoload( $class_name ) { // phpcs:ignore Generic.NamingConventions
 	$prefix = 'Wapuugotchi\\';
-	if ( strncmp( $prefix, $class, strlen( $prefix ) ) !== 0 ) {
+	if ( strncmp( $prefix, $class_name, strlen( $prefix ) ) !== 0 ) {
 		return;
 	}
 
-	$parts    = explode( '\\', substr( $class, strlen( $prefix ) ) );
+	$parts    = explode( '\\', substr( $class_name, strlen( $prefix ) ) );
 	$filename = array_pop( $parts ) . '.php';
 	$dirs     = array_map( 'strtolower', $parts );
 

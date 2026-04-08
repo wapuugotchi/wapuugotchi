@@ -17,7 +17,9 @@ const STORE_NAME = 'wapuugotchi/avatar';
 async function __getInnerSvg( avatar ) {
 	const doc = new DOMParser().parseFromString( avatar, 'image/svg+xml' );
 	const svgEl = doc?.querySelector( 'svg' );
-	if ( ! svgEl ) return '';
+	if ( ! svgEl ) {
+		return '';
+	}
 	const inlineStyle = svgEl.getAttribute( 'style' ) || '';
 	const colorVars = inlineStyle
 		.split( ';' )

@@ -58,7 +58,9 @@ export default function Item( { uuid, item, index } ) {
 				isSelected
 					? 'wapuugotchi_shop__item selected'
 					: 'wapuugotchi_shop__item'
-			}${ item?.meta?.price === 0 ? ' free' : '' }${ loaded ? ' is-loaded' : '' }` }
+			}${ item?.meta?.price === 0 ? ' free' : '' }${
+				loaded ? ' is-loaded' : ''
+			}` }
 			style={ { transitionDelay: loaded ? '0ms' : `${ index * 40 }ms` } }
 		>
 			<img
@@ -74,19 +76,60 @@ export default function Item( { uuid, item, index } ) {
 			) }
 			{ item?.meta?.colored === 1 && (
 				<span className="wapuugotchi_shop__colored_hint">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -150 300 300" aria-hidden="true" focusable="false">
-						<path d="M0,0 L0,-140 A140,140 0 0,1 70,-121 Z" fill="#FF0000"/>
-						<path d="M0,0 L70,-121 A140,140 0 0,1 121,-70 Z" fill="#FF7F00"/>
-						<path d="M0,0 L121,-70 A140,140 0 0,1 140,0 Z" fill="#FFFF00"/>
-						<path d="M0,0 L140,0 A140,140 0 0,1 121,70 Z" fill="#7FFF00"/>
-						<path d="M0,0 L121,70 A140,140 0 0,1 70,121 Z" fill="#00FF00"/>
-						<path d="M0,0 L70,121 A140,140 0 0,1 0,140 Z" fill="#00FF7F"/>
-						<path d="M0,0 L0,140 A140,140 0 0,1 -70,121 Z" fill="#00FFFF"/>
-						<path d="M0,0 L-70,121 A140,140 0 0,1 -121,70 Z" fill="#007FFF"/>
-						<path d="M0,0 L-121,70 A140,140 0 0,1 -140,0 Z" fill="#0000FF"/>
-						<path d="M0,0 L-140,0 A140,140 0 0,1 -121,-70 Z" fill="#7F00FF"/>
-						<path d="M0,0 L-121,-70 A140,140 0 0,1 -70,-121 Z" fill="#FF00FF"/>
-						<path d="M0,0 L-70,-121 A140,140 0 0,1 0,-140 Z" fill="#FF007F"/>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="-150 -150 300 300"
+						aria-hidden="true"
+						focusable="false"
+					>
+						<path
+							d="M0,0 L0,-140 A140,140 0 0,1 70,-121 Z"
+							fill="#FF0000"
+						/>
+						<path
+							d="M0,0 L70,-121 A140,140 0 0,1 121,-70 Z"
+							fill="#FF7F00"
+						/>
+						<path
+							d="M0,0 L121,-70 A140,140 0 0,1 140,0 Z"
+							fill="#FFFF00"
+						/>
+						<path
+							d="M0,0 L140,0 A140,140 0 0,1 121,70 Z"
+							fill="#7FFF00"
+						/>
+						<path
+							d="M0,0 L121,70 A140,140 0 0,1 70,121 Z"
+							fill="#00FF00"
+						/>
+						<path
+							d="M0,0 L70,121 A140,140 0 0,1 0,140 Z"
+							fill="#00FF7F"
+						/>
+						<path
+							d="M0,0 L0,140 A140,140 0 0,1 -70,121 Z"
+							fill="#00FFFF"
+						/>
+						<path
+							d="M0,0 L-70,121 A140,140 0 0,1 -121,70 Z"
+							fill="#007FFF"
+						/>
+						<path
+							d="M0,0 L-121,70 A140,140 0 0,1 -140,0 Z"
+							fill="#0000FF"
+						/>
+						<path
+							d="M0,0 L-140,0 A140,140 0 0,1 -121,-70 Z"
+							fill="#7F00FF"
+						/>
+						<path
+							d="M0,0 L-121,-70 A140,140 0 0,1 -70,-121 Z"
+							fill="#FF00FF"
+						/>
+						<path
+							d="M0,0 L-70,-121 A140,140 0 0,1 0,-140 Z"
+							fill="#FF007F"
+						/>
 					</svg>
 				</span>
 			) }

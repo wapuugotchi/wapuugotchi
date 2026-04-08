@@ -24,7 +24,9 @@ test( 'categories and items are loaded', async ( { page } ) => {
 	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__shop', {
 		waitUntil: 'domcontentloaded',
 	} );
-	await page.waitForSelector( '.wapuugotchi_shop__item', { state: 'visible' } );
+	await page.waitForSelector( '.wapuugotchi_shop__item', {
+		state: 'visible',
+	} );
 	await expect(
 		await page.locator( '.wapuugotchi_shop__category' ).count()
 	).toBeGreaterThan( 1 );
@@ -37,7 +39,9 @@ test( 'categories clickable', async ( { page } ) => {
 	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__shop', {
 		waitUntil: 'domcontentloaded',
 	} );
-	await page.waitForSelector( '.wapuugotchi_shop__item', { state: 'visible' } );
+	await page.waitForSelector( '.wapuugotchi_shop__item', {
+		state: 'visible',
+	} );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
 	await page
 		.locator( '.wapuugotchi_shop__categories > button:nth-child(1)' )
@@ -85,7 +89,9 @@ test( 'items clickable', async ( { page } ) => {
 	await page.goto( '/wp-admin/admin.php?page=wapuugotchi__shop', {
 		waitUntil: 'domcontentloaded',
 	} );
-	await page.waitForSelector( '.wapuugotchi_shop__item', { state: 'visible' } );
+	await page.waitForSelector( '.wapuugotchi_shop__item', {
+		state: 'visible',
+	} );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
 	await page.locator( '.wapuugotchi_shop__items > div:nth-child(1)' ).click();
 	await page.waitForSelector(
@@ -119,7 +125,9 @@ test( 'items purchasable', async ( { page } ) => {
 	await page.waitForSelector( '#category_caps', { state: 'visible' } );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
 	await page.locator( '#category_caps' ).click();
-	await page.waitForSelector( '.wapuugotchi_shop__pill--success', { state: 'visible' } );
+	await page.waitForSelector( '.wapuugotchi_shop__pill--success', {
+		state: 'visible',
+	} );
 	await expect(
 		page.locator( '.wapuugotchi_shop__items > div:nth-child(2)' )
 	).not.toHaveClass( /selected/ );
@@ -127,9 +135,13 @@ test( 'items purchasable', async ( { page } ) => {
 		page.locator( '.wapuugotchi_shop__items > div:nth-child(2)' )
 	).not.toHaveClass( /free/ );
 	await page.locator( '.wapuugotchi_shop__items > div:nth-child(2)' ).click();
-	await page.waitForSelector( '.wapuugotchi_shop__overlay', { state: 'visible' } );
+	await page.waitForSelector( '.wapuugotchi_shop__overlay', {
+		state: 'visible',
+	} );
 	await page.getByRole( 'button', { name: 'OK' } ).click();
-	await page.waitForSelector( '.wapuugotchi_shop__overlay', { state: 'hidden' } );
+	await page.waitForSelector( '.wapuugotchi_shop__overlay', {
+		state: 'hidden',
+	} );
 	await page.waitForSelector(
 		'.wapuugotchi_shop__items > div:nth-child(2).free',
 		{ state: 'visible' }

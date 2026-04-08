@@ -63,7 +63,11 @@ export default function ColorPicker( { svgEl, itemKeys } ) {
 	const handleColorChange = ( slot, value ) => {
 		svgEl.style.setProperty( slot.variable, value );
 		setColors( ( prev ) => ( { ...prev, [ slot.key ]: value } ) );
-		dispatch( STORE_NAME ).updateWapuuColor( slot.variable, value, svgEl.outerHTML );
+		dispatch( STORE_NAME ).updateWapuuColor(
+			slot.variable,
+			value,
+			svgEl.outerHTML
+		);
 	};
 
 	const handleReset = () => {
@@ -96,9 +100,11 @@ export default function ColorPicker( { svgEl, itemKeys } ) {
 					{ slots.map( ( slot ) => (
 						<label
 							key={ slot.key }
+							htmlFor={ `color_slot_${ slot.key }` }
 							className="wapuugotchi_shop__color_slot"
 						>
 							<input
+								id={ `color_slot_${ slot.key }` }
 								type="color"
 								value={ colors[ slot.key ] }
 								onChange={ ( e ) =>

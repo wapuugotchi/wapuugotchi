@@ -1,18 +1,32 @@
 @keyframes sort-card-bounce {
 
-	0%   { transform: translateY( 0 ); }
+	0% {
+		transform: translateY(0);
+	}
 
-	20%  { transform: translateY( -14px ); }
+	20% {
+		transform: translateY(-14px);
+	}
 
-	40%  { transform: translateY( 0 ); }
+	40% {
+		transform: translateY(0);
+	}
 
-	60%  { transform: translateY( -7px ); }
+	60% {
+		transform: translateY(-7px);
+	}
 
-	75%  { transform: translateY( 0 ); }
+	75% {
+		transform: translateY(0);
+	}
 
-	90%  { transform: translateY( -3px ); }
+	90% {
+		transform: translateY(-3px);
+	}
 
-	100% { transform: translateY( 0 ); }
+	100% {
+		transform: translateY(0);
+	}
 }
 
 .wapuugotchi_mission__action {

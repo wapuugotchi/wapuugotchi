@@ -21,9 +21,9 @@ test( 'Support page renders with cards and header', async ( { page } ) => {
 		waitUntil: 'networkidle',
 	} );
 
-	await expect( page.locator( '.wapuugotchi-support__header h1' ) ).toHaveText(
-		/Support & Feedback/i
-	);
+	await expect(
+		page.locator( '.wapuugotchi-support__header h1' )
+	).toHaveText( /Support & Feedback/i );
 
 	await expect(
 		await page.locator( '.wapuugotchi-support__card' ).count()
@@ -40,8 +40,6 @@ test( 'Support page highlight card and buttons exist', async ( { page } ) => {
 	).toBeVisible();
 
 	await expect(
-		await page
-			.locator( '.wapuugotchi-support__card .button' )
-			.count()
+		await page.locator( '.wapuugotchi-support__card .button' ).count()
 	).toBeGreaterThanOrEqual( 3 );
 } );

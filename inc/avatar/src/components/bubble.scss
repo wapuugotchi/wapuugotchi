@@ -9,7 +9,9 @@
 	font-size: 12px;
 	line-height: 1.5;
 	margin: 0 10px -15px 0;
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+	box-shadow:
+		0 4px 16px rgba(0, 0, 0, 0.08),
+		0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 .wapuugotchi__bubble::before {
@@ -45,7 +47,9 @@
 .info_bubble.wapuugotchi__bubble {
 	background: #eff6ff;
 	border-color: #bfdbfe;
-	box-shadow: 0 4px 16px rgba(114, 174, 230, 0.2), 0 1px 4px rgba(114, 174, 230, 0.1);
+	box-shadow:
+		0 4px 16px rgba(114, 174, 230, 0.2),
+		0 1px 4px rgba(114, 174, 230, 0.1);
 }
 
 .info_bubble.wapuugotchi__bubble::before {
@@ -59,7 +63,9 @@
 .success_bubble.wapuugotchi__bubble {
 	background: #f0fdf4;
 	border-color: #bbf7d0;
-	box-shadow: 0 4px 16px rgba(0, 163, 42, 0.15), 0 1px 4px rgba(0, 163, 42, 0.08);
+	box-shadow:
+		0 4px 16px rgba(0, 163, 42, 0.15),
+		0 1px 4px rgba(0, 163, 42, 0.08);
 }
 
 .success_bubble.wapuugotchi__bubble::before {
@@ -73,7 +79,9 @@
 .error_bubble.wapuugotchi__bubble {
 	background: #fff1f2;
 	border-color: #fecdd3;
-	box-shadow: 0 4px 16px rgba(214, 54, 56, 0.15), 0 1px 4px rgba(214, 54, 56, 0.08);
+	box-shadow:
+		0 4px 16px rgba(214, 54, 56, 0.15),
+		0 1px 4px rgba(214, 54, 56, 0.08);
 }
 
 .error_bubble.wapuugotchi__bubble::before {
@@ -87,7 +95,9 @@
 .warning_bubble.wapuugotchi__bubble {
 	background: #fffbeb;
 	border-color: #fde68a;
-	box-shadow: 0 4px 16px rgba(219, 166, 23, 0.18), 0 1px 4px rgba(219, 166, 23, 0.1);
+	box-shadow:
+		0 4px 16px rgba(219, 166, 23, 0.18),
+		0 1px 4px rgba(219, 166, 23, 0.1);
 }
 
 .warning_bubble.wapuugotchi__bubble::before {
@@ -102,7 +112,9 @@
 .security-unknown_bubble.wapuugotchi__bubble {
 	background: #fefce8;
 	border-color: #fef08a;
-	box-shadow: 0 4px 16px rgba(240, 196, 25, 0.18), 0 1px 4px rgba(240, 196, 25, 0.1);
+	box-shadow:
+		0 4px 16px rgba(240, 196, 25, 0.18),
+		0 1px 4px rgba(240, 196, 25, 0.1);
 }
 
 .security-low_bubble.wapuugotchi__bubble::before,
@@ -118,7 +130,9 @@
 .security-medium_bubble.wapuugotchi__bubble {
 	background: #fff7ed;
 	border-color: #fed7aa;
-	box-shadow: 0 4px 16px rgba(241, 143, 1, 0.18), 0 1px 4px rgba(241, 143, 1, 0.1);
+	box-shadow:
+		0 4px 16px rgba(241, 143, 1, 0.18),
+		0 1px 4px rgba(241, 143, 1, 0.1);
 }
 
 .security-medium_bubble.wapuugotchi__bubble::before {
@@ -132,7 +146,9 @@
 .security-high_bubble.wapuugotchi__bubble {
 	background: #fff4f0;
 	border-color: #fdc9b4;
-	box-shadow: 0 4px 16px rgba(217, 79, 33, 0.15), 0 1px 4px rgba(217, 79, 33, 0.08);
+	box-shadow:
+		0 4px 16px rgba(217, 79, 33, 0.15),
+		0 1px 4px rgba(217, 79, 33, 0.08);
 }
 
 .security-high_bubble.wapuugotchi__bubble::before {
@@ -146,7 +162,9 @@
 .security-critical_bubble.wapuugotchi__bubble {
 	background: #fff1f2;
 	border-color: #fda4af;
-	box-shadow: 0 4px 16px rgba(143, 29, 29, 0.15), 0 1px 4px rgba(143, 29, 29, 0.08);
+	box-shadow:
+		0 4px 16px rgba(143, 29, 29, 0.15),
+		0 1px 4px rgba(143, 29, 29, 0.08);
 }
 
 .security-critical_bubble.wapuugotchi__bubble::before {
@@ -160,7 +178,9 @@
 .security-none_bubble.wapuugotchi__bubble {
 	background: #f0fdf4;
 	border-color: #bbf7d0;
-	box-shadow: 0 4px 16px rgba(47, 158, 68, 0.15), 0 1px 4px rgba(47, 158, 68, 0.08);
+	box-shadow:
+		0 4px 16px rgba(47, 158, 68, 0.15),
+		0 1px 4px rgba(47, 158, 68, 0.08);
 }
 
 .security-none_bubble.wapuugotchi__bubble::before {
@@ -172,6 +192,7 @@
 }
 
 @keyframes wapuugotchi-bubble-pop {
+
 	0% {
 		opacity: 0;
 		transform: scale(0.88) translateY(6px);
@@ -190,5 +211,6 @@
 
 .wapuugotchi__bubble.fade_in_lazy {
 	transform-origin: bottom left;
-	animation: wapuugotchi-bubble-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+	animation: wapuugotchi-bubble-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)
+		both;
 }

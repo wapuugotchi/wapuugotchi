@@ -67,6 +67,7 @@ export default function Map() {
 				highlight.style.opacity = 'var(--inactive-oc)';
 			}
 		} );
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [] );
 
 	useEffect( () => {
@@ -146,7 +147,7 @@ export default function Map() {
 			missionSection.style.opacity = 1;
 			missionSection.style.fontSize = '50px';
 		}
-	}, [ completed, progress ] );
+	}, [ completed, progress, cooldown ] );
 
 	return (
 		<>

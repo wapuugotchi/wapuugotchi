@@ -8,7 +8,10 @@
 		cursor: pointer;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 		opacity: 0;
-		transition: opacity 0.25s ease, transform 0.1s, box-shadow 0.1s;
+		transition:
+			opacity 0.25s ease,
+			transform 0.1s,
+			box-shadow 0.1s;
 
 		&.is-loaded {
 			opacity: 1;
@@ -44,7 +47,7 @@
 			}
 
 			&::after {
-				content: 'Farbe frei wählbar';
+				content: "Farbe frei wählbar";
 				position: absolute;
 				bottom: calc(100% + 6px);
 				right: 0;
@@ -113,7 +116,8 @@
 		}
 
 		.wapuugotchi_shop__pill--muted .wapuugotchi_shop__pearl-icon {
-			filter: invert(58%) sepia(6%) saturate(8%) hue-rotate(331deg) brightness(91%) contrast(92%);
+			filter: invert(58%) sepia(6%) saturate(8%) hue-rotate(331deg)
+				brightness(91%) contrast(92%);
 		}
 	}
 }

@@ -52,21 +52,19 @@ test( 'Mission - misstion story exists', async ( { page } ) => {
 	} );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
 
-	const description = page.locator(
-		'.wapuugotchi_missions__description p'
-	);
+	const description = page.locator( '.wapuugotchi_missions__description p' );
 	await expect( description ).toBeVisible();
 	await expect( description ).not.toHaveText( '' );
 } );
 
 test( 'Mission - progress element exists', async ( { page } ) => {
-	await page.goto('/wp-admin/admin.php?page=wapuugotchi', {
+	await page.goto( '/wp-admin/admin.php?page=wapuugotchi', {
 		waitUntil: 'networkidle',
-	});
-	await expect(page).toHaveTitle(/WapuuGotchi/);
-	const progressPill = page.locator('.wapuugotchi_missions__pill');
-	await expect(progressPill).toBeVisible();
-	await expect(progressPill).toContainText(/checkpoints unlocked/i);
+	} );
+	await expect( page ).toHaveTitle( /WapuuGotchi/ );
+	const progressPill = page.locator( '.wapuugotchi_missions__pill' );
+	await expect( progressPill ).toBeVisible();
+	await expect( progressPill ).toContainText( /checkpoints unlocked/i );
 } );
 
 test( 'Mission - Game is callable', async ( { page } ) => {

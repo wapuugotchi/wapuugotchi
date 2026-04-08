@@ -25,7 +25,9 @@
 		justify-content: center;
 		padding: 0;
 		color: #50575e;
-		transition: background 0.15s, border-color 0.15s;
+		transition:
+			background 0.15s,
+			border-color 0.15s;
 
 		svg {
 			width: 14px;
@@ -52,7 +54,9 @@
 		justify-content: center;
 		padding: 0;
 		color: #50575e;
-		transition: background 0.15s, border-color 0.15s;
+		transition:
+			background 0.15s,
+			border-color 0.15s;
 
 		svg {
 			width: 14px;
@@ -97,7 +101,7 @@
 			background: #f0f0f0;
 		}
 
-		input[type='color'] {
+		input[type="color"] {
 			position: absolute;
 			opacity: 0;
 			width: 0;

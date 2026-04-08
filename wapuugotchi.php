@@ -26,12 +26,7 @@ function init() {
 	\define( 'WAPUUGOTCHI_URL', \plugin_dir_url( __FILE__ ) );
 	\define( 'WAPUUGOTCHI_SLUG', \plugin_basename( __DIR__ . '/wapuugotchi.php' ) );
 
-	$autoloader = WAPUUGOTCHI_PATH . 'vendor/autoload.php';
-	if ( ! \is_readable( $autoloader ) ) {
-		return;
-	}
-
-	require_once $autoloader;
+	spl_autoload_register( __NAMESPACE__ . '\\autoload' );
 
 	// Core features.
 	new \Wapuugotchi\Core\Menu();
@@ -41,6 +36,7 @@ function init() {
 		new \Wapuugotchi\Core\Cli();
 	}
 
+	// Feature Manager.
 	new \Wapuugotchi\Avatar\Manager();
 	new \Wapuugotchi\Buddy\Manager();
 	new \Wapuugotchi\Shop\Manager();
@@ -49,8 +45,6 @@ function init() {
 	new \Wapuugotchi\Alive\Manager();
 	new \Wapuugotchi\Support\Manager();
 	new \Wapuugotchi\Security\Manager();
-
-	// Mission feature and the associated games.
 	new \Wapuugotchi\Mission\Manager();
 	new \Wapuugotchi\Quiz\Manager();
 	new \Wapuugotchi\Hunt\Manager();
@@ -82,3 +76,31 @@ function init() {
 	100,
 	3
 );
+
+/**
+ * Autoloader for WapuuGotchi classes.
+ *
+ * @param string $class_name The fully-qualified class name.
+ *
+ * @return void
+ */
+function autoload( $class_name ) { // phpcs:ignore Generic.NamingConventions
+	$prefix = 'Wapuugotchi\\';
+	if ( strncmp( $prefix, $class_name, strlen( $prefix ) ) !== 0 ) {
+		return;
+	}
+
+	$parts    = explode( '\\', substr( $class_name, strlen( $prefix ) ) );
+	$filename = array_pop( $parts ) . '.php';
+	$dirs     = array_map( 'strtolower', $parts );
+
+	$base     = WAPUUGOTCHI_PATH . 'inc' . DIRECTORY_SEPARATOR;
+	$rel_path = implode( DIRECTORY_SEPARATOR, $dirs ) . DIRECTORY_SEPARATOR . $filename;
+
+	foreach ( array( $base . $rel_path, $base . 'games' . DIRECTORY_SEPARATOR . $rel_path ) as $file ) {
+		if ( file_exists( $file ) ) {
+			require $file;
+			return;
+		}
+	}
+}

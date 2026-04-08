@@ -70,8 +70,8 @@ class Cards {
 				->set_highlight( true )
 				->set_button(
 					array(
-						'label' => __( 'Buy me a coffee', 'wapuugotchi' ),
-						'href'  => 'https://www.buymeacoffee.com/wapuugotchi',
+						'label' => __( 'Support on PayPal', 'wapuugotchi' ),
+						'href'  => 'https://paypal.me/Wapuugotchi',
 						'type'  => 'primary',
 					)
 				),

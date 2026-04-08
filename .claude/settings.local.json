@@ -15,7 +15,8 @@
       "Bash(./vendor/bin/phpcs:*)",
       "Bash(./vendor/bin/phpcbf:*)",
       "Bash(node:*)",
-      "Bash(npx playwright:*)"
+      "Bash(npx playwright:*)",
+      "Bash(npx wp-env:*)"
     ]
   }
 }

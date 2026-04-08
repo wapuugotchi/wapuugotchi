@@ -23,10 +23,5 @@
 			"dealerdirect/phpcodesniffer-composer-installer": true,
 			"composer/installers": true
 		}
-	},
-	"autoload": {
-		"classmap": [
-			"inc/"
-		]
 	}
 }

@@ -38,3 +38,9 @@ docker-compose.yaml
 /playwright-report
 /test-results
 /wp-env-home
+/vendor
+
+DOCKER_ENV
+docker_tag
+Dockerfile-php-build
+output.log

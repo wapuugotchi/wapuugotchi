@@ -8,8 +8,7 @@
 	"scripts": {
 		"build": "wp-scripts $npm_package_config_js_sources",
 		"watch": "wp-scripts $npm_package_config_js_sources --watch",
-		"format": "wp-scripts format",
-		"lint": "concurrently \"npm run lint:lockfile\" \"npm run lint:tsconfig\" \"npm run lint:js\" \"npm run lint:pkg-json\" \"npm run lint:css\" \"npm run lint:svg\"",
+		"format": "wp-scripts format \"inc/**/*.js\" \"inc/**/*.scss\"",
 		"lint:css": "wp-scripts lint-style \"inc/**/*.scss\"",
 		"lint:css:fix": "npm run lint:css -- --fix",
 		"lint:js": "wp-scripts lint-js \"inc/**/*.js\"",
@@ -35,7 +34,9 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.49.1",
+		"@wordpress/data": "^10.43.0",
 		"@wordpress/env": "^11.3.0",
+		"@wordpress/primitives": "^4.43.0",
 		"@wordpress/scripts": "^31.8.0"
 	},
 	"dependencies": {
@@ -55,11 +56,6 @@
 		"inc",
 		"languages",
 		"wapuugotchi.php",
-		"config",
-		"LICENSE",
-		"src",
-		"composer.json",
-		"package.json",
-		"vendor"
+		"LICENSE"
 	]
 }

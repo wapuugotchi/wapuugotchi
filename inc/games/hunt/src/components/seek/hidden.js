@@ -97,6 +97,7 @@ export default function Hidden() {
 				dispatch( STORE_NAME ).setCompleted( true );
 			} );
 		} );
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [ data ] );
 
 	return (

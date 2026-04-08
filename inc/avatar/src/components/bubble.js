@@ -53,10 +53,13 @@ export default function Bubble() {
 			return undefined;
 		}
 
-		updatePosition();
+		const raf = requestAnimationFrame( updatePosition );
 		window.addEventListener( 'resize', updatePosition );
 
-		return () => window.removeEventListener( 'resize', updatePosition );
+		return () => {
+			cancelAnimationFrame( raf );
+			window.removeEventListener( 'resize', updatePosition );
+		};
 	}, [ messages.length, updatePosition ] );
 
 	return messages.length > 0 ? (
@@ -66,7 +69,7 @@ export default function Bubble() {
 			style={
 				topOffset !== null
 					? { top: `${ topOffset - 10 }px` }
-					: undefined
+					: { visibility: 'hidden' }
 			}
 		>
 			{ parse( messages[ 0 ].message ) }

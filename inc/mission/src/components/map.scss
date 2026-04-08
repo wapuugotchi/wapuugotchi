@@ -5,7 +5,8 @@
 
 @keyframes markerAttention {
 
-	0%, 100% {
+	0%,
+	100% {
 		fill: var(--marker-color);
 		transform: translateY(0);
 	}
@@ -47,7 +48,7 @@
 		left: 50%;
 		width: 150px;
 		background-color: rgba(0, 0, 0, 0.6);
-		color: #FFF;
+		color: #fff;
 		transform: translate(-50%, -50%);
 		display: flex;
 		flex-direction: column;

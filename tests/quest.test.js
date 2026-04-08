@@ -26,9 +26,7 @@ test( 'Active quests are displayed', async ( { page } ) => {
 	} );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
 	await expect(
-		await page
-			.locator( '.wapuugotchi-quests__card.is-active' )
-			.count()
+		await page.locator( '.wapuugotchi-quests__card.is-active' ).count()
 	).toBeGreaterThan( 0 );
 } );
 
@@ -38,8 +36,6 @@ test( 'Completed quests are displayed', async ( { page } ) => {
 	} );
 	await expect( page ).toHaveTitle( /WapuuGotchi/ );
 	await expect(
-		await page
-			.locator( '.wapuugotchi-quests__card.is-completed' )
-			.count()
+		await page.locator( '.wapuugotchi-quests__card.is-completed' ).count()
 	).toBeGreaterThan( 0 );
 } );

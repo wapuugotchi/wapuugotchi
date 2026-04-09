@@ -17,6 +17,12 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
+            # Set version from tag
+            - name: Set version from tag
+              run: |
+                  sed -i "s/Version:           .*/Version:           ${{ github.ref_name }}/" wapuugotchi.php
+                  sed -i "s/Stable tag:        .*/Stable tag:        ${{ github.ref_name }}/" readme.txt
+
             # Node Dependencies / Build
             - uses: actions/setup-node@v4
               with:

@@ -44,8 +44,8 @@ class Manager {
 		$features[] = array(
 			'key'         => 'feed',
 			'label'       => \__( 'News Feed', 'wapuugotchi' ),
-			'description' => \__( "Your Wapuu keeps you up to date with everything happening in the WordPress universe — from upcoming releases to community highlights. Stay curious!\nIt fetches this content via our feed service (feed.wapuugotchi.com).\nWe don't collect or store your data — it's yours, and we keep it that way.", 'wapuugotchi' ),
-			'default'     => false,
+			'description' => \__( "Your Wapuu keeps you up to date with everything happening in the WordPress universe — from upcoming releases to community highlights.\nIt fetches this content via our feed service (feed.wapuugotchi.com). What you read stays between you and your Wapuu.", 'wapuugotchi' ),
+			'default'     => true,
 		);
 
 		return $features;

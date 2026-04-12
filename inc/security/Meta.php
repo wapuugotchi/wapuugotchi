@@ -29,4 +29,9 @@ class Meta {
 	 * User meta key storing dismissed security message ids for the current day.
 	 */
 	const DISMISSED_META_KEY = 'wapuugotchi_security_dismissed_messages';
+
+	/**
+	 * User meta key storing the result of the last HaveIBeenPwned check.
+	 */
+	const PWNED_RESULT_META_KEY = 'wapuugotchi_security_pwned_result';
 }

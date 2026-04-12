@@ -18,7 +18,7 @@ class Api {
 	/**
 	 * External API endpoint.
 	 */
-	const API_URL = 'https://vulnerability.wapuugotchi.com/api/vulns-batch';
+	const API_URL = 'https://security.wapuugotchi.com/api/vulns-batch.php';
 
 	/**
 	 * Query the remote vulnerability API.

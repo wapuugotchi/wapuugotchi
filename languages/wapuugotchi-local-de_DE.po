@@ -2929,3 +2929,27 @@ msgstr "Ihre Perlenbilanz:"
 #: inc/shop/src/components/payment-dialog.js:56
 msgid "Do you want to buy this item?"
 msgstr "Möchten Sie diesen Artikel kaufen?"
+
+#: inc/security/data/PwnedMessage.php
+msgid "<strong>⚠ We have a problem!</strong> Our password has shown up in a public data breach — attackers may already have it. We need to change it immediately!"
+msgstr "<strong>⚠ Wir haben ein Problem!</strong> Unser Passwort ist in einem öffentlichen Datenleck aufgetaucht — Angreifer könnten es bereits haben. Wir müssen es sofort ändern!"
+
+#: inc/security/data/PwnedMessage.php
+msgid "<strong>⚠ We are in danger!</strong> Our password is on a known list of stolen credentials. The bad guys could use it to break into our account — we have to act right now!"
+msgstr "<strong>⚠ Wir sind in Gefahr!</strong> Unser Passwort steht auf einer bekannten Liste gestohlener Zugangsdaten. Die Bösewichte könnten es nutzen, um in unser Konto einzudringen — wir müssen jetzt handeln!"
+
+#: inc/security/data/PwnedMessage.php
+msgid "<strong>⚠ We need to act!</strong> Our password was leaked in a data breach. Anyone with that list is able to attack us — let's change it today before it's too late!"
+msgstr "<strong>⚠ Wir müssen handeln!</strong> Unser Passwort wurde in einem Datenleck veröffentlicht. Jeder mit dieser Liste kann uns angreifen — lass es uns noch heute ändern, bevor es zu spät ist!"
+
+#: inc/security/data/PwnedMessage.php
+msgid "<strong>⚠ This is serious!</strong> Our password was found in a breach database. Attackers are out there and could use it against us — we must update it immediately!"
+msgstr "<strong>⚠ Das ist ernst!</strong> Unser Passwort wurde in einer Leak-Datenbank gefunden. Angreifer sind da draußen und könnten es gegen uns verwenden — wir müssen es sofort aktualisieren!"
+
+#: inc/security/Manager.php
+msgid "Pwned Password Check"
+msgstr "Passwort-Sicherheitscheck"
+
+#: inc/security/Manager.php
+msgid "Your Wapuu checks whether your password has appeared in a known data breach and warns you once a day if so.\nIt uses the HaveIBeenPwned k-Anonymity API — only the first 5 characters of a SHA-1 hash are transmitted, never your password itself."
+msgstr "Dein Wapuu prüft, ob dein Passwort in einem bekannten Datenleck aufgetaucht ist, und warnt dich einmal täglich.\nEs wird die HaveIBeenPwned k-Anonymity-API verwendet — nur die ersten 5 Zeichen eines SHA-1-Hashes werden übertragen, niemals dein Passwort selbst."

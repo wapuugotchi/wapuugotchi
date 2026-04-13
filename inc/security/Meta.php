@@ -34,4 +34,9 @@ class Meta {
 	 * User meta key storing the result of the last HaveIBeenPwned check.
 	 */
 	const PWNED_RESULT_META_KEY = 'wapuugotchi_security_pwned_result';
+
+	/**
+	 * User meta key storing whether the HIBP promo message has been permanently dismissed.
+	 */
+	const HIBP_PROMO_DISMISSED_META_KEY = 'wapuugotchi_security_hibp_promo_dismissed';
 }

@@ -8,6 +8,7 @@
 namespace Wapuugotchi\Security;
 
 use Wapuugotchi\Security\Data\AutoMessage;
+use Wapuugotchi\Security\Data\HibpPromoMessage;
 use Wapuugotchi\Security\Data\PwnedMessage;
 use Wapuugotchi\Security\Handler\CheckHandler;
 use Wapuugotchi\Security\Handler\PwnedHandler;
@@ -27,7 +28,7 @@ class Manager {
 		\add_filter( 'wapuugotchi_register_settings', array( $this, 'register_setting' ) );
 
 		$settings = \get_option( 'wapuugotchi_settings', array() );
-		if ( ( $settings['security'] ?? false ) === false ) {
+		if ( ( $settings['security'] ?? true ) === false ) {
 			return;
 		}
 
@@ -37,6 +38,8 @@ class Manager {
 		if ( ( $settings['hibp'] ?? false ) !== false ) {
 			\add_filter( 'authenticate', array( PwnedHandler::class, 'maybe_check_at_login' ), PHP_INT_MAX, 3 );
 			\add_filter( 'wapuugotchi_bubble_messages', array( PwnedMessage::class, 'add_pwned_message_filter' ), 110, 1 );
+		} else {
+			\add_filter( 'wapuugotchi_bubble_messages', array( HibpPromoMessage::class, 'add_hibp_promo_filter' ), 110, 1 );
 		}
 	}
 

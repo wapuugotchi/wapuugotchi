@@ -3,22 +3,22 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
+    target-branch: "dependencies"
     schedule:
-      interval: "weekly"
-      day: "thursday"
+      interval: "daily"
       time: "23:00"
       timezone: "Europe/Berlin"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 10
     labels:
       - "dependencies"
 
   - package-ecosystem: "github-actions"
     directory: "/"
+    target-branch: "dependencies"
     schedule:
-      interval: "weekly"
-      day: "thursday"
+      interval: "daily"
       time: "23:00"
       timezone: "Europe/Berlin"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 10
     labels:
       - "dependencies"

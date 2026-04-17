@@ -57,7 +57,7 @@ jobs:
                   SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
                   SLUG: wapuugotchi
             - name: Upload Release Asset
-              uses: softprops/action-gh-release@v2
+              uses: softprops/action-gh-release@v3
               with:
                   files: ${{ steps.deploy.outputs.zip-path }}
               env:

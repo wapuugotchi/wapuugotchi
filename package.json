@@ -47,7 +47,7 @@
 		"docker-compose": "^1.1.0",
 		"html-react-parser": "^5.2.1",
 		"react": "^18.3.1",
-		"react-dom": "^18.3.1",
+		"react-dom": "^19.2.5",
 		"react-svg": "^17.2.4"
 	}
 }

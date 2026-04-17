@@ -53,11 +53,25 @@ export default function Bubble() {
 			return undefined;
 		}
 
-		const raf = requestAnimationFrame( updatePosition );
+		const svg = document.querySelector(
+			'#wapuugotchi__avatar .wapuugotchi__svg svg'
+		);
+
+		updatePosition();
+
+		const observer = svg
+			? new MutationObserver( () => {
+					if ( svg.querySelector( 'g' ) ) {
+						updatePosition();
+						observer.disconnect();
+					}
+			  } )
+			: null;
+		observer?.observe( svg, { childList: true, subtree: true } );
 		window.addEventListener( 'resize', updatePosition );
 
 		return () => {
-			cancelAnimationFrame( raf );
+			observer?.disconnect();
 			window.removeEventListener( 'resize', updatePosition );
 		};
 	}, [ messages.length, updatePosition ] );

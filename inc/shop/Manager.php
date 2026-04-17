@@ -28,6 +28,7 @@ class Manager {
 		AvatarHandler::init();
 		BalanceHandler::init();
 
+		\add_action( 'wapuugotchi_add_pearls', array( BalanceHandler::class, 'increase_balance' ), 10, 1 );
 		\add_filter( 'wapuugotchi_add_submenu', array( Menu::class, 'wapuugotchi_add_submenu' ), 10 );
 		\add_action( 'rest_api_init', array( Api::class, 'create_rest_routes' ) );
 		\add_action( 'load-wapuugotchi_page_wapuugotchi__shop', array( $this, 'init' ), 100 );

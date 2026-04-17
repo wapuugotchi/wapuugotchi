@@ -35,6 +35,8 @@ export default function Bubble() {
 			return;
 		}
 
+		let animFrame;
+
 		const updatePosition = () => {
 			const container = document.getElementById( 'wapuugotchi__avatar' );
 			const svg = container?.querySelector( '.wapuugotchi__svg' );
@@ -43,6 +45,7 @@ export default function Bubble() {
 			);
 
 			if ( ! target || ! svg ) {
+				animFrame = requestAnimationFrame( updatePosition );
 				return;
 			}
 
@@ -55,6 +58,7 @@ export default function Bubble() {
 			target.style.animationPlayState = prevState;
 
 			if ( targetRect.height === 0 ) {
+				animFrame = requestAnimationFrame( updatePosition );
 				return;
 			}
 
@@ -62,25 +66,11 @@ export default function Bubble() {
 			setBottomOffset( offset );
 		};
 
-		const svgElement = document.querySelector(
-			'#wapuugotchi__avatar .wapuugotchi__svg svg'
-		);
-
-		updatePosition();
-
-		const observer = svgElement
-			? new MutationObserver( () => {
-					if ( svgElement.querySelector( 'g' ) ) {
-						updatePosition();
-						observer.disconnect();
-					}
-			  } )
-			: null;
-		observer?.observe( svgElement, { childList: true, subtree: true } );
+		animFrame = requestAnimationFrame( updatePosition );
 		window.addEventListener( 'resize', updatePosition );
 
 		return () => {
-			observer?.disconnect();
+			cancelAnimationFrame( animFrame );
 			window.removeEventListener( 'resize', updatePosition );
 		};
 	}, [ messages.length, avatar ] );

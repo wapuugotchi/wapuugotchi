@@ -35,10 +35,10 @@ class Manager {
 		\add_action( 'load-index.php', array( CheckHandler::class, 'maybe_run_daily_security_check' ) );
 		\add_filter( 'wapuugotchi_bubble_messages', array( AutoMessage::class, 'add_security_messages_filter' ), 100, 1 );
 
-		if ( ( $settings['hibp'] ?? false ) !== false ) {
+		if ( ( $settings['hibp'] ?? false ) === true ) {
 			\add_filter( 'authenticate', array( PwnedHandler::class, 'maybe_check_at_login' ), PHP_INT_MAX, 3 );
 			\add_filter( 'wapuugotchi_bubble_messages', array( PwnedMessage::class, 'add_pwned_message_filter' ), 110, 1 );
-		} else {
+		} elseif ( ! isset( $settings['hibp'] ) ) {
 			\add_filter( 'wapuugotchi_bubble_messages', array( HibpPromoMessage::class, 'add_hibp_promo_filter' ), 110, 1 );
 		}
 	}

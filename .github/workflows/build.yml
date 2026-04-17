@@ -24,7 +24,7 @@ jobs:
                   sed -i "s/Stable tag:        .*/Stable tag:        ${{ github.ref_name }}/" readme.txt
 
             # Node Dependencies / Build
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: '19.x'
             - name: Install dependencies and build

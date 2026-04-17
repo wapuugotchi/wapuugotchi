@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useState } from '@wordpress/element';
+import { useCallback, useEffect, useState } from '@wordpress/element';
 import { STORE_NAME } from '../store';
 import { useDispatch, useSelect } from '@wordpress/data';
 import parse from 'html-react-parser';
@@ -7,12 +7,13 @@ import './bubble.scss';
 
 export default function Bubble() {
 	const { setMessages } = useDispatch( STORE_NAME );
-	const { messages } = useSelect( ( select ) => {
+	const { messages, avatar } = useSelect( ( select ) => {
 		return {
 			messages: select( STORE_NAME ).getMessages(),
+			avatar: select( STORE_NAME ).getAvatar(),
 		};
 	} );
-	const [ topOffset, setTopOffset ] = useState( null );
+	const [ bottomOffset, setBottomOffset ] = useState( null );
 
 	const handleClickMessage = useCallback( async () => {
 		const removedItem = messages.shift();
@@ -28,47 +29,60 @@ export default function Bubble() {
 		setMessages( messages );
 	}, [ messages, setMessages ] );
 
-	const updatePosition = useCallback( () => {
-		const container = document.getElementById( 'wapuugotchi__avatar' );
-		const target = container?.querySelector(
-			'div.wapuugotchi__svg > svg > g'
-		);
-		const bubble = container?.querySelector( '.wapuugotchi__bubble' );
-
-		if ( ! container || ! target || ! bubble ) {
+	useEffect( () => {
+		if ( messages.length < 1 ) {
+			setBottomOffset( null );
 			return;
 		}
 
-		const containerRect = container.getBoundingClientRect();
-		const targetRect = target.getBoundingClientRect();
-		const bubbleRect = bubble.getBoundingClientRect();
-		const offset =
-			targetRect.top - containerRect.top - bubbleRect.height - 12;
+		let animFrame;
 
-		setTopOffset( Math.max( 0, offset ) );
-	}, [] );
+		const updatePosition = () => {
+			const container = document.getElementById( 'wapuugotchi__avatar' );
+			const svg = container?.querySelector( '.wapuugotchi__svg' );
+			const target = container?.querySelector(
+				'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear, g#wapuugotchi_type__rabbit, g#wapuugotchi_type__squirrel'
+			);
 
-	useLayoutEffect( () => {
-		if ( messages.length < 1 ) {
-			return undefined;
-		}
 
-		const raf = requestAnimationFrame( updatePosition );
+			if ( ! target || ! svg ) {
+				animFrame = requestAnimationFrame( updatePosition );
+				return;
+			}
+
+			const prevState = target.style.animationPlayState;
+			target.style.animationPlayState = 'paused';
+
+			const targetRect = target.getBoundingClientRect();
+			const svgRect = svg.getBoundingClientRect();
+
+			target.style.animationPlayState = prevState;
+
+			if ( targetRect.height === 0 ) {
+				animFrame = requestAnimationFrame( updatePosition );
+				return;
+			}
+
+			const offset =  ( window.innerHeight - document.body.clientHeight ) - ( targetRect.top - svgRect.top );
+			setBottomOffset( offset );
+		};
+
+		animFrame = requestAnimationFrame( updatePosition );
 		window.addEventListener( 'resize', updatePosition );
 
 		return () => {
-			cancelAnimationFrame( raf );
+			cancelAnimationFrame( animFrame );
 			window.removeEventListener( 'resize', updatePosition );
 		};
-	}, [ messages.length, updatePosition ] );
+	}, [ messages.length, avatar ] );
 
 	return messages.length > 0 ? (
 		<div
 			className={ `wapuugotchi__bubble fade_in_lazy ${ messages[ 0 ].type }_bubble` }
 			onClick={ handleClickMessage }
 			style={
-				topOffset !== null
-					? { top: `${ topOffset - 10 }px` }
+				bottomOffset !== null
+					? { bottom: `${ bottomOffset }px` }
 					: { visibility: 'hidden' }
 			}
 		>

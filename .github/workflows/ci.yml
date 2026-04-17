@@ -16,8 +16,8 @@ jobs:
             fail-fast: false
 
         steps:
-            - uses: actions/checkout@v4
-            - uses: actions/cache@v4
+            - uses: actions/checkout@v6
+            - uses: actions/cache@v5
               id: cache-dist
               with:
                   path: .
@@ -26,7 +26,7 @@ jobs:
               with:
                   php_version: ${{ matrix.phpVersion }}
                   dev: no
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: '19.x'
 
@@ -51,7 +51,7 @@ jobs:
 
             - name: Archive test artifacts
               if: failure()
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v7
               with:
                   name: playwright-report
                   path: |

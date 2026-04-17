@@ -15,7 +15,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         steps:
             - name: Checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
 
             # Set version from tag
             - name: Set version from tag
@@ -24,7 +24,7 @@ jobs:
                   sed -i "s/Stable tag:        .*/Stable tag:        ${{ github.ref_name }}/" readme.txt
 
             # Node Dependencies / Build
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: '19.x'
             - name: Install dependencies and build
@@ -33,7 +33,7 @@ jobs:
                   npm run build
             - name: Cache Node dependencies
               id: node-cache
-              uses: actions/cache@v4
+              uses: actions/cache@v5
               with:
                   path: node_modules
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -57,7 +57,7 @@ jobs:
                   SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
                   SLUG: wapuugotchi
             - name: Upload Release Asset
-              uses: softprops/action-gh-release@v2
+              uses: softprops/action-gh-release@v3
               with:
                   files: ${{ steps.deploy.outputs.zip-path }}
               env:

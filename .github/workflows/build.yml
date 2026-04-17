@@ -15,7 +15,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         steps:
             - name: Checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
 
             # Set version from tag
             - name: Set version from tag

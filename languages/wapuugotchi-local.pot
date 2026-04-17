@@ -98,7 +98,52 @@ msgstr ""
 msgid "It's not the same without you, %s."
 msgstr ""
 
-#: inc/buddy/data/Greeting.php:117
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php:131
+msgid "Wow, it's been forever! I'm so happy to see you, %s!"
+msgstr ""
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php
+msgid "I thought you forgot about me, %s!"
+msgstr ""
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php
+msgid "Oh my, %s — it's been so long! Welcome back!"
+msgstr ""
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php
+msgid "I missed you! Welcome back, %s."
+msgstr ""
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php
+msgid "Long time no see, %s — great to have you back!"
+msgstr ""
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php
+msgid "Hey %s, it's been a while. Everything okay?"
+msgstr ""
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php
+msgid "Hey %s, great to have you back!"
+msgstr ""
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php
+msgid "Good to see you again, %s!"
+msgstr ""
+
+#. translators: %s: user's display name
+#: inc/buddy/data/Greeting.php
+msgid "Hey %s, I was wondering where you went!"
+msgstr ""
+
+#: inc/buddy/data/Greeting.php:126
 msgid "Dude"
 msgstr ""
 

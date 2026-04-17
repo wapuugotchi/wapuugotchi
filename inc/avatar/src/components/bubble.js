@@ -35,8 +35,6 @@ export default function Bubble() {
 			return;
 		}
 
-		let animFrame;
-
 		const updatePosition = () => {
 			const container = document.getElementById( 'wapuugotchi__avatar' );
 			const svg = container?.querySelector( '.wapuugotchi__svg' );
@@ -44,9 +42,7 @@ export default function Bubble() {
 				'g#wapuugotchi_type__wapuu, g#wapuugotchi_type__bear, g#wapuugotchi_type__rabbit, g#wapuugotchi_type__squirrel'
 			);
 
-
 			if ( ! target || ! svg ) {
-				animFrame = requestAnimationFrame( updatePosition );
 				return;
 			}
 
@@ -59,19 +55,32 @@ export default function Bubble() {
 			target.style.animationPlayState = prevState;
 
 			if ( targetRect.height === 0 ) {
-				animFrame = requestAnimationFrame( updatePosition );
 				return;
 			}
 
-			const offset =  ( window.innerHeight - document.body.clientHeight ) - ( targetRect.top - svgRect.top );
+			const offset = ( window.innerHeight - document.body.clientHeight ) - ( targetRect.top - svgRect.top );
 			setBottomOffset( offset );
 		};
 
-		animFrame = requestAnimationFrame( updatePosition );
+		const svgElement = document.querySelector(
+			'#wapuugotchi__avatar .wapuugotchi__svg svg'
+		);
+
+		updatePosition();
+
+		const observer = svgElement
+			? new MutationObserver( () => {
+					if ( svgElement.querySelector( 'g' ) ) {
+						updatePosition();
+						observer.disconnect();
+					}
+			  } )
+			: null;
+		observer?.observe( svgElement, { childList: true, subtree: true } );
 		window.addEventListener( 'resize', updatePosition );
 
 		return () => {
-			cancelAnimationFrame( animFrame );
+			observer?.disconnect();
 			window.removeEventListener( 'resize', updatePosition );
 		};
 	}, [ messages.length, avatar ] );

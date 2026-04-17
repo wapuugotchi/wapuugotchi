@@ -17,26 +17,81 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Greeting {
 
 	/**
-	 * Get true.
+	 * The user meta key for the last visit timestamp.
+	 */
+	const LAST_VISIT_KEY = 'wapuugotchi_last_visit';
+
+	/**
+	 * Pearl bonus awarded when returning after 1+ month of absence.
+	 */
+	const LONG_ABSENCE_PEARL_BONUS = 5;
+
+	/**
+	 * Cached days since last visit (avoids repeated meta reads per request).
+	 *
+	 * @var int|null
+	 */
+	private static $days_absent = null;
+
+	/**
+	 * Return the number of full calendar days since the current user's last visit.
+	 * Returns 1 for first-time visitors (no stored last visit).
+	 * Returns 0 if the last visit was today.
+	 *
+	 * @return int
+	 */
+	private static function get_days_absent() {
+		if ( null !== self::$days_absent ) {
+			return self::$days_absent;
+		}
+
+		$last_visit = \get_user_meta( \get_current_user_id(), self::LAST_VISIT_KEY, true );
+
+		if ( ! $last_visit ) {
+			self::$days_absent = 1;
+			return 1;
+		}
+
+		$timezone        = new \DateTimeZone( \wp_timezone_string() );
+		$last_visit_date = new \DateTime( '@' . $last_visit );
+		$last_visit_date->setTimezone( $timezone );
+		$last_visit_date->setTime( 0, 0, 0 );
+		$today = new \DateTime( 'now', $timezone );
+		$today->setTime( 0, 0, 0 );
+
+		self::$days_absent = (int) $today->diff( $last_visit_date )->days;
+		return self::$days_absent;
+	}
+
+	/**
+	 * Determine whether the greeting should be shown to the current user.
+	 * Updates the last-visit timestamp and awards a Pearl bonus for long absences.
 	 *
 	 * @return bool
 	 */
 	public static function is_active() {
-		if ( \get_transient( 'wapuugotchi_buddy__greeting' ) ) {
+		if ( self::get_days_absent() === 0 ) {
 			return false;
-		} else {
-			\set_transient( 'wapuugotchi_buddy__greeting', true, self::get_seconds_until_tomorrow_morning() );
-			return true;
 		}
+
+		if ( self::get_days_absent() >= 28 ) {
+			\do_action( 'wapuugotchi_add_pearls', self::LONG_ABSENCE_PEARL_BONUS );
+		}
+
+		\update_user_meta( \get_current_user_id(), self::LAST_VISIT_KEY, \time() );
+		self::$days_absent = 0;
+
+		return true;
 	}
 
 	/**
-	 * Set the transient.
+	 * Mark the greeting as handled.
+	 * The last-visit timestamp is already updated in is_active(), so nothing to do here.
 	 *
 	 * @return bool
 	 */
 	public static function handle_submit() {
-		return \set_transient( 'wapuugotchi_buddy__greeting', true, self::get_seconds_until_tomorrow_morning() );
+		return true;
 	}
 
 	/**
@@ -45,14 +100,13 @@ class Greeting {
 	 * @param array $messages The messages.
 	 *
 	 * @return array
-	 * @throws \Exception When the timezone is invalid.
 	 **/
 	public static function add_greetings_filter( $messages ) {
-		array_unshift(
+		\array_unshift(
 			$messages,
 			new \Wapuugotchi\Avatar\Models\Message(
 				'buddy-greeting',
-				self::get_random_greeting(),
+				self::get_contextual_greeting(),
 				'none',
 				'Wapuugotchi\Buddy\Data\Greeting::is_active',
 				'Wapuugotchi\Buddy\Data\Greeting::handle_submit'
@@ -63,24 +117,59 @@ class Greeting {
 	}
 
 	/**
-	 * Get the seconds remaining until tomorrow 00:00.
+	 * Return a greeting tailored to how long the user has been away.
 	 *
-	 * @return int The number of seconds until midnight.
-	 * @throws \Exception When the timezone is invalid.
+	 * @return string
 	 */
-	private static function get_seconds_until_tomorrow_morning() {
-		$timezone = new \DateTimeZone( \wp_timezone_string() );
+	public static function get_contextual_greeting() {
+		$days = self::get_days_absent();
+		$name = \wp_get_current_user()->display_name ?? \__( 'Dude', 'wapuugotchi' );
 
-		$current_date_time  = new \DateTime( 'now', $timezone );
-		$midnight_date_time = new \DateTime( 'tomorrow 06:00', $timezone );
+		if ( $days >= 28 ) {
+			$greetings = array(
+				/* translators: %s: user's display name */
+				\__( 'Wow, it\'s been forever! I\'m so happy to see you, %s!', 'wapuugotchi' ),
+				/* translators: %s: user's display name */
+				\__( 'I thought you forgot about me, %s!', 'wapuugotchi' ),
+				/* translators: %s: user's display name */
+				\__( 'Oh my, %s — it\'s been so long! Welcome back!', 'wapuugotchi' ),
+			);
+			return \sprintf( $greetings[ \array_rand( $greetings ) ], $name );
+		}
 
-		return $midnight_date_time->getTimestamp() - $current_date_time->getTimestamp();
+		if ( $days >= 8 ) {
+			$greetings = array(
+				/* translators: %s: user's display name */
+				\__( 'I missed you! Welcome back, %s.', 'wapuugotchi' ),
+				/* translators: %s: user's display name */
+				\__( 'Long time no see, %s — great to have you back!', 'wapuugotchi' ),
+				/* translators: %s: user's display name */
+				\__( 'Hey %s, it\'s been a while. Everything okay?', 'wapuugotchi' ),
+			);
+			return \sprintf( $greetings[ \array_rand( $greetings ) ], $name );
+		}
+
+		if ( $days >= 3 ) {
+			$greetings = array(
+				/* translators: %s: user's display name */
+				\__( 'Hey %s, great to have you back!', 'wapuugotchi' ),
+				/* translators: %s: user's display name */
+				\__( 'It\'s not the same without you, %s.', 'wapuugotchi' ),
+				/* translators: %s: user's display name */
+				\__( 'Good to see you again, %s!', 'wapuugotchi' ),
+				/* translators: %s: user's display name */
+				\__( 'Hey %s, I was wondering where you went!', 'wapuugotchi' ),
+			);
+			return \sprintf( $greetings[ \array_rand( $greetings ) ], $name );
+		}
+
+		return self::get_random_greeting();
 	}
 
 	/**
-	 * Get random greeting text.
+	 * Get a random everyday greeting (used for absences of 1–2 days).
 	 *
-	 * @return string The greeting text.
+	 * @return string
 	 */
 	public static function get_random_greeting() {
 		$greetings = array(
@@ -95,8 +184,6 @@ class Greeting {
 			/* translators: %s: user's display name */
 			\__( 'Hey %s, ready for a new day?', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hey %s, how are you today?', 'wapuugotchi' ),
-			/* translators: %s: user's display name */
 			\__( 'Hello %s, what do you have planned today?', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
 			\__( 'Hi %s, fancy a coffee?', 'wapuugotchi' ),
@@ -108,13 +195,11 @@ class Greeting {
 			\__( 'Hi %s, good to have you here.', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
 			\__( '%s, we are a great team!', 'wapuugotchi' ),
-			/* translators: %s: user's display name */
-			\__( 'It\'s not the same without you, %s.', 'wapuugotchi' ),
 		);
 
 		return \sprintf(
 			$greetings[ \array_rand( $greetings ) ],
-			\wp_get_current_user( 'display_name' )->display_name ?? \__( 'Dude', 'wapuugotchi' )
+			\wp_get_current_user()->display_name ?? \__( 'Dude', 'wapuugotchi' )
 		);
 	}
 }

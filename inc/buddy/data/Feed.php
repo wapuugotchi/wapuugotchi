@@ -16,10 +16,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Feed {
 	const WAPUUGOTCHI_FEED_URL = 'https://feed.wapuugotchi.com/feed.xml';
-	const FEED_ITEMS           = 'wapuugotchi_feed_items';
-	const DISMISSED_ITEMS      = 'wapuugotchi_feed_dismissed';
-	const CACHE_TTL            = 12 * HOUR_IN_SECONDS;
-	const DISMISSED_TTL        = 30 * DAY_IN_SECONDS;
+	const FEED_ITEMS      = 'wapuugotchi_feed_items';
+	const DISMISSED_ITEMS = 'wapuugotchi_feed_dismissed';
+	const DISMISSED_DATE  = 'wapuugotchi_feed_dismissed_date';
+	const CACHE_TTL       = 12 * HOUR_IN_SECONDS;
 
 	/**
 	 * Add feed items to the message list.
@@ -63,6 +63,8 @@ class Feed {
 	 * @return array|null
 	 */
 	public static function get_data() {
+		self::maybe_reset_dismissed();
+
 		$items = get_transient( self::FEED_ITEMS );
 		if ( false === $items ) {
 			$data  = self::fetch_data();
@@ -74,6 +76,26 @@ class Feed {
 		}
 
 		return $items;
+	}
+
+	/**
+	 * Reset dismissed items at midnight (based on WP site timezone).
+	 *
+	 * @return void
+	 */
+	private static function maybe_reset_dismissed() {
+		$user_id = get_current_user_id();
+		if ( ! $user_id ) {
+			return;
+		}
+
+		$today      = current_time( 'Y-m-d' );
+		$reset_date = get_user_meta( $user_id, self::DISMISSED_DATE, true );
+
+		if ( $reset_date !== $today ) {
+			delete_user_meta( $user_id, self::DISMISSED_ITEMS );
+			update_user_meta( $user_id, self::DISMISSED_DATE, $today );
+		}
 	}
 
 	/**

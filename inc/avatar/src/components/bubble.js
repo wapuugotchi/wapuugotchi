@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from '@wordpress/element';
 import { STORE_NAME } from '../store';
 import { useDispatch, useSelect } from '@wordpress/data';
-import parse from 'html-react-parser';
 import apiFetch from '@wordpress/api-fetch';
 import './bubble.scss';
 
@@ -85,7 +84,7 @@ export default function Bubble() {
 					: { visibility: 'hidden' }
 			}
 		>
-			{ parse( messages[ 0 ].message ) }
+			<span dangerouslySetInnerHTML={ { __html: messages[ 0 ].message } } />
 		</div>
 	) : null;
 }

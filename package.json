@@ -46,7 +46,6 @@
 		"@wordpress/dom-ready": "^4.44.0",
 		"@wordpress/element": "^6.44.0",
 		"@wordpress/i18n": "^6.17.0",
-		"docker-compose": "^1.1.0",
-		"html-react-parser": "^5.2.1"
+		"docker-compose": "^1.1.0"
 	}
 }

@@ -35,22 +35,18 @@ class Feed {
 		}
 
 		foreach ( $items as $item ) {
-			$message_id    = 'buddy-feed_' . $item['id'];
-			$is_active     = function () use ( $message_id ) {
-				return self::is_active( $message_id );
-			};
-			$handle_submit = function ( $id ) use ( $message_id ) {
-				return self::handle_submit( $id, $message_id );
-			};
+			$message_id = 'buddy-feed_' . $item['id'];
+			if ( ! self::is_active( $message_id ) ) {
+				break;
+			}
 
-			$messages[] =
-				new \Wapuugotchi\Avatar\Models\Message(
-					$message_id,
-					$item['description'] . self::render_iframe( $item['iframe'] ),
-					'info',
-					$is_active,
-					$handle_submit
-				);
+			$messages[] = new \Wapuugotchi\Avatar\Models\Message(
+				$message_id,
+				$item['description'] . self::render_iframe( $item['iframe'] ),
+				'info',
+				'__return_true',
+				'Wapuugotchi\Buddy\Data\Feed::handle_submit'
+			);
 			break;
 		}
 
@@ -244,7 +240,7 @@ class Feed {
 	 *
 	 * @return bool
 	 */
-	public static function handle_submit( $id, $message_id ) {
+	public static function handle_submit( $id ) {
 		$user_id = get_current_user_id();
 		if ( ! $user_id ) {
 			return false;
@@ -254,8 +250,8 @@ class Feed {
 		if ( ! is_array( $meta ) ) {
 			$meta = array();
 		}
-		if ( ! in_array( $message_id, $meta, true ) ) {
-			$meta[] = $message_id;
+		if ( ! in_array( $id, $meta, true ) ) {
+			$meta[] = $id;
 		}
 
 		return update_user_meta( $user_id, self::DISMISSED_ITEMS, $meta );

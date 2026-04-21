@@ -69,16 +69,16 @@ class AutoMessage {
 
 			$message_id = 'security-' . $slug;
 
+			if ( ! MessageHandler::is_active( $message_id ) ) {
+				continue;
+			}
+
 			$messages[] = new Message(
 				$message_id,
 				self::get_vulnerability_message( $slug, $latest_version_is_safe, $latest_available ),
 				MessageHandler::get_message_type_by_severity( $severity ),
-				function () use ( $message_id ) {
-					return MessageHandler::is_active( $message_id );
-				},
-				function () use ( $message_id ) {
-					return MessageHandler::handle_submit( $message_id );
-				}
+				'__return_true',
+				'Wapuugotchi\Security\Handler\MessageHandler::handle_submit'
 			);
 		}
 
@@ -99,7 +99,7 @@ class AutoMessage {
 		$intro       = self::pick_variant(
 			array(
 				// translators: %s: plugin name.
-				\sprintf( __( 'Hey, I spotted something about <strong>%s</strong> — the version you\'re running has some known security issues.', 'wapuugotchi' ), $plugin_name ) . '<br>',
+				\sprintf( __( 'I spotted something about <strong>%s</strong> — the version you\'re running has some known security issues.', 'wapuugotchi' ), $plugin_name ) . '<br>',
 				// translators: %s: plugin name.
 				\sprintf( __( 'I was doing my usual snooping and <strong>%s</strong> caught my eye. Your current version has a few known vulnerabilities floating around.', 'wapuugotchi' ), $plugin_name ) . '<br>',
 				// translators: %s: plugin name.

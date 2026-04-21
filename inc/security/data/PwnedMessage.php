@@ -48,16 +48,16 @@ class PwnedMessage {
 
 		$message_id = self::MESSAGE_ID;
 
+		if ( ! MessageHandler::is_active( $message_id ) ) {
+			return $messages;
+		}
+
 		$messages[] = new Message(
 			$message_id,
 			self::get_random_warning(),
 			'security-critical',
-			function () use ( $message_id ) {
-				return MessageHandler::is_active( $message_id );
-			},
-			function () use ( $message_id ) {
-				return MessageHandler::handle_submit( $message_id );
-			}
+			'__return_true',
+			'Wapuugotchi\Security\Handler\MessageHandler::handle_submit'
 		);
 
 		return $messages;

@@ -24,12 +24,12 @@ class Manager {
 	 */
 	public function __construct() {
 		\add_filter( 'wapuugotchi_register_settings', array( $this, 'register_settings' ) );
-		\add_filter( 'wapuugotchi_bubble_messages', array( Greeting::class, 'add_greetings_filter' ), 10, 1 );
+		\add_filter( 'wapuugotchi_bubble_messages', array( Greeting::class, 'add_greetings_filter' ), PHP_INT_MAX, 1 );
 
 		$settings = \get_option( 'wapuugotchi_settings', array() );
 		if ( ( $settings['feed'] ?? true ) !== false ) {
 			\add_action( 'admin_enqueue_scripts', array( $this, 'add_feed_script' ), PHP_INT_MAX );
-			\add_filter( 'wapuugotchi_bubble_messages', array( Feed::class, 'add_feed_filter' ), PHP_INT_MAX, 1 );
+			\add_filter( 'wapuugotchi_bubble_messages', array( Feed::class, 'add_feed_filter' ), 150, 1 );
 		}
 	}
 

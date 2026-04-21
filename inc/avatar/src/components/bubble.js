@@ -52,7 +52,6 @@ export default function Bubble() {
 			target.style.animationPlayState = 'paused';
 
 			const targetRect = target.getBoundingClientRect();
-			const svgRect = svg.getBoundingClientRect();
 
 			target.style.animationPlayState = prevState;
 
@@ -61,7 +60,12 @@ export default function Bubble() {
 				return;
 			}
 
-			const offset = ( window.innerHeight - document.body.clientHeight ) - ( targetRect.top - svgRect.top );
+			const svgRect = svg.getBoundingClientRect();
+
+			const offset =
+				window.innerHeight -
+				document.body.clientHeight -
+				( targetRect.top - svgRect.top );
 			setBottomOffset( offset );
 		};
 
@@ -84,7 +88,9 @@ export default function Bubble() {
 					: { visibility: 'hidden' }
 			}
 		>
-			<span dangerouslySetInnerHTML={ { __html: messages[ 0 ].message } } />
+			<span
+				dangerouslySetInnerHTML={ { __html: messages[ 0 ].message } }
+			/>
 		</div>
 	) : null;
 }

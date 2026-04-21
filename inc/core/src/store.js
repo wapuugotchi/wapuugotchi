@@ -47,7 +47,7 @@ function create() {
 							data: { nonce, settings: newSettings },
 						} );
 						dispatch.__setState( { saving: false, saved: true } );
-					} catch ( e ) {
+					} catch {
 						dispatch.__setState( {
 							settings: currentSettings,
 							saving: false,

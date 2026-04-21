@@ -53,7 +53,7 @@ export default class Feed {
 			const url = new URL( src, window.location.href );
 			url.searchParams.set( 'autoplay', '1' );
 			return url.toString();
-		} catch ( error ) {
+		} catch {
 			const hashIndex = src.indexOf( '#' );
 			const base = hashIndex === -1 ? src : src.slice( 0, hashIndex );
 			const hash = hashIndex === -1 ? '' : src.slice( hashIndex );

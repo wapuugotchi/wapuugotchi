@@ -16,10 +16,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Feed {
 	const WAPUUGOTCHI_FEED_URL = 'https://feed.wapuugotchi.com/feed.xml';
-	const FEED_ITEMS      = 'wapuugotchi_feed_items';
-	const DISMISSED_ITEMS = 'wapuugotchi_feed_dismissed';
-	const DISMISSED_DATE  = 'wapuugotchi_feed_dismissed_date';
-	const CACHE_TTL       = 12 * HOUR_IN_SECONDS;
+	const FEED_ITEMS           = 'wapuugotchi_feed_items';
+	const DISMISSED_ITEMS      = 'wapuugotchi_feed_dismissed';
+	const DISMISSED_DATE       = 'wapuugotchi_feed_dismissed_date';
+	const CACHE_TTL            = 12 * HOUR_IN_SECONDS;
 
 	/**
 	 * Add feed items to the message list.
@@ -236,7 +236,6 @@ class Feed {
 	 * Handle the submission of the message.
 	 *
 	 * @param string $id Message id.
-	 * @param string $message_id Feed message id.
 	 *
 	 * @return bool
 	 */

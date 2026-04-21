@@ -72,6 +72,11 @@ class HibpPromoMessage {
 		return (bool) \update_user_meta( $user_id, Meta::HIBP_PROMO_DISMISSED_META_KEY, true );
 	}
 
+	/**
+	 * Return the promo message text.
+	 *
+	 * @return string
+	 */
 	private static function get_promo_message() {
 		return \__( 'Is your password safe? I can check! Just activate the <strong>Password Breach Check</strong> in the Wapuugotchi Settings — I\'ll warn you if hackers already have it.', 'wapuugotchi' );
 	}

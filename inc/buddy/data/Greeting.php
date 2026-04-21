@@ -156,8 +156,9 @@ class Greeting {
 	 * @return string
 	 */
 	public static function get_contextual_greeting() {
-		$days = self::get_days_absent();
-		$name = \wp_get_current_user()->display_name ?: \__( 'Dude', 'wapuugotchi' );
+		$days         = self::get_days_absent();
+		$display_name = \wp_get_current_user()->display_name;
+		$name         = ( '' !== $display_name ) ? $display_name : \__( 'Dude', 'wapuugotchi' );
 
 		if ( $days >= 28 ) {
 			$greetings = array(
@@ -210,7 +211,7 @@ class Greeting {
 			/* translators: %s: user's display name */
 			\__( 'Hi %s, great to see you! 🤗', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hey %s, how are you today? 💪' , 'wapuugotchi' ),
+			\__( 'Hey %s, how are you today? 💪', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
 			\__( 'Hey %s, did you sleep well? ✨', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
@@ -226,11 +227,14 @@ class Greeting {
 			/* translators: %s: user's display name */
 			\__( 'Hey %s, you look great today. ❤️', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hi %s, good to have you here. 🤗', 'wapuugotchi' ),		);
+			\__( 'Hi %s, good to have you here. 🤗', 'wapuugotchi' ),
+		);
 
+		$display_name = \wp_get_current_user()->display_name;
+		$name         = ( '' !== $display_name ) ? $display_name : \__( 'Dude', 'wapuugotchi' );
 		return \sprintf(
 			$greetings[ \array_rand( $greetings ) ],
-			\wp_get_current_user()->display_name ?: \__( 'Dude', 'wapuugotchi' )
+			$name
 		);
 	}
 }

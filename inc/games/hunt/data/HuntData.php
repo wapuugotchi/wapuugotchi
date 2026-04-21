@@ -66,14 +66,6 @@ class HuntData {
 			array( '#doaction2', '#plugin-search-input', '#doaction', '#doactiondoaction' )
 		);
 
-		$hunt[] = new Hunt(
-			'wp_hunt_6',
-			'Find me! I\'m hiding where you can check your site\'s health.',
-			'You found me!',
-			'site-health',
-			array( '#health-check-site-status-recommended', '.health-check-body', '#health-check-issues-recommended' )
-		);
-
 		return $hunt;
 	}
 }

@@ -44,7 +44,6 @@ const store = createReduxStore( STORE_NAME, {
 	actions: {
 		__initialize:
 			( initialState ) =>
-			// eslint-disable-next-line no-shadow
 			async ( { dispatch, select } ) => {
 				dispatch.__setState( initialState );
 				const quest = initialState.data?.quest_text;

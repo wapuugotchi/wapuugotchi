@@ -27,7 +27,6 @@ const store = createReduxStore( STORE_NAME, {
 	actions: {
 		__initialize:
 			( initialState ) =>
-			// eslint-disable-next-line no-shadow
 			async ( { dispatch } ) => {
 				dispatch.__setState( initialState );
 				const sort = await getSortElement( initialState.data );

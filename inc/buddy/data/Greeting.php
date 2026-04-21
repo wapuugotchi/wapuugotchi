@@ -49,7 +49,7 @@ class Greeting {
 
 		if ( ! $last_visit ) {
 			self::$days_absent = 1;
-			return 1;
+			return self::$days_absent;
 		}
 
 		$timezone        = new \DateTimeZone( \wp_timezone_string() );
@@ -102,18 +102,52 @@ class Greeting {
 	 * @return array
 	 **/
 	public static function add_greetings_filter( $messages ) {
-		\array_unshift(
-			$messages,
-			new \Wapuugotchi\Avatar\Models\Message(
-				'buddy-greeting',
-				self::get_contextual_greeting(),
-				'none',
-				'Wapuugotchi\Buddy\Data\Greeting::is_active',
-				'Wapuugotchi\Buddy\Data\Greeting::handle_submit'
-			)
+		$greeting = self::get_contextual_greeting();
+
+		if ( ! self::is_active() ) {
+			return $messages;
+		}
+
+		if ( empty( $messages ) ) {
+			\array_unshift(
+				$messages,
+				new \Wapuugotchi\Avatar\Models\Message(
+					'buddy-greeting',
+					$greeting . ' ' . self::get_random_quiet_text(),
+					'none',
+					'__return_true',
+					'Wapuugotchi\Buddy\Data\Greeting::handle_submit'
+				)
+			);
+
+			return $messages;
+		}
+
+		$first       = $messages[0];
+		$messages[0] = new \Wapuugotchi\Avatar\Models\Message(
+			$first->get_id(),
+			$greeting . '<br>' . $first->get_message(),
+			$first->get_type(),
+			$first->get_is_active_callback(),
+			$first->get_handle_submit_callback()
 		);
 
 		return $messages;
+	}
+
+	/**
+	 * Return a random "nothing special today" text.
+	 *
+	 * @return string
+	 */
+	private static function get_random_quiet_text(): string {
+		$texts = array(
+			\__( 'No special events today — just enjoy your day!', 'wapuugotchi' ),
+			\__( 'All quiet today — nothing to report.', 'wapuugotchi' ),
+			\__( 'No news is good news — have a great day!', 'wapuugotchi' ),
+		);
+
+		return $texts[ \array_rand( $texts ) ];
 	}
 
 	/**
@@ -122,17 +156,18 @@ class Greeting {
 	 * @return string
 	 */
 	public static function get_contextual_greeting() {
-		$days = self::get_days_absent();
-		$name = \wp_get_current_user()->display_name ?? \__( 'Dude', 'wapuugotchi' );
+		$days         = self::get_days_absent();
+		$display_name = \wp_get_current_user()->display_name;
+		$name         = ( '' !== $display_name ) ? $display_name : \__( 'Dude', 'wapuugotchi' );
 
 		if ( $days >= 28 ) {
 			$greetings = array(
 				/* translators: %s: user's display name */
-				\__( 'Wow, it\'s been forever! I\'m so happy to see you, %s!', 'wapuugotchi' ),
+				\__( 'Wow, it\'s been forever! I\'m so happy to see you, %s! 🥰', 'wapuugotchi' ),
 				/* translators: %s: user's display name */
-				\__( 'I thought you forgot about me, %s!', 'wapuugotchi' ),
+				\__( 'I thought you forgot about me, %s! 🥲', 'wapuugotchi' ),
 				/* translators: %s: user's display name */
-				\__( 'Oh my, %s — it\'s been so long! Welcome back!', 'wapuugotchi' ),
+				\__( 'Oh my, %s — it\'s been so long! Welcome back! 😍', 'wapuugotchi' ),
 			);
 			return \sprintf( $greetings[ \array_rand( $greetings ) ], $name );
 		}
@@ -140,11 +175,11 @@ class Greeting {
 		if ( $days >= 8 ) {
 			$greetings = array(
 				/* translators: %s: user's display name */
-				\__( 'I missed you! Welcome back, %s.', 'wapuugotchi' ),
+				\__( 'I missed you! Welcome back, %s. 🥰', 'wapuugotchi' ),
 				/* translators: %s: user's display name */
-				\__( 'Long time no see, %s — great to have you back!', 'wapuugotchi' ),
+				\__( 'Long time no see, %s — great to have you back! 😍', 'wapuugotchi' ),
 				/* translators: %s: user's display name */
-				\__( 'Hey %s, it\'s been a while. Everything okay?', 'wapuugotchi' ),
+				\__( 'Hey %s, it\'s been a while. Everything okay? 😟', 'wapuugotchi' ),
 			);
 			return \sprintf( $greetings[ \array_rand( $greetings ) ], $name );
 		}
@@ -152,13 +187,13 @@ class Greeting {
 		if ( $days >= 3 ) {
 			$greetings = array(
 				/* translators: %s: user's display name */
-				\__( 'Hey %s, great to have you back!', 'wapuugotchi' ),
+				\__( 'Hey %s, great to have you back! 🤗', 'wapuugotchi' ),
 				/* translators: %s: user's display name */
-				\__( 'It\'s not the same without you, %s.', 'wapuugotchi' ),
+				\__( 'It\'s not the same without you, %s. 😍', 'wapuugotchi' ),
 				/* translators: %s: user's display name */
-				\__( 'Good to see you again, %s!', 'wapuugotchi' ),
+				\__( 'Good to see you again, %s! 🥰', 'wapuugotchi' ),
 				/* translators: %s: user's display name */
-				\__( 'Hey %s, I was wondering where you went!', 'wapuugotchi' ),
+				\__( 'Hey %s, I was wondering where you went! ❤️', 'wapuugotchi' ),
 			);
 			return \sprintf( $greetings[ \array_rand( $greetings ) ], $name );
 		}
@@ -174,32 +209,32 @@ class Greeting {
 	public static function get_random_greeting() {
 		$greetings = array(
 			/* translators: %s: user's display name */
-			\__( 'Hi %s, great to see you!', 'wapuugotchi' ),
+			\__( 'Hi %s, great to see you! 🤗', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hey %s, how are you today?', 'wapuugotchi' ),
+			\__( 'Hey %s, how are you today? 💪', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hey %s, did you sleep well?', 'wapuugotchi' ),
+			\__( 'Hey %s, did you sleep well? ✨', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hi %s, how has your day been so far?', 'wapuugotchi' ),
+			\__( 'Hi %s, how has your day been so far? ✨', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hey %s, ready for a new day?', 'wapuugotchi' ),
+			\__( 'Hey %s, ready for a new day? 💪', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hello %s, what do you have planned today?', 'wapuugotchi' ),
+			\__( 'Hello %s, what do you have planned today? ✨', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hi %s, fancy a coffee?', 'wapuugotchi' ),
+			\__( 'Hi %s, fancy a coffee? ☕', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hey %s, it\'s always a pleasure to see you!', 'wapuugotchi' ),
+			\__( 'Hey %s, it\'s always a pleasure to see you! 🥰', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hey %s, you look great today.', 'wapuugotchi' ),
+			\__( 'Hey %s, you look great today. ❤️', 'wapuugotchi' ),
 			/* translators: %s: user's display name */
-			\__( 'Hi %s, good to have you here.', 'wapuugotchi' ),
-			/* translators: %s: user's display name */
-			\__( '%s, we are a great team!', 'wapuugotchi' ),
+			\__( 'Hi %s, good to have you here. 🤗', 'wapuugotchi' ),
 		);
 
+		$display_name = \wp_get_current_user()->display_name;
+		$name         = ( '' !== $display_name ) ? $display_name : \__( 'Dude', 'wapuugotchi' );
 		return \sprintf(
 			$greetings[ \array_rand( $greetings ) ],
-			\wp_get_current_user()->display_name ?? \__( 'Dude', 'wapuugotchi' )
+			$name
 		);
 	}
 }

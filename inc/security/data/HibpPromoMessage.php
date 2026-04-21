@@ -51,15 +51,25 @@ class HibpPromoMessage {
 			$message_id,
 			self::get_promo_message(),
 			'info',
-			function () use ( $user_id ) {
-				return ! \get_user_meta( $user_id, Meta::HIBP_PROMO_DISMISSED_META_KEY, true );
-			},
-			function () use ( $user_id ) {
-				return (bool) \update_user_meta( $user_id, Meta::HIBP_PROMO_DISMISSED_META_KEY, true );
-			}
+			'__return_true',
+			'Wapuugotchi\Security\Data\HibpPromoMessage::handle_submit'
 		);
 
 		return $messages;
+	}
+
+	/**
+	 * Return the promo message text.
+	 *
+	 * @return string
+	 */
+	public static function handle_submit(): bool {
+		$user_id = \get_current_user_id();
+		if ( ! $user_id ) {
+			return false;
+		}
+
+		return (bool) \update_user_meta( $user_id, Meta::HIBP_PROMO_DISMISSED_META_KEY, true );
 	}
 
 	/**

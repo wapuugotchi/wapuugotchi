@@ -109,6 +109,24 @@ class Message {
 	}
 
 	/**
+	 * Get the raw is_active callback string.
+	 *
+	 * @return string
+	 */
+	public function get_is_active_callback(): string {
+		return $this->is_active;
+	}
+
+	/**
+	 * Get the raw handle_submit callback string.
+	 *
+	 * @return string
+	 */
+	public function get_handle_submit_callback(): string {
+		return $this->handle_submit;
+	}
+
+	/**
 	 * What is happening when the message is submitted.
 	 * The callback is executed by the submit_message function in the Api class.
 	 *

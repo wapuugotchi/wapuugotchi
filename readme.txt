@@ -1,7 +1,7 @@
 === WapuuGotchi ===
 Contributors:      wapuugotchi, herrfeldmann, ancocodet, acali, coachbirgit, pfefferle, lgersman, tobibode, sabrinaw, fettnei, dionysous, thchoperpilot
 Tags:              assistant, wapuu, gamification
-Stable tag:        0.0.0
+Stable tag:        2.3.0
 Requires at least: 6.7
 Tested up to:      6.9
 Requires PHP:      7.2
@@ -44,6 +44,37 @@ Let Wapuu be your companion, enhance your WordPress skills, and customize your W
 
 == Changelog ==
 
+= 2.3.0 =
+- Implement context-aware welcome-back greetings based on absence duration
+- Implement HIBP password breach check
+- Greeting is now prepended to the first existing message instead of shown separately
+- Feed: dismissed items reset daily at midnight
+- Remove broken Site Health hunt mission
+- Fix various bugs
+
+= 2.2.1 =
+- Fix wrong position of bubble
+
+= 2.2.0 =
+- Update support link
+
+= 2.1.0 =
+- Implement autoload
+- Fix general shop issues
+- Update default settings for feed and vulnerability check
+
+= 2.0.0 =
+- Implement mission mini-game - sort
+- Implement security module (plugin vulnerability check)
+- Implement settings page
+- Add color picker to shop
+- Add ActivityPub integration (Wapuu as fediverse actor)
+- Various bug fixes
+
+= 1.5.0 =
+- Implement feed feature (news & updates from wapuugotchi.com in the bubble)
+- Add WP-CLI command: wp wapuugotchi reset
+
 = 1.4.0 =
 - Implement support page
 - redesign shop page
@@ -62,12 +93,19 @@ Let Wapuu be your companion, enhance your WordPress skills, and customize your W
 = 1.2.0 =
 - Implement single page tour
 
+= 1.1.2 =
+- Fix avatar position on dashboard
+- Update dependencies
+
 = 1.1.1 =
 - Fix various bugs from v1.1.0
 
 = 1.1.0 =
 - Implement mission feature
 - Implement mission mini-game - quiz
+
+= 1.0.1 =
+- Fix composer autoload in CI pipeline
 
 = 1.0.0 =
 - first stable version

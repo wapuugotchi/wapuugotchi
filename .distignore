@@ -22,6 +22,7 @@ phpcs.xml
 .eslintignore
 .eslintrc.js
 .eslintrc.json
+eslint.config.js
 .editorconfig
 .stylelintrc
 .nvmrc

@@ -113,7 +113,7 @@ class Greeting {
 				$messages,
 				new \Wapuugotchi\Avatar\Models\Message(
 					'buddy-greeting',
-					$greeting . ' ' . self::get_random_quiet_text(),
+					$greeting . '<br>' . self::get_random_quiet_text(),
 					'none',
 					'__return_true',
 					'Wapuugotchi\Buddy\Data\Greeting::handle_submit'

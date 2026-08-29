@@ -350,6 +350,15 @@ class QuizWordPress {
 			__( 'That is unfortunately incorrect. Outdated plugins and themes can make your site vulnerable to attacks.', 'wapuugotchi' )
 		);
 
+		$quiz[] = new Quiz(
+			'wp_question_38',
+			__( 'What should you do before publishing AI-generated text?', 'wapuugotchi' ),
+			array( __( 'Whatever the AI says', 'wapuugotchi' ), __( 'I can do whatever I want', 'wapuugotchi' ), __( 'It has to rhyme', 'wapuugotchi' ), __( 'The Las Vegas rule', 'wapuugotchi' ) ),
+			__( 'Label it as AI-generated', 'wapuugotchi' ),
+			__( 'That\'s correct! Many countries legally require disclosing AI-generated content for transparency.', 'wapuugotchi' ),
+			__( 'That is unfortunately incorrect. Many countries require you to label AI-generated text as such.', 'wapuugotchi' )
+		);
+
 		return $quiz;
 	}
 }

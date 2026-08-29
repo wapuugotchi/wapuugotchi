@@ -16,7 +16,11 @@
       "Bash(./vendor/bin/phpcbf:*)",
       "Bash(node:*)",
       "Bash(npx playwright:*)",
-      "Bash(npx wp-env:*)"
+      "Bash(npx wp-env:*)",
+      "Bash(git -C /Users/mfeldmann/Projects/wordpress/wapuugotchi/wapuugotchi diff --name-only)",
+      "Bash(git -C /Users/mfeldmann/Projects/wordpress/wapuugotchi/wapuugotchi status --short)",
+      "Bash(python3 *)",
+      "Bash(git -C /Users/mfeldmann/Projects/wordpress/wapuugotchi/collections diff _missions/caribbean_dread_1/image.svg)"
     ]
   }
 }

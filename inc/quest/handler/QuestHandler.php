@@ -192,6 +192,14 @@ class QuestHandler {
 			\array_merge_recursive( $completed_quests, $new_completed_quests )
 		);
 
+		/**
+		 * Fires when a quest is completed.
+		 *
+		 * @param string $quest_id The quest ID.
+		 * @param int    $user_id  The user ID.
+		 */
+		\do_action( 'wapuugotchi_quest_completed', $quest_id, \get_current_user_id() );
+
 		return true;
 	}
 

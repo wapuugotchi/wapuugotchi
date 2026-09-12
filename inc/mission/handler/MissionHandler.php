@@ -203,6 +203,13 @@ class MissionHandler {
 
 		\update_user_meta( \get_current_user_id(), self::MISSION_KEY, $mission_data );
 
+		/**
+		 * Fires when a mission step is completed.
+		 *
+		 * @param int $user_id The user ID.
+		 */
+		\do_action( 'wapuugotchi_mission_step_completed', \get_current_user_id() );
+
 		return true;
 	}
 

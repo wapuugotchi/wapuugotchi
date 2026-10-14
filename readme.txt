@@ -1,7 +1,7 @@
 === WapuuGotchi ===
 Contributors:      wapuugotchi, herrfeldmann, ancocodet, acali, coachbirgit, pfefferle, lgersman, tobibode, sabrinaw, fettnei, dionysous, thchoperpilot
 Tags:              assistant, wapuu, gamification
-Stable tag:        2.3.0
+Stable tag:        2.3.1
 Requires at least: 6.7
 Tested up to:      6.9
 Requires PHP:      7.2
@@ -43,6 +43,12 @@ WapuuGotchi is free and constantly being developed further. It’s always exciti
 Let Wapuu be your companion, enhance your WordPress skills, and customize your Wapuu into a unique sidekick. Whether you’re new to WordPress or already an experienced user – WapuuGotchi is the perfect way to discover WordPress in a playful manner!
 
 == Changelog ==
+
+= 2.3.1 =
+- Fix mission map highlights resetting for already unlocked progress steps
+- Fix crashes when quiz/mission SVG elements aren't rendered yet
+- Fix dismiss_message endpoint silently failing instead of returning a proper error on invalid requests
+- Render mission descriptions as formatted text instead of plain text
 
 = 2.3.0 =
 - Implement context-aware welcome-back greetings based on absence duration

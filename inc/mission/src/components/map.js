@@ -56,11 +56,13 @@ export default function Map() {
 			'[class*="visible-at-progress_"]'
 		);
 
-		const visible_list = [...Array(highlightsTarget + 1)].map((_, i) => `visible-at-progress_${i}`);
+		const visibleClassNames = [ ...Array( highlightsTarget + 1 ) ].map(
+			( _, i ) => `visible-at-progress_${ i }`
+		);
 		highlights.forEach( ( highlight ) => {
 			if (
-				visible_list.some((className) =>
-					highlight.classList.contains(className)
+				visibleClassNames.some( ( className ) =>
+					highlight.classList.contains( className )
 				)
 			) {
 				highlight.style.opacity = 'var(--active-oc)';

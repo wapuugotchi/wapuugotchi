@@ -57,9 +57,13 @@ class Api {
 	 * @return \WP_Error|\WP_HTTP_Response|\WP_REST_Response
 	 */
 	public static function dismiss_message( $req ) {
-		$id     = self::get_message_id_from_request_body( $req );
-		$result = false;
+		$id = self::get_message_id_from_request_body( $req );
 
+		if ( \is_wp_error( $id ) ) {
+			return \rest_ensure_response( $id );
+		}
+
+		$result  = false;
 		$message = BubbleHandler::get_message_by_id( $id );
 		if ( $message && \is_callable( $message->dismiss() ) ) {
 			$result = \call_user_func( $message->dismiss(), $id );
@@ -74,13 +78,13 @@ class Api {
 	 *
 	 * @param \WP_REST_Request $req The request object.
 	 *
-	 * @return mixed
+	 * @return mixed|\WP_Error
 	 */
 	private static function get_message_id_from_request_body( $req ) {
 		$body = \json_decode( $req->get_body() );
 		$id   = $body->id ?? null;
 		if ( null === $id ) {
-			return \rest_ensure_response( new \WP_Error( 'invalid_json', 'Invalid JSON body.', array( 'status' => 400 ) ) );
+			return new \WP_Error( 'invalid_json', 'Invalid JSON body.', array( 'status' => 400 ) );
 		}
 
 		return $id;

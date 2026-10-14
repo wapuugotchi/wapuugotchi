@@ -73,6 +73,6 @@ class Manager {
 		\add_filter( 'wapuugotchi_quest_filter', array( QuestPlugin::class, 'add_wapuugotchi_filter' ), 10, 1 );
 		\add_filter( 'wapuugotchi_quest_filter', array( QuestTheme::class, 'add_wapuugotchi_filter' ), 10, 1 );
 		\add_filter( 'wapuugotchi_quest_filter', array( QuestDate::class, 'add_wapuugotchi_filter' ), 10, 1 );
-		\add_filter( 'wapuugotchi_quest_filter', array( QuestStart::class, 'add_wapuugotchi_filter' ), 1, 1 );
+		\add_filter( 'wapuugotchi_quest_filter', array( QuestStart::class, 'add_wapuugotchi_filter' ), 20, 1 );
 	}
 }

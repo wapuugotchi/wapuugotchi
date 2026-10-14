@@ -15,17 +15,22 @@ export default function Bubble() {
 	const [ bottomOffset, setBottomOffset ] = useState( null );
 
 	const handleClickMessage = useCallback( async () => {
-		const removedItem = messages.shift();
+		const [ removedItem, ...rest ] = messages;
 
-		await apiFetch( {
-			path: `wapuugotchi/v1/dismiss_message`,
-			method: 'POST',
-			data: {
-				id: removedItem?.id,
-			},
-		} );
+		try {
+			await apiFetch( {
+				path: `wapuugotchi/v1/dismiss_message`,
+				method: 'POST',
+				data: {
+					id: removedItem?.id,
+				},
+			} );
+		} catch ( error ) {
+			// eslint-disable-next-line no-console
+			console.error( 'Failed to dismiss message', error );
+		}
 
-		setMessages( messages );
+		setMessages( rest );
 	}, [ messages, setMessages ] );
 
 	useEffect( () => {

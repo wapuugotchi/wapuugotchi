@@ -55,10 +55,12 @@ export default function Map() {
 		const highlights = svgElement.querySelectorAll(
 			'[class*="visible-at-progress_"]'
 		);
+
+		const visible_list = [...Array(highlightsTarget + 1)].map((_, i) => `visible-at-progress_${i}`);
 		highlights.forEach( ( highlight ) => {
 			if (
-				highlight.classList.contains(
-					`visible-at-progress_${ highlightsTarget }`
+				visible_list.some((className) =>
+					highlight.classList.contains(className)
 				)
 			) {
 				highlight.style.opacity = 'var(--active-oc)';
@@ -130,7 +132,7 @@ export default function Map() {
 			if ( ! parent.querySelector( '.' + cooldownClass ) ) {
 				parent.appendChild( createCooldown( cooldown, cooldownClass ) );
 			}
-		} else if ( completed === true ) {
+		} else if ( missionSection && completed === true ) {
 			missionSection.textContent = '✔';
 			missionSection.style.fill = '#009900';
 			missionSection.style.opacity = 1;
@@ -141,7 +143,7 @@ export default function Map() {
 			if ( ! parent.querySelector( '.' + cooldownClass ) ) {
 				parent.appendChild( createCooldown( cooldown, cooldownClass ) );
 			}
-		} else {
+		} else if ( missionSection ) {
 			missionSection.textContent = '';
 			missionSection.style.fill = 'var(--marker-start-color)';
 			missionSection.style.opacity = 1;

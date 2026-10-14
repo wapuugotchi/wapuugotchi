@@ -30,7 +30,7 @@ export default function Svg() {
 	const prepareSvg = useCallback( ( svgString ) => {
 		const parser = new DOMParser();
 		const doc = parser.parseFromString( svgString, 'image/svg+xml' );
-		return doc.querySelector( 'svg' ).innerHTML;
+		return doc.querySelector( 'svg' )?.innerHTML ?? svgString;
 	}, [] );
 
 	/**
@@ -123,6 +123,10 @@ export default function Svg() {
 		);
 		const action = document.querySelector( '.wapuugotchi_mission__action' );
 
+		if ( ! overlay || ! action ) {
+			return;
+		}
+
 		overlay.addEventListener( 'click', handleOverlayClick );
 		action.addEventListener( 'click', function ( event ) {
 			if (
@@ -145,6 +149,9 @@ export default function Svg() {
 		const clouds = document.querySelector(
 			'#wapuugotchi_quiz__svg g#Cloud--group'
 		);
+		if ( ! clouds ) {
+			return;
+		}
 		clouds.querySelectorAll( 'g.cloud' ).forEach( ( cloud, index ) => {
 			cloud.addEventListener( 'click', () => handleCloudClick( index ) );
 		} );
@@ -157,6 +164,9 @@ export default function Svg() {
 	 */
 	useEffect( () => {
 		const svgElement = document.querySelector( '#wapuugotchi_quiz__svg' );
+		if ( ! svgElement ) {
+			return;
+		}
 		svgElement.addEventListener( 'click', handleSvgClick );
 
 		return () => {

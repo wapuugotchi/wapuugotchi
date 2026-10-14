@@ -36,7 +36,7 @@ function __buildSvg( string, progress, locked ) {
 	} else {
 		svg = __setTrack( svg, progress );
 	}
-	return svg.querySelector( 'svg' ).innerHTML;
+	return svg.querySelector( 'svg' )?.innerHTML ?? string;
 }
 
 /**

@@ -27,7 +27,7 @@ export default function Description() {
 					</h2>
 					<Pearls />
 				</div>
-				<p>{ description }</p>
+				<div dangerouslySetInnerHTML={ { __html: description } } />
 			</div>
 		</>
 	);

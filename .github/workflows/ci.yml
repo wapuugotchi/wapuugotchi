@@ -28,7 +28,7 @@ jobs:
                   dev: no
             - uses: actions/setup-node@v6
               with:
-                  node-version: '19.x'
+                  node-version: '22.x'
 
             - name: Setup WordPress and our plugin
               run: |

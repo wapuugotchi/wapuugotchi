@@ -77,6 +77,20 @@ class Missions {
 							)
 							->set_reward( 3 );
 
+		$missions[] = Mission::create()
+							->set_id( 'caribbean_dread' )
+							->set_name( __( 'Caribbean Dread', 'wapuugotchi' ) )
+							->set_description( __( 'Set sail with your brave Wapuu into the warm waters of the Caribbean, where a sunken ship, a sea monster and a mysterious map are waiting. Every island hides a secret, and every secret hides a riddle! Only with your help can your Wapuu face the dangers of the deep. Stand by your courageous companion and uncover the truth behind the Caribbean Dread!', 'wapuugotchi' ) )
+							->set_url( 'https://api.wapuugotchi.com/missions/caribbean_dread_1/image.svg' )
+							->set_markers(
+								array(
+									__( 'On the shore of a small bay, Wapuu discovers the remains of an old ship. Something glimmers inside the wreck, so he dives down and finds a glowing treasure map. Then a low rumble rises from the deep, and a huge shadow glides past. It is the sea monster that destroyed the ship! Wapuu flees in panic to his boat, and with trembling paws he unrolls the map. A riddle appears, and only by solving it will the map reveal its secret.', 'wapuugotchi' ),
+									__( 'With the riddle solved, the map reveals its secret and shows the whole region. One island in the northwest catches Wapuu\'s eye, because it seems to be inhabited. He decides to visit its people, hoping to learn more about the monster. Wapuu sets the sails of his little boat and heads out. Having arrived on the island, he is greeted by a local who leads him into his village. The village elder eyes Wapuu with suspicion. He can tell him what he wants to know, but first Wapuu has to pass a test!', 'wapuugotchi' ),
+									__( 'Wapuu passes the test, and the elder keeps his word. He tells Wapuu that the sea monster lives on an island, where it guards a treasure. No ship dares to come near it. But there may be a way: on Maw Island, an object is said to reveal the path to the treasure. One look at the map is enough for Wapuu to know which island the elder means. He thanks him and sets sail. But unlike on the map, the maw is shut, and Wapuu cannot enter the cave. He examines the entrance and finds a stone tablet with a question carved into it. Does Wapuu know the answer?', 'wapuugotchi' ),
+								)
+							)
+							->set_reward( 3 );
+
 		return $missions;
 	}
 }
